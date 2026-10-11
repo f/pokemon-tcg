@@ -5,6 +5,8 @@ decision.json
 # dependencies and build output
 node_modules/
 dist/
+site/
+.spacefast/
 src-tauri/target/
 src-tauri/gen/
 

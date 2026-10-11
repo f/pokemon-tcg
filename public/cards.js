@@ -24,12 +24,20 @@ export const PRIZES = 6;
 export const HAND_SIZE = 7;
 export const MAX_BENCH = 5;
 
-// Load JSON in the browser (fetch) and in Node (tests and simulations).
+// Load JSON in the browser (fetch) and in Node (tests and simulations). A busy host can answer 429 or 5xx for a
+// moment: try again a few times, waiting a little longer each time.
 async function loadJSON(rel) {
   const url = new URL(rel, import.meta.url);
-  if (typeof window !== 'undefined') return (await fetch(url)).json();
-  const { readFile } = await import('node:fs/promises');
-  return JSON.parse(await readFile(url, 'utf8'));
+  if (typeof window === 'undefined') {
+    const { readFile } = await import('node:fs/promises');
+    return JSON.parse(await readFile(url, 'utf8'));
+  }
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url);
+    if (res.ok) return res.json();
+    if (attempt === 4 || ![429, 500, 502, 503, 504].includes(res.status)) throw new Error(`${res.status} loading ${rel}`);
+    await new Promise((r) => setTimeout(r, 300 * 2 ** attempt + Math.random() * 300));
+  }
 }
 
 const index = await loadJSON('./data/decks/index.json');
@@ -38,7 +46,11 @@ const { decks: deckKeys, groups } = index;
 export const DECK_GROUPS = groups || ['trainer', 'theme'];
 // Modern (Scarlet & Violet) decks: only their summary is in index.json; the cards load when the deck is picked.
 export const MODERN_GROUPS = index.modernGroups || [];
-const deckFiles = await Promise.all(deckKeys.map((k) => loadJSON(`./data/decks/${k}/cards.json`)));
+// The classic decks load at start. The hosted web build puts them in one file (index.classicBundle: { key: deck }),
+// so the page makes one request instead of one per deck.
+const deckFiles = index.classicBundle
+  ? await loadJSON(`./data/decks/${index.classicBundle}`).then((all) => deckKeys.map((k) => all[k]))
+  : await Promise.all(deckKeys.map((k) => loadJSON(`./data/decks/${k}/cards.json`)));
 
 function prepare(c) {
   const card = { ...c };

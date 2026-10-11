@@ -1,6 +1,6 @@
 {
   "name": "pokemon-tcg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Learn the Pokémon Trading Card Game against Gary, an AI opponent, with the Professor as your coach. Web version and a macOS app (Tauri).",
   "scripts": {
@@ -10,13 +10,16 @@
     "test:kev": "node tests/model.mjs 40 6 both 0.2",
     "app:dev": "tauri dev",
     "app:build": "tauri build --bundles app && node scripts/make-dmg.mjs",
-    "images": "node scripts/fetch-images.mjs"
+    "images": "node scripts/fetch-images.mjs",
+    "web:build": "node scripts/build-web.mjs",
+    "web:publish": "npm run web:build && sf publish site --space spc_d541c63539a747a985a7ee39408f4087"
   },
   "engines": {
     "node": ">=21.7"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.12.2"
+    "@tauri-apps/cli": "^2.12.2",
+    "esbuild": "0.28.2"
   },
   "license": "MIT",
   "repository": {

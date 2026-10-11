@@ -1,0 +1,13 @@
+{
+  "$schema": "https://spacefast.com/schemas/sf.json",
+  // Built by scripts/build-web.mjs into site/ (the landing page at /, the CPU-only game at /play/).
+  "access": "public",
+  "listing": false,
+  "fallback": { "path": "/404.html", "status": 404 },
+  "meta": {
+    "title": "Learn the Pokémon TCG by playing it · Pokémon TCG Academy",
+    "description": "Learn the Pokémon Trading Card Game by playing it: 109 real decks, an AI opponent and a coach that explains every move. Free and open source.",
+    "image": "/og.jpg",
+    "favicon": "/icon-64.png"
+  }
+}

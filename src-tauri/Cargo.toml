@@ -1,6 +1,6 @@
 [package]
 name = "pokemon-tcg"
-version = "0.1.0"
+version = "0.1.1"
 description = "Pokémon TCG Academy for macOS: learn the Pokémon Trading Card Game against Gary, with the Professor as your coach."
 authors = ["Fatih Kadir Akın"]
 license = "MIT"

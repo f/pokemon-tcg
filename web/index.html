@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn the Pokémon TCG by playing it · Pokémon TCG Academy</title>
+  <meta name="description" content="Learn the Pokémon Trading Card Game by playing it: 109 real decks, an AI opponent and a coach that explains every move. Free and open source.">
+  <link rel="canonical" href="__SITE_URL__/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__SITE_URL__/">
+  <meta property="og:title" content="Pokémon TCG Academy">
+  <meta property="og:description" content="Learn the Pokémon Trading Card Game by playing it: 109 real decks, an AI opponent and a coach that explains every move.">
+  <meta property="og:image" content="__SITE_URL__/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d1b3e">
+  <link rel="icon" href="icon-64.png">
+  <link rel="stylesheet" href="play/vendor/fonts.css">
+  <link rel="stylesheet" href="landing.css">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [
+    {"@type": "WebSite", "name": "Pokémon TCG Academy", "url": "__SITE_URL__/"},
+    {"@type": "SoftwareApplication", "name": "Pokémon TCG Academy", "applicationCategory": "GameApplication",
+     "operatingSystem": "macOS 11 or newer (Apple Silicon), web browser", "url": "__SITE_URL__/",
+     "downloadUrl": "https://github.com/f/pokemon-tcg/releases/latest", "softwareVersion": "__VERSION__",
+     "license": "https://opensource.org/licenses/MIT", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="nav.skip"></a>
+  <header class="top">
+    <a class="brand" href="./" aria-label="Pokémon TCG Academy">
+      <img src="icon-64.png" alt="" width="32" height="32">
+      <span>TCG Academy</span>
+    </a>
+    <nav class="top-links">
+      <a href="play/" data-i18n="nav.play"></a>
+      <a href="#download" data-i18n="nav.mac"></a>
+      <a href="https://github.com/f/pokemon-tcg">GitHub</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-aria="lang.label">
+      <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+        <h1 data-i18n-html="hero.title"></h1>
+        <p class="lead" data-i18n="hero.lead"></p>
+        <div class="cta">
+          <div class="cta-item"><a class="btn primary" href="play/" data-i18n="hero.play"></a><span class="cta-sub" data-i18n="hero.play.sub"></span></div>
+          <div class="cta-item"><a class="btn ghost" href="#download" data-i18n="hero.mac"></a><span class="cta-sub" data-i18n="hero.mac.sub"></span></div>
+        </div>
+        <p class="fine" data-i18n="hero.note"></p>
+      </div>
+      <div class="hero-art">
+        <img class="shot" src="screenshots/board.webp" srcset="screenshots/board-800.webp 800w, screenshots/board.webp 1600w" sizes="(max-width: 960px) 100vw, 58vw" width="1600" height="1000" fetchpriority="high" data-i18n-alt="alt.board" alt="">
+        <div class="fan" aria-hidden="true">
+          <img src="https://images.pokemontcg.io/base1/58.png" alt="" width="245" height="342">
+          <img src="https://images.pokemontcg.io/base1/4.png" alt="" width="245" height="342">
+          <img src="https://images.pokemontcg.io/sv3/125.png" alt="" width="245" height="342">
+        </div>
+      </div>
+    </section>
+
+    <section class="ways" aria-labelledby="ways-title">
+      <h2 id="ways-title" data-i18n="ways.title"></h2>
+      <div class="ways-cols">
+        <div class="way">
+          <h3 data-i18n="ways.web.title"></h3>
+          <p data-i18n="ways.web.text"></p>
+          <a class="textlink" href="play/" data-i18n="ways.web.go"></a>
+        </div>
+        <div class="way">
+          <h3 data-i18n="ways.mac.title"></h3>
+          <p data-i18n="ways.mac.text"></p>
+          <a class="textlink" href="#download" data-i18n="ways.mac.go"></a>
+        </div>
+      </div>
+      <table class="compare">
+        <thead><tr><th></th><th scope="col" data-i18n="cmp.web"></th><th scope="col" data-i18n="cmp.mac"></th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-i18n="cmp.cpu"></th><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><th scope="row" data-i18n="cmp.kev"></th><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><th scope="row" data-i18n="cmp.jev"></th><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><th scope="row" data-i18n="cmp.offline"></th><td class="no">—</td><td class="yes">✓</td></tr>
+          <tr><th scope="row" data-i18n="cmp.install"></th><td class="yes">✓</td><td class="no">—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <img src="screenshots/card-help.webp" srcset="screenshots/card-help-800.webp 800w, screenshots/card-help.webp 1600w" sizes="(max-width: 760px) 100vw, 60vw" width="1600" height="1000" loading="lazy" data-i18n-alt="alt.help" alt="">
+        <div><h2 data-i18n="feat.help.title"></h2><p data-i18n="feat.help.text"></p></div>
+      </article>
+      <article class="feature flip">
+        <img src="screenshots/attack.webp" srcset="screenshots/attack-800.webp 800w, screenshots/attack.webp 1600w" sizes="(max-width: 760px) 100vw, 60vw" width="1600" height="1000" loading="lazy" data-i18n-alt="alt.attack" alt="">
+        <div><h2 data-i18n="feat.attack.title"></h2><p data-i18n="feat.attack.text"></p></div>
+      </article>
+      <article class="feature">
+        <img src="screenshots/prize.webp" srcset="screenshots/prize-800.webp 800w, screenshots/prize.webp 1600w" sizes="(max-width: 760px) 100vw, 60vw" width="1600" height="1000" loading="lazy" data-i18n-alt="alt.prize" alt="">
+        <div><h2 data-i18n="feat.table.title"></h2><p data-i18n="feat.table.text"></p></div>
+      </article>
+      <article class="feature flip">
+        <img src="screenshots/board-ja.webp" srcset="screenshots/board-ja-800.webp 800w, screenshots/board-ja.webp 1600w" sizes="(max-width: 760px) 100vw, 60vw" width="1600" height="1000" loading="lazy" data-i18n-alt="alt.ja" alt="">
+        <div><h2 data-i18n="feat.lang.title"></h2><p data-i18n="feat.lang.text"></p></div>
+      </article>
+    </section>
+
+    <section class="decks" aria-labelledby="decks-title">
+      <h2 id="decks-title" data-i18n="decks.title"></h2>
+      <div class="eras">
+        <div class="era">
+          <div class="era-fan" aria-hidden="true">
+            <img src="https://images.pokemontcg.io/base1/2.png" alt="" width="245" height="342" loading="lazy">
+            <img src="https://images.pokemontcg.io/base1/4.png" alt="" width="245" height="342" loading="lazy">
+            <img src="https://images.pokemontcg.io/base1/15.png" alt="" width="245" height="342" loading="lazy">
+          </div>
+          <h3 data-i18n="decks.classic.title"></h3>
+          <p data-i18n="decks.classic.text"></p>
+        </div>
+        <div class="era">
+          <div class="era-fan" aria-hidden="true">
+            <img src="https://images.pokemontcg.io/me2/56.png" alt="" width="245" height="342" loading="lazy">
+            <img src="https://images.pokemontcg.io/sv3/125.png" alt="" width="245" height="342" loading="lazy">
+            <img src="https://images.scrydex.com/pokemon/me55-70/small" alt="" width="245" height="342" loading="lazy">
+          </div>
+          <h3 data-i18n="decks.modern.title"></h3>
+          <p data-i18n="decks.modern.text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download" aria-labelledby="dl-title">
+      <div class="dl-main">
+        <img class="dl-icon" src="icon-256.png" width="128" height="128" alt="">
+        <h2 id="dl-title" data-i18n="dl.title"></h2>
+        <p data-i18n="dl.text"></p>
+        <a class="btn primary big" id="dmg" href="https://github.com/f/pokemon-tcg/releases/download/v__VERSION__/Pokemon-TCG___VERSION___aarch64.dmg" data-i18n="dl.button"></a>
+        <p class="dl-meta"><span id="dl-version"></span> · <a href="https://github.com/f/pokemon-tcg/releases" data-i18n="dl.releases"></a></p>
+      </div>
+      <div class="dl-brew">
+        <p class="brew-label" data-i18n="dl.brew"></p>
+        <div class="brew">
+          <code id="brew-cmd">brew install --cask f/tap/pokemon-tcg</code>
+          <button type="button" id="copy" data-i18n="dl.copy"></button>
+        </div>
+        <p class="fine" data-i18n="dl.note"></p>
+      </div>
+    </section>
+
+    <section class="oss" aria-labelledby="oss-title">
+      <h2 id="oss-title" data-i18n="oss.title"></h2>
+      <p data-i18n="oss.text"></p>
+      <a class="textlink" href="https://github.com/f/pokemon-tcg" data-i18n="oss.link"></a>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="footer.legal"></p>
+    <p data-i18n="footer.images"></p>
+  </footer>
+
+  <script>window.TCG_VERSION = '__VERSION__';</script>
+  <script src="landing.js"></script>
+</body>
+</html>

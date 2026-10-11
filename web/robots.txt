@@ -1,0 +1,5 @@
+# Pokémon TCG Academy: everything here may be crawled and indexed.
+User-agent: *
+Allow: /
+
+Sitemap: __SITE_URL__/sitemap.xml

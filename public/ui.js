@@ -2,7 +2,7 @@ import { DECKS, CARDS, CARD_BACK, PRIZES, DECK_GROUPS, MODERN_GROUPS, loadDeck }
 import { Game, isType } from './engine.js';
 import { AIController, rankActions, aiConfig } from './ai.js';
 import { RPS_CANCEL, chooseThrow, showdown, rpsReset, rpsClose } from './rps.js';
-import { api, inApp, online } from './api.js';
+import { api, inApp, online, webOnly, MAC_DOWNLOAD } from './api.js';
 
 if (inApp) document.documentElement.classList.add('in-app'); // the macOS app (see the in-app rules in style.css)
 import { t, setLang, getLang, cardName, CARD_TEXT_TR, RULES_HTML } from './i18n.js';
@@ -787,17 +787,19 @@ let engineBoxHtml = '';
 function renderEngineBox() {
   if (!engine) return;
   const e = engine;
-  const off = (id) => id === 'jev' && !online(); // no internet: Jev can't be chosen
+  // No internet: Jev can't be chosen. The web version has only the CPU engine; the others come with the macOS app.
+  const off = (id) => (webOnly && id !== 'cpu') || (id === 'jev' && !online());
   const split = (s) => { const m = s.match(/^(.*?)\s*[（(](.*)[)）]\s*$/); return m ? [m[1], m[2]] : [s, '']; }; // "CPU (built in)" → name, note
   const tabs = ['cpu', 'jev', 'local'].map((id) => {
-    const [name, note] = split(t(`eng.${id}.t`));
+    const [name, printed] = split(t(`eng.${id}.t`));
+    const note = webOnly && id !== 'cpu' ? t('eng.web.tab') : printed;
     const on = e.engine === id;
     return `<label class="eng-tab${on ? ' on' : ''}${off(id) ? ' off' : ''}"><input type="radio" name="engine" value="${id}" ${on ? 'checked' : ''} ${off(id) ? 'disabled' : ''}>
       <b>${esc(name)}</b>${note ? `<small>${esc(note)}</small>` : ''}</label>`;
   }).join('');
-  const desc = t(e.engine === 'cpu' && inApp ? 'eng.cpu.dApp' : `eng.${e.engine}.d`);
+  const desc = t(e.engine !== 'cpu' ? `eng.${e.engine}.d` : inApp ? 'eng.cpu.dApp' : webOnly ? 'eng.cpu.dWeb' : 'eng.cpu.d');
   const notes = [
-    !online() && t('eng.offline'),
+    !webOnly && !online() && t('eng.offline'),
     e.engine !== 'cpu' && aiConfig.engine === 'cpu' && (e.engine !== 'jev' || (online() && e.jevKeySet)) && t('eng.fallbackNote', { m: engineLabel(e) }),
   ].filter(Boolean).map((n) => `<p class="eng-warn">${esc(n)}</p>`).join('');
 
@@ -836,6 +838,10 @@ function renderEngineBox() {
     body = `<ul class="m-list">${rows}</ul>${e.local.model ? `<button type="button" class="textlink m-stop" id="local-stop">${esc(t('eng.stop'))}</button>` : ''}`;
   }
 
+  if (webOnly) {
+    body = `<p class="eng-mac">${esc(t('eng.web.note'))}</p>
+      <a class="eng-mac-link" href="${MAC_DOWNLOAD}" target="_top">${esc(t('eng.web.download'))}</a>`;
+  }
   const html = `<div class="eng-tabs" role="radiogroup" aria-labelledby="eng-title">${tabs}</div>
     <p class="eng-desc">${esc(desc)}</p>${notes}${body}`;
   if (html === engineBoxHtml) return;

@@ -17,6 +17,7 @@
 </p>
 
 <p align="center">
+  <a href="https://pokemon.space.fast">Play online</a> ·
   <a href="#install">Install</a> ·
   <a href="#features">Features</a> ·
   <a href="#screenshots">Screenshots</a> ·
@@ -32,6 +33,12 @@
 
 ## Install
 
+### Play in your browser
+
+**[pokemon.space.fast](https://pokemon.space.fast)**: the landing page, and the game itself at [/play](https://pokemon.space.fast/play/).
+The browser version plays with the built-in CPU engine and needs nothing installed. For smarter opponents (Kev on your Mac, Jev in
+the cloud) and offline play, install the macOS app.
+
 ### macOS app
 
 ```bash
@@ -40,11 +47,11 @@ brew install --cask f/tap/pokemon-tcg
 
 This installs **Pokemon TCG** to your Applications folder (Apple Silicon, macOS 11 or newer). Card images, fonts and icons ship inside the app, so it plays with no internet connection.
 
-The app is ad-hoc signed, not notarized with an Apple Developer ID. The cask removes the download quarantine for you. If you install the DMG from [Releases](https://github.com/f/pokemon-tcg/releases) by hand, right-click the app and choose **Open** the first time.
+The app is ad-hoc signed, not notarized with an Apple Developer ID. The cask removes the download quarantine for you. If you install the DMG from [Releases](https://github.com/f/pokemon-tcg/releases) by hand, macOS blocks the app the first time: allow it in **System Settings → Privacy & Security**, then open it again.
 
-### Web version
+### Run it from source
 
-You need Node 21.7+ and `cwebp` (`brew install webp`).
+You need Node 21.7+ and `cwebp` (`brew install webp`). This version can use every engine (CPU, Kev and Jev).
 
 ```bash
 git clone https://github.com/f/pokemon-tcg.git
@@ -163,16 +170,23 @@ Games use 6 Prize cards and today's turn structure: the first player can't attac
 | `npm run test:kev` | 40 games against the local Kev model (port 8009) |
 | `npm run app:dev` | The macOS app in development mode |
 | `npm run app:build` | The release app and DMG in `src-tauri/target/release/bundle/` |
+| `npm run web:build` | The hosted web version in `site/`: the landing page and the CPU-only game (`npm run web:publish` builds and publishes it to Spacefast) |
 
 Building the app needs [Rust](https://rustup.rs) and the Xcode Command Line Tools as well.
 
 ### How it fits together
 
-The game is plain JavaScript ES modules with no framework and no build step: `public/` is the whole web app.
+The game is plain JavaScript ES modules with no framework: `public/` is the whole game, and the dev server runs it as is.
 - **Rules engine:** `public/engine.js` has no DOM code. The player's UI and the AI connect to it as controllers.
 - **Card rules by era:** a chain of engine files adds them, in this order: `engine-modern.js` → `engine-mega.js` → `engine-swsh.js` → `engine-swsh-v.js` → `engine-sm.js`.
 - **Backend:** `server.js` serves the files and answers the `/api` calls for engines and decisions.
 - **macOS app:** a [Tauri 2](https://tauri.app) shell around the same files. `src-tauri/src/main.rs` answers the same `/api` calls through `invoke`, keeps the Jev key in the Keychain and runs the local model server.
+- **Hosted web version:** `scripts/build-web.mjs` builds the same files into `site/play/` and marks the page with
+  `<meta name="tcg-build" content="web">`. With that marker `api.js` answers locally with the CPU engine and never calls a server, and
+  Settings points to the macOS app for Kev and Jev. The build also bundles the modules (esbuild), the classic decks and the icons, so a
+  static host gets few requests, and points the card images at the public card image CDN. The landing page is in `web/`.
+
+One codebase, three targets: a change in `public/` reaches the dev server, the app and the hosted version on their next build.
 
 | Path | What it does |
 | --- | --- |
@@ -181,12 +195,13 @@ The game is plain JavaScript ES modules with no framework and no build step: `pu
 | `public/ui.js` | Board, hand, move list, coach, animations and Settings |
 | `public/rps.js` | The anime-style Rock-Paper-Scissors stage for Dan |
 | `public/i18n.js`, `public/i18n/*.js` | `t()` and every string in four languages, including the How to play pages |
-| `public/api.js` | Backend calls: `fetch` in the browser, Tauri `invoke` in the app |
+| `public/api.js` | Backend calls: `fetch` with the dev server, Tauri `invoke` in the app, nothing in the hosted web build (CPU only) |
 | `public/data/decks/` | One folder per deck with its `cards.json`, plus `index.json` (deck order and groups) |
 | `public/vendor/` | Local copies of the icons and fonts, for offline play |
 | `server.js` | Static server, engine switching and the local model process |
 | `src-tauri/` | The macOS app: window without a title bar, engines, Keychain, local models, icons |
-| `scripts/` | Image download and WebP conversion, the `dist/` build, the DMG and the app icon |
+| `web/` | The landing page (four languages), `robots.txt`, `sitemap.xml`, the 404 page and the Spacefast settings (`sf.jsonc`) |
+| `scripts/` | Image download and WebP conversion, the `dist/` and `site/` builds, the DMG and the app icon |
 | `tests/` | Headless rules checks, prize counts, card coverage, save/restore, stalled-game and model tests |
 
 ### Adding a deck
