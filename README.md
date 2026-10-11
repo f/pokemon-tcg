@@ -74,14 +74,14 @@ npm start        # → http://localhost:8787
 <table>
   <tr>
     <td width="50%"><img src="docs/screenshots/home.webp" alt="Home screen: pick Classic or Modern, a deck, and Gary's deck"><br><sub><b>Pick a deck.</b> Classic or Modern; the rules that change are listed under the tabs.</sub></td>
-    <td width="50%"><img src="docs/screenshots/card-help.webp" alt="Choosing the Active Pokémon, with a tooltip explaining Charmander's HP, Weakness and attacks"><br><sub><b>Every card explained.</b> HP, Weakness, Retreat and each attack in plain words.</sub></td>
+    <td width="50%"><img src="docs/screenshots/card-help.webp" alt="Pointing at Gary's Abra: its HP and Energy right now, Weakness, Retreat cost and what its Psyshock attack does"><br><sub><b>Every card explained.</b> Point at any card for its HP, Weakness, Retreat and attacks in plain words.</sub></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/attack.webp" alt="Attack arena: Weedle uses Poison Sting on Charmander"><br><sub><b>Attack arena.</b> Both Active Pokémon meet in the middle of the board.</sub></td>
-    <td><img src="docs/screenshots/prize.webp" alt="A Prize card, Growlithe, revealed at the centre of the screen"><br><sub><b>Prize cards.</b> Pick one face down and it flips to reveal itself.</sub></td>
+    <td><img src="docs/screenshots/attack.webp" alt="Attack arena: Charmander uses Scratch on Meowth"><br><sub><b>Attack arena.</b> Both Active Pokémon meet in the middle of the board.</sub></td>
+    <td><img src="docs/screenshots/prize.webp" alt="A Prize card, a Fire Energy, revealed at the centre of the screen"><br><sub><b>Prize cards.</b> Pick one face down and it flips to reveal itself.</sub></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/board-ja.webp" alt="A modern game in Japanese with the Professor's suggestions"><br><sub><b>日本語 · Modern rules.</b> Charizard ex League deck, Stadium in play.</sub></td>
+    <td><img src="docs/screenshots/board-ja.webp" alt="A modern game in Japanese with the Professor's suggestions"><br><sub><b>日本語 · Modern rules.</b> The Charizard ex League deck against an Inteleon VMAX.</sub></td>
     <td><img src="docs/screenshots/settings.webp" alt="Settings: decision engine, local models, the Professor and display options"><br><sub><b>Settings.</b> Choose Gary's engine and download local models.</sub></td>
   </tr>
 </table>

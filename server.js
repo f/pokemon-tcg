@@ -190,8 +190,12 @@ async function engineState() {
 
 // ---------------------------------------------------------------- HTTP
 const PUBLIC = join(import.meta.dirname, 'public');
-const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
-const BINARY = new Set(['.png', '.jpg', '.webp']);
+const MIME = {
+  '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
+  '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg',
+  '.webp': 'image/webp', '.woff2': 'font/woff2',
+};
+const CACHED = new Set(['.png', '.jpg', '.webp', '.woff2']); // card images and fonts never change once downloaded
 
 function send(res, status, body, type = 'application/json') {
   res.writeHead(status, { 'Content-Type': `${type}; charset=utf-8` });
@@ -262,12 +266,9 @@ const server = createServer(async (req, res) => {
   if (!path.startsWith(PUBLIC)) return send(res, 403, 'Forbidden', 'text/plain');
   try {
     const ext = extname(path);
-    if (BINARY.has(ext)) {
-      // Card images never change once downloaded: let the browser keep them.
-      res.writeHead(200, { 'Content-Type': MIME[ext], 'Cache-Control': 'public, max-age=604800' });
-      return res.end(await readFile(path));
-    }
-    send(res, 200, await readFile(path, 'utf8'), MIME[ext] || 'text/plain');
+    const body = await readFile(path); // bytes as they are on disk: fonts and images are binary
+    res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream', ...(CACHED.has(ext) && { 'Cache-Control': 'public, max-age=604800' }) });
+    res.end(body);
   } catch {
     send(res, 404, 'Not found', 'text/plain');
   }
