@@ -148,7 +148,7 @@ export const STRINGS = {
   "coin.o.wake": "Se despierta",
   "coin.o.sleep": "Sigue Dormido",
   "rule.coin": "Lanzar monedas: muchas cartas dicen “Lanza una moneda”. Cara y cruz tienen cada una un 50 % de probabilidad, y la carta te dice qué pasa con cada resultado. Cuando importa dejar a un Pokémon Fuera de Combate, un ataque fiable suele ser mejor que uno que dependa de la suerte.",
-  "rule.dice": "Contadores de daño: cada contador equivale a 10 de daño. En una mesa real, los jugadores llevan la cuenta del daño con dados de seis caras colocados sobre el Pokémon. Algunos dados tienen puntos y otros tienen números impresos; en ambos casos, un dado que muestra un 3 significa 30 de daño, y si pasas de 60 añades un segundo dado. Elige el estilo que tengas en casa en Dados de daño, en el panel del Profesor.",
+  "rule.dice": "Contadores de daño: cada contador equivale a 10 de daño. En una mesa real, los jugadores llevan la cuenta del daño con dados de seis caras colocados sobre el Pokémon. Algunos dados tienen puntos y otros tienen números impresos; en ambos casos, un dado que muestra un 3 significa 30 de daño, y si pasas de 60 añades un segundo dado. Elige el estilo que tengas en casa en Dados de daño, en Ajustes.",
   "win.0": "muy bajas",
   "win.1": "bajas",
   "win.2": "igualadas",

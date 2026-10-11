@@ -79,7 +79,7 @@ export const STRINGS = {
   'coin.o.plus': '+{n} hasar', 'coin.o.zero': 'Bu paradan hasar yok', 'coin.o.self': '{m} {n} hasar alır',
   'coin.o.shield': 'Gelecek tur hasar almaz', 'coin.o.wake': 'Uyanır', 'coin.o.sleep': 'Uyumaya devam eder',
   'rule.coin': 'Yazı tura: birçok kartta "Yazı tura at" yazar. Tura ve yazının her birinin %50 şansı vardır, kart da her birinin ne yaptığını söyler. Nakavt önemliyse, şansa bağlı saldırı yerine güvenilir bir saldırı genelde daha iyidir.',
-  'rule.dice': 'Hasar sayaçları: her sayaç 10 hasardır. Gerçek masada oyuncular hasarı Pokémon\'un üzerine konan altı yüzlü zarlarla takip eder. Bazı zarlarda nokta, bazılarında rakam vardır; ikisinde de 3 gösteren zar 30 hasar demektir, 60\'ı geçince ikinci bir zar eklenir. Evdeki zarına uyan türü Koç panelindeki Hasar zarı ayarından seçebilirsin.',
+  'rule.dice': 'Hasar sayaçları: her sayaç 10 hasardır. Gerçek masada oyuncular hasarı Pokémon\'un üzerine konan altı yüzlü zarlarla takip eder. Bazı zarlarda nokta, bazılarında rakam vardır; ikisinde de 3 gösteren zar 30 hasar demektir, 60\'ı geçince ikinci bir zar eklenir. Evdeki zarına uyan türü Ayarlar\'daki Hasar zarı seçeneğinden seçebilirsin.',
   'win.0': 'çok düşük', 'win.1': 'düşük', 'win.2': 'eşit', 'win.3': 'yüksek', 'win.4': 'çok yüksek',
   'ui.diceStyle': 'Hasar zarı:', 'ui.dicePips': 'Noktalı', 'ui.diceNumbers': 'Numaralı',
   'ui.diceChart': 'Her zar yüzü hasar sayacını gösterir. Noktalı zar ile numaralı zar aynı anlama gelir: 1 = 10 hasar … 6 = 60 hasar. 60\'ı geçince ikinci bir zar eklenir.',

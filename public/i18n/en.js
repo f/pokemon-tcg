@@ -83,7 +83,7 @@ export const STRINGS = {
   'coin.o.plus': '+{n} damage', 'coin.o.zero': 'No damage from this coin', 'coin.o.self': '{m} takes {n} damage',
   'coin.o.shield': 'No damage during the next turn', 'coin.o.wake': 'It wakes up', 'coin.o.sleep': 'It stays Asleep',
   'rule.coin': 'Coin flips: many cards say "Flip a coin". Heads and tails each have a 50% chance, and the card tells you what each one does. When a Knock Out matters, a reliable attack is usually better than a lucky one.',
-  'rule.dice': 'Damage counters: each counter is 10 damage. On a real table, players track damage with six-sided dice placed on the Pokémon. Some dice have pips and some have printed numbers; either way a die showing 3 means 30 damage, and past 60 you add a second die. Pick the style you have at home under Damage dice in the Coach panel.',
+  'rule.dice': 'Damage counters: each counter is 10 damage. On a real table, players track damage with six-sided dice placed on the Pokémon. Some dice have pips and some have printed numbers; either way a die showing 3 means 30 damage, and past 60 you add a second die. Pick the style you have at home under Damage dice in Settings.',
   'win.0': 'very unlikely', 'win.1': 'unlikely', 'win.2': 'even', 'win.3': 'likely', 'win.4': 'very likely',
 
   // ---- Log ----
