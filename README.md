@@ -216,6 +216,6 @@ Issues and pull requests are welcome: bug reports with the deck and the turn, ca
 
 ## License
 
-The code is [MIT](LICENSE) licensed.
+The code is [MIT](LICENSE) licensed. See [NOTICE](NOTICE) for the third-party assets.
 
 Pokémon, the Pokémon logo, card names, card text and card images are © Nintendo / Creatures / GAME FREAK / The Pokémon Company. This is a fan-made, non-commercial learning tool, not affiliated with or endorsed by them. The repository doesn't contain the card or logo image files (the screenshots in `docs/` show them in play). `npm run images` downloads them from the public Pokémon TCG API image service.
