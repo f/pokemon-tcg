@@ -1,0 +1,475 @@
+{
+  "name": "Mega Lucario ex League",
+  "group": "mega",
+  "format": "modern",
+  "types": [
+    "Fighting",
+    "Darkness"
+  ],
+  "featured": [
+    "me1-77",
+    "sv6-141",
+    "sv6pt5-38"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "sv6-141",
+      "set": "sv6",
+      "name": "Bloodmoon Ursaluna ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv6/141.webp",
+      "imgLarge": "img/cards/sv6/141_hires.webp",
+      "stage": 0,
+      "hp": 260,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Blood Moon",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "240",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Seasoned Skill",
+        "text": "Blood Moon used by this Pokémon costs Colorless less for each Prize card your opponent has taken.",
+        "kind": "seasonedSkill",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sv6pt5-38",
+      "set": "sv6pt5",
+      "name": "Fezandipiti ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv6pt5/38.webp",
+      "imgLarge": "img/cards/sv6pt5/38_hires.webp",
+      "stage": 0,
+      "hp": 210,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cruel Arrow",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 100 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 100
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Flip the Script",
+        "text": "Once during your turn, if any of your Pokémon were Knocked Out during your opponent's last turn, you may draw 3 cards. You can't use more than 1 Flip the Script Ability each turn.",
+        "kind": "flipTheScript",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "me1-73",
+      "set": "me1",
+      "name": "Hariyama",
+      "kind": "pokemon",
+      "img": "img/cards/me1/73.webp",
+      "imgLarge": "img/cards/me1/73_hires.webp",
+      "stage": 1,
+      "hp": 150,
+      "type": "Fighting",
+      "evolvesFrom": "Makuhita",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Wild Press",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "210",
+          "text": "This Pokémon also does 70 damage to itself.",
+          "effect": {
+            "selfDamage": 70
+          }
+        }
+      ],
+      "power": {
+        "name": "Heave-Ho Catcher",
+        "text": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. Switch in 1 of your opponent's Benched Pokémon to the Active Spot.",
+        "kind": "heaveHoCatcher",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "me1-74",
+      "set": "me1",
+      "name": "Lunatone",
+      "kind": "pokemon",
+      "img": "img/cards/me1/74.webp",
+      "imgLarge": "img/cards/me1/74_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Power Gem",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Lunar Cycle",
+        "text": "Once during your turn, if you have Solrock in play, you may discard a Basic Fighting Energy card from your hand in order to use this Ability. Draw 3 cards. You can't use more than 1 Lunar Cycle Ability each turn.",
+        "kind": "lunarCycle",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "me1-72",
+      "set": "me1",
+      "name": "Makuhita",
+      "kind": "pokemon",
+      "img": "img/cards/me1/72.webp",
+      "imgLarge": "img/cards/me1/72_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Corkscrew Punch",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Confront",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "me1-77",
+      "set": "me1",
+      "name": "Mega Lucario ex",
+      "kind": "pokemon",
+      "img": "img/cards/me1/77.webp",
+      "imgLarge": "img/cards/me1/77_hires.webp",
+      "stage": 1,
+      "hp": 340,
+      "type": "Fighting",
+      "evolvesFrom": "Riolu",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Aura Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "130",
+          "text": "Attach up to 3 Basic Fighting Energy cards from your discard pile to your Benched Pokémon in any way you like.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": "Fighting",
+              "n": 3
+            }
+          }
+        },
+        {
+          "name": "Mega Brave",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "270",
+          "text": "During your next turn, this Pokémon can't use Mega Brave.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Mega",
+        "ex"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "me1-76",
+      "set": "me1",
+      "name": "Riolu",
+      "kind": "pokemon",
+      "img": "img/cards/me1/76.webp",
+      "imgLarge": "img/cards/me1/76_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Accelerating Stab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": "During your next turn, this Pokémon can't use Accelerating Stab.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me1-75",
+      "set": "me1",
+      "name": "Solrock",
+      "kind": "pokemon",
+      "img": "img/cards/me1/75.webp",
+      "imgLarge": "img/cards/me1/75_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cosmic Beam",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "70",
+          "text": "If you don't have Lunatone on your Bench, this attack does nothing. This attack's damage isn't affected by Weakness or Resistance.",
+          "effect": {
+            "needsBenchName": "Lunatone",
+            "noWROnly": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "zsv10pt5-79",
+      "set": "zsv10pt5",
+      "name": "Air Balloon",
+      "kind": "trainer",
+      "img": "img/cards/zsv10pt5/79.webp",
+      "imgLarge": "img/cards/zsv10pt5/79_hires.webp",
+      "text": "The Retreat Cost of the Pokémon this card is attached to is ColorlessColorless less. You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "airBalloon"
+    },
+    {
+      "count": 2,
+      "id": "me1-114",
+      "set": "me1",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/me1/114.webp",
+      "imgLarge": "img/cards/me1/114_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "me1-116",
+      "set": "me1",
+      "name": "Fighting Gong",
+      "kind": "trainer",
+      "img": "img/cards/me1/116.webp",
+      "imgLarge": "img/cards/me1/116_hires.webp",
+      "text": "Search your deck for a Basic Fighting Energy card or a Basic Fighting Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "fightingGong",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv8-177",
+      "set": "sv8",
+      "name": "Gravity Mountain",
+      "kind": "trainer",
+      "img": "img/cards/sv8/177.webp",
+      "imgLarge": "img/cards/sv8/177_hires.webp",
+      "text": "Each Stage 2 Pokémon in play (both yours and your opponent's) gets -30 HP. You may play only 1 Stadium card during your turn. Put it into the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "gravityMountain"
+    },
+    {
+      "count": 3,
+      "id": "sv9-149",
+      "set": "sv9",
+      "name": "Iris's Fighting Spirit",
+      "kind": "trainer",
+      "img": "img/cards/sv9/149.webp",
+      "imgLarge": "img/cards/sv9/149_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.  Draw cards until you have 6 cards in your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "irisFightingSpirit",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "me1-119",
+      "set": "me1",
+      "name": "Lillie's Determination",
+      "kind": "trainer",
+      "img": "img/cards/me1/119.webp",
+      "imgLarge": "img/cards/me1/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "lilliesDetermination",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv6pt5-61",
+      "set": "sv6pt5",
+      "name": "Night Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sv6pt5/61.webp",
+      "imgLarge": "img/cards/sv6pt5/61_hires.webp",
+      "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "nightStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "me1-124",
+      "set": "me1",
+      "name": "Premium Power Pro",
+      "kind": "trainer",
+      "img": "img/cards/me1/124.webp",
+      "imgLarge": "img/cards/me1/124_hires.webp",
+      "text": "During this turn, attacks used by your Fighting Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play any number of Item cards during your turn.",
+      "trainer": "premiumPowerPro",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv6-163",
+      "set": "sv6",
+      "name": "Secret Box",
+      "kind": "trainer",
+      "img": "img/cards/sv6/163.webp",
+      "imgLarge": "img/cards/sv6/163_hires.webp",
+      "text": "You can't have more than 1 ACE SPEC card in your deck. You can use this card only if you discard 3 other cards from your hand.    Search your deck for an Item card, a Pokémon Tool card, a Supporter card, and a Stadium card, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn. ACE SPEC: You can't have more than 1 ACE SPEC card in your deck.",
+      "trainer": "secretBox",
+      "ttype": "item",
+      "aceSpec": true
+    },
+    {
+      "count": 1,
+      "id": "sv8-187",
+      "set": "sv8",
+      "name": "Surfer",
+      "kind": "trainer",
+      "img": "img/cards/sv8/187.webp",
+      "imgLarge": "img/cards/sv8/187_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw cards until you have 5 cards in your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "surfer",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "me1-130",
+      "set": "me1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/me1/130.webp",
+      "imgLarge": "img/cards/me1/130_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "me1-131",
+      "set": "me1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/me1/131.webp",
+      "imgLarge": "img/cards/me1/131_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand.  Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 12,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    }
+  ]
+}

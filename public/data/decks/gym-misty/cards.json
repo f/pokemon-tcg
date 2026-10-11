@@ -1,0 +1,438 @@
+{
+  "name": "Misty's Water",
+  "group": "gym1",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "gym1-56",
+    "gym1-53",
+    "gym1-10"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "gym1-85",
+      "set": "gym1",
+      "name": "Misty's Goldeen",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/85.webp",
+      "imgLarge": "img/cards/gym1/85_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fury Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Supersonic",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym1-86",
+      "set": "gym1",
+      "name": "Misty's Horsea",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/86.webp",
+      "imgLarge": "img/cards/gym1/86_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Smokescreen",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "20",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym1-87",
+      "set": "gym1",
+      "name": "Misty's Poliwag",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/87.webp",
+      "imgLarge": "img/cards/gym1/87_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hypnotic Stare",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Asleep.",
+          "effect": {
+            "flipStatusEither": [
+              "paralyzed",
+              "asleep"
+            ]
+          }
+        },
+        {
+          "name": "Tail Rap",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-53",
+      "set": "gym1",
+      "name": "Misty's Poliwhirl",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/53.webp",
+      "imgLarge": "img/cards/gym1/53_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": "Misty's Poliwag",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rapids",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If the Defending Pokémon has any Energy cards attached to it, flip a coin. If heads, choose 1 of those Energy cards and discard it.",
+          "effect": {
+            "flipRemoveEnergy": true
+          }
+        },
+        {
+          "name": "Water Punch",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Flip a number of coins equal to the number of Water Energy attached to Misty's Poliwhirl. This attack does 30 damage plus 10 damage for each heads.",
+          "effect": {
+            "waterPunch": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-54",
+      "set": "gym1",
+      "name": "Misty's Psyduck",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/54.webp",
+      "imgLarge": "img/cards/gym1/54_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Call for Friend",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, you may search your deck for a Basic Pokémon with Misty in its name and put it onto your Bench. (You can't use this attack if your Bench is full.) Shuffle your deck afterward.",
+          "effect": {
+            "callFriend": {
+              "who": "Misty",
+              "flip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-56",
+      "set": "gym1",
+      "name": "Misty's Starmie",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/56.webp",
+      "imgLarge": "img/cards/gym1/56_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": "Misty's Staryu",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each Water Energy attached to Misty's Starmie but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+          "effect": {
+            "extraWater": 20
+          }
+        },
+        {
+          "name": "Bubblebeam",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym1-90",
+      "set": "gym1",
+      "name": "Misty's Staryu",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/90.webp",
+      "imgLarge": "img/cards/gym1/90_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Swift",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon.",
+          "effect": {
+            "noWR": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-57",
+      "set": "gym1",
+      "name": "Misty's Tentacool",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/57.webp",
+      "imgLarge": "img/cards/gym1/57_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Crystal Beam",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, your opponent can't attach Energy cards to the Defending Pokémon during his or her next turn.",
+          "effect": {
+            "flipNoEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-10",
+      "set": "gym1",
+      "name": "Misty's Tentacruel",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/10.webp",
+      "imgLarge": "img/cards/gym1/10_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": "Misty's Tentacool",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Jellyfish Poison",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. If tails, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatusEither": [
+              "poisoned",
+              "confused"
+            ]
+          }
+        }
+      ],
+      "power": {
+        "name": "Flee",
+        "text": "If an attack does damage to Misty's Tentacruel while it's your Active Pokémon, you may switch it with 1 of your Benched Pokémon, which prevents all other effects of that attack on Misty's Tentacruel. This power can't be used if Misty's Tentacruel is already Asleep, Confused, or Paralyzed.",
+        "kind": "flee"
+      }
+    },
+    {
+      "count": 1,
+      "id": "gym1-108",
+      "set": "gym1",
+      "name": "Cerulean City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym1/108.webp",
+      "imgLarge": "img/cards/gym1/108_hires.webp",
+      "text": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Each player pays Colorless less to retreat his or her Pokémon if it has Misty in its name.",
+      "trainer": "stadium",
+      "stadium": "cerulean"
+    },
+    {
+      "count": 2,
+      "id": "base4-119",
+      "set": "base4",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/119.webp",
+      "imgLarge": "img/cards/base4/119_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 1,
+      "id": "gym1-102",
+      "set": "gym1",
+      "name": "Misty",
+      "kind": "trainer",
+      "img": "img/cards/gym1/102.webp",
+      "imgLarge": "img/cards/gym1/102_hires.webp",
+      "text": "Discard 2 of the other cards in your hand in order to play this card. If this turn's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), and if the attacking Pokémon has Misty in its name, the attack does 20 more damage to the Defending Pokémon.",
+      "trainer": "misty"
+    },
+    {
+      "count": 3,
+      "id": "base4-121",
+      "set": "base4",
+      "name": "Poké Ball",
+      "kind": "trainer",
+      "img": "img/cards/base4/121.webp",
+      "imgLarge": "img/cards/base4/121_hires.webp",
+      "text": "Flip a coin. If heads, you may search your deck for any Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+      "trainer": "pokeBall"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base4-123",
+      "set": "base4",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base4/123.webp",
+      "imgLarge": "img/cards/base4/123_hires.webp",
+      "text": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 28,
+      "id": "gym1-132",
+      "set": "gym1",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/gym1/132.webp",
+      "imgLarge": "img/cards/gym1/132_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

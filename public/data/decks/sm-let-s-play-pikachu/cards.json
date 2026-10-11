@@ -1,0 +1,549 @@
+{
+  "name": "Let's Play, Pikachu!",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "sm3-43",
+    "sm4-31",
+    "sm8-82"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm4-31",
+      "set": "sm4",
+      "name": "Alolan Raichu",
+      "kind": "pokemon",
+      "img": "img/cards/sm4/31.webp",
+      "imgLarge": "img/cards/sm4/31_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": "Pikachu",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70+",
+          "text": "This attack does 20 more damage times the amount of Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Surge Surfer",
+        "text": "If there is any Stadium card in play, this Pokémon has no Retreat Cost.",
+        "kind": "surgeSurfer",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm8-81",
+      "set": "sm8",
+      "name": "Blitzle",
+      "kind": "pokemon",
+      "img": "img/cards/sm8/81.webp",
+      "imgLarge": "img/cards/sm8/81_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flop",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Zap Kick",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm5-43",
+      "set": "sm5",
+      "name": "Electabuzz",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/43.webp",
+      "imgLarge": "img/cards/sm5/43_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Low Kick",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Thunder",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "This Pokémon does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-43",
+      "set": "sm3",
+      "name": "Electivire",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/43.webp",
+      "imgLarge": "img/cards/sm3/43_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Lightning",
+      "evolvesFrom": "Electabuzz",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Thunder Punch",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "Flip a coin. If heads, this attack does 60 more damage. If tails, this Pokémon does 20 damage to itself.",
+          "effect": {
+            "flipBonus": 60,
+            "tailsSelf": 20
+          }
+        },
+        {
+          "name": "Giga Impact",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "170",
+          "text": "This Pokémon can't attack during your next turn.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm35-31",
+      "set": "sm35",
+      "name": "Electrode",
+      "kind": "pokemon",
+      "img": "img/cards/sm35/31.webp",
+      "imgLarge": "img/cards/sm35/31_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Lightning",
+      "evolvesFrom": "Voltorb",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Swift",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "60",
+          "text": "This attack's damage isn't affected by Weakness, Resistance, or any other effects on your opponent's Active Pokémon.",
+          "effect": {
+            "noWR": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm9-123",
+      "set": "sm9",
+      "name": "Pidgeotto",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/123.webp",
+      "imgLarge": "img/cards/sm9/123_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": "Pidgey",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Air Mail",
+        "text": "Once during your turn (before your attack), you may look at the top 2 cards of your deck and put 1 of them into your hand. Put the other card on the bottom of your deck.",
+        "kind": "reconDirective",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm9-121",
+      "set": "sm9",
+      "name": "Pidgey",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/121.webp",
+      "imgLarge": "img/cards/sm9/121_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm35-28",
+      "set": "sm35",
+      "name": "Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/sm35/28.webp",
+      "imgLarge": "img/cards/sm35/28_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Iron Tail",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20×",
+          "text": "Flip a coin until you get tails. This attack does 20 damage for each heads.",
+          "effect": {
+            "flipUntilTails": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm4-30",
+      "set": "sm4",
+      "name": "Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/sm4/30.webp",
+      "imgLarge": "img/cards/sm4/30_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pika Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 20 more damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm35-32",
+      "set": "sm35",
+      "name": "Raikou",
+      "kind": "pokemon",
+      "img": "img/cards/sm35/32.webp",
+      "imgLarge": "img/cards/sm35/32_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Booming Thunder",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "30",
+          "text": "Attach a Lightning Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": "Lightning"
+            }
+          }
+        },
+        {
+          "name": "Electric Ball",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm35-30",
+      "set": "sm35",
+      "name": "Voltorb",
+      "kind": "pokemon",
+      "img": "img/cards/sm35/30.webp",
+      "imgLarge": "img/cards/sm35/30_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Electro Ball",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm8-82",
+      "set": "sm8",
+      "name": "Zebstrika",
+      "kind": "pokemon",
+      "img": "img/cards/sm8/82.webp",
+      "imgLarge": "img/cards/sm8/82_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": "Blitzle",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Head Bolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Sprint",
+        "text": "Once during your turn (before your attack), you may discard your hand and draw 4 cards.",
+        "kind": "sprint",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-119",
+      "set": "sm1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/119.webp",
+      "imgLarge": "img/cards/sm1/119_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-126",
+      "set": "sm1",
+      "name": "Pokémon Catcher",
+      "kind": "trainer",
+      "img": "img/cards/sm1/126.webp",
+      "imgLarge": "img/cards/sm1/126_hires.webp",
+      "text": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "pokemonCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm5-133",
+      "set": "sm5",
+      "name": "Pokémon Fan Club",
+      "kind": "trainer",
+      "img": "img/cards/sm5/133.webp",
+      "imgLarge": "img/cards/sm5/133_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "pokemonFanClub",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-127",
+      "set": "sm1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sm1/127.webp",
+      "imgLarge": "img/cards/sm1/127_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 22,
+      "id": "sm2-168",
+      "set": "sm2",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sm2/168.webp",
+      "imgLarge": "img/cards/sm2/168_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

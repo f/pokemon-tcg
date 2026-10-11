@@ -1,0 +1,492 @@
+{
+  "name": "Mewtwo V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Water"
+  ],
+  "featured": [
+    "swshp-SWSH223",
+    "swsh6-73",
+    "swsh9-125"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "swsh9-125",
+      "set": "swsh9",
+      "name": "Cinccino",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/125.webp",
+      "imgLarge": "img/cards/swsh9/125_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": "Minccino",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Triple Axel",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50×",
+          "text": "Flip 3 coins. This attack does 50 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh6-71",
+      "set": "swsh6",
+      "name": "Hatenna",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/71.webp",
+      "imgLarge": "img/cards/swsh6/71_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Psyshot",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh6-73",
+      "set": "swsh6",
+      "name": "Hatterene",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/73.webp",
+      "imgLarge": "img/cards/swsh6/73_hires.webp",
+      "stage": 2,
+      "hp": 130,
+      "type": "Psychic",
+      "evolvesFrom": "Hattrem",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "This attack does 50 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 50
+          }
+        }
+      ],
+      "power": {
+        "name": "Witch Rondo",
+        "text": "Once during your turn, you may switch your Active Pokémon with 1 of your Benched Pokémon. If you do, your opponent switches their Active Pokémon with 1 of their Benched Pokémon.",
+        "kind": "witchRondo",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh6-72",
+      "set": "swsh6",
+      "name": "Hattrem",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/72.webp",
+      "imgLarge": "img/cards/swsh6/72_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Psychic",
+      "evolvesFrom": "Hatenna",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spiral Drain",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "30",
+          "text": "Heal 30 damage from this Pokémon.",
+          "effect": {
+            "heal": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-56",
+      "set": "swsh45",
+      "name": "Indeedee",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/56.webp",
+      "imgLarge": "img/cards/swsh45/56_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Helping Hand",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for a basic Energy card and attach it to 1 of your Benched Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachBench": {
+              "type": null,
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Psychic",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "pgo-34",
+      "set": "pgo",
+      "name": "Lunatone",
+      "kind": "pokemon",
+      "img": "img/cards/pgo/34.webp",
+      "imgLarge": "img/cards/pgo/34_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cycle Draw",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Discard a card from your hand. If you do, draw 3 cards.",
+          "effect": {
+            "discardHandDraw": 3
+          }
+        },
+        {
+          "name": "Moon Kinesis",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "This attack does 30 more damage for each Psychic Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Psychic",
+              "n": 30
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH223",
+      "set": "swshp",
+      "name": "Mewtwo V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH223.webp",
+      "imgLarge": "img/cards/swshp/SWSH223_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Super Psy Bolt",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Transfer Break",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "160",
+          "text": "Move an Energy from this Pokémon to 1 of your Benched Pokémon.",
+          "effect": {
+            "moveEnergyToBench": {
+              "n": 1,
+              "type": null
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-146",
+      "set": "swsh1",
+      "name": "Minccino",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/146.webp",
+      "imgLarge": "img/cards/swsh1/146_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tail Whap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh9-55",
+      "set": "swsh9",
+      "name": "Starmie",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/55.webp",
+      "imgLarge": "img/cards/swsh9/55_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": "Staryu",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10+",
+          "text": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 30
+          }
+        },
+        {
+          "name": "Power Gem",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh9-30",
+      "set": "swsh9",
+      "name": "Staryu",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/30.webp",
+      "imgLarge": "img/cards/swsh9/30_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Spin",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage for each heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh9-130",
+      "set": "swsh9",
+      "name": "Barry",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/130.webp",
+      "imgLarge": "img/cards/swsh9/130_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "barry",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh8-226",
+      "set": "swsh8",
+      "name": "Bug Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/226.webp",
+      "imgLarge": "img/cards/swsh8/226_hires.webp",
+      "text": "Draw 2 cards. Flip a coin. If heads, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "bugCatcher",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "pgo-66",
+      "set": "pgo",
+      "name": "Egg Incubator",
+      "kind": "trainer",
+      "img": "img/cards/pgo/66.webp",
+      "imgLarge": "img/cards/pgo/66_hires.webp",
+      "text": "Flip a coin. If heads, search your deck for a Basic Pokémon, put it onto your Bench, and shuffle your deck. If tails, put this Egg Incubator on the bottom of your deck instead of in the discard pile. You may play any number of Item cards during your turn.",
+      "trainer": "eggIncubator",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-162",
+      "set": "swsh1",
+      "name": "Energy Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/162.webp",
+      "imgLarge": "img/cards/swsh1/162_hires.webp",
+      "text": "Move a basic Energy from 1 of your Pokémon to another of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "energySwitch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "pgo-67",
+      "set": "pgo",
+      "name": "Lure Module",
+      "kind": "trainer",
+      "img": "img/cards/pgo/67.webp",
+      "imgLarge": "img/cards/pgo/67_hires.webp",
+      "text": "Each player reveals the top 3 cards of their deck and puts all Pokémon they find there into their hand. Then, each player shuffles the other cards back into their deck. You may play any number of Item cards during your turn.",
+      "trainer": "lureModule",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh8-240",
+      "set": "swsh8",
+      "name": "Shauna",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/240.webp",
+      "imgLarge": "img/cards/swsh8/240_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "shauna",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

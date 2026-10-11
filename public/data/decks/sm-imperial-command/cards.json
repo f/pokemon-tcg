@@ -1,0 +1,561 @@
+{
+  "name": "Imperial Command",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "sm5-34",
+    "sm5-38",
+    "sm2-20"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm5-38",
+      "set": "sm5",
+      "name": "Abomasnow",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/38.webp",
+      "imgLarge": "img/cards/sm5/38_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Water",
+      "evolvesFrom": "Snover",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Hypno Hammer",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ],
+      "power": {
+        "name": "Blessings of the Frost",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may attach a Water Energy card from your discard pile to 1 of your Pokémon.",
+        "kind": "blessingsOfTheFrost",
+        "ability": true,
+        "type": "Water"
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm5-28",
+      "set": "sm5",
+      "name": "Alolan Sandshrew",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/28.webp",
+      "imgLarge": "img/cards/sm5/28_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fury Swipes",
+          "cost": [],
+          "damage": "10×",
+          "text": "Flip 3 coins. This attack does 10 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-20",
+      "set": "sm2",
+      "name": "Alolan Sandslash",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/20.webp",
+      "imgLarge": "img/cards/sm2/20_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": "Alolan Sandshrew",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Smash Turn",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Slush Rush",
+        "text": "Once during your turn (before your attack), you may draw a card.",
+        "kind": "slushRush",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm5-35",
+      "set": "sm5",
+      "name": "Buizel",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/35.webp",
+      "imgLarge": "img/cards/sm5/35_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-36",
+      "set": "sm1",
+      "name": "Corsola",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/36.webp",
+      "imgLarge": "img/cards/sm1/36_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Surf",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-34",
+      "set": "sm5",
+      "name": "Empoleon",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/34.webp",
+      "imgLarge": "img/cards/sm5/34_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Water",
+      "evolvesFrom": "Prinplup",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Total Command",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "This attack does 20 damage for each Benched Pokémon (both yours and your opponent's).",
+          "effect": {
+            "timesAllBench": 20
+          }
+        },
+        {
+          "name": "Whirlpool",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "Discard an Energy from your opponent's Active Pokémon.",
+          "effect": {
+            "removeEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-36",
+      "set": "sm5",
+      "name": "Floatzel",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/36.webp",
+      "imgLarge": "img/cards/sm5/36_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Water",
+      "evolvesFrom": "Buizel",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Agility",
+          "cost": [
+            "Water"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
+          "effect": {
+            "flipShield": "all"
+          }
+        },
+        {
+          "name": "Aqua Blast",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Discard a Water Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Water",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-42",
+      "set": "sm5",
+      "name": "Manaphy",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/42.webp",
+      "imgLarge": "img/cards/sm5/42_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Deep Currents",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Shuffle 5 Water Energy cards from your discard pile into your deck.",
+          "effect": {
+            "shuffleDiscardEnergyType": {
+              "type": "Water",
+              "n": 5
+            }
+          }
+        },
+        {
+          "name": "Water Pulse",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm5-31",
+      "set": "sm5",
+      "name": "Piplup",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/31.webp",
+      "imgLarge": "img/cards/sm5/31_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Splatter",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "This attack does 20 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-33",
+      "set": "sm5",
+      "name": "Prinplup",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/33.webp",
+      "imgLarge": "img/cards/sm5/33_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Piplup",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Bubble Beam",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm5-37",
+      "set": "sm5",
+      "name": "Snover",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/37.webp",
+      "imgLarge": "img/cards/sm5/37_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Ice Shard",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "If your opponent's Active Pokémon is a Fighting Pokémon, this attack does 40 more damage.",
+          "effect": {
+            "bonusIfDefType": {
+              "type": "Fighting",
+              "n": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-119",
+      "set": "sm2",
+      "name": "Aqua Patch",
+      "kind": "trainer",
+      "img": "img/cards/sm2/119.webp",
+      "imgLarge": "img/cards/sm2/119_hires.webp",
+      "text": "Attach a Water Energy card from your discard pile to 1 of your Benched Water Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "aquaPatch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm5-122",
+      "set": "sm5",
+      "name": "Escape Board",
+      "kind": "trainer",
+      "img": "img/cards/sm5/122.webp",
+      "imgLarge": "img/cards/sm5/122_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. The Retreat Cost of the Pokémon this card is attached to is Colorless less, and it can retreat even if it's Asleep or Paralyzed. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "escapeBoard"
+    },
+    {
+      "count": 1,
+      "id": "sm3-114",
+      "set": "sm3",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/sm3/114.webp",
+      "imgLarge": "img/cards/sm3/114_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, that player doesn't switch Pokémon.) You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-125",
+      "set": "sm5",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm5/125.webp",
+      "imgLarge": "img/cards/sm5/125_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm5-133",
+      "set": "sm5",
+      "name": "Pokémon Fan Club",
+      "kind": "trainer",
+      "img": "img/cards/sm5/133.webp",
+      "imgLarge": "img/cards/sm5/133_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "pokemonFanClub",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm3-123",
+      "set": "sm3",
+      "name": "Sophocles",
+      "kind": "trainer",
+      "img": "img/cards/sm3/123.webp",
+      "imgLarge": "img/cards/sm3/123_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, draw 4 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "sophocles",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-135",
+      "set": "sm1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/135.webp",
+      "imgLarge": "img/cards/sm1/135_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 20,
+      "id": "sm4-124",
+      "set": "sm4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sm4/124.webp",
+      "imgLarge": "img/cards/sm4/124_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

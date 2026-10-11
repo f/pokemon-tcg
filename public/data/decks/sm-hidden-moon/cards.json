@@ -1,0 +1,620 @@
+{
+  "name": "Hidden Moon",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Fire"
+  ],
+  "featured": [
+    "sm2-61",
+    "sm2-113",
+    "sm2-16"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm2-113",
+      "set": "sm2",
+      "name": "Bewear",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/113.webp",
+      "imgLarge": "img/cards/sm2/113_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": "Stufful",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Dangerous Blow",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "If your opponent's Active Pokémon is a Basic Pokémon, this attack does 60 more damage.",
+          "effect": {
+            "bonusIfDefBasic": 60
+          }
+        }
+      ],
+      "power": {
+        "name": "Rake It In",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may draw 3 cards.",
+        "kind": "drawOnEvolve3",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm1-65",
+      "set": "sm1",
+      "name": "Cosmoem",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/65.webp",
+      "imgLarge": "img/cards/sm1/65_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": "Cosmog",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Teleport",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm1-64",
+      "set": "sm1",
+      "name": "Cosmog",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/64.webp",
+      "imgLarge": "img/cards/sm1/64_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dust Gathering",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-52",
+      "set": "sm2",
+      "name": "Gothita",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/52.webp",
+      "imgLarge": "img/cards/sm2/52_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Blown Kiss",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Put 1 damage counter on 1 of your opponent's Pokémon.",
+          "effect": {
+            "countersMulti": {
+              "n": 10,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-53",
+      "set": "sm2",
+      "name": "Gothorita",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/53.webp",
+      "imgLarge": "img/cards/sm2/53_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Psychic",
+      "evolvesFrom": "Gothita",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Psybeam",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-12",
+      "set": "sm2",
+      "name": "Lampent",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/12.webp",
+      "imgLarge": "img/cards/sm2/12_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": "Litwick",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Will-O-Wisp",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-11",
+      "set": "sm2",
+      "name": "Litwick",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/11.webp",
+      "imgLarge": "img/cards/sm2/11_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flickering Flames",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-61",
+      "set": "sm2",
+      "name": "Lunala",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/61.webp",
+      "imgLarge": "img/cards/sm2/61_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Psychic",
+      "evolvesFrom": "Cosmoem",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Shatter Shot",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "40×",
+          "text": "This attack does 40 damage times the amount of Psychic Energy attached to this Pokémon.",
+          "effect": {
+            "timesSelfType": {
+              "type": "Psychic",
+              "n": 40
+            }
+          }
+        },
+        {
+          "name": "Wings of the Moone",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "130",
+          "text": "Move all Energy from this Pokémon to your Benched Pokémon in any way you like.",
+          "effect": {
+            "moveAllEnergyBenchAny": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-58",
+      "set": "sm2",
+      "name": "Mimikyu",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/58.webp",
+      "imgLarge": "img/cards/sm2/58_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Filch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Copycat",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "If your opponent's Pokémon used an attack that isn't a GX attack during their last turn, use it as this attack.",
+          "effect": {
+            "copyLastAttack": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-56",
+      "set": "sm2",
+      "name": "Oricorio",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/56.webp",
+      "imgLarge": "img/cards/sm2/56_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Supernatural Dance",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "For each Pokémon in your opponent's discard pile, put 1 damage counter on your opponent's Pokémon in any way you like.",
+          "effect": {
+            "placeCountersOppDiscard": true
+          }
+        },
+        {
+          "name": "Revelation Dance",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "If there is no Stadium card in play, this attack does nothing.",
+          "effect": {
+            "needsStadium": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-15",
+      "set": "sm2",
+      "name": "Salandit",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/15.webp",
+      "imgLarge": "img/cards/sm2/15_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Venoshock",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "If your opponent's Active Pokémon is Poisoned, this attack does 40 more damage.",
+          "effect": {
+            "bonusIfDefStatus": {
+              "status": "poisoned",
+              "n": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-16",
+      "set": "sm2",
+      "name": "Salazzle",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/16.webp",
+      "imgLarge": "img/cards/sm2/16_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Fire",
+      "evolvesFrom": "Salandit",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Hot Poison",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may leave your opponent's Active Pokémon Burned and Poisoned.",
+        "kind": "hotPoison",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm2-112",
+      "set": "sm2",
+      "name": "Stufful",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/112.webp",
+      "imgLarge": "img/cards/sm2/112_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Hammer In",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-117",
+      "set": "sm2",
+      "name": "Altar of the Moone",
+      "kind": "trainer",
+      "img": "img/cards/sm2/117.webp",
+      "imgLarge": "img/cards/sm2/117_hires.webp",
+      "text": "The Retreat Cost of each Pokémon (both yours and your opponent's) that has any Psychic or Darkness Energy attached to it is ColorlessColorless less. This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "altarOfTheMoone"
+    },
+    {
+      "count": 1,
+      "id": "sm2-122",
+      "set": "sm2",
+      "name": "Energy Loto",
+      "kind": "trainer",
+      "img": "img/cards/sm2/122.webp",
+      "imgLarge": "img/cards/sm2/122_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal an Energy card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyLoto",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-116",
+      "set": "sm1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sm1/116.webp",
+      "imgLarge": "img/cards/sm1/116_hires.webp",
+      "text": "Put 2 basic Energy cards from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-127",
+      "set": "sm1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sm1/127.webp",
+      "imgLarge": "img/cards/sm1/127_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-132",
+      "set": "sm1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm1/132.webp",
+      "imgLarge": "img/cards/sm1/132_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 8,
+      "id": "sm1-165",
+      "set": "sm1",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/165.webp",
+      "imgLarge": "img/cards/sm1/165_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 12,
+      "id": "sm1-162",
+      "set": "sm1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/162.webp",
+      "imgLarge": "img/cards/sm1/162_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "name": "Mach Strike",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Fighting",
+    "Dragon",
+    "Psychic"
+  ],
+  "featured": [
+    "sm5-99",
+    "sm5-69",
+    "sm5-113"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm5-98",
+      "set": "sm5",
+      "name": "Gabite",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/98.webp",
+      "imgLarge": "img/cards/sm5/98_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Dragon",
+      "evolvesFrom": "Gible",
+      "weakness": "Fairy",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ascension",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "",
+          "text": "Search your deck for a card that evolves from this Pokémon and put it onto this Pokémon to evolve it. Then, shuffle your deck.",
+          "effect": {
+            "evolveSelfFromDeck": true
+          }
+        },
+        {
+          "name": "Slash",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-99",
+      "set": "sm5",
+      "name": "Garchomp",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/99.webp",
+      "imgLarge": "img/cards/sm5/99_hires.webp",
+      "stage": 2,
+      "hp": 150,
+      "type": "Dragon",
+      "evolvesFrom": "Gabite",
+      "weakness": "Fairy",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Quick Dive",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 50 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 50
+            }
+          }
+        },
+        {
+          "name": "Royal Blades",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100+",
+          "text": "If you played Cynthia from your hand during this turn, this attack does 100 more damage.",
+          "effect": {
+            "bonusIfPlayed": {
+              "name": "Cynthia",
+              "n": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm5-96",
+      "set": "sm5",
+      "name": "Gible",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/96.webp",
+      "imgLarge": "img/cards/sm5/96_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": "Fairy",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ascension",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "",
+          "text": "Search your deck for a card that evolves from this Pokémon and put it onto this Pokémon to evolve it. Then, shuffle your deck.",
+          "effect": {
+            "evolveSelfFromDeck": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-113",
+      "set": "sm5",
+      "name": "Gumshoos",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/113.webp",
+      "imgLarge": "img/cards/sm5/113_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Colorless",
+      "evolvesFrom": "Yungoos",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Identify",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Your opponent reveals their hand. If you find a Pokémon there, this attack does 80 more damage.",
+          "effect": {
+            "bonusIfOppHandHas": {
+              "kind": "pokemon",
+              "n": 80
+            }
+          }
+        },
+        {
+          "name": "Whap Down",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-68",
+      "set": "sm5",
+      "name": "Hippopotas",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/68.webp",
+      "imgLarge": "img/cards/sm5/68_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Eleventh Hour Tackle",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "If there are 3 or fewer cards in your deck, this attack does 130 more damage.",
+          "effect": {
+            "bonusIfDeckLE": {
+              "max": 3,
+              "n": 130
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm5-69",
+      "set": "sm5",
+      "name": "Hippowdon",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/69.webp",
+      "imgLarge": "img/cards/sm5/69_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Fighting",
+      "evolvesFrom": "Hippopotas",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Sand Tomb",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "noRetreat": true
+          }
+        },
+        {
+          "name": "Dust Cannon",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100+",
+          "text": "This attack does 10 more damage for each Colorless in your opponent's Active Pokémon's Retreat Cost.",
+          "effect": {
+            "plusDefRetreat": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm5-67",
+      "set": "sm5",
+      "name": "Lucario",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/67.webp",
+      "imgLarge": "img/cards/sm5/67_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": "Riolu",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Missile Jab",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "This attack's damage isn't affected by Resistance.",
+          "effect": {
+            "noRes": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Precognitive Aura",
+        "text": "Once during your turn (before your attack), if you have Garchomp in play, you may search your deck for a card and put it into your hand. Then, shuffle your deck.",
+        "kind": "precognitiveAura",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm5-66",
+      "set": "sm5",
+      "name": "Riolu",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/66.webp",
+      "imgLarge": "img/cards/sm5/66_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Detect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
+          "effect": {
+            "flipShield": "all"
+          }
+        },
+        {
+          "name": "Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-69",
+      "set": "sm3",
+      "name": "Solrock",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/69.webp",
+      "imgLarge": "img/cards/sm3/69_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Solar Heat",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20+",
+          "text": "If there is any Stadium card in play, this attack does 20 more damage.",
+          "effect": {
+            "bonusIfStadium": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-53",
+      "set": "sm5",
+      "name": "Spiritomb",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/53.webp",
+      "imgLarge": "img/cards/sm5/53_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Lightless World",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Put 2 Supporter cards from your discard pile into your hand.",
+          "effect": {
+            "supportersFromDiscard": 2
+          }
+        },
+        {
+          "name": "Terrify",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "If the Defending Pokémon is a Basic Pokémon, it can't attack during your opponent's next turn.",
+          "effect": {
+            "noAttackIfBasic": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm5-115",
+      "set": "sm5",
+      "name": "Type: Null",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/115.webp",
+      "imgLarge": "img/cards/sm5/115_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Merciless Strike",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "If your opponent's Active Pokémon already has any damage counters on it, this attack does 30 more damage.",
+          "effect": {
+            "bonusIfDamaged": 30
+          }
+        },
+        {
+          "name": "Headbang",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm5-112",
+      "set": "sm5",
+      "name": "Yungoos",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/112.webp",
+      "imgLarge": "img/cards/sm5/112_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scout",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent reveals their hand.",
+          "effect": {
+            "peekHand": true
+          }
+        },
+        {
+          "name": "Take Down",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "This Pokémon does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-114",
+      "set": "sm1",
+      "name": "Big Malasada",
+      "kind": "trainer",
+      "img": "img/cards/sm1/114.webp",
+      "imgLarge": "img/cards/sm1/114_hires.webp",
+      "text": "Heal 20 damage and remove a Special Condition from your Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "bigMalasada",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-122",
+      "set": "sm5",
+      "name": "Escape Board",
+      "kind": "trainer",
+      "img": "img/cards/sm5/122.webp",
+      "imgLarge": "img/cards/sm5/122_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. The Retreat Cost of the Pokémon this card is attached to is Colorless less, and it can retreat even if it's Asleep or Paralyzed. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "escapeBoard"
+    },
+    {
+      "count": 1,
+      "id": "sm3-114",
+      "set": "sm3",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/sm3/114.webp",
+      "imgLarge": "img/cards/sm3/114_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, that player doesn't switch Pokémon.) You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-126",
+      "set": "sm5",
+      "name": "Looker",
+      "kind": "trainer",
+      "img": "img/cards/sm5/126.webp",
+      "imgLarge": "img/cards/sm5/126_hires.webp",
+      "text": "Draw 3 cards from the bottom of your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "looker",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm5-132",
+      "set": "sm5",
+      "name": "Pal Pad",
+      "kind": "trainer",
+      "img": "img/cards/sm5/132.webp",
+      "imgLarge": "img/cards/sm5/132_hires.webp",
+      "text": "Shuffle 2 Supporter cards from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "palPad",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 20,
+      "id": "sm2-169",
+      "set": "sm2",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sm2/169.webp",
+      "imgLarge": "img/cards/sm2/169_hires.webp",
+      "energyType": "Fighting"
+    }
+  ]
+}

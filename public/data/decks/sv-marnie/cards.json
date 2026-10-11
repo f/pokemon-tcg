@@ -1,0 +1,476 @@
+{
+  "name": "Marnie",
+  "group": "svRival",
+  "format": "modern",
+  "types": [
+    "Darkness"
+  ],
+  "featured": [
+    "sv10-136",
+    "sv10-133",
+    "sv10-131"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv10-136",
+      "set": "sv10",
+      "name": "Marnie's Grimmsnarl ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/136.webp",
+      "imgLarge": "img/cards/sv10/136_hires.webp",
+      "stage": 2,
+      "hp": 320,
+      "type": "Darkness",
+      "evolvesFrom": "Marnie's Morgrem",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Shadow Bullet",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "180",
+          "text": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 30,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Punk Up",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may search your deck for up to 5 Basic Darkness Energy cards and attach them to your Marnie's Pokémon in any way you like. Then, shuffle your deck.",
+        "kind": "punkUp",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv10-134",
+      "set": "sv10",
+      "name": "Marnie's Impidimp",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/134.webp",
+      "imgLarge": "img/cards/sv10/134_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Filch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Corkscrew Punch",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv10-131",
+      "set": "sv10",
+      "name": "Marnie's Liepard",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/131.webp",
+      "imgLarge": "img/cards/sv10/131_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Darkness",
+      "evolvesFrom": "Marnie's Purrloin",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pointy Claws",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "70+",
+          "text": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 70 more damage.",
+          "effect": {
+            "bonusIfDefEx": 70
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv10-135",
+      "set": "sv10",
+      "name": "Marnie's Morgrem",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/135.webp",
+      "imgLarge": "img/cards/sv10/135_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Darkness",
+      "evolvesFrom": "Marnie's Impidimp",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Corkscrew Punch",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv10-137",
+      "set": "sv10",
+      "name": "Marnie's Morpeko",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/137.webp",
+      "imgLarge": "img/cards/sv10/137_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Spiky Wheel",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 40 more damage for each Darkness Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Darkness",
+              "n": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-206",
+      "set": "svp",
+      "name": "Marnie's Morpeko",
+      "kind": "pokemon",
+      "img": "img/cards/svp/206.webp",
+      "imgLarge": "img/cards/svp/206_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Spiky Wheel",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 40 more damage for each Darkness Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Darkness",
+              "n": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv10-130",
+      "set": "sv10",
+      "name": "Marnie's Purrloin",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/130.webp",
+      "imgLarge": "img/cards/sv10/130_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pointy Nails",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "20+",
+          "text": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 40 more damage.",
+          "effect": {
+            "bonusIfDefEx": 40
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv10-133",
+      "set": "sv10",
+      "name": "Marnie's Scrafty",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/133.webp",
+      "imgLarge": "img/cards/sv10/133_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Darkness",
+      "evolvesFrom": "Marnie's Scraggy",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rear Kick",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Wild Tackle",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "160",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv10-132",
+      "set": "sv10",
+      "name": "Marnie's Scraggy",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/132.webp",
+      "imgLarge": "img/cards/sv10/132_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Crunch",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Discard an Energy from your opponent's Active Pokémon.",
+          "effect": {
+            "removeEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv5-144",
+      "set": "sv5",
+      "name": "Buddy-Buddy Poffin",
+      "kind": "trainer",
+      "img": "img/cards/sv5/144.webp",
+      "imgLarge": "img/cards/sv5/144_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "buddyPoffin",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv8-174",
+      "set": "sv8",
+      "name": "Drayton",
+      "kind": "trainer",
+      "img": "img/cards/sv8/174.webp",
+      "imgLarge": "img/cards/sv8/174_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon and a Trainer card you find there and put them into your hand. Shuffle the other cards back into your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "drayton",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv10-164",
+      "set": "sv10",
+      "name": "Energy Recycler",
+      "kind": "trainer",
+      "img": "img/cards/sv10/164.webp",
+      "imgLarge": "img/cards/sv10/164_hires.webp",
+      "text": "Shuffle up to 5 Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "energyRecycler",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-174",
+      "set": "sv1",
+      "name": "Exp. Share",
+      "kind": "trainer",
+      "img": "img/cards/sv1/174.webp",
+      "imgLarge": "img/cards/sv1/174_hires.webp",
+      "text": "When your Active Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon, you may move a Basic Energy from that Pokémon to the Pokémon this card is attached to. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "expShare"
+    },
+    {
+      "count": 2,
+      "id": "sv2-185",
+      "set": "sv2",
+      "name": "Iono",
+      "kind": "trainer",
+      "img": "img/cards/sv2/185.webp",
+      "imgLarge": "img/cards/sv2/185_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, each player draws a card for each of their remaining Prize cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "iono",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv9-155",
+      "set": "sv9",
+      "name": "Professor's Research",
+      "kind": "trainer",
+      "img": "img/cards/sv9/155.webp",
+      "imgLarge": "img/cards/sv9/155_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv4pt5-89",
+      "set": "sv4pt5",
+      "name": "Rare Candy",
+      "kind": "trainer",
+      "img": "img/cards/sv4pt5/89.webp",
+      "imgLarge": "img/cards/sv4pt5/89_hires.webp",
+      "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn. You may play any number of Item cards during your turn.",
+      "trainer": "rareCandy",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv10-169",
+      "set": "sv10",
+      "name": "Spikemuth Gym",
+      "kind": "trainer",
+      "img": "img/cards/sv10/169.webp",
+      "imgLarge": "img/cards/sv10/169_hires.webp",
+      "text": "Once during each player's turn, that player may search their deck for a Marnie's Pokémon, reveal it, and put it into their hand. Then, that player shuffles their deck. You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "spikemuthGym"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv4pt5-91",
+      "set": "sv4pt5",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv4pt5/91.webp",
+      "imgLarge": "img/cards/sv4pt5/91_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 14,
+      "id": "sve-7",
+      "set": "sve",
+      "name": "Basic Darkness Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/7.webp",
+      "imgLarge": "img/cards/sve/7_hires.webp",
+      "energyType": "Darkness"
+    }
+  ]
+}

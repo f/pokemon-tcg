@@ -1,0 +1,530 @@
+{
+  "name": "Victini V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Fire"
+  ],
+  "featured": [
+    "swshp-SWSH104",
+    "swsh1-34",
+    "swsh1-23"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh4-139",
+      "set": "swsh4",
+      "name": "Chatot",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/139.webp",
+      "imgLarge": "img/cards/swsh4/139_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Minor Errand-Running",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchBasicEnergy": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh1-147",
+      "set": "swsh1",
+      "name": "Cinccino",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/147.webp",
+      "imgLarge": "img/cards/swsh1/147_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": "Minccino",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Energy Assist",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Attach a basic Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": null
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Make Do",
+        "text": "You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",
+        "kind": "makeDo",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-34",
+      "set": "swsh1",
+      "name": "Cinderace",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/34.webp",
+      "imgLarge": "img/cards/swsh1/34_hires.webp",
+      "stage": 2,
+      "hp": 170,
+      "type": "Fire",
+      "evolvesFrom": "Raboot",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flare Striker",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "190",
+          "text": "Discard 2 Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 2
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Libero",
+        "text": "Once during your turn, when this Pokémon moves from your Bench to the Active Spot, you may attach up to 2 Fire Energy cards from your discard pile to it.",
+        "kind": "libero",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-146",
+      "set": "swsh1",
+      "name": "Minccino",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/146.webp",
+      "imgLarge": "img/cards/swsh1/146_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tail Whap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-23",
+      "set": "swsh1",
+      "name": "Ninetales",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/23.webp",
+      "imgLarge": "img/cards/swsh1/23_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Fire",
+      "evolvesFrom": "Vulpix",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flame Cloak",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": "Attach a Fire Energy card from your discard pile to this Pokémon.",
+          "effect": {
+            "attachFromDiscard": "Fire"
+          }
+        },
+        {
+          "name": "Fire Mane",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-32",
+      "set": "swsh1",
+      "name": "Raboot",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/32.webp",
+      "imgLarge": "img/cards/swsh1/32_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Scorbunny",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flame Charge",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": "Search your deck for a Fire Energy card and attach it to this Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttach": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Magnum Kick",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-30",
+      "set": "swsh1",
+      "name": "Scorbunny",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/30.webp",
+      "imgLarge": "img/cards/swsh1/30_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ember",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh1-29",
+      "set": "swsh1",
+      "name": "Turtonator",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/29.webp",
+      "imgLarge": "img/cards/swsh1/29_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Fire Spin",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": "Discard 2 Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH104",
+      "set": "swshp",
+      "name": "Victini V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH104.webp",
+      "imgLarge": "img/cards/swshp/SWSH104_hires.webp",
+      "stage": 0,
+      "hp": 190,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Spreading Flames",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Attach up to 3 Fire Energy cards from your discard pile to your Pokémon in any way you like.",
+          "effect": {
+            "attachDiscardAny": {
+              "n": 3,
+              "type": "Fire"
+            }
+          }
+        },
+        {
+          "name": "Energy Burst",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each Energy attached to both Active Pokémon.",
+          "effect": {
+            "timesBothActiveEnergy": 30
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-22",
+      "set": "swsh1",
+      "name": "Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/22.webp",
+      "imgLarge": "img/cards/swsh1/22_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh45-59",
+      "set": "swsh45",
+      "name": "Gym Trainer",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/59.webp",
+      "imgLarge": "img/cards/swsh45/59_hires.webp",
+      "text": "Draw 2 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "gymTrainer",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-129",
+      "set": "swsh5",
+      "name": "Level Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/129.webp",
+      "imgLarge": "img/cards/swsh5/129_hires.webp",
+      "text": "Search your deck for a Pokémon with 90 HP or less, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "levelBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-161",
+      "set": "swsh2",
+      "name": "Milo",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/161.webp",
+      "imgLarge": "img/cards/swsh2/161_hires.webp",
+      "text": "Discard up to 2 cards from your hand, and draw 2 cards for each card you discarded in this way. You may play only 1 Supporter card during your turn.",
+      "trainer": "milo",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh45-60",
+      "set": "swsh45",
+      "name": "Professor's Research",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/60.webp",
+      "imgLarge": "img/cards/swsh45/60_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

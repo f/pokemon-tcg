@@ -1,0 +1,375 @@
+{
+  "name": "Shadow Rider Calyrex VMAX",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Psychic"
+  ],
+  "featured": [
+    "swsh6-75",
+    "swsh6-74",
+    "swsh6-64"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh6-64",
+      "set": "swsh6",
+      "name": "Cresselia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/64.webp",
+      "imgLarge": "img/cards/swsh6/64_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Crescent Glow",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Psychic Energy card and attach it to 1 of your Pokémon. If you go second and it's your first turn, instead search for up to 3 Psychic Energy cards and attach them to 1 of your Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachOne": {
+              "type": "Psychic",
+              "n": 1,
+              "firstTurnN": 3
+            }
+          }
+        },
+        {
+          "name": "Photon Laser",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "30+",
+          "text": "If you have at least 5 Energy in play, this attack does 90 more damage.",
+          "effect": {
+            "bonusIfEnergyInPlay": {
+              "min": 5,
+              "n": 90
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh7-63",
+      "set": "swsh7",
+      "name": "Galarian Articuno",
+      "kind": "pokemon",
+      "img": "img/cards/swsh7/63.webp",
+      "imgLarge": "img/cards/swsh7/63_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psylaser",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard all Psychic Energy from this Pokémon. This attack does 120 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "discardAllType": "Psychic",
+            "snipeAny": {
+              "n": 120
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Cruel Charge",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may attach up to 2 Psychic Energy cards from your hand to this Pokémon.",
+        "kind": "cruelCharge",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh7-76",
+      "set": "swsh7",
+      "name": "Pumpkaboo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh7/76.webp",
+      "imgLarge": "img/cards/swsh7/76_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Stampede",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Pumpkin Pit",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may discard a Stadium in play.",
+        "kind": "pumpkinPit",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh6-74",
+      "set": "swsh6",
+      "name": "Shadow Rider Calyrex V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/74.webp",
+      "imgLarge": "img/cards/swsh6/74_hires.webp",
+      "stage": 0,
+      "hp": 210,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Shadow Mist",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "During your opponent's next turn, they can't play any Special Energy or Stadium cards from their hand.",
+          "effect": {
+            "shadowMist": true
+          }
+        },
+        {
+          "name": "Astral Barrage",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Choose 2 of your opponent's Pokémon and put 5 damage counters on each of them.",
+          "effect": {
+            "countersMulti": {
+              "n": 50,
+              "count": 2
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh6-75",
+      "set": "swsh6",
+      "name": "Shadow Rider Calyrex VMAX",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/75.webp",
+      "imgLarge": "img/cards/swsh6/75_hires.webp",
+      "stage": 1,
+      "hp": 320,
+      "type": "Psychic",
+      "evolvesFrom": "Shadow Rider Calyrex V",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Max Geist",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "This attack does 30 more damage for each Psychic Energy attached to all of your Pokémon.",
+          "effect": {
+            "plusTypeEnergyAll": {
+              "type": "Psychic",
+              "n": 30
+            }
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "VMAX"
+      ],
+      "power": {
+        "name": "Underworld Door",
+        "text": "Once during your turn, you may attach a Psychic Energy card from your hand to 1 of your Benched Psychic Pokémon. If you attached Energy to a Pokémon in this way, draw 2 cards.",
+        "kind": "underworldDoor",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-156",
+      "set": "swsh1",
+      "name": "Air Balloon",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/156.webp",
+      "imgLarge": "img/cards/swsh1/156_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached. The Retreat Cost of the Pokémon this card is attached to is ColorlessColorless less. You may play any number of Item cards during your turn.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "airBalloon"
+    },
+    {
+      "count": 3,
+      "id": "swsh45-58",
+      "set": "swsh45",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/58.webp",
+      "imgLarge": "img/cards/swsh45/58_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh6-140",
+      "set": "swsh6",
+      "name": "Fog Crystal",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/140.webp",
+      "imgLarge": "img/cards/swsh6/140_hires.webp",
+      "text": "Search your deck for a Psychic Energy card or a Basic Psychic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "fogCrystal",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-169",
+      "set": "swsh1",
+      "name": "Marnie",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/169.webp",
+      "imgLarge": "img/cards/swsh1/169_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "marnie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh45-60",
+      "set": "swsh45",
+      "name": "Professor's Research",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/60.webp",
+      "imgLarge": "img/cards/swsh45/60_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-179",
+      "set": "swsh1",
+      "name": "Quick Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/179.webp",
+      "imgLarge": "img/cards/swsh1/179_hires.webp",
+      "text": "You can play this card only if you discard another card from your hand. Search your deck for a Basic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "quickBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh2-169",
+      "set": "swsh2",
+      "name": "Training Court",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/169.webp",
+      "imgLarge": "img/cards/swsh2/169_hires.webp",
+      "text": "Once during each player's turn, that player may put a basic Energy card from their discard pile into their hand. This Stadium stays in play when you play it. Discard it if another Stadium comes into play. If a Stadium with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "trainingCourt"
+    },
+    {
+      "count": 15,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

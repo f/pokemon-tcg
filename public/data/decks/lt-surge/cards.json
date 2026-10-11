@@ -1,0 +1,393 @@
+{
+  "name": "Lt. Surge's Lightning",
+  "group": "gym1",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "gym1-8",
+    "gym1-51",
+    "gym1-81"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "gym1-80",
+      "set": "gym1",
+      "name": "Lt. Surge's Magnemite",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/80.webp",
+      "imgLarge": "img/cards/gym1/80_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Thundershock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-8",
+      "set": "gym1",
+      "name": "Lt. Surge's Magneton",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/8.webp",
+      "imgLarge": "img/cards/gym1/8_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": "Lt. Surge's Magnemite",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Mega Shock",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Flip a coin. If tails, Lt. Surge's Magneton does 20 damage to itself.",
+          "effect": {
+            "flipSelfDamage": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Energy Charge",
+        "text": "As often as you like during your turn (before your attack), if Lt. Surge's Magneton is your Active Pokémon, you may take 1 Lightning Energy card attached to 1 of your Pokémon and attach it to Lt. Surge's Magneton. This power can't be used if Lt. Surge's Magneton is Asleep, Confused, or Paralyzed.",
+        "kind": "energyCharge"
+      }
+    },
+    {
+      "count": 4,
+      "id": "gym1-81",
+      "set": "gym1",
+      "name": "Lt. Surge's Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/81.webp",
+      "imgLarge": "img/cards/gym1/81_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Charge",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Take 1 Lightning Energy card from your discard pile and attach it to Lt. Surge's Pikachu.",
+          "effect": {
+            "attachFromDiscard": "Lightning"
+          }
+        },
+        {
+          "name": "Lightning Tail",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-51",
+      "set": "gym1",
+      "name": "Lt. Surge's Raticate",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/51.webp",
+      "imgLarge": "img/cards/gym1/51_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": "Lt. Surge's Rattata",
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Super Fang",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "?",
+          "text": "Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10).",
+          "effect": {
+            "halfHp": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym1-82",
+      "set": "gym1",
+      "name": "Lt. Surge's Rattata",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/82.webp",
+      "imgLarge": "img/cards/gym1/82_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Focus Energy",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "During your next turn, Lt. Surge's Rattata's Gnaw attack's base damage is doubled.",
+          "effect": {
+            "focus": "Gnaw"
+          }
+        },
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-52",
+      "set": "gym1",
+      "name": "Lt. Surge's Spearow",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/52.webp",
+      "imgLarge": "img/cards/gym1/52_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Drill Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-83",
+      "set": "gym1",
+      "name": "Lt. Surge's Spearow",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/83.webp",
+      "imgLarge": "img/cards/gym1/83_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Whirlwind",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)",
+          "effect": {
+            "whirlwind": true
+          }
+        },
+        {
+          "name": "Razor Wind",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym1-84",
+      "set": "gym1",
+      "name": "Lt. Surge's Voltorb",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/84.webp",
+      "imgLarge": "img/cards/gym1/84_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spin Ball",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20×",
+          "text": "Flip 1 coin. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 1
+          }
+        },
+        {
+          "name": "Double Spin",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-119",
+      "set": "base4",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/119.webp",
+      "imgLarge": "img/cards/base4/119_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 2,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "gym1-101",
+      "set": "gym1",
+      "name": "Lt. Surge",
+      "kind": "trainer",
+      "img": "img/cards/gym1/101.webp",
+      "imgLarge": "img/cards/gym1/101_hires.webp",
+      "text": "You can play this card only if you have at least 1 Basic Pokémon card in your hand. Put a Basic Pokémon card from your hand into play as your Active Pokémon. Put your old Active Pokémon onto your Bench. (You can't play this card if your Bench is full.)",
+      "trainer": "ltSurge"
+    },
+    {
+      "count": 1,
+      "id": "base4-113",
+      "set": "base4",
+      "name": "PlusPower",
+      "kind": "trainer",
+      "img": "img/cards/base4/113.webp",
+      "imgLarge": "img/cards/base4/113_hires.webp",
+      "text": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+      "trainer": "plusPower"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 2,
+      "id": "gym1-118",
+      "set": "gym1",
+      "name": "Secret Mission",
+      "kind": "trainer",
+      "img": "img/cards/gym1/118.webp",
+      "imgLarge": "img/cards/gym1/118_hires.webp",
+      "text": "Look at your opponent's hand. Then, you may discard as many other cards as you want from your hand and draw that many cards.",
+      "trainer": "secretMission"
+    },
+    {
+      "count": 1,
+      "id": "gym1-120",
+      "set": "gym1",
+      "name": "Vermilion City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym1/120.webp",
+      "imgLarge": "img/cards/gym1/120_hires.webp",
+      "text": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. Whenever a player attacks with a Pokémon with Lt. Surge in its name, he or she may flip a coin. If heads, and if that Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), that attack does 10 more damage to the Defending Pokémon. If tails, the attacking Pokémon does 10 damage to itself in addition to whatever its attack usually does.",
+      "trainer": "stadium",
+      "stadium": "vermilion"
+    },
+    {
+      "count": 28,
+      "id": "gym1-130",
+      "set": "gym1",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/gym1/130.webp",
+      "imgLarge": "img/cards/gym1/130_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

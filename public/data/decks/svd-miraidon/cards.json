@@ -1,0 +1,450 @@
+{
+  "name": "Miraidon ex",
+  "group": "svDeluxe",
+  "format": "modern",
+  "types": [
+    "Dragon",
+    "Lightning",
+    "Psychic"
+  ],
+  "featured": [
+    "sv4-89",
+    "sv5-122",
+    "sv5-61"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv5-61",
+      "set": "sv5",
+      "name": "Iron Hands",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/61.webp",
+      "imgLarge": "img/cards/sv5/61_hires.webp",
+      "stage": 0,
+      "hp": 140,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Volt Wave",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Superalloy Hands",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "text": "If your opponent's Active Pokémon is a Pokémon ex or Pokémon V, this attack does 80 more damage.",
+          "effect": {
+            "bonusIfDefExV": 80
+          }
+        }
+      ],
+      "tags": [
+        "Future"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv5-139",
+      "set": "sv5",
+      "name": "Iron Jugulis",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/139.webp",
+      "imgLarge": "img/cards/sv5/139_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Blasting Wind",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "110",
+          "text": ""
+        }
+      ],
+      "tags": [
+        "Future"
+      ],
+      "power": {
+        "name": "Automated Combat",
+        "text": "If this Pokémon is in the Active Spot and is damaged by an attack from your opponent's Pokémon (even if this Pokémon is Knocked Out), put 3 damage counters on the Attacking Pokémon.",
+        "kind": "automatedCombat",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv5-79",
+      "set": "sv5",
+      "name": "Iron Valiant",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/79.webp",
+      "imgLarge": "img/cards/sv5/79_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Gemini Laser",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 20,
+              "count": 1
+            }
+          }
+        },
+        {
+          "name": "Zen Blade",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "During your next turn, this Pokémon can't use Zen Blade.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "tags": [
+        "Future"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv4-89",
+      "set": "sv4",
+      "name": "Iron Valiant ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/89.webp",
+      "imgLarge": "img/cards/sv4/89_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Laser Blade",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "200",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex",
+        "Future"
+      ],
+      "power": {
+        "name": "Tachyon Bits",
+        "text": "Once during your turn, when this Pokémon moves from your Bench to the Active Spot, you may put 2 damage counters on 1 of your opponent's Pokémon.",
+        "kind": "tachyonBits",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv5-121",
+      "set": "sv5",
+      "name": "Miraidon",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/121.webp",
+      "imgLarge": "img/cards/sv5/121_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Peak Acceleration",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Search your deck for up to 2 Basic Energy cards and attach them to your Future Pokémon in any way you like. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachTag": {
+              "tag": "Future",
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Sparking Strike",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Psychic"
+          ],
+          "damage": "160",
+          "text": ""
+        }
+      ],
+      "tags": [
+        "Future"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv5-122",
+      "set": "sv5",
+      "name": "Miraidon ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/122.webp",
+      "imgLarge": "img/cards/sv5/122_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Repulsion Bolt",
+          "cost": [
+            "Lightning",
+            "Psychic"
+          ],
+          "damage": "60+",
+          "text": "If your opponent's Active Pokémon already has any damage counters on it, this attack does 100 more damage.",
+          "effect": {
+            "bonusIfDamaged": 100
+          }
+        },
+        {
+          "name": "Cyber Drive",
+          "cost": [
+            "Lightning",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "220",
+          "text": "During your next turn, this Pokémon can't use Cyber Drive.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex",
+        "Future"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv5-145",
+      "set": "sv5",
+      "name": "Ciphermaniac's Codebreaking",
+      "kind": "trainer",
+      "img": "img/cards/sv5/145.webp",
+      "imgLarge": "img/cards/sv5/145_hires.webp",
+      "text": "Search your deck for 2 cards, shuffle your deck, then put those cards on top of it in any order. You may play only 1 Supporter card during your turn.",
+      "trainer": "ciphermaniac",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv4-164",
+      "set": "sv4",
+      "name": "Future Booster Energy Capsule",
+      "kind": "trainer",
+      "img": "img/cards/sv4/164.webp",
+      "imgLarge": "img/cards/sv4/164_hires.webp",
+      "text": "The Future Pokémon this card is attached to has no Retreat Cost, and the attacks it uses do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "futureBooster"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv4-171",
+      "set": "sv4",
+      "name": "Professor Turo's Scenario",
+      "kind": "trainer",
+      "img": "img/cards/sv4/171.webp",
+      "imgLarge": "img/cards/sv4/171_hires.webp",
+      "text": "Put 1 of your Pokémon in play into your hand. (Discard all cards attached to that Pokémon.) You may play only 1 Supporter card during your turn.",
+      "trainer": "turoScenario",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-190",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Turo)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/190.webp",
+      "imgLarge": "img/cards/sv1/190_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv4-180",
+      "set": "sv4",
+      "name": "Techno Radar",
+      "kind": "trainer",
+      "img": "img/cards/sv4/180.webp",
+      "imgLarge": "img/cards/sv4/180_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.    Search your deck for up to 2 Future Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "technoRadar",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 8,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    },
+    {
+      "count": 6,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

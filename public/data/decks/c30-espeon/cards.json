@@ -1,0 +1,566 @@
+{
+  "name": "Espeon ex",
+  "group": "celebration",
+  "format": "modern",
+  "types": [
+    "Fire",
+    "Psychic",
+    "Metal"
+  ],
+  "featured": [
+    "me55-70",
+    "me4-13",
+    "me4-12"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "me4-12",
+      "set": "me4",
+      "name": "Braixen",
+      "kind": "pokemon",
+      "img": "img/cards/me4/12.webp",
+      "imgLarge": "img/cards/me4/12_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Fire",
+      "evolvesFrom": "Fennekin",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "80",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me4-13",
+      "set": "me4",
+      "name": "Delphox",
+      "kind": "pokemon",
+      "img": "img/cards/me4/13.webp",
+      "imgLarge": "img/cards/me4/13_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Fire",
+      "evolvesFrom": "Braixen",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Energized Storm",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each Energy attached to all Pokémon.",
+          "effect": {
+            "timesAllEnergy": 30
+          }
+        }
+      ],
+      "power": {
+        "name": "Flaring Magic",
+        "text": "Once during your turn, you may discard a Basic Fire Energy card from your hand in order to use this Ability. Draw cards until you have 7 cards in your hand.",
+        "kind": "flaringMagic",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "me55-116",
+      "set": "me55",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/me55/116.webp",
+      "imgLarge": "img/cards/me55/116_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fetch and Hide",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent reveals their hand, and you put an Item card you find there on the bottom of your opponent's deck.",
+          "effect": {
+            "fetchHide": true
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me55-117",
+      "set": "me55",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/me55/117.webp",
+      "imgLarge": "img/cards/me55/117_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 20 more damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me55-70",
+      "set": "me55",
+      "name": "Espeon ex",
+      "kind": "pokemon",
+      "img": "img/cards/me55/70.webp",
+      "imgLarge": "img/cards/me55/70_hires.webp",
+      "stage": 1,
+      "hp": 260,
+      "type": "Psychic",
+      "evolvesFrom": "Eevee",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Solar Beatdown",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each of your Pokémon in play.",
+          "effect": {
+            "timesOwnInPlay": 30
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "me4-11",
+      "set": "me4",
+      "name": "Fennekin",
+      "kind": "pokemon",
+      "img": "img/cards/me4/11.webp",
+      "imgLarge": "img/cards/me4/11_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Steady Firebreathing",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-114",
+      "set": "me55",
+      "name": "Kangaskhan",
+      "kind": "pokemon",
+      "img": "img/cards/me55/114.webp",
+      "imgLarge": "img/cards/me55/114_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rage",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 10 more damage for each damage counter on this Pokémon.",
+          "effect": {
+            "plusSelfCounters": 10
+          }
+        },
+        {
+          "name": "Mega Punch",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-11",
+      "set": "me55",
+      "name": "Moltres",
+      "kind": "pokemon",
+      "img": "img/cards/me55/11.webp",
+      "imgLarge": "img/cards/me55/11_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fire Spin",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Discard 2 Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 2
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Fiery Flapping",
+        "text": "Once during your turn, if you have Articuno and Zapdos in play, you may use this Ability. Attach a Basic Fire Energy card from your hand to this Pokémon.",
+        "kind": "fieryFlapping",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "me55-13",
+      "set": "me55",
+      "name": "Victini",
+      "kind": "pokemon",
+      "img": "img/cards/me55/13.webp",
+      "imgLarge": "img/cards/me55/13_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "V-Flame",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-106",
+      "set": "me55",
+      "name": "Zacian",
+      "kind": "pokemon",
+      "img": "img/cards/me55/106.webp",
+      "imgLarge": "img/cards/me55/106_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Hardened Blade",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "20+",
+          "text": "If this Pokémon has a Pokémon Tool attached, this attack does 40 more damage.",
+          "effect": {
+            "bonusIfTool": 40
+          }
+        },
+        {
+          "name": "Slashing Strike",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "During your next turn, this Pokémon can't use Slashing Strike",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-181",
+      "set": "me2pt5",
+      "name": "Air Balloon",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/181.webp",
+      "imgLarge": "img/cards/me2pt5/181_hires.webp",
+      "text": "The Retreat Cost of the Pokémon this card is attached to is ColorlessColorless less. You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "airBalloon"
+    },
+    {
+      "count": 3,
+      "id": "me1-114",
+      "set": "me1",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/me1/114.webp",
+      "imgLarge": "img/cards/me1/114_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-184",
+      "set": "me2pt5",
+      "name": "Buddy-Buddy Poffin",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/184.webp",
+      "imgLarge": "img/cards/me2pt5/184_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "buddyPoffin",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me2-87",
+      "set": "me2",
+      "name": "Dawn",
+      "kind": "trainer",
+      "img": "img/cards/me2/87.webp",
+      "imgLarge": "img/cards/me2/87_hires.webp",
+      "text": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "dawn",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-190",
+      "set": "me2pt5",
+      "name": "Iris's Fighting Spirit",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/190.webp",
+      "imgLarge": "img/cards/me2pt5/190_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.  Draw cards until you have 6 cards in your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "irisFightingSpirit",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "me1-119",
+      "set": "me1",
+      "name": "Lillie's Determination",
+      "kind": "trainer",
+      "img": "img/cards/me1/119.webp",
+      "imgLarge": "img/cards/me1/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "lilliesDetermination",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-196",
+      "set": "me2pt5",
+      "name": "Night Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/196.webp",
+      "imgLarge": "img/cards/me2pt5/196_hires.webp",
+      "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "nightStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "me55-126",
+      "set": "me55",
+      "name": "Poké Pad",
+      "kind": "trainer",
+      "img": "img/cards/me55/126.webp",
+      "imgLarge": "img/cards/me55/126_hires.webp",
+      "text": "Search your deck for a Pokémon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck. (Pokémon ex, Pokémon V, etc. have Rule Boxes.) You may play any number of Item cards during your turn.",
+      "trainer": "pokePad",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "zsv10pt5-84",
+      "set": "zsv10pt5",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/zsv10pt5/84.webp",
+      "imgLarge": "img/cards/zsv10pt5/84_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me1-125",
+      "set": "me1",
+      "name": "Rare Candy",
+      "kind": "trainer",
+      "img": "img/cards/me1/125.webp",
+      "imgLarge": "img/cards/me1/125_hires.webp",
+      "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn. You may play any number of Item cards during your turn.",
+      "trainer": "rareCandy",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me3-84",
+      "set": "me3",
+      "name": "Rosa's Encouragement",
+      "kind": "trainer",
+      "img": "img/cards/me3/84.webp",
+      "imgLarge": "img/cards/me3/84_hires.webp",
+      "text": "You can use this card only if you have more Prize cards remaining than your opponent.  Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "rosasEncouragement",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me55-127",
+      "set": "me55",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/me55/127.webp",
+      "imgLarge": "img/cards/me55/127_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "me55-128",
+      "set": "me55",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/me55/128.webp",
+      "imgLarge": "img/cards/me55/128_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand.\nSearch your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 8,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 4,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

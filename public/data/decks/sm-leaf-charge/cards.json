@@ -1,0 +1,615 @@
+{
+  "name": "Leaf Charge",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Grass",
+    "Lightning"
+  ],
+  "featured": [
+    "sm7-10",
+    "sm6-4",
+    "sm7-50"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm6-4",
+      "set": "sm6",
+      "name": "Abomasnow",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/4.webp",
+      "imgLarge": "img/cards/sm6/4_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Grass",
+      "evolvesFrom": "Snover",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Hypno Hammer",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ],
+      "power": {
+        "name": "Blessings of the Frost",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may attach a Grass Energy card from your discard pile to 1 of your Pokémon.",
+        "kind": "blessingsOfTheFrost",
+        "ability": true,
+        "type": "Grass"
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm7-49",
+      "set": "sm7",
+      "name": "Chinchou",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/49.webp",
+      "imgLarge": "img/cards/sm7/49_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Spark",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "This attack does 10 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 10,
+              "count": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm7-110",
+      "set": "sm7",
+      "name": "Dunsparce",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/110.webp",
+      "imgLarge": "img/cards/sm7/110_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Strike and Run",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Then, shuffle your deck. If you put any Pokémon onto your Bench in this way, you may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "callAny": {
+              "n": 3,
+              "switchAfter": true
+            }
+          }
+        },
+        {
+          "name": "Sudden Flash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm7-51",
+      "set": "sm7",
+      "name": "Electrike",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/51.webp",
+      "imgLarge": "img/cards/sm7/51_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Zap Kick",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm6-99",
+      "set": "sm6",
+      "name": "Furfrou",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/99.webp",
+      "imgLarge": "img/cards/sm6/99_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Return",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "You may draw cards until you have 5 cards in your hand.",
+          "effect": {
+            "drawToMay": 5
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm7-9",
+      "set": "sm7",
+      "name": "Grovyle",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/9.webp",
+      "imgLarge": "img/cards/sm7/9_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Treecko",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leaf Blade",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 40 more damage.",
+          "effect": {
+            "flipBonus": 40
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm7-50",
+      "set": "sm7",
+      "name": "Lanturn",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/50.webp",
+      "imgLarge": "img/cards/sm7/50_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": "Chinchou",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Lightning Strike",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "70+",
+          "text": "You may discard all Lightning Energy from this Pokémon. If you do, this attack does 70 more damage.",
+          "effect": {
+            "optionalDiscardTypeAll": {
+              "type": "Lightning",
+              "bonus": 70
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Energy Grounding",
+        "text": "When 1 of your Pokémon is Knocked Out by damage from an opponent's attack, you may move a basic Energy card from that Pokémon to this Pokémon.",
+        "kind": "energyGrounding",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm7-52",
+      "set": "sm7",
+      "name": "Manectric",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/52.webp",
+      "imgLarge": "img/cards/sm7/52_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": "Electrike",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Double Charge",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "40",
+          "text": "You may attach up to 2 basic Energy cards from your hand to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachHandBenchN": 2
+          }
+        }
+      ],
+      "power": {
+        "name": "Electric Start",
+        "text": "If you go second, and if this Pokémon is in your hand when you are setting up to play, you may put it face down as your Active Pokémon or on your Bench.",
+        "kind": "electricStart",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm1-113",
+      "set": "sm1",
+      "name": "Oranguru",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/113.webp",
+      "imgLarge": "img/cards/sm1/113_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "This attack does 20 more damage times the amount of Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Instruct",
+        "text": "Once during your turn (before your attack), you may draw cards until you have 3 cards in your hand.",
+        "kind": "restart",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm7-10",
+      "set": "sm7",
+      "name": "Sceptile",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/10.webp",
+      "imgLarge": "img/cards/sm7/10_hires.webp",
+      "stage": 2,
+      "hp": 140,
+      "type": "Grass",
+      "evolvesFrom": "Grovyle",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Powerful Storm",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "20×",
+          "text": "This attack does 20 damage times the amount of Energy attached to all of your Pokémon.",
+          "effect": {
+            "timesOwnEnergyAll": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Power of Nature",
+        "text": "Prevent all damage done to your Pokémon that have any Grass Energy attached to them by attacks from your opponent's Ultra Beasts.",
+        "kind": "powerOfNature",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm6-3",
+      "set": "sm6",
+      "name": "Snover",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/3.webp",
+      "imgLarge": "img/cards/sm6/3_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Ice Shard",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "If your opponent's Active Pokémon is a Fighting Pokémon, this attack does 40 more damage.",
+          "effect": {
+            "bonusIfDefType": {
+              "type": "Fighting",
+              "n": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm7-8",
+      "set": "sm7",
+      "name": "Treecko",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/8.webp",
+      "imgLarge": "img/cards/sm7/8_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Smack",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Tail Whap",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm7-127",
+      "set": "sm7",
+      "name": "Copycat",
+      "kind": "trainer",
+      "img": "img/cards/sm7/127.webp",
+      "imgLarge": "img/cards/sm7/127_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw a card for each card in your opponent's hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "copycat",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-118",
+      "set": "sm1",
+      "name": "Exp. Share",
+      "kind": "trainer",
+      "img": "img/cards/sm1/118.webp",
+      "imgLarge": "img/cards/sm1/118_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. When your Active Pokémon is Knocked Out by damage from an opponent's attack, you may move 1 basic Energy card from that Pokémon to the Pokémon this card is attached to. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "expShare"
+    },
+    {
+      "count": 1,
+      "id": "sm3-115",
+      "set": "sm3",
+      "name": "Guzma",
+      "kind": "trainer",
+      "img": "img/cards/sm3/115.webp",
+      "imgLarge": "img/cards/sm3/115_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. If you do, switch your Active Pokémon with 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "guzma",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm6-109",
+      "set": "sm6",
+      "name": "Lady",
+      "kind": "trainer",
+      "img": "img/cards/sm6/109.webp",
+      "imgLarge": "img/cards/sm6/109_hires.webp",
+      "text": "Search your deck for up to 4 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lady",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-125",
+      "set": "sm5",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm5/125.webp",
+      "imgLarge": "img/cards/sm5/125_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm7-148",
+      "set": "sm7",
+      "name": "Tate & Liza",
+      "kind": "trainer",
+      "img": "img/cards/sm7/148.webp",
+      "imgLarge": "img/cards/sm7/148_hires.webp",
+      "text": "Choose 1:\n• Shuffle your hand into your deck then draw 5 cards.\n• Switch your Active Pokémon with 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "tateLiza",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-135",
+      "set": "sm1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/135.webp",
+      "imgLarge": "img/cards/sm1/135_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 11,
+      "id": "sm2-167",
+      "set": "sm2",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/sm2/167.webp",
+      "imgLarge": "img/cards/sm2/167_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 9,
+      "id": "sm2-168",
+      "set": "sm2",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sm2/168.webp",
+      "imgLarge": "img/cards/sm2/168_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

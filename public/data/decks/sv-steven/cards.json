@@ -1,0 +1,464 @@
+{
+  "name": "Steven",
+  "group": "svRival",
+  "format": "modern",
+  "types": [
+    "Metal",
+    "Psychic"
+  ],
+  "featured": [
+    "sv10-145",
+    "sv10-84",
+    "sv10-144"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv10-83",
+      "set": "sv10",
+      "name": "Steven's Baltoy",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/83.webp",
+      "imgLarge": "img/cards/sv10/83_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Summoning Sign",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Steven's Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2,
+              "prefix": "Steven's"
+            }
+          }
+        },
+        {
+          "name": "Psychic Sphere",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv10-143",
+      "set": "sv10",
+      "name": "Steven's Beldum",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/143.webp",
+      "imgLarge": "img/cards/sv10/143_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-207",
+      "set": "svp",
+      "name": "Steven's Beldum",
+      "kind": "pokemon",
+      "img": "img/cards/svp/207.webp",
+      "imgLarge": "img/cards/svp/207_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv10-86",
+      "set": "sv10",
+      "name": "Steven's Carbink",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/86.webp",
+      "imgLarge": "img/cards/sv10/86_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Magical Shot",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Stone Palace",
+        "text": "As long as this Pokémon is on your Bench, all of your Steven's Pokémon take 30 less damage from attacks from your opponent's Pokémon (after applying Weakness and Resistance). The effect of Stone Palace doesn't stack.",
+        "kind": "stonePalace",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv10-84",
+      "set": "sv10",
+      "name": "Steven's Claydol",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/84.webp",
+      "imgLarge": "img/cards/sv10/84_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": "Steven's Baltoy",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Eerie Light",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "20",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        },
+        {
+          "name": "Clay Blast",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "220",
+          "text": "Discard all Energy from this Pokémon.",
+          "effect": {
+            "discardAllEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv10-145",
+      "set": "sv10",
+      "name": "Steven's Metagross ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/145.webp",
+      "imgLarge": "img/cards/sv10/145_hires.webp",
+      "stage": 2,
+      "hp": 340,
+      "type": "Metal",
+      "evolvesFrom": "Steven's Metang",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Metal Stomp",
+          "cost": [
+            "Metal",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "200",
+          "text": ""
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "X-Boot",
+        "text": "Once during your turn, you may search your deck for a Basic Psychic Energy card, a Basic Metal Energy card, or 1 of each and attach them to your Psychic Pokémon and Metal Pokémon in any way you like. Then, shuffle your deck.",
+        "kind": "xBoot",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv10-144",
+      "set": "sv10",
+      "name": "Steven's Metang",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/144.webp",
+      "imgLarge": "img/cards/sv10/144_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Metal",
+      "evolvesFrom": "Steven's Beldum",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Metal Slash",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv10-142",
+      "set": "sv10",
+      "name": "Steven's Skarmory",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/142.webp",
+      "imgLarge": "img/cards/sv10/142_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Razor Wing",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Sonic Double",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 50 damage to 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeMulti": {
+              "n": 50,
+              "count": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv5-144",
+      "set": "sv5",
+      "name": "Buddy-Buddy Poffin",
+      "kind": "trainer",
+      "img": "img/cards/sv5/144.webp",
+      "imgLarge": "img/cards/sv5/144_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "buddyPoffin",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv8-174",
+      "set": "sv8",
+      "name": "Drayton",
+      "kind": "trainer",
+      "img": "img/cards/sv8/174.webp",
+      "imgLarge": "img/cards/sv8/174_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon and a Trainer card you find there and put them into your hand. Shuffle the other cards back into your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "drayton",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv10-164",
+      "set": "sv10",
+      "name": "Energy Recycler",
+      "kind": "trainer",
+      "img": "img/cards/sv10/164.webp",
+      "imgLarge": "img/cards/sv10/164_hires.webp",
+      "text": "Shuffle up to 5 Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "energyRecycler",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-174",
+      "set": "sv1",
+      "name": "Exp. Share",
+      "kind": "trainer",
+      "img": "img/cards/sv1/174.webp",
+      "imgLarge": "img/cards/sv1/174_hires.webp",
+      "text": "When your Active Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon, you may move a Basic Energy from that Pokémon to the Pokémon this card is attached to. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "expShare"
+    },
+    {
+      "count": 2,
+      "id": "sv10-166",
+      "set": "sv10",
+      "name": "Granite Cave",
+      "kind": "trainer",
+      "img": "img/cards/sv10/166.webp",
+      "imgLarge": "img/cards/sv10/166_hires.webp",
+      "text": "Steven's Pokémon (both yours and your opponent's) take 30 less damage from attacks from the opponent's Pokémon (after applying Weakness and Resistance). You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "graniteCave"
+    },
+    {
+      "count": 2,
+      "id": "sv2-185",
+      "set": "sv2",
+      "name": "Iono",
+      "kind": "trainer",
+      "img": "img/cards/sv2/185.webp",
+      "imgLarge": "img/cards/sv2/185_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, each player draws a card for each of their remaining Prize cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "iono",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-190",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Turo)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/190.webp",
+      "imgLarge": "img/cards/sv1/190_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-191",
+      "set": "sv1",
+      "name": "Rare Candy",
+      "kind": "trainer",
+      "img": "img/cards/sv1/191.webp",
+      "imgLarge": "img/cards/sv1/191_hires.webp",
+      "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn. You may play any number of Item cards during your turn.",
+      "trainer": "rareCandy",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 8,
+      "id": "sve-8",
+      "set": "sve",
+      "name": "Basic Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/8.webp",
+      "imgLarge": "img/cards/sve/8_hires.webp",
+      "energyType": "Metal"
+    },
+    {
+      "count": 7,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

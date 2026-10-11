@@ -1,0 +1,566 @@
+{
+  "name": "Ampharos ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "svp-16",
+    "sv1-150",
+    "sv1-79"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "svp-16",
+      "set": "svp",
+      "name": "Ampharos ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/16.webp",
+      "imgLarge": "img/cards/svp/16_hires.webp",
+      "stage": 2,
+      "hp": 330,
+      "type": "Lightning",
+      "evolvesFrom": "Flaaffy",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Electro Ball",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "60",
+          "text": ""
+        },
+        {
+          "name": "Thunderstrike Tail",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140+",
+          "text": "You may discard 2 Energy from this Pokémon to have this attack do 100 more damage.",
+          "effect": {
+            "optionalDiscardBonus": {
+              "n": 2,
+              "bonus": 100
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "svp-15",
+      "set": "svp",
+      "name": "Flaaffy",
+      "kind": "pokemon",
+      "img": "img/cards/svp/15.webp",
+      "imgLarge": "img/cards/svp/15_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Lightning",
+      "evolvesFrom": "Mareep",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Static Shock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Extreme Current",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-165",
+      "set": "sv1",
+      "name": "Flamigo",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/165.webp",
+      "imgLarge": "img/cards/sv1/165_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Nosedive",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "110",
+          "text": "This Pokémon also does 20 damage to itself.",
+          "effect": {
+            "selfDamage": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-79",
+      "set": "sv1",
+      "name": "Kilowattrel",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/79.webp",
+      "imgLarge": "img/cards/sv1/79_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": "Wattrel",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Skill Dive",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 50 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 50
+            }
+          }
+        },
+        {
+          "name": "Thunder Blast",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": "Discard a Lightning Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Lightning",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-66",
+      "set": "sv1",
+      "name": "Mareep",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/66.webp",
+      "imgLarge": "img/cards/sv1/66_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Static Shock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Electro Ball",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-80",
+      "set": "sv1",
+      "name": "Miraidon",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/80.webp",
+      "imgLarge": "img/cards/sv1/80_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sharp Fang",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Lightning Laser",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 30,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-69",
+      "set": "sv1",
+      "name": "Rotom",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/69.webp",
+      "imgLarge": "img/cards/sv1/69_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Linear Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 20 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-150",
+      "set": "sv1",
+      "name": "Staraptor",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/150.webp",
+      "imgLarge": "img/cards/sv1/150_hires.webp",
+      "stage": 2,
+      "hp": 150,
+      "type": "Colorless",
+      "evolvesFrom": "Staravia",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tailspin Away",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+          "effect": {
+            "shield": "basic"
+          }
+        },
+        {
+          "name": "Power Blast",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-149",
+      "set": "sv1",
+      "name": "Staravia",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/149.webp",
+      "imgLarge": "img/cards/sv1/149_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": "Starly",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Speed Dive",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-148",
+      "set": "sv1",
+      "name": "Starly",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/148.webp",
+      "imgLarge": "img/cards/sv1/148_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-77",
+      "set": "sv1",
+      "name": "Wattrel",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/77.webp",
+      "imgLarge": "img/cards/sv1/77_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Glide",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-186",
+      "set": "sv1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/sv1/186.webp",
+      "imgLarge": "img/cards/sv1/186_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-188",
+      "set": "sv1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sv1/188.webp",
+      "imgLarge": "img/cards/sv1/188_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

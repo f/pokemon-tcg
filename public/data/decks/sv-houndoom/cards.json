@@ -1,0 +1,508 @@
+{
+  "name": "Houndoom ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Darkness",
+    "Grass"
+  ],
+  "featured": [
+    "svp-103",
+    "sv3-133",
+    "sv4-122"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv3-166",
+      "set": "sv3",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/166.webp",
+      "imgLarge": "img/cards/sv3/166_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cheer Up",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Attach an Energy card from your hand to 1 of your Pokémon.",
+          "effect": {
+            "attachFromHand": true
+          }
+        },
+        {
+          "name": "Kick",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-133",
+      "set": "sv3",
+      "name": "Houndoom",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/133.webp",
+      "imgLarge": "img/cards/sv3/133_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Darkness",
+      "evolvesFrom": "Houndour",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Daring Strike",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 70 more damage.",
+          "effect": {
+            "bonusIfDefEvolved": 70
+          }
+        },
+        {
+          "name": "Shadow Slash",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-103",
+      "set": "svp",
+      "name": "Houndoom ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/103.webp",
+      "imgLarge": "img/cards/svp/103_hires.webp",
+      "stage": 1,
+      "hp": 270,
+      "type": "Darkness",
+      "evolvesFrom": "Houndour",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Evil Claw",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "90",
+          "text": "If the Defending Pokémon is a Basic Pokémon, it can't attack during your opponent's next turn.",
+          "effect": {
+            "noAttackIfBasic": true
+          }
+        },
+        {
+          "name": "Hound's Fang",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "220",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv3-131",
+      "set": "sv3",
+      "name": "Houndour",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/131.webp",
+      "imgLarge": "img/cards/sv3/131_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Coordinated Pack",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "",
+          "text": "For each of your Benched Houndour, search your deck for a Basic Darkness Energy card and attach it to that Houndour. Then, shuffle your deck.",
+          "effect": {
+            "coordinatedPack": true
+          }
+        },
+        {
+          "name": "Focus Fangs",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv4-122",
+      "set": "sv4",
+      "name": "Lokix",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/122.webp",
+      "imgLarge": "img/cards/sv4/122_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Darkness",
+      "evolvesFrom": "Nymble",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bounce",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "30",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        },
+        {
+          "name": "Punishing Kick",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "10+",
+          "text": "This attack does 40 more damage for each damage counter on your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefCounters": 40
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv4-121",
+      "set": "sv4",
+      "name": "Morpeko",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/121.webp",
+      "imgLarge": "img/cards/sv4/121_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Energizer Wheel",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "70",
+          "text": "Move 2 Darkness Energy from this Pokémon to 1 of your Benched Pokémon.",
+          "effect": {
+            "moveEnergyToBench": {
+              "n": 2,
+              "type": "Darkness"
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "In a Hungry Hurry",
+        "text": "If this Pokémon has no Energy attached, it has no Retreat Cost.",
+        "kind": "hungryHurry",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv4-13",
+      "set": "sv4",
+      "name": "Nymble",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/13.webp",
+      "imgLarge": "img/cards/sv4/13_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-137",
+      "set": "sv2",
+      "name": "Seviper",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/137.webp",
+      "imgLarge": "img/cards/sv2/137_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sharp Fang",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Cross-Cut",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 50 more damage.",
+          "effect": {
+            "bonusIfDefEvolved": 50
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-130",
+      "set": "sv3",
+      "name": "Umbreon",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/130.webp",
+      "imgLarge": "img/cards/sv3/130_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Darkness",
+      "evolvesFrom": "Eevee",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Feint Attack",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "",
+          "text": "This attack does 50 damage to 1 of your opponent's Pokémon. This attack's damage isn't affected by Weakness or Resistance, or by any effects on that Pokémon.",
+          "effect": {
+            "snipeAny": {
+              "n": 50,
+              "noWR": true
+            }
+          }
+        },
+        {
+          "name": "Pitch-Black Blade",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3pt5-159",
+      "set": "sv3pt5",
+      "name": "Energy Sticker",
+      "kind": "trainer",
+      "img": "img/cards/sv3pt5/159.webp",
+      "imgLarge": "img/cards/sv3pt5/159_hires.webp",
+      "text": "Flip a coin. If heads, attach a Basic Energy card from your discard pile to 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "energySticker",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv4pt5-82",
+      "set": "sv4pt5",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv4pt5/82.webp",
+      "imgLarge": "img/cards/sv4pt5/82_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-188",
+      "set": "sv1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sv1/188.webp",
+      "imgLarge": "img/cards/sv1/188_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv4-173",
+      "set": "sv4",
+      "name": "Roark",
+      "kind": "trainer",
+      "img": "img/cards/sv4/173.webp",
+      "imgLarge": "img/cards/sv4/173_hires.webp",
+      "text": "Draw 2 cards. Put a Basic Energy card from your discard pile into your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "roark",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-7",
+      "set": "sve",
+      "name": "Basic Darkness Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/7.webp",
+      "imgLarge": "img/cards/sve/7_hires.webp",
+      "energyType": "Darkness"
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "name": "Mew VMAX",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Metal",
+    "Fire"
+  ],
+  "featured": [
+    "swsh8-114",
+    "swsh8-185",
+    "swsh8-113"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh8-120",
+      "set": "swsh8",
+      "name": "Deoxys",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/120.webp",
+      "imgLarge": "img/cards/swsh8/120_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Photon Boost",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "text": "If this Pokémon has any Fusion Strike Energy attached, this attack does 80 more damage.",
+          "effect": {
+            "bonusIfAttachedName": {
+              "name": "Fusion Strike Energy",
+              "n": 80
+            }
+          }
+        }
+      ],
+      "tags": [
+        "Fusion Strike",
+        "Rapid Strike",
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-185",
+      "set": "swsh8",
+      "name": "Genesect V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/185.webp",
+      "imgLarge": "img/cards/swsh8/185_hires.webp",
+      "stage": 0,
+      "hp": 190,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Techno Blast",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "210",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "Fusion Strike",
+        "V"
+      ],
+      "power": {
+        "name": "Fusion Strike System",
+        "text": "Once during your turn, you may draw cards until you have as many cards in your hand as you have Fusion Strike Pokémon in play.",
+        "kind": "fusionStrikeSystem",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh8-124",
+      "set": "swsh8",
+      "name": "Meloetta",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/124.webp",
+      "imgLarge": "img/cards/swsh8/124_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Melodious Echo",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "70×",
+          "text": "This attack does 70 damage for each Fusion Strike Energy attached to all of your Pokémon.",
+          "effect": {
+            "timesAttachedNameAll": {
+              "name": "Fusion Strike Energy",
+              "n": 70
+            }
+          }
+        }
+      ],
+      "tags": [
+        "Fusion Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-113",
+      "set": "swsh8",
+      "name": "Mew V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/113.webp",
+      "imgLarge": "img/cards/swsh8/113_hires.webp",
+      "stage": 0,
+      "hp": 180,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Energy Mix",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Search your deck for an Energy card and attach it to 1 of your Fusion Strike Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachTag": {
+              "tag": "Fusion Strike",
+              "n": 1,
+              "anyEnergy": true
+            }
+          }
+        },
+        {
+          "name": "Psychic Leap",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "You may shuffle this Pokémon and all attached cards into your deck.",
+          "effect": {
+            "shuffleSelfMay": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "Fusion Strike",
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-114",
+      "set": "swsh8",
+      "name": "Mew VMAX",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/114.webp",
+      "imgLarge": "img/cards/swsh8/114_hires.webp",
+      "stage": 1,
+      "hp": 310,
+      "type": "Psychic",
+      "evolvesFrom": "Mew V",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Cross Fusion Strike",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Choose 1 of your Benched Fusion Strike Pokémon's attacks and use it as this attack.",
+          "effect": {
+            "copyBenchTag": "Fusion Strike"
+          }
+        },
+        {
+          "name": "Max Miracle",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "130",
+          "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Fusion Strike",
+        "VMAX"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh8-42",
+      "set": "swsh8",
+      "name": "Oricorio",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/42.webp",
+      "imgLarge": "img/cards/swsh8/42_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Glistening Droplets",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Put 5 damage counters on your opponent's Pokémon in any way you like.",
+          "effect": {
+            "placeCounters": {
+              "n": 5
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Lesson in Zeal",
+        "text": "All of your Fusion Strike Pokémon take 20 less damage from attacks from your opponent's Pokémon (after applying Weakness and Resistance). You can't apply more than 1 Lesson in Zeal Ability at a time.",
+        "kind": "lessonInZeal",
+        "ability": true
+      },
+      "tags": [
+        "Fusion Strike"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh8-225",
+      "set": "swsh8",
+      "name": "Battle VIP Pass",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/225.webp",
+      "imgLarge": "img/cards/swsh8/225_hires.webp",
+      "text": "You can use this card only during your first turn. Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "battleVipPass",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh9-132",
+      "set": "swsh9",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/132.webp",
+      "imgLarge": "img/cards/swsh9/132_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "swsh9-135",
+      "set": "swsh9",
+      "name": "Choice Belt",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/135.webp",
+      "imgLarge": "img/cards/swsh9/135_hires.webp",
+      "text": "The attacks of the Pokémon this card is attached to do 30 more damage to your opponent's Active Pokémon V (before applying Weakness and Resistance). You may play any number of Item cards during your turn. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "choiceBelt"
+    },
+    {
+      "count": 4,
+      "id": "swsh8-229",
+      "set": "swsh8",
+      "name": "Cram-o-matic",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/229.webp",
+      "imgLarge": "img/cards/swsh8/229_hires.webp",
+      "text": "You can use this card only if you discard another Item card from your hand. Flip a coin. If heads, search your deck for a card and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "cramOMatic",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh8-233",
+      "set": "swsh8",
+      "name": "Elesa's Sparkle",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/233.webp",
+      "imgLarge": "img/cards/swsh8/233_hires.webp",
+      "text": "Choose up to 2 of your Fusion Strike Pokémon. For each of those Pokémon, search your deck for a Fusion Strike Energy card and attach it to that Pokémon. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "elesasSparkle",
+      "ttype": "supporter",
+      "tags": [
+        "Fusion Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-125",
+      "set": "swsh5",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/125.webp",
+      "imgLarge": "img/cards/swsh5/125_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, they don't switch Pokémon.) You may play any number of Item cards during your turn.",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh6-140",
+      "set": "swsh6",
+      "name": "Fog Crystal",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/140.webp",
+      "imgLarge": "img/cards/swsh6/140_hires.webp",
+      "text": "Search your deck for a Psychic Energy card or a Basic Psychic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "fogCrystal",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh6-147",
+      "set": "swsh6",
+      "name": "Old Cemetery",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/147.webp",
+      "imgLarge": "img/cards/swsh6/147_hires.webp",
+      "text": "Whenever any player attaches an Energy card from their hand to 1 of their non-Psychic Pokémon, put 2 damage counters on that Pokémon. This Stadium stays in play when you play it. Discard it if another Stadium comes into play. If a Stadium with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "oldCemetery"
+    },
+    {
+      "count": 4,
+      "id": "swsh8-236",
+      "set": "swsh8",
+      "name": "Power Tablet",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/236.webp",
+      "imgLarge": "img/cards/swsh8/236_hires.webp",
+      "text": "During this turn, your Fusion Strike Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play any number of Item cards during your turn.",
+      "trainer": "powerTablet",
+      "ttype": "item",
+      "tags": [
+        "Fusion Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh9-150",
+      "set": "swsh9",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/150.webp",
+      "imgLarge": "img/cards/swsh9/150_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    },
+    {
+      "count": 3,
+      "id": "swsh9-151",
+      "set": "swsh9",
+      "name": "Double Turbo Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh9/151.webp",
+      "imgLarge": "img/cards/swsh9/151_hires.webp",
+      "energyType": "Colorless",
+      "special": "doubleTurbo",
+      "text": "As long as this card is attached to a Pokémon, it provides ColorlessColorless Energy. The attacks of the Pokémon this card is attached to do 20 less damage to your opponent's Pokémon (before applying Weakness and Resistance).",
+      "provides": 2
+    },
+    {
+      "count": 4,
+      "id": "swsh8-244",
+      "set": "swsh8",
+      "name": "Fusion Strike Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh8/244.webp",
+      "imgLarge": "img/cards/swsh8/244_hires.webp",
+      "energyType": "Grass|Fire|Water|Lightning|Psychic|Fighting|Darkness|Metal|Dragon|Fairy",
+      "tags": [
+        "Fusion Strike"
+      ],
+      "special": "fusionStrike",
+      "text": "This card can only be attached to a Fusion Strike Pokémon. If this card is attached to anything other than a Fusion Strike Pokémon, discard this card. As long as this card is attached to a Pokémon, it provides every type of Energy but provides only 1 Energy at a time. Prevent all effects of your opponent's Pokémon's Abilities done to the Pokémon this card is attached to.",
+      "needsTag": "Fusion Strike"
+    }
+  ]
+}

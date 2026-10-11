@@ -1,0 +1,439 @@
+{
+  "name": "Grass Chopper",
+  "group": "base2",
+  "types": [
+    "Grass",
+    "Fighting"
+  ],
+  "featured": [
+    "base4-49",
+    "base4-53",
+    "base4-64"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "base4-66",
+      "set": "base4",
+      "name": "Bellsprout",
+      "kind": "pokemon",
+      "img": "img/cards/base4/66.webp",
+      "imgLarge": "img/cards/base4/66_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Vine Whip",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Pokémon named Bellsprout and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+          "effect": {
+            "callFamily": {
+              "names": [
+                "Bellsprout"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-6",
+      "set": "base4",
+      "name": "Clefairy",
+      "kind": "pokemon",
+      "img": "img/cards/base4/6.webp",
+      "imgLarge": "img/cards/base4/6_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sing",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
+          "effect": {
+            "flipStatus": "asleep"
+          }
+        },
+        {
+          "name": "Metronome",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefairy's type is still Colorless.)",
+          "effect": {
+            "metronome": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-49",
+      "set": "base4",
+      "name": "Machoke",
+      "kind": "pokemon",
+      "img": "img/cards/base4/49.webp",
+      "imgLarge": "img/cards/base4/49_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": "Machop",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Karate Chop",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "50-",
+          "text": "Does 50 damage minus 10 damage for each damage counter on Machoke.",
+          "effect": {
+            "minusSelfCounters": 10
+          }
+        },
+        {
+          "name": "Submission",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Machoke does 20 damage to itself.",
+          "effect": {
+            "selfDamage": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-78",
+      "set": "base4",
+      "name": "Machop",
+      "kind": "pokemon",
+      "img": "img/cards/base4/78.webp",
+      "imgLarge": "img/cards/base4/78_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Low Kick",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-82",
+      "set": "base4",
+      "name": "Nidoran♀",
+      "kind": "pokemon",
+      "img": "img/cards/base4/82.webp",
+      "imgLarge": "img/cards/base4/82_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fury Swipes",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10×",
+          "text": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        },
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Pokémon named Nidoran ♂ or Nidoran ♀ and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+          "effect": {
+            "callFamily": {
+              "names": [
+                "Nidoran♂",
+                "Nidoran♀"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-83",
+      "set": "base4",
+      "name": "Nidoran♂",
+      "kind": "pokemon",
+      "img": "img/cards/base4/83.webp",
+      "imgLarge": "img/cards/base4/83_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Horn Hazard",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-53",
+      "set": "base4",
+      "name": "Nidorina",
+      "kind": "pokemon",
+      "img": "img/cards/base4/53.webp",
+      "imgLarge": "img/cards/base4/53_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Nidoran♀",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Supersonic",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        },
+        {
+          "name": "Double Kick",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-91",
+      "set": "base4",
+      "name": "Sandshrew",
+      "kind": "pokemon",
+      "img": "img/cards/base4/91.webp",
+      "imgLarge": "img/cards/base4/91_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": "Lightning",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sand-attack",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-64",
+      "set": "base4",
+      "name": "Weepinbell",
+      "kind": "pokemon",
+      "img": "img/cards/base4/64.webp",
+      "imgLarge": "img/cards/base4/64_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Bellsprout",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        },
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-119",
+      "set": "base4",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/119.webp",
+      "imgLarge": "img/cards/base4/119_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 1,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 2,
+      "id": "base4-113",
+      "set": "base4",
+      "name": "PlusPower",
+      "kind": "trainer",
+      "img": "img/cards/base4/113.webp",
+      "imgLarge": "img/cards/base4/113_hires.webp",
+      "text": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+      "trainer": "plusPower"
+    },
+    {
+      "count": 3,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base4-108",
+      "set": "base4",
+      "name": "Super Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/108.webp",
+      "imgLarge": "img/cards/base4/108_hires.webp",
+      "text": "Discard 1 Energy card attached to 1 of your own Pokémon in order to choose 1 of your opponent's Pokémon and up to 2 Energy cards attached to it. Discard those Energy cards.",
+      "trainer": "superEnergyRemoval"
+    },
+    {
+      "count": 1,
+      "id": "base4-117",
+      "set": "base4",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/117.webp",
+      "imgLarge": "img/cards/base4/117_hires.webp",
+      "text": "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 14,
+      "id": "base4-125",
+      "set": "base4",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/125.webp",
+      "imgLarge": "img/cards/base4/125_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 14,
+      "id": "base4-127",
+      "set": "base4",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/127.webp",
+      "imgLarge": "img/cards/base4/127_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

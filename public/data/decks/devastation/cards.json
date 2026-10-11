@@ -1,0 +1,559 @@
+{
+  "name": "Devastation",
+  "group": "rocket",
+  "types": [
+    "Grass",
+    "Water"
+  ],
+  "featured": [
+    "base4-63",
+    "base5-45",
+    "base5-46"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "base5-36",
+      "set": "base5",
+      "name": "Dark Gloom",
+      "kind": "pokemon",
+      "img": "img/cards/base5/36.webp",
+      "imgLarge": "img/cards/base5/36_hires.webp",
+      "stage": 1,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": "Oddish",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "The Defending Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        }
+      ],
+      "power": {
+        "name": "Pollen Stench",
+        "text": "Once during your turn (before your attack), you may flip a coin. If heads, the Defending Pokémon is now Confused; if tails, your Active Pokémon is now Confused. This power can't be used if Dark Gloom is Asleep, Confused, or Paralyzed.",
+        "kind": "pollenStench"
+      }
+    },
+    {
+      "count": 2,
+      "id": "base5-45",
+      "set": "base5",
+      "name": "Dark Vaporeon",
+      "kind": "pokemon",
+      "img": "img/cards/base5/45.webp",
+      "imgLarge": "img/cards/base5/45_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Eevee",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Whirlpool",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it.",
+          "effect": {
+            "removeEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base5-46",
+      "set": "base5",
+      "name": "Dark Wartortle",
+      "kind": "pokemon",
+      "img": "img/cards/base5/46.webp",
+      "imgLarge": "img/cards/base5/46_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Squirtle",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Mirror Shell",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "If an attack does damage to Dark Wartortle during your opponent's next turn (even if Dark Wartortle is Knocked Out), Dark Wartortle attacks the Defending Pokémon for an equal amount of damage.",
+          "effect": {
+            "mirrorShell": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base5-14",
+      "set": "base5",
+      "name": "Dark Weezing",
+      "kind": "pokemon",
+      "img": "img/cards/base5/14.webp",
+      "imgLarge": "img/cards/base5/14_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Koffing",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Mass Explosion",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Does 20 damage times the total number of Koffings, Weezings, and Dark Weezings in play (Apply Weakness and Resistance.). Then, this attack does 20 damage to each Koffing, Weezing, and Dark Weezing (even your own). Don't apply Weakness and Resistance.",
+          "effect": {
+            "massExplosion": true
+          }
+        },
+        {
+          "name": "Stun Gas",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatusEither": [
+              "poisoned",
+              "paralyzed"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base5-55",
+      "set": "base5",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/base5/55.webp",
+      "imgLarge": "img/cards/base5/55_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Sand-attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base5-58",
+      "set": "base5",
+      "name": "Koffing",
+      "kind": "pokemon",
+      "img": "img/cards/base5/58.webp",
+      "imgLarge": "img/cards/base5/58_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Poison Gas",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-50",
+      "set": "base4",
+      "name": "Magikarp",
+      "kind": "pokemon",
+      "img": "img/cards/base4/50.webp",
+      "imgLarge": "img/cards/base4/50_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10×",
+          "text": "Does 10 damage times the number of damage counters on Magikarp.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base5-63",
+      "set": "base5",
+      "name": "Oddish",
+      "kind": "pokemon",
+      "img": "img/cards/base5/63.webp",
+      "imgLarge": "img/cards/base5/63_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sleep Powder",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-93",
+      "set": "base4",
+      "name": "Squirtle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/93.webp",
+      "imgLarge": "img/cards/base4/93_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bubble",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Withdraw",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of opponent's attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-96",
+      "set": "base4",
+      "name": "Tangela",
+      "kind": "pokemon",
+      "img": "img/cards/base4/96.webp",
+      "imgLarge": "img/cards/base4/96_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Bind",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "The Defending Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-63",
+      "set": "base4",
+      "name": "Wartortle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/63.webp",
+      "imgLarge": "img/cards/base4/63_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": "Squirtle",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Withdraw",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Bite",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-100",
+      "set": "base4",
+      "name": "Weedle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/100.webp",
+      "imgLarge": "img/cards/base4/100_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-111",
+      "set": "base4",
+      "name": "Full Heal",
+      "kind": "trainer",
+      "img": "img/cards/base4/111.webp",
+      "imgLarge": "img/cards/base4/111_hires.webp",
+      "text": "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.",
+      "trainer": "fullHeal"
+    },
+    {
+      "count": 1,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base5-76",
+      "set": "base5",
+      "name": "Imposter Oak's Revenge",
+      "kind": "trainer",
+      "img": "img/cards/base5/76.webp",
+      "imgLarge": "img/cards/base5/76_hires.webp",
+      "text": "Discard a card from your hand in order to play this card. Your opponent shuffles his or her hand into his or her deck, then draws 4 cards.",
+      "trainer": "imposterOak"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base4-117",
+      "set": "base4",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/117.webp",
+      "imgLarge": "img/cards/base4/117_hires.webp",
+      "text": "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 18,
+      "id": "base4-127",
+      "set": "base4",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/127.webp",
+      "imgLarge": "img/cards/base4/127_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 10,
+      "id": "base4-130",
+      "set": "base4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/130.webp",
+      "imgLarge": "img/cards/base4/130_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

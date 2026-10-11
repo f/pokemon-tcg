@@ -1,0 +1,505 @@
+{
+  "name": "Charizard",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Fire",
+    "Grass",
+    "Fighting"
+  ],
+  "featured": [
+    "swsh4-25",
+    "swsh4-28",
+    "swsh4-7"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh4-25",
+      "set": "swsh4",
+      "name": "Charizard",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/25.webp",
+      "imgLarge": "img/cards/swsh4/25_hires.webp",
+      "stage": 2,
+      "hp": 170,
+      "type": "Fire",
+      "evolvesFrom": "Charmeleon",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Royal Blaze",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "100+",
+          "text": "This attack does 50 more damage for each Leon card in your discard pile.",
+          "effect": {
+            "plusDiscardNamed": {
+              "name": "Leon",
+              "n": 50
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Battle Sense",
+        "text": "Once during your turn, you may look at the top 3 cards of your deck and put 1 of them into your hand. Discard the other cards.",
+        "kind": "battleSense",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh4-23",
+      "set": "swsh4",
+      "name": "Charmander",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/23.webp",
+      "imgLarge": "img/cards/swsh4/23_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-24",
+      "set": "swsh4",
+      "name": "Charmeleon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/24.webp",
+      "imgLarge": "img/cards/swsh4/24_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Charmander",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Slash",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Raging Flames",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "60",
+          "text": "Discard the top 3 cards of your deck.",
+          "effect": {
+            "millSelf": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh3-140",
+      "set": "swsh3",
+      "name": "Lugia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/140.webp",
+      "imgLarge": "img/cards/swsh3/140_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Energy Loop",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Put an Energy attached to this Pokémon into your hand.",
+          "effect": {
+            "returnEnergyToHand": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh4-28",
+      "set": "swsh4",
+      "name": "Magcargo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/28.webp",
+      "imgLarge": "img/cards/swsh4/28_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Fire",
+      "evolvesFrom": "Slugma",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Heat Blast",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        },
+        {
+          "name": "Bright Flame",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "Discard 2 Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-27",
+      "set": "swsh4",
+      "name": "Slugma",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/27.webp",
+      "imgLarge": "img/cards/swsh4/27_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Yawn",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-100",
+      "set": "swsh1",
+      "name": "Sudowoodo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/100.webp",
+      "imgLarge": "img/cards/swsh1/100_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "This attack does 10 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-6",
+      "set": "swsh4",
+      "name": "Yanma",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/6.webp",
+      "imgLarge": "img/cards/swsh4/6_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "U-turn",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "You may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMay": true
+          }
+        },
+        {
+          "name": "Cutting Wind",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh4-7",
+      "set": "swsh4",
+      "name": "Yanmega",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/7.webp",
+      "imgLarge": "img/cards/swsh4/7_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Grass",
+      "evolvesFrom": "Yanma",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "U-turn",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "You may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMay": true
+          }
+        },
+        {
+          "name": "Cutting Wind",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh4-154",
+      "set": "swsh4",
+      "name": "Leon",
+      "kind": "trainer",
+      "img": "img/cards/swsh4/154.webp",
+      "imgLarge": "img/cards/swsh4/154_hires.webp",
+      "text": "During this turn, your Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn.",
+      "trainer": "leon",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "name": "Cinderace",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Fire",
+    "Fighting"
+  ],
+  "featured": [
+    "swsh1-36",
+    "swsh1-154",
+    "swsh1-23"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh1-36",
+      "set": "swsh1",
+      "name": "Cinderace",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/36.webp",
+      "imgLarge": "img/cards/swsh1/36_hires.webp",
+      "stage": 2,
+      "hp": 170,
+      "type": "Fire",
+      "evolvesFrom": "Raboot",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Flame Cloak",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "40",
+          "text": "Attach a Fire Energy card from your discard pile to this Pokémon.",
+          "effect": {
+            "attachFromDiscard": "Fire"
+          }
+        },
+        {
+          "name": "Bright Flame",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "160",
+          "text": "Flip a coin. If tails, discard 2 Energy from this Pokémon.",
+          "effect": {
+            "tailsDiscard": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-149",
+      "set": "swsh1",
+      "name": "Drampa",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/149.webp",
+      "imgLarge": "img/cards/swsh1/149_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Dragon Pulse",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Discard the top 2 cards of your deck.",
+          "effect": {
+            "millSelf": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-154",
+      "set": "swsh1",
+      "name": "Dubwool",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/154.webp",
+      "imgLarge": "img/cards/swsh1/154_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": "Wooloo",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Cotton Guard",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 30
+          }
+        },
+        {
+          "name": "Double-Edge",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-23",
+      "set": "swsh1",
+      "name": "Ninetales",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/23.webp",
+      "imgLarge": "img/cards/swsh1/23_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Fire",
+      "evolvesFrom": "Vulpix",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flame Cloak",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": "Attach a Fire Energy card from your discard pile to this Pokémon.",
+          "effect": {
+            "attachFromDiscard": "Fire"
+          }
+        },
+        {
+          "name": "Fire Mane",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-33",
+      "set": "swsh1",
+      "name": "Raboot",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/33.webp",
+      "imgLarge": "img/cards/swsh1/33_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Scorbunny",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Kick",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Heat Blast",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-31",
+      "set": "swsh1",
+      "name": "Scorbunny",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/31.webp",
+      "imgLarge": "img/cards/swsh1/31_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-100",
+      "set": "swsh1",
+      "name": "Sudowoodo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/100.webp",
+      "imgLarge": "img/cards/swsh1/100_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "This attack does 10 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-22",
+      "set": "swsh1",
+      "name": "Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/22.webp",
+      "imgLarge": "img/cards/swsh1/22_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-153",
+      "set": "swsh1",
+      "name": "Wooloo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/153.webp",
+      "imgLarge": "img/cards/swsh1/153_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-173",
+      "set": "swsh1",
+      "name": "Poké Kid",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/173.webp",
+      "imgLarge": "img/cards/swsh1/173_hires.webp",
+      "text": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "pokeKid",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-174",
+      "set": "swsh1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/174.webp",
+      "imgLarge": "img/cards/swsh1/174_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-175",
+      "set": "swsh1",
+      "name": "Pokémon Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/175.webp",
+      "imgLarge": "img/cards/swsh1/175_hires.webp",
+      "text": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "pokemonCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

@@ -1,0 +1,673 @@
+{
+  "name": "Luminous Frost",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Water",
+    "Fire"
+  ],
+  "featured": [
+    "sm3-31",
+    "sm3-28",
+    "sm2-20"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm3-28",
+      "set": "sm3",
+      "name": "Alolan Ninetales",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/28.webp",
+      "imgLarge": "img/cards/sm3/28_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": "Alolan Vulpix",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Aurora Beam",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Luminous Barrier",
+        "text": "Prevent all effects of attacks, including damage, done to this Pokémon by your opponent's Pokémon-GX or Pokémon-EX.",
+        "kind": "luminousBarrier",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm2-19",
+      "set": "sm2",
+      "name": "Alolan Sandshrew",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/19.webp",
+      "imgLarge": "img/cards/sm2/19_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Defense Curl",
+          "cost": [],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Ice Ball",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-20",
+      "set": "sm2",
+      "name": "Alolan Sandslash",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/20.webp",
+      "imgLarge": "img/cards/sm2/20_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": "Alolan Sandshrew",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Smash Turn",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Slush Rush",
+        "text": "Once during your turn (before your attack), you may draw a card.",
+        "kind": "slushRush",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm3-27",
+      "set": "sm3",
+      "name": "Alolan Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/27.webp",
+      "imgLarge": "img/cards/sm3/27_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Powder Snow",
+          "cost": [],
+          "damage": "",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "flipStatus": "asleep"
+          }
+        },
+        {
+          "name": "Icy Snow",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm3-108",
+      "set": "sm3",
+      "name": "Bouffalant",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/108.webp",
+      "imgLarge": "img/cards/sm3/108_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Bouffant Head",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 30
+          }
+        },
+        {
+          "name": "Knock Over",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "You may discard any Stadium card in play.",
+          "effect": {
+            "discardStadium": {
+              "may": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm3-38",
+      "set": "sm3",
+      "name": "Bruxish",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/38.webp",
+      "imgLarge": "img/cards/sm3/38_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gnash Teeth",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        },
+        {
+          "name": "Synchronoise",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "This attack does 20 damage to each of your opponent's Benched Pokémon that shares a type with your opponent's Active Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSharesType": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-24",
+      "set": "sm3",
+      "name": "Heatmor",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/24.webp",
+      "imgLarge": "img/cards/sm3/24_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Odor Sleuth",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip 2 coins. For each heads, put a card from your discard pile into your hand.",
+          "effect": {
+            "flipRecoverAny": 2
+          }
+        },
+        {
+          "name": "Searing Flame",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Your opponent's Active Pokémon is now Burned.",
+          "effect": {
+            "status": "burned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-29",
+      "set": "sm3",
+      "name": "Horsea",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/29.webp",
+      "imgLarge": "img/cards/sm3/29_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Arrow",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "This attack does 10 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm3-31",
+      "set": "sm3",
+      "name": "Kingdra",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/31.webp",
+      "imgLarge": "img/cards/sm3/31_hires.webp",
+      "stage": 2,
+      "hp": 140,
+      "type": "Water",
+      "evolvesFrom": "Seadra",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Brine",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "This attack does 90 damage to 1 of your opponent's Pokémon that has any damage counters on it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeDamaged": 90
+          }
+        },
+        {
+          "name": "Tornado Shot",
+          "cost": [
+            "Water"
+          ],
+          "damage": "90",
+          "text": "Discard a Water Energy from this Pokémon. This attack does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "discard": {
+              "type": "Water",
+              "n": 1
+            },
+            "benchSnipe": {
+              "n": 30,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-36",
+      "set": "sm3",
+      "name": "Panpour",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/36.webp",
+      "imgLarge": "img/cards/sm3/36_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-22",
+      "set": "sm3",
+      "name": "Pansear",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/22.webp",
+      "imgLarge": "img/cards/sm3/22_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-30",
+      "set": "sm3",
+      "name": "Seadra",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/30.webp",
+      "imgLarge": "img/cards/sm3/30_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": "Horsea",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Arrow",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "This attack does 30 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 30
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-37",
+      "set": "sm3",
+      "name": "Simipour",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/37.webp",
+      "imgLarge": "img/cards/sm3/37_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Panpour",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Aqua Reflect",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Move a Water Energy from this Pokémon to 1 of your Benched Pokémon.",
+          "effect": {
+            "moveEnergyToBench": {
+              "n": 1,
+              "type": "Water"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm3-23",
+      "set": "sm3",
+      "name": "Simisear",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/23.webp",
+      "imgLarge": "img/cards/sm3/23_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Pansear",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Flare Recharge",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Attach a Fire Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": "Fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-114",
+      "set": "sm1",
+      "name": "Big Malasada",
+      "kind": "trainer",
+      "img": "img/cards/sm1/114.webp",
+      "imgLarge": "img/cards/sm1/114_hires.webp",
+      "text": "Heal 20 damage and remove a Special Condition from your Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "bigMalasada",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-116",
+      "set": "sm1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sm1/116.webp",
+      "imgLarge": "img/cards/sm1/116_hires.webp",
+      "text": "Put 2 basic Energy cards from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm3-114",
+      "set": "sm3",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/sm3/114.webp",
+      "imgLarge": "img/cards/sm3/114_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, that player doesn't switch Pokémon.) You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm3-117",
+      "set": "sm3",
+      "name": "Lana",
+      "kind": "trainer",
+      "img": "img/cards/sm3/117.webp",
+      "imgLarge": "img/cards/sm3/117_hires.webp",
+      "text": "Heal 50 damage from each of your Pokémon that has any Water Energy attached to it. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lana",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm3-128",
+      "set": "sm3",
+      "name": "Wishful Baton",
+      "kind": "trainer",
+      "img": "img/cards/sm3/128.webp",
+      "imgLarge": "img/cards/sm3/128_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If the Pokémon this card is attached to is your Active Pokémon and is Knocked Out by damage from an opponent's attack, move up to 3 basic Energy cards from that Pokémon to 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "wishfulBaton"
+    },
+    {
+      "count": 6,
+      "id": "sm3-167",
+      "set": "sm3",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sm3/167.webp",
+      "imgLarge": "img/cards/sm3/167_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 14,
+      "id": "sm1-166",
+      "set": "sm1",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/166.webp",
+      "imgLarge": "img/cards/sm1/166_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

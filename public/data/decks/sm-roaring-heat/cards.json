@@ -1,0 +1,693 @@
+{
+  "name": "Roaring Heat",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Fighting",
+    "Fire"
+  ],
+  "featured": [
+    "sm1-26",
+    "sm1-112",
+    "sm1-75"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "sm1-112",
+      "set": "sm1",
+      "name": "Bewear",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/112.webp",
+      "imgLarge": "img/cards/sm1/112_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": "Stufful",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Bear Hug",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "noRetreat": true
+          }
+        },
+        {
+          "name": "Superpower",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "text": "You may do 40 more damage. If you do, this Pokémon does 20 damage to itself.",
+          "effect": {
+            "optionalBonusSelfDamage": {
+              "bonus": 40,
+              "self": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-70",
+      "set": "sm1",
+      "name": "Boldore",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/70.webp",
+      "imgLarge": "img/cards/sm1/70_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": "Roggenrola",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Rock Hurl",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "This attack's damage isn't affected by Resistance.",
+          "effect": {
+            "noRes": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-72",
+      "set": "sm1",
+      "name": "Crabrawler",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/72.webp",
+      "imgLarge": "img/cards/sm1/72_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Punch",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Crabhammer",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-26",
+      "set": "sm1",
+      "name": "Incineroar",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/26.webp",
+      "imgLarge": "img/cards/sm1/26_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Fire",
+      "evolvesFrom": "Torracat",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Fire Fang",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Burned.",
+          "effect": {
+            "status": "burned"
+          }
+        },
+        {
+          "name": "Darkest Lariat",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "100×",
+          "text": "Flip 2 coins. This attack does 100 damage for each heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sm1-24",
+      "set": "sm1",
+      "name": "Litten",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/24.webp",
+      "imgLarge": "img/cards/sm1/24_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-67",
+      "set": "sm1",
+      "name": "Makuhita",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/67.webp",
+      "imgLarge": "img/cards/sm1/67_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        },
+        {
+          "name": "Strength",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-113",
+      "set": "sm1",
+      "name": "Oranguru",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/113.webp",
+      "imgLarge": "img/cards/sm1/113_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "This attack does 20 more damage times the amount of Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Instruct",
+        "text": "Once during your turn (before your attack), you may draw cards until you have 3 cards in your hand.",
+        "kind": "restart",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm1-75",
+      "set": "sm1",
+      "name": "Palossand",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/75.webp",
+      "imgLarge": "img/cards/sm1/75_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Fighting",
+      "evolvesFrom": "Sandygast",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Absorb Vitality",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon.",
+          "effect": {
+            "drainAll": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Wall of Sand",
+        "text": "This Pokémon takes 20 less damage from attacks (after applying Weakness and Resistance).",
+        "kind": "wallOfSand",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm1-73",
+      "set": "sm1",
+      "name": "Passimian",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/73.webp",
+      "imgLarge": "img/cards/sm1/73_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fling",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "",
+          "text": "This attack does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 30,
+              "count": 1
+            }
+          }
+        },
+        {
+          "name": "Team Play",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "This attack does 30 damage for each of your Benched Passimian.",
+          "effect": {
+            "plusBenchNamed": {
+              "name": "Passimian",
+              "n": 30
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-69",
+      "set": "sm1",
+      "name": "Roggenrola",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/69.webp",
+      "imgLarge": "img/cards/sm1/69_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Smack Down",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "If your opponent's Active Pokémon has Fighting Resistance, this attack does 50 more damage.",
+          "effect": {
+            "bonusIfDefResist": {
+              "type": "Fighting",
+              "n": 50
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-74",
+      "set": "sm1",
+      "name": "Sandygast",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/74.webp",
+      "imgLarge": "img/cards/sm1/74_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Shore Up",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Attach a Fighting Energy card from your discard pile to this Pokémon.",
+          "effect": {
+            "attachFromDiscard": "Fighting"
+          }
+        },
+        {
+          "name": "Sand Tomb",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "noRetreat": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-111",
+      "set": "sm1",
+      "name": "Stufful",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/111.webp",
+      "imgLarge": "img/cards/sm1/111_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-23",
+      "set": "sm1",
+      "name": "Torkoal",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/23.webp",
+      "imgLarge": "img/cards/sm1/23_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Singe",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Burned.",
+          "effect": {
+            "status": "burned"
+          }
+        },
+        {
+          "name": "Body Slam",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm1-25",
+      "set": "sm1",
+      "name": "Torracat",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/25.webp",
+      "imgLarge": "img/cards/sm1/25_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Litten",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Fury Swipes",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20×",
+          "text": "Flip 3 coins. This attack does 20 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        },
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-114",
+      "set": "sm1",
+      "name": "Big Malasada",
+      "kind": "trainer",
+      "img": "img/cards/sm1/114.webp",
+      "imgLarge": "img/cards/sm1/114_hires.webp",
+      "text": "Heal 20 damage and remove a Special Condition from your Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "bigMalasada",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-116",
+      "set": "sm1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sm1/116.webp",
+      "imgLarge": "img/cards/sm1/116_hires.webp",
+      "text": "Put 2 basic Energy cards from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-122",
+      "set": "sm1",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm1/122.webp",
+      "imgLarge": "img/cards/sm1/122_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-127",
+      "set": "sm1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sm1/127.webp",
+      "imgLarge": "img/cards/sm1/127_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-135",
+      "set": "sm1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/135.webp",
+      "imgLarge": "img/cards/sm1/135_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 9,
+      "id": "sm1-169",
+      "set": "sm1",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/169.webp",
+      "imgLarge": "img/cards/sm1/169_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 11,
+      "id": "sm1-165",
+      "set": "sm1",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/165.webp",
+      "imgLarge": "img/cards/sm1/165_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

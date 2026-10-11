@@ -1,0 +1,591 @@
+{
+  "name": "Lucario ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Fighting"
+  ],
+  "featured": [
+    "svp-17",
+    "sv1-109",
+    "sv1-157"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "sv1-109",
+      "set": "sv1",
+      "name": "Annihilape",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/109.webp",
+      "imgLarge": "img/cards/sv1/109_hires.webp",
+      "stage": 2,
+      "hp": 140,
+      "type": "Fighting",
+      "evolvesFrom": "Primeape",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rage Fist",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "70×",
+          "text": "This attack does 70 damage for each Prize card your opponent has taken.",
+          "effect": {
+            "timesPrizeTaken": 70
+          }
+        },
+        {
+          "name": "Dynamite Punch",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "170",
+          "text": "This Pokémon also does 50 damage to itself.",
+          "effect": {
+            "selfDamage": 50
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-164",
+      "set": "sv1",
+      "name": "Cyclizar",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/164.webp",
+      "imgLarge": "img/cards/sv1/164_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Touring",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Speed Attack",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-124",
+      "set": "sv1",
+      "name": "Koraidon",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/124.webp",
+      "imgLarge": "img/cards/sv1/124_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Claw Slash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        },
+        {
+          "name": "Rampaging Fang",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "190",
+          "text": "Discard 3 Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-155",
+      "set": "sv1",
+      "name": "Lechonk",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/155.webp",
+      "imgLarge": "img/cards/sv1/155_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-17",
+      "set": "svp",
+      "name": "Lucario ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/17.webp",
+      "imgLarge": "img/cards/svp/17_hires.webp",
+      "stage": 1,
+      "hp": 260,
+      "type": "Fighting",
+      "evolvesFrom": "Riolu",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Low Sweep",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        },
+        {
+          "name": "Aura Sphere",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "160",
+          "text": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 50,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-107",
+      "set": "sv1",
+      "name": "Mankey",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/107.webp",
+      "imgLarge": "img/cards/sv1/107_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Monkey Beatdown",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": "This Pokémon also does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-111",
+      "set": "sv1",
+      "name": "Medicham",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/111.webp",
+      "imgLarge": "img/cards/sv1/111_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": "Meditite",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Acu-Punch-Ture",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": "Choose 1 of your opponent's Active Pokémon's attacks. During your opponent's next turn, that Pokémon can't use that attack.",
+          "effect": {
+            "amnesia": true
+          }
+        },
+        {
+          "name": "Kick Shot",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "90",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-110",
+      "set": "sv1",
+      "name": "Meditite",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/110.webp",
+      "imgLarge": "img/cards/sv1/110_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Feint",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10",
+          "text": "This attack's damage isn't affected by Resistance.",
+          "effect": {
+            "noRes": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-157",
+      "set": "sv1",
+      "name": "Oinkologne",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/157.webp",
+      "imgLarge": "img/cards/sv1/157_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": "Lechonk",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Leg Stomp",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Flip a coin. If tails, during your next turn, this Pokémon can't attack.",
+          "effect": {
+            "tailsCooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-108",
+      "set": "sv1",
+      "name": "Primeape",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/108.webp",
+      "imgLarge": "img/cards/sv1/108_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": "Mankey",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Raging Punch",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "70",
+          "text": "This Pokémon also does 20 damage to itself.",
+          "effect": {
+            "selfDamage": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-112",
+      "set": "sv1",
+      "name": "Riolu",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/112.webp",
+      "imgLarge": "img/cards/sv1/112_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Jab",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Low Kick",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-162",
+      "set": "sv1",
+      "name": "Squawkabilly",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/162.webp",
+      "imgLarge": "img/cards/sv1/162_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Fly",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Flip a coin. If tails, this attack does nothing. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+          "effect": {
+            "flipFail": true,
+            "shield": "all"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-186",
+      "set": "sv1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/sv1/186.webp",
+      "imgLarge": "img/cards/sv1/186_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-188",
+      "set": "sv1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sv1/188.webp",
+      "imgLarge": "img/cards/sv1/188_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    }
+  ]
+}

@@ -1,0 +1,674 @@
+{
+  "name": "Forest Shadow",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Grass"
+  ],
+  "featured": [
+    "sm1-11",
+    "sm1-5",
+    "sm1-17"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm1-18",
+      "set": "sm1",
+      "name": "Bounsweet",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/18.webp",
+      "imgLarge": "img/cards/sm1/18_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sweet Scent",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Heal 30 damage from 1 of your Pokémon.",
+          "effect": {
+            "healAny": 30
+          }
+        },
+        {
+          "name": "Splash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-10",
+      "set": "sm1",
+      "name": "Dartrix",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/10.webp",
+      "imgLarge": "img/cards/sm1/10_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Rowlet",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sharp Blade Quill",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 20 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 20
+            }
+          }
+        },
+        {
+          "name": "Leaf Blade",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "Flip a coin. If heads, this attack does 20 more damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-11",
+      "set": "sm1",
+      "name": "Decidueye",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/11.webp",
+      "imgLarge": "img/cards/sm1/11_hires.webp",
+      "stage": 2,
+      "hp": 140,
+      "type": "Grass",
+      "evolvesFrom": "Dartrix",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leaf Blade",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage.",
+          "effect": {
+            "flipBonus": 30
+          }
+        },
+        {
+          "name": "Brave Bird",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "This Pokémon does 20 damage to itself.",
+          "effect": {
+            "selfDamage": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-14",
+      "set": "sm1",
+      "name": "Fomantis",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/14.webp",
+      "imgLarge": "img/cards/sm1/14_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Synthesis",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Grass Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachOne": {
+              "type": "Grass",
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Leafage",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-99",
+      "set": "sm1",
+      "name": "Kangaskhan",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/99.webp",
+      "imgLarge": "img/cards/sm1/99_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Cross-Cut",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 30 more damage.",
+          "effect": {
+            "bonusIfDefEvolved": 30
+          }
+        },
+        {
+          "name": "Hurricane Punch",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50×",
+          "text": "Flip 4 coins. This attack does 50 damage for each heads.",
+          "effect": {
+            "flipMulti": 4
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-16",
+      "set": "sm1",
+      "name": "Morelull",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/16.webp",
+      "imgLarge": "img/cards/sm1/16_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flickering Spores",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Ram",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-4",
+      "set": "sm1",
+      "name": "Paras",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/4.webp",
+      "imgLarge": "img/cards/sm1/4_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-5",
+      "set": "sm1",
+      "name": "Parasect",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/5.webp",
+      "imgLarge": "img/cards/sm1/5_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Grass",
+      "evolvesFrom": "Paras",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Fury Cutter",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip 3 coins. If 1 of them is heads, this attack does 20 more damage. If 2 of them are heads, this attack does 60 more damage. If all of them are heads, this attack does 120 damage.",
+          "effect": {
+            "furyCutter": true
+          }
+        },
+        {
+          "name": "Mushroom Drain",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "Heal 30 damage from this Pokémon.",
+          "effect": {
+            "heal": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-106",
+      "set": "sm1",
+      "name": "Pikipek",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/106.webp",
+      "imgLarge": "img/cards/sm1/106_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rock Smash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 more damage.",
+          "effect": {
+            "flipBonus": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-6",
+      "set": "sm1",
+      "name": "Pinsir",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/6.webp",
+      "imgLarge": "img/cards/sm1/6_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Roof Fling",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, put your opponent's Active Pokémon and all cards attached to it into your opponent's hand.",
+          "effect": {
+            "bounceDefAll": true,
+            "bounceFlip": true
+          }
+        },
+        {
+          "name": "Guillotine",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm1-9",
+      "set": "sm1",
+      "name": "Rowlet",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/9.webp",
+      "imgLarge": "img/cards/sm1/9_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Leafage",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-17",
+      "set": "sm1",
+      "name": "Shiinotic",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/17.webp",
+      "imgLarge": "img/cards/sm1/17_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Grass",
+      "evolvesFrom": "Morelull",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Flickering Spores",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ],
+      "power": {
+        "name": "Illuminate",
+        "text": "Once during your turn (before your attack), you may search your deck for a Grass Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
+        "kind": "illuminate",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm1-102",
+      "set": "sm1",
+      "name": "Spinda",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/102.webp",
+      "imgLarge": "img/cards/sm1/102_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Teeter Punch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-7",
+      "set": "sm1",
+      "name": "Surskit",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/7.webp",
+      "imgLarge": "img/cards/sm1/7_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 more damage.",
+          "effect": {
+            "flipBonus": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-107",
+      "set": "sm1",
+      "name": "Trumbeak",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/107.webp",
+      "imgLarge": "img/cards/sm1/107_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": "Pikipek",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bullet Seed",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 4 coins. This attack does 20 damage for each heads.",
+          "effect": {
+            "flipMulti": 4
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-114",
+      "set": "sm1",
+      "name": "Big Malasada",
+      "kind": "trainer",
+      "img": "img/cards/sm1/114.webp",
+      "imgLarge": "img/cards/sm1/114_hires.webp",
+      "text": "Heal 20 damage and remove a Special Condition from your Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "bigMalasada",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-116",
+      "set": "sm1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sm1/116.webp",
+      "imgLarge": "img/cards/sm1/116_hires.webp",
+      "text": "Put 2 basic Energy cards from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-122",
+      "set": "sm1",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm1/122.webp",
+      "imgLarge": "img/cards/sm1/122_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-127",
+      "set": "sm1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sm1/127.webp",
+      "imgLarge": "img/cards/sm1/127_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-135",
+      "set": "sm1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/135.webp",
+      "imgLarge": "img/cards/sm1/135_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 20,
+      "id": "sm1-164",
+      "set": "sm1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/164.webp",
+      "imgLarge": "img/cards/sm1/164_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

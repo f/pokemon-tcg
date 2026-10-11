@@ -1,0 +1,483 @@
+{
+  "name": "Single Strike Urshifu VMAX",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Darkness",
+    "Fighting"
+  ],
+  "featured": [
+    "swsh5-86",
+    "swsh5-85",
+    "swsh5-96"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh5-96",
+      "set": "swsh5",
+      "name": "Houndoom",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/96.webp",
+      "imgLarge": "img/cards/swsh5/96_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Darkness",
+      "evolvesFrom": "Houndour",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Darkness Fang",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Single Strike Roar",
+        "text": "Once during your turn, you may search your deck for a Single Strike Energy card and attach it to 1 of your Single Strike Pokémon. Then, shuffle your deck. If you attached Energy to a Pokémon in this way, put 2 damage counters on that Pokémon.",
+        "kind": "singleStrikeRoar",
+        "ability": true
+      },
+      "tags": [
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh5-95",
+      "set": "swsh5",
+      "name": "Houndour",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/95.webp",
+      "imgLarge": "img/cards/swsh5/95_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ],
+      "tags": [
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-148",
+      "set": "swsh1",
+      "name": "Oranguru",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/148.webp",
+      "imgLarge": "img/cards/swsh1/148_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Whap Down",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Primate Wisdom",
+        "text": "Once during your turn, you may switch a card from your hand with the top card of your deck.",
+        "kind": "primateWisdom",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh5-85",
+      "set": "swsh5",
+      "name": "Single Strike Urshifu V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/85.webp",
+      "imgLarge": "img/cards/swsh5/85_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Laser Focus",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Fighting Energy cards and attach them to this Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttach": {
+              "type": "Fighting",
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Impact Blow",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "During your next turn, this Pokémon can't use Impact Blow.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "Single Strike",
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-86",
+      "set": "swsh5",
+      "name": "Single Strike Urshifu VMAX",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/86.webp",
+      "imgLarge": "img/cards/swsh5/86_hires.webp",
+      "stage": 1,
+      "hp": 330,
+      "type": "Fighting",
+      "evolvesFrom": "Single Strike Urshifu V",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Beatdown",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        },
+        {
+          "name": "G-Max One Blow",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "270",
+          "text": "Discard all Energy from this Pokémon. This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "discardAllEnergy": true,
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Single Strike",
+        "VMAX"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-84",
+      "set": "swsh5",
+      "name": "Stonjourner",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/84.webp",
+      "imgLarge": "img/cards/swsh5/84_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Land's Pulse",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "If a Stadium is in play, this attack does 30 more damage.",
+          "effect": {
+            "bonusIfStadium": 30
+          }
+        },
+        {
+          "name": "Giga Hammer",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "During your next turn, this Pokémon can't use Giga Hammer.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "tags": [
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-58",
+      "set": "swsh45",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/58.webp",
+      "imgLarge": "img/cards/swsh45/58_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh5-121",
+      "set": "swsh5",
+      "name": "Bruno",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/121.webp",
+      "imgLarge": "img/cards/swsh5/121_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 4 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 7 cards instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "bruno",
+      "ttype": "supporter",
+      "tags": [
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-125",
+      "set": "swsh5",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/125.webp",
+      "imgLarge": "img/cards/swsh5/125_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, they don't switch Pokémon.) You may play any number of Item cards during your turn.",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-169",
+      "set": "swsh1",
+      "name": "Marnie",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/169.webp",
+      "imgLarge": "img/cards/swsh1/169_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "marnie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh45-60",
+      "set": "swsh45",
+      "name": "Professor's Research",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/60.webp",
+      "imgLarge": "img/cards/swsh45/60_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-179",
+      "set": "swsh1",
+      "name": "Quick Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/179.webp",
+      "imgLarge": "img/cards/swsh1/179_hires.webp",
+      "text": "You can play this card only if you discard another card from your hand. Search your deck for a Basic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "quickBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-133",
+      "set": "swsh5",
+      "name": "Single Strike Scroll of Scorn",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/133.webp",
+      "imgLarge": "img/cards/swsh5/133_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached. The Single Strike Pokémon this card is attached to can use the attack on this card. (You still need the necessary Energy to use this attack.) You may play any number of Item cards during your turn.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "scrollOfScorn",
+      "attacks": [
+        {
+          "name": "Furious Anger",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10+",
+          "text": "This attack does 10 more damage for each damage counter on this Pokémon.",
+          "effect": {
+            "plusSelfCounters": 10
+          }
+        }
+      ],
+      "tags": [
+        "Single Strike"
+      ],
+      "attackNeedsTag": "Single Strike"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-168",
+      "set": "swsh2",
+      "name": "Tool Scrapper",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/168.webp",
+      "imgLarge": "img/cards/swsh2/168_hires.webp",
+      "text": "Choose up to 2 Pokémon Tools attached to Pokémon (yours or your opponent's) and discard them. You may play any number of Item cards during your turn.",
+      "trainer": "toolScrapper",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh5-137",
+      "set": "swsh5",
+      "name": "Tower of Darkness",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/137.webp",
+      "imgLarge": "img/cards/swsh5/137_hires.webp",
+      "text": "Once during each player's turn, that player may draw 2 cards. In order to use this effect, that player must discard a Single Strike card from their hand. This Stadium stays in play when you play it. Discard it if another Stadium comes into play. If a Stadium with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "towerOfDarkness",
+      "tags": [
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh5-139",
+      "set": "swsh5",
+      "name": "Urn of Vitality",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/139.webp",
+      "imgLarge": "img/cards/swsh5/139_hires.webp",
+      "text": "Shuffle up to 2 Single Strike Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "urnOfVitality",
+      "ttype": "item",
+      "tags": [
+        "Single Strike"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 4,
+      "id": "swsh5-141",
+      "set": "swsh5",
+      "name": "Single Strike Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh5/141.webp",
+      "imgLarge": "img/cards/swsh5/141_hires.webp",
+      "energyType": "Fighting|Darkness",
+      "tags": [
+        "Single Strike"
+      ],
+      "special": "singleStrike",
+      "text": "This card can only be attached to a Single Strike Pokémon. If this card is attached to anything other than a Single Strike Pokémon, discard this card. As long as this card is attached to a Pokémon, it provides Fighting and Darkness Energy but provides only 1 Energy at a time, and the attacks of the Pokémon this card is attached to do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+      "needsTag": "Single Strike"
+    },
+    {
+      "count": 4,
+      "id": "swsh4-164",
+      "set": "swsh4",
+      "name": "Stone Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh4/164.webp",
+      "imgLarge": "img/cards/swsh4/164_hires.webp",
+      "energyType": "Fighting",
+      "special": "stoneFighting",
+      "text": "As long as this card is attached to a Pokémon, it provides Fighting Energy. The Fighting Pokémon this card is attached to takes 20 less damage from attacks from your opponent's Pokémon (after applying Weakness and Resistance)."
+    }
+  ]
+}

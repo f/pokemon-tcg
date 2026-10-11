@@ -1,0 +1,450 @@
+{
+  "name": "Brushfire",
+  "group": "theme",
+  "types": [
+    "Fire",
+    "Grass"
+  ],
+  "featured": [
+    "base1-12",
+    "base1-46",
+    "base1-66"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "base1-46",
+      "set": "base1",
+      "name": "Charmander",
+      "kind": "pokemon",
+      "img": "img/cards/base1/46.webp",
+      "imgLarge": "img/cards/base1/46_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Ember",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Discard 1 Fire Energy card attached to Charmander in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-24",
+      "set": "base1",
+      "name": "Charmeleon",
+      "kind": "pokemon",
+      "img": "img/cards/base1/24.webp",
+      "imgLarge": "img/cards/base1/24_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": "Charmander",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Slash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Discard 1 Fire Energy card attached to Charmeleon in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-28",
+      "set": "base1",
+      "name": "Growlithe",
+      "kind": "pokemon",
+      "img": "img/cards/base1/28.webp",
+      "imgLarge": "img/cards/base1/28_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-23",
+      "set": "base1",
+      "name": "Arcanine",
+      "kind": "pokemon",
+      "img": "img/cards/base1/23.webp",
+      "imgLarge": "img/cards/base1/23_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Fire",
+      "evolvesFrom": "Growlithe",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Discard 1 Fire Energy card attached to Arcanine in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Take Down",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Arcanine does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-55",
+      "set": "base1",
+      "name": "Nidoran♂",
+      "kind": "pokemon",
+      "img": "img/cards/base1/55.webp",
+      "imgLarge": "img/cards/base1/55_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Horn Hazard",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-66",
+      "set": "base1",
+      "name": "Tangela",
+      "kind": "pokemon",
+      "img": "img/cards/base1/66.webp",
+      "imgLarge": "img/cards/base1/66_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Bind",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "The Defending Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-68",
+      "set": "base1",
+      "name": "Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/base1/68.webp",
+      "imgLarge": "img/cards/base1/68_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-12",
+      "set": "base1",
+      "name": "Ninetales",
+      "kind": "pokemon",
+      "img": "img/cards/base1/12.webp",
+      "imgLarge": "img/cards/base1/12_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": "Vulpix",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Lure",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon.",
+          "effect": {
+            "lure": true
+          }
+        },
+        {
+          "name": "Fire Blast",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "damage": "80",
+          "text": "Discard 1 Fire Energy card attached to Ninetales in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-69",
+      "set": "base1",
+      "name": "Weedle",
+      "kind": "pokemon",
+      "img": "img/cards/base1/69.webp",
+      "imgLarge": "img/cards/base1/69_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-92",
+      "set": "base1",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base1/92.webp",
+      "imgLarge": "img/cards/base1/92_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 2,
+      "id": "base1-81",
+      "set": "base1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/base1/81.webp",
+      "imgLarge": "img/cards/base1/81_hires.webp",
+      "text": "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.",
+      "trainer": "energyRetrieval"
+    },
+    {
+      "count": 1,
+      "id": "base1-93",
+      "set": "base1",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base1/93.webp",
+      "imgLarge": "img/cards/base1/93_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base1-75",
+      "set": "base1",
+      "name": "Lass",
+      "kind": "trainer",
+      "img": "img/cards/base1/75.webp",
+      "imgLarge": "img/cards/base1/75_hires.webp",
+      "text": "You and your opponent show each other your hands, then shuffle all the Trainer cards from your hands into your decks.",
+      "trainer": "lass"
+    },
+    {
+      "count": 1,
+      "id": "base1-84",
+      "set": "base1",
+      "name": "PlusPower",
+      "kind": "trainer",
+      "img": "img/cards/base1/84.webp",
+      "imgLarge": "img/cards/base1/84_hires.webp",
+      "text": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+      "trainer": "plusPower"
+    },
+    {
+      "count": 3,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 18,
+      "id": "base1-98",
+      "set": "base1",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/98.webp",
+      "imgLarge": "img/cards/base1/98_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 10,
+      "id": "base1-99",
+      "set": "base1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/99.webp",
+      "imgLarge": "img/cards/base1/99_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

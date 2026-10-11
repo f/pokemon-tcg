@@ -1,0 +1,607 @@
+{
+  "name": "Twilight Rogue",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Fighting"
+  ],
+  "featured": [
+    "sm3-53",
+    "sm6-76",
+    "sm4-47"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm3-52",
+      "set": "sm3",
+      "name": "Dusclops",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/52.webp",
+      "imgLarge": "img/cards/sm3/52_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": "Duskull",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Night Roam",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Put 1 damage counter on each Pokémon (both yours and your opponent's).",
+          "effect": {
+            "countersAll": 10
+          }
+        },
+        {
+          "name": "Ambush",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage.",
+          "effect": {
+            "flipBonus": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-53",
+      "set": "sm3",
+      "name": "Dusknoir",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/53.webp",
+      "imgLarge": "img/cards/sm3/53_hires.webp",
+      "stage": 2,
+      "hp": 150,
+      "type": "Psychic",
+      "evolvesFrom": "Dusclops",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Mind Jack",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "This attack does 30 more damage for each of your opponent's Benched Pokémon.",
+          "effect": {
+            "plusOppBench": 30
+          }
+        }
+      ],
+      "power": {
+        "name": "Dark Invitation",
+        "text": "Once during your turn (before your attack), you may have your opponent reveal their hand. Put a Basic Pokémon you find there onto your opponent's Bench, and put 3 damage counters on that Pokémon.",
+        "kind": "darkInvitation",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm3-51",
+      "set": "sm3",
+      "name": "Duskull",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/51.webp",
+      "imgLarge": "img/cards/sm3/51_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dark Guidance",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Put a Basic Pokémon from your discard pile onto your Bench.",
+          "effect": {
+            "benchFromDiscard": 1
+          }
+        },
+        {
+          "name": "Spooky Shot",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm6-99",
+      "set": "sm6",
+      "name": "Furfrou",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/99.webp",
+      "imgLarge": "img/cards/sm6/99_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Return",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "You may draw cards until you have 5 cards in your hand.",
+          "effect": {
+            "drawToMay": 5
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm6-50",
+      "set": "sm6",
+      "name": "Inkay",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/50.webp",
+      "imgLarge": "img/cards/sm6/50_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hypnosis",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm6-76",
+      "set": "sm6",
+      "name": "Lycanroc",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/76.webp",
+      "imgLarge": "img/cards/sm6/76_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Fighting",
+      "evolvesFrom": "Rockruff",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Dangerous Rogue",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 20 more damage for each of your opponent's Benched Pokémon.",
+          "effect": {
+            "plusOppBench": 20
+          }
+        },
+        {
+          "name": "Accelerock",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm6-51",
+      "set": "sm6",
+      "name": "Malamar",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/51.webp",
+      "imgLarge": "img/cards/sm6/51_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": "Inkay",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psychic Sphere",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Psychic Recharge",
+        "text": "Once during your turn (before your attack), you may attach a Psychic Energy card from your discard pile to 1 of your Benched Pokémon.",
+        "kind": "psychicRecharge",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm6-75",
+      "set": "sm6",
+      "name": "Rockruff",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/75.webp",
+      "imgLarge": "img/cards/sm6/75_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm4-46",
+      "set": "sm4",
+      "name": "Salandit",
+      "kind": "pokemon",
+      "img": "img/cards/sm4/46.webp",
+      "imgLarge": "img/cards/sm4/46_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Singe",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Burned.",
+          "effect": {
+            "status": "burned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm4-47",
+      "set": "sm4",
+      "name": "Salazzle",
+      "kind": "pokemon",
+      "img": "img/cards/sm4/47.webp",
+      "imgLarge": "img/cards/sm4/47_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Salandit",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Nasty Plot",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchAny": 2
+          }
+        },
+        {
+          "name": "Severe Poison",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Poisoned. Put 4 damage counters instead of 1 on that Pokémon between turns.",
+          "effect": {
+            "severePoison": 4
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm3-69",
+      "set": "sm3",
+      "name": "Solrock",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/69.webp",
+      "imgLarge": "img/cards/sm3/69_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Solar Heat",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20+",
+          "text": "If there is any Stadium card in play, this attack does 20 more damage.",
+          "effect": {
+            "bonusIfStadium": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-120",
+      "set": "sm2",
+      "name": "Brooklet Hill",
+      "kind": "trainer",
+      "img": "img/cards/sm2/120.webp",
+      "imgLarge": "img/cards/sm2/120_hires.webp",
+      "text": "Once during each player's turn, that player may search their deck for a Basic Water Pokémon or Basic Fighting Pokémon and, put it onto their Bench, and shuffle their deck. This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "brookletHill"
+    },
+    {
+      "count": 1,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-122",
+      "set": "sm5",
+      "name": "Escape Board",
+      "kind": "trainer",
+      "img": "img/cards/sm5/122.webp",
+      "imgLarge": "img/cards/sm5/122_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. The Retreat Cost of the Pokémon this card is attached to is Colorless less, and it can retreat even if it's Asleep or Paralyzed. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "escapeBoard"
+    },
+    {
+      "count": 1,
+      "id": "sm3-114",
+      "set": "sm3",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/sm3/114.webp",
+      "imgLarge": "img/cards/sm3/114_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, that player doesn't switch Pokémon.) You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm2-125",
+      "set": "sm2",
+      "name": "Field Blower",
+      "kind": "trainer",
+      "img": "img/cards/sm2/125.webp",
+      "imgLarge": "img/cards/sm2/125_hires.webp",
+      "text": "Choose up to 2 in any combination of Pokémon Tool cards and Stadium cards in play (yours or your opponent's) and discard them. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "fieldBlower",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm6-109",
+      "set": "sm6",
+      "name": "Lady",
+      "kind": "trainer",
+      "img": "img/cards/sm6/109.webp",
+      "imgLarge": "img/cards/sm6/109_hires.webp",
+      "text": "Search your deck for up to 4 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lady",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-125",
+      "set": "sm5",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm5/125.webp",
+      "imgLarge": "img/cards/sm5/125_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm5-133",
+      "set": "sm5",
+      "name": "Pokémon Fan Club",
+      "kind": "trainer",
+      "img": "img/cards/sm5/133.webp",
+      "imgLarge": "img/cards/sm5/133_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "pokemonFanClub",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-132",
+      "set": "sm1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm1/132.webp",
+      "imgLarge": "img/cards/sm1/132_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm3-126",
+      "set": "sm3",
+      "name": "Weakness Policy",
+      "kind": "trainer",
+      "img": "img/cards/sm3/126.webp",
+      "imgLarge": "img/cards/sm3/126_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. The Pokémon this card is attached to has no Weakness. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "weaknessPolicy"
+    },
+    {
+      "count": 10,
+      "id": "sm2-169",
+      "set": "sm2",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sm2/169.webp",
+      "imgLarge": "img/cards/sm2/169_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 10,
+      "id": "sm1-162",
+      "set": "sm1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/162.webp",
+      "imgLarge": "img/cards/sm1/162_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "name": "Psych Out",
+  "group": "base2",
+  "types": [
+    "Water",
+    "Psychic"
+  ],
+  "featured": [
+    "base4-19",
+    "base4-63",
+    "base4-46"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "base4-65",
+      "set": "base4",
+      "name": "Abra",
+      "kind": "pokemon",
+      "img": "img/cards/base4/65.webp",
+      "imgLarge": "img/cards/base4/65_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-73",
+      "set": "base4",
+      "name": "Drowzee",
+      "kind": "pokemon",
+      "img": "img/cards/base4/73.webp",
+      "imgLarge": "img/cards/base4/73_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-77",
+      "set": "base4",
+      "name": "Jigglypuff",
+      "kind": "pokemon",
+      "img": "img/cards/base4/77.webp",
+      "imgLarge": "img/cards/base4/77_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Lullaby",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-45",
+      "set": "base4",
+      "name": "Jynx",
+      "kind": "pokemon",
+      "img": "img/cards/base4/45.webp",
+      "imgLarge": "img/cards/base4/45_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Meditate",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.",
+          "effect": {
+            "plusDefCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-46",
+      "set": "base4",
+      "name": "Kadabra",
+      "kind": "pokemon",
+      "img": "img/cards/base4/46.webp",
+      "imgLarge": "img/cards/base4/46_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": "Abra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Recover",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Kadabra in order to use this attack. Remove all damage counters from Kadabra.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "healAll": true
+          }
+        },
+        {
+          "name": "Super Psy",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-61",
+      "set": "base4",
+      "name": "Seel",
+      "kind": "pokemon",
+      "img": "img/cards/base4/61.webp",
+      "imgLarge": "img/cards/base4/61_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-93",
+      "set": "base4",
+      "name": "Squirtle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/93.webp",
+      "imgLarge": "img/cards/base4/93_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bubble",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Withdraw",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of opponent's attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-94",
+      "set": "base4",
+      "name": "Starmie",
+      "kind": "pokemon",
+      "img": "img/cards/base4/94.webp",
+      "imgLarge": "img/cards/base4/94_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Staryu",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Recover",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "",
+          "text": "Discard 1 Water Energy card attached to Starmie in order to use this attack. Remove all damage counters from Starmie.",
+          "effect": {
+            "discard": {
+              "type": "Water",
+              "n": 1
+            },
+            "healAll": true
+          }
+        },
+        {
+          "name": "Star Freeze",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-95",
+      "set": "base4",
+      "name": "Staryu",
+      "kind": "pokemon",
+      "img": "img/cards/base4/95.webp",
+      "imgLarge": "img/cards/base4/95_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-63",
+      "set": "base4",
+      "name": "Wartortle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/63.webp",
+      "imgLarge": "img/cards/base4/63_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": "Squirtle",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Withdraw",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Bite",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-19",
+      "set": "base4",
+      "name": "Wigglytuff",
+      "kind": "pokemon",
+      "img": "img/cards/base4/19.webp",
+      "imgLarge": "img/cards/base4/19_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": "Jigglypuff",
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Lullaby",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Do the Wave",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each of your Benched Pokémon.",
+          "effect": {
+            "plusOwnBench": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-101",
+      "set": "base4",
+      "name": "Computer Search",
+      "kind": "trainer",
+      "img": "img/cards/base4/101.webp",
+      "imgLarge": "img/cards/base4/101_hires.webp",
+      "text": "Discard 2 of the other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward.",
+      "trainer": "computerSearch"
+    },
+    {
+      "count": 2,
+      "id": "base4-109",
+      "set": "base4",
+      "name": "Defender",
+      "kind": "trainer",
+      "img": "img/cards/base4/109.webp",
+      "imgLarge": "img/cards/base4/109_hires.webp",
+      "text": "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
+      "trainer": "defender"
+    },
+    {
+      "count": 3,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base4-117",
+      "set": "base4",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/117.webp",
+      "imgLarge": "img/cards/base4/117_hires.webp",
+      "text": "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 2,
+      "id": "base4-123",
+      "set": "base4",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base4/123.webp",
+      "imgLarge": "img/cards/base4/123_hires.webp",
+      "text": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 13,
+      "id": "base4-129",
+      "set": "base4",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/129.webp",
+      "imgLarge": "img/cards/base4/129_hires.webp",
+      "energyType": "Psychic"
+    },
+    {
+      "count": 15,
+      "id": "base4-130",
+      "set": "base4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/130.webp",
+      "imgLarge": "img/cards/base4/130_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

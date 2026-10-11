@@ -1,0 +1,2352 @@
+{
+  "decks": [
+    "ash",
+    "brock",
+    "misty",
+    "brushfire",
+    "overgrowth",
+    "zap",
+    "blackout",
+    "water-blast",
+    "power-reserve",
+    "lockdown",
+    "bodyguard",
+    "grass-chopper",
+    "hot-water",
+    "lightning-bug",
+    "psych-out",
+    "thunderstorm",
+    "devastation",
+    "trouble",
+    "gym-brock",
+    "gym-misty",
+    "lt-surge",
+    "erika",
+    "sabrina",
+    "koga",
+    "blaine",
+    "giovanni"
+  ],
+  "groups": [
+    "trainer",
+    "theme",
+    "jungle",
+    "fossil",
+    "base2",
+    "rocket",
+    "gym1",
+    "gym2"
+  ],
+  "modern": [
+    {
+      "key": "c30-espeon",
+      "name": "Espeon ex",
+      "group": "celebration",
+      "types": [
+        "Fire",
+        "Psychic",
+        "Metal"
+      ],
+      "featured": [
+        {
+          "id": "me55-70",
+          "img": "img/cards/me55/70.webp"
+        },
+        {
+          "id": "me4-13",
+          "img": "img/cards/me4/13.webp"
+        },
+        {
+          "id": "me4-12",
+          "img": "img/cards/me4/12.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 16,
+        "trainer": 32,
+        "energy": 12
+      }
+    },
+    {
+      "key": "c30-umbreon",
+      "name": "Umbreon ex",
+      "group": "celebration",
+      "types": [
+        "Lightning",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "me55-92",
+          "img": "img/cards/me55/92.webp"
+        },
+        {
+          "id": "me55-60",
+          "img": "img/cards/me55/60.webp"
+        },
+        {
+          "id": "me55-100",
+          "img": "img/cards/me55/100.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 17,
+        "trainer": 30,
+        "energy": 13
+      }
+    },
+    {
+      "key": "me-gengar",
+      "name": "Mega Gengar ex",
+      "group": "mega",
+      "types": [
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "me2-56",
+          "img": "img/cards/me2/56.webp"
+        },
+        {
+          "id": "me2-68",
+          "img": "img/cards/me2/68.webp"
+        },
+        {
+          "id": "me2-55",
+          "img": "img/cards/me2/55.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 17,
+        "trainer": 30,
+        "energy": 13
+      }
+    },
+    {
+      "key": "me-diancie",
+      "name": "Mega Diancie ex",
+      "group": "mega",
+      "types": [
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "me2-41",
+          "img": "img/cards/me2/41.webp"
+        },
+        {
+          "id": "me1-63",
+          "img": "img/cards/me1/63.webp"
+        },
+        {
+          "id": "me2-44",
+          "img": "img/cards/me2/44.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 16,
+        "trainer": 30,
+        "energy": 14
+      }
+    },
+    {
+      "key": "mel-lucario",
+      "name": "Mega Lucario ex League",
+      "group": "mega",
+      "types": [
+        "Fighting",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "me1-77",
+          "img": "img/cards/me1/77.webp"
+        },
+        {
+          "id": "sv6-141",
+          "img": "img/cards/sv6/141.webp"
+        },
+        {
+          "id": "sv6pt5-38",
+          "img": "img/cards/sv6pt5/38.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 18,
+        "trainer": 30,
+        "energy": 12
+      }
+    },
+    {
+      "key": "mel-greninja",
+      "name": "Mega Greninja ex League",
+      "group": "mega",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "me4-22",
+          "img": "img/cards/me4/22.webp"
+        },
+        {
+          "id": "me3-21",
+          "img": "img/cards/me3/21.webp"
+        },
+        {
+          "id": "me3-62",
+          "img": "img/cards/me3/62.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 17,
+        "trainer": 33,
+        "energy": 10
+      }
+    },
+    {
+      "key": "sv-marnie",
+      "name": "Marnie",
+      "group": "svRival",
+      "types": [
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "sv10-136",
+          "img": "img/cards/sv10/136.webp"
+        },
+        {
+          "id": "sv10-133",
+          "img": "img/cards/sv10/133.webp"
+        },
+        {
+          "id": "sv10-131",
+          "img": "img/cards/sv10/131.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 18,
+        "trainer": 28,
+        "energy": 14
+      }
+    },
+    {
+      "key": "sv-steven",
+      "name": "Steven",
+      "group": "svRival",
+      "types": [
+        "Metal",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sv10-145",
+          "img": "img/cards/sv10/145.webp"
+        },
+        {
+          "id": "sv10-84",
+          "img": "img/cards/sv10/84.webp"
+        },
+        {
+          "id": "sv10-144",
+          "img": "img/cards/sv10/144.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 16,
+        "trainer": 29,
+        "energy": 15
+      }
+    },
+    {
+      "key": "svd-meowscarada",
+      "name": "Meowscarada ex",
+      "group": "svDeluxe",
+      "types": [
+        "Grass",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sv2-15",
+          "img": "img/cards/sv2/15.webp"
+        },
+        {
+          "id": "sv2-14",
+          "img": "img/cards/sv2/14.webp"
+        },
+        {
+          "id": "swsh7-16",
+          "img": "img/cards/swsh7/16.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 16,
+        "trainer": 31,
+        "energy": 13
+      }
+    },
+    {
+      "key": "svd-quaquaval",
+      "name": "Quaquaval ex",
+      "group": "svDeluxe",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "sv2-52",
+          "img": "img/cards/sv2/52.webp"
+        },
+        {
+          "id": "sv2-60",
+          "img": "img/cards/sv2/60.webp"
+        },
+        {
+          "id": "sv1-53",
+          "img": "img/cards/sv1/53.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 28,
+        "energy": 12
+      }
+    },
+    {
+      "key": "svd-ninetales",
+      "name": "Ninetales ex",
+      "group": "svDeluxe",
+      "types": [
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "sv3pt5-38",
+          "img": "img/cards/sv3pt5/38.webp"
+        },
+        {
+          "id": "swsh12-22",
+          "img": "img/cards/swsh12/22.webp"
+        },
+        {
+          "id": "sv2-28",
+          "img": "img/cards/sv2/28.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 16,
+        "trainer": 31,
+        "energy": 13
+      }
+    },
+    {
+      "key": "svd-zapdos",
+      "name": "Zapdos ex",
+      "group": "svDeluxe",
+      "types": [
+        "Lightning",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "sv1-81",
+          "img": "img/cards/sv1/81.webp"
+        },
+        {
+          "id": "sv3pt5-145",
+          "img": "img/cards/sv3pt5/145.webp"
+        },
+        {
+          "id": "sv1-76",
+          "img": "img/cards/sv1/76.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 15,
+        "trainer": 32,
+        "energy": 13
+      }
+    },
+    {
+      "key": "svd-koraidon",
+      "name": "Koraidon ex",
+      "group": "svDeluxe",
+      "types": [
+        "Fighting",
+        "Dragon"
+      ],
+      "featured": [
+        {
+          "id": "sv5-120",
+          "img": "img/cards/sv5/120.webp"
+        },
+        {
+          "id": "sv4-108",
+          "img": "img/cards/sv4/108.webp"
+        },
+        {
+          "id": "sv5-96",
+          "img": "img/cards/sv5/96.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 14,
+        "trainer": 32,
+        "energy": 14
+      }
+    },
+    {
+      "key": "svd-miraidon",
+      "name": "Miraidon ex",
+      "group": "svDeluxe",
+      "types": [
+        "Dragon",
+        "Lightning",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sv4-89",
+          "img": "img/cards/sv4/89.webp"
+        },
+        {
+          "id": "sv5-122",
+          "img": "img/cards/sv5/122.webp"
+        },
+        {
+          "id": "sv5-61",
+          "img": "img/cards/sv5/61.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 14,
+        "trainer": 32,
+        "energy": 14
+      }
+    },
+    {
+      "key": "sv-ampharos",
+      "name": "Ampharos ex",
+      "group": "svBattle",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "svp-16",
+          "img": "img/cards/svp/16.webp"
+        },
+        {
+          "id": "sv1-150",
+          "img": "img/cards/sv1/150.webp"
+        },
+        {
+          "id": "sv1-79",
+          "img": "img/cards/sv1/79.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-lucario",
+      "name": "Lucario ex",
+      "group": "svBattle",
+      "types": [
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "svp-17",
+          "img": "img/cards/svp/17.webp"
+        },
+        {
+          "id": "sv1-109",
+          "img": "img/cards/sv1/109.webp"
+        },
+        {
+          "id": "sv1-157",
+          "img": "img/cards/sv1/157.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-chien-pao",
+      "name": "Chien-Pao ex",
+      "group": "svBattle",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "svp-30",
+          "img": "img/cards/svp/30.webp"
+        },
+        {
+          "id": "sv2-60",
+          "img": "img/cards/sv2/60.webp"
+        },
+        {
+          "id": "sv2-45",
+          "img": "img/cards/sv2/45.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-tinkaton",
+      "name": "Tinkaton ex",
+      "group": "svBattle",
+      "types": [
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "svp-31",
+          "img": "img/cards/svp/31.webp"
+        },
+        {
+          "id": "sv1-90",
+          "img": "img/cards/sv1/90.webp"
+        },
+        {
+          "id": "sv1-103",
+          "img": "img/cards/sv1/103.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-greninja",
+      "name": "Greninja ex",
+      "group": "svBattle",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "svp-54",
+          "img": "img/cards/svp/54.webp"
+        },
+        {
+          "id": "sv1-54",
+          "img": "img/cards/sv1/54.webp"
+        },
+        {
+          "id": "sv1-53",
+          "img": "img/cards/sv1/53.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-kangaskhan",
+      "name": "Kangaskhan ex",
+      "group": "svBattle",
+      "types": [
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "svp-55",
+          "img": "img/cards/svp/55.webp"
+        },
+        {
+          "id": "sv1-23",
+          "img": "img/cards/sv1/23.webp"
+        },
+        {
+          "id": "sv1-4",
+          "img": "img/cards/sv1/4.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-houndoom",
+      "name": "Houndoom ex",
+      "group": "svBattle",
+      "types": [
+        "Darkness",
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "svp-103",
+          "img": "img/cards/svp/103.webp"
+        },
+        {
+          "id": "sv3-133",
+          "img": "img/cards/sv3/133.webp"
+        },
+        {
+          "id": "sv4-122",
+          "img": "img/cards/sv4/122.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 22,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-melmetal",
+      "name": "Melmetal ex",
+      "group": "svBattle",
+      "types": [
+        "Metal"
+      ],
+      "featured": [
+        {
+          "id": "svp-104",
+          "img": "img/cards/svp/104.webp"
+        },
+        {
+          "id": "sv3-145",
+          "img": "img/cards/sv3/145.webp"
+        },
+        {
+          "id": "sv1-142",
+          "img": "img/cards/sv1/142.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 19,
+        "trainer": 22,
+        "energy": 19
+      }
+    },
+    {
+      "key": "svl-miraidon",
+      "name": "Miraidon ex League",
+      "group": "svLeague",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "swsh12-58",
+          "img": "img/cards/swsh12/58.webp"
+        },
+        {
+          "id": "sv1-81",
+          "img": "img/cards/sv1/81.webp"
+        },
+        {
+          "id": "swsh12-57",
+          "img": "img/cards/swsh12/57.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 14,
+        "trainer": 31,
+        "energy": 15
+      }
+    },
+    {
+      "key": "svl-gardevoir",
+      "name": "Gardevoir ex League",
+      "group": "svLeague",
+      "types": [
+        "Psychic",
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "sv1-86",
+          "img": "img/cards/sv1/86.webp"
+        },
+        {
+          "id": "sv3pt5-151",
+          "img": "img/cards/sv3pt5/151.webp"
+        },
+        {
+          "id": "swsh9-40",
+          "img": "img/cards/swsh9/40.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 18,
+        "trainer": 29,
+        "energy": 13
+      }
+    },
+    {
+      "key": "svl-charizard",
+      "name": "Charizard ex League",
+      "group": "svLeague",
+      "types": [
+        "Fire",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "sv3-125",
+          "img": "img/cards/sv3/125.webp"
+        },
+        {
+          "id": "sv3-164",
+          "img": "img/cards/sv3/164.webp"
+        },
+        {
+          "id": "sv4pt5-8",
+          "img": "img/cards/sv4pt5/8.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 30,
+        "energy": 10
+      }
+    },
+    {
+      "key": "svl-dragapult",
+      "name": "Dragapult ex League",
+      "group": "svLeague",
+      "types": [
+        "Dragon",
+        "Psychic",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "sv6-130",
+          "img": "img/cards/sv6/130.webp"
+        },
+        {
+          "id": "sv6pt5-38",
+          "img": "img/cards/sv6pt5/38.webp"
+        },
+        {
+          "id": "sv4-72",
+          "img": "img/cards/sv4/72.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 29,
+        "energy": 10
+      }
+    },
+    {
+      "key": "svl-mewtwo",
+      "name": "Team Rocket's Mewtwo ex League",
+      "group": "svLeague",
+      "types": [
+        "Darkness",
+        "Grass",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sv10-122",
+          "img": "img/cards/sv10/122.webp"
+        },
+        {
+          "id": "sv10-81",
+          "img": "img/cards/sv10/81.webp"
+        },
+        {
+          "id": "sv10-20",
+          "img": "img/cards/sv10/20.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 17,
+        "trainer": 31,
+        "energy": 12
+      }
+    },
+    {
+      "key": "sv-victini",
+      "name": "Victini ex",
+      "group": "svBattle",
+      "types": [
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "svp-142",
+          "img": "img/cards/svp/142.webp"
+        },
+        {
+          "id": "sv1-38",
+          "img": "img/cards/sv1/38.webp"
+        },
+        {
+          "id": "sv4pt5-10",
+          "img": "img/cards/sv4pt5/10.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 22,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-miraidon",
+      "name": "Miraidon ex",
+      "group": "svBattle",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "svp-143",
+          "img": "img/cards/svp/143.webp"
+        },
+        {
+          "id": "sv1-79",
+          "img": "img/cards/sv1/79.webp"
+        },
+        {
+          "id": "sv4pt5-19",
+          "img": "img/cards/sv4pt5/19.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 22,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-tapu-koko",
+      "name": "Tapu Koko ex",
+      "group": "svBattle",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "sv4-68",
+          "img": "img/cards/sv4/68.webp"
+        },
+        {
+          "id": "sv3-69",
+          "img": "img/cards/sv3/69.webp"
+        },
+        {
+          "id": "sv6-74",
+          "img": "img/cards/sv6/74.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "sv-iron-leaves",
+      "name": "Iron Leaves ex",
+      "group": "svBattle",
+      "types": [
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "sv5-25",
+          "img": "img/cards/sv5/25.webp"
+        },
+        {
+          "id": "sv3pt5-45",
+          "img": "img/cards/sv3pt5/45.webp"
+        },
+        {
+          "id": "sv6-2",
+          "img": "img/cards/sv6/2.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-rillaboom",
+      "name": "Rillaboom",
+      "group": "swshTheme",
+      "types": [
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "swsh1-15",
+          "img": "img/cards/swsh1/15.webp"
+        },
+        {
+          "id": "swsh1-13",
+          "img": "img/cards/swsh1/13.webp"
+        },
+        {
+          "id": "swsh1-6",
+          "img": "img/cards/swsh1/6.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-cinderace",
+      "name": "Cinderace",
+      "group": "swshTheme",
+      "types": [
+        "Fire",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "swsh1-36",
+          "img": "img/cards/swsh1/36.webp"
+        },
+        {
+          "id": "swsh1-154",
+          "img": "img/cards/swsh1/154.webp"
+        },
+        {
+          "id": "swsh1-23",
+          "img": "img/cards/swsh1/23.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-inteleon",
+      "name": "Inteleon",
+      "group": "swshTheme",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "swsh1-59",
+          "img": "img/cards/swsh1/59.webp"
+        },
+        {
+          "id": "swsh1-61",
+          "img": "img/cards/swsh1/61.webp"
+        },
+        {
+          "id": "swsh1-44",
+          "img": "img/cards/swsh1/44.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-zacian",
+      "name": "Zacian",
+      "group": "swshTheme",
+      "types": [
+        "Metal",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "swsh2-139",
+          "img": "img/cards/swsh2/139.webp"
+        },
+        {
+          "id": "swsh2-145",
+          "img": "img/cards/swsh2/145.webp"
+        },
+        {
+          "id": "swsh2-131",
+          "img": "img/cards/swsh2/131.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-zamazenta",
+      "name": "Zamazenta",
+      "group": "swshTheme",
+      "types": [
+        "Metal"
+      ],
+      "featured": [
+        {
+          "id": "swsh2-140",
+          "img": "img/cards/swsh2/140.webp"
+        },
+        {
+          "id": "swsh1-135",
+          "img": "img/cards/swsh1/135.webp"
+        },
+        {
+          "id": "swsh1-131",
+          "img": "img/cards/swsh1/131.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-darmanitan",
+      "name": "Galarian Darmanitan",
+      "group": "swshTheme",
+      "types": [
+        "Water",
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "swsh3-44",
+          "img": "img/cards/swsh3/44.webp"
+        },
+        {
+          "id": "swsh3-49",
+          "img": "img/cards/swsh3/49.webp"
+        },
+        {
+          "id": "swsh2-42",
+          "img": "img/cards/swsh2/42.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-sirfetchd",
+      "name": "Galarian Sirfetch'd",
+      "group": "swshTheme",
+      "types": [
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "swsh3-98",
+          "img": "img/cards/swsh3/98.webp"
+        },
+        {
+          "id": "swsh3-94",
+          "img": "img/cards/swsh3/94.webp"
+        },
+        {
+          "id": "swsh3-85",
+          "img": "img/cards/swsh3/85.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-charizard",
+      "name": "Charizard",
+      "group": "swshTheme",
+      "types": [
+        "Fire",
+        "Grass",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "swsh4-25",
+          "img": "img/cards/swsh4/25.webp"
+        },
+        {
+          "id": "swsh4-28",
+          "img": "img/cards/swsh4/28.webp"
+        },
+        {
+          "id": "swsh4-7",
+          "img": "img/cards/swsh4/7.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swsh-drednaw",
+      "name": "Drednaw",
+      "group": "swshTheme",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "swsh4-39",
+          "img": "img/cards/swsh4/39.webp"
+        },
+        {
+          "id": "swsh4-35",
+          "img": "img/cards/swsh4/35.webp"
+        },
+        {
+          "id": "swsh4-42",
+          "img": "img/cards/swsh4/42.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 20,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-venusaur",
+      "name": "Venusaur V",
+      "group": "swshV",
+      "types": [
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH100",
+          "img": "img/cards/swshp/SWSH100.webp"
+        },
+        {
+          "id": "swsh4-18",
+          "img": "img/cards/swsh4/18.webp"
+        },
+        {
+          "id": "swsh45-2",
+          "img": "img/cards/swsh45/2.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-blastoise",
+      "name": "Blastoise V",
+      "group": "swshV",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH101",
+          "img": "img/cards/swshp/SWSH101.webp"
+        },
+        {
+          "id": "swsh1-61",
+          "img": "img/cards/swsh1/61.webp"
+        },
+        {
+          "id": "swsh2-53",
+          "img": "img/cards/swsh2/53.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-victini",
+      "name": "Victini V",
+      "group": "swshV",
+      "types": [
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH104",
+          "img": "img/cards/swshp/SWSH104.webp"
+        },
+        {
+          "id": "swsh1-34",
+          "img": "img/cards/swsh1/34.webp"
+        },
+        {
+          "id": "swsh1-23",
+          "img": "img/cards/swsh1/23.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 22,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-gardevoir",
+      "name": "Gardevoir V",
+      "group": "swshV",
+      "types": [
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH105",
+          "img": "img/cards/swshp/SWSH105.webp"
+        },
+        {
+          "id": "swsh2-91",
+          "img": "img/cards/swsh2/91.webp"
+        },
+        {
+          "id": "swsh3-71",
+          "img": "img/cards/swsh3/71.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 22,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-rayquaza",
+      "name": "Rayquaza V",
+      "group": "swshV",
+      "types": [
+        "Lightning",
+        "Fire",
+        "Dragon"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH147",
+          "img": "img/cards/swshp/SWSH147.webp"
+        },
+        {
+          "id": "swsh6-24",
+          "img": "img/cards/swsh6/24.webp"
+        },
+        {
+          "id": "swsh7-53",
+          "img": "img/cards/swsh7/53.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 23,
+        "energy": 16
+      }
+    },
+    {
+      "key": "swv-noivern",
+      "name": "Noivern V",
+      "group": "swshV",
+      "types": [
+        "Psychic",
+        "Darkness",
+        "Dragon"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH148",
+          "img": "img/cards/swshp/SWSH148.webp"
+        },
+        {
+          "id": "swsh5-91",
+          "img": "img/cards/swsh5/91.webp"
+        },
+        {
+          "id": "swsh2-77",
+          "img": "img/cards/swsh2/77.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 23,
+        "energy": 16
+      }
+    },
+    {
+      "key": "swv-lycanroc",
+      "name": "Lycanroc V",
+      "group": "swshV",
+      "types": [
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH199",
+          "img": "img/cards/swshp/SWSH199.webp"
+        },
+        {
+          "id": "swsh8-139",
+          "img": "img/cards/swsh8/139.webp"
+        },
+        {
+          "id": "swsh2-95",
+          "img": "img/cards/swsh2/95.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-corviknight",
+      "name": "Corviknight V",
+      "group": "swshV",
+      "types": [
+        "Metal"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH200",
+          "img": "img/cards/swshp/SWSH200.webp"
+        },
+        {
+          "id": "swsh1-131",
+          "img": "img/cards/swsh1/131.webp"
+        },
+        {
+          "id": "swsh2-127",
+          "img": "img/cards/swsh2/127.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-mewtwo",
+      "name": "Mewtwo V",
+      "group": "swshV",
+      "types": [
+        "Psychic",
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH223",
+          "img": "img/cards/swshp/SWSH223.webp"
+        },
+        {
+          "id": "swsh6-73",
+          "img": "img/cards/swsh6/73.webp"
+        },
+        {
+          "id": "swsh9-125",
+          "img": "img/cards/swsh9/125.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-melmetal",
+      "name": "Melmetal V",
+      "group": "swshV",
+      "types": [
+        "Metal"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH224",
+          "img": "img/cards/swshp/SWSH224.webp"
+        },
+        {
+          "id": "pgo-63",
+          "img": "img/cards/pgo/63.webp"
+        },
+        {
+          "id": "swsh8-181",
+          "img": "img/cards/swsh8/181.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-zeraora",
+      "name": "Zeraora V",
+      "group": "swshV",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH263",
+          "img": "img/cards/swshp/SWSH263.webp"
+        },
+        {
+          "id": "swsh2-62",
+          "img": "img/cards/swsh2/62.webp"
+        },
+        {
+          "id": "swsh1-76",
+          "img": "img/cards/swsh1/76.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swv-deoxys",
+      "name": "Deoxys V",
+      "group": "swshV",
+      "types": [
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "swshp-SWSH266",
+          "img": "img/cards/swshp/SWSH266.webp"
+        },
+        {
+          "id": "swsh6-61",
+          "img": "img/cards/swsh6/61.webp"
+        },
+        {
+          "id": "swsh9-59",
+          "img": "img/cards/swsh9/59.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 21,
+        "energy": 18
+      }
+    },
+    {
+      "key": "swl-zacian",
+      "name": "Zacian V League",
+      "group": "swshLeague",
+      "types": [
+        "Metal",
+        "Dragon",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "swsh1-138",
+          "img": "img/cards/swsh1/138.webp"
+        },
+        {
+          "id": "sm12-156",
+          "img": "img/cards/sm12/156.webp"
+        },
+        {
+          "id": "swsh1-128",
+          "img": "img/cards/swsh1/128.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 13,
+        "trainer": 36,
+        "energy": 11
+      }
+    },
+    {
+      "key": "swl-inteleon",
+      "name": "Inteleon VMAX",
+      "group": "swshLeague",
+      "types": [
+        "Water",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "swsh2-50",
+          "img": "img/cards/swsh2/50.webp"
+        },
+        {
+          "id": "swsh2-49",
+          "img": "img/cards/swsh2/49.webp"
+        },
+        {
+          "id": "swsh1-58",
+          "img": "img/cards/swsh1/58.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 19,
+        "trainer": 31,
+        "energy": 10
+      }
+    },
+    {
+      "key": "swl-urshifu-rapid",
+      "name": "Rapid Strike Urshifu VMAX",
+      "group": "swshLeague",
+      "types": [
+        "Fighting",
+        "Water",
+        "Darkness"
+      ],
+      "featured": [
+        {
+          "id": "swsh5-88",
+          "img": "img/cards/swsh5/88.webp"
+        },
+        {
+          "id": "swsh5-87",
+          "img": "img/cards/swsh5/87.webp"
+        },
+        {
+          "id": "swsh5-37",
+          "img": "img/cards/swsh5/37.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 17,
+        "trainer": 31,
+        "energy": 12
+      }
+    },
+    {
+      "key": "swl-urshifu-single",
+      "name": "Single Strike Urshifu VMAX",
+      "group": "swshLeague",
+      "types": [
+        "Darkness",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "swsh5-86",
+          "img": "img/cards/swsh5/86.webp"
+        },
+        {
+          "id": "swsh5-85",
+          "img": "img/cards/swsh5/85.webp"
+        },
+        {
+          "id": "swsh5-96",
+          "img": "img/cards/swsh5/96.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 15,
+        "trainer": 33,
+        "energy": 12
+      }
+    },
+    {
+      "key": "swl-calyrex-ice",
+      "name": "Ice Rider Calyrex VMAX",
+      "group": "swshLeague",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "swsh6-46",
+          "img": "img/cards/swsh6/46.webp"
+        },
+        {
+          "id": "swsh6-45",
+          "img": "img/cards/swsh6/45.webp"
+        },
+        {
+          "id": "swsh1-58",
+          "img": "img/cards/swsh1/58.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 18,
+        "trainer": 33,
+        "energy": 9
+      }
+    },
+    {
+      "key": "swl-calyrex-shadow",
+      "name": "Shadow Rider Calyrex VMAX",
+      "group": "swshLeague",
+      "types": [
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "swsh6-75",
+          "img": "img/cards/swsh6/75.webp"
+        },
+        {
+          "id": "swsh6-74",
+          "img": "img/cards/swsh6/74.webp"
+        },
+        {
+          "id": "swsh6-64",
+          "img": "img/cards/swsh6/64.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 12,
+        "trainer": 33,
+        "energy": 15
+      }
+    },
+    {
+      "key": "swl-mew",
+      "name": "Mew VMAX",
+      "group": "swshLeague",
+      "types": [
+        "Psychic",
+        "Metal",
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "swsh8-114",
+          "img": "img/cards/swsh8/114.webp"
+        },
+        {
+          "id": "swsh8-185",
+          "img": "img/cards/swsh8/185.webp"
+        },
+        {
+          "id": "swsh8-113",
+          "img": "img/cards/swsh8/113.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 12,
+        "trainer": 37,
+        "energy": 11
+      }
+    },
+    {
+      "key": "swl-palkia",
+      "name": "Origin Forme Palkia VSTAR",
+      "group": "swshLeague",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "swsh10-40",
+          "img": "img/cards/swsh10/40.webp"
+        },
+        {
+          "id": "swsh10-39",
+          "img": "img/cards/swsh10/39.webp"
+        },
+        {
+          "id": "swsh9-121",
+          "img": "img/cards/swsh9/121.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 15,
+        "trainer": 36,
+        "energy": 9
+      }
+    },
+    {
+      "key": "sm-forest-shadow",
+      "name": "Forest Shadow",
+      "group": "smTheme",
+      "types": [
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "sm1-11",
+          "img": "img/cards/sm1/11.webp"
+        },
+        {
+          "id": "sm1-5",
+          "img": "img/cards/sm1/5.webp"
+        },
+        {
+          "id": "sm1-17",
+          "img": "img/cards/sm1/17.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 28,
+        "trainer": 12,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-roaring-heat",
+      "name": "Roaring Heat",
+      "group": "smTheme",
+      "types": [
+        "Fighting",
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "sm1-26",
+          "img": "img/cards/sm1/26.webp"
+        },
+        {
+          "id": "sm1-112",
+          "img": "img/cards/sm1/112.webp"
+        },
+        {
+          "id": "sm1-75",
+          "img": "img/cards/sm1/75.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 28,
+        "trainer": 12,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-bright-tide",
+      "name": "Bright Tide",
+      "group": "smTheme",
+      "types": [
+        "Water",
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "sm1-41",
+          "img": "img/cards/sm1/41.webp"
+        },
+        {
+          "id": "sm1-34",
+          "img": "img/cards/sm1/34.webp"
+        },
+        {
+          "id": "sm1-50",
+          "img": "img/cards/sm1/50.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 28,
+        "trainer": 12,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-steel-sun",
+      "name": "Steel Sun",
+      "group": "smTheme",
+      "types": [
+        "Psychic",
+        "Metal"
+      ],
+      "featured": [
+        {
+          "id": "sm2-87",
+          "img": "img/cards/sm2/87.webp"
+        },
+        {
+          "id": "sm2-113",
+          "img": "img/cards/sm2/113.webp"
+        },
+        {
+          "id": "sm2-49",
+          "img": "img/cards/sm2/49.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-hidden-moon",
+      "name": "Hidden Moon",
+      "group": "smTheme",
+      "types": [
+        "Psychic",
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "sm2-61",
+          "img": "img/cards/sm2/61.webp"
+        },
+        {
+          "id": "sm2-113",
+          "img": "img/cards/sm2/113.webp"
+        },
+        {
+          "id": "sm2-16",
+          "img": "img/cards/sm2/16.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-rock-steady",
+      "name": "Rock Steady",
+      "group": "smTheme",
+      "types": [
+        "Fighting",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sm3-67",
+          "img": "img/cards/sm3/67.webp"
+        },
+        {
+          "id": "sm3-71",
+          "img": "img/cards/sm3/71.webp"
+        },
+        {
+          "id": "sm3-76",
+          "img": "img/cards/sm3/76.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-luminous-frost",
+      "name": "Luminous Frost",
+      "group": "smTheme",
+      "types": [
+        "Water",
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "sm3-31",
+          "img": "img/cards/sm3/31.webp"
+        },
+        {
+          "id": "sm3-28",
+          "img": "img/cards/sm3/28.webp"
+        },
+        {
+          "id": "sm2-20",
+          "img": "img/cards/sm2/20.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 25,
+        "trainer": 15,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-destruction-fang",
+      "name": "Destruction Fang",
+      "group": "smTheme",
+      "types": [
+        "Darkness",
+        "Psychic",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "sm4-62",
+          "img": "img/cards/sm4/62.webp"
+        },
+        {
+          "id": "sm2-113",
+          "img": "img/cards/sm2/113.webp"
+        },
+        {
+          "id": "sm4-59",
+          "img": "img/cards/sm4/59.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 23,
+        "trainer": 17,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-clanging-thunder",
+      "name": "Clanging Thunder",
+      "group": "smTheme",
+      "types": [
+        "Lightning",
+        "Dragon",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "sm4-77",
+          "img": "img/cards/sm4/77.webp"
+        },
+        {
+          "id": "sm4-54",
+          "img": "img/cards/sm4/54.webp"
+        },
+        {
+          "id": "sm4-31",
+          "img": "img/cards/sm4/31.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 18,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-mach-strike",
+      "name": "Mach Strike",
+      "group": "smTheme",
+      "types": [
+        "Fighting",
+        "Dragon",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sm5-99",
+          "img": "img/cards/sm5/99.webp"
+        },
+        {
+          "id": "sm5-69",
+          "img": "img/cards/sm5/69.webp"
+        },
+        {
+          "id": "sm5-113",
+          "img": "img/cards/sm5/113.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-imperial-command",
+      "name": "Imperial Command",
+      "group": "smTheme",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "sm5-34",
+          "img": "img/cards/sm5/34.webp"
+        },
+        {
+          "id": "sm5-38",
+          "img": "img/cards/sm5/38.webp"
+        },
+        {
+          "id": "sm2-20",
+          "img": "img/cards/sm2/20.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-tropical-takedown",
+      "name": "Tropical Takedown",
+      "group": "smTheme",
+      "types": [
+        "Grass",
+        "Darkness",
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "sm6-2",
+          "img": "img/cards/sm6/2.webp"
+        },
+        {
+          "id": "sm6-12",
+          "img": "img/cards/sm6/12.webp"
+        },
+        {
+          "id": "sm3-82",
+          "img": "img/cards/sm3/82.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 20,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-twilight-rogue",
+      "name": "Twilight Rogue",
+      "group": "smTheme",
+      "types": [
+        "Psychic",
+        "Fighting"
+      ],
+      "featured": [
+        {
+          "id": "sm3-53",
+          "img": "img/cards/sm3/53.webp"
+        },
+        {
+          "id": "sm6-76",
+          "img": "img/cards/sm6/76.webp"
+        },
+        {
+          "id": "sm4-47",
+          "img": "img/cards/sm4/47.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 21,
+        "trainer": 19,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-leaf-charge",
+      "name": "Leaf Charge",
+      "group": "smTheme",
+      "types": [
+        "Grass",
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "sm7-10",
+          "img": "img/cards/sm7/10.webp"
+        },
+        {
+          "id": "sm6-4",
+          "img": "img/cards/sm6/4.webp"
+        },
+        {
+          "id": "sm7-50",
+          "img": "img/cards/sm7/50.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 23,
+        "trainer": 17,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-hydro-fury",
+      "name": "Hydro Fury",
+      "group": "smTheme",
+      "types": [
+        "Water",
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "sm7-35",
+          "img": "img/cards/sm7/35.webp"
+        },
+        {
+          "id": "sm5-38",
+          "img": "img/cards/sm5/38.webp"
+        },
+        {
+          "id": "sm7-121",
+          "img": "img/cards/sm7/121.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 18,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-storm-caller",
+      "name": "Storm Caller",
+      "group": "smTheme",
+      "types": [
+        "Lightning",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sm8-78",
+          "img": "img/cards/sm8/78.webp"
+        },
+        {
+          "id": "sm8-108",
+          "img": "img/cards/sm8/108.webp"
+        },
+        {
+          "id": "sm8-82",
+          "img": "img/cards/sm8/82.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 20,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-blazing-volcano",
+      "name": "Blazing Volcano",
+      "group": "smTheme",
+      "types": [
+        "Fire",
+        "Grass"
+      ],
+      "featured": [
+        {
+          "id": "sm75-6",
+          "img": "img/cards/sm75/6.webp"
+        },
+        {
+          "id": "sm8-46",
+          "img": "img/cards/sm8/46.webp"
+        },
+        {
+          "id": "sm7-24",
+          "img": "img/cards/sm7/24.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 20,
+        "trainer": 21,
+        "energy": 19
+      }
+    },
+    {
+      "key": "sm-relentless-flame",
+      "name": "Relentless Flame",
+      "group": "smTheme",
+      "types": [
+        "Fire",
+        "Psychic"
+      ],
+      "featured": [
+        {
+          "id": "sm9-56",
+          "img": "img/cards/sm9/56.webp"
+        },
+        {
+          "id": "sm9-14",
+          "img": "img/cards/sm9/14.webp"
+        },
+        {
+          "id": "sm9-18",
+          "img": "img/cards/sm9/18.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 18,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-torrential-cannon",
+      "name": "Torrential Cannon",
+      "group": "smTheme",
+      "types": [
+        "Water"
+      ],
+      "featured": [
+        {
+          "id": "sm9-25",
+          "img": "img/cards/sm9/25.webp"
+        },
+        {
+          "id": "sm9-124",
+          "img": "img/cards/sm9/124.webp"
+        },
+        {
+          "id": "sm9-27",
+          "img": "img/cards/sm9/27.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 22,
+        "trainer": 18,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-let-s-play-pikachu",
+      "name": "Let's Play, Pikachu!",
+      "group": "smTheme",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "sm3-43",
+          "img": "img/cards/sm3/43.webp"
+        },
+        {
+          "id": "sm4-31",
+          "img": "img/cards/sm4/31.webp"
+        },
+        {
+          "id": "sm8-82",
+          "img": "img/cards/sm8/82.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 14,
+        "energy": 22
+      }
+    },
+    {
+      "key": "sm-let-s-play-eevee",
+      "name": "Let's Play, Eevee!",
+      "group": "smTheme",
+      "types": [
+        "Fire"
+      ],
+      "featured": [
+        {
+          "id": "sm75-3",
+          "img": "img/cards/sm75/3.webp"
+        },
+        {
+          "id": "smp-SM186",
+          "img": "img/cards/smp/SM186.webp"
+        },
+        {
+          "id": "sm3-19",
+          "img": "img/cards/sm3/19.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 14,
+        "energy": 22
+      }
+    },
+    {
+      "key": "sm-lightning-loop",
+      "name": "Lightning Loop",
+      "group": "smTheme",
+      "types": [
+        "Lightning"
+      ],
+      "featured": [
+        {
+          "id": "sm6-36",
+          "img": "img/cards/sm6/36.webp"
+        },
+        {
+          "id": "sm10-151",
+          "img": "img/cards/sm10/151.webp"
+        },
+        {
+          "id": "sm6-35",
+          "img": "img/cards/sm6/35.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    },
+    {
+      "key": "sm-battle-mind",
+      "name": "Battle Mind",
+      "group": "smTheme",
+      "types": [
+        "Fire",
+        "Psychic",
+        "Dragon"
+      ],
+      "featured": [
+        {
+          "id": "sm10-29",
+          "img": "img/cards/sm10/29.webp"
+        },
+        {
+          "id": "sm10-24",
+          "img": "img/cards/sm10/24.webp"
+        },
+        {
+          "id": "sm10-31",
+          "img": "img/cards/sm10/31.webp"
+        }
+      ],
+      "counts": {
+        "pokemon": 24,
+        "trainer": 16,
+        "energy": 20
+      }
+    }
+  ],
+  "modernGroups": [
+    "celebration",
+    "mega",
+    "svRival",
+    "svLeague",
+    "svDeluxe",
+    "svBattle",
+    "swshLeague",
+    "swshV",
+    "swshTheme",
+    "smTheme"
+  ]
+}

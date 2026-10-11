@@ -1,0 +1,480 @@
+{
+  "name": "Zamazenta",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Metal"
+  ],
+  "featured": [
+    "swsh2-140",
+    "swsh1-135",
+    "swsh1-131"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh1-134",
+      "set": "swsh1",
+      "name": "Bisharp",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/134.webp",
+      "imgLarge": "img/cards/swsh1/134_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": "Pawniard",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Charge Order",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "This attack does 30 more damage for each of your Benched Pawniard.",
+          "effect": {
+            "plusBenchNamed": {
+              "name": "Pawniard",
+              "n": 30
+            }
+          }
+        },
+        {
+          "name": "Slicing Blade",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-135",
+      "set": "swsh1",
+      "name": "Corviknight",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/135.webp",
+      "imgLarge": "img/cards/swsh1/135_hires.webp",
+      "stage": 2,
+      "hp": 170,
+      "type": "Metal",
+      "evolvesFrom": "Corvisquire",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Iron Wings",
+          "cost": [
+            "Metal",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "You may discard 2 Energy from this Pokémon. If you do, during your opponent's next turn, this Pokémon takes 100 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "optionalDiscardReduce": {
+              "n": 2,
+              "reduce": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-151",
+      "set": "swsh1",
+      "name": "Corvisquire",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/151.webp",
+      "imgLarge": "img/cards/swsh1/151_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": "Rookidee",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pluck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon.",
+          "effect": {
+            "discardDefTools": true
+          }
+        },
+        {
+          "name": "Drill Peck",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-138",
+      "set": "swsh2",
+      "name": "Duraludon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/138.webp",
+      "imgLarge": "img/cards/swsh2/138_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Metal Sharpener",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Attach a Metal Energy card from your discard pile to 1 of your Pokémon.",
+          "effect": {
+            "attachDiscardAny": {
+              "n": 1,
+              "type": "Metal"
+            }
+          }
+        },
+        {
+          "name": "Power Beam",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "110",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-130",
+      "set": "swsh1",
+      "name": "Ferroseed",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/130.webp",
+      "imgLarge": "img/cards/swsh1/130_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rollout",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-131",
+      "set": "swsh1",
+      "name": "Ferrothorn",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/131.webp",
+      "imgLarge": "img/cards/swsh1/131_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Metal",
+      "evolvesFrom": "Ferroseed",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Triple Smash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 3 coins. This attack does 30 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        },
+        {
+          "name": "Energy Slap",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": "You may move all Energy from this Pokémon to 1 of your Benched Pokémon.",
+          "effect": {
+            "moveEnergyToBench": {
+              "all": true,
+              "may": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-133",
+      "set": "swsh1",
+      "name": "Pawniard",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/133.webp",
+      "imgLarge": "img/cards/swsh1/133_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cut Up",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Metal Claw",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-150",
+      "set": "swsh1",
+      "name": "Rookidee",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/150.webp",
+      "imgLarge": "img/cards/swsh1/150_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Glide",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-140",
+      "set": "swsh2",
+      "name": "Zamazenta",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/140.webp",
+      "imgLarge": "img/cards/swsh2/140_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Guard Press",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "During your opponent's next turn, this Pokémon takes 20 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 20
+          }
+        },
+        {
+          "name": "Power Rush",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Flip a coin. If tails, this Pokémon can't attack during your next turn.",
+          "effect": {
+            "tailsCooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-170",
+      "set": "swsh1",
+      "name": "Metal Saucer",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/170.webp",
+      "imgLarge": "img/cards/swsh1/170_hires.webp",
+      "text": "Attach a Metal Energy card from your discard pile to 1 of your Benched Metal Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "metalSaucer",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-173",
+      "set": "swsh1",
+      "name": "Poké Kid",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/173.webp",
+      "imgLarge": "img/cards/swsh1/173_hires.webp",
+      "text": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "pokeKid",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-177",
+      "set": "swsh1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/177.webp",
+      "imgLarge": "img/cards/swsh1/177_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-8",
+      "set": "sve",
+      "name": "Basic Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/8.webp",
+      "imgLarge": "img/cards/sve/8_hires.webp",
+      "energyType": "Metal"
+    }
+  ]
+}

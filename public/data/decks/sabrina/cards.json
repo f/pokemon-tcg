@@ -1,0 +1,464 @@
+{
+  "name": "Sabrina's Psychic",
+  "group": "gym2",
+  "types": [
+    "Psychic"
+  ],
+  "featured": [
+    "gym2-16",
+    "gym2-55",
+    "gym2-58"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "gym2-93",
+      "set": "gym2",
+      "name": "Sabrina's Abra",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/93.webp",
+      "imgLarge": "img/cards/gym2/93_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Synchronize",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "This attack can't be used unless Sabrina's Abra and the Defending Pokémon have the same number of Energy cards attached to them.",
+          "effect": {
+            "needsEqualEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-94",
+      "set": "gym2",
+      "name": "Sabrina's Abra",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/94.webp",
+      "imgLarge": "img/cards/gym2/94_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Psyscan",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Look at your opponent's hand.",
+          "effect": {
+            "peekHand": true
+          }
+        },
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym2-16",
+      "set": "gym2",
+      "name": "Sabrina's Alakazam",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/16.webp",
+      "imgLarge": "img/cards/gym2/16_hires.webp",
+      "stage": 2,
+      "hp": 80,
+      "type": "Psychic",
+      "evolvesFrom": "Sabrina's Kadabra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Mega Burn",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "You can't use this attack during your next turn.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Psylink",
+        "text": "Sabrina's Alakazam always has a copy of every attack your Psychic Pokémon in play have (including their Energy costs and anything else required in order to use those attacks, such as discarding Energy cards). This power can't be used if Sabrina's Alakazam is Asleep, Confused, or Paralyzed.",
+        "kind": "psylink"
+      }
+    },
+    {
+      "count": 3,
+      "id": "gym2-95",
+      "set": "gym2",
+      "name": "Sabrina's Drowzee",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/95.webp",
+      "imgLarge": "img/cards/gym2/95_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Energy Support",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Psychic Energy card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+          "effect": {
+            "searchEnergy": "Psychic"
+          }
+        },
+        {
+          "name": "Mind Shock",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)",
+          "effect": {
+            "noWROnly": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym2-96",
+      "set": "gym2",
+      "name": "Sabrina's Gastly",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/96.webp",
+      "imgLarge": "img/cards/gym2/96_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Lick",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Fade Out",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "30",
+          "text": "Return Sabrina's Gastly and all Energy cards attached to it to your hand. (Discard all other cards attached to Sabrina's Gastly.)",
+          "effect": {
+            "fadeOut": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-55",
+      "set": "gym2",
+      "name": "Sabrina's Haunter",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/55.webp",
+      "imgLarge": "img/cards/gym2/55_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": "Sabrina's Gastly",
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Nightmare",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "20",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Shadow Attack",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, and if your opponent has any Benched Pokémon, choose 1 of them and this attack does 30 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 30,
+              "count": 1,
+              "flip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-57",
+      "set": "gym2",
+      "name": "Sabrina's Jynx",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/57.webp",
+      "imgLarge": "img/cards/gym2/57_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Helping Hand",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Choose 1 of your opponent's Pokémon. Remove any number of damage counters from that Pokémon, then draw that many cards.",
+          "effect": {
+            "helpingHand": true
+          }
+        },
+        {
+          "name": "Hug",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "flipNoRetreat": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-58",
+      "set": "gym2",
+      "name": "Sabrina's Kadabra",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/58.webp",
+      "imgLarge": "img/cards/gym2/58_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": "Sabrina's Abra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Life Drain",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, put a number of damage counters on the Defending Pokémon so that its remaining HP are 10.",
+          "effect": {
+            "lifeDrain": true
+          }
+        },
+        {
+          "name": "Psyshot",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-98",
+      "set": "gym2",
+      "name": "Sabrina's Porygon",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/98.webp",
+      "imgLarge": "img/cards/gym2/98_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sharp Point",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Barrier Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "All damage done by attacks to Sabrina's Porygon during your opponent's next turn is reduced by 10 (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-118",
+      "set": "base4",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base4/118.webp",
+      "imgLarge": "img/cards/base4/118_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "gym2-110",
+      "set": "gym2",
+      "name": "Sabrina",
+      "kind": "trainer",
+      "img": "img/cards/gym2/110.webp",
+      "imgLarge": "img/cards/gym2/110_hires.webp",
+      "text": "Take all Energy cards attached to 1 of your Pokémon with Sabrina in its name and attach them to another 1 of your Pokémon with Sabrina in its name.",
+      "trainer": "sabrina"
+    },
+    {
+      "count": 2,
+      "id": "gym1-125",
+      "set": "gym1",
+      "name": "Sabrina's Gaze",
+      "kind": "trainer",
+      "img": "img/cards/gym1/125.webp",
+      "imgLarge": "img/cards/gym1/125_hires.webp",
+      "text": "Each player shuffles his or her hand into his or her deck and draws a new hand of the same number of cards.",
+      "trainer": "sabrinasGaze"
+    },
+    {
+      "count": 1,
+      "id": "gym2-121",
+      "set": "gym2",
+      "name": "Sabrina's Psychic Control",
+      "kind": "trainer",
+      "img": "img/cards/gym2/121.webp",
+      "imgLarge": "img/cards/gym2/121_hires.webp",
+      "text": "Flip a coin. If heads, choose a Trainer card in your opponent's discard pile that isn't put in play (like PlusPower or Mysterious Fossil). You may use that card as if it were in your hand, if you do everything required in order to play that card (like discarding cards). The card stays in your opponent's discard pile.",
+      "trainer": "psychicControl"
+    },
+    {
+      "count": 1,
+      "id": "gym2-122",
+      "set": "gym2",
+      "name": "Saffron City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym2/122.webp",
+      "imgLarge": "img/cards/gym2/122_hires.webp",
+      "text": "This card stays in play after being played. Discard this card if another Stadium card comes into play. As often as each player like during his or her turn (before attacking), that player may return 1 basic Energy card attached to 1 of his or her Pokémon with Sabrina in its name to his or her hand.",
+      "trainer": "stadium",
+      "stadium": "saffron"
+    },
+    {
+      "count": 2,
+      "id": "base4-123",
+      "set": "base4",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base4/123.webp",
+      "imgLarge": "img/cards/base4/123_hires.webp",
+      "text": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 28,
+      "id": "gym2-131",
+      "set": "gym2",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/gym2/131.webp",
+      "imgLarge": "img/cards/gym2/131_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

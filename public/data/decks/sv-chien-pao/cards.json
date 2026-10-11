@@ -1,0 +1,503 @@
+{
+  "name": "Chien-Pao ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "svp-30",
+    "sv2-60",
+    "sv2-45"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv2-59",
+      "set": "sv2",
+      "name": "Arctibax",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/59.webp",
+      "imgLarge": "img/cards/sv2/59_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Frigibax",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Sharp Fin",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Frost Smash",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-45",
+      "set": "sv2",
+      "name": "Azumarill",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/45.webp",
+      "imgLarge": "img/cards/sv2/45_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": "Marill",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bubble Drain",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Heal 30 damage from this Pokémon.",
+          "effect": {
+            "heal": 30
+          }
+        },
+        {
+          "name": "Slam",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100×",
+          "text": "Flip 2 coins. This attack does 100 damage for each heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-60",
+      "set": "sv2",
+      "name": "Baxcalibur",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/60.webp",
+      "imgLarge": "img/cards/sv2/60_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Water",
+      "evolvesFrom": "Arctibax",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Buster Tail",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Super Cold",
+        "text": "As often as you like during your turn, you may attach a Basic Water Energy card from your hand to 1 of your Pokémon.",
+        "kind": "superCold",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sv1-51",
+      "set": "sv1",
+      "name": "Bruxish",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/51.webp",
+      "imgLarge": "img/cards/sv1/51_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Vivid Charge",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchBasicEnergy": {
+              "n": 3
+            }
+          }
+        },
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-46",
+      "set": "sv1",
+      "name": "Buizel",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/46.webp",
+      "imgLarge": "img/cards/sv1/46_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rain Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Razor Fin",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-30",
+      "set": "svp",
+      "name": "Chien-Pao ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/30.webp",
+      "imgLarge": "img/cards/svp/30_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Hail Blade",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "60×",
+          "text": "You may discard any amount of Water Energy from your Pokémon. This attack does 60 damage for each card you discarded in this way.",
+          "effect": {
+            "hailBlade": {
+              "type": "Water",
+              "n": 60
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Shivery Chill",
+        "text": "Once during your turn, if this Pokémon is in the Active Spot, you may search your deck for up to 2 Basic Water Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+        "kind": "shiveryChill",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv2-46",
+      "set": "sv2",
+      "name": "Delibird",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/46.webp",
+      "imgLarge": "img/cards/sv2/46_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Ice Wing",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-47",
+      "set": "sv1",
+      "name": "Floatzel",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/47.webp",
+      "imgLarge": "img/cards/sv1/47_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": "Buizel",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hydro Pump",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "This attack does 20 more damage for each Water Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Water",
+              "n": 20
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv2-58",
+      "set": "sv2",
+      "name": "Frigibax",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/58.webp",
+      "imgLarge": "img/cards/sv2/58_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Chilly",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Bite",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv2-44",
+      "set": "sv2",
+      "name": "Marill",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/44.webp",
+      "imgLarge": "img/cards/sv2/44_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bubble Drain",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Heal 20 damage from this Pokémon.",
+          "effect": {
+            "heal": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-182",
+      "set": "sv1",
+      "name": "Pal Pad",
+      "kind": "trainer",
+      "img": "img/cards/sv1/182.webp",
+      "imgLarge": "img/cards/sv1/182_hires.webp",
+      "text": "Shuffle up to 2 Supporter cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "palPad",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-186",
+      "set": "sv1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/sv1/186.webp",
+      "imgLarge": "img/cards/sv1/186_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

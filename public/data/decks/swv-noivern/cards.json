@@ -1,0 +1,500 @@
+{
+  "name": "Noivern V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Darkness",
+    "Dragon"
+  ],
+  "featured": [
+    "swshp-SWSH148",
+    "swsh5-91",
+    "swsh2-77"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh2-87",
+      "set": "swsh2",
+      "name": "Alcremie",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/87.webp",
+      "imgLarge": "img/cards/swsh2/87_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Milcery",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Decorate",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Attach any number of basic Energy cards from your hand to your Pokémon in any way you like.",
+          "effect": {
+            "attachHandAny": true
+          }
+        },
+        {
+          "name": "Draining Kiss",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Heal 30 damage from this Pokémon.",
+          "effect": {
+            "heal": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-91",
+      "set": "swsh5",
+      "name": "Crobat",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/91.webp",
+      "imgLarge": "img/cards/swsh5/91_hires.webp",
+      "stage": 2,
+      "hp": 130,
+      "type": "Darkness",
+      "evolvesFrom": "Golbat",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Drastic Draw",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may draw 3 cards.",
+        "kind": "drawOnEvolve3",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh5-90",
+      "set": "swsh5",
+      "name": "Golbat",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/90.webp",
+      "imgLarge": "img/cards/swsh5/90_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Darkness",
+      "evolvesFrom": "Zubat",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Air Slash",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Discreet Draw",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may draw 2 cards.",
+        "kind": "drawOnEvolve2",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh3-140",
+      "set": "swsh3",
+      "name": "Lugia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/140.webp",
+      "imgLarge": "img/cards/swsh3/140_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Energy Loop",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Put an Energy attached to this Pokémon into your hand.",
+          "effect": {
+            "returnEnergyToHand": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-86",
+      "set": "swsh2",
+      "name": "Milcery",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/86.webp",
+      "imgLarge": "img/cards/swsh2/86_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Aromatherapy",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Heal 10 damage from each of your Pokémon.",
+          "effect": {
+            "healAllOwn": 10
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-76",
+      "set": "swsh2",
+      "name": "Natu",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/76.webp",
+      "imgLarge": "img/cards/swsh2/76_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Me First",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH148",
+      "set": "swshp",
+      "name": "Noivern V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH148.webp",
+      "imgLarge": "img/cards/swshp/SWSH148_hires.webp",
+      "stage": 0,
+      "hp": 200,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Boomburst",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "This attack does 20 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "spiral": 20
+          }
+        },
+        {
+          "name": "Synchro Loud",
+          "cost": [
+            "Psychic",
+            "Darkness"
+          ],
+          "damage": "60+",
+          "text": "If you have the same number of cards in your hand as your opponent, this attack does 120 more damage.",
+          "effect": {
+            "bonusIfEqualHands": 120
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-77",
+      "set": "swsh2",
+      "name": "Xatu",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/77.webp",
+      "imgLarge": "img/cards/swsh2/77_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": "Natu",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Energy Warp",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Move an Energy from 1 of your opponent's Benched Pokémon to their Active Pokémon.",
+          "effect": {
+            "energyWarp": true
+          }
+        },
+        {
+          "name": "Psychic",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10+",
+          "text": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh5-89",
+      "set": "swsh5",
+      "name": "Zubat",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/89.webp",
+      "imgLarge": "img/cards/swsh5/89_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hide in Shadows",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        },
+        {
+          "name": "Speed Dive",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh7-143",
+      "set": "swsh7",
+      "name": "Copycat",
+      "kind": "trainer",
+      "img": "img/cards/swsh7/143.webp",
+      "imgLarge": "img/cards/swsh7/143_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw a card for each card in your opponent's hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "copycat",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-161",
+      "set": "swsh1",
+      "name": "Energy Search",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/161.webp",
+      "imgLarge": "img/cards/swsh1/161_hires.webp",
+      "text": "Search your deck for a basic Energy card, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "energySearch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-125",
+      "set": "swsh5",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/125.webp",
+      "imgLarge": "img/cards/swsh5/125_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, they don't switch Pokémon.) You may play any number of Item cards during your turn.",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh7-149",
+      "set": "swsh7",
+      "name": "Gordie",
+      "kind": "trainer",
+      "img": "img/cards/swsh7/149.webp",
+      "imgLarge": "img/cards/swsh7/149_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal any number of Energy cards you find there and put them into your hand. Shuffle the other cards back into your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "gordie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-177",
+      "set": "swsh1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/177.webp",
+      "imgLarge": "img/cards/swsh1/177_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 8,
+      "id": "sve-7",
+      "set": "sve",
+      "name": "Basic Darkness Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/7.webp",
+      "imgLarge": "img/cards/sve/7_hires.webp",
+      "energyType": "Darkness"
+    },
+    {
+      "count": 8,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

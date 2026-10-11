@@ -1,0 +1,469 @@
+{
+  "name": "Torrential Cannon",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "sm9-25",
+    "sm9-124",
+    "sm9-27"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm9-25",
+      "set": "sm9",
+      "name": "Blastoise",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/25.webp",
+      "imgLarge": "img/cards/sm9/25_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Water",
+      "evolvesFrom": "Wartortle",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Hydro Tackle",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "damage": "150",
+          "text": "This Pokémon does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ],
+      "power": {
+        "name": "Powerful Squall",
+        "text": "Once during your turn (before your attack), you may look at the top 6 cards of your deck and attach any number of Water Energy cards you find there to your Pokémon in any way you like. Shuffle the other cards back into your deck.",
+        "kind": "powerfulSquall",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm9-127",
+      "set": "sm9",
+      "name": "Farfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/127.webp",
+      "imgLarge": "img/cards/sm9/127_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Tool Buster",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Before doing damage, discard all Pokémon Tool cards from your opponent's Active Pokémon. If you discarded a Pokémon Tool card in this way, this attack does 70 more damage.",
+          "effect": {
+            "discardDefToolsBonus": 70
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm9-27",
+      "set": "sm9",
+      "name": "Golduck",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/27.webp",
+      "imgLarge": "img/cards/sm9/27_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": "Psyduck",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Amnesia",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": "Choose 1 of your opponent's Active Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",
+          "effect": {
+            "amnesia": true
+          }
+        },
+        {
+          "name": "Swim",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "If any of your opponent's Pokémon have any Water Energy attached to them, you may do 90 damage to 1 of your opponent's Benched Pokémon instead of their Active Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "swimSnipe": {
+              "type": "Water"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm9-124",
+      "set": "sm9",
+      "name": "Pidgeot",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/124.webp",
+      "imgLarge": "img/cards/sm9/124_hires.webp",
+      "stage": 2,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": "Pidgeotto",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Whirlwind",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Your opponent switches their Active Pokémon with 1 of their Benched Pokémon.",
+          "effect": {
+            "whirlwind": true
+          }
+        },
+        {
+          "name": "Spin Storm",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent puts their Active Pokémon and all cards attached to it into their hand.",
+          "effect": {
+            "bounceDefAll": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm9-123",
+      "set": "sm9",
+      "name": "Pidgeotto",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/123.webp",
+      "imgLarge": "img/cards/sm9/123_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": "Pidgey",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Air Mail",
+        "text": "Once during your turn (before your attack), you may look at the top 2 cards of your deck and put 1 of them into your hand. Put the other card on the bottom of your deck.",
+        "kind": "reconDirective",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm9-121",
+      "set": "sm9",
+      "name": "Pidgey",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/121.webp",
+      "imgLarge": "img/cards/sm9/121_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm9-26",
+      "set": "sm9",
+      "name": "Psyduck",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/26.webp",
+      "imgLarge": "img/cards/sm9/26_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Headache",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, your opponent can't play any Trainer cards from their hand during their next turn.",
+          "effect": {
+            "flipHeadache": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm9-23",
+      "set": "sm9",
+      "name": "Squirtle",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/23.webp",
+      "imgLarge": "img/cards/sm9/23_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Rain Splash",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm9-24",
+      "set": "sm9",
+      "name": "Wartortle",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/24.webp",
+      "imgLarge": "img/cards/sm9/24_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Squirtle",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Waterfall",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm9-135",
+      "set": "sm9",
+      "name": "Brock's Grit",
+      "kind": "trainer",
+      "img": "img/cards/sm9/135.webp",
+      "imgLarge": "img/cards/sm9/135_hires.webp",
+      "text": "Shuffle 6 in any combination of Pokémon and basic Energy cards from your discard pile into your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "brocksGrit",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-127",
+      "set": "sm7",
+      "name": "Copycat",
+      "kind": "trainer",
+      "img": "img/cards/sm7/127.webp",
+      "imgLarge": "img/cards/sm7/127_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw a card for each card in your opponent's hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "copycat",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm5-133",
+      "set": "sm5",
+      "name": "Pokémon Fan Club",
+      "kind": "trainer",
+      "img": "img/cards/sm5/133.webp",
+      "imgLarge": "img/cards/sm5/133_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "pokemonFanClub",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 20,
+      "id": "sm4-124",
+      "set": "sm4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sm4/124.webp",
+      "imgLarge": "img/cards/sm4/124_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

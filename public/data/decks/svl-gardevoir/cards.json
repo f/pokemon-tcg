@@ -1,0 +1,474 @@
+{
+  "name": "Gardevoir ex League",
+  "group": "svLeague",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Water"
+  ],
+  "featured": [
+    "sv1-86",
+    "sv3pt5-151",
+    "swsh9-40"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "swsh11-74",
+      "set": "swsh11",
+      "name": "Cresselia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh11/74.webp",
+      "imgLarge": "img/cards/swsh11/74_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Moonglow Reverse",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Move 2 damage counters from each of your Pokémon to 1 of your opponent's Pokémon.",
+          "effect": {
+            "moonglowReverse": true
+          }
+        },
+        {
+          "name": "Lunar Blast",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "110",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-89",
+      "set": "sv1",
+      "name": "Drifloon",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/89.webp",
+      "imgLarge": "img/cards/sv1/89_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Balloon Blast",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-86",
+      "set": "sv1",
+      "name": "Gardevoir ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/86.webp",
+      "imgLarge": "img/cards/sv1/86_hires.webp",
+      "stage": 2,
+      "hp": 310,
+      "type": "Psychic",
+      "evolvesFrom": "Kirlia",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Miracle Force",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "190",
+          "text": "This Pokémon recovers from all Special Conditions.",
+          "effect": {
+            "cureSelf": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Psychic Embrace",
+        "text": "As often as you like during your turn, you may attach a Basic Psychic Energy card from your discard pile to 1 of your Psychic Pokémon. If you attached Energy to a Pokémon in this way, put 2 damage counters on that Pokémon. You can't use this Ability on a Pokémon that would be Knocked Out.",
+        "kind": "psychicEmbrace",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "swsh12-68",
+      "set": "swsh12",
+      "name": "Kirlia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/68.webp",
+      "imgLarge": "img/cards/swsh12/68_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Psychic",
+      "evolvesFrom": "Ralts",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Refinement",
+        "text": "You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",
+        "kind": "refinement",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh9-40",
+      "set": "swsh9",
+      "name": "Lumineon V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/40.webp",
+      "imgLarge": "img/cards/swsh9/40_hires.webp",
+      "stage": 0,
+      "hp": 170,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Aqua Return",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Shuffle this Pokémon and all attached cards into your deck.",
+          "effect": {
+            "shuffleSelf": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ],
+      "power": {
+        "name": "Luminous Sign",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck.",
+        "kind": "luminousSign",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sv3pt5-151",
+      "set": "sv3pt5",
+      "name": "Mew ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv3pt5/151.webp",
+      "imgLarge": "img/cards/sv3pt5/151_hires.webp",
+      "stage": 0,
+      "hp": 180,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Genome Hacking",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack.",
+          "effect": {
+            "metronome": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Restart",
+        "text": "Once during your turn, you may draw cards until you have 3 cards in your hand.",
+        "kind": "restart",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh10-46",
+      "set": "swsh10",
+      "name": "Radiant Greninja",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/46.webp",
+      "imgLarge": "img/cards/swsh10/46_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Moonlight Shuriken",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard 2 Energy from this Pokémon. This attack does 90 damage to 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 2
+            },
+            "snipeMulti": {
+              "n": 90,
+              "count": 2
+            }
+          }
+        }
+      ],
+      "ruleBox": true,
+      "tags": [
+        "Radiant"
+      ],
+      "power": {
+        "name": "Concealed Cards",
+        "text": "You must discard an Energy card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",
+        "kind": "concealedCards",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "swsh12-67",
+      "set": "swsh12",
+      "name": "Ralts",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/67.webp",
+      "imgLarge": "img/cards/swsh12/67_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Memory Skip",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Choose 1 of your opponent's Active Pokémon's attacks. During your opponent's next turn, that Pokémon can't use that attack.",
+          "effect": {
+            "amnesia": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-171",
+      "set": "sv2",
+      "name": "Artazon",
+      "kind": "trainer",
+      "img": "img/cards/sv2/171.webp",
+      "imgLarge": "img/cards/sv2/171_hires.webp",
+      "text": "Once during each player's turn, that player may search their deck for a Basic Pokémon that doesn't have a Rule Box and put it onto their Bench. Then, that player shuffles their deck. (Pokémon ex, Pokémon V, etc. have Rule Boxes.) You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "artazon"
+    },
+    {
+      "count": 2,
+      "id": "sv1-166",
+      "set": "sv1",
+      "name": "Arven",
+      "kind": "trainer",
+      "img": "img/cards/sv1/166.webp",
+      "imgLarge": "img/cards/sv1/166_hires.webp",
+      "text": "Search your deck for an Item card and a Pokémon Tool card, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "arven",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv2-173",
+      "set": "sv2",
+      "name": "Bravery Charm",
+      "kind": "trainer",
+      "img": "img/cards/sv2/173.webp",
+      "imgLarge": "img/cards/sv2/173_hires.webp",
+      "text": "The Basic Pokémon this card is attached to gets +50 HP. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "braveryCharm"
+    },
+    {
+      "count": 4,
+      "id": "sv2-185",
+      "set": "sv2",
+      "name": "Iono",
+      "kind": "trainer",
+      "img": "img/cards/sv2/185.webp",
+      "imgLarge": "img/cards/sv2/185_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, each player draws a card for each of their remaining Prize cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "iono",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-189",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Sada)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/189.webp",
+      "imgLarge": "img/cards/sv1/189_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-191",
+      "set": "sv1",
+      "name": "Rare Candy",
+      "kind": "trainer",
+      "img": "img/cards/sv1/191.webp",
+      "imgLarge": "img/cards/sv1/191_hires.webp",
+      "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn. You may play any number of Item cards during your turn.",
+      "trainer": "rareCandy",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 13,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

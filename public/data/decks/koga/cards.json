@@ -1,0 +1,452 @@
+{
+  "name": "Koga's Poison",
+  "group": "gym2",
+  "types": [
+    "Grass"
+  ],
+  "featured": [
+    "gym2-9",
+    "gym2-50",
+    "gym2-47"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "gym2-9",
+      "set": "gym2",
+      "name": "Koga's Beedrill",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/9.webp",
+      "imgLarge": "img/cards/gym2/9_hires.webp",
+      "stage": 2,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Koga's Kakuna",
+      "weakness": "Fire",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Nerve Poison",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed and Poisoned.",
+          "effect": {
+            "flipStatus": [
+              "paralyzed",
+              "poisoned"
+            ]
+          }
+        },
+        {
+          "name": "Hyper Needle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Koga's Beedrill stays in play (even putting Koga's Beedrill on the Bench won't let you use it again).",
+          "effect": {
+            "flipFail": true,
+            "oncePerPlay": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-77",
+      "set": "gym2",
+      "name": "Koga's Ekans",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/77.webp",
+      "imgLarge": "img/cards/gym2/77_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fast-Acting Poison",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip 2 coins. If both are heads, the Defending Pokémon is now Confused and Poisoned.",
+          "effect": {
+            "bothHeadsStatus": [
+              "confused",
+              "poisoned"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-78",
+      "set": "gym2",
+      "name": "Koga's Grimer",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/78.webp",
+      "imgLarge": "img/cards/gym2/78_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sludge Grip",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "If your opponent has any Benched Pokémon, flip a coin. If heads, choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon. The new Defending Pokémon is now Poisoned.",
+          "effect": {
+            "gustAfter": {
+              "flip": true,
+              "status": "poisoned"
+            }
+          }
+        },
+        {
+          "name": "Sludge Toss",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-47",
+      "set": "gym2",
+      "name": "Koga's Kakuna",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/47.webp",
+      "imgLarge": "img/cards/gym2/47_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Koga's Weedle",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Toxic Secretion",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned).",
+          "effect": {
+            "flipStatus": "poisoned",
+            "toxic": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Emerge",
+        "text": "Once during your turn (before your attack), you may flip a coin. If heads, search your deck for an Evolution card named Koga's Beedrill and put it on Koga's Kakuna. (This counts as evolving Koga's Kakuna.) Shuffle your deck afterward. This power can't be used if Koga's Kakuna is Asleep, Confused, or Paralyzed.",
+        "kind": "emerge"
+      }
+    },
+    {
+      "count": 3,
+      "id": "gym2-79",
+      "set": "gym2",
+      "name": "Koga's Koffing",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/79.webp",
+      "imgLarge": "img/cards/gym2/79_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Smelly Gas",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, this attack does 10 damage to each Benched Pokémon (including your own). (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "flipBenchAll": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym2-48",
+      "set": "gym2",
+      "name": "Koga's Koffing",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/48.webp",
+      "imgLarge": "img/cards/gym2/48_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Smokescreen",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        },
+        {
+          "name": "Obscuring Gas",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, shuffle Koga's Koffing and all cards attached to it into your deck (after doing damage).",
+          "effect": {
+            "flipShuffleSelf": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-80",
+      "set": "gym2",
+      "name": "Koga's Pidgey",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/80.webp",
+      "imgLarge": "img/cards/gym2/80_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Sand-attack",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym2-82",
+      "set": "gym2",
+      "name": "Koga's Weedle",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/82.webp",
+      "imgLarge": "img/cards/gym2/82_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Sting",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Sharp Stinger",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatusEither": [
+              "poisoned",
+              "paralyzed"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-50",
+      "set": "gym2",
+      "name": "Koga's Weezing",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/50.webp",
+      "imgLarge": "img/cards/gym2/50_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Koga's Koffing",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Spontaneous Explosion",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 30 more damage and Koga's Weezing does 30 damage to itself; if tails, this attack does 10 damage.",
+          "effect": {
+            "flipBonus": 30,
+            "headsSelf": 30
+          }
+        },
+        {
+          "name": "Toxic Cloud",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned).",
+          "effect": {
+            "flipStatus": "poisoned",
+            "toxic": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-119",
+      "set": "base4",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/119.webp",
+      "imgLarge": "img/cards/base4/119_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 1,
+      "id": "gym2-114",
+      "set": "gym2",
+      "name": "Fuchsia City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym2/114.webp",
+      "imgLarge": "img/cards/gym2/114_hires.webp",
+      "text": "This card stays in play after being played. Discard this card if another Stadium card comes into play. Once during each player's turn (before attacking), that player may flip a coin. If heads, that player may shuffle 1 of his or her Pokémon in play with Koga in its name and any cards attached to it into his or her deck.",
+      "trainer": "stadium",
+      "stadium": "fuchsia"
+    },
+    {
+      "count": 1,
+      "id": "base4-111",
+      "set": "base4",
+      "name": "Full Heal",
+      "kind": "trainer",
+      "img": "img/cards/base4/111.webp",
+      "imgLarge": "img/cards/base4/111_hires.webp",
+      "text": "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.",
+      "trainer": "fullHeal"
+    },
+    {
+      "count": 2,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "gym2-106",
+      "set": "gym2",
+      "name": "Koga",
+      "kind": "trainer",
+      "img": "img/cards/gym2/106.webp",
+      "imgLarge": "img/cards/gym2/106_hires.webp",
+      "text": "If an attack from a Pokémon with Koga in its name does damage to a Defending Pokémon this turn, that Pokémon is then Poisoned.",
+      "trainer": "koga"
+    },
+    {
+      "count": 1,
+      "id": "base4-113",
+      "set": "base4",
+      "name": "PlusPower",
+      "kind": "trainer",
+      "img": "img/cards/base4/113.webp",
+      "imgLarge": "img/cards/base4/113_hires.webp",
+      "text": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+      "trainer": "plusPower"
+    },
+    {
+      "count": 3,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 28,
+      "id": "gym2-129",
+      "set": "gym2",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/gym2/129.webp",
+      "imgLarge": "img/cards/gym2/129_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

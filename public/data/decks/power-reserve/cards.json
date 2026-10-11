@@ -1,0 +1,502 @@
+{
+  "name": "Power Reserve",
+  "group": "jungle",
+  "types": [
+    "Grass",
+    "Psychic"
+  ],
+  "featured": [
+    "base2-40",
+    "base2-48",
+    "base2-37"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "base1-43",
+      "set": "base1",
+      "name": "Abra",
+      "kind": "pokemon",
+      "img": "img/cards/base1/43.webp",
+      "imgLarge": "img/cards/base1/43_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base2-49",
+      "set": "base2",
+      "name": "Bellsprout",
+      "kind": "pokemon",
+      "img": "img/cards/base2/49.webp",
+      "imgLarge": "img/cards/base2/49_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Vine Whip",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Pokémon named Bellsprout and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+          "effect": {
+            "callFamily": {
+              "names": [
+                "Bellsprout"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base2-37",
+      "set": "base2",
+      "name": "Gloom",
+      "kind": "pokemon",
+      "img": "img/cards/base2/37.webp",
+      "imgLarge": "img/cards/base2/37_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Oddish",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        },
+        {
+          "name": "Foul Odor",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Both the Defending Pokémon and Gloom are now Confused (after doing damage).",
+          "effect": {
+            "status": "confused",
+            "selfStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-31",
+      "set": "base1",
+      "name": "Jynx",
+      "kind": "pokemon",
+      "img": "img/cards/base1/31.webp",
+      "imgLarge": "img/cards/base1/31_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Meditate",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.",
+          "effect": {
+            "plusDefCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-32",
+      "set": "base1",
+      "name": "Kadabra",
+      "kind": "pokemon",
+      "img": "img/cards/base1/32.webp",
+      "imgLarge": "img/cards/base1/32_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": "Abra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Recover",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Kadabra in order to use this attack. Remove all damage counters from Kadabra.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "healAll": true
+          }
+        },
+        {
+          "name": "Super Psy",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base2-5",
+      "set": "base2",
+      "name": "Kangaskhan",
+      "kind": "pokemon",
+      "img": "img/cards/base2/5.webp",
+      "imgLarge": "img/cards/base2/5_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Fetch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Comet Punch",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 4 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 4
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base2-57",
+      "set": "base2",
+      "name": "Nidoran♀",
+      "kind": "pokemon",
+      "img": "img/cards/base2/57.webp",
+      "imgLarge": "img/cards/base2/57_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fury Swipes",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10×",
+          "text": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        },
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Pokémon named Nidoran ♂ or Nidoran ♀ and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+          "effect": {
+            "callFamily": {
+              "names": [
+                "Nidoran♂",
+                "Nidoran♀"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base2-40",
+      "set": "base2",
+      "name": "Nidorina",
+      "kind": "pokemon",
+      "img": "img/cards/base2/40.webp",
+      "imgLarge": "img/cards/base2/40_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Nidoran♀",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Supersonic",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        },
+        {
+          "name": "Double Kick",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base2-58",
+      "set": "base2",
+      "name": "Oddish",
+      "kind": "pokemon",
+      "img": "img/cards/base2/58.webp",
+      "imgLarge": "img/cards/base2/58_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Stun Spore",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Sprout",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Pokémon named Oddish and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+          "effect": {
+            "callFamily": {
+              "names": [
+                "Oddish"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base2-48",
+      "set": "base2",
+      "name": "Weepinbell",
+      "kind": "pokemon",
+      "img": "img/cards/base2/48.webp",
+      "imgLarge": "img/cards/base2/48_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Bellsprout",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        },
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-91",
+      "set": "base1",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base1/91.webp",
+      "imgLarge": "img/cards/base1/91_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 2,
+      "id": "base1-93",
+      "set": "base1",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base1/93.webp",
+      "imgLarge": "img/cards/base1/93_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base1-87",
+      "set": "base1",
+      "name": "Pokédex",
+      "kind": "trainer",
+      "img": "img/cards/base1/87.webp",
+      "imgLarge": "img/cards/base1/87_hires.webp",
+      "text": "Look at up to 5 cards from the top of your deck and rearrange them as you like.",
+      "trainer": "pokedex"
+    },
+    {
+      "count": 3,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 17,
+      "id": "base1-99",
+      "set": "base1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/99.webp",
+      "imgLarge": "img/cards/base1/99_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 11,
+      "id": "base1-101",
+      "set": "base1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/101.webp",
+      "imgLarge": "img/cards/base1/101_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

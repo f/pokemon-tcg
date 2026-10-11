@@ -1,0 +1,475 @@
+{
+  "name": "Lightning Loop",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "sm6-36",
+    "sm10-151",
+    "sm6-35"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm10-151",
+      "set": "sm10",
+      "name": "Dodrio",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/151.webp",
+      "imgLarge": "img/cards/sm10/151_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Colorless",
+      "evolvesFrom": "Doduo",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Tri Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60×",
+          "text": "Flip 3 coins. This attack does 60 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        },
+        {
+          "name": "Accelerating Stab",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "This Pokémon can't use Accelerating Stab during your next turn.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm10-150",
+      "set": "sm10",
+      "name": "Doduo",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/150.webp",
+      "imgLarge": "img/cards/sm10/150_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Double Peck",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage for each heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm6-34",
+      "set": "sm6",
+      "name": "Magnemite",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/34.webp",
+      "imgLarge": "img/cards/sm6/34_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Searching Magnet",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Lightning Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchBasicEnergy": {
+              "n": 3,
+              "type": "Lightning"
+            }
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm6-35",
+      "set": "sm6",
+      "name": "Magneton",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/35.webp",
+      "imgLarge": "img/cards/sm6/35_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Lightning",
+      "evolvesFrom": "Magnemite",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Zap Cannon",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "This Pokémon can't use Zap Cannon during your next turn.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm6-36",
+      "set": "sm6",
+      "name": "Magnezone",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/36.webp",
+      "imgLarge": "img/cards/sm6/36_hires.webp",
+      "stage": 2,
+      "hp": 150,
+      "type": "Lightning",
+      "evolvesFrom": "Magneton",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Zap Cannon",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "This Pokémon can't use Zap Cannon during your next turn.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Magnetic Circuit",
+        "text": "As often as you like during your turn (before your attack), you may attach a Lightning Energy card from your hand to 1 of your Pokémon.",
+        "kind": "magneticCircuit",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm10-147",
+      "set": "sm10",
+      "name": "Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/147.webp",
+      "imgLarge": "img/cards/sm10/147_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Caturday",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards. If you do, this Pokémon is now Asleep.",
+          "effect": {
+            "draw": 2,
+            "selfStatus": "asleep"
+          }
+        },
+        {
+          "name": "Tail Whap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-144",
+      "set": "sm10",
+      "name": "Raticate",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/144.webp",
+      "imgLarge": "img/cards/sm10/144_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": "Rattata",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Escaping Incisors",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "If your opponent's Active Pokémon is an Evolution Pokémon, switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchIfDefEvolved": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm10-143",
+      "set": "sm10",
+      "name": "Rattata",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/143.webp",
+      "imgLarge": "img/cards/sm10/143_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-56",
+      "set": "sm10",
+      "name": "Stunfisk",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/56.webp",
+      "imgLarge": "img/cards/sm10/56_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Raging Thunder",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "This attack does 10 damage to 1 of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "ownBenchSnipe": 10
+          }
+        },
+        {
+          "name": "Electric Trap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each of your Pokémon that has any damage counters on it.",
+          "effect": {
+            "timesOwnDamaged": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-60",
+      "set": "sm10",
+      "name": "Zeraora",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/60.webp",
+      "imgLarge": "img/cards/sm10/60_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Crushing Claw",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": "Discard a Special Energy from your opponent's Active Pokémon.",
+          "effect": {
+            "removeSpecialEnergy": true
+          }
+        },
+        {
+          "name": "Discharge",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50×",
+          "text": "Discard all Lightning Energy from this Pokémon. This attack does 50 damage for each card you discarded in this way.",
+          "effect": {
+            "discardAllTypeTimes": {
+              "type": "Lightning",
+              "n": 50
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-130",
+      "set": "sm7",
+      "name": "Fisherman",
+      "kind": "trainer",
+      "img": "img/cards/sm7/130.webp",
+      "imgLarge": "img/cards/sm7/130_hires.webp",
+      "text": "Put 4 basic Energy cards from your discard pile into your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "fisherman",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm5-125",
+      "set": "sm5",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm5/125.webp",
+      "imgLarge": "img/cards/sm5/125_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sm5-126",
+      "set": "sm5",
+      "name": "Looker",
+      "kind": "trainer",
+      "img": "img/cards/sm5/126.webp",
+      "imgLarge": "img/cards/sm5/126_hires.webp",
+      "text": "Draw 3 cards from the bottom of your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "looker",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 20,
+      "id": "sm2-168",
+      "set": "sm2",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sm2/168.webp",
+      "imgLarge": "img/cards/sm2/168_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

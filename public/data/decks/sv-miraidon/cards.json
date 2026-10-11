@@ -1,0 +1,445 @@
+{
+  "name": "Miraidon ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "svp-143",
+    "sv1-79",
+    "sv4pt5-19"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv1-164",
+      "set": "sv1",
+      "name": "Cyclizar",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/164.webp",
+      "imgLarge": "img/cards/sv1/164_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Touring",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Speed Attack",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv2-67",
+      "set": "sv2",
+      "name": "Electrode",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/67.webp",
+      "imgLarge": "img/cards/sv2/67_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Lightning",
+      "evolvesFrom": "Voltorb",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Lightning Ball",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "60",
+          "text": ""
+        },
+        {
+          "name": "Rolling Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-79",
+      "set": "sv1",
+      "name": "Kilowattrel",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/79.webp",
+      "imgLarge": "img/cards/sv1/79_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": "Wattrel",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Skill Dive",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 50 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 50
+            }
+          }
+        },
+        {
+          "name": "Thunder Blast",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": "Discard a Lightning Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Lightning",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-143",
+      "set": "svp",
+      "name": "Miraidon ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/143.webp",
+      "imgLarge": "img/cards/svp/143_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Rapid Draw",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Techno Turbo",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "150",
+          "text": "Attach a Basic Lightning Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": "Lightning"
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv3pt5-25",
+      "set": "sv3pt5",
+      "name": "Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/sv3pt5/25.webp",
+      "imgLarge": "img/cards/sv3pt5/25_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Charge",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Lightning Energy card and attach it to this Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttach": {
+              "type": "Lightning",
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Pika Punch",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv4pt5-19",
+      "set": "sv4pt5",
+      "name": "Raichu",
+      "kind": "pokemon",
+      "img": "img/cards/sv4pt5/19.webp",
+      "imgLarge": "img/cards/sv4pt5/19_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": "Pikachu",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Thunder",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "This Pokémon also does 50 damage to itself.",
+          "effect": {
+            "selfDamage": 50
+          }
+        }
+      ],
+      "power": {
+        "name": "Electrical Grounding",
+        "text": "When 1 of your Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon, you may move a Lightning Energy from that Pokémon to this Pokémon.",
+        "kind": "electricalGrounding",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv2-66",
+      "set": "sv2",
+      "name": "Voltorb",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/66.webp",
+      "imgLarge": "img/cards/sv2/66_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Lightning Ball",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Rollout",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-77",
+      "set": "sv1",
+      "name": "Wattrel",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/77.webp",
+      "imgLarge": "img/cards/sv1/77_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Glide",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-170",
+      "set": "sv1",
+      "name": "Electric Generator",
+      "kind": "trainer",
+      "img": "img/cards/sv1/170.webp",
+      "imgLarge": "img/cards/sv1/170_hires.webp",
+      "text": "Look at the top 5 cards of your deck and attach up to 2 Basic Lightning Energy cards you find there to your Benched Lightning Pokémon in any way you like. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "electricGenerator",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

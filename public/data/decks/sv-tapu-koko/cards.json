@@ -1,0 +1,501 @@
+{
+  "name": "Tapu Koko ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "sv4-68",
+    "sv3-69",
+    "sv6-74"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv6-74",
+      "set": "sv6",
+      "name": "Bellibolt",
+      "kind": "pokemon",
+      "img": "img/cards/sv6/74.webp",
+      "imgLarge": "img/cards/sv6/74_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Lightning",
+      "evolvesFrom": "Tadbulb",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Thunder Shock",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Electric Ball",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv5-59",
+      "set": "sv5",
+      "name": "Boltund",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/59.webp",
+      "imgLarge": "img/cards/sv5/59_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": "Yamper",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Electrifying Dash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Search your deck for up to 2 Basic Lightning Energy cards and attach them to your Benched Pokémon in any way you like. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachBench": {
+              "type": "Lightning",
+              "n": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv3-68",
+      "set": "sv3",
+      "name": "Eelektrik",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/68.webp",
+      "imgLarge": "img/cards/sv3/68_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Lightning",
+      "evolvesFrom": "Tynamo",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Volt Wave",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Electric Ball",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-69",
+      "set": "sv3",
+      "name": "Eelektross",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/69.webp",
+      "imgLarge": "img/cards/sv3/69_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Lightning",
+      "evolvesFrom": "Eelektrik",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Suction Shock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "",
+          "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. If you do, this attack does 60 damage to the new Active Pokémon, and then flip a coin. If heads, that Pokémon is now Paralyzed.",
+          "effect": {
+            "lure": true,
+            "fixedBase": 60,
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Head Bolt",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv4-60",
+      "set": "sv4",
+      "name": "Plusle",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/60.webp",
+      "imgLarge": "img/cards/sv4/60_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Plus Damage",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "This attack does 10 more damage for each damage counter on your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv2-78",
+      "set": "sv2",
+      "name": "Tadbulb",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/78.webp",
+      "imgLarge": "img/cards/sv2/78_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Stampede",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Static Shock",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv4-68",
+      "set": "sv4",
+      "name": "Tapu Koko ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/68.webp",
+      "imgLarge": "img/cards/sv4/68_hires.webp",
+      "stage": 0,
+      "hp": 210,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Vengeful Shock",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 90 more damage, and your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "bonusIfKOLastTurn": {
+              "n": 90,
+              "status": "paralyzed"
+            }
+          }
+        },
+        {
+          "name": "Extreme Current",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv3-67",
+      "set": "sv3",
+      "name": "Tynamo",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/67.webp",
+      "imgLarge": "img/cards/sv3/67_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Static Shock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Tiny Bolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv5-58",
+      "set": "sv5",
+      "name": "Yamper",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/58.webp",
+      "imgLarge": "img/cards/sv5/58_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Whimsy Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv5-57",
+      "set": "sv5",
+      "name": "Zeraora",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/57.webp",
+      "imgLarge": "img/cards/sv5/57_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Shocking Knuckle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Strong Volt",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-170",
+      "set": "sv1",
+      "name": "Electric Generator",
+      "kind": "trainer",
+      "img": "img/cards/sv1/170.webp",
+      "imgLarge": "img/cards/sv1/170_hires.webp",
+      "text": "Look at the top 5 cards of your deck and attach up to 2 Basic Lightning Energy cards you find there to your Benched Lightning Pokémon in any way you like. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "electricGenerator",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

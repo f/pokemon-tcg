@@ -1,0 +1,528 @@
+{
+  "name": "Let's Play, Eevee!",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Fire"
+  ],
+  "featured": [
+    "sm75-3",
+    "smp-SM186",
+    "sm3-19"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm75-3",
+      "set": "sm75",
+      "name": "Charizard",
+      "kind": "pokemon",
+      "img": "img/cards/sm75/3.webp",
+      "imgLarge": "img/cards/sm75/3_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Fire",
+      "evolvesFrom": "Charmeleon",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Fiery Blast",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Resolute Flame",
+        "text": "This Pokémon's attacks do 30 more damage to your opponent's Active Pokémon for each of their Pokémon-GX and Pokémon-EX in play.",
+        "kind": "resoluteFlame",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm3-18",
+      "set": "sm3",
+      "name": "Charmander",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/18.webp",
+      "imgLarge": "img/cards/sm3/18_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Flame Tail",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-19",
+      "set": "sm3",
+      "name": "Charmeleon",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/19.webp",
+      "imgLarge": "img/cards/sm3/19_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Charmander",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Claw Slash",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Heat Blast",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm8-155",
+      "set": "sm8",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/sm8/155.webp",
+      "imgLarge": "img/cards/sm8/155_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-104",
+      "set": "sm5",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/104.webp",
+      "imgLarge": "img/cards/sm5/104_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "smp-SM186",
+      "set": "smp",
+      "name": "Flareon",
+      "kind": "pokemon",
+      "img": "img/cards/smp/SM186.webp",
+      "imgLarge": "img/cards/smp/SM186_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Fire",
+      "evolvesFrom": "Eevee",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Fire Spin",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Discard 2 Fire Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm75-55",
+      "set": "sm75",
+      "name": "Kangaskhan",
+      "kind": "pokemon",
+      "img": "img/cards/sm75/55.webp",
+      "imgLarge": "img/cards/sm75/55_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Fetch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "One-Two Punch",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage.",
+          "effect": {
+            "flipBonus": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-102",
+      "set": "sm5",
+      "name": "Lickitung",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/102.webp",
+      "imgLarge": "img/cards/sm5/102_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Lap Up",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 3 cards.",
+          "effect": {
+            "draw": 3
+          }
+        },
+        {
+          "name": "Slam",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50×",
+          "text": "Flip 2 coins. This attack does 50 damage for each heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm8-38",
+      "set": "sm8",
+      "name": "Moltres",
+      "kind": "pokemon",
+      "img": "img/cards/sm8/38.webp",
+      "imgLarge": "img/cards/sm8/38_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Assisting Heater",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": "You may attach a Fire Energy card from your hand to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachHandBench": {
+              "type": "Fire"
+            }
+          }
+        },
+        {
+          "name": "Fire Wing",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm3-22",
+      "set": "sm3",
+      "name": "Pansear",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/22.webp",
+      "imgLarge": "img/cards/sm3/22_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm3-23",
+      "set": "sm3",
+      "name": "Simisear",
+      "kind": "pokemon",
+      "img": "img/cards/sm3/23.webp",
+      "imgLarge": "img/cards/sm3/23_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Pansear",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Flare Recharge",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Attach a Fire Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": "Fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-119",
+      "set": "sm1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/119.webp",
+      "imgLarge": "img/cards/sm1/119_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-126",
+      "set": "sm1",
+      "name": "Pokémon Catcher",
+      "kind": "trainer",
+      "img": "img/cards/sm1/126.webp",
+      "imgLarge": "img/cards/sm1/126_hires.webp",
+      "text": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "pokemonCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm5-133",
+      "set": "sm5",
+      "name": "Pokémon Fan Club",
+      "kind": "trainer",
+      "img": "img/cards/sm5/133.webp",
+      "imgLarge": "img/cards/sm5/133_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "pokemonFanClub",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-127",
+      "set": "sm1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sm1/127.webp",
+      "imgLarge": "img/cards/sm1/127_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 22,
+      "id": "sm3-167",
+      "set": "sm3",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sm3/167.webp",
+      "imgLarge": "img/cards/sm3/167_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

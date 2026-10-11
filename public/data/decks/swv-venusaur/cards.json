@@ -1,0 +1,531 @@
+{
+  "name": "Venusaur V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Grass"
+  ],
+  "featured": [
+    "swshp-SWSH100",
+    "swsh4-18",
+    "swsh45-2"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh1-8",
+      "set": "swsh1",
+      "name": "Durant",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/8.webp",
+      "imgLarge": "img/cards/swsh1/8_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite Together",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "If Durant is on your Bench, this attack does 60 more damage.",
+          "effect": {
+            "bonusIfBenchName": {
+              "name": "Durant",
+              "n": 60
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh45-15",
+      "set": "swsh45",
+      "name": "Eldegoss",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/15.webp",
+      "imgLarge": "img/cards/swsh45/15_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Grass",
+      "evolvesFrom": "Gossifleur",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Enriching Seeds",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Heal all damage from 1 of your Benched Pokémon.",
+          "effect": {
+            "healBenchAll": true
+          }
+        },
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "50",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh4-18",
+      "set": "swsh4",
+      "name": "Gogoat",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/18.webp",
+      "imgLarge": "img/cards/swsh4/18_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Grass",
+      "evolvesFrom": "Skiddo",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Take Down",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "160",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-14",
+      "set": "swsh45",
+      "name": "Gossifleur",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/14.webp",
+      "imgLarge": "img/cards/swsh45/14_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leafage",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-6",
+      "set": "swsh2",
+      "name": "Heracross",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/6.webp",
+      "imgLarge": "img/cards/swsh2/6_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Push Down",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent switches their Active Pokémon with 1 of their Benched Pokémon.",
+          "effect": {
+            "whirlwind": true
+          }
+        },
+        {
+          "name": "Superpowered Horns",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "110",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-56",
+      "set": "swsh45",
+      "name": "Indeedee",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/56.webp",
+      "imgLarge": "img/cards/swsh45/56_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Helping Hand",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for a basic Energy card and attach it to 1 of your Benched Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachBench": {
+              "type": null,
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Psychic",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-17",
+      "set": "swsh4",
+      "name": "Skiddo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/17.webp",
+      "imgLarge": "img/cards/swsh4/17_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Synthesis",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Grass Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachOne": {
+              "type": "Grass",
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH100",
+      "set": "swshp",
+      "name": "Venusaur V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH100.webp",
+      "imgLarge": "img/cards/swshp/SWSH100_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Leaf Drain",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Heal 30 damage from this Pokémon.",
+          "effect": {
+            "heal": 30
+          }
+        },
+        {
+          "name": "Double-Edge",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "190",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh45-1",
+      "set": "swsh45",
+      "name": "Yanma",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/1.webp",
+      "imgLarge": "img/cards/swsh45/1_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-2",
+      "set": "swsh45",
+      "name": "Yanmega",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/2.webp",
+      "imgLarge": "img/cards/swsh45/2_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Grass",
+      "evolvesFrom": "Yanma",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Bug Bite",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Nosedive",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh45-59",
+      "set": "swsh45",
+      "name": "Gym Trainer",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/59.webp",
+      "imgLarge": "img/cards/swsh45/59_hires.webp",
+      "text": "Draw 2 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "gymTrainer",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-175",
+      "set": "swsh1",
+      "name": "Pokémon Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/175.webp",
+      "imgLarge": "img/cards/swsh1/175_hires.webp",
+      "text": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "pokemonCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-177",
+      "set": "swsh1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/177.webp",
+      "imgLarge": "img/cards/swsh1/177_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-1",
+      "set": "sve",
+      "name": "Basic Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/1.webp",
+      "imgLarge": "img/cards/sve/1_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

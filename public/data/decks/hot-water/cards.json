@@ -1,0 +1,437 @@
+{
+  "name": "Hot Water",
+  "group": "base2",
+  "types": [
+    "Water",
+    "Fire"
+  ],
+  "featured": [
+    "base4-15",
+    "base4-35",
+    "base4-37"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "base4-69",
+      "set": "base4",
+      "name": "Charmander",
+      "kind": "pokemon",
+      "img": "img/cards/base4/69.webp",
+      "imgLarge": "img/cards/base4/69_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Ember",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Discard 1 Fire Energy card attached to Charmander in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-35",
+      "set": "base4",
+      "name": "Charmeleon",
+      "kind": "pokemon",
+      "img": "img/cards/base4/35.webp",
+      "imgLarge": "img/cards/base4/35_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": "Charmander",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Slash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Discard 1 Fire Energy card attached to Charmeleon in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-37",
+      "set": "base4",
+      "name": "Dodrio",
+      "kind": "pokemon",
+      "img": "img/cards/base4/37.webp",
+      "imgLarge": "img/cards/base4/37_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": "Doduo",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Rage",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each damage counter on Dodrio.",
+          "effect": {
+            "plusSelfCounters": 10
+          }
+        }
+      ],
+      "power": {
+        "name": "Retreat Aid",
+        "text": "As long as Dodrio is Benched, pay Colorless less to retreat your Active Pokémon.",
+        "kind": "retreatAid"
+      }
+    },
+    {
+      "count": 3,
+      "id": "base4-72",
+      "set": "base4",
+      "name": "Doduo",
+      "kind": "pokemon",
+      "img": "img/cards/base4/72.webp",
+      "imgLarge": "img/cards/base4/72_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Fury Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-76",
+      "set": "base4",
+      "name": "Goldeen",
+      "kind": "pokemon",
+      "img": "img/cards/base4/76.webp",
+      "imgLarge": "img/cards/base4/76_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Horn Attack",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-51",
+      "set": "base4",
+      "name": "Magmar",
+      "kind": "pokemon",
+      "img": "img/cards/base4/51.webp",
+      "imgLarge": "img/cards/base4/51_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Fire Punch",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Discard 1 Fire Energy card attached to Magmar in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-88",
+      "set": "base4",
+      "name": "Poliwag",
+      "kind": "pokemon",
+      "img": "img/cards/base4/88.webp",
+      "imgLarge": "img/cards/base4/88_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each Water Energy attached to Poliwag but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+          "effect": {
+            "extraWater": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-57",
+      "set": "base4",
+      "name": "Poliwhirl",
+      "kind": "pokemon",
+      "img": "img/cards/base4/57.webp",
+      "imgLarge": "img/cards/base4/57_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Poliwag",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Amnesia",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "",
+          "text": "Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",
+          "effect": {
+            "amnesia": true
+          }
+        },
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-15",
+      "set": "base4",
+      "name": "Poliwrath",
+      "kind": "pokemon",
+      "img": "img/cards/base4/15.webp",
+      "imgLarge": "img/cards/base4/15_hires.webp",
+      "stage": 2,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Poliwhirl",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+          "effect": {
+            "extraWater": 20
+          }
+        },
+        {
+          "name": "Whirlpool",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it.",
+          "effect": {
+            "removeEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-119",
+      "set": "base4",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/119.webp",
+      "imgLarge": "img/cards/base4/119_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 2,
+      "id": "base4-110",
+      "set": "base4",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/base4/110.webp",
+      "imgLarge": "img/cards/base4/110_hires.webp",
+      "text": "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.",
+      "trainer": "energyRetrieval"
+    },
+    {
+      "count": 1,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 2,
+      "id": "base4-121",
+      "set": "base4",
+      "name": "Poké Ball",
+      "kind": "trainer",
+      "img": "img/cards/base4/121.webp",
+      "imgLarge": "img/cards/base4/121_hires.webp",
+      "text": "Flip a coin. If heads, you may search your deck for any Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+      "trainer": "pokeBall"
+    },
+    {
+      "count": 1,
+      "id": "base4-106",
+      "set": "base4",
+      "name": "Pokémon Trader",
+      "kind": "trainer",
+      "img": "img/cards/base4/106.webp",
+      "imgLarge": "img/cards/base4/106_hires.webp",
+      "text": "Trade 1 of the Basic Pokémon or Evolution cards in your hand for 1 of the Basic Pokémon or Evolution cards from your deck. Show both cards to your opponent. Shuffle your deck afterward.",
+      "trainer": "pokemonTrader"
+    },
+    {
+      "count": 3,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 13,
+      "id": "base4-126",
+      "set": "base4",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/126.webp",
+      "imgLarge": "img/cards/base4/126_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 15,
+      "id": "base4-130",
+      "set": "base4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/130.webp",
+      "imgLarge": "img/cards/base4/130_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

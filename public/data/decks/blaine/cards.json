@@ -1,0 +1,487 @@
+{
+  "name": "Blaine's Fire",
+  "group": "gym2",
+  "types": [
+    "Fire"
+  ],
+  "featured": [
+    "gym2-1",
+    "gym2-31",
+    "gym2-32"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "gym2-1",
+      "set": "gym2",
+      "name": "Blaine's Arcanine",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/1.webp",
+      "imgLarge": "img/cards/gym2/1_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Blaine's Growlithe",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Heat Tackle",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Blaine's Arcanine does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        },
+        {
+          "name": "Firestorm",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "damage": "120",
+          "text": "Discard 3 Fire Energy cards attached to Blaine's Arcanine in order to use this attack.",
+          "effect": {
+            "discard": {
+              "type": "Fire",
+              "n": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-60",
+      "set": "gym2",
+      "name": "Blaine's Charmander",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/60.webp",
+      "imgLarge": "img/cards/gym2/60_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fire Tail Slap",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": "Use this attack only if there are any Fire Energy cards attached to Blaine's Charmander. Flip a coin. If tails, discard 1 of those cards.",
+          "effect": {
+            "needsType": "Fire",
+            "flipTailsDiscard": "Fire"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-31",
+      "set": "gym2",
+      "name": "Blaine's Charmeleon",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/31.webp",
+      "imgLarge": "img/cards/gym2/31_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": "Blaine's Charmander",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Fire Claws",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Bonfire",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "damage": "",
+          "text": "Flip 3 coins. For each heads, discard 1 Fire Energy card attached to Blaine's Charmeleon. If you can't discard Energy cards, this attack does nothing. This attack does 10 damage times the number of heads to each of your opponent's Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)",
+          "effect": {
+            "bonfire": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym2-32",
+      "set": "gym2",
+      "name": "Blaine's Dodrio",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/32.webp",
+      "imgLarge": "img/cards/gym2/32_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": "Blaine's Doduo",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Mega Peck",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-61",
+      "set": "gym2",
+      "name": "Blaine's Doduo",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/61.webp",
+      "imgLarge": "img/cards/gym2/61_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Wild Kick",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        },
+        {
+          "name": "Retaliate",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Does 10 damage times the number of damage counters on Blaine's Doduo.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-62",
+      "set": "gym1",
+      "name": "Blaine's Growlithe",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/62.webp",
+      "imgLarge": "img/cards/gym1/62_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Blaze",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "20",
+          "text": "Does 10 damage to each Grass Pokémon on your opponent's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchType": {
+              "type": "Grass",
+              "n": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-62",
+      "set": "gym2",
+      "name": "Blaine's Growlithe",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/62.webp",
+      "imgLarge": "img/cards/gym2/62_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Stoke",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Fire Energy card and attach it to Blaine's Growlithe. Shuffle your deck afterward.",
+          "effect": {
+            "searchAttach": "Fire"
+          }
+        },
+        {
+          "name": "Body Slam",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym2-64",
+      "set": "gym2",
+      "name": "Blaine's Ponyta",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/64.webp",
+      "imgLarge": "img/cards/gym2/64_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hind Kick",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If you have any Benched Pokémon, flip a coin. If heads, switch Blaine's Ponyta with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelf": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-33",
+      "set": "gym2",
+      "name": "Blaine's Rapidash",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/33.webp",
+      "imgLarge": "img/cards/gym2/33_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": "Blaine's Ponyta",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Fire Mane",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Stamp",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage (to the Defending Pokémon) and 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) If tails, this attack does 30 damage (to the Defending Pokémon).",
+          "effect": {
+            "flipBonus": 10,
+            "headsBench": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-66",
+      "set": "gym2",
+      "name": "Blaine's Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/66.webp",
+      "imgLarge": "img/cards/gym2/66_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Call Will-o'-the-wisp",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "",
+          "text": "Flip 3 coins. For each heads, if you have a Fire Energy card in your discard pile, put it into your hand.",
+          "effect": {
+            "flipRecoverEnergy": {
+              "n": 3,
+              "type": "Fire"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-118",
+      "set": "base4",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base4/118.webp",
+      "imgLarge": "img/cards/base4/118_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 1,
+      "id": "gym2-100",
+      "set": "gym2",
+      "name": "Blaine",
+      "kind": "trainer",
+      "img": "img/cards/gym2/100.webp",
+      "imgLarge": "img/cards/gym2/100_hires.webp",
+      "text": "During this turn, instead of attaching your free Energy card, you may instead attach 2 Fire Energy cards to 1 of your Pokémon with Blaine in its name. (Playing additional copies of this card this turn has no effect.)",
+      "trainer": "blaine"
+    },
+    {
+      "count": 1,
+      "id": "gym1-121",
+      "set": "gym1",
+      "name": "Blaine's Gamble",
+      "kind": "trainer",
+      "img": "img/cards/gym1/121.webp",
+      "imgLarge": "img/cards/gym1/121_hires.webp",
+      "text": "Discard any number of other cards from your hand, then flip a coin. If heads, draw twice that many cards.",
+      "trainer": "blainesGamble"
+    },
+    {
+      "count": 1,
+      "id": "gym2-113",
+      "set": "gym2",
+      "name": "Cinnabar City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym2/113.webp",
+      "imgLarge": "img/cards/gym2/113_hires.webp",
+      "text": "This card stays in play after being played. Discard this card if another Stadium card comes into play. Ignore Weakness when a Water Pokémon does damage to a Pokémon with Blaine in its name.",
+      "trainer": "stadium",
+      "stadium": "cinnabar"
+    },
+    {
+      "count": 2,
+      "id": "gym2-124",
+      "set": "gym2",
+      "name": "Fervor",
+      "kind": "trainer",
+      "img": "img/cards/gym2/124.webp",
+      "imgLarge": "img/cards/gym2/124_hires.webp",
+      "text": "Show the top 3 cards of your deck to all players. Put any Fire Energy cards there into your hand and discard the rest.",
+      "trainer": "fervor"
+    },
+    {
+      "count": 1,
+      "id": "gym2-117",
+      "set": "gym2",
+      "name": "Max Revive",
+      "kind": "trainer",
+      "img": "img/cards/gym2/117.webp",
+      "imgLarge": "img/cards/gym2/117_hires.webp",
+      "text": "Discard 2 Energy cards from your hand in order to put 1 Basic Pokémon from your discard pile onto your Bench. (You can't play Max Revive if your Bench is full.)",
+      "trainer": "maxRevive"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base4-117",
+      "set": "base4",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/117.webp",
+      "imgLarge": "img/cards/base4/117_hires.webp",
+      "text": "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 28,
+      "id": "gym2-128",
+      "set": "gym2",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/gym2/128.webp",
+      "imgLarge": "img/cards/gym2/128_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

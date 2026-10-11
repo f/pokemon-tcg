@@ -1,0 +1,551 @@
+{
+  "name": "Zacian V League",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Metal",
+    "Dragon",
+    "Darkness"
+  ],
+  "featured": [
+    "swsh1-138",
+    "sm12-156",
+    "swsh1-128"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "sm12-156",
+      "set": "sm12",
+      "name": "Arceus & Dialga & Palkia-GX",
+      "kind": "pokemon",
+      "img": "img/cards/sm12/156.webp",
+      "imgLarge": "img/cards/sm12/156_hires.webp",
+      "stage": 0,
+      "hp": 280,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": "Fairy",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Ultimate Ray",
+          "cost": [
+            "Water",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": "Search your deck for up to 3 basic Energy cards and attach them to your Pokémon in any way you like. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachAny": {
+              "n": 3
+            }
+          }
+        },
+        {
+          "name": "Altered Creation-GX",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "",
+          "text": "For the rest of this game, your Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). If this Pokémon has at least 1 extra Water Energy attached to it (in addition to this attack's cost), when your opponent's Active Pokémon is Knocked Out by damage from those attacks, take 1 more Prize card. (You can't use more than 1 GX attack in a game.)",
+          "effect": {
+            "gx": true,
+            "alteredCreation": {
+              "type": "Water"
+            }
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "GX",
+        "TAG TEAM"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh2-126",
+      "set": "swsh2",
+      "name": "Galarian Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/126.webp",
+      "imgLarge": "img/cards/swsh2/126_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Evolution Roar",
+        "text": "You must discard 2 cards from your hand in order to use this Ability. Once during your turn, you may search your deck for a Galarian Perrserker, reveal it, and put it into your hand. Then, shuffle your deck.",
+        "kind": "evolutionRoar",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh1-128",
+      "set": "swsh1",
+      "name": "Galarian Perrserker",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/128.webp",
+      "imgLarge": "img/cards/swsh1/128_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": "Galarian Meowth",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Metal Claw",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Steely Spirit",
+        "text": "Your Metal Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+        "kind": "steelySpirit",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh1-117",
+      "set": "swsh1",
+      "name": "Galarian Zigzagoon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/117.webp",
+      "imgLarge": "img/cards/swsh1/117_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Headbutt Tantrum",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may put 1 damage counter on 1 of your opponent's Pokémon.",
+        "kind": "headbuttTantrum",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sm9-99",
+      "set": "sm9",
+      "name": "Jirachi",
+      "kind": "pokemon",
+      "img": "img/cards/sm9/99.webp",
+      "imgLarge": "img/cards/sm9/99_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Stellar Wish",
+        "text": "Once during your turn (before your attack), if this Pokémon is your Active Pokémon, you may look at the top 5 cards of your deck, reveal a Trainer card you find there, and put it into your hand. Then, shuffle the other cards back into your deck, and this Pokémon is now Asleep.",
+        "kind": "stellarWish",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm10-75",
+      "set": "sm10",
+      "name": "Mewtwo",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/75.webp",
+      "imgLarge": "img/cards/sm10/75_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Mind Report",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may put a Supporter card from your discard pile on top of your deck.",
+        "kind": "mindReport",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-148",
+      "set": "swsh1",
+      "name": "Oranguru",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/148.webp",
+      "imgLarge": "img/cards/swsh1/148_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Whap Down",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Primate Wisdom",
+        "text": "Once during your turn, you may switch a card from your hand with the top card of your deck.",
+        "kind": "primateWisdom",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-138",
+      "set": "swsh1",
+      "name": "Zacian V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/138.webp",
+      "imgLarge": "img/cards/swsh1/138_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Brave Blade",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal"
+          ],
+          "damage": "230",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ],
+      "power": {
+        "name": "Intrepid Sword",
+        "text": "Once during your turn, you may look at the top 3 cards of your deck and attach any number of Metal Energy cards you find there to this Pokémon. Put the other cards into your hand. If you use this Ability, your turn ends.",
+        "kind": "intrepidSword",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh1-158",
+      "set": "swsh1",
+      "name": "Big Charm",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/158.webp",
+      "imgLarge": "img/cards/swsh1/158_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached. The Pokémon this card is attached to gets +30 HP. You may play any number of Item cards during your turn.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "bigCharm"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-154",
+      "set": "swsh2",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/154.webp",
+      "imgLarge": "img/cards/swsh2/154_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm10-170",
+      "set": "sm10",
+      "name": "Energy Spinner",
+      "kind": "trainer",
+      "img": "img/cards/sm10/170.webp",
+      "imgLarge": "img/cards/sm10/170_hires.webp",
+      "text": "Search your deck for a basic Energy card, reveal it, and put it into your hand. If you go second and it's your first turn, search for up to 3 basic Energy cards instead of 1. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energySpinner",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-162",
+      "set": "swsh1",
+      "name": "Energy Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/162.webp",
+      "imgLarge": "img/cards/swsh1/162_hires.webp",
+      "text": "Move a basic Energy from 1 of your Pokémon to another of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "energySwitch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm12-192",
+      "set": "sm12",
+      "name": "Great Catcher",
+      "kind": "trainer",
+      "img": "img/cards/sm12/192.webp",
+      "imgLarge": "img/cards/sm12/192_hires.webp",
+      "text": "You can play this card only if you discard 2 other cards from your hand. Switch 1 of your opponent's Benched Pokémon-GX or Pokémon-EX with their Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "greatCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm12-193",
+      "set": "sm12",
+      "name": "Guzma & Hala",
+      "kind": "trainer",
+      "img": "img/cards/sm12/193.webp",
+      "imgLarge": "img/cards/sm12/193_hires.webp",
+      "text": "Search your deck for a Stadium card, reveal it, and put it into your hand. Then, shuffle your deck. When you play this card, you may discard 2 other cards from your hand. If you do, you may also search for a Pokémon Tool card and a Special Energy card in this way. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "guzmaHala",
+      "ttype": "supporter",
+      "tags": [
+        "TAG TEAM"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm12-198",
+      "set": "sm12",
+      "name": "Mallow & Lana",
+      "kind": "trainer",
+      "img": "img/cards/sm12/198.webp",
+      "imgLarge": "img/cards/sm12/198_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. When you play this card, you may discard 2 other cards from your hand. If you do, heal 120 damage from the Pokémon you moved to your Bench. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "mallowLana",
+      "ttype": "supporter",
+      "tags": [
+        "TAG TEAM"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh1-169",
+      "set": "swsh1",
+      "name": "Marnie",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/169.webp",
+      "imgLarge": "img/cards/swsh1/169_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "marnie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-170",
+      "set": "swsh1",
+      "name": "Metal Saucer",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/170.webp",
+      "imgLarge": "img/cards/swsh1/170_hires.webp",
+      "text": "Attach a Metal Energy card from your discard pile to 1 of your Benched Metal Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "metalSaucer",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-179",
+      "set": "swsh1",
+      "name": "Quick Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/179.webp",
+      "imgLarge": "img/cards/swsh1/179_hires.webp",
+      "text": "You can play this card only if you discard another card from your hand. Search your deck for a Basic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "quickBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh2-165",
+      "set": "swsh2",
+      "name": "Scoop Up Net",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/165.webp",
+      "imgLarge": "img/cards/swsh2/165_hires.webp",
+      "text": "Put 1 of your Pokémon that isn't a Pokémon V or a Pokémon-GX into your hand. (Discard all attached cards.) You may play any number of Item cards during your turn.",
+      "trainer": "scoopUpNet",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm12-206",
+      "set": "sm12",
+      "name": "Tag Call",
+      "kind": "trainer",
+      "img": "img/cards/sm12/206.webp",
+      "imgLarge": "img/cards/sm12/206_hires.webp",
+      "text": "Search your deck for up to 2 TAG TEAM cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "tagCall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm9-156",
+      "set": "sm9",
+      "name": "Viridian Forest",
+      "kind": "trainer",
+      "img": "img/cards/sm9/156.webp",
+      "imgLarge": "img/cards/sm9/156_hires.webp",
+      "text": "Once during each player's turn, that player may discard a card from their hand. If they do, that player searches their deck for a basic Energy card, reveals it, and puts it into their hand. Then, that player shuffles their deck. This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "viridianForest"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-186",
+      "set": "swsh1",
+      "name": "Aurora Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh1/186.webp",
+      "imgLarge": "img/cards/swsh1/186_hires.webp",
+      "energyType": "Grass|Fire|Water|Lightning|Psychic|Fighting|Darkness|Metal|Dragon|Fairy",
+      "special": "aurora",
+      "text": "You can attach this card to 1 of your Pokémon only if you discard another card from your hand. As long as this card is attached to a Pokémon, it provides every type of Energy but provides only 1 Energy at a time."
+    },
+    {
+      "count": 8,
+      "id": "sve-8",
+      "set": "sve",
+      "name": "Basic Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/8.webp",
+      "imgLarge": "img/cards/sve/8_hires.webp",
+      "energyType": "Metal"
+    },
+    {
+      "count": 2,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

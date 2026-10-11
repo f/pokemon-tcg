@@ -1,0 +1,696 @@
+{
+  "name": "Bright Tide",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Water",
+    "Lightning"
+  ],
+  "featured": [
+    "sm1-41",
+    "sm1-34",
+    "sm1-50"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm1-40",
+      "set": "sm1",
+      "name": "Brionne",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/40.webp",
+      "imgLarge": "img/cards/sm1/40_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Popplio",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Disarming Voice",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-49",
+      "set": "sm1",
+      "name": "Chinchou",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/49.webp",
+      "imgLarge": "img/cards/sm1/49_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Searching Light",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Look at 1 of your face-down Prize cards.",
+          "effect": {
+            "peekPrize": 1
+          }
+        },
+        {
+          "name": "Electro Ball",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-34",
+      "set": "sm1",
+      "name": "Cloyster",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/34.webp",
+      "imgLarge": "img/cards/sm1/34_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": "Shellder",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Headlock",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage. If tails, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipBonus": 30,
+            "tailsStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Guard Press",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "During your opponent's next turn, this Pokémon takes 20 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-36",
+      "set": "sm1",
+      "name": "Corsola",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/36.webp",
+      "imgLarge": "img/cards/sm1/36_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Surf",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-29",
+      "set": "sm1",
+      "name": "Golduck",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/29.webp",
+      "imgLarge": "img/cards/sm1/29_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Psyduck",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Double Jet",
+          "cost": [
+            "Water"
+          ],
+          "damage": "60×",
+          "text": "Discard up to 2 Water Energy cards from your hand. This attack does 60 damage for each card you discarded in this way.",
+          "effect": {
+            "discardHandTypeTimes": {
+              "type": "Water",
+              "max": 2,
+              "n": 60
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-104",
+      "set": "sm1",
+      "name": "Herdier",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/104.webp",
+      "imgLarge": "img/cards/sm1/104_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": "Lillipup",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Treasure Hunt",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put an Item card from your discard pile into your hand.",
+        "kind": "treasureHunt",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm1-50",
+      "set": "sm1",
+      "name": "Lanturn",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/50.webp",
+      "imgLarge": "img/cards/sm1/50_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": "Chinchou",
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        },
+        {
+          "name": "Aqua Spark",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "If this Pokémon has any Water Energy attached to it, this attack does 60 more damage.",
+          "effect": {
+            "bonusIfSelfType": {
+              "type": "Water",
+              "n": 60
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-103",
+      "set": "sm1",
+      "name": "Lillipup",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/103.webp",
+      "imgLarge": "img/cards/sm1/103_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Work Up",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "During your next turn, this Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+          "effect": {
+            "boostNext": {
+              "atk": null,
+              "n": 20
+            }
+          }
+        },
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm1-39",
+      "set": "sm1",
+      "name": "Popplio",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/39.webp",
+      "imgLarge": "img/cards/sm1/39_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-41",
+      "set": "sm1",
+      "name": "Primarina",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/41.webp",
+      "imgLarge": "img/cards/sm1/41_hires.webp",
+      "stage": 2,
+      "hp": 150,
+      "type": "Water",
+      "evolvesFrom": "Brionne",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Disarming Voice",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        },
+        {
+          "name": "Sparkling Aria",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": "Heal 30 damage from this Pokémon.",
+          "effect": {
+            "heal": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-28",
+      "set": "sm1",
+      "name": "Psyduck",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/28.webp",
+      "imgLarge": "img/cards/sm1/28_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Confusion Wave",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Both Active Pokémon are now Confused.",
+          "effect": {
+            "status": "confused",
+            "selfStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-33",
+      "set": "sm1",
+      "name": "Shellder",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/33.webp",
+      "imgLarge": "img/cards/sm1/33_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-97",
+      "set": "sm1",
+      "name": "Spearow",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/97.webp",
+      "imgLarge": "img/cards/sm1/97_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Peck Bugs",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "If your opponent's Active Pokémon is a Grass Pokémon, this attack does 30 more damage.",
+          "effect": {
+            "bonusIfDefType": {
+              "type": "Grass",
+              "n": 30
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-53",
+      "set": "sm1",
+      "name": "Togedemaru",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/53.webp",
+      "imgLarge": "img/cards/sm1/53_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Metal",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Defense Curl",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Discharge",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "30×",
+          "text": "Discard all Lightning Energy from this Pokémon. This attack does 30 damage for each card you discarded in this way.",
+          "effect": {
+            "discardAllTypeTimes": {
+              "type": "Lightning",
+              "n": 30
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-37",
+      "set": "sm1",
+      "name": "Wingull",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/37.webp",
+      "imgLarge": "img/cards/sm1/37_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Roost",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Heal 30 damage from this Pokémon. It can't retreat during your next turn.",
+          "effect": {
+            "heal": 30,
+            "selfNoRetreat": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm1-116",
+      "set": "sm1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sm1/116.webp",
+      "imgLarge": "img/cards/sm1/116_hires.webp",
+      "text": "Put 2 basic Energy cards from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-122",
+      "set": "sm1",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm1/122.webp",
+      "imgLarge": "img/cards/sm1/122_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-127",
+      "set": "sm1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sm1/127.webp",
+      "imgLarge": "img/cards/sm1/127_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-135",
+      "set": "sm1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/135.webp",
+      "imgLarge": "img/cards/sm1/135_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 8,
+      "id": "sm1-167",
+      "set": "sm1",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/167.webp",
+      "imgLarge": "img/cards/sm1/167_hires.webp",
+      "energyType": "Lightning"
+    },
+    {
+      "count": 12,
+      "id": "sm1-166",
+      "set": "sm1",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/166.webp",
+      "imgLarge": "img/cards/sm1/166_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

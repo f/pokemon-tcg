@@ -1,0 +1,450 @@
+{
+  "name": "Tinkaton ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Psychic"
+  ],
+  "featured": [
+    "svp-31",
+    "sv1-90",
+    "sv1-103"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv1-90",
+      "set": "sv1",
+      "name": "Drifblim",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/90.webp",
+      "imgLarge": "img/cards/sv1/90_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Drifloon",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Curse Spreading",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Put 8 damage counters on your opponent's Pokémon in any way you like.",
+          "effect": {
+            "placeCounters": {
+              "n": 8
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv1-89",
+      "set": "sv1",
+      "name": "Drifloon",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/89.webp",
+      "imgLarge": "img/cards/sv1/89_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Balloon Blast",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-103",
+      "set": "sv1",
+      "name": "Espathra",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/103.webp",
+      "imgLarge": "img/cards/sv1/103_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Flittle",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Eye Strength",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "20",
+          "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+          "effect": {
+            "noRetreat": true
+          }
+        },
+        {
+          "name": "Psychic",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "This attack does 50 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 50
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv1-101",
+      "set": "sv1",
+      "name": "Flittle",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/101.webp",
+      "imgLarge": "img/cards/sv1/101_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spinning Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-162",
+      "set": "sv1",
+      "name": "Squawkabilly",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/162.webp",
+      "imgLarge": "img/cards/sv1/162_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Fly",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Flip a coin. If tails, this attack does nothing. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+          "effect": {
+            "flipFail": true,
+            "shield": "all"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv2-100",
+      "set": "sv2",
+      "name": "Tinkatink",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/100.webp",
+      "imgLarge": "img/cards/sv2/100_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Corkscrew Punch",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-31",
+      "set": "svp",
+      "name": "Tinkaton ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/31.webp",
+      "imgLarge": "img/cards/svp/31_hires.webp",
+      "stage": 2,
+      "hp": 300,
+      "type": "Psychic",
+      "evolvesFrom": "Tinkatuff",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Big Hammer",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each card in your hand.",
+          "effect": {
+            "timesHand": 30
+          }
+        },
+        {
+          "name": "Pulverizing Press",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv2-103",
+      "set": "sv2",
+      "name": "Tinkatuff",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/103.webp",
+      "imgLarge": "img/cards/sv2/103_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Psychic",
+      "evolvesFrom": "Tinkatink",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Light Punch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Boundless Power",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-182",
+      "set": "sv1",
+      "name": "Pal Pad",
+      "kind": "trainer",
+      "img": "img/cards/sv1/182.webp",
+      "imgLarge": "img/cards/sv1/182_hires.webp",
+      "text": "Shuffle up to 2 Supporter cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "palPad",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-186",
+      "set": "sv1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/sv1/186.webp",
+      "imgLarge": "img/cards/sv1/186_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

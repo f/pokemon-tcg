@@ -1,0 +1,456 @@
+{
+  "name": "Melmetal ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Metal"
+  ],
+  "featured": [
+    "svp-104",
+    "sv3-145",
+    "sv1-142"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv3-145",
+      "set": "sv3",
+      "name": "Bronzong",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/145.webp",
+      "imgLarge": "img/cards/sv3/145_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Metal",
+      "evolvesFrom": "Bronzor",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Oracle Press",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "20",
+          "text": "During your opponent's next turn, prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon. (Damage is not an effect.)",
+          "effect": {
+            "shieldEffects": true
+          }
+        },
+        {
+          "name": "Extrasensory",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": "70+",
+          "text": "If you have the same number of cards in your hand as your opponent, this attack does 90 more damage.",
+          "effect": {
+            "bonusIfEqualHands": 90
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-144",
+      "set": "sv3",
+      "name": "Bronzor",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/144.webp",
+      "imgLarge": "img/cards/sv3/144_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Mirror Draw",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "",
+          "text": "Draw cards until you have the same number of cards in your hand as your opponent.",
+          "effect": {
+            "drawToMatch": true
+          }
+        },
+        {
+          "name": "Speed Dive",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-104",
+      "set": "svp",
+      "name": "Melmetal ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/104.webp",
+      "imgLarge": "img/cards/svp/104_hires.webp",
+      "stage": 1,
+      "hp": 300,
+      "type": "Metal",
+      "evolvesFrom": "Meltan",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Metal-bolize",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Metal Energy cards and attach them to this Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttach": {
+              "type": "Metal",
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Full Metal Knuckle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90+",
+          "text": "This attack does 30 more damage for each Metal Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Metal",
+              "n": 30
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv3-152",
+      "set": "sv3",
+      "name": "Meltan",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/152.webp",
+      "imgLarge": "img/cards/sv3/152_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Melt",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-151",
+      "set": "sv2",
+      "name": "Orthworm",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/151.webp",
+      "imgLarge": "img/cards/sv2/151_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Shoot Through",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 30,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Nutritional Iron",
+        "text": "If this Pokémon has 3 or more Metal Energy attached, it gets +100 HP.",
+        "kind": "nutritionalIron",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv1-142",
+      "set": "sv1",
+      "name": "Revavroom",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/142.webp",
+      "imgLarge": "img/cards/sv1/142_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Metal",
+      "evolvesFrom": "Varoom",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Knock Away",
+          "cost": [
+            "Metal",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90+",
+          "text": "Flip a coin. If heads, this attack does 90 more damage.",
+          "effect": {
+            "flipBonus": 90
+          }
+        }
+      ],
+      "power": {
+        "name": "Rumbling Engine",
+        "text": "You must discard an Energy card from your hand in order to use this Ability. Once during your turn, you may draw cards until you have 6 cards in your hand.",
+        "kind": "rumblingEngine",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv3-154",
+      "set": "sv3",
+      "name": "Varoom",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/154.webp",
+      "imgLarge": "img/cards/sv3/154_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spinning Draw",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "10",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv4-136",
+      "set": "sv4",
+      "name": "Zacian",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/136.webp",
+      "imgLarge": "img/cards/sv4/136_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Iron Roar",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "30",
+          "text": "Attach a Basic Metal Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": "Metal"
+            }
+          }
+        },
+        {
+          "name": "Brave Blade",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3pt5-159",
+      "set": "sv3pt5",
+      "name": "Energy Sticker",
+      "kind": "trainer",
+      "img": "img/cards/sv3pt5/159.webp",
+      "imgLarge": "img/cards/sv3pt5/159_hires.webp",
+      "text": "Flip a coin. If heads, attach a Basic Energy card from your discard pile to 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "energySticker",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv4pt5-82",
+      "set": "sv4pt5",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv4pt5/82.webp",
+      "imgLarge": "img/cards/sv4pt5/82_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-188",
+      "set": "sv1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sv1/188.webp",
+      "imgLarge": "img/cards/sv1/188_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv4-173",
+      "set": "sv4",
+      "name": "Roark",
+      "kind": "trainer",
+      "img": "img/cards/sv4/173.webp",
+      "imgLarge": "img/cards/sv4/173_hires.webp",
+      "text": "Draw 2 cards. Put a Basic Energy card from your discard pile into your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "roark",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 19,
+      "id": "sve-8",
+      "set": "sve",
+      "name": "Basic Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/8.webp",
+      "imgLarge": "img/cards/sve/8_hires.webp",
+      "energyType": "Metal"
+    }
+  ]
+}

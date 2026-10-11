@@ -1,0 +1,524 @@
+{
+  "name": "Galarian Darmanitan",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Water",
+    "Fire"
+  ],
+  "featured": [
+    "swsh3-44",
+    "swsh3-49",
+    "swsh2-42"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh3-49",
+      "set": "swsh3",
+      "name": "Beartic",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/49.webp",
+      "imgLarge": "img/cards/swsh3/49_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Water",
+      "evolvesFrom": "Cubchoo",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Slash",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Frozen Slice",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": "This Pokémon also does 50 damage to itself.",
+          "effect": {
+            "selfDamage": 50
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh3-48",
+      "set": "swsh3",
+      "name": "Cubchoo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/48.webp",
+      "imgLarge": "img/cards/swsh3/48_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Chop",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Icicle",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-44",
+      "set": "swsh3",
+      "name": "Galarian Darmanitan",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/44.webp",
+      "imgLarge": "img/cards/swsh3/44_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Water",
+      "evolvesFrom": "Galarian Darumaka",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Blizzard",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "This attack also does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "oppBenchAll": 10
+          }
+        },
+        {
+          "name": "Crushing Headbutt",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "170",
+          "text": "During your next turn, this Pokémon can't use Crushing Headbutt.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh3-28",
+      "set": "swsh3",
+      "name": "Galarian Darmanitan",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/28.webp",
+      "imgLarge": "img/cards/swsh3/28_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Fire",
+      "evolvesFrom": "Galarian Darumaka",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Frozen Heat",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "110+",
+          "text": "You may discard all Water Energy from this Pokémon. If you do, this attack does 60 more damage.",
+          "effect": {
+            "optionalDiscardTypeAll": {
+              "type": "Water",
+              "bonus": 60
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh3-43",
+      "set": "swsh3",
+      "name": "Galarian Darumaka",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/43.webp",
+      "imgLarge": "img/cards/swsh3/43_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-133",
+      "set": "swsh3",
+      "name": "Kangaskhan",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/133.webp",
+      "imgLarge": "img/cards/swsh3/133_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rally Back",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "If any of your Pokémon were Knocked Out by damage from an attack from your opponent's Pokémon during their last turn, this attack does 90 more damage.",
+          "effect": {
+            "bonusIfKOLastTurn": {
+              "n": 90
+            }
+          }
+        },
+        {
+          "name": "Hammer In",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-42",
+      "set": "swsh2",
+      "name": "Pelipper",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/42.webp",
+      "imgLarge": "img/cards/swsh2/42_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": "Wingull",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Power Cyclone",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "110",
+          "text": "Move an Energy from this Pokémon to 1 of your Benched Pokémon.",
+          "effect": {
+            "moveEnergyToBench": {
+              "n": 1,
+              "type": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-37",
+      "set": "swsh3",
+      "name": "Suicune",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/37.webp",
+      "imgLarge": "img/cards/swsh3/37_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Aurora Loop",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Put 2 Water Energy attached to this Pokémon into your hand.",
+          "effect": {
+            "returnTypeToHand": {
+              "type": "Water",
+              "n": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-44",
+      "set": "swsh2",
+      "name": "Tympole",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/44.webp",
+      "imgLarge": "img/cards/swsh2/44_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spiral Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-50",
+      "set": "swsh3",
+      "name": "Wishiwashi",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/50.webp",
+      "imgLarge": "img/cards/swsh3/50_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Deep Sea Swirl",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Shuffle your hand into your deck. Then, draw 8 cards.",
+          "effect": {
+            "handReset": 8
+          }
+        },
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh3-159",
+      "set": "swsh3",
+      "name": "Bird Keeper",
+      "kind": "trainer",
+      "img": "img/cards/swsh3/159.webp",
+      "imgLarge": "img/cards/swsh3/159_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "birdKeeper",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-156",
+      "set": "swsh2",
+      "name": "Capacious Bucket",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/156.webp",
+      "imgLarge": "img/cards/swsh2/156_hires.webp",
+      "text": "Search your deck for up to 2 Water Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "capaciousBucket",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh3-172",
+      "set": "swsh3",
+      "name": "Turbo Patch",
+      "kind": "trainer",
+      "img": "img/cards/swsh3/172.webp",
+      "imgLarge": "img/cards/swsh3/172_hires.webp",
+      "text": "Flip a coin. If heads, attach a basic Energy card from your discard pile to 1 of your Basic Pokémon that isn't a Pokémon-GX. You may play any number of Item cards during your turn.",
+      "trainer": "turboPatch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

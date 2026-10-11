@@ -1,0 +1,489 @@
+{
+  "name": "Battle Mind",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Fire",
+    "Psychic",
+    "Dragon"
+  ],
+  "featured": [
+    "sm10-29",
+    "sm10-24",
+    "sm10-31"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm10-24",
+      "set": "sm10",
+      "name": "Darmanitan",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/24.webp",
+      "imgLarge": "img/cards/sm10/24_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Fire",
+      "evolvesFrom": "Darumaka",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Find Wildfire",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Fire Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchBasicEnergy": {
+              "n": 3,
+              "type": "Fire"
+            }
+          }
+        },
+        {
+          "name": "Flare Blitz",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "110",
+          "text": "Discard all Fire Energy from this Pokémon.",
+          "effect": {
+            "discardAllType": "Fire"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm10-23",
+      "set": "sm10",
+      "name": "Darumaka",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/23.webp",
+      "imgLarge": "img/cards/sm10/23_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Flame Charge",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Search your deck for a Fire Energy card and attach it to this Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttach": {
+              "type": "Fire",
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Flop",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-29",
+      "set": "sm10",
+      "name": "Incineroar",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/29.webp",
+      "imgLarge": "img/cards/sm10/29_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Fire",
+      "evolvesFrom": "Torracat",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Flamethrower",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Strong Cheer",
+        "text": "Your Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You can't apply more than 1 Strong Cheer Ability at a time.",
+        "kind": "strongCheer",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm10-27",
+      "set": "sm10",
+      "name": "Litten",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/27.webp",
+      "imgLarge": "img/cards/sm10/27_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Caturday",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card. If you do, this Pokémon is now Asleep.",
+          "effect": {
+            "draw": 1,
+            "selfStatus": "asleep"
+          }
+        },
+        {
+          "name": "Big Bite",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "noRetreat": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-147",
+      "set": "sm10",
+      "name": "Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/147.webp",
+      "imgLarge": "img/cards/sm10/147_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Caturday",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards. If you do, this Pokémon is now Asleep.",
+          "effect": {
+            "draw": 2,
+            "selfStatus": "asleep"
+          }
+        },
+        {
+          "name": "Tail Whap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-75",
+      "set": "sm10",
+      "name": "Mewtwo",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/75.webp",
+      "imgLarge": "img/cards/sm10/75_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Mind Report",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may put a Supporter card from your discard pile on top of your deck.",
+        "kind": "mindReport",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm10-30",
+      "set": "sm10",
+      "name": "Salandit",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/30.webp",
+      "imgLarge": "img/cards/sm10/30_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Grass Fire",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": "Discard a Grass Energy from your opponent's Active Pokémon.",
+          "effect": {
+            "removeEnergyType": "Grass"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm10-31",
+      "set": "sm10",
+      "name": "Salazzle",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/31.webp",
+      "imgLarge": "img/cards/sm10/31_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Fire",
+      "evolvesFrom": "Salandit",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Combustion",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Roast Reveal",
+        "text": "Once during your turn (before your attack), you may discard a Fire Energy card from your hand. If you do, draw 3 cards.",
+        "kind": "roastReveal",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sm10-28",
+      "set": "sm10",
+      "name": "Torracat",
+      "kind": "pokemon",
+      "img": "img/cards/sm10/28.webp",
+      "imgLarge": "img/cards/sm10/28_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": "Litten",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fire Fang",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": "Your opponent's Active Pokémon is now Burned.",
+          "effect": {
+            "status": "burned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm75-50",
+      "set": "sm75",
+      "name": "Turtonator",
+      "kind": "pokemon",
+      "img": "img/cards/sm75/50.webp",
+      "imgLarge": "img/cards/sm75/50_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": "Fairy",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Explosive Jet",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "damage": "50×",
+          "text": "Discard any amount of Fire Energy from your Pokémon. This attack does 50 damage for each card you discarded in this way.",
+          "effect": {
+            "hailBlade": {
+              "type": "Fire",
+              "n": 50
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm5-119",
+      "set": "sm5",
+      "name": "Cynthia",
+      "kind": "trainer",
+      "img": "img/cards/sm5/119.webp",
+      "imgLarge": "img/cards/sm5/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "cynthia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-130",
+      "set": "sm7",
+      "name": "Fisherman",
+      "kind": "trainer",
+      "img": "img/cards/sm7/130.webp",
+      "imgLarge": "img/cards/sm7/130_hires.webp",
+      "text": "Put 4 basic Energy cards from your discard pile into your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "fisherman",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm5-125",
+      "set": "sm5",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm5/125.webp",
+      "imgLarge": "img/cards/sm5/125_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm5-126",
+      "set": "sm5",
+      "name": "Looker",
+      "kind": "trainer",
+      "img": "img/cards/sm5/126.webp",
+      "imgLarge": "img/cards/sm5/126_hires.webp",
+      "text": "Draw 3 cards from the bottom of your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "looker",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm10-189",
+      "set": "sm10",
+      "name": "Welder",
+      "kind": "trainer",
+      "img": "img/cards/sm10/189.webp",
+      "imgLarge": "img/cards/sm10/189_hires.webp",
+      "text": "Attach up to 2 Fire Energy cards from your hand to 1 of your Pokémon. If you do, draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "welder",
+      "ttype": "supporter"
+    },
+    {
+      "count": 15,
+      "id": "sm3-167",
+      "set": "sm3",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sm3/167.webp",
+      "imgLarge": "img/cards/sm3/167_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 5,
+      "id": "sm1-162",
+      "set": "sm1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/162.webp",
+      "imgLarge": "img/cards/sm1/162_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

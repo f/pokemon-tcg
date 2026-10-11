@@ -1,0 +1,477 @@
+{
+  "name": "Mega Greninja ex League",
+  "group": "mega",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "me4-22",
+    "me3-21",
+    "me3-62"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "me4-20",
+      "set": "me4",
+      "name": "Froakie",
+      "kind": "pokemon",
+      "img": "img/cards/me4/20.webp",
+      "imgLarge": "img/cards/me4/20_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me4-21",
+      "set": "me4",
+      "name": "Frogadier",
+      "kind": "pokemon",
+      "img": "img/cards/me4/21.webp",
+      "imgLarge": "img/cards/me4/21_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Water",
+      "evolvesFrom": "Froakie",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Summoning Jutsu",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchPokemonToHand": {
+              "n": 3
+            }
+          }
+        },
+        {
+          "name": "Aqua Edge",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me1-32",
+      "set": "me1",
+      "name": "Mantine",
+      "kind": "pokemon",
+      "img": "img/cards/me1/32.webp",
+      "imgLarge": "img/cards/me1/32_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Waterfall",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "me4-22",
+      "set": "me4",
+      "name": "Mega Greninja ex",
+      "kind": "pokemon",
+      "img": "img/cards/me4/22.webp",
+      "imgLarge": "img/cards/me4/22_hires.webp",
+      "stage": 2,
+      "hp": 350,
+      "type": "Water",
+      "evolvesFrom": "Frogadier",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ninja Spinner",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "120+",
+          "text": "You may put a Water Energy attached to this Pokémon into your hand and have this attack do 80 more damage.",
+          "effect": {
+            "returnEnergyBonus": {
+              "type": "Water",
+              "bonus": 80
+            }
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Mega",
+        "ex"
+      ],
+      "power": {
+        "name": "Mortal Shuriken",
+        "text": "Once during your turn, if this Pokémon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokémon.",
+        "kind": "mortalShuriken",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "me3-21",
+      "set": "me3",
+      "name": "Mega Starmie ex",
+      "kind": "pokemon",
+      "img": "img/cards/me3/21.webp",
+      "imgLarge": "img/cards/me3/21_hires.webp",
+      "stage": 1,
+      "hp": 330,
+      "type": "Water",
+      "evolvesFrom": "Staryu",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Jetting Blow",
+          "cost": [
+            "Water"
+          ],
+          "damage": "120",
+          "text": "This attack also does 50 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 50,
+              "count": 1
+            }
+          }
+        },
+        {
+          "name": "Nebula Beam",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "210",
+          "text": "This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "noWROnly": true,
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Mega",
+        "ex"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me3-62",
+      "set": "me3",
+      "name": "Meowth ex",
+      "kind": "pokemon",
+      "img": "img/cards/me3/62.webp",
+      "imgLarge": "img/cards/me3/62_hires.webp",
+      "stage": 0,
+      "hp": 170,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tuck Tail",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Put this Pokémon and all attached cards into your hand.",
+          "effect": {
+            "selfToHandAll": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Last-Ditch Catch",
+        "text": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck. You can't use more than 1 Ability that has \"Last-Ditch\" in its name each turn.",
+        "kind": "lastDitchCatch",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "me3-20",
+      "set": "me3",
+      "name": "Staryu",
+      "kind": "pokemon",
+      "img": "img/cards/me3/20.webp",
+      "imgLarge": "img/cards/me3/20_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "zsv10pt5-79",
+      "set": "zsv10pt5",
+      "name": "Air Balloon",
+      "kind": "trainer",
+      "img": "img/cards/zsv10pt5/79.webp",
+      "imgLarge": "img/cards/zsv10pt5/79_hires.webp",
+      "text": "The Retreat Cost of the Pokémon this card is attached to is ColorlessColorless less. You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "airBalloon"
+    },
+    {
+      "count": 2,
+      "id": "me1-114",
+      "set": "me1",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/me1/114.webp",
+      "imgLarge": "img/cards/me1/114_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv9-146",
+      "set": "sv9",
+      "name": "Brock's Scouting",
+      "kind": "trainer",
+      "img": "img/cards/sv9/146.webp",
+      "imgLarge": "img/cards/sv9/146_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or 1 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "brocksScouting",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2-87",
+      "set": "me2",
+      "name": "Dawn",
+      "kind": "trainer",
+      "img": "img/cards/me2/87.webp",
+      "imgLarge": "img/cards/me2/87_hires.webp",
+      "text": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "dawn",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "rsv10pt5-82",
+      "set": "rsv10pt5",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/rsv10pt5/82.webp",
+      "imgLarge": "img/cards/rsv10pt5/82_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me3-76",
+      "set": "me3",
+      "name": "Judge",
+      "kind": "trainer",
+      "img": "img/cards/me3/76.webp",
+      "imgLarge": "img/cards/me3/76_hires.webp",
+      "text": "Each player shuffles their hand into their deck and draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "judge",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "me1-119",
+      "set": "me1",
+      "name": "Lillie's Determination",
+      "kind": "trainer",
+      "img": "img/cards/me1/119.webp",
+      "imgLarge": "img/cards/me1/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "lilliesDetermination",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "me1-121",
+      "set": "me1",
+      "name": "Mega Signal",
+      "kind": "trainer",
+      "img": "img/cards/me1/121.webp",
+      "imgLarge": "img/cards/me1/121_hires.webp",
+      "text": "Search your deck for a Mega Evolution Pokémon ex, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "megaSignal",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "me2pt5-198",
+      "set": "me2pt5",
+      "name": "Poké Pad",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/198.webp",
+      "imgLarge": "img/cards/me2pt5/198_hires.webp",
+      "text": "Search your deck for a Pokémon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck. (Pokémon ex, Pokémon V, etc. have Rule Boxes.) You may play any number of Item cards during your turn.",
+      "trainer": "pokePad",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "me1-125",
+      "set": "me1",
+      "name": "Rare Candy",
+      "kind": "trainer",
+      "img": "img/cards/me1/125.webp",
+      "imgLarge": "img/cards/me1/125_hires.webp",
+      "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn. You may play any number of Item cards during your turn.",
+      "trainer": "rareCandy",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me4-82",
+      "set": "me4",
+      "name": "Special Red Card",
+      "kind": "trainer",
+      "img": "img/cards/me4/82.webp",
+      "imgLarge": "img/cards/me4/82_hires.webp",
+      "text": "You can use this card only if your opponent has 3 or fewer Prize cards remaining.\n\nYour opponent shuffles their hand and puts it on the bottom of their deck. If they put any cards on the bottom of their deck in this way, they draw 3 cards.",
+      "trainer": "specialRedCard",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "me1-129",
+      "set": "me1",
+      "name": "Surfing Beach",
+      "kind": "trainer",
+      "img": "img/cards/me1/129.webp",
+      "imgLarge": "img/cards/me1/129_hires.webp",
+      "text": "Once during each player's turn, that player may switch their Active Water Pokémon with 1 of their Benched Water Pokémon. You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "surfingBeach"
+    },
+    {
+      "count": 1,
+      "id": "sv10-176",
+      "set": "sv10",
+      "name": "Team Rocket's Petrel",
+      "kind": "trainer",
+      "img": "img/cards/sv10/176.webp",
+      "imgLarge": "img/cards/sv10/176_hires.webp",
+      "text": "Search your deck for a Trainer card, reveal it, and put it into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "trPetrel",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "me1-131",
+      "set": "me1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/me1/131.webp",
+      "imgLarge": "img/cards/me1/131_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand.  Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 10,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

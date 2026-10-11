@@ -1,0 +1,413 @@
+{
+  "name": "LockDown",
+  "group": "fossil",
+  "types": [
+    "Water",
+    "Fire"
+  ],
+  "featured": [
+    "base3-38",
+    "base3-42",
+    "base3-10"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "base3-49",
+      "set": "base3",
+      "name": "Horsea",
+      "kind": "pokemon",
+      "img": "img/cards/base3/49.webp",
+      "imgLarge": "img/cards/base3/49_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Smokescreen",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base3-38",
+      "set": "base3",
+      "name": "Kingler",
+      "kind": "pokemon",
+      "img": "img/cards/base3/38.webp",
+      "imgLarge": "img/cards/base3/38_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Krabby",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Flail",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10×",
+          "text": "Does 10 damage times the number of damage counters on Kingler.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        },
+        {
+          "name": "Crabhammer",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base3-51",
+      "set": "base3",
+      "name": "Krabby",
+      "kind": "pokemon",
+      "img": "img/cards/base3/51.webp",
+      "imgLarge": "img/cards/base3/51_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Basic Pokémon named Krabby and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench if full.)",
+          "effect": {
+            "callFamily": {
+              "names": [
+                "Krabby"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Irongrip",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base3-10",
+      "set": "base3",
+      "name": "Lapras",
+      "kind": "pokemon",
+      "img": "img/cards/base3/10.webp",
+      "imgLarge": "img/cards/base3/10_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each Water Energy attached to Lapras but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+          "effect": {
+            "extraWater": 20
+          }
+        },
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base3-39",
+      "set": "base3",
+      "name": "Magmar",
+      "kind": "pokemon",
+      "img": "img/cards/base3/39.webp",
+      "imgLarge": "img/cards/base3/39_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Smokescreen",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+          "effect": {
+            "sandAttack": true
+          }
+        },
+        {
+          "name": "Smog",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base1-60",
+      "set": "base1",
+      "name": "Ponyta",
+      "kind": "pokemon",
+      "img": "img/cards/base1/60.webp",
+      "imgLarge": "img/cards/base1/60_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Smash Kick",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Flame Tail",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base3-42",
+      "set": "base3",
+      "name": "Seadra",
+      "kind": "pokemon",
+      "img": "img/cards/base3/42.webp",
+      "imgLarge": "img/cards/base3/42_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Horsea",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Does 20 damage plus 10 more damage for each Water Energy attached to Seadra but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+          "effect": {
+            "extraWater": 20
+          }
+        },
+        {
+          "name": "Agility",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Seadra.",
+          "effect": {
+            "flipShield": "all"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base1-68",
+      "set": "base1",
+      "name": "Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/base1/68.webp",
+      "imgLarge": "img/cards/base1/68_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-91",
+      "set": "base1",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base1/91.webp",
+      "imgLarge": "img/cards/base1/91_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 1,
+      "id": "base3-59",
+      "set": "base3",
+      "name": "Energy Search",
+      "kind": "trainer",
+      "img": "img/cards/base3/59.webp",
+      "imgLarge": "img/cards/base3/59_hires.webp",
+      "text": "Search your deck for a basic Energy card and put it into your hand. Shuffle your deck afterward.",
+      "trainer": "energySearch"
+    },
+    {
+      "count": 1,
+      "id": "base1-82",
+      "set": "base1",
+      "name": "Full Heal",
+      "kind": "trainer",
+      "img": "img/cards/base1/82.webp",
+      "imgLarge": "img/cards/base1/82_hires.webp",
+      "text": "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.",
+      "trainer": "fullHeal"
+    },
+    {
+      "count": 1,
+      "id": "base3-60",
+      "set": "base3",
+      "name": "Gambler",
+      "kind": "trainer",
+      "img": "img/cards/base3/60.webp",
+      "imgLarge": "img/cards/base3/60_hires.webp",
+      "text": "Shuffle your hand into your deck. Flip a coin. If heads, draw 8 cards. If tails, draw 1 card.",
+      "trainer": "gambler"
+    },
+    {
+      "count": 2,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 2,
+      "id": "base1-90",
+      "set": "base1",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/90.webp",
+      "imgLarge": "img/cards/base1/90_hires.webp",
+      "text": "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 2,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 14,
+      "id": "base1-98",
+      "set": "base1",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/98.webp",
+      "imgLarge": "img/cards/base1/98_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 14,
+      "id": "base1-102",
+      "set": "base1",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/102.webp",
+      "imgLarge": "img/cards/base1/102_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

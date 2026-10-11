@@ -1,0 +1,435 @@
+{
+  "name": "Victini ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Fire"
+  ],
+  "featured": [
+    "svp-142",
+    "sv1-38",
+    "sv4pt5-10"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv2-36",
+      "set": "sv2",
+      "name": "Crocalor",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/36.webp",
+      "imgLarge": "img/cards/sv2/36_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Fire",
+      "evolvesFrom": "Fuecoco",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Steady Firebreathing",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Hyper Voice",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-164",
+      "set": "sv1",
+      "name": "Cyclizar",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/164.webp",
+      "imgLarge": "img/cards/sv1/164_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Touring",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Speed Attack",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv2-34",
+      "set": "sv2",
+      "name": "Fuecoco",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/34.webp",
+      "imgLarge": "img/cards/sv2/34_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv4pt5-9",
+      "set": "sv4pt5",
+      "name": "Magmar",
+      "kind": "pokemon",
+      "img": "img/cards/sv4pt5/9.webp",
+      "imgLarge": "img/cards/sv4pt5/9_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Steady Firebreathing",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv4pt5-10",
+      "set": "sv4pt5",
+      "name": "Magmortar",
+      "kind": "pokemon",
+      "img": "img/cards/sv4pt5/10.webp",
+      "imgLarge": "img/cards/sv4pt5/10_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Fire",
+      "evolvesFrom": "Magmar",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Volcanic Heat",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "170",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-28",
+      "set": "sv2",
+      "name": "Paldean Tauros",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/28.webp",
+      "imgLarge": "img/cards/sv2/28_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Raging Horns",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 10 more damage for each damage counter on this Pokémon.",
+          "effect": {
+            "plusSelfCounters": 10
+          }
+        },
+        {
+          "name": "Blaze Dash",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-38",
+      "set": "sv1",
+      "name": "Skeledirge",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/38.webp",
+      "imgLarge": "img/cards/sv1/38_hires.webp",
+      "stage": 2,
+      "hp": 180,
+      "type": "Fire",
+      "evolvesFrom": "Crocalor",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Passionate Singing",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "50",
+          "text": "Attach up to 2 Basic Energy cards from your discard pile to your Pokémon in any way you like.",
+          "effect": {
+            "attachDiscardAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Blazing Shout",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "190",
+          "text": "This Pokémon also does 30 damage to itself.",
+          "effect": {
+            "selfDamage": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-142",
+      "set": "svp",
+      "name": "Victini ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/142.webp",
+      "imgLarge": "img/cards/svp/142_hires.webp",
+      "stage": 0,
+      "hp": 190,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Strafe",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": "You may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMay": true
+          }
+        },
+        {
+          "name": "Victory Flame",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "220",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3pt5-159",
+      "set": "sv3pt5",
+      "name": "Energy Sticker",
+      "kind": "trainer",
+      "img": "img/cards/sv3pt5/159.webp",
+      "imgLarge": "img/cards/sv3pt5/159_hires.webp",
+      "text": "Flip a coin. If heads, attach a Basic Energy card from your discard pile to 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "energySticker",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

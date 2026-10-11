@@ -1,0 +1,464 @@
+{
+  "name": "Deoxys V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Psychic"
+  ],
+  "featured": [
+    "swshp-SWSH266",
+    "swsh6-61",
+    "swsh9-59"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh9-58",
+      "set": "swsh9",
+      "name": "Baltoy",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/58.webp",
+      "imgLarge": "img/cards/swsh9/58_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Triple Spin",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 3 coins. This attack does 20 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh9-59",
+      "set": "swsh9",
+      "name": "Claydol",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/59.webp",
+      "imgLarge": "img/cards/swsh9/59_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Baltoy",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Spinning Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Coinciding Figures",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90+",
+          "text": "If you and your opponent have the same number of Benched Pokémon, this attack does 90 more damage.",
+          "effect": {
+            "bonusIfEqualBench": 90
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh6-64",
+      "set": "swsh6",
+      "name": "Cresselia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/64.webp",
+      "imgLarge": "img/cards/swsh6/64_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Crescent Glow",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Psychic Energy card and attach it to 1 of your Pokémon. If you go second and it's your first turn, instead search for up to 3 Psychic Energy cards and attach them to 1 of your Pokémon. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachOne": {
+              "type": "Psychic",
+              "n": 1,
+              "firstTurnN": 3
+            }
+          }
+        },
+        {
+          "name": "Photon Laser",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "30+",
+          "text": "If you have at least 5 Energy in play, this attack does 90 more damage.",
+          "effect": {
+            "bonusIfEnergyInPlay": {
+              "min": 5,
+              "n": 90
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH266",
+      "set": "swshp",
+      "name": "Deoxys V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH266.webp",
+      "imgLarge": "img/cards/swshp/SWSH266_hires.webp",
+      "stage": 0,
+      "hp": 210,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon.",
+          "effect": {
+            "plusDefEnergy": 30
+          }
+        },
+        {
+          "name": "Power Edge",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": ""
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh10-64",
+      "set": "swsh10",
+      "name": "Drifblim",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/64.webp",
+      "imgLarge": "img/cards/swsh10/64_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Drifloon",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spooky Balloon",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "50",
+          "text": "Put 2 damage counters on 1 of your opponent's Benched Pokémon.",
+          "effect": {
+            "benchCounters": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh10-63",
+      "set": "swsh10",
+      "name": "Drifloon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/63.webp",
+      "imgLarge": "img/cards/swsh10/63_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Triple Spin",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10×",
+          "text": "Flip 3 coins. This attack does 10 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh6-61",
+      "set": "swsh6",
+      "name": "Gardevoir",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/61.webp",
+      "imgLarge": "img/cards/swsh6/61_hires.webp",
+      "stage": 2,
+      "hp": 140,
+      "type": "Psychic",
+      "evolvesFrom": "Kirlia",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Brainwave",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "This attack does 30 more damage for each Psychic Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Psychic",
+              "n": 30
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Shining Arcana",
+        "text": "Once during your turn, you may look at the top 2 cards of your deck and attach any number of basic Energy cards you find there to your Pokémon in any way you like. Put the other cards into your hand.",
+        "kind": "shiningArcana",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh10-61",
+      "set": "swsh10",
+      "name": "Kirlia",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/61.webp",
+      "imgLarge": "img/cards/swsh10/61_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": "Ralts",
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Teleportation Burst",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "30",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh10-60",
+      "set": "swsh10",
+      "name": "Ralts",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/60.webp",
+      "imgLarge": "img/cards/swsh10/60_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Teleportation Burst",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-226",
+      "set": "swsh8",
+      "name": "Bug Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/226.webp",
+      "imgLarge": "img/cards/swsh8/226_hires.webp",
+      "text": "Draw 2 cards. Flip a coin. If heads, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "bugCatcher",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh8-228",
+      "set": "swsh8",
+      "name": "Cook",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/228.webp",
+      "imgLarge": "img/cards/swsh8/228_hires.webp",
+      "text": "Heal 70 damage from your Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "cook",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh45-59",
+      "set": "swsh45",
+      "name": "Gym Trainer",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/59.webp",
+      "imgLarge": "img/cards/swsh45/59_hires.webp",
+      "text": "Draw 2 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "gymTrainer",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh7-150",
+      "set": "swsh7",
+      "name": "Lucky Ice Pop",
+      "kind": "trainer",
+      "img": "img/cards/swsh7/150.webp",
+      "imgLarge": "img/cards/swsh7/150_hires.webp",
+      "text": "Heal 20 damage from your Active Pokémon. If you healed any damage in this way, flip a coin. If heads, put this Lucky Ice Pop into your hand instead of the discard pile. You may play any number of Item cards during your turn.",
+      "trainer": "luckyIcePop",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh8-240",
+      "set": "swsh8",
+      "name": "Shauna",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/240.webp",
+      "imgLarge": "img/cards/swsh8/240_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "shauna",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh10-154",
+      "set": "swsh10",
+      "name": "Switch Cart",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/154.webp",
+      "imgLarge": "img/cards/swsh10/154_hires.webp",
+      "text": "Switch your Active Basic Pokémon with 1 of your Benched Pokémon. If you do, heal 30 damage from the Pokémon you moved to your Bench. You may play any number of Item cards during your turn.",
+      "trainer": "switchCart",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

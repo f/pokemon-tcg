@@ -1,0 +1,485 @@
+{
+  "name": "Galarian Sirfetch'd",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Fighting"
+  ],
+  "featured": [
+    "swsh3-98",
+    "swsh3-94",
+    "swsh3-85"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh3-84",
+      "set": "swsh3",
+      "name": "Diglett",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/84.webp",
+      "imgLarge": "img/cards/swsh3/84_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-85",
+      "set": "swsh3",
+      "name": "Dugtrio",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/85.webp",
+      "imgLarge": "img/cards/swsh3/85_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": "Diglett",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dig",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+          "effect": {
+            "flipShield": "all"
+          }
+        },
+        {
+          "name": "Mud Bomb",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-94",
+      "set": "swsh2",
+      "name": "Galarian Farfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/94.webp",
+      "imgLarge": "img/cards/swsh2/94_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rock Smash",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage.",
+          "effect": {
+            "flipBonus": 30
+          }
+        },
+        {
+          "name": "Pierce",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh3-98",
+      "set": "swsh3",
+      "name": "Galarian Sirfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/98.webp",
+      "imgLarge": "img/cards/swsh3/98_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Fighting",
+      "evolvesFrom": "Galarian Farfetch'd",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Pierce",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Meteor Assault",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "This Pokémon can't use Meteor Assault again until it leaves the Active Spot.",
+          "effect": {
+            "oncePerActive": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh3-93",
+      "set": "swsh3",
+      "name": "Hippopotas",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/93.webp",
+      "imgLarge": "img/cards/swsh3/93_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Double Stomp",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "70+",
+          "text": "Flip 2 coins. This attack does 30 more damage for each heads.",
+          "effect": {
+            "flipMultiBonus": {
+              "n": 2,
+              "bonus": 30
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-94",
+      "set": "swsh3",
+      "name": "Hippowdon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/94.webp",
+      "imgLarge": "img/cards/swsh3/94_hires.webp",
+      "stage": 1,
+      "hp": 150,
+      "type": "Fighting",
+      "evolvesFrom": "Hippopotas",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Triple Smash",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "80×",
+          "text": "Flip 3 coins. This attack does 80 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        },
+        {
+          "name": "Land Crush",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh3-97",
+      "set": "swsh3",
+      "name": "Passimian",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/97.webp",
+      "imgLarge": "img/cards/swsh3/97_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Rock Hurl",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "This attack's damage isn't affected by Resistance.",
+          "effect": {
+            "noRes": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-111",
+      "set": "swsh2",
+      "name": "Stonjourner",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/111.webp",
+      "imgLarge": "img/cards/swsh2/111_hires.webp",
+      "stage": 0,
+      "hp": 140,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Mega Kick",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        },
+        {
+          "name": "Power Press",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120+",
+          "text": "If this Pokémon has at least 1 extra Energy attached (in addition to this attack's cost), this attack does 60 more damage.",
+          "effect": {
+            "bonusIfExtraEnergy": 60
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-100",
+      "set": "swsh1",
+      "name": "Sudowoodo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/100.webp",
+      "imgLarge": "img/cards/swsh1/100_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "This attack does 10 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh3-159",
+      "set": "swsh3",
+      "name": "Bird Keeper",
+      "kind": "trainer",
+      "img": "img/cards/swsh3/159.webp",
+      "imgLarge": "img/cards/swsh3/159_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "birdKeeper",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-175",
+      "set": "swsh1",
+      "name": "Pokémon Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/175.webp",
+      "imgLarge": "img/cards/swsh1/175_hires.webp",
+      "text": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "pokemonCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh3-172",
+      "set": "swsh3",
+      "name": "Turbo Patch",
+      "kind": "trainer",
+      "img": "img/cards/swsh3/172.webp",
+      "imgLarge": "img/cards/swsh3/172_hires.webp",
+      "text": "Flip a coin. If heads, attach a basic Energy card from your discard pile to 1 of your Basic Pokémon that isn't a Pokémon-GX. You may play any number of Item cards during your turn.",
+      "trainer": "turboPatch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    }
+  ]
+}

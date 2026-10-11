@@ -1,0 +1,409 @@
+{
+  "name": "Zapdos ex",
+  "group": "svDeluxe",
+  "format": "modern",
+  "types": [
+    "Lightning",
+    "Fighting"
+  ],
+  "featured": [
+    "sv1-81",
+    "sv3pt5-145",
+    "sv1-76"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv1-118",
+      "set": "sv1",
+      "name": "Hawlucha",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/118.webp",
+      "imgLarge": "img/cards/sv1/118_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Flying Entry",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may choose 2 of your opponent's Benched Pokémon and put 1 damage counter on each of them.",
+        "kind": "flyingEntry",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sv1-81",
+      "set": "sv1",
+      "name": "Miraidon ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/81.webp",
+      "imgLarge": "img/cards/sv1/81_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Photon Blaster",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "220",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Tandem Unit",
+        "text": "Once during your turn, you may search your deck for up to 2 Basic Lightning Pokémon and put them onto your Bench. Then, shuffle your deck.",
+        "kind": "tandemUnit",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv2-74",
+      "set": "sv2",
+      "name": "Pawmi",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/74.webp",
+      "imgLarge": "img/cards/sv2/74_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Static Shock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv2-75",
+      "set": "sv2",
+      "name": "Pawmo",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/75.webp",
+      "imgLarge": "img/cards/sv2/75_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Lightning",
+      "evolvesFrom": "Pawmi",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Static Shock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Electrobullet",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "50",
+          "text": "This attack also does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 30,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-76",
+      "set": "sv1",
+      "name": "Pawmot",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/76.webp",
+      "imgLarge": "img/cards/sv1/76_hires.webp",
+      "stage": 2,
+      "hp": 130,
+      "type": "Lightning",
+      "evolvesFrom": "Pawmo",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Electro Paws",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "230",
+          "text": "Discard all Energy from this Pokémon.",
+          "effect": {
+            "discardAllEnergy": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Electrogenesis",
+        "text": "Once during your turn, you may search your deck for a Basic Lightning Energy card and attach it to this Pokémon. Then, shuffle your deck.",
+        "kind": "electrogenesis",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv3pt5-145",
+      "set": "sv3pt5",
+      "name": "Zapdos ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv3pt5/145.webp",
+      "imgLarge": "img/cards/sv3pt5/145_hires.webp",
+      "stage": 0,
+      "hp": 200,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Multishot Lightning",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "120",
+          "text": "This attack also does 90 damage to 1 of your opponent's Benched Pokémon that has any damage counters on it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 90,
+              "count": 1,
+              "damagedOnly": true
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Voltaic Float",
+        "text": "If this Pokémon has any Lightning Energy attached, it has no Retreat Cost.",
+        "kind": "voltaicFloat",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv2-173",
+      "set": "sv2",
+      "name": "Bravery Charm",
+      "kind": "trainer",
+      "img": "img/cards/sv2/173.webp",
+      "imgLarge": "img/cards/sv2/173_hires.webp",
+      "text": "The Basic Pokémon this card is attached to gets +50 HP. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "braveryCharm"
+    },
+    {
+      "count": 2,
+      "id": "sv4-163",
+      "set": "sv4",
+      "name": "Earthen Vessel",
+      "kind": "trainer",
+      "img": "img/cards/sv4/163.webp",
+      "imgLarge": "img/cards/sv4/163_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.  Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "earthenVessel",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-170",
+      "set": "sv1",
+      "name": "Electric Generator",
+      "kind": "trainer",
+      "img": "img/cards/sv1/170.webp",
+      "imgLarge": "img/cards/sv1/170_hires.webp",
+      "text": "Look at the top 5 cards of your deck and attach up to 2 Basic Lightning Energy cards you find there to your Benched Lightning Pokémon in any way you like. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "electricGenerator",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-189",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Sada)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/189.webp",
+      "imgLarge": "img/cards/sv1/189_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv4-172",
+      "set": "sv4",
+      "name": "Rika",
+      "kind": "trainer",
+      "img": "img/cards/sv4/172.webp",
+      "imgLarge": "img/cards/sv4/172_hires.webp",
+      "text": "Look at the top 4 cards of your deck and put 2 of them into your hand. Shuffle the other cards and put them on the bottom of your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "rika",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv3-194",
+      "set": "sv3",
+      "name": "Ryme",
+      "kind": "trainer",
+      "img": "img/cards/sv3/194.webp",
+      "imgLarge": "img/cards/sv3/194_hires.webp",
+      "text": "Draw 3 cards. Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.) You may play only 1 Supporter card during your turn.",
+      "trainer": "ryme",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 13,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

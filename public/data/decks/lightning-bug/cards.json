@@ -1,0 +1,422 @@
+{
+  "name": "Lightning Bug",
+  "group": "base2",
+  "types": [
+    "Grass",
+    "Lightning"
+  ],
+  "featured": [
+    "base4-21",
+    "base4-47",
+    "base4-81"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "base4-21",
+      "set": "base4",
+      "name": "Beedrill",
+      "kind": "pokemon",
+      "img": "img/cards/base4/21.webp",
+      "imgLarge": "img/cards/base4/21_hires.webp",
+      "stage": 2,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Kakuna",
+      "weakness": "Fire",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Twineedle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "40",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-68",
+      "set": "base4",
+      "name": "Caterpie",
+      "kind": "pokemon",
+      "img": "img/cards/base4/68.webp",
+      "imgLarge": "img/cards/base4/68_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "String Shot",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-3",
+      "set": "base4",
+      "name": "Chansey",
+      "kind": "pokemon",
+      "img": "img/cards/base4/3.webp",
+      "imgLarge": "img/cards/base4/3_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scrunch",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Double-edge",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Chansey does 80 damage to itself.",
+          "effect": {
+            "selfDamage": 80
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-47",
+      "set": "base4",
+      "name": "Kakuna",
+      "kind": "pokemon",
+      "img": "img/cards/base4/47.webp",
+      "imgLarge": "img/cards/base4/47_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Weedle",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Stiffen",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-79",
+      "set": "base4",
+      "name": "Magnemite",
+      "kind": "pokemon",
+      "img": "img/cards/base4/79.webp",
+      "imgLarge": "img/cards/base4/79_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Thunder Wave",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Selfdestruct",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself.",
+          "effect": {
+            "benchAll": 10,
+            "selfDamage": 40
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-81",
+      "set": "base4",
+      "name": "Metapod",
+      "kind": "pokemon",
+      "img": "img/cards/base4/81.webp",
+      "imgLarge": "img/cards/base4/81_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Caterpie",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Stiffen",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Stun Spore",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-87",
+      "set": "base4",
+      "name": "Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/base4/87.webp",
+      "imgLarge": "img/cards/base4/87_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Thunder Jolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, Pikachu does 10 damage to itself.",
+          "effect": {
+            "flipSelfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base4-100",
+      "set": "base4",
+      "name": "Weedle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/100.webp",
+      "imgLarge": "img/cards/base4/100_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base4-118",
+      "set": "base4",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base4/118.webp",
+      "imgLarge": "img/cards/base4/118_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 2,
+      "id": "base4-109",
+      "set": "base4",
+      "name": "Defender",
+      "kind": "trainer",
+      "img": "img/cards/base4/109.webp",
+      "imgLarge": "img/cards/base4/109_hires.webp",
+      "text": "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
+      "trainer": "defender"
+    },
+    {
+      "count": 2,
+      "id": "base4-110",
+      "set": "base4",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/base4/110.webp",
+      "imgLarge": "img/cards/base4/110_hires.webp",
+      "text": "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.",
+      "trainer": "energyRetrieval"
+    },
+    {
+      "count": 2,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base4-113",
+      "set": "base4",
+      "name": "PlusPower",
+      "kind": "trainer",
+      "img": "img/cards/base4/113.webp",
+      "imgLarge": "img/cards/base4/113_hires.webp",
+      "text": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+      "trainer": "plusPower"
+    },
+    {
+      "count": 1,
+      "id": "base4-115",
+      "set": "base4",
+      "name": "Pokédex",
+      "kind": "trainer",
+      "img": "img/cards/base4/115.webp",
+      "imgLarge": "img/cards/base4/115_hires.webp",
+      "text": "Look at up to 5 cards from the top of your deck and rearrange them as you like.",
+      "trainer": "pokedex"
+    },
+    {
+      "count": 1,
+      "id": "base4-123",
+      "set": "base4",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base4/123.webp",
+      "imgLarge": "img/cards/base4/123_hires.webp",
+      "text": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 16,
+      "id": "base4-127",
+      "set": "base4",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/127.webp",
+      "imgLarge": "img/cards/base4/127_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 12,
+      "id": "base4-128",
+      "set": "base4",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/128.webp",
+      "imgLarge": "img/cards/base4/128_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

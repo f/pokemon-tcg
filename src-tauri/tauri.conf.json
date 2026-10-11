@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Pokemon TCG",
+  "version": "0.1.0",
+  "identifier": "io.github.f.pokemon-tcg",
+  "build": {
+    "frontendDist": "../dist",
+    "beforeBuildCommand": "node scripts/build-dist.mjs",
+    "beforeDevCommand": "node scripts/build-dist.mjs"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Pokémon TCG Academy",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 680,
+        "center": true,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "trafficLightPosition": { "x": 18, "y": 25 },
+        "backgroundColor": "#0d1b3e"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app"],
+    "category": "CardGame",
+    "copyright": "Code © Fatih Kadir Akın (MIT). Pokémon and its card images © Nintendo / Creatures / GAME FREAK / The Pokémon Company; fan-made, not affiliated.",
+    "shortDescription": "Learn the Pokémon Trading Card Game against an AI opponent",
+    "longDescription": "Play 109 classic and modern Pokémon TCG decks against Gary, an AI opponent, while the Professor coaches you. Works offline with the built-in CPU engine or a local decision model (Kev); the hosted Jev model is optional and its API key is kept in the macOS Keychain.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.png"
+    ],
+    "macOS": {
+      "signingIdentity": "-",
+      "minimumSystemVersion": "11.0"
+    }
+  }
+}

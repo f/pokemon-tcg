@@ -1,0 +1,419 @@
+{
+  "name": "Meowscarada ex",
+  "group": "svDeluxe",
+  "format": "modern",
+  "types": [
+    "Grass",
+    "Psychic"
+  ],
+  "featured": [
+    "sv2-15",
+    "sv2-14",
+    "swsh7-16"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv2-156",
+      "set": "sv2",
+      "name": "Dunsparce",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/156.webp",
+      "imgLarge": "img/cards/sv2/156_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Find a Friend",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchPokemonToHand": {
+              "n": 1
+            }
+          }
+        },
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh7-16",
+      "set": "swsh7",
+      "name": "Eldegoss",
+      "kind": "pokemon",
+      "img": "img/cards/swsh7/16.webp",
+      "imgLarge": "img/cards/swsh7/16_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Gossifleur",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cotton Guard",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 30
+          }
+        }
+      ],
+      "power": {
+        "name": "Cotton Lift",
+        "text": "Once during your turn, you may search your deck for up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+        "kind": "cottonLift",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv2-14",
+      "set": "sv2",
+      "name": "Floragato",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/14.webp",
+      "imgLarge": "img/cards/sv2/14_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Grass",
+      "evolvesFrom": "Sprigatito",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Seed Bomb",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Magic Whip",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)",
+          "effect": {
+            "whirlwind": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-14",
+      "set": "swsh45",
+      "name": "Gossifleur",
+      "kind": "pokemon",
+      "img": "img/cards/swsh45/14.webp",
+      "imgLarge": "img/cards/swsh45/14_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leafage",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-15",
+      "set": "sv2",
+      "name": "Meowscarada ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/15.webp",
+      "imgLarge": "img/cards/sv2/15_hires.webp",
+      "stage": 2,
+      "hp": 310,
+      "type": "Grass",
+      "evolvesFrom": "Floragato",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Scratching Nails",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100+",
+          "text": "If your opponent's Active Pokémon already has any damage counters on it, this attack does 120 more damage.",
+          "effect": {
+            "bonusIfDamaged": 120
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Bouquet Magic",
+        "text": "You must discard a Basic Grass Energy card from your hand in order to use this Ability. Once during your turn, you may put 3 damage counters on 1 of your opponent's Benched Pokémon.",
+        "kind": "bouquetMagic",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh12-59",
+      "set": "swsh12",
+      "name": "Radiant Alakazam",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/59.webp",
+      "imgLarge": "img/cards/swsh12/59_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Mind Ruler",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "This attack does 20 damage for each card in your opponent's hand.",
+          "effect": {
+            "timesOppHand": 20
+          }
+        }
+      ],
+      "ruleBox": true,
+      "tags": [
+        "Radiant"
+      ],
+      "power": {
+        "name": "Painful Spoons",
+        "text": "Once during your turn, you may move up to 2 damage counters from 1 of your opponent's Pokémon to another of their Pokémon.",
+        "kind": "painfulSpoons",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv2-12",
+      "set": "sv2",
+      "name": "Sprigatito",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/12.webp",
+      "imgLarge": "img/cards/sv2/12_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gather Sunlight",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchBasicEnergy": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Seed Bomb",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-125",
+      "set": "swsh5",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/125.webp",
+      "imgLarge": "img/cards/swsh5/125_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, they don't switch Pokémon.) You may play any number of Item cards during your turn.",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh10-142",
+      "set": "swsh10",
+      "name": "Gapejaw Bog",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/142.webp",
+      "imgLarge": "img/cards/swsh10/142_hires.webp",
+      "text": "Whenever either player puts a Basic Pokémon from their hand onto their Bench, put 2 damage counters on that Pokémon.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "gapejawBog"
+    },
+    {
+      "count": 2,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh6-145",
+      "set": "swsh6",
+      "name": "Klara",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/145.webp",
+      "imgLarge": "img/cards/swsh6/145_hires.webp",
+      "text": "Choose 1 or both:\n• Put up to 2 Pokémon from your discard pile into your hand.\n• Put up to 2 basic Energy cards from your discard pile into your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "klara",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-189",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Sada)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/189.webp",
+      "imgLarge": "img/cards/sv1/189_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 13,
+      "id": "sve-1",
+      "set": "sve",
+      "name": "Basic Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/1.webp",
+      "imgLarge": "img/cards/sve/1_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

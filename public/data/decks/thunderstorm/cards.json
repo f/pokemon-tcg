@@ -1,0 +1,710 @@
+{
+  "name": "Thunderstorm",
+  "group": "base2",
+  "types": [
+    "Lightning",
+    "Water"
+  ],
+  "featured": [
+    "base3-29",
+    "base2-36",
+    "base3-35"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "base1-48",
+      "set": "base1",
+      "name": "Doduo",
+      "kind": "pokemon",
+      "img": "img/cards/base1/48.webp",
+      "imgLarge": "img/cards/base1/48_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Fury Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-20",
+      "set": "base1",
+      "name": "Electabuzz",
+      "kind": "pokemon",
+      "img": "img/cards/base1/20.webp",
+      "imgLarge": "img/cards/base1/20_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Thundershock",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Thunderpunch",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage plus Electabuzz does 10 damage to itself.",
+          "effect": {
+            "flipBonus": 10,
+            "tailsSelf": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-27",
+      "set": "base1",
+      "name": "Farfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/base1/27.webp",
+      "imgLarge": "img/cards/base1/27_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leek Slap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again).",
+          "effect": {
+            "flipFail": true,
+            "oncePerPlay": true
+          }
+        },
+        {
+          "name": "Pot Smash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base2-36",
+      "set": "base2",
+      "name": "Fearow",
+      "kind": "pokemon",
+      "img": "img/cards/base2/36.webp",
+      "imgLarge": "img/cards/base2/36_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": "Spearow",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Agility",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Fearow.",
+          "effect": {
+            "flipShield": "all"
+          }
+        },
+        {
+          "name": "Drill Peck",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base3-35",
+      "set": "base3",
+      "name": "Golduck",
+      "kind": "pokemon",
+      "img": "img/cards/base3/35.webp",
+      "imgLarge": "img/cards/base3/35_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": "Psyduck",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Hyper Beam",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it.",
+          "effect": {
+            "removeEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-84",
+      "set": "gym1",
+      "name": "Lt. Surge's Voltorb",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/84.webp",
+      "imgLarge": "img/cards/gym1/84_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spin Ball",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "20×",
+          "text": "Flip 1 coin. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 1
+          }
+        },
+        {
+          "name": "Double Spin",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-53",
+      "set": "base1",
+      "name": "Magnemite",
+      "kind": "pokemon",
+      "img": "img/cards/base1/53.webp",
+      "imgLarge": "img/cards/base1/53_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Thunder Wave",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Selfdestruct",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself.",
+          "effect": {
+            "benchAll": 10,
+            "selfDamage": 40
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-87",
+      "set": "gym1",
+      "name": "Misty's Poliwag",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/87.webp",
+      "imgLarge": "img/cards/gym1/87_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hypnotic Stare",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Asleep.",
+          "effect": {
+            "flipStatusEither": [
+              "paralyzed",
+              "asleep"
+            ]
+          }
+        },
+        {
+          "name": "Tail Rap",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base2-60",
+      "set": "base2",
+      "name": "Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/base2/60.webp",
+      "imgLarge": "img/cards/base2/60_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spark",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "20",
+          "text": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 10,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base3-53",
+      "set": "base3",
+      "name": "Psyduck",
+      "kind": "pokemon",
+      "img": "img/cards/base3/53.webp",
+      "imgLarge": "img/cards/base3/53_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Headache",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Your opponent can't play Trainer cards during his or her next turn.",
+          "effect": {
+            "headache": true
+          }
+        },
+        {
+          "name": "Fury Swipes",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10×",
+          "text": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base5-65",
+      "set": "base5",
+      "name": "Psyduck",
+      "kind": "pokemon",
+      "img": "img/cards/base5/65.webp",
+      "imgLarge": "img/cards/base5/65_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dizziness",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Does 20 damage plus 10 more damage for each Water Energy attached to Psyduck but not used to pay for this attack. You can't add more than 20 damage in this way.",
+          "effect": {
+            "extraWater": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base3-29",
+      "set": "base3",
+      "name": "Raichu",
+      "kind": "pokemon",
+      "img": "img/cards/base3/29.webp",
+      "imgLarge": "img/cards/base3/29_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Lightning",
+      "evolvesFrom": "Pikachu",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gigashock",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "30",
+          "text": "Choose 3 of your opponent's Benched Pokémon and this attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) If your opponent has fewer than 3 Benched Pokémon, do that damage to each of them.",
+          "effect": {
+            "benchSnipe": {
+              "n": 10,
+              "count": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base2-62",
+      "set": "base2",
+      "name": "Spearow",
+      "kind": "pokemon",
+      "img": "img/cards/base2/62.webp",
+      "imgLarge": "img/cards/base2/62_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Mirror Move",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "If Spearow was attacked last turn, do the final result of that attack on Spearow to the Defending Pokémon.",
+          "effect": {
+            "mirrorMove": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base3-15",
+      "set": "base3",
+      "name": "Zapdos",
+      "kind": "pokemon",
+      "img": "img/cards/base3/15.webp",
+      "imgLarge": "img/cards/base3/15_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Thunderstorm",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": "40",
+          "text": "For each of your opponent's Benched Pokémon, flip a coin. If heads, this attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Then, Zapdos does 10 damage times the number of tails to itself.",
+          "effect": {
+            "thunderstorm": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-91",
+      "set": "base1",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base1/91.webp",
+      "imgLarge": "img/cards/base1/91_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 1,
+      "id": "base1-80",
+      "set": "base1",
+      "name": "Defender",
+      "kind": "trainer",
+      "img": "img/cards/base1/80.webp",
+      "imgLarge": "img/cards/base1/80_hires.webp",
+      "text": "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
+      "trainer": "defender"
+    },
+    {
+      "count": 2,
+      "id": "base1-81",
+      "set": "base1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/base1/81.webp",
+      "imgLarge": "img/cards/base1/81_hires.webp",
+      "text": "Trade 1 of the other cards in your hand for up to 2 basic Energy cards from your discard pile.",
+      "trainer": "energyRetrieval"
+    },
+    {
+      "count": 2,
+      "id": "base3-59",
+      "set": "base3",
+      "name": "Energy Search",
+      "kind": "trainer",
+      "img": "img/cards/base3/59.webp",
+      "imgLarge": "img/cards/base3/59_hires.webp",
+      "text": "Search your deck for a basic Energy card and put it into your hand. Shuffle your deck afterward.",
+      "trainer": "energySearch"
+    },
+    {
+      "count": 1,
+      "id": "gym1-114",
+      "set": "gym1",
+      "name": "Misty's Wrath",
+      "kind": "trainer",
+      "img": "img/cards/gym1/114.webp",
+      "imgLarge": "img/cards/gym1/114_hires.webp",
+      "text": "Look at the top 7 cards of your deck. Choose 2 of those cards and put them into your hand. Discard the rest.",
+      "trainer": "mistysWrath"
+    },
+    {
+      "count": 1,
+      "id": "base2-64",
+      "set": "base2",
+      "name": "Poké Ball",
+      "kind": "trainer",
+      "img": "img/cards/base2/64.webp",
+      "imgLarge": "img/cards/base2/64_hires.webp",
+      "text": "Flip a coin. If heads, you may search your deck for any Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+      "trainer": "pokeBall"
+    },
+    {
+      "count": 1,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base1-88",
+      "set": "base1",
+      "name": "Professor Oak",
+      "kind": "trainer",
+      "img": "img/cards/base1/88.webp",
+      "imgLarge": "img/cards/base1/88_hires.webp",
+      "text": "Discard your hand, then draw 7 cards.",
+      "trainer": "professorOak"
+    },
+    {
+      "count": 1,
+      "id": "base1-90",
+      "set": "base1",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/90.webp",
+      "imgLarge": "img/cards/base1/90_hires.webp",
+      "text": "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 2,
+      "id": "base1-96",
+      "set": "base1",
+      "name": "Double Colorless Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/96.webp",
+      "imgLarge": "img/cards/base1/96_hires.webp",
+      "energyType": "Colorless",
+      "provides": 2,
+      "special": "dce"
+    },
+    {
+      "count": 1,
+      "id": "base5-81",
+      "set": "base5",
+      "name": "Full Heal Energy",
+      "kind": "energy",
+      "img": "img/cards/base5/81.webp",
+      "imgLarge": "img/cards/base5/81_hires.webp",
+      "energyType": "Colorless",
+      "special": "fullHeal"
+    },
+    {
+      "count": 16,
+      "id": "base4-128",
+      "set": "base4",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/128.webp",
+      "imgLarge": "img/cards/base4/128_hires.webp",
+      "energyType": "Lightning"
+    },
+    {
+      "count": 1,
+      "id": "base5-82",
+      "set": "base5",
+      "name": "Potion Energy",
+      "kind": "energy",
+      "img": "img/cards/base5/82.webp",
+      "imgLarge": "img/cards/base5/82_hires.webp",
+      "energyType": "Colorless",
+      "special": "potion"
+    },
+    {
+      "count": 8,
+      "id": "base4-130",
+      "set": "base4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/130.webp",
+      "imgLarge": "img/cards/base4/130_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

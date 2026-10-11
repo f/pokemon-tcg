@@ -1,0 +1,488 @@
+{
+  "name": "Zap!",
+  "group": "theme",
+  "types": [
+    "Lightning",
+    "Psychic"
+  ],
+  "featured": [
+    "base1-10",
+    "base1-58",
+    "base1-29"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "base1-43",
+      "set": "base1",
+      "name": "Abra",
+      "kind": "pokemon",
+      "img": "img/cards/base1/43.webp",
+      "imgLarge": "img/cards/base1/43_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-32",
+      "set": "base1",
+      "name": "Kadabra",
+      "kind": "pokemon",
+      "img": "img/cards/base1/32.webp",
+      "imgLarge": "img/cards/base1/32_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": "Abra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Recover",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Kadabra in order to use this attack. Remove all damage counters from Kadabra.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "healAll": true
+          }
+        },
+        {
+          "name": "Super Psy",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-49",
+      "set": "base1",
+      "name": "Drowzee",
+      "kind": "pokemon",
+      "img": "img/cards/base1/49.webp",
+      "imgLarge": "img/cards/base1/49_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base1-50",
+      "set": "base1",
+      "name": "Gastly",
+      "kind": "pokemon",
+      "img": "img/cards/base1/50.webp",
+      "imgLarge": "img/cards/base1/50_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Sleeping Gas",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
+          "effect": {
+            "flipStatus": "asleep"
+          }
+        },
+        {
+          "name": "Destiny Bond",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "destinyBond": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-29",
+      "set": "base1",
+      "name": "Haunter",
+      "kind": "pokemon",
+      "img": "img/cards/base1/29.webp",
+      "imgLarge": "img/cards/base1/29_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": "Gastly",
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hypnosis",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Dream Eater",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "50",
+          "text": "You can't use this attack unless the Defending Pokémon is Asleep.",
+          "effect": {
+            "needsDefAsleep": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-31",
+      "set": "base1",
+      "name": "Jynx",
+      "kind": "pokemon",
+      "img": "img/cards/base1/31.webp",
+      "imgLarge": "img/cards/base1/31_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Meditate",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.",
+          "effect": {
+            "plusDefCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base1-53",
+      "set": "base1",
+      "name": "Magnemite",
+      "kind": "pokemon",
+      "img": "img/cards/base1/53.webp",
+      "imgLarge": "img/cards/base1/53_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Thunder Wave",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Selfdestruct",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself.",
+          "effect": {
+            "benchAll": 10,
+            "selfDamage": 40
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-10",
+      "set": "base1",
+      "name": "Mewtwo",
+      "kind": "pokemon",
+      "img": "img/cards/base1/10.webp",
+      "imgLarge": "img/cards/base1/10_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Psychic",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.",
+          "effect": {
+            "plusDefEnergy": 10
+          }
+        },
+        {
+          "name": "Barrier",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Mewtwo in order to prevent all effects of attacks, including damage, done to Mewtwo during your opponent's next turn.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "shield": "all"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-58",
+      "set": "base1",
+      "name": "Pikachu",
+      "kind": "pokemon",
+      "img": "img/cards/base1/58.webp",
+      "imgLarge": "img/cards/base1/58_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Thunder Jolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, Pikachu does 10 damage to itself.",
+          "effect": {
+            "flipSelfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-91",
+      "set": "base1",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base1/91.webp",
+      "imgLarge": "img/cards/base1/91_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 1,
+      "id": "base1-71",
+      "set": "base1",
+      "name": "Computer Search",
+      "kind": "trainer",
+      "img": "img/cards/base1/71.webp",
+      "imgLarge": "img/cards/base1/71_hires.webp",
+      "text": "Discard 2 of the other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward.",
+      "trainer": "computerSearch"
+    },
+    {
+      "count": 1,
+      "id": "base1-80",
+      "set": "base1",
+      "name": "Defender",
+      "kind": "trainer",
+      "img": "img/cards/base1/80.webp",
+      "imgLarge": "img/cards/base1/80_hires.webp",
+      "text": "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance).",
+      "trainer": "defender"
+    },
+    {
+      "count": 2,
+      "id": "base1-93",
+      "set": "base1",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base1/93.webp",
+      "imgLarge": "img/cards/base1/93_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base1-88",
+      "set": "base1",
+      "name": "Professor Oak",
+      "kind": "trainer",
+      "img": "img/cards/base1/88.webp",
+      "imgLarge": "img/cards/base1/88_hires.webp",
+      "text": "Discard your hand, then draw 7 cards.",
+      "trainer": "professorOak"
+    },
+    {
+      "count": 1,
+      "id": "base1-90",
+      "set": "base1",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/90.webp",
+      "imgLarge": "img/cards/base1/90_hires.webp",
+      "text": "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 2,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 12,
+      "id": "base1-100",
+      "set": "base1",
+      "name": "Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/100.webp",
+      "imgLarge": "img/cards/base1/100_hires.webp",
+      "energyType": "Lightning"
+    },
+    {
+      "count": 16,
+      "id": "base1-101",
+      "set": "base1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/101.webp",
+      "imgLarge": "img/cards/base1/101_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

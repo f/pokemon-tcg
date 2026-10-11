@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon TCG Academy</title>
+  <link rel="stylesheet" href="vendor/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rps.css">
+  <link rel="icon" href="img/set-symbol.png">
+</head>
+<body>
+  <!-- data-tauri-drag-region: in the macOS app (no title bar) the window is moved by dragging these -->
+  <header data-tauri-drag-region>
+    <div class="brand" data-tauri-drag-region>
+      <img class="logo" src="img/pokemon-logo.svg" alt="Pokémon" data-tauri-drag-region>
+      <div class="brand-text" data-tauri-drag-region>
+        <span class="title" data-tauri-drag-region>TCG Academy</span>
+        <button class="badge" id="engine-badge"></button>
+      </div>
+    </div>
+    <nav>
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="ui.language">
+        <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button>
+      </div>
+      <button id="btn-settings" class="icon-btn" data-i18n-title="ui.settings"><i class="ic ic-settings"></i></button>
+      <button id="btn-tour"><i class="ic ic-graduation-cap"></i> <span data-i18n="ui.tour"></span></button>
+      <button id="btn-rules"><i class="ic ic-book-open"></i> <span data-i18n="ui.rules"></span></button>
+      <button id="btn-new"><i class="ic ic-rotate-ccw"></i> <span data-i18n="ui.new"></span></button>
+    </nav>
+  </header>
+
+  <main id="table" hidden>
+    <section id="board">
+      <div id="opp-hand"></div>
+      <div class="mat opp">
+        <div class="prizes" id="opp-prizes"></div>
+        <div class="active-zone" id="opp-active"></div>
+        <div class="bench" id="opp-bench"></div>
+        <div class="piles" id="opp-piles"></div>
+      </div>
+      <div id="midbar">
+        <div id="turn-info"></div>
+        <div id="stadium" hidden></div>
+        <div id="opp-status"></div>
+        <div id="win-meter" hidden>
+          <span data-i18n="ui.winChance"></span>
+          <div class="meter"><div id="win-fill"></div></div>
+          <span id="win-label"></span>
+        </div>
+      </div>
+      <div class="mat you">
+        <div class="prizes" id="you-prizes"></div>
+        <div class="active-zone" id="you-active"></div>
+        <div class="bench" id="you-bench"></div>
+        <div class="piles" id="you-piles"></div>
+      </div>
+      <div id="hand-wrap">
+        <div id="hand"></div>
+      </div>
+    </section>
+
+    <aside>
+      <div class="panel" id="actions-panel">
+        <h2 data-i18n="ui.yourMove"></h2>
+        <ul id="tips"></ul>
+        <div id="actions"></div>
+        <div id="end-slot"></div>
+        <div id="coach-msg"></div>
+      </div>
+      <div class="panel" id="log-panel">
+        <h2 data-i18n="ui.log"></h2>
+        <div id="log"></div>
+      </div>
+    </aside>
+  </main>
+
+  <div id="preview" hidden></div>
+
+  <div id="settings" class="overlay" hidden>
+    <div class="dialog settings" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <button class="close" id="settings-close" aria-label="Close" data-i18n-aria="ui.close"><i class="ic ic-x"></i></button>
+      <h2 id="settings-title" data-i18n="ui.settings"></h2>
+      <section class="set-sec">
+        <h3 id="eng-title" data-i18n="eng.title"></h3>
+        <div id="engine-box"></div>
+      </section>
+      <section class="set-sec">
+        <h3 data-i18n="ui.coach"></h3>
+        <label class="set-row"><span data-i18n="ui.rateMoves"></span><input type="checkbox" role="switch" id="opt-coach" checked></label>
+        <label class="set-row"><span data-i18n="ui.showHints"></span><input type="checkbox" role="switch" id="opt-hints" checked></label>
+      </section>
+      <section class="set-sec">
+        <h3 data-i18n="ui.display"></h3>
+        <label class="set-row"><span data-i18n="ui.animate"></span><input type="checkbox" role="switch" id="opt-anim" checked></label>
+        <div class="set-row">
+          <span id="dice-label"></span>
+          <div class="dice-pick" role="radiogroup" aria-labelledby="dice-label">
+            <label><input type="radio" name="dice" value="pips"><span class="die-slot" data-die="pips" aria-hidden="true"></span><span data-i18n="ui.dicePips"></span></label>
+            <label><input type="radio" name="dice" value="numbers"><span class="die-slot" data-die="numbers" aria-hidden="true"></span><span data-i18n="ui.diceNumbers"></span></label>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="modal" class="overlay" hidden><div class="dialog" id="modal-body"></div></div>
+
+  <div id="start" class="overlay start-screen">
+    <div class="app-drag" data-tauri-drag-region></div>
+    <div class="lang start-lang" role="group" aria-label="Language" data-i18n-aria="ui.language">
+      <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button>
+    </div>
+    <div class="start-wrap">
+      <header class="start-hero">
+        <img class="set-logo" src="img/set-logo.png" alt="Pokémon Trading Card Game">
+        <div class="hero-text">
+          <h2 data-i18n="ui.welcome"></h2>
+          <p data-i18n-html="ui.welcomeText"></p>
+        </div>
+      </header>
+      <div id="deck-choices"></div>
+      <p class="legal" data-i18n="ui.footer"></p>
+    </div>
+    <div class="start-bar">
+      <div class="matchup">
+        <span class="side you" id="match-you"></span>
+        <span class="vs" aria-hidden="true">vs</span>
+        <label class="side opp"><small data-i18n="pl.1"></small><select id="opt-opp" data-i18n-aria="ui.oppDeck"></select></label>
+      </div>
+      <div class="opts" id="start-engine"></div>
+      <div class="bar-actions">
+        <button class="textlink" id="start-rules"><span data-i18n="ui.readRules"></span></button>
+        <button class="primary" id="btn-start" disabled></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="rules" class="overlay" hidden>
+    <div class="dialog wide rules">
+      <button class="close" id="rules-close" aria-label="Close" data-i18n-aria="ui.close"><i class="ic ic-x"></i></button>
+      <h2><span data-i18n="ui.rules"></span></h2>
+      <div id="rules-body"></div>
+      <p class="legal" data-i18n="ui.footer"></p>
+    </div>
+  </div>
+
+  <script type="module" src="ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+{
+  "name": "Team Rocket's Mewtwo ex League",
+  "group": "svLeague",
+  "format": "modern",
+  "types": [
+    "Darkness",
+    "Grass",
+    "Psychic"
+  ],
+  "featured": [
+    "sv10-122",
+    "sv10-81",
+    "sv10-20"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "sv10-51",
+      "set": "sv10",
+      "name": "Team Rocket's Articuno",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/51.webp",
+      "imgLarge": "img/cards/sv10/51_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dark Frost",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "If this Pokémon has any Team Rocket's Energy attached, this attack does 60 more damage.",
+          "effect": {
+            "bonusIfAttachedName": {
+              "name": "Team Rocket's Energy",
+              "n": 60
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Repelling Veil",
+        "text": "Prevent all effects of attacks used by your opponent's Pokémon done to your Basic Team Rocket's Pokémon. (Existing effects are not removed. Damage is not an effect.)",
+        "kind": "repellingVeil",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv10-122",
+      "set": "sv10",
+      "name": "Team Rocket's Crobat ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/122.webp",
+      "imgLarge": "img/cards/sv10/122_hires.webp",
+      "stage": 2,
+      "hp": 310,
+      "type": "Darkness",
+      "evolvesFrom": "Team Rocket's Golbat",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Assassin's Return",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "120",
+          "text": "You may put this Pokémon into your hand. (Discard all cards attached to this Pokémon.)",
+          "effect": {
+            "selfToHand": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Biting Spree",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may choose 2 of your opponent's Pokémon and put 2 damage counters on each of them.",
+        "kind": "bitingSpree",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv10-121",
+      "set": "sv10",
+      "name": "Team Rocket's Golbat",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/121.webp",
+      "imgLarge": "img/cards/sv10/121_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Darkness",
+      "evolvesFrom": "Team Rocket's Zubat",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        }
+      ],
+      "power": {
+        "name": "Sneaky Bite",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put 2 damage counters on 1 of your opponent's Pokémon.",
+        "kind": "sneakyBite",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv10-81",
+      "set": "sv10",
+      "name": "Team Rocket's Mewtwo ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/81.webp",
+      "imgLarge": "img/cards/sv10/81_hires.webp",
+      "stage": 0,
+      "hp": 280,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Erasure Ball",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "160+",
+          "text": "You may discard up to 2 Energy from your Benched Pokémon. This attack does 60 more damage for each card you discarded in this way.",
+          "effect": {
+            "discardBenchEnergyBonus": {
+              "max": 2,
+              "n": 60
+            }
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Power Saver",
+        "text": "This Pokémon can't attack unless you have 4 or more Team Rocket's Pokémon in play.",
+        "kind": "powerSaver",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sv10-87",
+      "set": "sv10",
+      "name": "Team Rocket's Mimikyu",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/87.webp",
+      "imgLarge": "img/cards/sv10/87_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Gemstone Mimicry",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Choose 1 of your opponent's Active Tera Pokémon's attacks and use it as this attack.",
+          "effect": {
+            "metronome": true,
+            "needsDefTera": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv10-20",
+      "set": "sv10",
+      "name": "Team Rocket's Spidops",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/20.webp",
+      "imgLarge": "img/cards/sv10/20_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Grass",
+      "evolvesFrom": "Team Rocket's Tarountula",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rocket Rush",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each of your Team Rocket's Pokémon in play.",
+          "effect": {
+            "timesNamedInPlay": {
+              "who": "Team Rocket's",
+              "n": 30
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Charging Up",
+        "text": "Once during your turn, you may attach a Basic Energy card from your discard pile to this Pokémon.",
+        "kind": "chargingUp",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv10-19",
+      "set": "sv10",
+      "name": "Team Rocket's Tarountula",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/19.webp",
+      "imgLarge": "img/cards/sv10/19_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Take Down",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "This Pokémon also does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv10-120",
+      "set": "sv10",
+      "name": "Team Rocket's Zubat",
+      "kind": "pokemon",
+      "img": "img/cards/sv10/120.webp",
+      "imgLarge": "img/cards/sv10/120_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poison Spray",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "",
+          "text": "Your opponent's Active Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-173",
+      "set": "sv1",
+      "name": "Energy Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/173.webp",
+      "imgLarge": "img/cards/sv1/173_hires.webp",
+      "text": "Move a Basic Energy from 1 of your Pokémon to another of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "energySwitch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv6pt5-61",
+      "set": "sv6pt5",
+      "name": "Night Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sv6pt5/61.webp",
+      "imgLarge": "img/cards/sv6pt5/61_hires.webp",
+      "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "nightStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv8-186",
+      "set": "sv8",
+      "name": "Scramble Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv8/186.webp",
+      "imgLarge": "img/cards/sv8/186_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, you may move any amount of Energy from the Pokémon you moved to your Bench to the new Active Pokémon. You may play any number of Item cards during your turn. ACE SPEC: You can't have more than 1 ACE SPEC card in your deck.",
+      "trainer": "scrambleSwitch",
+      "ttype": "item",
+      "aceSpec": true
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv10-170",
+      "set": "sv10",
+      "name": "Team Rocket's Archer",
+      "kind": "trainer",
+      "img": "img/cards/sv10/170.webp",
+      "imgLarge": "img/cards/sv10/170_hires.webp",
+      "text": "You can use this card only if any of your Team Rocket's Pokémon were Knocked Out during your opponent's last turn.  Each player shuffles their hand into their deck. Then, you draw 5 cards, and your opponent draws 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "trArcher",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv10-171",
+      "set": "sv10",
+      "name": "Team Rocket's Ariana",
+      "kind": "trainer",
+      "img": "img/cards/sv10/171.webp",
+      "imgLarge": "img/cards/sv10/171_hires.webp",
+      "text": "Draw cards until you have 5 cards in your hand. If all of your Pokémon in play are Team Rocket's Pokémon, draw cards until you have 8 cards in your hand instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "trAriana",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv10-173",
+      "set": "sv10",
+      "name": "Team Rocket's Factory",
+      "kind": "trainer",
+      "img": "img/cards/sv10/173.webp",
+      "imgLarge": "img/cards/sv10/173_hires.webp",
+      "text": "Once during each player's turn, if they played a Supporter card that has \"Team Rocket\" in its name from their hand this turn, they may draw 2 cards. You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "trFactory"
+    },
+    {
+      "count": 2,
+      "id": "sv10-174",
+      "set": "sv10",
+      "name": "Team Rocket's Giovanni",
+      "kind": "trainer",
+      "img": "img/cards/sv10/174.webp",
+      "imgLarge": "img/cards/sv10/174_hires.webp",
+      "text": "Switch your Active Team Rocket's Pokémon with 1 of your Benched Team Rocket's Pokémon. If you do, switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "trGiovanni",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv10-176",
+      "set": "sv10",
+      "name": "Team Rocket's Petrel",
+      "kind": "trainer",
+      "img": "img/cards/sv10/176.webp",
+      "imgLarge": "img/cards/sv10/176_hires.webp",
+      "text": "Search your deck for a Trainer card, reveal it, and put it into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "trPetrel",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv10-177",
+      "set": "sv10",
+      "name": "Team Rocket's Proton",
+      "kind": "trainer",
+      "img": "img/cards/sv10/177.webp",
+      "imgLarge": "img/cards/sv10/177_hires.webp",
+      "text": "If you go first, you may use this card during your first turn.  Search your deck for up to 3 Basic Team Rocket's Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "trProton",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv10-178",
+      "set": "sv10",
+      "name": "Team Rocket's Transceiver",
+      "kind": "trainer",
+      "img": "img/cards/sv10/178.webp",
+      "imgLarge": "img/cards/sv10/178_hires.webp",
+      "text": "Search your deck for a Supporter card that has \"Team Rocket\" in its name, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "trTransceiver",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sve-7",
+      "set": "sve",
+      "name": "Basic Darkness Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/7.webp",
+      "imgLarge": "img/cards/sve/7_hires.webp",
+      "energyType": "Darkness"
+    },
+    {
+      "count": 3,
+      "id": "sve-1",
+      "set": "sve",
+      "name": "Basic Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/1.webp",
+      "imgLarge": "img/cards/sve/1_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 3,
+      "id": "sve-5",
+      "set": "sve",
+      "name": "Basic Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/5.webp",
+      "imgLarge": "img/cards/sve/5_hires.webp",
+      "energyType": "Psychic"
+    },
+    {
+      "count": 4,
+      "id": "sv10-182",
+      "set": "sv10",
+      "name": "Team Rocket's Energy",
+      "kind": "energy",
+      "img": "img/cards/sv10/182.webp",
+      "imgLarge": "img/cards/sv10/182_hires.webp",
+      "energyType": "Psychic|Darkness",
+      "provides": 2,
+      "special": "teamRocket"
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "name": "Hydro Fury",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Water",
+    "Fire"
+  ],
+  "featured": [
+    "sm7-35",
+    "sm5-38",
+    "sm7-121"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm5-38",
+      "set": "sm5",
+      "name": "Abomasnow",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/38.webp",
+      "imgLarge": "img/cards/sm5/38_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Water",
+      "evolvesFrom": "Snover",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Hypno Hammer",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ],
+      "power": {
+        "name": "Blessings of the Frost",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may attach a Water Energy card from your discard pile to 1 of your Pokémon.",
+        "kind": "blessingsOfTheFrost",
+        "ability": true,
+        "type": "Water"
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm7-121",
+      "set": "sm7",
+      "name": "Delcatty",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/121.webp",
+      "imgLarge": "img/cards/sm7/121_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": "Skitty",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cat Kick",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Search for Friends",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put 2 Supporter cards from your discard pile into your hand.",
+        "kind": "searchForFriends",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm7-110",
+      "set": "sm7",
+      "name": "Dunsparce",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/110.webp",
+      "imgLarge": "img/cards/sm7/110_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Strike and Run",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Then, shuffle your deck. If you put any Pokémon onto your Bench in this way, you may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "callAny": {
+              "n": 3,
+              "switchAfter": true
+            }
+          }
+        },
+        {
+          "name": "Sudden Flash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm5-41",
+      "set": "sm5",
+      "name": "Frost Rotom",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/41.webp",
+      "imgLarge": "img/cards/sm5/41_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Frost Crush",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "This attack does 20 more damage times the amount of Energy attached to all of your opponent's Pokémon.",
+          "effect": {
+            "plusOppEnergyAll": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Roto Motor",
+        "text": "If you have 9 or more Pokémon Tool cards in your discard pile, ignore all Energy in the attack cost of each of this Pokémon's attacks.",
+        "kind": "rotoMotor",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm6-99",
+      "set": "sm6",
+      "name": "Furfrou",
+      "kind": "pokemon",
+      "img": "img/cards/sm6/99.webp",
+      "imgLarge": "img/cards/sm6/99_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Return",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "You may draw cards until you have 5 cards in your hand.",
+          "effect": {
+            "drawToMay": 5
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm7-24",
+      "set": "sm7",
+      "name": "Magcargo",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/24.webp",
+      "imgLarge": "img/cards/sm7/24_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fire",
+      "evolvesFrom": "Slugma",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Combustion",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Smooth Over",
+        "text": "Once during your turn (before your attack), you may search your deck for a card, shuffle your deck, then put that card on top of it.",
+        "kind": "smoothOver",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm7-34",
+      "set": "sm7",
+      "name": "Marshtomp",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/34.webp",
+      "imgLarge": "img/cards/sm7/34_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Mudkip",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Muddy Water",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "This attack does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 20,
+              "count": 1
+            }
+          }
+        },
+        {
+          "name": "Surf",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm7-33",
+      "set": "sm7",
+      "name": "Mudkip",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/33.webp",
+      "imgLarge": "img/cards/sm7/33_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm7-120",
+      "set": "sm7",
+      "name": "Skitty",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/120.webp",
+      "imgLarge": "img/cards/sm7/120_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fake Out",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm7-23",
+      "set": "sm7",
+      "name": "Slugma",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/23.webp",
+      "imgLarge": "img/cards/sm7/23_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Magma Ring",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "noRetreat": true
+          }
+        },
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm5-37",
+      "set": "sm5",
+      "name": "Snover",
+      "kind": "pokemon",
+      "img": "img/cards/sm5/37.webp",
+      "imgLarge": "img/cards/sm5/37_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Ice Shard",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "If your opponent's Active Pokémon is a Fighting Pokémon, this attack does 40 more damage.",
+          "effect": {
+            "bonusIfDefType": {
+              "type": "Fighting",
+              "n": 40
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm7-35",
+      "set": "sm7",
+      "name": "Swampert",
+      "kind": "pokemon",
+      "img": "img/cards/sm7/35.webp",
+      "imgLarge": "img/cards/sm7/35_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Water",
+      "evolvesFrom": "Marshtomp",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Hydro Pump",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "text": "This attack does 20 more damage times the amount of Water Energy attached to this Pokémon.",
+          "effect": {
+            "plusSelfEnergy": {
+              "type": "Water",
+              "n": 20
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Power Draw",
+        "text": "Once during your turn (before your attack), you may discard a card from your hand. If you do, draw 3 cards.",
+        "kind": "powerDraw",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm7-124",
+      "set": "sm7",
+      "name": "Apricorn Maker",
+      "kind": "trainer",
+      "img": "img/cards/sm7/124.webp",
+      "imgLarge": "img/cards/sm7/124_hires.webp",
+      "text": "Search your deck for up to 2 Item cards that have the word \"Ball\" in their name, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "apricornMaker",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm7-127",
+      "set": "sm7",
+      "name": "Copycat",
+      "kind": "trainer",
+      "img": "img/cards/sm7/127.webp",
+      "imgLarge": "img/cards/sm7/127_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw a card for each card in your opponent's hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "copycat",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm3-114",
+      "set": "sm3",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/sm3/114.webp",
+      "imgLarge": "img/cards/sm3/114_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, that player doesn't switch Pokémon.) You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm7-132",
+      "set": "sm7",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm7/132.webp",
+      "imgLarge": "img/cards/sm7/132_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm6-109",
+      "set": "sm6",
+      "name": "Lady",
+      "kind": "trainer",
+      "img": "img/cards/sm6/109.webp",
+      "imgLarge": "img/cards/sm6/109_hires.webp",
+      "text": "Search your deck for up to 4 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lady",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm5-125",
+      "set": "sm5",
+      "name": "Lillie",
+      "kind": "trainer",
+      "img": "img/cards/sm5/125.webp",
+      "imgLarge": "img/cards/sm5/125_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. If it's your first turn, draw cards until you have 8 cards in your hand. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "lillie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm7-138",
+      "set": "sm7",
+      "name": "Lure Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm7/138.webp",
+      "imgLarge": "img/cards/sm7/138_hires.webp",
+      "text": "Flip 3 coins. For each heads, put an Evolution Pokémon from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "lureBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm7-147",
+      "set": "sm7",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm7/147.webp",
+      "imgLarge": "img/cards/sm7/147_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm7-148",
+      "set": "sm7",
+      "name": "Tate & Liza",
+      "kind": "trainer",
+      "img": "img/cards/sm7/148.webp",
+      "imgLarge": "img/cards/sm7/148_hires.webp",
+      "text": "Choose 1:\n• Shuffle your hand into your deck then draw 5 cards.\n• Switch your Active Pokémon with 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "tateLiza",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm7-139",
+      "set": "sm7",
+      "name": "The Masked Royal",
+      "kind": "trainer",
+      "img": "img/cards/sm7/139.webp",
+      "imgLarge": "img/cards/sm7/139_hires.webp",
+      "text": "Attach a basic Energy card from your hand to one of your Stage 2 Grass, Fire, or Water Pokémon. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "maskedRoyal",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-135",
+      "set": "sm1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/135.webp",
+      "imgLarge": "img/cards/sm1/135_hires.webp",
+      "text": "Discard 2 cards from your hand. If you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sm3-167",
+      "set": "sm3",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sm3/167.webp",
+      "imgLarge": "img/cards/sm3/167_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 16,
+      "id": "sm4-124",
+      "set": "sm4",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sm4/124.webp",
+      "imgLarge": "img/cards/sm4/124_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

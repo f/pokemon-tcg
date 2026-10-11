@@ -1,0 +1,409 @@
+{
+  "name": "BodyGuard",
+  "group": "fossil",
+  "types": [
+    "Grass",
+    "Fighting"
+  ],
+  "featured": [
+    "base3-13",
+    "base3-34",
+    "base3-37"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "base1-44",
+      "set": "base1",
+      "name": "Bulbasaur",
+      "kind": "pokemon",
+      "img": "img/cards/base1/44.webp",
+      "imgLarge": "img/cards/base1/44_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leech Seed",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur.",
+          "effect": {
+            "healIfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base3-47",
+      "set": "base3",
+      "name": "Geodude",
+      "kind": "pokemon",
+      "img": "img/cards/base3/47.webp",
+      "imgLarge": "img/cards/base3/47_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Stone Barrage",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip a coin until you get tails. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipUntilTails": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base3-34",
+      "set": "base3",
+      "name": "Golbat",
+      "kind": "pokemon",
+      "img": "img/cards/base3/34.webp",
+      "imgLarge": "img/cards/base3/34_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Zubat",
+      "weakness": "Psychic",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Leech Life",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Remove a number of damage counters from Golbat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Golbat has fewer damage counters than that, remove all of them.",
+          "effect": {
+            "drainAll": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base3-37",
+      "set": "base3",
+      "name": "Graveler",
+      "kind": "pokemon",
+      "img": "img/cards/base3/37.webp",
+      "imgLarge": "img/cards/base3/37_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Fighting",
+      "evolvesFrom": "Geodude",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Harden",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "",
+          "text": "During your opponent's next turn, whenever 30 or less damage is done to Graveler (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)",
+          "effect": {
+            "shield": "harden"
+          }
+        },
+        {
+          "name": "Rock Throw",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base3-48",
+      "set": "base3",
+      "name": "Grimer",
+      "kind": "pokemon",
+      "img": "img/cards/base3/48.webp",
+      "imgLarge": "img/cards/base3/48_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Nasty Goo",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Minimize",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "All damage done by attacks to Grimer during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-51",
+      "set": "base1",
+      "name": "Koffing",
+      "kind": "pokemon",
+      "img": "img/cards/base1/51.webp",
+      "imgLarge": "img/cards/base1/51_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Foul Gas",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused.",
+          "effect": {
+            "flipStatusEither": [
+              "poisoned",
+              "confused"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base3-13",
+      "set": "base3",
+      "name": "Muk",
+      "kind": "pokemon",
+      "img": "img/cards/base3/13.webp",
+      "imgLarge": "img/cards/base3/13_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Grimer",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Sludge",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ],
+      "power": {
+        "name": "Toxic Gas",
+        "text": "Ignore all Pokémon Powers other than Toxic Gases. This power stops working while Muk is Asleep, Confused, or Paralyzed.",
+        "kind": "toxicGas"
+      }
+    },
+    {
+      "count": 1,
+      "id": "base1-56",
+      "set": "base1",
+      "name": "Onix",
+      "kind": "pokemon",
+      "img": "img/cards/base1/56.webp",
+      "imgLarge": "img/cards/base1/56_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Rock Throw",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Harden",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "",
+          "text": "During your opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)",
+          "effect": {
+            "shield": "harden"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base3-57",
+      "set": "base3",
+      "name": "Zubat",
+      "kind": "pokemon",
+      "img": "img/cards/base3/57.webp",
+      "imgLarge": "img/cards/base3/57_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Supersonic",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        },
+        {
+          "name": "Leech Life",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Remove a number of damage counters from Zubat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Zubat has fewer damage counters than that, remove all of them.",
+          "effect": {
+            "drainAll": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-85",
+      "set": "base1",
+      "name": "Pokémon Center",
+      "kind": "trainer",
+      "img": "img/cards/base1/85.webp",
+      "imgLarge": "img/cards/base1/85_hires.webp",
+      "text": "Remove all damage counters from all of your own Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon.",
+      "trainer": "pokemonCenter"
+    },
+    {
+      "count": 4,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 2,
+      "id": "base1-88",
+      "set": "base1",
+      "name": "Professor Oak",
+      "kind": "trainer",
+      "img": "img/cards/base1/88.webp",
+      "imgLarge": "img/cards/base1/88_hires.webp",
+      "text": "Discard your hand, then draw 7 cards.",
+      "trainer": "professorOak"
+    },
+    {
+      "count": 2,
+      "id": "base1-90",
+      "set": "base1",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/90.webp",
+      "imgLarge": "img/cards/base1/90_hires.webp",
+      "text": "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 12,
+      "id": "base1-97",
+      "set": "base1",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/97.webp",
+      "imgLarge": "img/cards/base1/97_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 16,
+      "id": "base1-99",
+      "set": "base1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/99.webp",
+      "imgLarge": "img/cards/base1/99_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

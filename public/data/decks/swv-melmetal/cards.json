@@ -1,0 +1,454 @@
+{
+  "name": "Melmetal V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Metal"
+  ],
+  "featured": [
+    "swshp-SWSH224",
+    "pgo-63",
+    "swsh8-181"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh6-114",
+      "set": "swsh6",
+      "name": "Cobalion",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/114.webp",
+      "imgLarge": "img/cards/swsh6/114_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Headbang",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Metal Slash",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh8-180",
+      "set": "swsh8",
+      "name": "Galarian Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/180.webp",
+      "imgLarge": "img/cards/swsh8/180_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Growl",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "",
+          "text": "During your opponent's next turn, the Defending Pokémon's attacks do 20 less damage (before applying Weakness and Resistance).",
+          "effect": {
+            "weaken": 20
+          }
+        },
+        {
+          "name": "Slash",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh8-181",
+      "set": "swsh8",
+      "name": "Galarian Perrserker",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/181.webp",
+      "imgLarge": "img/cards/swsh8/181_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": "Galarian Meowth",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call to Muster",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 basic Energy cards and attach them to your Pokémon in any way you like. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Headbang",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh4-128",
+      "set": "swsh4",
+      "name": "Magearna",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/128.webp",
+      "imgLarge": "img/cards/swsh4/128_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Overhaul",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "",
+          "text": "Shuffle your hand into your deck. Then, draw 6 cards.",
+          "effect": {
+            "handReset": 6
+          }
+        },
+        {
+          "name": "Windup Cannon",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "This attack does 20 more damage for each of your opponent's Benched Pokémon.",
+          "effect": {
+            "plusOppBench": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH224",
+      "set": "swshp",
+      "name": "Melmetal V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH224.webp",
+      "imgLarge": "img/cards/swshp/SWSH224_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Arm Charge",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": "50",
+          "text": "You may attach a Metal Energy card from your hand to this Pokémon.",
+          "effect": {
+            "attachHandSelf": {
+              "type": "Metal"
+            }
+          }
+        },
+        {
+          "name": "Mega Punch",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal"
+          ],
+          "damage": "140",
+          "text": ""
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "pgo-61",
+      "set": "pgo",
+      "name": "Pidove",
+      "kind": "pokemon",
+      "img": "img/cards/pgo/61.webp",
+      "imgLarge": "img/cards/pgo/61_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Growl",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "During your opponent's next turn, the Defending Pokémon's attacks do 20 less damage (before applying Weakness and Resistance).",
+          "effect": {
+            "weaken": 20
+          }
+        },
+        {
+          "name": "Flap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "pgo-62",
+      "set": "pgo",
+      "name": "Tranquill",
+      "kind": "pokemon",
+      "img": "img/cards/pgo/62.webp",
+      "imgLarge": "img/cards/pgo/62_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": "Pidove",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Aerial Ace",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 20 more damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        },
+        {
+          "name": "Flap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "pgo-63",
+      "set": "pgo",
+      "name": "Unfezant",
+      "kind": "pokemon",
+      "img": "img/cards/pgo/63.webp",
+      "imgLarge": "img/cards/pgo/63_hires.webp",
+      "stage": 2,
+      "hp": 140,
+      "type": "Colorless",
+      "evolvesFrom": "Tranquill",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Hurricane Wing",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70×",
+          "text": "Flip 4 coins. This attack does 70 damage for each heads.",
+          "effect": {
+            "flipMulti": 4
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh9-130",
+      "set": "swsh9",
+      "name": "Barry",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/130.webp",
+      "imgLarge": "img/cards/swsh9/130_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "barry",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh8-226",
+      "set": "swsh8",
+      "name": "Bug Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/226.webp",
+      "imgLarge": "img/cards/swsh8/226_hires.webp",
+      "text": "Draw 2 cards. Flip a coin. If heads, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "bugCatcher",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "pgo-66",
+      "set": "pgo",
+      "name": "Egg Incubator",
+      "kind": "trainer",
+      "img": "img/cards/pgo/66.webp",
+      "imgLarge": "img/cards/pgo/66_hires.webp",
+      "text": "Flip a coin. If heads, search your deck for a Basic Pokémon, put it onto your Bench, and shuffle your deck. If tails, put this Egg Incubator on the bottom of your deck instead of in the discard pile. You may play any number of Item cards during your turn.",
+      "trainer": "eggIncubator",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "pgo-67",
+      "set": "pgo",
+      "name": "Lure Module",
+      "kind": "trainer",
+      "img": "img/cards/pgo/67.webp",
+      "imgLarge": "img/cards/pgo/67_hires.webp",
+      "text": "Each player reveals the top 3 cards of their deck and puts all Pokémon they find there into their hand. Then, each player shuffles the other cards back into their deck. You may play any number of Item cards during your turn.",
+      "trainer": "lureModule",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-170",
+      "set": "swsh1",
+      "name": "Metal Saucer",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/170.webp",
+      "imgLarge": "img/cards/swsh1/170_hires.webp",
+      "text": "Attach a Metal Energy card from your discard pile to 1 of your Benched Metal Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "metalSaucer",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh8-240",
+      "set": "swsh8",
+      "name": "Shauna",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/240.webp",
+      "imgLarge": "img/cards/swsh8/240_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "shauna",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-8",
+      "set": "sve",
+      "name": "Basic Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/8.webp",
+      "imgLarge": "img/cards/sve/8_hires.webp",
+      "energyType": "Metal"
+    }
+  ]
+}

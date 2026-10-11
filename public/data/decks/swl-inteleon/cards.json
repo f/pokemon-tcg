@@ -1,0 +1,518 @@
+{
+  "name": "Inteleon VMAX",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Water",
+    "Darkness"
+  ],
+  "featured": [
+    "swsh2-50",
+    "swsh2-49",
+    "swsh1-58"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh1-56",
+      "set": "swsh1",
+      "name": "Drizzile",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/56.webp",
+      "imgLarge": "img/cards/swsh1/56_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Sobble",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Drip",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Shady Dealings",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may search your deck for a Trainer card, reveal it, and put it into your hand. Then, shuffle your deck.",
+        "kind": "shadyDealings1",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-64",
+      "set": "swsh1",
+      "name": "Frosmoth",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/64.webp",
+      "imgLarge": "img/cards/swsh1/64_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Snom",
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Aurora Beam",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Ice Dance",
+        "text": "As often as you like during your turn, you may attach a Water Energy card from your hand to 1 of your Benched Water Pokémon.",
+        "kind": "iceDance",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-117",
+      "set": "swsh1",
+      "name": "Galarian Zigzagoon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/117.webp",
+      "imgLarge": "img/cards/swsh1/117_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Headbutt Tantrum",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may put 1 damage counter on 1 of your opponent's Pokémon.",
+        "kind": "headbuttTantrum",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-58",
+      "set": "swsh1",
+      "name": "Inteleon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/58.webp",
+      "imgLarge": "img/cards/swsh1/58_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Water",
+      "evolvesFrom": "Drizzile",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Aqua Bullet",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 20,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Shady Dealings",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may search your deck for up to 2 Trainer cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+        "kind": "shadyDealings2",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh2-49",
+      "set": "swsh2",
+      "name": "Inteleon V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/49.webp",
+      "imgLarge": "img/cards/swsh2/49_hires.webp",
+      "stage": 0,
+      "hp": 200,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Snipe Shot",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "This attack does 40 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 40
+            }
+          }
+        },
+        {
+          "name": "Aqua Report",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Your opponent reveals their hand.",
+          "effect": {
+            "peekHand": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-50",
+      "set": "swsh2",
+      "name": "Inteleon VMAX",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/50.webp",
+      "imgLarge": "img/cards/swsh2/50_hires.webp",
+      "stage": 1,
+      "hp": 320,
+      "type": "Water",
+      "evolvesFrom": "Inteleon V",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Hydro Snipe",
+          "cost": [
+            "Water"
+          ],
+          "damage": "60",
+          "text": "You may put an Energy attached to your opponent's Active Pokémon into their hand.",
+          "effect": {
+            "bounceDefEnergy": {
+              "n": 1,
+              "may": true
+            }
+          }
+        },
+        {
+          "name": "Max Bullet",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "160",
+          "text": "This attack also does 60 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 60,
+              "count": 1
+            }
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "VMAX"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-63",
+      "set": "swsh1",
+      "name": "Snom",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/63.webp",
+      "imgLarge": "img/cards/swsh1/63_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-55",
+      "set": "swsh1",
+      "name": "Sobble",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/55.webp",
+      "imgLarge": "img/cards/swsh1/55_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh3-37",
+      "set": "swsh3",
+      "name": "Suicune",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/37.webp",
+      "imgLarge": "img/cards/swsh3/37_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Aurora Loop",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "Put 2 Water Energy attached to this Pokémon into your hand.",
+          "effect": {
+            "returnTypeToHand": {
+              "type": "Water",
+              "n": 2
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-156",
+      "set": "swsh1",
+      "name": "Air Balloon",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/156.webp",
+      "imgLarge": "img/cards/swsh1/156_hires.webp",
+      "text": "Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached. The Retreat Cost of the Pokémon this card is attached to is ColorlessColorless less. You may play any number of Item cards during your turn.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "airBalloon"
+    },
+    {
+      "count": 2,
+      "id": "swsh3-159",
+      "set": "swsh3",
+      "name": "Bird Keeper",
+      "kind": "trainer",
+      "img": "img/cards/swsh3/159.webp",
+      "imgLarge": "img/cards/swsh3/159_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "birdKeeper",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "swsh2-154",
+      "set": "swsh2",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/154.webp",
+      "imgLarge": "img/cards/swsh2/154_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-156",
+      "set": "swsh2",
+      "name": "Capacious Bucket",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/156.webp",
+      "imgLarge": "img/cards/swsh2/156_hires.webp",
+      "text": "Search your deck for up to 2 Water Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "capaciousBucket",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-169",
+      "set": "swsh1",
+      "name": "Marnie",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/169.webp",
+      "imgLarge": "img/cards/swsh1/169_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "marnie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-179",
+      "set": "swsh1",
+      "name": "Quick Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/179.webp",
+      "imgLarge": "img/cards/swsh1/179_hires.webp",
+      "text": "You can play this card only if you discard another card from your hand. Search your deck for a Basic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "quickBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-165",
+      "set": "swsh2",
+      "name": "Scoop Up Net",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/165.webp",
+      "imgLarge": "img/cards/swsh2/165_hires.webp",
+      "text": "Put 1 of your Pokémon that isn't a Pokémon V or a Pokémon-GX into your hand. (Discard all attached cards.) You may play any number of Item cards during your turn.",
+      "trainer": "scoopUpNet",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-169",
+      "set": "swsh2",
+      "name": "Training Court",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/169.webp",
+      "imgLarge": "img/cards/swsh2/169_hires.webp",
+      "text": "Once during each player's turn, that player may put a basic Energy card from their discard pile into their hand. This Stadium stays in play when you play it. Discard it if another Stadium comes into play. If a Stadium with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "trainingCourt"
+    },
+    {
+      "count": 10,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

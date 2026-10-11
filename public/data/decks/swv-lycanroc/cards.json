@@ -1,0 +1,455 @@
+{
+  "name": "Lycanroc V",
+  "group": "swshV",
+  "format": "modern",
+  "types": [
+    "Fighting"
+  ],
+  "featured": [
+    "swshp-SWSH199",
+    "swsh8-139",
+    "swsh2-95"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "swsh6-76",
+      "set": "swsh6",
+      "name": "Diglett",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/76.webp",
+      "imgLarge": "img/cards/swsh6/76_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dig",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+          "effect": {
+            "flipShield": "all"
+          }
+        }
+      ],
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh6-77",
+      "set": "swsh6",
+      "name": "Dugtrio",
+      "kind": "pokemon",
+      "img": "img/cards/swsh6/77.webp",
+      "imgLarge": "img/cards/swsh6/77_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": "Diglett",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Triple Heads",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "60×",
+          "text": "Flip 3 coins. This attack does 60 damage for each heads. If all of them are heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon.",
+          "effect": {
+            "flipMulti": 3,
+            "allHeadsShield": true
+          }
+        }
+      ],
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh2-94",
+      "set": "swsh2",
+      "name": "Galarian Farfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/94.webp",
+      "imgLarge": "img/cards/swsh2/94_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rock Smash",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage.",
+          "effect": {
+            "flipBonus": 30
+          }
+        },
+        {
+          "name": "Pierce",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-95",
+      "set": "swsh2",
+      "name": "Galarian Sirfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/95.webp",
+      "imgLarge": "img/cards/swsh2/95_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Fighting",
+      "evolvesFrom": "Galarian Farfetch'd",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Pierce",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Meteor Assault",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "This Pokémon can't use Meteor Assault again until it leaves the Active Spot.",
+          "effect": {
+            "oncePerActive": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swshp-SWSH199",
+      "set": "swshp",
+      "name": "Lycanroc V",
+      "kind": "pokemon",
+      "img": "img/cards/swshp/SWSH199.webp",
+      "imgLarge": "img/cards/swshp/SWSH199_hires.webp",
+      "stage": 0,
+      "hp": 200,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rock Throw",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Crashing Fangs",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "200",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-138",
+      "set": "swsh8",
+      "name": "Onix",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/138.webp",
+      "imgLarge": "img/cards/swsh8/138_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Guard Press",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 30
+          }
+        },
+        {
+          "name": "Rock Throw",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-139",
+      "set": "swsh8",
+      "name": "Steelix",
+      "kind": "pokemon",
+      "img": "img/cards/swsh8/139.webp",
+      "imgLarge": "img/cards/swsh8/139_hires.webp",
+      "stage": 1,
+      "hp": 190,
+      "type": "Fighting",
+      "evolvesFrom": "Onix",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Powerful Rage",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "This attack does 20 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 20
+          }
+        },
+        {
+          "name": "Earthquake",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "This attack also does 30 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "selfBenchAll": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-100",
+      "set": "swsh1",
+      "name": "Sudowoodo",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/100.webp",
+      "imgLarge": "img/cards/swsh1/100_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "This attack does 10 damage for each damage counter on this Pokémon.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh8-226",
+      "set": "swsh8",
+      "name": "Bug Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/226.webp",
+      "imgLarge": "img/cards/swsh8/226_hires.webp",
+      "text": "Draw 2 cards. Flip a coin. If heads, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "bugCatcher",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh8-228",
+      "set": "swsh8",
+      "name": "Cook",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/228.webp",
+      "imgLarge": "img/cards/swsh8/228_hires.webp",
+      "text": "Heal 70 damage from your Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "cook",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-125",
+      "set": "swsh5",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/125.webp",
+      "imgLarge": "img/cards/swsh5/125_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, they don't switch Pokémon.) You may play any number of Item cards during your turn.",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh45-59",
+      "set": "swsh45",
+      "name": "Gym Trainer",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/59.webp",
+      "imgLarge": "img/cards/swsh45/59_hires.webp",
+      "text": "Draw 2 cards. If any of your Pokémon were Knocked Out during your opponent's last turn, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "gymTrainer",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-177",
+      "set": "swsh1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/177.webp",
+      "imgLarge": "img/cards/swsh1/177_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh8-240",
+      "set": "swsh8",
+      "name": "Shauna",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/240.webp",
+      "imgLarge": "img/cards/swsh8/240_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "shauna",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    }
+  ]
+}

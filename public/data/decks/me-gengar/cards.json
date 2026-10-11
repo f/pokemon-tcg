@@ -1,0 +1,527 @@
+{
+  "name": "Mega Gengar ex",
+  "group": "mega",
+  "format": "modern",
+  "types": [
+    "Darkness"
+  ],
+  "featured": [
+    "me2-56",
+    "me2-68",
+    "me2-55"
+  ],
+  "cards": [
+    {
+      "count": 1,
+      "id": "me2-69",
+      "set": "me2",
+      "name": "Eternatus",
+      "kind": "pokemon",
+      "img": "img/cards/me2/69.webp",
+      "imgLarge": "img/cards/me2/69_hires.webp",
+      "stage": 0,
+      "hp": 150,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Shatter",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "50",
+          "text": "Discard a Stadium in play.",
+          "effect": {
+            "discardStadium": {
+              "may": false
+            }
+          }
+        },
+        {
+          "name": "Power Rush",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "130",
+          "text": "Flip a coin. If tails, during your next turn, this Pokémon can't use attacks.",
+          "effect": {
+            "tailsCooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "me2-54",
+      "set": "me2",
+      "name": "Gastly",
+      "kind": "pokemon",
+      "img": "img/cards/me2/54.webp",
+      "imgLarge": "img/cards/me2/54_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Petty Grudge",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me2-55",
+      "set": "me2",
+      "name": "Haunter",
+      "kind": "pokemon",
+      "img": "img/cards/me2/55.webp",
+      "imgLarge": "img/cards/me2/55_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Darkness",
+      "evolvesFrom": "Gastly",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spooky Shot",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "mep-27",
+      "set": "mep",
+      "name": "Haunter",
+      "kind": "pokemon",
+      "img": "img/cards/mep/27.webp",
+      "imgLarge": "img/cards/mep/27_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Darkness",
+      "evolvesFrom": "Gastly",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Spooky Shot",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me2-56",
+      "set": "me2",
+      "name": "Mega Gengar ex",
+      "kind": "pokemon",
+      "img": "img/cards/me2/56.webp",
+      "imgLarge": "img/cards/me2/56_hires.webp",
+      "stage": 2,
+      "hp": 350,
+      "type": "Darkness",
+      "evolvesFrom": "Haunter",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Void Gale",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "230",
+          "text": "Move an Energy from this Pokémon to 1 of your Benched Pokémon.",
+          "effect": {
+            "moveEnergyToBench": {
+              "n": 1,
+              "type": null
+            }
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Mega",
+        "ex"
+      ],
+      "power": {
+        "name": "Shadowy Concealment",
+        "text": "If 1 of your Darkness Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon ex, that player takes 1 fewer Prize card. The effect of Shadowy Concealment doesn't stack.",
+        "kind": "shadowyConcealment",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "me2-59",
+      "set": "me2",
+      "name": "Sableye",
+      "kind": "pokemon",
+      "img": "img/cards/me2/59.webp",
+      "imgLarge": "img/cards/me2/59_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cocky Claw",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "20+",
+          "text": "If you have any Stage 2 Darkness Pokémon on your Bench, this attack does 70 more damage.",
+          "effect": {
+            "bonusIfBenchStage2Type": {
+              "type": "Darkness",
+              "n": 70
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me2-62",
+      "set": "me2",
+      "name": "Seviper",
+      "kind": "pokemon",
+      "img": "img/cards/me2/62.webp",
+      "imgLarge": "img/cards/me2/62_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pitch-Black Fangs",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "120",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Excited Power",
+        "text": "If you have any Darkness Mega Evolution Pokémon ex in play, attacks used by this Pokémon do 120 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+        "kind": "excitedPower",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "me2-67",
+      "set": "me2",
+      "name": "Toxel",
+      "kind": "pokemon",
+      "img": "img/cards/me2/67.webp",
+      "imgLarge": "img/cards/me2/67_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Playful Kick",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me2-68",
+      "set": "me2",
+      "name": "Toxtricity",
+      "kind": "pokemon",
+      "img": "img/cards/me2/68.webp",
+      "imgLarge": "img/cards/me2/68_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Darkness",
+      "evolvesFrom": "Toxel",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Gentle Slap",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Sinister Surge",
+        "text": "Once during your turn, you may use this Ability. Search your deck for a Basic Darkness Energy card and attach it to 1 of your Benched Darkness Pokémon. Then, shuffle your deck. If you attached Energy to a Pokémon in this way, place 2 damage counters on that Pokémon.",
+        "kind": "sinisterSurge",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sv3-186",
+      "set": "sv3",
+      "name": "Arven",
+      "kind": "trainer",
+      "img": "img/cards/sv3/186.webp",
+      "imgLarge": "img/cards/sv3/186_hires.webp",
+      "text": "Search your deck for an Item card and a Pokémon Tool card, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "arven",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me1-114",
+      "set": "me1",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/me1/114.webp",
+      "imgLarge": "img/cards/me1/114_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv5-144",
+      "set": "sv5",
+      "name": "Buddy-Buddy Poffin",
+      "kind": "trainer",
+      "img": "img/cards/sv5/144.webp",
+      "imgLarge": "img/cards/sv5/144_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "buddyPoffin",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "me2-87",
+      "set": "me2",
+      "name": "Dawn",
+      "kind": "trainer",
+      "img": "img/cards/me2/87.webp",
+      "imgLarge": "img/cards/me2/87_hires.webp",
+      "text": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "dawn",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "me2-90",
+      "set": "me2",
+      "name": "Grimsley's Move",
+      "kind": "trainer",
+      "img": "img/cards/me2/90.webp",
+      "imgLarge": "img/cards/me2/90_hires.webp",
+      "text": "Look at the top 7 cards of your deck and put a Darkness Pokémon you find there onto your Bench. Shuffle the other cards and put them on the bottom of your deck. You can't use this card during your first turn. You may play only 1 Supporter card during your turn.",
+      "trainer": "grimsleysMove",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv4pt5-80",
+      "set": "sv4pt5",
+      "name": "Iono",
+      "kind": "trainer",
+      "img": "img/cards/sv4pt5/80.webp",
+      "imgLarge": "img/cards/sv4pt5/80_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, each player draws a card for each of their remaining Prize cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "iono",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "me1-119",
+      "set": "me1",
+      "name": "Lillie's Determination",
+      "kind": "trainer",
+      "img": "img/cards/me1/119.webp",
+      "imgLarge": "img/cards/me1/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "lilliesDetermination",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "me1-121",
+      "set": "me1",
+      "name": "Mega Signal",
+      "kind": "trainer",
+      "img": "img/cards/me1/121.webp",
+      "imgLarge": "img/cards/me1/121_hires.webp",
+      "text": "Search your deck for a Mega Evolution Pokémon ex, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "megaSignal",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv4pt5-84",
+      "set": "sv4pt5",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv4pt5/84.webp",
+      "imgLarge": "img/cards/sv4pt5/84_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv6pt5-61",
+      "set": "sv6pt5",
+      "name": "Night Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sv6pt5/61.webp",
+      "imgLarge": "img/cards/sv6pt5/61_hires.webp",
+      "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "nightStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "zsv10pt5-84",
+      "set": "zsv10pt5",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/zsv10pt5/84.webp",
+      "imgLarge": "img/cards/zsv10pt5/84_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me2-92",
+      "set": "me2",
+      "name": "Punk Helmet",
+      "kind": "trainer",
+      "img": "img/cards/me2/92.webp",
+      "imgLarge": "img/cards/me2/92_hires.webp",
+      "text": "If the Darkness Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon (even if this Pokémon is Knocked Out), place 4 damage counters on the Attacking Pokémon. You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "punkHelmet"
+    },
+    {
+      "count": 2,
+      "id": "me1-125",
+      "set": "me1",
+      "name": "Rare Candy",
+      "kind": "trainer",
+      "img": "img/cards/me1/125.webp",
+      "imgLarge": "img/cards/me1/125_hires.webp",
+      "text": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn. You may play any number of Item cards during your turn.",
+      "trainer": "rareCandy",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me1-127",
+      "set": "me1",
+      "name": "Risky Ruins",
+      "kind": "trainer",
+      "img": "img/cards/me1/127.webp",
+      "imgLarge": "img/cards/me1/127_hires.webp",
+      "text": "Whenever any player puts a Basic non-Darkness Pokémon onto their Bench during their turn, place 2 damage counters on that Pokémon. You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "riskyRuins"
+    },
+    {
+      "count": 2,
+      "id": "me1-130",
+      "set": "me1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/me1/130.webp",
+      "imgLarge": "img/cards/me1/130_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me1-131",
+      "set": "me1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/me1/131.webp",
+      "imgLarge": "img/cards/me1/131_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand.  Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 13,
+      "id": "sve-7",
+      "set": "sve",
+      "name": "Basic Darkness Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/7.webp",
+      "imgLarge": "img/cards/sve/7_hires.webp",
+      "energyType": "Darkness"
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "name": "Rillaboom",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Grass"
+  ],
+  "featured": [
+    "swsh1-15",
+    "swsh1-13",
+    "swsh1-6"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh1-5",
+      "set": "swsh1",
+      "name": "Cottonee",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/5.webp",
+      "imgLarge": "img/cards/swsh1/5_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Attach",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-21",
+      "set": "swsh1",
+      "name": "Eldegoss",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/21.webp",
+      "imgLarge": "img/cards/swsh1/21_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Gossifleur",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Blessing of Fluff",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Grass Energy cards and attach them to your Benched Pokémon in any way you like. Then, shuffle your deck.",
+          "effect": {
+            "searchAttachBench": {
+              "type": "Grass",
+              "n": 3
+            }
+          }
+        },
+        {
+          "name": "Leafage",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-20",
+      "set": "swsh1",
+      "name": "Gossifleur",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/20.webp",
+      "imgLarge": "img/cards/swsh1/20_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 3
+            }
+          }
+        },
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-11",
+      "set": "swsh1",
+      "name": "Grookey",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/11.webp",
+      "imgLarge": "img/cards/swsh1/11_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Beat",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-7",
+      "set": "swsh1",
+      "name": "Maractus",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/7.webp",
+      "imgLarge": "img/cards/swsh1/7_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Zzzt",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Powerful Needles",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "60×",
+          "text": "Flip a coin for each Energy attached to this Pokémon. This attack does 60 damage for each heads.",
+          "effect": {
+            "flipPerEnergy": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-15",
+      "set": "swsh1",
+      "name": "Rillaboom",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/15.webp",
+      "imgLarge": "img/cards/swsh1/15_hires.webp",
+      "stage": 2,
+      "hp": 190,
+      "type": "Grass",
+      "evolvesFrom": "Thwackey",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Drum Roll",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": "This attack also does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "oppBenchAll": 10
+          }
+        },
+        {
+          "name": "Drum Beating",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "180",
+          "text": "During your next turn, this Pokémon can't use Drum Beating.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-140",
+      "set": "swsh1",
+      "name": "Snorlax",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/140.webp",
+      "imgLarge": "img/cards/swsh1/140_hires.webp",
+      "stage": 0,
+      "hp": 150,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Rolling Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        },
+        {
+          "name": "Heavy Impact",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh1-13",
+      "set": "swsh1",
+      "name": "Thwackey",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/13.webp",
+      "imgLarge": "img/cards/swsh1/13_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Grass",
+      "evolvesFrom": "Grookey",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Beat",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Ambush",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "Flip a coin. If heads, this attack does 30 more damage.",
+          "effect": {
+            "flipBonus": 30
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-6",
+      "set": "swsh1",
+      "name": "Whimsicott",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/6.webp",
+      "imgLarge": "img/cards/swsh1/6_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Grass",
+      "evolvesFrom": "Cottonee",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Cotton Ride",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, your opponent shuffles their Active Pokémon and all attached cards into their deck.",
+          "effect": {
+            "flipShuffleDef": true
+          }
+        },
+        {
+          "name": "Leaf Step",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-173",
+      "set": "swsh1",
+      "name": "Poké Kid",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/173.webp",
+      "imgLarge": "img/cards/swsh1/173_hires.webp",
+      "text": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "pokeKid",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-174",
+      "set": "swsh1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/174.webp",
+      "imgLarge": "img/cards/swsh1/174_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-176",
+      "set": "swsh1",
+      "name": "Pokémon Center Lady",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/176.webp",
+      "imgLarge": "img/cards/swsh1/176_hires.webp",
+      "text": "Heal 60 damage from 1 of your Pokémon, and it recovers from all Special Conditions. You may play only 1 Supporter card during your turn.",
+      "trainer": "pokemonCenterLady",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-177",
+      "set": "swsh1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/177.webp",
+      "imgLarge": "img/cards/swsh1/177_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-1",
+      "set": "sve",
+      "name": "Basic Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/1.webp",
+      "imgLarge": "img/cards/sve/1_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

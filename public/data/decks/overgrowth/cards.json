@@ -1,0 +1,428 @@
+{
+  "name": "Overgrowth",
+  "group": "theme",
+  "types": [
+    "Grass",
+    "Water"
+  ],
+  "featured": [
+    "base1-6",
+    "base1-17",
+    "base1-44"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "base1-44",
+      "set": "base1",
+      "name": "Bulbasaur",
+      "kind": "pokemon",
+      "img": "img/cards/base1/44.webp",
+      "imgLarge": "img/cards/base1/44_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leech Seed",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur.",
+          "effect": {
+            "healIfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-30",
+      "set": "base1",
+      "name": "Ivysaur",
+      "kind": "pokemon",
+      "img": "img/cards/base1/30.webp",
+      "imgLarge": "img/cards/base1/30_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Bulbasaur",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Vine Whip",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "The Defending Pokémon is now Poisoned.",
+          "effect": {
+            "status": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-35",
+      "set": "base1",
+      "name": "Magikarp",
+      "kind": "pokemon",
+      "img": "img/cards/base1/35.webp",
+      "imgLarge": "img/cards/base1/35_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10×",
+          "text": "Does 10 damage times the number of damage counters on Magikarp.",
+          "effect": {
+            "timesSelfCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-6",
+      "set": "base1",
+      "name": "Gyarados",
+      "kind": "pokemon",
+      "img": "img/cards/base1/6.webp",
+      "imgLarge": "img/cards/base1/6_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Water",
+      "evolvesFrom": "Magikarp",
+      "weakness": "Grass",
+      "resistance": "Fighting",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Dragon Rage",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Bubblebeam",
+          "cost": [
+            "Water",
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "damage": "40",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-65",
+      "set": "base1",
+      "name": "Staryu",
+      "kind": "pokemon",
+      "img": "img/cards/base1/65.webp",
+      "imgLarge": "img/cards/base1/65_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base1-64",
+      "set": "base1",
+      "name": "Starmie",
+      "kind": "pokemon",
+      "img": "img/cards/base1/64.webp",
+      "imgLarge": "img/cards/base1/64_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Staryu",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Recover",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "",
+          "text": "Discard 1 Water Energy card attached to Starmie in order to use this attack. Remove all damage counters from Starmie.",
+          "effect": {
+            "discard": {
+              "type": "Water",
+              "n": 1
+            },
+            "healAll": true
+          }
+        },
+        {
+          "name": "Star Freeze",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-69",
+      "set": "base1",
+      "name": "Weedle",
+      "kind": "pokemon",
+      "img": "img/cards/base1/69.webp",
+      "imgLarge": "img/cards/base1/69_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-33",
+      "set": "base1",
+      "name": "Kakuna",
+      "kind": "pokemon",
+      "img": "img/cards/base1/33.webp",
+      "imgLarge": "img/cards/base1/33_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Weedle",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Stiffen",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Poisonpowder",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-17",
+      "set": "base1",
+      "name": "Beedrill",
+      "kind": "pokemon",
+      "img": "img/cards/base1/17.webp",
+      "imgLarge": "img/cards/base1/17_hires.webp",
+      "stage": 2,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Kakuna",
+      "weakness": "Fire",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Twineedle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "40",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-91",
+      "set": "base1",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base1/91.webp",
+      "imgLarge": "img/cards/base1/91_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 2,
+      "id": "base1-93",
+      "set": "base1",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base1/93.webp",
+      "imgLarge": "img/cards/base1/93_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 1,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 2,
+      "id": "base1-90",
+      "set": "base1",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/90.webp",
+      "imgLarge": "img/cards/base1/90_hires.webp",
+      "text": "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 2,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 16,
+      "id": "base1-99",
+      "set": "base1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/99.webp",
+      "imgLarge": "img/cards/base1/99_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 12,
+      "id": "base1-102",
+      "set": "base1",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/102.webp",
+      "imgLarge": "img/cards/base1/102_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

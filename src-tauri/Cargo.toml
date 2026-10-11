@@ -1,0 +1,27 @@
+[package]
+name = "pokemon-tcg"
+version = "0.1.0"
+description = "Pokémon TCG Academy for macOS: learn the Pokémon Trading Card Game against Gary, with the Professor as your coach."
+authors = ["Fatih Kadir Akın"]
+license = "MIT"
+repository = "https://github.com/f/pokemon-tcg"
+edition = "2021"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+keyring = { version = "3", features = ["apple-native"] }
+libc = "0.2"
+tokio = { version = "1", features = ["time"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

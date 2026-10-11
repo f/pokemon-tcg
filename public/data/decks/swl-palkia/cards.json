@@ -1,0 +1,468 @@
+{
+  "name": "Origin Forme Palkia VSTAR",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "swsh10-40",
+    "swsh10-39",
+    "swsh9-121"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh9-121",
+      "set": "swsh9",
+      "name": "Bibarel",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/121.webp",
+      "imgLarge": "img/cards/swsh9/121_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": "Bidoof",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tail Smash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Industrious Incisors",
+        "text": "Once during your turn, you may draw cards until you have 5 cards in your hand.",
+        "kind": "industriousIncisors",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh9-120",
+      "set": "swsh9",
+      "name": "Bidoof",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/120.webp",
+      "imgLarge": "img/cards/swsh9/120_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rollout",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh10-43",
+      "set": "swsh10",
+      "name": "Hisuian Basculin",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/43.webp",
+      "imgLarge": "img/cards/swsh10/43_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Gather the Crew",
+          "cost": [],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh9-41",
+      "set": "swsh9",
+      "name": "Manaphy",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/41.webp",
+      "imgLarge": "img/cards/swsh9/41_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rain Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Wave Veil",
+        "text": "Prevent all damage done to your Benched Pokémon by attacks from your opponent's Pokémon.",
+        "kind": "waveVeil",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh10-39",
+      "set": "swsh10",
+      "name": "Origin Forme Palkia V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/39.webp",
+      "imgLarge": "img/cards/swsh10/39_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rule the Region",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "Search your deck for a Stadium card, reveal it, and put it into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchStadium": true
+          }
+        },
+        {
+          "name": "Hydro Break",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "200",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh10-40",
+      "set": "swsh10",
+      "name": "Origin Forme Palkia VSTAR",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/40.webp",
+      "imgLarge": "img/cards/swsh10/40_hires.webp",
+      "stage": 1,
+      "hp": 280,
+      "type": "Water",
+      "evolvesFrom": "Origin Forme Palkia V",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Subspace Swell",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "60+",
+          "text": "This attack does 20 more damage for each Benched Pokémon (both yours and your opponent's).",
+          "effect": {
+            "plusAllBench": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Star Portal",
+        "text": "During your turn, you may attach up to 3 Water Energy cards from your discard pile to your Water Pokémon in any way you like. (You can't use more than 1 VSTAR Power in a game.)",
+        "kind": "starPortal",
+        "ability": true,
+        "vstarPower": true
+      },
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "VSTAR"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh10-46",
+      "set": "swsh10",
+      "name": "Radiant Greninja",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/46.webp",
+      "imgLarge": "img/cards/swsh10/46_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Moonlight Shuriken",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard 2 Energy from this Pokémon. This attack does 90 damage to 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 2
+            },
+            "snipeMulti": {
+              "n": 90,
+              "count": 2
+            }
+          }
+        }
+      ],
+      "ruleBox": true,
+      "tags": [
+        "Radiant"
+      ],
+      "power": {
+        "name": "Concealed Cards",
+        "text": "You must discard an Energy card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",
+        "kind": "concealedCards",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "swsh8-225",
+      "set": "swsh8",
+      "name": "Battle VIP Pass",
+      "kind": "trainer",
+      "img": "img/cards/swsh8/225.webp",
+      "imgLarge": "img/cards/swsh8/225_hires.webp",
+      "text": "You can use this card only during your first turn. Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "battleVipPass",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh9-132",
+      "set": "swsh9",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/132.webp",
+      "imgLarge": "img/cards/swsh9/132_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "swsh9-135",
+      "set": "swsh9",
+      "name": "Choice Belt",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/135.webp",
+      "imgLarge": "img/cards/swsh9/135_hires.webp",
+      "text": "The attacks of the Pokémon this card is attached to do 30 more damage to your opponent's Active Pokémon V (before applying Weakness and Resistance). You may play any number of Item cards during your turn. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "choiceBelt"
+    },
+    {
+      "count": 1,
+      "id": "swsh6-136",
+      "set": "swsh6",
+      "name": "Echoing Horn",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/136.webp",
+      "imgLarge": "img/cards/swsh6/136_hires.webp",
+      "text": "Put a Basic Pokémon from your opponent's discard pile onto their Bench. You may play any number of Item cards during your turn.",
+      "trainer": "echoingHorn",
+      "ttype": "item",
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-161",
+      "set": "swsh1",
+      "name": "Energy Search",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/161.webp",
+      "imgLarge": "img/cards/swsh1/161_hires.webp",
+      "text": "Search your deck for a basic Energy card, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "energySearch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh10-146",
+      "set": "swsh10",
+      "name": "Hisuian Heavy Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/146.webp",
+      "imgLarge": "img/cards/swsh10/146_hires.webp",
+      "text": "Look at your face-down Prize cards. You may reveal a Basic Pokémon you find there, put it into your hand, and put this Hisuian Heavy Ball in its place as a face-down Prize card. (If you don't reveal a Basic Pokémon, put this card in the discard pile.) Then, shuffle your face-down Prize cards. You may play any number of Item cards during your turn.",
+      "trainer": "hisuianHeavyBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh10-147",
+      "set": "swsh10",
+      "name": "Irida",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/147.webp",
+      "imgLarge": "img/cards/swsh10/147_hires.webp",
+      "text": "Search your deck for a Water Pokémon and an Item card, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "irida",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh6-145",
+      "set": "swsh6",
+      "name": "Klara",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/145.webp",
+      "imgLarge": "img/cards/swsh6/145_hires.webp",
+      "text": "Choose 1 or both:\n• Put up to 2 Pokémon from your discard pile into your hand.\n• Put up to 2 basic Energy cards from your discard pile into your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "klara",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh11-160",
+      "set": "swsh11",
+      "name": "Lake Acuity",
+      "kind": "trainer",
+      "img": "img/cards/swsh11/160.webp",
+      "imgLarge": "img/cards/swsh11/160_hires.webp",
+      "text": "All Pokémon that have any Water or Fighting Energy attached (both yours and your opponent's) take 20 less damage from attacks from the opponent's Pokémon (after applying Weakness and Resistance).",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "lakeAcuity"
+    },
+    {
+      "count": 3,
+      "id": "swsh6-146",
+      "set": "swsh6",
+      "name": "Melony",
+      "kind": "trainer",
+      "img": "img/cards/swsh6/146.webp",
+      "imgLarge": "img/cards/swsh6/146_hires.webp",
+      "text": "Attach a Water Energy card from your discard pile to 1 of your Pokémon V. If you do, draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "melony",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh10-150",
+      "set": "swsh10",
+      "name": "Roxanne",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/150.webp",
+      "imgLarge": "img/cards/swsh10/150_hires.webp",
+      "text": "You can use this card only if your opponent has 3 or fewer Prize cards remaining. Each player shuffles their hand into their deck. Then, you draw 6 cards, and your opponent draws 2 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "roxanne",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh10-156",
+      "set": "swsh10",
+      "name": "Trekking Shoes",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/156.webp",
+      "imgLarge": "img/cards/swsh10/156_hires.webp",
+      "text": "Look at the top card of your deck. You may put that card into your hand. If you don't, discard that card and draw a card. You may play any number of Item cards during your turn.",
+      "trainer": "trekkingShoes",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh9-150",
+      "set": "swsh9",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh9/150.webp",
+      "imgLarge": "img/cards/swsh9/150_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 9,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

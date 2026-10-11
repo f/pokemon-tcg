@@ -1,0 +1,375 @@
+{
+  "name": "Ninetales ex",
+  "group": "svDeluxe",
+  "format": "modern",
+  "types": [
+    "Fire"
+  ],
+  "featured": [
+    "sv3pt5-38",
+    "swsh12-22",
+    "sv2-28"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv3pt5-38",
+      "set": "sv3pt5",
+      "name": "Ninetales ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv3pt5/38.webp",
+      "imgLarge": "img/cards/sv3pt5/38_hires.webp",
+      "stage": 1,
+      "hp": 260,
+      "type": "Fire",
+      "evolvesFrom": "Vulpix",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Heat Wave",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Burned.",
+          "effect": {
+            "status": "burned"
+          }
+        },
+        {
+          "name": "Mirrored Flames",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "text": "If you have the same number of cards in your hand as your opponent, this attack does 140 more damage.",
+          "effect": {
+            "bonusIfEqualHands": 140
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv2-28",
+      "set": "sv2",
+      "name": "Paldean Tauros",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/28.webp",
+      "imgLarge": "img/cards/sv2/28_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Raging Horns",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 10 more damage for each damage counter on this Pokémon.",
+          "effect": {
+            "plusSelfCounters": 10
+          }
+        },
+        {
+          "name": "Blaze Dash",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "swsh12-21",
+      "set": "swsh12",
+      "name": "Ponyta",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/21.webp",
+      "imgLarge": "img/cards/swsh12/21_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Take Down",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "This Pokémon also does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh12-22",
+      "set": "swsh12",
+      "name": "Rapidash",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/22.webp",
+      "imgLarge": "img/cards/swsh12/22_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Fire",
+      "evolvesFrom": "Ponyta",
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fire Mane",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Heat Boost",
+        "text": "Once during your turn, you may discard a Fire Energy card from your hand in order to use this Ability. During this turn, your Fire Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+        "kind": "heatBoost",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv3-28",
+      "set": "sv3",
+      "name": "Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/28.webp",
+      "imgLarge": "img/cards/sv3/28_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Combustion",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Confuse Ray",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "20",
+          "text": "Your opponent's Active Pokémon is now Confused.",
+          "effect": {
+            "status": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv4-163",
+      "set": "sv4",
+      "name": "Earthen Vessel",
+      "kind": "trainer",
+      "img": "img/cards/sv4/163.webp",
+      "imgLarge": "img/cards/sv4/163_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.  Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "earthenVessel",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh10-148",
+      "set": "swsh10",
+      "name": "Jubilife Village",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/148.webp",
+      "imgLarge": "img/cards/swsh10/148_hires.webp",
+      "text": "Once during each player's turn, that player may shuffle their hand into their deck and draw 5 cards. If they do, their turn ends.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "jubilifeVillage"
+    },
+    {
+      "count": 3,
+      "id": "sv1-176",
+      "set": "sv1",
+      "name": "Judge",
+      "kind": "trainer",
+      "img": "img/cards/sv1/176.webp",
+      "imgLarge": "img/cards/sv1/176_hires.webp",
+      "text": "Each player shuffles their hand into their deck and draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "judge",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-182",
+      "set": "sv1",
+      "name": "Pal Pad",
+      "kind": "trainer",
+      "img": "img/cards/sv1/182.webp",
+      "imgLarge": "img/cards/sv1/182_hires.webp",
+      "text": "Shuffle up to 2 Supporter cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "palPad",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-189",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Sada)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/189.webp",
+      "imgLarge": "img/cards/sv1/189_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "swsh10-159",
+      "set": "swsh10",
+      "name": "Zisu",
+      "kind": "trainer",
+      "img": "img/cards/swsh10/159.webp",
+      "imgLarge": "img/cards/swsh10/159_hires.webp",
+      "text": "Draw cards until you have 1 more card in your hand than your opponent. You may play only 1 Supporter card during your turn.",
+      "trainer": "zisu",
+      "ttype": "supporter"
+    },
+    {
+      "count": 13,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

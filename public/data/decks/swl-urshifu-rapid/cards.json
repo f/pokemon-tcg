@@ -1,0 +1,580 @@
+{
+  "name": "Rapid Strike Urshifu VMAX",
+  "group": "swshLeague",
+  "format": "modern",
+  "types": [
+    "Fighting",
+    "Water",
+    "Darkness"
+  ],
+  "featured": [
+    "swsh5-88",
+    "swsh5-87",
+    "swsh5-37"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh1-147",
+      "set": "swsh1",
+      "name": "Cinccino",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/147.webp",
+      "imgLarge": "img/cards/swsh1/147_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": "Minccino",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Energy Assist",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "Attach a basic Energy card from your discard pile to 1 of your Benched Pokémon.",
+          "effect": {
+            "attachDiscardBench": {
+              "type": null
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Make Do",
+        "text": "You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",
+        "kind": "makeDo",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "swsh5-83",
+      "set": "swsh5",
+      "name": "Falinks",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/83.webp",
+      "imgLarge": "img/cards/swsh5/83_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rapid Strike Squad",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "This attack does 20 damage for each of your Rapid Strike Pokémon in play.",
+          "effect": {
+            "timesTagInPlay": {
+              "tag": "Rapid Strike",
+              "n": 20
+            }
+          }
+        }
+      ],
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh1-117",
+      "set": "swsh1",
+      "name": "Galarian Zigzagoon",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/117.webp",
+      "imgLarge": "img/cards/swsh1/117_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Headbutt Tantrum",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may put 1 damage counter on 1 of your opponent's Pokémon.",
+        "kind": "headbuttTantrum",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh1-145",
+      "set": "swsh1",
+      "name": "Minccino",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/145.webp",
+      "imgLarge": "img/cards/swsh1/145_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Glance",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Look at the top card of your opponent's deck.",
+          "effect": {
+            "peekOppTop": true
+          }
+        },
+        {
+          "name": "Tail Slap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage for each heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-37",
+      "set": "swsh5",
+      "name": "Octillery",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/37.webp",
+      "imgLarge": "img/cards/swsh5/37_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": "Remoraid",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Waterfall",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Rapid Strike Search",
+        "text": "Once during your turn, you may search your deck for a Rapid Strike card, reveal it, and put it into your hand. Then, shuffle your deck. You can't use more than 1 Rapid Strike Search Ability each turn.",
+        "kind": "rapidStrikeSearch",
+        "ability": true
+      },
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-87",
+      "set": "swsh5",
+      "name": "Rapid Strike Urshifu V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/87.webp",
+      "imgLarge": "img/cards/swsh5/87_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Strafe",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": "You may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMay": true
+          }
+        },
+        {
+          "name": "Hundred Furious Blows",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": ""
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "Rapid Strike",
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-88",
+      "set": "swsh5",
+      "name": "Rapid Strike Urshifu VMAX",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/88.webp",
+      "imgLarge": "img/cards/swsh5/88_hires.webp",
+      "stage": 1,
+      "hp": 330,
+      "type": "Fighting",
+      "evolvesFrom": "Rapid Strike Urshifu V",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Gale Thrust",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "30+",
+          "text": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 120 more damage.",
+          "effect": {
+            "bonusIfMovedToActive": 120
+          }
+        },
+        {
+          "name": "G-Max Rapid Flow",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard all Energy from this Pokémon. This attack does 120 damage to 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "discardAllEnergy": true,
+            "snipeMulti": {
+              "n": 120,
+              "count": 2
+            }
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "Rapid Strike",
+        "VMAX"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh5-36",
+      "set": "swsh5",
+      "name": "Remoraid",
+      "kind": "pokemon",
+      "img": "img/cards/swsh5/36.webp",
+      "imgLarge": "img/cards/swsh5/36_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Sharp Fin",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ],
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh45-58",
+      "set": "swsh45",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/58.webp",
+      "imgLarge": "img/cards/swsh45/58_hires.webp",
+      "text": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh5-123",
+      "set": "swsh5",
+      "name": "Cheryl",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/123.webp",
+      "imgLarge": "img/cards/swsh5/123_hires.webp",
+      "text": "Heal all damage from each of your Evolution Pokémon. If you do, discard all Energy from the Pokémon that were healed in this way. You may play only 1 Supporter card during your turn.",
+      "trainer": "cheryl",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-125",
+      "set": "swsh5",
+      "name": "Escape Rope",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/125.webp",
+      "imgLarge": "img/cards/swsh5/125_hires.webp",
+      "text": "Each player switches their Active Pokémon with 1 of their Benched Pokémon. Your opponent switches first. (If a player does not have a Benched Pokémon, they don't switch Pokémon.) You may play any number of Item cards during your turn.",
+      "trainer": "escapeRope",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh5-127",
+      "set": "swsh5",
+      "name": "Fan of Waves",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/127.webp",
+      "imgLarge": "img/cards/swsh5/127_hires.webp",
+      "text": "Put a Special Energy attached to 1 of your opponent's Pokémon on the bottom of their deck. You may play any number of Item cards during your turn.",
+      "trainer": "fanOfWaves",
+      "ttype": "item",
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh5-128",
+      "set": "swsh5",
+      "name": "Korrina's Focus",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/128.webp",
+      "imgLarge": "img/cards/swsh5/128_hires.webp",
+      "text": "Draw cards until you have 6 cards in your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "korrinasFocus",
+      "ttype": "supporter",
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh5-129",
+      "set": "swsh5",
+      "name": "Level Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/129.webp",
+      "imgLarge": "img/cards/swsh5/129_hires.webp",
+      "text": "Search your deck for a Pokémon with 90 HP or less, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "levelBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh1-169",
+      "set": "swsh1",
+      "name": "Marnie",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/169.webp",
+      "imgLarge": "img/cards/swsh1/169_hires.webp",
+      "text": "Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "marnie",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-171",
+      "set": "swsh1",
+      "name": "Ordinary Rod",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/171.webp",
+      "imgLarge": "img/cards/swsh1/171_hires.webp",
+      "text": "Choose 1 or both:\n• Shuffle up to 2 Pokémon from your discard pile into your deck.\n• Shuffle up to 2 basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ordinaryRod",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-172",
+      "set": "swsh1",
+      "name": "Pal Pad",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/172.webp",
+      "imgLarge": "img/cards/swsh1/172_hires.webp",
+      "text": "Shuffle up to 2 Supporter cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "palPad",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "swsh45-60",
+      "set": "swsh45",
+      "name": "Professor's Research",
+      "kind": "trainer",
+      "img": "img/cards/swsh45/60.webp",
+      "imgLarge": "img/cards/swsh45/60_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-179",
+      "set": "swsh1",
+      "name": "Quick Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/179.webp",
+      "imgLarge": "img/cards/swsh1/179_hires.webp",
+      "text": "You can play this card only if you discard another card from your hand. Search your deck for a Basic Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "quickBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-165",
+      "set": "swsh2",
+      "name": "Scoop Up Net",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/165.webp",
+      "imgLarge": "img/cards/swsh2/165_hires.webp",
+      "text": "Put 1 of your Pokémon that isn't a Pokémon V or a Pokémon-GX into your hand. (Discard all attached cards.) You may play any number of Item cards during your turn.",
+      "trainer": "scoopUpNet",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh2-168",
+      "set": "swsh2",
+      "name": "Tool Scrapper",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/168.webp",
+      "imgLarge": "img/cards/swsh2/168_hires.webp",
+      "text": "Choose up to 2 Pokémon Tools attached to Pokémon (yours or your opponent's) and discard them. You may play any number of Item cards during your turn.",
+      "trainer": "toolScrapper",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh5-138",
+      "set": "swsh5",
+      "name": "Tower of Waters",
+      "kind": "trainer",
+      "img": "img/cards/swsh5/138.webp",
+      "imgLarge": "img/cards/swsh5/138_hires.webp",
+      "text": "The Retreat Cost of each Rapid Strike Pokémon in play (both yours and your opponent's) is ColorlessColorless less. This Stadium stays in play when you play it. Discard it if another Stadium comes into play. If a Stadium with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "towerOfWaters",
+      "tags": [
+        "Rapid Strike"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 4,
+      "id": "swsh5-140",
+      "set": "swsh5",
+      "name": "Rapid Strike Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh5/140.webp",
+      "imgLarge": "img/cards/swsh5/140_hires.webp",
+      "energyType": "Water|Fighting",
+      "tags": [
+        "Rapid Strike"
+      ],
+      "special": "rapidStrike",
+      "text": "This card can only be attached to a Rapid Strike Pokémon. If this card is attached to anything other than a Rapid Strike Pokémon, discard this card. As long as this card is attached to a Pokémon, it provides 2 in any combination of Water Energy and Fighting Energy.",
+      "provides": 2,
+      "needsTag": "Rapid Strike"
+    },
+    {
+      "count": 4,
+      "id": "swsh4-164",
+      "set": "swsh4",
+      "name": "Stone Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/swsh4/164.webp",
+      "imgLarge": "img/cards/swsh4/164_hires.webp",
+      "energyType": "Fighting",
+      "special": "stoneFighting",
+      "text": "As long as this card is attached to a Pokémon, it provides Fighting Energy. The Fighting Pokémon this card is attached to takes 20 less damage from attacks from your opponent's Pokémon (after applying Weakness and Resistance)."
+    }
+  ]
+}

@@ -1,0 +1,599 @@
+{
+  "name": "Trouble",
+  "group": "rocket",
+  "types": [
+    "Psychic",
+    "Grass"
+  ],
+  "featured": [
+    "base5-2",
+    "base4-43",
+    "base4-46"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "base4-65",
+      "set": "base4",
+      "name": "Abra",
+      "kind": "pokemon",
+      "img": "img/cards/base4/65.webp",
+      "imgLarge": "img/cards/base4/65_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base5-49",
+      "set": "base5",
+      "name": "Abra",
+      "kind": "pokemon",
+      "img": "img/cards/base5/49.webp",
+      "imgLarge": "img/cards/base5/49_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Vanish",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Shuffle Abra into your deck. (Discard all cards attached to Abra.)",
+          "effect": {
+            "shuffleSelf": true
+          }
+        },
+        {
+          "name": "Psyshock",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base5-2",
+      "set": "base5",
+      "name": "Dark Arbok",
+      "kind": "pokemon",
+      "img": "img/cards/base5/2.webp",
+      "imgLarge": "img/cards/base5/2_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Ekans",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Stare",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.) If that Pokémon has a Pokémon Power, that power stops working until the end of your opponent's next turn.",
+          "effect": {
+            "snipeAny": {
+              "n": 10,
+              "noPower": true
+            }
+          }
+        },
+        {
+          "name": "Poison Vapor",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "The Defending Pokémon is now Poisoned. This attack does 10 damage to each of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "status": "poisoned",
+            "oppBenchAll": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base5-39",
+      "set": "base5",
+      "name": "Dark Kadabra",
+      "kind": "pokemon",
+      "img": "img/cards/base5/39.webp",
+      "imgLarge": "img/cards/base5/39_hires.webp",
+      "stage": 1,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": "Abra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Mind Shock",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "30",
+          "text": "Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)",
+          "effect": {
+            "noWROnly": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Matter Exchange",
+        "text": "Once during your turn (before your attack), you may discard a card from your hand in order to draw a card. This power can't be used if Dark Kadabra is Asleep, Confused, or Paralyzed.",
+        "kind": "matterExchange"
+      }
+    },
+    {
+      "count": 3,
+      "id": "base5-54",
+      "set": "base5",
+      "name": "Drowzee",
+      "kind": "pokemon",
+      "img": "img/cards/base5/54.webp",
+      "imgLarge": "img/cards/base5/54_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Nightmare",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ],
+      "power": {
+        "name": "Long-Distance Hypnosis",
+        "text": "Once during your turn (before your attack), you may flip a coin. If heads, the Defending Pokémon is now Asleep; if tails, your Active Pokémon is now Asleep. This power can't be used if Drowzee is Asleep, Confused, or Paralyzed.",
+        "kind": "longDistanceHypnosis"
+      }
+    },
+    {
+      "count": 4,
+      "id": "base5-56",
+      "set": "base5",
+      "name": "Ekans",
+      "kind": "pokemon",
+      "img": "img/cards/base5/56.webp",
+      "imgLarge": "img/cards/base5/56_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-40",
+      "set": "base4",
+      "name": "Farfetch'd",
+      "kind": "pokemon",
+      "img": "img/cards/base4/40.webp",
+      "imgLarge": "img/cards/base4/40_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Leek Slap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again).",
+          "effect": {
+            "flipFail": true,
+            "oncePerPlay": true
+          }
+        },
+        {
+          "name": "Pot Smash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-75",
+      "set": "base4",
+      "name": "Gastly",
+      "kind": "pokemon",
+      "img": "img/cards/base4/75.webp",
+      "imgLarge": "img/cards/base4/75_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Sleeping Gas",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Asleep.",
+          "effect": {
+            "flipStatus": "asleep"
+          }
+        },
+        {
+          "name": "Destiny Bond",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "destinyBond": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-43",
+      "set": "base4",
+      "name": "Haunter",
+      "kind": "pokemon",
+      "img": "img/cards/base4/43.webp",
+      "imgLarge": "img/cards/base4/43_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": "Gastly",
+      "weakness": null,
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hypnosis",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        },
+        {
+          "name": "Dream Eater",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "50",
+          "text": "You can't use this attack unless the Defending Pokémon is Asleep.",
+          "effect": {
+            "needsDefAsleep": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-45",
+      "set": "base4",
+      "name": "Jynx",
+      "kind": "pokemon",
+      "img": "img/cards/base4/45.webp",
+      "imgLarge": "img/cards/base4/45_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Meditate",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.",
+          "effect": {
+            "plusDefCounters": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-46",
+      "set": "base4",
+      "name": "Kadabra",
+      "kind": "pokemon",
+      "img": "img/cards/base4/46.webp",
+      "imgLarge": "img/cards/base4/46_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": "Abra",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Recover",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Discard 1 Psychic Energy card attached to Kadabra in order to use this attack. Remove all damage counters from Kadabra.",
+          "effect": {
+            "discard": {
+              "type": "Psychic",
+              "n": 1
+            },
+            "healAll": true
+          }
+        },
+        {
+          "name": "Super Psy",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base5-62",
+      "set": "base5",
+      "name": "Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/base5/62.webp",
+      "imgLarge": "img/cards/base5/62_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Coin Hurl",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Choose 1 of your opponent's Pokémon and flip a coin. If heads, this attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)",
+          "effect": {
+            "snipeAny": {
+              "n": 20,
+              "flip": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base4-100",
+      "set": "base4",
+      "name": "Weedle",
+      "kind": "pokemon",
+      "img": "img/cards/base4/100.webp",
+      "imgLarge": "img/cards/base4/100_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Poison Sting",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base4-118",
+      "set": "base4",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base4/118.webp",
+      "imgLarge": "img/cards/base4/118_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 1,
+      "id": "base4-120",
+      "set": "base4",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base4/120.webp",
+      "imgLarge": "img/cards/base4/120_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base4-123",
+      "set": "base4",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base4/123.webp",
+      "imgLarge": "img/cards/base4/123_hires.webp",
+      "text": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 1,
+      "id": "base5-73",
+      "set": "base5",
+      "name": "The Boss's Way",
+      "kind": "trainer",
+      "img": "img/cards/base5/73.webp",
+      "imgLarge": "img/cards/base5/73_hires.webp",
+      "text": "Search your deck for an Evolution card with Dark in its name. Show it to your opponent and put it into your hand. Shuffle your deck afterward.",
+      "trainer": "bossWay"
+    },
+    {
+      "count": 1,
+      "id": "base5-81",
+      "set": "base5",
+      "name": "Full Heal Energy",
+      "kind": "energy",
+      "img": "img/cards/base5/81.webp",
+      "imgLarge": "img/cards/base5/81_hires.webp",
+      "energyType": "Colorless",
+      "special": "fullHeal"
+    },
+    {
+      "count": 10,
+      "id": "base4-127",
+      "set": "base4",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/127.webp",
+      "imgLarge": "img/cards/base4/127_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 18,
+      "id": "base4-129",
+      "set": "base4",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/base4/129.webp",
+      "imgLarge": "img/cards/base4/129_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

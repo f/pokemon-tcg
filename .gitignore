@@ -1,0 +1,20 @@
+# secrets and local settings
+.env
+decision.json
+
+# dependencies and build output
+node_modules/
+dist/
+src-tauri/target/
+src-tauri/gen/
+
+# Card images and Pokémon brand images are © Nintendo / Creatures / GAME FREAK / The Pokémon Company: they are not
+# part of this repository. `npm run images` downloads them (and makes the WebP copies the game uses).
+public/img/cards/
+public/img/card-back.jpg
+public/img/pokemon-logo.svg
+public/img/pokemon-logo-white.svg
+public/img/set-logo.png
+public/img/set-symbol.png
+
+.DS_Store

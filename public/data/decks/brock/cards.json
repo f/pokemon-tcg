@@ -1,0 +1,519 @@
+{
+  "name": "Brock",
+  "group": "trainer",
+  "types": [
+    "Fighting"
+  ],
+  "featured": [
+    "gym1-70",
+    "gym1-69",
+    "gym1-20"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "gym2-68",
+      "set": "gym2",
+      "name": "Brock's Geodude",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/68.webp",
+      "imgLarge": "img/cards/gym2/68_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rock Toss",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10×",
+          "text": "Flip 3 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym1-40",
+      "set": "gym1",
+      "name": "Brock's Graveler",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/40.webp",
+      "imgLarge": "img/cards/gym1/40_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": "Brock's Geodude",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rock Toss",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 3 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-20",
+      "set": "gym1",
+      "name": "Brock's Golem",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/20.webp",
+      "imgLarge": "img/cards/gym1/20_hires.webp",
+      "stage": 2,
+      "hp": 90,
+      "type": "Fighting",
+      "evolvesFrom": "Brock's Graveler",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Rock Slide",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If your opponent has any Benched Pokémon, choose up to 3 of them. This attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 10,
+              "count": 3
+            }
+          }
+        },
+        {
+          "name": "Fissure",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-41",
+      "set": "gym1",
+      "name": "Brock's Lickitung",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/41.webp",
+      "imgLarge": "img/cards/gym1/41_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Tongue Slap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Slam",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym1-69",
+      "set": "gym1",
+      "name": "Brock's Onix",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/69.webp",
+      "imgLarge": "img/cards/gym1/69_hires.webp",
+      "stage": 0,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Bellow",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        },
+        {
+          "name": "Rock Throw",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-70",
+      "set": "gym1",
+      "name": "Brock's Rhyhorn",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/70.webp",
+      "imgLarge": "img/cards/gym1/70_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": "Lightning",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Drill Tackle",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "Flip 2 coins. If 1 or both of them are tails, this attack does nothing.",
+          "effect": {
+            "flipAll": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym1-71",
+      "set": "gym1",
+      "name": "Brock's Sandshrew",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/71.webp",
+      "imgLarge": "img/cards/gym1/71_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": "Lightning",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Defense Curl",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, prevent all damage done to Brock's Sandshrew during your opponent's next turn. (Any other effects of attacks still happen.)",
+          "effect": {
+            "flipShield": "damage"
+          }
+        },
+        {
+          "name": "Rolling Attack",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-36",
+      "set": "gym2",
+      "name": "Brock's Sandslash",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/36.webp",
+      "imgLarge": "img/cards/gym2/36_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": "Brock's Sandshrew",
+      "weakness": "Grass",
+      "resistance": "Lightning",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Swift",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "This attack's damage isn't affected by Weakness, Resistance, Pokémon Powers, or any other effects on the Defending Pokémon.",
+          "effect": {
+            "noWR": true
+          }
+        },
+        {
+          "name": "Needle Ball",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-73",
+      "set": "gym1",
+      "name": "Brock's Vulpix",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/73.webp",
+      "imgLarge": "img/cards/gym1/73_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Fire",
+      "evolvesFrom": null,
+      "weakness": "Water",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flame",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym1-74",
+      "set": "gym1",
+      "name": "Brock's Zubat",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/74.webp",
+      "imgLarge": "img/cards/gym1/74_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": "Fighting",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Poison Fang",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "flipStatus": "poisoned"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-39",
+      "set": "gym1",
+      "name": "Brock's Golbat",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/39.webp",
+      "imgLarge": "img/cards/gym1/39_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Brock's Zubat",
+      "weakness": "Psychic",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dive",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Spiral Dive",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Does 10 damage to each of your opponent's Pokémon. Don't apply Weakness and Resistance.",
+          "effect": {
+            "spiral": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-91",
+      "set": "base1",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base1/91.webp",
+      "imgLarge": "img/cards/base1/91_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 1,
+      "id": "base1-92",
+      "set": "base1",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base1/92.webp",
+      "imgLarge": "img/cards/base1/92_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 1,
+      "id": "base1-93",
+      "set": "base1",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base1/93.webp",
+      "imgLarge": "img/cards/base1/93_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 2,
+      "id": "base1-84",
+      "set": "base1",
+      "name": "PlusPower",
+      "kind": "trainer",
+      "img": "img/cards/base1/84.webp",
+      "imgLarge": "img/cards/base1/84_hires.webp",
+      "text": "Attach PlusPower to your Active Pokémon. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the Defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+      "trainer": "plusPower"
+    },
+    {
+      "count": 2,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 18,
+      "id": "base1-97",
+      "set": "base1",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/97.webp",
+      "imgLarge": "img/cards/base1/97_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 4,
+      "id": "base1-98",
+      "set": "base1",
+      "name": "Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/98.webp",
+      "imgLarge": "img/cards/base1/98_hires.webp",
+      "energyType": "Fire"
+    },
+    {
+      "count": 4,
+      "id": "base1-99",
+      "set": "base1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/99.webp",
+      "imgLarge": "img/cards/base1/99_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

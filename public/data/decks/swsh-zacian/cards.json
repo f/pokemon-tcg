@@ -1,0 +1,494 @@
+{
+  "name": "Zacian",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Metal",
+    "Fighting"
+  ],
+  "featured": [
+    "swsh2-139",
+    "swsh2-145",
+    "swsh2-131"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh1-127",
+      "set": "swsh1",
+      "name": "Galarian Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/swsh1/127.webp",
+      "imgLarge": "img/cards/swsh1/127_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hone Claws",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "During your next turn, this Pokémon's Slash attack does 60 more damage (before applying Weakness and Resistance).",
+          "effect": {
+            "boostNext": {
+              "atk": "Slash",
+              "n": 60
+            }
+          }
+        },
+        {
+          "name": "Slash",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-127",
+      "set": "swsh2",
+      "name": "Galarian Perrserker",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/127.webp",
+      "imgLarge": "img/cards/swsh2/127_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": "Galarian Meowth",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Slash",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        },
+        {
+          "name": "Claw Dagger",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "80×",
+          "text": "Flip 3 coins. This attack does 80 damage for each heads.",
+          "effect": {
+            "flipMulti": 3
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-148",
+      "set": "swsh2",
+      "name": "Hawlucha",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/148.webp",
+      "imgLarge": "img/cards/swsh2/148_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Windfall",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Shuffle your hand into your deck. Then, draw 5 cards.",
+          "effect": {
+            "handReset": 5
+          }
+        },
+        {
+          "name": "Speed Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-96",
+      "set": "swsh2",
+      "name": "Nosepass",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/96.webp",
+      "imgLarge": "img/cards/swsh2/96_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Rolling Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-143",
+      "set": "swsh2",
+      "name": "Pidove",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/143.webp",
+      "imgLarge": "img/cards/swsh2/143_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Chirp",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Pokémon with Fighting Resistance, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchPokemonToHand": {
+              "n": 2,
+              "resistance": "Fighting"
+            }
+          }
+        },
+        {
+          "name": "Razor Wing",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-131",
+      "set": "swsh2",
+      "name": "Probopass",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/131.webp",
+      "imgLarge": "img/cards/swsh2/131_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Metal",
+      "evolvesFrom": "Nosepass",
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Gravitational Drop",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "10+",
+          "text": "This attack does 30 more damage for each Colorless in your opponent's Active Pokémon's Retreat Cost.",
+          "effect": {
+            "plusDefRetreat": 30
+          }
+        },
+        {
+          "name": "Heavy Impact",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh2-144",
+      "set": "swsh2",
+      "name": "Tranquill",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/144.webp",
+      "imgLarge": "img/cards/swsh2/144_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Colorless",
+      "evolvesFrom": "Pidove",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Razor Wing",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Gust",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-145",
+      "set": "swsh2",
+      "name": "Unfezant",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/145.webp",
+      "imgLarge": "img/cards/swsh2/145_hires.webp",
+      "stage": 2,
+      "hp": 150,
+      "type": "Colorless",
+      "evolvesFrom": "Tranquill",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Daunt",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "During your opponent's next turn, the Defending Pokémon's attacks do 50 less damage (before applying Weakness and Resistance).",
+          "effect": {
+            "weaken": 50
+          }
+        },
+        {
+          "name": "Air Slash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": "Discard an Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": null,
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-139",
+      "set": "swsh2",
+      "name": "Zacian",
+      "kind": "pokemon",
+      "img": "img/cards/swsh2/139.webp",
+      "imgLarge": "img/cards/swsh2/139_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Grass",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Energy Stream",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Attach a Metal Energy card from your discard pile to this Pokémon.",
+          "effect": {
+            "attachFromDiscard": "Metal"
+          }
+        },
+        {
+          "name": "Smashing Edge",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "Flip a coin. If tails, discard 2 Energy from this Pokémon.",
+          "effect": {
+            "tailsDiscard": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-170",
+      "set": "swsh1",
+      "name": "Metal Saucer",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/170.webp",
+      "imgLarge": "img/cards/swsh1/170_hires.webp",
+      "text": "Attach a Metal Energy card from your discard pile to 1 of your Benched Metal Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "metalSaucer",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-173",
+      "set": "swsh1",
+      "name": "Poké Kid",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/173.webp",
+      "imgLarge": "img/cards/swsh1/173_hires.webp",
+      "text": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "pokeKid",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-175",
+      "set": "swsh1",
+      "name": "Pokémon Catcher",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/175.webp",
+      "imgLarge": "img/cards/swsh1/175_hires.webp",
+      "text": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "pokemonCatcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-8",
+      "set": "sve",
+      "name": "Basic Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/8.webp",
+      "imgLarge": "img/cards/sve/8_hires.webp",
+      "energyType": "Metal"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "name": "Erika's Garden",
+  "group": "gym1",
+  "types": [
+    "Grass"
+  ],
+  "featured": [
+    "gym1-5",
+    "gym1-44",
+    "gym1-46"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "gym1-76",
+      "set": "gym1",
+      "name": "Erika's Bellsprout",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/76.webp",
+      "imgLarge": "img/cards/gym1/76_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Careless Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Erika's Bellsprout does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-42",
+      "set": "gym1",
+      "name": "Erika's Dratini",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/42.webp",
+      "imgLarge": "img/cards/gym1/42_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tail Strike",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Strange Barrier",
+        "text": "Whenever an attack by a Basic Pokémon (including your own) does 20 or more damage to Erika's Dratini (after applying Weakness and Resistance), reduce that damage to 10. (Any other effects of attacks still happen.) This power stops working while Erika's Dratini is Asleep, Confused, or Paralyzed.",
+        "kind": "strangeBarrier"
+      }
+    },
+    {
+      "count": 3,
+      "id": "gym1-77",
+      "set": "gym1",
+      "name": "Erika's Exeggcute",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/77.webp",
+      "imgLarge": "img/cards/gym1/77_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Eggsplosion",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip a number of coins equal to the number of Energy attached to Erika's Exeggcute. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipPerEnergy": true
+          }
+        },
+        {
+          "name": "Psychic",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.",
+          "effect": {
+            "plusDefEnergy": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-44",
+      "set": "gym1",
+      "name": "Erika's Exeggutor",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/44.webp",
+      "imgLarge": "img/cards/gym1/44_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Erika's Exeggcute",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Psychic Exchange",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "",
+          "text": "Shuffle your hand into your deck, then draw 5 cards.",
+          "effect": {
+            "handReset": 5
+          }
+        },
+        {
+          "name": "Stomp",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage.",
+          "effect": {
+            "flipBonus": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-46",
+      "set": "gym1",
+      "name": "Erika's Gloom",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/46.webp",
+      "imgLarge": "img/cards/gym1/46_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Erika's Oddish",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dream Dance",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Both the Defending Pokémon and Erika's Gloom are now Asleep (after doing damage).",
+          "effect": {
+            "status": "asleep",
+            "selfStatus": "asleep"
+          }
+        },
+        {
+          "name": "Vile Smell",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Both the Defending Pokémon and Erika's Gloom are now Confused (after doing damage).",
+          "effect": {
+            "status": "confused",
+            "selfStatus": "confused"
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-45",
+      "set": "gym1",
+      "name": "Erika's Gloom",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/45.webp",
+      "imgLarge": "img/cards/gym1/45_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": "Erika's Oddish",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Healing Pollen",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, remove 4 damage counters from Erika's Gloom. If Erika's Gloom has fewer damage counters than that, remove all of them.",
+          "effect": {
+            "flipHeal": 40
+          }
+        },
+        {
+          "name": "Magic Pollen",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Asleep, Confused, Paralyzed, or Poisoned (your choice).",
+          "effect": {
+            "flipStatusChoice": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym1-78",
+      "set": "gym1",
+      "name": "Erika's Oddish",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/78.webp",
+      "imgLarge": "img/cards/gym1/78_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Blot",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": "If there are any damage counters on Erika's Oddish, remove 1 of them.",
+          "effect": {
+            "heal": 10
+          }
+        },
+        {
+          "name": "Sporadic Sponging",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "If Erika's Oddish has any damage counters on it, flip a coin. If heads, remove 1 of those damage counters.",
+          "effect": {
+            "flipHeal": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym1-79",
+      "set": "gym1",
+      "name": "Erika's Tangela",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/79.webp",
+      "imgLarge": "img/cards/gym1/79_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Vine Slap",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Stretch Vine",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 20,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-5",
+      "set": "gym1",
+      "name": "Erika's Vileplume",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/5.webp",
+      "imgLarge": "img/cards/gym1/5_hires.webp",
+      "stage": 2,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Erika's Gloom",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Mega Drain",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "If Erika's Vileplume does damage to the Defending Pokémon (after applying Weakness and Resistance), remove a number of damage counters from Erika's Vileplume equal to half the damage done to the Defending Pokémon (rounded up to the nearest 10). If Erika's Vileplume has fewer damage counters than that, remove all of them.",
+          "effect": {
+            "drainHalf": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Pollen Defense",
+        "text": "If an attack does damage to Erika's Vileplume while it's your Active Pokémon (even if it's Knocked Out), flip a coin. If heads, your opponent's Active Pokémon is now Confused. This power works even while Erika's Vileplume is Asleep, Confused, or Paralyzed.",
+        "kind": "pollenDefense"
+      }
+    },
+    {
+      "count": 2,
+      "id": "gym1-49",
+      "set": "gym1",
+      "name": "Erika's Weepinbell",
+      "kind": "pokemon",
+      "img": "img/cards/gym1/49.webp",
+      "imgLarge": "img/cards/gym1/49_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Erika's Bellsprout",
+      "weakness": "Fire",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Sleep Poison",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "The Defending Pokémon is now Asleep and Poisoned.",
+          "effect": {
+            "status": [
+              "asleep",
+              "poisoned"
+            ]
+          }
+        },
+        {
+          "name": "Vine Whip",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym1-107",
+      "set": "gym1",
+      "name": "Celadon City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym1/107.webp",
+      "imgLarge": "img/cards/gym1/107_hires.webp",
+      "text": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. During each player's turn, that player may choose to discard an Energy card attached to 1 of his or her Pokémon with Erika in its name. If that player does so, that Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.",
+      "trainer": "stadium",
+      "stadium": "celadon"
+    },
+    {
+      "count": 1,
+      "id": "gym1-100",
+      "set": "gym1",
+      "name": "Erika",
+      "kind": "trainer",
+      "img": "img/cards/gym1/100.webp",
+      "imgLarge": "img/cards/gym1/100_hires.webp",
+      "text": "You may draw up to 3 cards, then your opponent may draw up to 3 cards.",
+      "trainer": "erika"
+    },
+    {
+      "count": 1,
+      "id": "gym1-110",
+      "set": "gym1",
+      "name": "Erika's Perfume",
+      "kind": "trainer",
+      "img": "img/cards/gym1/110.webp",
+      "imgLarge": "img/cards/gym1/110_hires.webp",
+      "text": "Look at your opponent's hand. If he or she has any Basic Pokémon cards there, you may put any number of them onto your opponent's Bench (as long as there's room).",
+      "trainer": "erikasPerfume"
+    },
+    {
+      "count": 2,
+      "id": "base4-121",
+      "set": "base4",
+      "name": "Poké Ball",
+      "kind": "trainer",
+      "img": "img/cards/base4/121.webp",
+      "imgLarge": "img/cards/base4/121_hires.webp",
+      "text": "Flip a coin. If heads, you may search your deck for any Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.",
+      "trainer": "pokeBall"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 3,
+      "id": "base4-123",
+      "set": "base4",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base4/123.webp",
+      "imgLarge": "img/cards/base4/123_hires.webp",
+      "text": "Switch 1 of your Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 22,
+      "id": "gym1-129",
+      "set": "gym1",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/gym1/129.webp",
+      "imgLarge": "img/cards/gym1/129_hires.webp",
+      "energyType": "Grass"
+    },
+    {
+      "count": 6,
+      "id": "gym1-131",
+      "set": "gym1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/gym1/131.webp",
+      "imgLarge": "img/cards/gym1/131_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

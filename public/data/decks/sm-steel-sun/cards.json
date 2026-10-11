@@ -1,0 +1,665 @@
+{
+  "name": "Steel Sun",
+  "group": "smTheme",
+  "format": "modern",
+  "types": [
+    "Psychic",
+    "Metal"
+  ],
+  "featured": [
+    "sm2-87",
+    "sm2-113",
+    "sm2-49"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sm2-83",
+      "set": "sm2",
+      "name": "Beldum",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/83.webp",
+      "imgLarge": "img/cards/sm2/83_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Metal",
+      "evolvesFrom": null,
+      "weakness": "Fire",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Core Beam",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "20",
+          "text": "Discard a Metal Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Metal",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-113",
+      "set": "sm2",
+      "name": "Bewear",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/113.webp",
+      "imgLarge": "img/cards/sm2/113_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Colorless",
+      "evolvesFrom": "Stufful",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Dangerous Blow",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "text": "If your opponent's Active Pokémon is a Basic Pokémon, this attack does 60 more damage.",
+          "effect": {
+            "bonusIfDefBasic": 60
+          }
+        }
+      ],
+      "power": {
+        "name": "Rake It In",
+        "text": "When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may draw 3 cards.",
+        "kind": "drawOnEvolve3",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm2-105",
+      "set": "sm2",
+      "name": "Castform",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/105.webp",
+      "imgLarge": "img/cards/sm2/105_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Weather Teller",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Stadium cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchStadium": 2
+          }
+        },
+        {
+          "name": "Water Pulse",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Your opponent's Active Pokémon is now Asleep.",
+          "effect": {
+            "status": "asleep"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm1-65",
+      "set": "sm1",
+      "name": "Cosmoem",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/65.webp",
+      "imgLarge": "img/cards/sm1/65_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": "Cosmog",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Teleport",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sm1-64",
+      "set": "sm1",
+      "name": "Cosmog",
+      "kind": "pokemon",
+      "img": "img/cards/sm1/64.webp",
+      "imgLarge": "img/cards/sm1/64_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dust Gathering",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-59",
+      "set": "sm2",
+      "name": "Dhelmise",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/59.webp",
+      "imgLarge": "img/cards/sm2/59_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Darkness",
+      "resistance": "Fighting",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Anchor Shot",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": "The Defending Pokémon can't retreat during your opponent's next turn.",
+          "effect": {
+            "noRetreat": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Steelworker",
+        "text": "Your Metal Pokémon's attacks do 10 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+        "kind": "steelworker",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "sm2-84",
+      "set": "sm2",
+      "name": "Metang",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/84.webp",
+      "imgLarge": "img/cards/sm2/84_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Metal",
+      "evolvesFrom": "Beldum",
+      "weakness": "Fire",
+      "resistance": "Psychic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Core Beam",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "Discard a Metal Energy from this Pokémon.",
+          "effect": {
+            "discard": {
+              "type": "Metal",
+              "n": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-55",
+      "set": "sm2",
+      "name": "Oricorio",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/55.webp",
+      "imgLarge": "img/cards/sm2/55_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Casual Slap",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Vital Dance",
+        "text": "When you play this Pokémon from your hand onto your Bench during your turn, you may search your deck for up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+        "kind": "vitalDance",
+        "ability": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "sm2-49",
+      "set": "sm2",
+      "name": "Slowbro",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/49.webp",
+      "imgLarge": "img/cards/sm2/49_hires.webp",
+      "stage": 1,
+      "hp": 110,
+      "type": "Psychic",
+      "evolvesFrom": "Slowpoke",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Amnesia",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Choose 1 of your opponent's Active Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",
+          "effect": {
+            "amnesia": true
+          }
+        },
+        {
+          "name": "Facade",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "text": "If this Pokémon is Burned or Poisoned, this attack does 80 more damage.",
+          "effect": {
+            "bonusIfSelfStatus": {
+              "statuses": [
+                "burned",
+                "poisoned"
+              ],
+              "n": 80
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-48",
+      "set": "sm2",
+      "name": "Slowpoke",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/48.webp",
+      "imgLarge": "img/cards/sm2/48_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Psychic",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Whimsy Tackle",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-87",
+      "set": "sm2",
+      "name": "Solgaleo",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/87.webp",
+      "imgLarge": "img/cards/sm2/87_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Metal",
+      "evolvesFrom": "Cosmoem",
+      "weakness": "Fire",
+      "resistance": "Psychic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Shining Arrow",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 50 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 50
+            }
+          }
+        },
+        {
+          "name": "Fangs of the Sunne",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "170",
+          "text": "This Pokémon can't use Fangs of the Sunne during your next turn.",
+          "effect": {
+            "cooldown": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-112",
+      "set": "sm2",
+      "name": "Stufful",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/112.webp",
+      "imgLarge": "img/cards/sm2/112_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Hammer In",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sm2-104",
+      "set": "sm2",
+      "name": "Swellow",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/104.webp",
+      "imgLarge": "img/cards/sm2/104_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Colorless",
+      "evolvesFrom": "Taillow",
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Agility",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",
+          "effect": {
+            "flipShield": "all"
+          }
+        },
+        {
+          "name": "Swallow Dive",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "40+",
+          "text": "If this Pokémon used Agility during your last turn, this attack does 80 more damage.",
+          "effect": {
+            "bonusIfUsedLastTurn": {
+              "atk": "Agility",
+              "n": 80
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-103",
+      "set": "sm2",
+      "name": "Taillow",
+      "kind": "pokemon",
+      "img": "img/cards/sm2/103.webp",
+      "imgLarge": "img/cards/sm2/103_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Reckless Charge",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "This Pokémon does 10 damage to itself.",
+          "effect": {
+            "selfDamage": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sm2-118",
+      "set": "sm2",
+      "name": "Altar of the Sunne",
+      "kind": "trainer",
+      "img": "img/cards/sm2/118.webp",
+      "imgLarge": "img/cards/sm2/118_hires.webp",
+      "text": "Fire Pokémon and Metal Pokémon (both yours and your opponent's) have no Weakness. This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "altarOfTheSunne"
+    },
+    {
+      "count": 1,
+      "id": "sm1-114",
+      "set": "sm1",
+      "name": "Big Malasada",
+      "kind": "trainer",
+      "img": "img/cards/sm1/114.webp",
+      "imgLarge": "img/cards/sm1/114_hires.webp",
+      "text": "Heal 20 damage and remove a Special Condition from your Active Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "bigMalasada",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sm1-116",
+      "set": "sm1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sm1/116.webp",
+      "imgLarge": "img/cards/sm1/116_hires.webp",
+      "text": "Put 2 basic Energy cards from your discard pile into your hand. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sm1-120",
+      "set": "sm1",
+      "name": "Hau",
+      "kind": "trainer",
+      "img": "img/cards/sm1/120.webp",
+      "imgLarge": "img/cards/sm1/120_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "hau",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sm1-123",
+      "set": "sm1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/123.webp",
+      "imgLarge": "img/cards/sm1/123_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-128",
+      "set": "sm1",
+      "name": "Professor Kukui",
+      "kind": "trainer",
+      "img": "img/cards/sm1/128.webp",
+      "imgLarge": "img/cards/sm1/128_hires.webp",
+      "text": "Draw 2 cards. During this turn, your Pokémon's attacks do 20 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). You may play only 1 Supporter card during your turn (before your attack).",
+      "trainer": "professorKukui",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sm2-130",
+      "set": "sm2",
+      "name": "Rescue Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/sm2/130.webp",
+      "imgLarge": "img/cards/sm2/130_hires.webp",
+      "text": "Choose 1:\n• Put a Pokémon from your discard pile into your hand.\n• Shuffle 3 Pokémon from your discard pile into your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "rescueStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-132",
+      "set": "sm1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sm1/132.webp",
+      "imgLarge": "img/cards/sm1/132_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sm1-134",
+      "set": "sm1",
+      "name": "Timer Ball",
+      "kind": "trainer",
+      "img": "img/cards/sm1/134.webp",
+      "imgLarge": "img/cards/sm1/134_hires.webp",
+      "text": "Flip 2 coins. For each heads, search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play as many Item cards as you like during your turn (before your attack).",
+      "trainer": "timerBall",
+      "ttype": "item"
+    },
+    {
+      "count": 12,
+      "id": "sm1-171",
+      "set": "sm1",
+      "name": "Metal Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/171.webp",
+      "imgLarge": "img/cards/sm1/171_hires.webp",
+      "energyType": "Metal"
+    },
+    {
+      "count": 8,
+      "id": "sm1-162",
+      "set": "sm1",
+      "name": "Psychic Energy",
+      "kind": "energy",
+      "img": "img/cards/sm1/162.webp",
+      "imgLarge": "img/cards/sm1/162_hires.webp",
+      "energyType": "Psychic"
+    }
+  ]
+}

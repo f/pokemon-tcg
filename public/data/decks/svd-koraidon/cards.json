@@ -1,0 +1,422 @@
+{
+  "name": "Koraidon ex",
+  "group": "svDeluxe",
+  "format": "modern",
+  "types": [
+    "Fighting",
+    "Dragon"
+  ],
+  "featured": [
+    "sv5-120",
+    "sv4-108",
+    "sv5-96"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "sv5-96",
+      "set": "sv5",
+      "name": "Great Tusk",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/96.webp",
+      "imgLarge": "img/cards/sv5/96_hires.webp",
+      "stage": 0,
+      "hp": 140,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Lunge Out",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Wrathful Charge",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "text": "If your Benched Pokémon have any damage counters on them, this attack does 80 more damage.",
+          "effect": {
+            "bonusIfOwnBenchDamaged": 80
+          }
+        }
+      ],
+      "tags": [
+        "Ancient"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv5-119",
+      "set": "sv5",
+      "name": "Koraidon",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/119.webp",
+      "imgLarge": "img/cards/sv5/119_hires.webp",
+      "stage": 0,
+      "hp": 140,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Primordial Beatdown",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "This attack does 30 damage for each of your Ancient Pokémon in play.",
+          "effect": {
+            "timesTagInPlay": {
+              "tag": "Ancient",
+              "n": 30
+            }
+          }
+        },
+        {
+          "name": "Shred",
+          "cost": [
+            "Fire",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "130",
+          "text": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",
+          "effect": {
+            "ignoreDefEffects": true
+          }
+        }
+      ],
+      "tags": [
+        "Ancient"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv5-120",
+      "set": "sv5",
+      "name": "Koraidon ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/120.webp",
+      "imgLarge": "img/cards/sv5/120_hires.webp",
+      "stage": 0,
+      "hp": 230,
+      "type": "Dragon",
+      "evolvesFrom": null,
+      "weakness": null,
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Retribution Strike",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "This attack does 10 more damage for each damage counter on this Pokémon.",
+          "effect": {
+            "plusSelfCounters": 10
+          }
+        },
+        {
+          "name": "Kaiser Tackle",
+          "cost": [
+            "Fire",
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "280",
+          "text": "This Pokémon also does 60 damage to itself.",
+          "effect": {
+            "selfDamage": 60
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex",
+        "Ancient"
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv5-98",
+      "set": "sv5",
+      "name": "Sandy Shocks",
+      "kind": "pokemon",
+      "img": "img/cards/sv5/98.webp",
+      "imgLarge": "img/cards/sv5/98_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Magnetic Burst",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20+",
+          "text": "If you have 3 or more Energy in play, this attack does 70 more damage. This attack's damage isn't affected by Weakness.",
+          "effect": {
+            "bonusIfEnergyInPlay": {
+              "min": 3,
+              "n": 70
+            },
+            "noWeakness": true
+          }
+        },
+        {
+          "name": "Power Gem",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ],
+      "tags": [
+        "Ancient"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv4-108",
+      "set": "sv4",
+      "name": "Sandy Shocks ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv4/108.webp",
+      "imgLarge": "img/cards/sv4/108_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Earthen Spike",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "200",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex",
+        "Ancient"
+      ],
+      "power": {
+        "name": "Magnetic Absorption",
+        "text": "Once during your turn, if your opponent has 4 or fewer Prize cards remaining, you may attach a Basic Fighting Energy card from your discard pile to this Pokémon.",
+        "kind": "magneticAbsorption",
+        "ability": true
+      }
+    },
+    {
+      "count": 4,
+      "id": "sv4-159",
+      "set": "sv4",
+      "name": "Ancient Booster Energy Capsule",
+      "kind": "trainer",
+      "img": "img/cards/sv4/159.webp",
+      "imgLarge": "img/cards/sv4/159_hires.webp",
+      "text": "The Ancient Pokémon this card is attached to gets +60 HP, recovers from all Special Conditions, and can't be affected by any Special Conditions. You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "ancientBooster"
+    },
+    {
+      "count": 1,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv6-147",
+      "set": "sv6",
+      "name": "Cook",
+      "kind": "trainer",
+      "img": "img/cards/sv6/147.webp",
+      "imgLarge": "img/cards/sv6/147_hires.webp",
+      "text": "Heal 70 damage from your Active Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "cook",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv4-163",
+      "set": "sv4",
+      "name": "Earthen Vessel",
+      "kind": "trainer",
+      "img": "img/cards/sv4/163.webp",
+      "imgLarge": "img/cards/sv4/163_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.  Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "earthenVessel",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv5-147",
+      "set": "sv5",
+      "name": "Explorer's Guidance",
+      "kind": "trainer",
+      "img": "img/cards/sv5/147.webp",
+      "imgLarge": "img/cards/sv5/147_hires.webp",
+      "text": "Look at the top 6 cards of your deck and put 2 of them into your hand. Discard the other cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "explorersGuidance",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv4-170",
+      "set": "sv4",
+      "name": "Professor Sada's Vitality",
+      "kind": "trainer",
+      "img": "img/cards/sv4/170.webp",
+      "imgLarge": "img/cards/sv4/170_hires.webp",
+      "text": "Choose up to 2 of your Ancient Pokémon and attach a Basic Energy card from your discard pile to each of them. If you attached any Energy in this way, draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "sadaVitality",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "sv1-189",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Sada)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/189.webp",
+      "imgLarge": "img/cards/sv1/189_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv3-194",
+      "set": "sv3",
+      "name": "Ryme",
+      "kind": "trainer",
+      "img": "img/cards/sv3/194.webp",
+      "imgLarge": "img/cards/sv3/194_hires.webp",
+      "text": "Draw 3 cards. Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.) You may play only 1 Supporter card during your turn.",
+      "trainer": "ryme",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv2-188",
+      "set": "sv2",
+      "name": "Super Rod",
+      "kind": "trainer",
+      "img": "img/cards/sv2/188.webp",
+      "imgLarge": "img/cards/sv2/188_hires.webp",
+      "text": "Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "superRod",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 3,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 8,
+      "id": "sve-6",
+      "set": "sve",
+      "name": "Basic Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/6.webp",
+      "imgLarge": "img/cards/sve/6_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 6,
+      "id": "sve-2",
+      "set": "sve",
+      "name": "Basic Fire Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/2.webp",
+      "imgLarge": "img/cards/sve/2_hires.webp",
+      "energyType": "Fire"
+    }
+  ]
+}

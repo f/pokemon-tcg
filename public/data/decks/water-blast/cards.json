@@ -1,0 +1,450 @@
+{
+  "name": "Water Blast",
+  "group": "jungle",
+  "types": [
+    "Water",
+    "Fighting"
+  ],
+  "featured": [
+    "base2-45",
+    "base2-12",
+    "base2-42"
+  ],
+  "cards": [
+    {
+      "count": 4,
+      "id": "base2-51",
+      "set": "base2",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/base2/51.webp",
+      "imgLarge": "img/cards/base2/51_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Tail Wag",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon can't attack Eevee during your opponent's next turn. (Benching either Pokémon ends this effect.)",
+          "effect": {
+            "flipNoAttack": true
+          }
+        },
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-52",
+      "set": "base1",
+      "name": "Machop",
+      "kind": "pokemon",
+      "img": "img/cards/base1/52.webp",
+      "imgLarge": "img/cards/base1/52_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Low Kick",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base2-56",
+      "set": "base2",
+      "name": "Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/base2/56.webp",
+      "imgLarge": "img/cards/base2/56_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pay Day",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": "Flip a coin. If heads, draw a card.",
+          "effect": {
+            "flipDraw": 1
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base2-42",
+      "set": "base2",
+      "name": "Persian",
+      "kind": "pokemon",
+      "img": "img/cards/base2/42.webp",
+      "imgLarge": "img/cards/base2/42_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": "Meowth",
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Pounce",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "If the Defending Pokémon attacks Persian during your next turn, any damage done by the attack is reduced by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)",
+          "effect": {
+            "reduce": 10
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "base1-59",
+      "set": "base1",
+      "name": "Poliwag",
+      "kind": "pokemon",
+      "img": "img/cards/base1/59.webp",
+      "imgLarge": "img/cards/base1/59_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10+",
+          "text": "Does 10 damage plus 10 more damage for each Water Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd don't count.",
+          "effect": {
+            "extraWater": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-38",
+      "set": "base1",
+      "name": "Poliwhirl",
+      "kind": "pokemon",
+      "img": "img/cards/base1/38.webp",
+      "imgLarge": "img/cards/base1/38_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": "Poliwag",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Amnesia",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "",
+          "text": "Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",
+          "effect": {
+            "amnesia": true
+          }
+        },
+        {
+          "name": "Doubleslap",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30×",
+          "text": "Flip 2 coins. This attack does 30 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base2-45",
+      "set": "base2",
+      "name": "Rhydon",
+      "kind": "pokemon",
+      "img": "img/cards/base2/45.webp",
+      "imgLarge": "img/cards/base2/45_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Fighting",
+      "evolvesFrom": "Rhyhorn",
+      "weakness": "Grass",
+      "resistance": "Lightning",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Horn Attack",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        },
+        {
+          "name": "Ram",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "50",
+          "text": "Rhydon does 20 damage to itself. If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon. Switch the Pokémon even if Rhydon is knocked out.)",
+          "effect": {
+            "selfDamage": 20,
+            "whirlwind": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "base2-61",
+      "set": "base2",
+      "name": "Rhyhorn",
+      "kind": "pokemon",
+      "img": "img/cards/base2/61.webp",
+      "imgLarge": "img/cards/base2/61_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": "Lightning",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Leer",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon can't attack Rhyhorn during your opponent's next turn. (Benching either Pokémon ends this effect.)",
+          "effect": {
+            "flipNoAttack": true
+          }
+        },
+        {
+          "name": "Horn Attack",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base1-41",
+      "set": "base1",
+      "name": "Seel",
+      "kind": "pokemon",
+      "img": "img/cards/base1/41.webp",
+      "imgLarge": "img/cards/base1/41_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "base2-12",
+      "set": "base2",
+      "name": "Vaporeon",
+      "kind": "pokemon",
+      "img": "img/cards/base2/12.webp",
+      "imgLarge": "img/cards/base2/12_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": "Eevee",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "text": "Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        },
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "text": "Does 30 damage plus 10 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+          "effect": {
+            "extraWater": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "base1-93",
+      "set": "base1",
+      "name": "Gust of Wind",
+      "kind": "trainer",
+      "img": "img/cards/base1/93.webp",
+      "imgLarge": "img/cards/base1/93_hires.webp",
+      "text": "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+      "trainer": "gust"
+    },
+    {
+      "count": 2,
+      "id": "base1-94",
+      "set": "base1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/94.webp",
+      "imgLarge": "img/cards/base1/94_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "base1-88",
+      "set": "base1",
+      "name": "Professor Oak",
+      "kind": "trainer",
+      "img": "img/cards/base1/88.webp",
+      "imgLarge": "img/cards/base1/88_hires.webp",
+      "text": "Discard your hand, then draw 7 cards.",
+      "trainer": "professorOak"
+    },
+    {
+      "count": 2,
+      "id": "base1-90",
+      "set": "base1",
+      "name": "Super Potion",
+      "kind": "trainer",
+      "img": "img/cards/base1/90.webp",
+      "imgLarge": "img/cards/base1/90_hires.webp",
+      "text": "Discard 1 Energy card attached to your own Pokémon in order to remove up to 4 damage counters from that Pokémon.",
+      "trainer": "superPotion"
+    },
+    {
+      "count": 1,
+      "id": "base1-95",
+      "set": "base1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/base1/95.webp",
+      "imgLarge": "img/cards/base1/95_hires.webp",
+      "text": "Switch 1 of your own Benched Pokémon with your Active Pokémon.",
+      "trainer": "switch"
+    },
+    {
+      "count": 14,
+      "id": "base1-97",
+      "set": "base1",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/97.webp",
+      "imgLarge": "img/cards/base1/97_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 14,
+      "id": "base1-102",
+      "set": "base1",
+      "name": "Water Energy",
+      "kind": "energy",
+      "img": "img/cards/base1/102.webp",
+      "imgLarge": "img/cards/base1/102_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

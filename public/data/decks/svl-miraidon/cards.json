@@ -1,0 +1,450 @@
+{
+  "name": "Miraidon ex League",
+  "group": "svLeague",
+  "format": "modern",
+  "types": [
+    "Lightning"
+  ],
+  "featured": [
+    "swsh12-58",
+    "sv1-81",
+    "swsh12-57"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "swsh9-121",
+      "set": "swsh9",
+      "name": "Bibarel",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/121.webp",
+      "imgLarge": "img/cards/swsh9/121_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Colorless",
+      "evolvesFrom": "Bidoof",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Tail Smash",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ],
+      "power": {
+        "name": "Industrious Incisors",
+        "text": "Once during your turn, you may draw cards until you have 5 cards in your hand.",
+        "kind": "industriousIncisors",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh9-120",
+      "set": "swsh9",
+      "name": "Bidoof",
+      "kind": "pokemon",
+      "img": "img/cards/swsh9/120.webp",
+      "imgLarge": "img/cards/swsh9/120_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rollout",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-81",
+      "set": "sv1",
+      "name": "Miraidon ex",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/81.webp",
+      "imgLarge": "img/cards/sv1/81_hires.webp",
+      "stage": 0,
+      "hp": 220,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Photon Blaster",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "220",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ],
+      "power": {
+        "name": "Tandem Unit",
+        "text": "Once during your turn, you may search your deck for up to 2 Basic Lightning Pokémon and put them onto your Bench. Then, shuffle your deck.",
+        "kind": "tandemUnit",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh10-51",
+      "set": "swsh10",
+      "name": "Regieleki",
+      "kind": "pokemon",
+      "img": "img/cards/swsh10/51.webp",
+      "imgLarge": "img/cards/swsh10/51_hires.webp",
+      "stage": 0,
+      "hp": 130,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "Electromagnetic Sonar",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Put a Trainer card from your discard pile into your hand.",
+          "effect": {
+            "trainerFromDiscard": true
+          }
+        },
+        {
+          "name": "Targeted Bolt",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Discard 2 Lightning Energy from this Pokémon. This attack does 120 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "discard": {
+              "type": "Lightning",
+              "n": 2
+            },
+            "benchSnipe": {
+              "n": 120,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh12-57",
+      "set": "swsh12",
+      "name": "Regieleki V",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/57.webp",
+      "imgLarge": "img/cards/swsh12/57_hires.webp",
+      "stage": 0,
+      "hp": 200,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Switching Bolt",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "30",
+          "text": "Switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMust": true
+          }
+        },
+        {
+          "name": "Lightning Wall",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": "During your opponent's next turn, this Pokémon takes 100 less damage from attacks (after applying Weakness and Resistance).",
+          "effect": {
+            "reduce": 100
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "V"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh12-58",
+      "set": "swsh12",
+      "name": "Regieleki VMAX",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/58.webp",
+      "imgLarge": "img/cards/swsh12/58_hires.webp",
+      "stage": 1,
+      "hp": 310,
+      "type": "Lightning",
+      "evolvesFrom": "Regieleki V",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Max Thunder and Lightning",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "220",
+          "text": "During your next turn, this Pokémon can't attack.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ],
+      "prizes": 3,
+      "ruleBox": true,
+      "tags": [
+        "VMAX"
+      ],
+      "power": {
+        "name": "Transistor",
+        "text": "Your Basic Lightning Pokémon's attacks do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+        "kind": "transistor",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh12-56",
+      "set": "swsh12",
+      "name": "Zeraora",
+      "kind": "pokemon",
+      "img": "img/cards/swsh12/56.webp",
+      "imgLarge": "img/cards/swsh12/56_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Battle Claw",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "30+",
+          "text": "If your opponent's Active Pokémon is an Evolution Pokémon, this attack does 30 more damage.",
+          "effect": {
+            "bonusIfDefEvolved": 30
+          }
+        },
+        {
+          "name": "Mach Bolt",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "sv1-166",
+      "set": "sv1",
+      "name": "Arven",
+      "kind": "trainer",
+      "img": "img/cards/sv1/166.webp",
+      "imgLarge": "img/cards/sv1/166_hires.webp",
+      "text": "Search your deck for an Item card and a Pokémon Tool card, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "arven",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-167",
+      "set": "sv1",
+      "name": "Beach Court",
+      "kind": "trainer",
+      "img": "img/cards/sv1/167.webp",
+      "imgLarge": "img/cards/sv1/167_hires.webp",
+      "text": "The Retreat Cost of each Basic Pokémon in play (both yours and your opponent's) is Colorless less. You may play only 1 Stadium card during your turn. Put it next to the Active Spot, and discard it if another Stadium comes into play. A Stadium with the same name can't be played.",
+      "trainer": "stadium",
+      "ttype": "stadium",
+      "stadium": "beachCourt"
+    },
+    {
+      "count": 4,
+      "id": "sv2-172",
+      "set": "sv2",
+      "name": "Boss's Orders (Ghetsis)",
+      "kind": "trainer",
+      "img": "img/cards/sv2/172.webp",
+      "imgLarge": "img/cards/sv2/172_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-170",
+      "set": "sv1",
+      "name": "Electric Generator",
+      "kind": "trainer",
+      "img": "img/cards/sv1/170.webp",
+      "imgLarge": "img/cards/sv1/170_hires.webp",
+      "text": "Look at the top 5 cards of your deck and attach up to 2 Basic Lightning Energy cards you find there to your Benched Lightning Pokémon in any way you like. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "electricGenerator",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "swsh12-156",
+      "set": "swsh12",
+      "name": "Forest Seal Stone",
+      "kind": "trainer",
+      "img": "img/cards/swsh12/156.webp",
+      "imgLarge": "img/cards/swsh12/156_hires.webp",
+      "text": "The Pokémon V this card is attached to can use the VSTAR Power on this card. You may play any number of Item cards during your turn. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "forestSealStone",
+      "power": {
+        "name": "Star Alchemy",
+        "text": "During your turn, you may search your deck for a card and put it into your hand. Then, shuffle your deck. (You can't use more than 1 VSTAR Power in a game.)",
+        "kind": "starAlchemy",
+        "vstar": true
+      }
+    },
+    {
+      "count": 1,
+      "id": "swsh12-160",
+      "set": "swsh12",
+      "name": "Leafy Camo Poncho",
+      "kind": "trainer",
+      "img": "img/cards/swsh12/160.webp",
+      "imgLarge": "img/cards/swsh12/160_hires.webp",
+      "text": "Whenever your opponent plays a Supporter card from their hand, prevent all effects of that card done to the Pokémon VSTAR or Pokémon VMAX this card is attached to. You may play any number of Item cards during your turn. Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "leafyCamoPoncho"
+    },
+    {
+      "count": 3,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-190",
+      "set": "sv1",
+      "name": "Professor's Research (Professor Turo)",
+      "kind": "trainer",
+      "img": "img/cards/sv1/190.webp",
+      "imgLarge": "img/cards/sv1/190_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv1-196",
+      "set": "sv1",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/196.webp",
+      "imgLarge": "img/cards/sv1/196_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand. Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-197",
+      "set": "sv1",
+      "name": "Vitality Band",
+      "kind": "trainer",
+      "img": "img/cards/sv1/197.webp",
+      "imgLarge": "img/cards/sv1/197_hires.webp",
+      "text": "The attacks of the Pokémon this card is attached to do 10 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance). Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "vitalityBand"
+    },
+    {
+      "count": 15,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    }
+  ]
+}

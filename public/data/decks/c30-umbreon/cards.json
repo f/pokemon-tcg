@@ -1,0 +1,539 @@
+{
+  "name": "Umbreon ex",
+  "group": "celebration",
+  "format": "modern",
+  "types": [
+    "Lightning",
+    "Darkness"
+  ],
+  "featured": [
+    "me55-92",
+    "me55-60",
+    "me55-100"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "me5-59",
+      "set": "me5",
+      "name": "Chi-Yu",
+      "kind": "pokemon",
+      "img": "img/cards/me5/59.webp",
+      "imgLarge": "img/cards/me5/59_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Whirling Envy",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "20+",
+          "text": "If this Pokémon has 2 or more damage counters on it, this attack does 90 more damage. This attack's damage isn't affected by Weakness.",
+          "effect": {
+            "bonusIfSelfCounters": {
+              "min": 2,
+              "n": 90
+            },
+            "noWeakness": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-116",
+      "set": "me55",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/me55/116.webp",
+      "imgLarge": "img/cards/me55/116_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Fetch and Hide",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Your opponent reveals their hand, and you put an Item card you find there on the bottom of your opponent's deck.",
+          "effect": {
+            "fetchHide": true
+          }
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me55-118",
+      "set": "me55",
+      "name": "Eevee",
+      "kind": "pokemon",
+      "img": "img/cards/me55/118.webp",
+      "imgLarge": "img/cards/me55/118_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Quick Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 20 more damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me4-30",
+      "set": "me4",
+      "name": "Emolga",
+      "kind": "pokemon",
+      "img": "img/cards/me4/30.webp",
+      "imgLarge": "img/cards/me4/30_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Minor Errand-Running",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+          "effect": {
+            "searchBasicEnergy": {
+              "n": 2
+            }
+          }
+        },
+        {
+          "name": "Sky Return",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "30",
+          "text": "Put this Pokémon and all attached cards into your hand.",
+          "effect": {
+            "selfToHandAll": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "me55-58",
+      "set": "me55",
+      "name": "Toxel",
+      "kind": "pokemon",
+      "img": "img/cards/me55/58.webp",
+      "imgLarge": "img/cards/me55/58_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-59",
+      "set": "me55",
+      "name": "Toxtricity",
+      "kind": "pokemon",
+      "img": "img/cards/me55/59.webp",
+      "imgLarge": "img/cards/me55/59_hires.webp",
+      "stage": 1,
+      "hp": 130,
+      "type": "Lightning",
+      "evolvesFrom": "Toxel",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Mach Bolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-60",
+      "set": "me55",
+      "name": "Toxtricity",
+      "kind": "pokemon",
+      "img": "img/cards/me55/60.webp",
+      "imgLarge": "img/cards/me55/60_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Lightning",
+      "evolvesFrom": "Toxel",
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Light Punch",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": "40",
+          "text": ""
+        },
+        {
+          "name": "Thunderous Bolt",
+          "cost": [
+            "Lightning",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "150",
+          "text": "During your next turn, this Pokémon can't use attacks.",
+          "effect": {
+            "lockout": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me55-92",
+      "set": "me55",
+      "name": "Umbreon ex",
+      "kind": "pokemon",
+      "img": "img/cards/me55/92.webp",
+      "imgLarge": "img/cards/me55/92_hires.webp",
+      "stage": 1,
+      "hp": 270,
+      "type": "Darkness",
+      "evolvesFrom": "Eevee",
+      "weakness": "Grass",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Lunatic Claw",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": "100+",
+          "text": "If your opponent's Active Pokémon already has any damage counters on it, this attack does 140 more damage.",
+          "effect": {
+            "bonusIfDamaged": 140
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 1,
+      "id": "me55-100",
+      "set": "me55",
+      "name": "Yveltal",
+      "kind": "pokemon",
+      "img": "img/cards/me55/100.webp",
+      "imgLarge": "img/cards/me55/100_hires.webp",
+      "stage": 0,
+      "hp": 120,
+      "type": "Darkness",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Dark Cutter",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "90",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Life-Locked",
+        "text": "Your opponent's Active Pokémon can't be healed.",
+        "kind": "lifeLocked",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "me55-57",
+      "set": "me55",
+      "name": "Zeraora",
+      "kind": "pokemon",
+      "img": "img/cards/me55/57.webp",
+      "imgLarge": "img/cards/me55/57_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Lightning",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rapid Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Draw a card.",
+          "effect": {
+            "draw": 1
+          }
+        },
+        {
+          "name": "Electrobullet",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "benchSnipe": {
+              "n": 20,
+              "count": 1
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-181",
+      "set": "me2pt5",
+      "name": "Air Balloon",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/181.webp",
+      "imgLarge": "img/cards/me2pt5/181_hires.webp",
+      "text": "The Retreat Cost of the Pokémon this card is attached to is ColorlessColorless less. You may attach any number of Pokémon Tools to your Pokémon during your turn. You may attach only 1 Pokémon Tool to each Pokémon, and it stays attached.",
+      "trainer": "tool",
+      "ttype": "tool",
+      "tool": "airBalloon"
+    },
+    {
+      "count": 3,
+      "id": "me1-114",
+      "set": "me1",
+      "name": "Boss's Orders",
+      "kind": "trainer",
+      "img": "img/cards/me1/114.webp",
+      "imgLarge": "img/cards/me1/114_hires.webp",
+      "text": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot. You may play only 1 Supporter card during your turn.",
+      "trainer": "bossOrders",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv9-146",
+      "set": "sv9",
+      "name": "Brock's Scouting",
+      "kind": "trainer",
+      "img": "img/cards/sv9/146.webp",
+      "imgLarge": "img/cards/sv9/146_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or 1 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "brocksScouting",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-184",
+      "set": "me2pt5",
+      "name": "Buddy-Buddy Poffin",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/184.webp",
+      "imgLarge": "img/cards/me2pt5/184_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "buddyPoffin",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "rsv10pt5-84",
+      "set": "rsv10pt5",
+      "name": "Hilda",
+      "kind": "trainer",
+      "img": "img/cards/rsv10pt5/84.webp",
+      "imgLarge": "img/cards/rsv10pt5/84_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon and an Energy card, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "hilda",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-190",
+      "set": "me2pt5",
+      "name": "Iris's Fighting Spirit",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/190.webp",
+      "imgLarge": "img/cards/me2pt5/190_hires.webp",
+      "text": "You can use this card only if you discard another card from your hand.  Draw cards until you have 6 cards in your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "irisFightingSpirit",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "me1-119",
+      "set": "me1",
+      "name": "Lillie's Determination",
+      "kind": "trainer",
+      "img": "img/cards/me1/119.webp",
+      "imgLarge": "img/cards/me1/119_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead. You may play only 1 Supporter card during your turn.",
+      "trainer": "lilliesDetermination",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "me2pt5-196",
+      "set": "me2pt5",
+      "name": "Night Stretcher",
+      "kind": "trainer",
+      "img": "img/cards/me2pt5/196.webp",
+      "imgLarge": "img/cards/me2pt5/196_hires.webp",
+      "text": "Put a Pokémon or a Basic Energy card from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "nightStretcher",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "me55-126",
+      "set": "me55",
+      "name": "Poké Pad",
+      "kind": "trainer",
+      "img": "img/cards/me55/126.webp",
+      "imgLarge": "img/cards/me55/126_hires.webp",
+      "text": "Search your deck for a Pokémon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck. (Pokémon ex, Pokémon V, etc. have Rule Boxes.) You may play any number of Item cards during your turn.",
+      "trainer": "pokePad",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "zsv10pt5-84",
+      "set": "zsv10pt5",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/zsv10pt5/84.webp",
+      "imgLarge": "img/cards/zsv10pt5/84_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "me55-127",
+      "set": "me55",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/me55/127.webp",
+      "imgLarge": "img/cards/me55/127_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "me55-128",
+      "set": "me55",
+      "name": "Ultra Ball",
+      "kind": "trainer",
+      "img": "img/cards/me55/128.webp",
+      "imgLarge": "img/cards/me55/128_hires.webp",
+      "text": "You can use this card only if you discard 2 other cards from your hand.\nSearch your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "ultraBall",
+      "ttype": "item"
+    },
+    {
+      "count": 8,
+      "id": "sve-7",
+      "set": "sve",
+      "name": "Basic Darkness Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/7.webp",
+      "imgLarge": "img/cards/sve/7_hires.webp",
+      "energyType": "Darkness"
+    },
+    {
+      "count": 3,
+      "id": "sve-4",
+      "set": "sve",
+      "name": "Basic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/4.webp",
+      "imgLarge": "img/cards/sve/4_hires.webp",
+      "energyType": "Lightning"
+    },
+    {
+      "count": 2,
+      "id": "me5-84",
+      "set": "me5",
+      "name": "Voltaic Lightning Energy",
+      "kind": "energy",
+      "img": "img/cards/me5/84.webp",
+      "imgLarge": "img/cards/me5/84_hires.webp",
+      "energyType": "Lightning",
+      "special": "voltaic"
+    }
+  ]
+}

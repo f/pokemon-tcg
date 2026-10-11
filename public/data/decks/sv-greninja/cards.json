@@ -1,0 +1,490 @@
+{
+  "name": "Greninja ex",
+  "group": "svBattle",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "svp-54",
+    "sv1-54",
+    "sv1-53"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "sv2-46",
+      "set": "sv2",
+      "name": "Delibird",
+      "kind": "pokemon",
+      "img": "img/cards/sv2/46.webp",
+      "imgLarge": "img/cards/sv2/46_hires.webp",
+      "stage": 0,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Draw 2 cards.",
+          "effect": {
+            "draw": 2
+          }
+        },
+        {
+          "name": "Ice Wing",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv3-56",
+      "set": "sv3",
+      "name": "Froakie",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/56.webp",
+      "imgLarge": "img/cards/sv3/56_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Try Bouncing",
+          "cost": [
+            "Water"
+          ],
+          "damage": "30",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-57",
+      "set": "sv3",
+      "name": "Frogadier",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/57.webp",
+      "imgLarge": "img/cards/sv3/57_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Froakie",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Strafe",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "40",
+          "text": "You may switch this Pokémon with 1 of your Benched Pokémon.",
+          "effect": {
+            "switchSelfMay": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "svp-54",
+      "set": "svp",
+      "name": "Greninja ex",
+      "kind": "pokemon",
+      "img": "img/cards/svp/54.webp",
+      "imgLarge": "img/cards/svp/54_hires.webp",
+      "stage": 2,
+      "hp": 300,
+      "type": "Water",
+      "evolvesFrom": "Frogadier",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Stealthy Shuriken",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 40 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeAny": {
+              "n": 40
+            }
+          }
+        },
+        {
+          "name": "Torrential Slash",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "120+",
+          "text": "If your opponent's Active Pokémon already has any damage counters on it, this attack does 120 more damage.",
+          "effect": {
+            "bonusIfDamaged": 120
+          }
+        }
+      ],
+      "prizes": 2,
+      "ruleBox": true,
+      "tags": [
+        "ex"
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-45",
+      "set": "sv3",
+      "name": "Lapras",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/45.webp",
+      "imgLarge": "img/cards/sv3/45_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Metal",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Hail",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "This attack does 10 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "spiral": 10
+          }
+        },
+        {
+          "name": "Freezing Wind",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless"
+          ],
+          "damage": "100",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-54",
+      "set": "sv1",
+      "name": "Quaquaval",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/54.webp",
+      "imgLarge": "img/cards/sv1/54_hires.webp",
+      "stage": 2,
+      "hp": 170,
+      "type": "Water",
+      "evolvesFrom": "Quaxwell",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Hydro Kick",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": ""
+        }
+      ],
+      "power": {
+        "name": "Energy Carnival",
+        "text": "Once during your turn, you may attach a Basic Energy card from your hand to 1 of your Pokémon.",
+        "kind": "energyCarnival",
+        "ability": true
+      }
+    },
+    {
+      "count": 3,
+      "id": "sv1-52",
+      "set": "sv1",
+      "name": "Quaxly",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/52.webp",
+      "imgLarge": "img/cards/sv1/52_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Kick",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv1-53",
+      "set": "sv1",
+      "name": "Quaxwell",
+      "kind": "pokemon",
+      "img": "img/cards/sv1/53.webp",
+      "imgLarge": "img/cards/sv1/53_hires.webp",
+      "stage": 1,
+      "hp": 100,
+      "type": "Water",
+      "evolvesFrom": "Quaxly",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rain Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Spiral Kick",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "70",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "sv3-58",
+      "set": "sv3",
+      "name": "Wiglett",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/58.webp",
+      "imgLarge": "img/cards/sv3/58_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Rain Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "sv3-59",
+      "set": "sv3",
+      "name": "Wugtrio",
+      "kind": "pokemon",
+      "img": "img/cards/sv3/59.webp",
+      "imgLarge": "img/cards/sv3/59_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Wiglett",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Entwining Entrapment",
+          "cost": [
+            "Water"
+          ],
+          "damage": "50",
+          "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+          "effect": {
+            "noRetreat": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "sv2-177",
+      "set": "sv2",
+      "name": "Clavell",
+      "kind": "trainer",
+      "img": "img/cards/sv2/177.webp",
+      "imgLarge": "img/cards/sv2/177_hires.webp",
+      "text": "Search your deck for up to 3 Basic Pokémon with 120 HP or less, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "clavell",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "sv1-171",
+      "set": "sv1",
+      "name": "Energy Retrieval",
+      "kind": "trainer",
+      "img": "img/cards/sv1/171.webp",
+      "imgLarge": "img/cards/sv1/171_hires.webp",
+      "text": "Put up to 2 Basic Energy cards from your discard pile into your hand. You may play any number of Item cards during your turn.",
+      "trainer": "energyRetrievalM",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "sv2-183",
+      "set": "sv2",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv2/183.webp",
+      "imgLarge": "img/cards/sv2/183_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-175",
+      "set": "sv1",
+      "name": "Jacq",
+      "kind": "trainer",
+      "img": "img/cards/sv1/175.webp",
+      "imgLarge": "img/cards/sv1/175_hires.webp",
+      "text": "Search your deck for up to 2 Evolution Pokémon, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "jacq",
+      "ttype": "supporter"
+    },
+    {
+      "count": 4,
+      "id": "sv1-180",
+      "set": "sv1",
+      "name": "Nemona",
+      "kind": "trainer",
+      "img": "img/cards/sv1/180.webp",
+      "imgLarge": "img/cards/sv1/180_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "nemona",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "sv1-181",
+      "set": "sv1",
+      "name": "Nest Ball",
+      "kind": "trainer",
+      "img": "img/cards/sv1/181.webp",
+      "imgLarge": "img/cards/sv1/181_hires.webp",
+      "text": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "nestBall",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-186",
+      "set": "sv1",
+      "name": "Pokégear 3.0",
+      "kind": "trainer",
+      "img": "img/cards/sv1/186.webp",
+      "imgLarge": "img/cards/sv1/186_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "pokegear",
+      "ttype": "item"
+    },
+    {
+      "count": 1,
+      "id": "sv1-188",
+      "set": "sv1",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/sv1/188.webp",
+      "imgLarge": "img/cards/sv1/188_hires.webp",
+      "text": "Heal 30 damage from 1 of your Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "potion30",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-194",
+      "set": "sv1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/sv1/194.webp",
+      "imgLarge": "img/cards/sv1/194_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "sv1-198",
+      "set": "sv1",
+      "name": "Youngster",
+      "kind": "trainer",
+      "img": "img/cards/sv1/198.webp",
+      "imgLarge": "img/cards/sv1/198_hires.webp",
+      "text": "Shuffle your hand into your deck. Then, draw 5 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "youngster",
+      "ttype": "supporter"
+    },
+    {
+      "count": 18,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}

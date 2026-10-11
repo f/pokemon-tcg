@@ -1,0 +1,467 @@
+{
+  "name": "Giovanni's Earth",
+  "group": "gym2",
+  "types": [
+    "Grass",
+    "Fighting"
+  ],
+  "featured": [
+    "gym2-42",
+    "gym2-44",
+    "gym2-45"
+  ],
+  "cards": [
+    {
+      "count": 2,
+      "id": "gym2-42",
+      "set": "gym2",
+      "name": "Giovanni's Machoke",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/42.webp",
+      "imgLarge": "img/cards/gym2/42_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Fighting",
+      "evolvesFrom": "Giovanni's Machop",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Risky Attack",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "60",
+          "text": "Flip a coin. If tails, this attack does no damage to the Defending Pokémon and Giovanni's Machoke does 100 damage to itself.",
+          "effect": {
+            "riskyTails": 100
+          }
+        },
+        {
+          "name": "Headlock",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 20 damage plus 20 more damage and the Defending Pokémon is now Paralyzed. If tails, this attack does 20 damage.",
+          "effect": {
+            "flipBonus": 20,
+            "headsStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym2-72",
+      "set": "gym2",
+      "name": "Giovanni's Machop",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/72.webp",
+      "imgLarge": "img/cards/gym2/72_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Fighting",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Chop",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Fury Punch",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": "20×",
+          "text": "Flip a coin. If heads, this attack does 20 damage times the number of damage counters on Giovanni's Machop.",
+          "effect": {
+            "flipFail": true,
+            "timesSelfCounters": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-74",
+      "set": "gym2",
+      "name": "Giovanni's Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/74.webp",
+      "imgLarge": "img/cards/gym2/74_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Cat Fleas",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Confused.",
+          "effect": {
+            "flipStatus": "confused"
+          }
+        },
+        {
+          "name": "Cat Kick",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym2-43",
+      "set": "gym2",
+      "name": "Giovanni's Meowth",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/43.webp",
+      "imgLarge": "img/cards/gym2/43_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Colorless",
+      "evolvesFrom": null,
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "False Charity",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Flip a coin. If heads, look at the top card of your opponent's deck. If it's a Trainer card, put it in your opponent's discard pile; otherwise, put it into his or her hand.",
+          "effect": {
+            "falseCharity": true
+          }
+        },
+        {
+          "name": "Double Scratch",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "text": "Flip 2 coins. This attack does 20 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "gym2-75",
+      "set": "gym2",
+      "name": "Giovanni's Nidoran♀",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/75.webp",
+      "imgLarge": "img/cards/gym2/75_hires.webp",
+      "stage": 0,
+      "hp": 50,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Horn Thrust",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If tails, this attack does nothing.",
+          "effect": {
+            "flipFail": true
+          }
+        },
+        {
+          "name": "Double-edge",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Giovanni's Nidoran ♀ does 20 damage to itself.",
+          "effect": {
+            "selfDamage": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "id": "gym2-76",
+      "set": "gym2",
+      "name": "Giovanni's Nidoran♂",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/76.webp",
+      "imgLarge": "img/cards/gym2/76_hires.webp",
+      "stage": 0,
+      "hp": 40,
+      "type": "Grass",
+      "evolvesFrom": null,
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Double Kick",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "10×",
+          "text": "Flip 2 coins. This attack does 10 damage times the number of heads.",
+          "effect": {
+            "flipMulti": 2
+          }
+        },
+        {
+          "name": "Retaliation",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "30",
+          "text": "You can't use this attack unless Giovanni's Nidoran ♂ has 2 or more damage counters on it.",
+          "effect": {
+            "needsCounters": 2
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym2-44",
+      "set": "gym2",
+      "name": "Giovanni's Nidorina",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/44.webp",
+      "imgLarge": "img/cards/gym2/44_hires.webp",
+      "stage": 1,
+      "hp": 80,
+      "type": "Grass",
+      "evolvesFrom": "Giovanni's Nidoran♀",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Poison Sting Tackle",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": "30",
+          "text": "Giovanni's Nidorina does 20 damage to itself. Flip a coin. If heads, the Defending Pokémon is now Poisoned.",
+          "effect": {
+            "selfDamage": 20,
+            "flipStatus": "poisoned"
+          }
+        },
+        {
+          "name": "Body Slam",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+          "effect": {
+            "flipStatus": "paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "gym2-45",
+      "set": "gym2",
+      "name": "Giovanni's Nidorino",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/45.webp",
+      "imgLarge": "img/cards/gym2/45_hires.webp",
+      "stage": 1,
+      "hp": 70,
+      "type": "Grass",
+      "evolvesFrom": "Giovanni's Nidoran♂",
+      "weakness": "Psychic",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Rend",
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "If the Defending Pokémon already has any damage counters on it, this attack does 20 damage plus 20 more damage. If not, this attack does 20 damage.",
+          "effect": {
+            "bonusIfDamaged": 20
+          }
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "gym2-8",
+      "set": "gym2",
+      "name": "Giovanni's Persian",
+      "kind": "pokemon",
+      "img": "img/cards/gym2/8.webp",
+      "imgLarge": "img/cards/gym2/8_hires.webp",
+      "stage": 1,
+      "hp": 60,
+      "type": "Colorless",
+      "evolvesFrom": "Giovanni's Meowth",
+      "weakness": "Fighting",
+      "resistance": "Psychic",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "Ambush",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "text": "Flip a coin. If heads, this attack does 20 damage plus 20 more damage; if tails, this attack does 20 damage.",
+          "effect": {
+            "flipBonus": 20
+          }
+        }
+      ],
+      "power": {
+        "name": "Call the Boss",
+        "text": "When you play Giovanni's Persian from your hand, you may search your deck for the Trainer card named Giovanni, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+        "kind": "callTheBoss"
+      }
+    },
+    {
+      "count": 2,
+      "id": "base4-118",
+      "set": "base4",
+      "name": "Bill",
+      "kind": "trainer",
+      "img": "img/cards/base4/118.webp",
+      "imgLarge": "img/cards/base4/118_hires.webp",
+      "text": "Draw 2 cards.",
+      "trainer": "bill"
+    },
+    {
+      "count": 2,
+      "id": "base4-119",
+      "set": "base4",
+      "name": "Energy Removal",
+      "kind": "trainer",
+      "img": "img/cards/base4/119.webp",
+      "imgLarge": "img/cards/base4/119_hires.webp",
+      "text": "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+      "trainer": "energyRemoval"
+    },
+    {
+      "count": 1,
+      "id": "base4-111",
+      "set": "base4",
+      "name": "Full Heal",
+      "kind": "trainer",
+      "img": "img/cards/base4/111.webp",
+      "imgLarge": "img/cards/base4/111_hires.webp",
+      "text": "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.",
+      "trainer": "fullHeal"
+    },
+    {
+      "count": 1,
+      "id": "gym2-104",
+      "set": "gym2",
+      "name": "Giovanni",
+      "kind": "trainer",
+      "img": "img/cards/gym2/104.webp",
+      "imgLarge": "img/cards/gym2/104_hires.webp",
+      "text": "Choose 1 of your Pokémon in play with Giovanni in its name. For the rest of your turn, you may evolve that Pokémon even if you just played or evolved it this turn or if this is your first turn. This effect also applies to the Pokémon it evolves into.",
+      "trainer": "giovanni"
+    },
+    {
+      "count": 2,
+      "id": "base4-122",
+      "set": "base4",
+      "name": "Potion",
+      "kind": "trainer",
+      "img": "img/cards/base4/122.webp",
+      "imgLarge": "img/cards/base4/122_hires.webp",
+      "text": "Remove up to 2 damage counters from 1 of your Pokémon.",
+      "trainer": "potion"
+    },
+    {
+      "count": 1,
+      "id": "gym2-123",
+      "set": "gym2",
+      "name": "Viridian City Gym",
+      "kind": "trainer",
+      "img": "img/cards/gym2/123.webp",
+      "imgLarge": "img/cards/gym2/123_hires.webp",
+      "text": "This card stays in play after being played. Discard this card if another Stadium card comes into play. Whenever a Pokémon with Giovanni in its name evolves, its owner removes 2 damage counters from that Pokémon (or 1 if it only has 1).",
+      "trainer": "stadium",
+      "stadium": "viridian"
+    },
+    {
+      "count": 2,
+      "id": "gym2-126",
+      "set": "gym2",
+      "name": "Warp Point",
+      "kind": "trainer",
+      "img": "img/cards/gym2/126.webp",
+      "imgLarge": "img/cards/gym2/126_hires.webp",
+      "text": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with his or her Active Pokémon, then, if you have any Benched Pokémon, you switch 1 of them with your Active Pokémon.",
+      "trainer": "warpPoint"
+    },
+    {
+      "count": 8,
+      "id": "gym2-127",
+      "set": "gym2",
+      "name": "Fighting Energy",
+      "kind": "energy",
+      "img": "img/cards/gym2/127.webp",
+      "imgLarge": "img/cards/gym2/127_hires.webp",
+      "energyType": "Fighting"
+    },
+    {
+      "count": 20,
+      "id": "gym2-129",
+      "set": "gym2",
+      "name": "Grass Energy",
+      "kind": "energy",
+      "img": "img/cards/gym2/129.webp",
+      "imgLarge": "img/cards/gym2/129_hires.webp",
+      "energyType": "Grass"
+    }
+  ]
+}

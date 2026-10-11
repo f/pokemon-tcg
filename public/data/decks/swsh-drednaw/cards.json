@@ -1,0 +1,474 @@
+{
+  "name": "Drednaw",
+  "group": "swshTheme",
+  "format": "modern",
+  "types": [
+    "Water"
+  ],
+  "featured": [
+    "swsh4-39",
+    "swsh4-35",
+    "swsh4-42"
+  ],
+  "cards": [
+    {
+      "count": 3,
+      "id": "swsh4-41",
+      "set": "swsh4",
+      "name": "Arrokuda",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/41.webp",
+      "imgLarge": "img/cards/swsh4/41_hires.webp",
+      "stage": 0,
+      "hp": 60,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Flock",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Search your deck for up to 2 Arrokuda and put them onto your Bench. Then, shuffle your deck.",
+          "effect": {
+            "callAny": {
+              "n": 2,
+              "prefix": "Arrokuda"
+            }
+          }
+        },
+        {
+          "name": "Peck",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 1,
+      "id": "swsh4-42",
+      "set": "swsh4",
+      "name": "Barraskewda",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/42.webp",
+      "imgLarge": "img/cards/swsh4/42_hires.webp",
+      "stage": 1,
+      "hp": 120,
+      "type": "Water",
+      "evolvesFrom": "Arrokuda",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Targeted Skewer",
+          "cost": [
+            "Water"
+          ],
+          "damage": "",
+          "text": "This attack does 20 damage to 1 of your opponent's Benched Pokémon for each damage counter on that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+          "effect": {
+            "snipeByCounters": 20
+          }
+        },
+        {
+          "name": "Jet Headbutt",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "60",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-38",
+      "set": "swsh4",
+      "name": "Chewtle",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/38.webp",
+      "imgLarge": "img/cards/swsh4/38_hires.webp",
+      "stage": 0,
+      "hp": 80,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Jaw Lock",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "40",
+          "text": "During your opponent's next turn, the Defending Pokémon can't retreat.",
+          "effect": {
+            "noRetreat": true
+          }
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh4-40",
+      "set": "swsh4",
+      "name": "Cramorant",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/40.webp",
+      "imgLarge": "img/cards/swsh4/40_hires.webp",
+      "stage": 0,
+      "hp": 110,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": "Fighting",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Continuous Gulp Missile",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60×",
+          "text": "Discard any number of Arrokuda from your Bench. This attack does 60 damage for each Arrokuda you discarded in this way.",
+          "effect": {
+            "discardBenchNamedTimes": {
+              "name": "Arrokuda",
+              "n": 60
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-34",
+      "set": "swsh4",
+      "name": "Dewott",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/34.webp",
+      "imgLarge": "img/cards/swsh4/34_hires.webp",
+      "stage": 1,
+      "hp": 90,
+      "type": "Water",
+      "evolvesFrom": "Oshawott",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        },
+        {
+          "name": "Aqua Wash",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "50",
+          "text": "You may put an Energy attached to your opponent's Active Pokémon into their hand.",
+          "effect": {
+            "bounceDefEnergy": {
+              "n": 1,
+              "may": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-39",
+      "set": "swsh4",
+      "name": "Drednaw",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/39.webp",
+      "imgLarge": "img/cards/swsh4/39_hires.webp",
+      "stage": 1,
+      "hp": 140,
+      "type": "Water",
+      "evolvesFrom": "Chewtle",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 4,
+      "attacks": [
+        {
+          "name": "Vise Wave",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "80",
+          "text": "If you played Nessa from your hand during this turn, your opponent's Active Pokémon is now Paralyzed.",
+          "effect": {
+            "statusIfPlayed": {
+              "name": "Nessa",
+              "status": "paralyzed"
+            }
+          }
+        },
+        {
+          "name": "Surf",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "140",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 3,
+      "id": "swsh4-33",
+      "set": "swsh4",
+      "name": "Oshawott",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/33.webp",
+      "imgLarge": "img/cards/swsh4/33_hires.webp",
+      "stage": 0,
+      "hp": 70,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Water Gun",
+          "cost": [
+            "Water"
+          ],
+          "damage": "10",
+          "text": ""
+        },
+        {
+          "name": "Seashell Attack",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh4-35",
+      "set": "swsh4",
+      "name": "Samurott",
+      "kind": "pokemon",
+      "img": "img/cards/swsh4/35.webp",
+      "imgLarge": "img/cards/swsh4/35_hires.webp",
+      "stage": 2,
+      "hp": 160,
+      "type": "Water",
+      "evolvesFrom": "Dewott",
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "Aqua Wash",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120",
+          "text": "You may put 2 Energy attached to your opponent's Active Pokémon into their hand.",
+          "effect": {
+            "bounceDefEnergy": {
+              "n": 2,
+              "may": true
+            }
+          }
+        }
+      ],
+      "power": {
+        "name": "Swaddling Leaves",
+        "text": "This Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+        "kind": "thicketBody",
+        "ability": true
+      }
+    },
+    {
+      "count": 2,
+      "id": "swsh3-50",
+      "set": "swsh3",
+      "name": "Wishiwashi",
+      "kind": "pokemon",
+      "img": "img/cards/swsh3/50.webp",
+      "imgLarge": "img/cards/swsh3/50_hires.webp",
+      "stage": 0,
+      "hp": 30,
+      "type": "Water",
+      "evolvesFrom": null,
+      "weakness": "Lightning",
+      "resistance": null,
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "Deep Sea Swirl",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "",
+          "text": "Shuffle your hand into your deck. Then, draw 8 cards.",
+          "effect": {
+            "handReset": 8
+          }
+        },
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "Water"
+          ],
+          "damage": "20",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "count": 2,
+      "id": "swsh1-157",
+      "set": "swsh1",
+      "name": "Bede",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/157.webp",
+      "imgLarge": "img/cards/swsh1/157_hires.webp",
+      "text": "Attach a basic Energy card from your hand to 1 of your Benched Pokémon. You may play only 1 Supporter card during your turn.",
+      "trainer": "bede",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-158",
+      "set": "swsh2",
+      "name": "Dan",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/158.webp",
+      "imgLarge": "img/cards/swsh2/158_hires.webp",
+      "text": "Draw 2 cards. You and your opponent play Rock-Paper-Scissors until someone wins. If you win, draw 2 more cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "dan",
+      "ttype": "supporter"
+    },
+    {
+      "count": 1,
+      "id": "swsh1-163",
+      "set": "swsh1",
+      "name": "Evolution Incense",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/163.webp",
+      "imgLarge": "img/cards/swsh1/163_hires.webp",
+      "text": "Search your deck for an Evolution Pokémon, reveal it, and put it into your hand. Then, shuffle your deck. You may play any number of Item cards during your turn.",
+      "trainer": "evolutionIncense",
+      "ttype": "item"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-164",
+      "set": "swsh1",
+      "name": "Great Ball",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/164.webp",
+      "imgLarge": "img/cards/swsh1/164_hires.webp",
+      "text": "Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck. You may play any number of Item cards during your turn.",
+      "trainer": "greatBall",
+      "ttype": "item"
+    },
+    {
+      "count": 4,
+      "id": "swsh1-165",
+      "set": "swsh1",
+      "name": "Hop",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/165.webp",
+      "imgLarge": "img/cards/swsh1/165_hires.webp",
+      "text": "Draw 3 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "hop",
+      "ttype": "supporter"
+    },
+    {
+      "count": 3,
+      "id": "swsh4-157",
+      "set": "swsh4",
+      "name": "Nessa",
+      "kind": "trainer",
+      "img": "img/cards/swsh4/157.webp",
+      "imgLarge": "img/cards/swsh4/157_hires.webp",
+      "text": "Put up to 4 in any combination of Water Pokémon and Water Energy cards from your discard pile into your hand. You may play only 1 Supporter card during your turn.",
+      "trainer": "nessa",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-178",
+      "set": "swsh1",
+      "name": "Professor's Research (Professor Magnolia)",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/178.webp",
+      "imgLarge": "img/cards/swsh1/178_hires.webp",
+      "text": "Discard your hand and draw 7 cards. You may play only 1 Supporter card during your turn.",
+      "trainer": "professorsResearch",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh2-167",
+      "set": "swsh2",
+      "name": "Sonia",
+      "kind": "trainer",
+      "img": "img/cards/swsh2/167.webp",
+      "imgLarge": "img/cards/swsh2/167_hires.webp",
+      "text": "Search your deck for up to 2 Basic Pokémon or up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck. You may play only 1 Supporter card during your turn.",
+      "trainer": "sonia",
+      "ttype": "supporter"
+    },
+    {
+      "count": 2,
+      "id": "swsh1-183",
+      "set": "swsh1",
+      "name": "Switch",
+      "kind": "trainer",
+      "img": "img/cards/swsh1/183.webp",
+      "imgLarge": "img/cards/swsh1/183_hires.webp",
+      "text": "Switch your Active Pokémon with 1 of your Benched Pokémon. You may play any number of Item cards during your turn.",
+      "trainer": "switch",
+      "ttype": "item"
+    },
+    {
+      "count": 18,
+      "id": "sve-3",
+      "set": "sve",
+      "name": "Basic Water Energy",
+      "kind": "energy",
+      "img": "img/cards/sve/3.webp",
+      "imgLarge": "img/cards/sve/3_hires.webp",
+      "energyType": "Water"
+    }
+  ]
+}
