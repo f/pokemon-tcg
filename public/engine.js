@@ -29,6 +29,9 @@ export const STAGES = ['Basic', 'Stage 1', 'Stage 2'];
 export const C = (card) => ({ $card: { name: card.name, kind: card.kind, energyType: card.energyType, special: card.special } });
 export const PL = (p) => ({ $pl: p.idx });
 const ST = (s) => ({ $st: s });
+// Something only one player may see (the card they drew or searched for). Each screen shows it to that player and
+// "a card" to the other; in a two-player game the guest's copy never carries the value at all (net/redact.js).
+export const SECRET = (p, v) => ({ $secret: { vis: p.idx, v } });
 const COIN = (h) => ({ $coin: h });
 
 export function makeDeck(key) {
@@ -225,8 +228,9 @@ export class Game {
   allMons(p) { return [p.active, ...p.bench].filter(Boolean); }
   slot(p, m) { return { $slot: p.active === m ? ['active'] : ['bench', p.bench.indexOf(m) + 1] }; }
   slotEn(p, m) { return p.active === m ? 'Active' : `Bench ${p.bench.indexOf(m) + 1}`; }
-  log(key, params = {}, kind = 'sys', pl = null) { this.hooks.onLog?.({ key, params, kind, pl }); }
-  plog(p, key, params = {}) { this.log(key, { P: PL(p), ...params }, p.idx === 0 ? 'you' : 'opp', p.idx); }
+  // `alt`: the line the other player reads instead ("Gary drew a card." for "You drew Charmander.").
+  log(key, params = {}, kind = 'sys', pl = null, alt = null) { this.hooks.onLog?.({ key, params, kind, pl, ...(alt && { alt }) }); }
+  plog(p, key, params = {}, alt = null) { this.log(key, { P: PL(p), ...params }, p.idx === 0 ? 'you' : 'opp', p.idx, alt); }
   learn(key, params = {}) {
     if (this.learned.has(key)) return;
     this.learned.add(key);
@@ -347,8 +351,7 @@ export class Game {
     }
     const c = p.deck.pop();
     p.hand.push(c);
-    if (p.idx === 0) this.plog(p, 'log.drewCard', { c: C(c) });
-    else this.plog(p, 'log.drew');
+    this.plog(p, 'log.drewCard', { c: SECRET(p, C(c)) }, 'log.drew');
     this.learn('draw');
     if (this.turn === 1) this.learn('firstTurn');
     this.update();
@@ -1046,7 +1049,7 @@ export class Game {
         p.deck.splice(p.deck.indexOf(got), 1);
         p.hand.push(got);
         shuffle(p.deck);
-        L('search', { a: dropped[0], b: dropped[1], got: p.idx === 0 ? C(got) : { $hidden: true } });
+        L('search', { a: dropped[0], b: dropped[1], got: SECRET(p, C(got)) });
         break;
       }
       default:
@@ -1055,7 +1058,7 @@ export class Game {
   }
 
   async playTrainer2(p, o, c, m, act, L) {
-    const hide = (x) => (p.idx === 0 ? C(x) : { $hidden: true }); // what the opponent searched stays hidden from you
+    const hide = (x) => SECRET(p, C(x)); // what the opponent searched stays hidden from you
     const isPoke = (x) => x.kind === 'pokemon';
     const pokeAi = (x) => (x.stage > 0 && this.allMons(p).some((y) => y.name === x.evolvesFrom) ? 10 : 0) + (x.stage === 0 && p.bench.length < MAX_BENCH ? 4 : 0);
     const discardLoop = async (kind, text) => {
@@ -1921,7 +1924,7 @@ export class Game {
     const i = Math.min(Number(id) || 0, p.prizes.length - 1);
     const [card] = p.prizes.splice(i, 1);
     p.hand.push(card);
-    this.plog(p, p.idx === 0 ? 'log.prizeCard' : 'log.prize', { c: C(card), n: p.prizes.length });
+    this.plog(p, 'log.prizeCard', { c: SECRET(p, C(card)), n: p.prizes.length }, 'log.prize');
     await this.hooks.onPrize?.(p, card);
     this.update();
   }
@@ -2032,8 +2035,8 @@ const SPECIAL_EN = {
 const TTYPE_EN = { item: 'Item', supporter: 'Supporter (only 1 per turn)', stadium: 'Stadium', tool: 'Pokémon Tool' };
 // The Basic a Stage 1 Pokémon evolves from (Rare Candy needs to look two steps back).
 const evolvesFromOf = (name) => Object.values(CARDS).find((c) => c.kind === 'pokemon' && c.name === name && c.stage === 1)?.evolvesFrom;
-installModern(Game, { Mon, shuffle, C, PL, isBasic, MAX_BENCH, evolvesFromOf });
-installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH });
+installModern(Game, { Mon, shuffle, C, PL, SECRET, isBasic, MAX_BENCH, evolvesFromOf });
+installMega(Game, { Mon, shuffle, C, SECRET, isBasic, MAX_BENCH });
 installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH });
-installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH });
-installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH });
+installSwshV(Game, { Mon, shuffle, C, SECRET, isBasic, isType, MAX_BENCH });
+installSm(Game, { Mon, shuffle, C, SECRET, isBasic, isType, MAX_BENCH });

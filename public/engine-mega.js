@@ -2,7 +2,7 @@
 // installed on the Game class by engine.js on top of the modern rules in engine-modern.js.
 // Mega Evolution Pokémon ex give up 3 Prize cards; Ancient and Future Pokémon have their own Trainers and Tools.
 
-export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
+export function installMega(Game, { Mon, shuffle, C, SECRET, isBasic, MAX_BENCH }) {
   const basicEnergy = (x) => x.kind === 'energy' && !x.special;
   const tool = (m, k) => m.tools.some((t) => t.card.tool === k);
   const tagged = (c, tag) => !!c?.tags?.includes(tag);
@@ -300,7 +300,7 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         }
         case 'spikemuthGym': {
           const x = await this.pickCard(p, 'search', p.deck.filter((y) => y.kind === 'pokemon' && y.name.startsWith("Marnie's")), 'prompt.q.searchPokemon', { c: C(s) }, "Choose a Marnie's Pokémon from your deck.", { ai: (y) => (y.prizes ? 5 : 0) + y.stage });
-          if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: C(s), got: p.idx === 0 ? C(x) : { $hidden: true } }); }
+          if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: C(s), got: SECRET(p, C(x)) }); }
           break;
         }
         case 'jubilifeVillage':
@@ -403,7 +403,7 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
           break;
         }
         case 'wondrousPatch': await this.attachFromDiscard(p, p.bench.filter((x) => x.card.type === 'Psychic'), 1, ofType('Psychic'), c.name); break;
-        case 'pokePad': { const x = await take((y) => y.kind === 'pokemon' && !y.ruleBox, 'prompt.q.searchPokemon', 'Choose a Pokémon without a Rule Box.'); shuffle(p.deck); if (x) L('got', { got: p.idx === 0 ? C(x) : { $hidden: true } }); break; }
+        case 'pokePad': { const x = await take((y) => y.kind === 'pokemon' && !y.ruleBox, 'prompt.q.searchPokemon', 'Choose a Pokémon without a Rule Box.'); shuffle(p.deck); if (x) L('got', { got: SECRET(p, C(x)) }); break; }
         case 'judge': for (const q of [p, o]) { this.shuffleHandIn(q); this.plog(q, 'log.t.newHand', { n: this.draw(q, 4) }); } break;
         case 'specialRedCard': { shuffle(o.hand); o.deck.unshift(...o.hand); o.hand = []; this.plog(o, 'log.t.newHand', { n: this.draw(o, 3) }); break; }
         case 'energySearch': { const x = await take(basicEnergy, 'prompt.q.searchEnergy', 'Choose a basic Energy.', { ai: () => 1 }); shuffle(p.deck); if (x) L('got', { got: C(x) }); break; }

@@ -2,7 +2,7 @@
 // Sun & Moon is played with today's rules; its cards add Ultra Beasts, the Lost Zone and many Abilities and Trainers.
 // Reached from the hooks in engine-swsh-v.js (Trainers, Abilities, attack effects, Stadiums) and engine.js (damage, setup, KOs).
 
-export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH }) {
+export function installSm(Game, { Mon, shuffle, C, SECRET, isBasic, isType, MAX_BENCH }) {
   const basicEnergy = (x) => x.kind === 'energy' && !x.special;
   const ofType = (type) => (x) => basicEnergy(x) && x.energyType === type;
   const tag = (c, t) => !!c?.tags?.includes(t);
@@ -144,7 +144,7 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
         }
         case 'precognitiveAura': {
           const x = await this.pickCard(p, 'search', p.deck, 'prompt.q.searchAny', { c: power.name }, 'Choose any card from your deck.', { ai: (y) => (y.ttype === 'supporter' ? 4 : y.kind === 'pokemon' && y.stage > 0 ? 3 : 1) });
-          if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: power.name, got: p.idx === 0 ? C(x) : { $hidden: true } }); }
+          if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: power.name, got: SECRET(p, C(x)) }); }
           shuffle(p.deck);
           break;
         }
@@ -815,7 +815,7 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
             seen.push(p.prizes[i]);
           }
         }
-        this.plog(p, 'log.peekPrize', { list: p.idx === 0 ? seen.map((x) => x.name).join(', ') : { $hidden: true }, n: seen.length });
+        this.plog(p, 'log.peekPrize', { list: SECRET(p, seen.map((x) => x.name).join(', ')), n: seen.length });
       }
       if (fx.useOppSupporter) {
         this.plog(p, 'log.t.sawHand', { list: o.hand.map((x) => x.name).join(', ') || '—', c: atk.name });

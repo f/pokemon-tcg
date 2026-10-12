@@ -6,89 +6,23 @@
 // in public/img/sources.json), the same places `npm run images` downloads them from.
 import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
-import { join, dirname, sep, extname } from 'node:path';
+import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import * as esbuild from 'esbuild';
+import { buildPlay } from './lib/build-play.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const pub = join(root, 'public'), site = join(root, 'site'), play = join(site, 'play');
-const CDN = 'https://images.pokemontcg.io/';
-const sources = JSON.parse(await readFile(join(pub, 'img', 'sources.json'), 'utf8'));
-// img/cards/<set>/<n>[_hires].webp → the remote PNG it was made from.
-const remote = (local) => { const png = local.replace(/\.webp$/, '.png'); return sources[png] || CDN + png.slice('img/cards/'.length); };
-const CARD_PATH = /img\/cards\/[\w./-]+?\.(?:webp|png)/g;
+const site = join(root, 'site'), play = join(site, 'play');
 
 // SITE_URL: the production address (canonical links, sitemap, share image). Keep site/.spacefast: it links the folder
 // to its Space, so the next `sf publish site` updates the same one.
 const SITE_URL = (process.env.SITE_URL || 'https://pokemon.space.fast').replace(/\/$/, '');
 for (const e of await readdir(site).catch(() => [])) if (e !== '.spacefast') await rm(join(site, e), { recursive: true, force: true });
-await cp(pub, play, {
-  recursive: true,
-  filter: (src) => {
-    const rel = src.slice(pub.length + 1);
-    return !(rel === join('img', 'cards') || rel.startsWith(`img${sep}cards${sep}`) || rel === join('img', 'sources.json') || rel.endsWith('.DS_Store'));
-  },
-});
-
-// Point every card image at its remote source: the deck files, the deck index and the How to play pages.
-let rewritten = 0;
-const unknown = new Set();
-async function rewrite(file) {
-  const text = await readFile(file, 'utf8');
-  const out = text.replace(CARD_PATH, (p) => { rewritten++; const r = remote(p); if (!/^https:\/\//.test(r)) unknown.add(p); return r; });
-  if (out !== text) await writeFile(file, out);
-}
-async function walk(dir) {
-  for (const e of await readdir(dir, { withFileTypes: true })) {
-    const p = join(dir, e.name);
-    if (e.isDirectory()) await walk(p);
-    else if (['.json', '.js', '.html', '.css'].includes(extname(p))) await rewrite(p);
-  }
-}
-await walk(play);
-if (unknown.size) throw new Error(`no remote source for: ${[...unknown].slice(0, 5).join(', ')}`);
-
-// A static host limits bursts of requests (Spacefast answers 429), and a module that fails to load stops the game.
-// So the web build makes few requests: the classic decks in one file, the game's modules in one script, and the
-// icons inside the stylesheets. The source stays the same files the app and the dev server use.
-const decksDir = join(play, 'data', 'decks');
-const deckIndex = JSON.parse(await readFile(join(decksDir, 'index.json'), 'utf8'));
-const classic = {};
-for (const k of deckIndex.decks) classic[k] = JSON.parse(await readFile(join(decksDir, k, 'cards.json'), 'utf8'));
-await writeFile(join(decksDir, 'classic.json'), JSON.stringify(classic));
-await writeFile(join(decksDir, 'index.json'), JSON.stringify({ ...deckIndex, classicBundle: 'classic.json' }, null, 2) + '\n');
-
-await esbuild.build({
-  entryPoints: [join(play, 'ui.js')], bundle: true, format: 'esm', platform: 'browser', target: 'es2022',
-  external: ['node:*'], minify: true, legalComments: 'none', outfile: join(play, 'app.js'), logLevel: 'warning',
-});
-for (const f of await readdir(play)) if (f.endsWith('.js') && f !== 'app.js') await rm(join(play, f));
-await rm(join(play, 'i18n'), { recursive: true, force: true });
-
-for (const css of ['style.css', 'rps.css']) {
-  const p = join(play, css);
-  let text = await readFile(p, 'utf8'), inlined = 0;
-  const urls = [...new Set([...text.matchAll(/url\(\s*["']?(vendor\/[\w./-]+\.svg)["']?\s*\)/g)].map((m) => m[1]))];
-  for (const u of urls) {
-    const svg = (await readFile(join(play, u), 'utf8')).replace(/\s+/g, ' ').trim();
-    text = text.replace(new RegExp(`url\\(\\s*["']?${u.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}["']?\\s*\\)`, 'g'), `url("data:image/svg+xml,${encodeURIComponent(svg)}")`);
-    inlined++;
-  }
-  await writeFile(p, text);
-  console.log(`${css}: ${inlined} icons inlined`);
-}
-
-// Mark the page as the web build: api.js then answers with the CPU engine and never calls a server.
-const indexFile = join(play, 'index.html');
-const index = await readFile(indexFile, 'utf8');
-await writeFile(indexFile, index
-  .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  <meta name="tcg-build" content="web">')
-  .replace('<script type="module" src="ui.js"></script>', '<script type="module" src="app.js"></script>')
-  .replace('<title>Pokémon TCG Academy</title>', `<title>Play the Pokémon TCG in your browser · Pokémon TCG Academy</title>
+const { rewritten } = await buildPlay(play, [{
+  entry: 'ui.js', script: 'app.js', to: 'index.html',
+  title: `<title>Play the Pokémon TCG in your browser · Pokémon TCG Academy</title>
   <meta name="description" content="Play the Pokémon Trading Card Game in your browser against Gary, with the Professor as your coach. 109 real decks, four languages.">
-  <link rel="canonical" href="${SITE_URL}/play/">`));
-const marked = await readFile(indexFile, 'utf8');
-if (!marked.includes('name="tcg-build"') || !marked.includes('src="app.js"')) throw new Error('could not mark play/index.html as the web build');
+  <link rel="canonical" href="${SITE_URL}/play/">`,
+}]);
 
 // The landing page, its screenshots and the app icon. __VERSION__ becomes the app version (the DMG link names it).
 await cp(join(root, 'web'), site, { recursive: true });

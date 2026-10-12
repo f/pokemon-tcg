@@ -12,7 +12,10 @@
     "app:build": "tauri build --bundles app && node scripts/make-dmg.mjs",
     "images": "node scripts/fetch-images.mjs",
     "web:build": "node scripts/build-web.mjs",
-    "web:publish": "npm run web:build && sf publish site --space spc_d541c63539a747a985a7ee39408f4087"
+    "web:publish": "npm run web:build && sf publish site --space spc_d541c63539a747a985a7ee39408f4087",
+    "test:versus": "node tests/versus.mjs 60",
+    "versus:frame": "node scripts/build-versus.mjs",
+    "versus:frame:publish": "node scripts/build-versus.mjs && sf publish site-versus-play --space spc_00d4a65f185046c7b76fe5d74c2db5c9"
   },
   "engines": {
     "node": ">=21.7"

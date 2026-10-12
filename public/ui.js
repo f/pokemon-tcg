@@ -5,7 +5,10 @@ import { RPS_CANCEL, chooseThrow, showdown, rpsReset, rpsClose } from './rps.js'
 import { api, inApp, online, webOnly, MAC_DOWNLOAD } from './api.js';
 
 if (inApp) document.documentElement.classList.add('in-app'); // the macOS app (see the in-app rules in style.css)
-import { t, setLang, getLang, cardName, CARD_TEXT_TR, RULES_HTML } from './i18n.js';
+import { t, setLang, getLang, cardName, CARD_TEXT_TR, RULES_HTML, setOpponentName } from './i18n.js';
+import { RemoteController, forwardHooks } from './net/host.js';
+import { runGuest } from './net/guest.js';
+import { guestLog, guestSnapshot } from './net/protocol.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -15,6 +18,10 @@ const stale = () => new Promise(() => {}); // an abandoned game just stops here
 
 let game = null;
 let gameId = 0;
+// versus.html: a two-player game (net/*); the page waits for startVersus() instead of opening the start screen.
+const versusMode = document.querySelector('meta[name="tcg-mode"]')?.content === 'versus';
+let versus = null;         // { role, onSave, onOver, onLeave }
+let fastForward = false;   // the guest catching up: replay without animations
 let inspectables = new Map(); // element key → card, for the inspector panel
 let logEntries = [];
 let decision = null;          // current human decision: {actions, ranking, p, pick}
@@ -92,7 +99,7 @@ function diceHtml(m) {
   if (!m.damage) return '';
   const dice = [];
   for (let c = m.damage / 10; c > 0; c -= 6) dice.push(Math.min(6, c));
-  const roll = changed && $('#opt-anim').checked ? 'roll' : '';
+  const roll = changed && animOn() ? 'roll' : '';
   return `<div class="dice ${roll}" title="${esc(t('ui.diceTitle', { c: m.damage / 10, n: m.damage }))}">
     ${dice.map((v) => dieFace(v)).join('')}
     <span class="dsum">${m.damage}</span></div>`;
@@ -117,7 +124,7 @@ function diceChart() {
 // On every attack both Active Pokémon rise from the mat into the middle of the board, face each other and clash.
 // Damage is shown as dice tumbling from the attacker onto the defender, with a burst and a floating number.
 let arena = null; // { el, cards: Map(monId → wrapper), ids: Set }
-const animOn = () => $('#opt-anim').checked;
+const animOn = () => $('#opt-anim').checked && !fastForward;
 const monById = (id) => game && game.players.flatMap((p) => game.allMons(p)).find((m) => m.id === id);
 const centerOf = (r) => ({ x: r.left + r.width / 2, y: r.top + r.height / 2 });
 
@@ -505,7 +512,7 @@ const TOUR = [
   { id: 'firstTurn' },
 ];
 let tourRunning = false;
-const tourDone = () => { try { return localStorage.getItem('tourDone') === '1'; } catch { return false; } };
+const tourDone = () => { if (versusMode) return true; try { return localStorage.getItem('tourDone') === '1'; } catch { return false; } };
 
 function runTour() {
   if (tourRunning || $('#table').hidden) return Promise.resolve();
@@ -753,7 +760,7 @@ function applyEngine(e) {
   // Jev is hosted: offline, the CPU engine plays until the connection is back (local models work offline).
   const usable = e.engine === 'jev' ? e.jevKeySet && online() : e.engine === 'local' ? e.local.status === 'ready' : false;
   aiConfig.engine = usable ? 'model' : 'cpu';
-  $('#engine-badge').textContent = engineLabel(e);
+  if (!versusMode) $('#engine-badge').textContent = engineLabel(e); // in a two-player game the badge shows the connection
   $('#engine-badge').classList.toggle('busy', e.engine === 'local' && e.local.status !== 'ready');
   const m = e.models.find((x) => x.id === e.model);
   const host = $('#start-engine');
@@ -1066,7 +1073,7 @@ function stageShell(title, sub) {
 }
 
 function showCoin(ctx) {
-  if (!$('#opt-anim').checked) { callStage?.remove(); callStage = null; return Promise.resolve(); }
+  if (!animOn()) { callStage?.remove(); callStage = null; return Promise.resolve(); }
   return new Promise((resolve) => {
     const title = t('coin.why.' + ctx.why, ctx.params);
     const sub = ctx.why === 'first' ? t('ui.youCalled', { c: ctx.params.call }) : t('ui.coinSub');
@@ -1288,7 +1295,7 @@ function reveal(uid) {
 }
 
 function flyNewCards(you, opp, newCards) {
-  const anim = animateDraws && $('#opt-anim').checked;
+  const anim = animateDraws && animOn();
   if (anim) {
     newCards.forEach((c, i) => {
       arrivingCards.add(c.uid);
@@ -1771,6 +1778,8 @@ function logLine(e) {
   return el;
 }
 function log(e) {
+  // A line with a private detail (what the other player drew) reads as its `alt` on this screen.
+  if (e.alt && e.pl !== 0) e = { ...e, key: e.alt };
   if (e.kind === 'ko' && e.key === 'log.ko') koStamp();
   logEntries.push(e);
   $('#log').append(logLine(e));
@@ -2425,6 +2434,7 @@ const UNDOABLE_TRAINERS = new Set(['potion', 'superPotion', 'switch', 'gust', 'p
 let undoStack = [];
 
 function rememberForUndo(g, a) {
+  if (versusMode) return; // no take-backs against a person
   const undoable = ['energy', 'bench', 'evolve', 'retreat'].includes(a.kind) || (a.kind === 'trainer' && UNDOABLE_TRAINERS.has(a.tkind));
   if (!undoable) { undoStack = []; return; }
   if (undoStack.length && undoStack.at(-1).turn !== g.turn) undoStack = [];
@@ -2453,10 +2463,10 @@ function gameOver(g) {
     const [ic, title] = g.winner === 'draw' ? ['handshake', t('ui.drawGame')] : g.winner.idx === 0 ? ['trophy', t('ui.youWin')] : ['frown', t('ui.oppWins')];
     return `<p class="over-title">${icon(ic)} ${esc(title)}</p><p>${esc(t(g.winReason.key, g.winReason.params))}</p>
       <p>${esc(t('ui.overText'))}</p>
-      <div class="row"><button id="over-close">${esc(t('ui.lookBoard'))}</button><button class="primary" id="over-new">${esc(t('ui.new'))}</button></div>`;
+      <div class="row"><button id="over-close">${esc(t('ui.lookBoard'))}</button><button class="primary" id="over-new">${esc(t(versus ? 'vs.toLobby' : 'ui.new'))}</button></div>`;
   }, () => {
     $('#over-close').onclick = closeModal;
-    $('#over-new').onclick = () => { closeModal(); openStart(); };
+    $('#over-new').onclick = () => { closeModal(); if (versus) versus.onLeave(); else openStart(); };
   });
 }
 
@@ -2657,6 +2667,171 @@ applyStaticText();
 inspect(null);
 // Know which engine Gary uses before a saved game picks up again (until then he and the Professor use the CPU engine).
 await Promise.race([refreshEngine(), new Promise((r) => setTimeout(r, 1500))]);
-const saved = loadSave();
-if (saved?.game) resumeGame(saved).catch(() => { clearSave(); openStart(); });
-else openStart();
+if (versusMode) {
+  document.documentElement.classList.add('versus');
+  $('#start').hidden = true;
+} else {
+  const saved = loadSave();
+  if (saved?.game) resumeGame(saved).catch(() => { clearSave(); openStart(); });
+  else openStart();
+}
+
+// ---------------- Two-player games (versus.html) ----------------
+// The host runs the game here with the guest's seat played over the network (net/host.js); the guest's screen is a
+// view rebuilt from what the host sends (net/guest.js). Both screens show their own player at the bottom.
+const SAVE_MAX = 58000; // characters; Spacefast keeps each saved state under 60 KB
+export const setVersusLang = (l) => switchLanguage(l);
+// Something happened to the match outside the game (the opponent left).
+export function versusNotice(key) {
+  oppStatus(key);
+  log({ key, params: {}, kind: 'warn' });
+}
+export function setVersusStatus(key, params = {}) {
+  const b = $('#engine-badge');
+  if (b) b.textContent = t(key, params);
+}
+
+export async function startVersus({ role, decks, nicks, session, resume = null, onSave = () => {}, onOver = () => {}, onLeave = () => {} }) {
+  const myGame = ++gameId;
+  versus = { role, onSave, onOver, onLeave };
+  setOpponentName(role === 'host' ? nicks.guest : nicks.host);
+  await Promise.all([loadDeck(decks.host), loadDeck(decks.guest)]);
+  if (myGame !== gameId) return;
+  undoStack = [];
+  logEntries = [];
+  resetTable();
+  animateDraws = true;
+  if (role === 'host') return runVersusHost(myGame, decks, session, resume);
+  return runVersusGuest(myGame, decks, session, resume);
+}
+
+async function runVersusHost(myGame, decks, session, resume) {
+  const human = new HumanController(myGame);
+  const remote = new RemoteController(session);
+  // The guest's turn: wait here, then let the host's own animations finish before the answer takes effect.
+  const ask = remote.chooseAction.bind(remote), pick = remote.choose.bind(remote), bench = remote.setupBench.bind(remote);
+  const paced = (fn) => async (...args) => {
+    if (myGame !== gameId) return stale();
+    clearActions(`<div class="waiting">${esc(t('ui.waitingOpp'))}</div>`);
+    $('#tips').innerHTML = '';
+    const v = await fn(...args);
+    if (pendingAnims.size) await Promise.all([...pendingAnims]);
+    return myGame === gameId ? v : stale();
+  };
+  remote.chooseAction = paced(ask);
+  remote.choose = paced(pick);
+  remote.setupBench = paced(bench);
+
+  const guestTail = [];
+  let saveVersion = resume?.version || 0;
+  const base = gameHooks(myGame);
+  const hooks = forwardHooks({
+    ...base,
+    onLog: (e) => { guestTail.push(guestLog(e)); if (guestTail.length > 120) guestTail.shift(); return base.onLog(e); },
+    onCheckpoint: (g) => {
+      if (myGame !== gameId) return;
+      let n = 80, host, guest;
+      do {
+        host = JSON.stringify({ game: g.serialize(), log: logEntries.slice(-n) });
+        guest = JSON.stringify({ snap: guestSnapshot(g), log: guestTail.slice(-n) });
+        n = Math.floor(n / 2);
+      } while ((host.length > SAVE_MAX || guest.length > SAVE_MAX) && n > 0);
+      if (host.length <= SAVE_MAX && guest.length <= SAVE_MAX) versus.onSave({ hostState: host, guestView: guest, version: ++saveVersion });
+    },
+    onGameOver: (g) => {
+      if (myGame !== gameId) return;
+      gameOver(g);
+      versus.onOver(g.winner === 'draw' ? 'draw' : g.winner.idx === 0 ? 'host' : 'guest');
+    },
+  }, session);
+  // A guest who (re)joins gets the board and the question they're waiting on again.
+  session.onHello = () => {
+    if (myGame !== gameId || !game) return;
+    session.send({ t: 'hello' });
+    session.send({ t: 'snap', s: guestSnapshot(game) });
+    for (const e of guestTail.slice(-40)) session.send({ t: 'log', e });
+    session.resendPending();
+  };
+
+  session.send({ t: 'hello' });
+  if (resume?.state) {
+    const saved = JSON.parse(resume.state);
+    logEntries = saved.log || [];
+    game = Game.restore(saved.game, { controllers: [human, remote], hooks });
+    renderLog();
+    log({ key: 'ui.restored', params: {}, kind: 'sys' });
+    render();
+    session.send({ t: 'snap', s: guestSnapshot(game) });
+    await game.run({ resume: true });
+  } else {
+    game = new Game({ decks: [decks.host, decks.guest], controllers: [human, remote], hooks });
+    log({ key: 'log.decks', params: { a: DECKS[decks.host].name, b: DECKS[decks.guest].name }, kind: 'sys' });
+    render();
+    session.send({ t: 'snap', s: guestSnapshot(game) });
+    await game.run();
+  }
+}
+
+// The host restarted: the question on screen belongs to its old game, so it goes away (the new one asks again).
+function cancelVersusQuestion() {
+  decision = null;
+  if (drag) endDrag(true);
+  clearActions();
+  closeModal();
+  document.querySelectorAll('.setup-ov, .prize-ov').forEach((x) => x.remove());
+  prizeStage = null;
+  if (rpsStage) { rpsReset(rpsStage); rpsStage.remove(); rpsStage = null; }
+}
+
+function runVersusGuest(myGame, decks, session, resume) {
+  const human = new HumanController(myGame);
+  if (resume?.state) {
+    try {
+      const saved = JSON.parse(resume.state);
+      logEntries = Array.isArray(saved.log) ? saved.log : [];
+      renderLog();
+    } catch { /* a bad save: start from the host's next snapshot */ }
+  }
+  oppStatus('ui.waitingOpp');
+  const fast = (backlog) => { fastForward = backlog > 1 || document.hidden; };
+  const replay = {
+    onCoin: (a) => showCoin(a), onRps: (a) => showRps(a), onAttack: (a) => arenaOpen(a), onHit: (a) => onHit(a),
+    onAttackEnd: () => arenaClose(), onAttach: (a) => onAttach(a), onEvolve: (a) => onEvolve(a), onBench: (a) => onBench(a),
+    onTrainer: (a) => onTrainer(a), onPrize: (a) => onPrize(a.p, a.card),
+  };
+  runGuest(session, {
+    onHello: () => oppStatus(),
+    onSnap: (view, backlog) => {
+      if (myGame !== gameId) return;
+      game = view;
+      fast(backlog);
+      render();
+    },
+    onLog: (e) => { if (myGame === gameId) log(e); },
+    onEvent: async (name, a, view, backlog) => {
+      if (myGame !== gameId || !replay[name]) return;
+      game = view;
+      fast(backlog);
+      await replay[name](a);
+      if (pendingAnims.size && !fastForward) await Promise.all([...pendingAnims]);
+    },
+    onPrompt: async (view, p) => {
+      if (myGame !== gameId) return stale();
+      game = view;
+      fastForward = false;
+      oppStatus();
+      render();
+      const me = view.players[0];
+      if (p.kind === 'action') return (await human.chooseAction(view, me, p.actions)).key;
+      if (p.kind === 'bench') return human.setupBench(view, me, p.cards);
+      return human.choose(view, me, p.prompt);
+    },
+    onCancel: () => cancelVersusQuestion(),
+    onOver: (view, m) => {
+      if (myGame !== gameId) return;
+      fastForward = false;
+      gameOver({ winner: m.winner === 'draw' ? 'draw' : view.players[m.winner], winReason: m.reason });
+    },
+    onError: (err) => console.warn('versus:', err),
+  }, { decks });
+}

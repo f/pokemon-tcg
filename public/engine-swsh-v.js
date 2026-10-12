@@ -2,7 +2,7 @@
 // Pokémon V / VMAX / VSTAR, Rapid / Single / Fusion Strike, a TAG TEAM-GX, and their Trainers, Stadiums, Tools and Special Energy.
 // Reached from the hooks in engine-swsh.js, engine-mega.js and engine.js.
 
-export function installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH }) {
+export function installSwshV(Game, { Mon, shuffle, C, SECRET, isBasic, isType, MAX_BENCH }) {
   const basicEnergy = (x) => x.kind === 'energy' && !x.special;
   const ofType = (type) => (x) => basicEnergy(x) && x.energyType === type;
   const tag = (c, t) => !!c?.tags?.includes(t);
@@ -176,7 +176,7 @@ export function installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH
           if (x) { top.splice(top.indexOf(x), 1); p.hand.push(x); }
           p.deck.push(...top);
           shuffle(p.deck);
-          this.plog(p, 'log.t.got', { c: power.name, got: x ? (p.idx === 0 ? C(x) : { $hidden: true }) : '—' });
+          this.plog(p, 'log.t.got', { c: power.name, got: x ? SECRET(p, C(x)) : '—' });
           this.applyStatus(m, 'asleep');
           break;
         }
@@ -206,7 +206,7 @@ export function installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH
         case 'rapidStrikeSearch': {
           p.flags.rapidStrikeSearch = true;
           const x = await this.pickCard(p, 'search', p.deck.filter((y) => tag(y, 'Rapid Strike')), 'prompt.q.searchAny', { c: power.name }, 'Choose a Rapid Strike card.', { ai: (y) => (y.kind === 'pokemon' ? 2 + (y.prizes || 0) : y.ttype === 'supporter' ? 2 : 1) });
-          if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: power.name, got: p.idx === 0 ? C(x) : { $hidden: true } }); }
+          if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: power.name, got: SECRET(p, C(x)) }); }
           shuffle(p.deck);
           break;
         }
@@ -562,7 +562,7 @@ export function installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH
           await discardOther(1, 1, (x) => x.ttype === 'item');
           if (await coin('search')) {
             const x = await take(() => true, 'prompt.q.searchAny', 'Choose any card from your deck.', { ai: (y) => (y.ttype === 'supporter' ? 4 : y.kind === 'pokemon' && y.prizes ? 3 : 1) });
-            if (x) L('got', { got: p.idx === 0 ? C(x) : { $hidden: true } });
+            if (x) L('got', { got: SECRET(p, C(x)) });
             shuffle(p.deck);
           } else L('nothing');
           break;
@@ -576,7 +576,7 @@ export function installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH
         }
         case 'hisuianHeavyBall': {
           // You look at all your Prize cards (only the Basic Pokémon can be taken); they are shuffled again either way.
-          this.plog(p, 'log.peekPrize', { list: p.idx === 0 ? p.prizes.map((y) => y.name).join(', ') : { $hidden: true }, n: p.prizes.length });
+          this.plog(p, 'log.peekPrize', { list: SECRET(p, p.prizes.map((y) => y.name).join(', ')), n: p.prizes.length });
           const x = await this.pickCard(p, 'search', p.prizes.filter(isBasic), 'prompt.q.heavyBall', { c: C(c) }, 'You may take a Basic Pokémon from your Prize cards (this card takes its place).', { none: true, unique: false, ai: (y) => y.hp });
           if (x) { p.prizes.splice(p.prizes.indexOf(x), 1); p.hand.push(x); p.prizes.push(this.pullFromDiscard(p, c)); shuffle(p.prizes); L('got', { got: C(x) }); }
           else { shuffle(p.prizes); L('nothing'); }
@@ -772,7 +772,7 @@ export function installSwshV(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH
         const dc = await this.pickCard(p, 'discard', p.hand, 'prompt.q.discard1', { c: atk.name }, 'Discard a card from your hand to draw 3.', { unique: false, ai: (x) => (x.kind === 'energy' ? 1 : 0) });
         if (dc) { p.discard.push(this.takeFromHand(p, dc)); this.plog(p, 'log.t.drewN', { n: this.draw(p, fx.discardHandDraw) }); }
       }
-      if (fx.peekOppTop && o.deck.length) this.plog(p, 'log.peekTop', { x: p.idx === 0 ? C(o.deck[o.deck.length - 1]) : { $hidden: true } });
+      if (fx.peekOppTop && o.deck.length) this.plog(p, 'log.peekTop', { x: SECRET(p, C(o.deck[o.deck.length - 1])) });
       if (fx.searchStadium) { // "up to N" (true: 1)
         for (let k = 0; k < (fx.searchStadium === true ? 1 : fx.searchStadium); k++) {
           const x = await this.pickCard(p, 'search', p.deck.filter((y) => y.ttype === 'stadium'), 'prompt.q.searchTrainer', { c: atk.name }, 'Choose a Stadium card.', { none: true, ai: () => 1 });

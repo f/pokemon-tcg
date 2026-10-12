@@ -1421,3 +1421,6 @@ a.eng-mac-link { display: inline-block; margin: 12px 0 6px; padding: 9px 18px; b
   background: var(--yellow); color: #1d2a5a; font-weight: 800; text-decoration: none; }
 a.eng-mac-link:hover { filter: brightness(1.06); }
 a.eng-mac-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* A two-player match (versus.html): no new game or tutorial from inside it; the lobby around the frame handles that. */
+html.versus #btn-new, html.versus #btn-tour { display: none; }

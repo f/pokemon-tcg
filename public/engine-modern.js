@@ -3,7 +3,7 @@
 // Pokémon ex / V / VMAX (2 or 3 Prize cards), Tera Pokémon, Rare Candy and the VSTAR Power of Forest Seal Stone.
 // Everything here only runs when `game.modern` is true (both players use modern decks).
 
-export function installModern(Game, { Mon, shuffle, C, PL, isBasic, MAX_BENCH, evolvesFromOf }) {
+export function installModern(Game, { Mon, shuffle, C, PL, SECRET, isBasic, MAX_BENCH, evolvesFromOf }) {
   const TOOL_FOREVER = 1e9;
   const isTR = (m) => m.name.startsWith("Team Rocket's");
   const tool = (m, k) => m.tools.some((t) => t.card.tool === k);
@@ -129,7 +129,7 @@ export function installModern(Game, { Mon, shuffle, C, PL, isBasic, MAX_BENCH, e
 
     async playModernTrainer(p, o, c, act, L) {
       const m = act.target;
-      const hide = (x) => (p.idx === 0 ? C(x) : { $hidden: true });
+      const hide = (x) => SECRET(p, C(x));
       const pokeAi = (x) => (x.stage > 0 && this.allMons(p).some((y) => y.name === x.evolvesFrom) ? 10 : 0) + (x.prizes ? 6 : 0) + (x.stage === 0 && p.bench.length < MAX_BENCH ? 3 : 0);
       const toHand = (x) => { p.hand.push(this.searchDeck(p, x)); };
       const benchFromDeck = (x) => this.benchFromDeck(p, x);
@@ -556,7 +556,7 @@ export function installModern(Game, { Mon, shuffle, C, PL, isBasic, MAX_BENCH, e
       };
       const anyCard = async (kind) => {
         const x = await this.pickCard(p, 'search', p.deck, 'prompt.q.searchAny', { c: power.name }, 'Choose any card from your deck to put into your hand.', { ai: (y) => (y.tkind === 'rareCandy' ? 5 : y.ttype === 'supporter' ? 4 : y.kind === 'pokemon' && y.stage > 0 ? 3 : 1) });
-        if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: power.name, got: p.idx === 0 ? C(x) : { $hidden: true } }); }
+        if (x) { p.hand.push(this.searchDeck(p, x)); this.plog(p, 'log.t.got', { c: power.name, got: SECRET(p, C(x)) }); }
       };
       switch (act.pkind) {
         case 'rumblingEngine': case 'concealedCards': case 'refinement': {

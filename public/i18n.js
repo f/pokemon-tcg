@@ -41,6 +41,7 @@ function resolve(v) {
   if ('$coin' in v) return t(v.$coin ? 'coin.h' : 'coin.t');
   if (v.$type) return t('type.' + v.$type);
   if (v.$slot) return t('slot.' + v.$slot[0], { n: v.$slot[1] });
+  if (v.$secret) return v.$secret.vis === 0 ? resolve(v.$secret.v) : t('hidden'); // only seat 0 (this screen's player) sees it
   if (v.$hidden) return t('hidden');
   if (Array.isArray(v)) return v.length ? ` (${v.map((n) => t('note.' + n.$note)).join(', ')})` : '';
   return String(v);
@@ -49,7 +50,14 @@ function resolve(v) {
 // Spanish Energy names agree with "Energía" (feminine), unlike the type names on their own ("tipo Psíquico").
 const ENERGY_ES = [[/Energía Psíquico/g, 'Energía Psíquica'], [/Energía Oscuridad/g, 'Energía Oscura'], [/Energía Metal\b/g, 'Energía Metálica'], [/Energía Incoloro/g, 'Energía Incolora']];
 
+// In a two-player game the opponent is a person: their nickname replaces "Gary" everywhere. Nicknames are letters,
+// digits, spaces and . _ - only (the lobby enforces it too), so they are safe in text and markup.
+let oppName = '';
+const GARY = { en: /Gary/g, tr: /Gary/g, es: /Gary/g, ja: /ゲイリー/g };
+export function setOpponentName(name) { oppName = typeof name === 'string' ? name.replace(/[^\p{L}\p{N} ._-]/gu, '').trim().slice(0, 24) : ''; }
+
 export function t(key, params = {}) {
-  const s = (DICT[lang][key] ?? EN[key] ?? key).replace(/\{(\w+)\}/g, (_, k) => resolve(params[k]));
+  let s = (DICT[lang][key] ?? EN[key] ?? key).replace(/\{(\w+)\}/g, (_, k) => resolve(params[k]));
+  if (oppName) s = s.replace(GARY[lang] || GARY.en, oppName);
   return lang === 'es' ? ENERGY_ES.reduce((x, [re, to]) => x.replace(re, to), s) : s;
 }

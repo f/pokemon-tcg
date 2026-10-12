@@ -6,6 +6,7 @@ decision.json
 node_modules/
 dist/
 site/
+site-versus-play/
 .spacefast/
 src-tauri/target/
 src-tauri/gen/
