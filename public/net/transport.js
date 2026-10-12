@@ -6,13 +6,15 @@ const ICE = [{ urls: ['stun:stun.l.google.com:19302', 'stun:stun.cloudflare.com:
 // events whose screens wait for them (coin, Rock-Paper-Scissors, a Prize card). Attack and play animations are skipped.
 const RELAY_EVENTS = new Set(['onCoin', 'onRps', 'onPrize']);
 const URGENT = new Set(['prompt', 'answer', 'over', 'hello']);
-const CHUNK = 55000;
+// A relay batch is one Spacefast message (one database write, at most 64 KiB once JSON-escaped): stay well under it.
+const CHUNK = 30000;
 const GATHER_MS = 2500;
 const DIRECT_MS = 10000;
 
 export function createTransport({ role, bridge, relayOnly = false, onState = () => {} }) {
   const handlers = [];
   let pc = null, dc = null, state = '';
+  let offerId = ''; // the host's current offer: an answer to an older one is ignored
   let lastSeq = 0;
   let out = [], flushTimer = null, directTimer = null;
 
@@ -77,37 +79,44 @@ export function createTransport({ role, bridge, relayOnly = false, onState = () 
   async function offer() {
     if (relayOnly || typeof RTCPeerConnection === 'undefined') return setState('relay');
     const peer = newPeer();
+    const id = (offerId = crypto.randomUUID());
     wire(peer.createDataChannel('game', { ordered: true }));
     await peer.setLocalDescription(await peer.createOffer());
     await gathered(peer);
-    if (pc === peer) bridge.send('offer', JSON.stringify(peer.localDescription));
+    if (pc === peer) bridge.send('offer', JSON.stringify({ id, type: 'offer', sdp: peer.localDescription.sdp }));
   }
-  async function answer(sdp) {
+  async function answer(offer) {
     if (relayOnly || typeof RTCPeerConnection === 'undefined') return setState('relay');
     const peer = newPeer();
     peer.ondatachannel = (e) => { if (pc === peer) wire(e.channel); };
-    await peer.setRemoteDescription(sdp);
+    await peer.setRemoteDescription({ type: 'offer', sdp: offer.sdp });
     await peer.setLocalDescription(await peer.createAnswer());
     await gathered(peer);
-    if (pc === peer) bridge.send('answer', JSON.stringify(peer.localDescription));
+    if (pc === peer) bridge.send('answer', JSON.stringify({ id: offer.id, type: 'answer', sdp: peer.localDescription.sdp }));
   }
-  async function accept(sdp) {
-    if (pc?.signalingState === 'have-local-offer') { try { await pc.setRemoteDescription(sdp); } catch { /* an answer to an older offer */ } }
+  async function accept(ans) {
+    if (ans.id !== offerId || pc?.signalingState !== 'have-local-offer') return; // an answer to an older offer
+    try { await pc.setRemoteDescription({ type: 'answer', sdp: ans.sdp }); } catch { /* a broken answer: the relay carries on */ }
   }
   const parseSdp = (s) => {
-    try { const d = JSON.parse(s); return d && (d.type === 'offer' || d.type === 'answer') && typeof d.sdp === 'string' && d.sdp.length < 20000 ? { type: d.type, sdp: d.sdp } : null; }
-    catch { return null; }
+    try {
+      const d = JSON.parse(s);
+      return d && (d.type === 'offer' || d.type === 'answer') && typeof d.id === 'string' && d.id.length <= 64 && typeof d.sdp === 'string' && d.sdp.length < 20000
+        ? { id: d.id, type: d.type, sdp: d.sdp } : null;
+    } catch { return null; }
   };
 
   // ---------------- Inbound (from the lobby's inbox) ----------------
   bridge.on('inbox', (msgs) => {
     let upto = lastSeq;
-    for (const x of [...msgs].sort((a, b) => a.seq - b.seq)) {
+    const fresh = [...msgs].filter((x) => x.seq > lastSeq).sort((a, b) => a.seq - b.seq);
+    const newestOffer = fresh.findLast((x) => x.kind === 'offer');
+    for (const x of fresh) {
       if (x.seq <= lastSeq) continue;
       upto = Math.max(upto, x.seq);
       if (x.kind === 'relay') {
         try { const batch = JSON.parse(x.payload); if (Array.isArray(batch)) batch.forEach(deliver); } catch { /* a broken batch */ }
-      } else if (x.kind === 'offer' && role === 'guest') {
+      } else if (x.kind === 'offer' && role === 'guest' && x === newestOffer) {
         const sdp = parseSdp(x.payload);
         if (sdp?.type === 'offer') answer(sdp).catch(() => setState('relay'));
       } else if (x.kind === 'answer' && role === 'host') {

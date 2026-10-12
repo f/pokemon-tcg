@@ -1,0 +1,15 @@
+{
+  "$schema": "https://spacefast.com/schemas/sf.json",
+  "name": "Pokémon TCG Academy · Versus",
+  "access": "public",
+  "runtime": {
+    "kind": "zero",
+    "server": "server/index.ts",
+    "client": "client/index.tsx"
+  },
+  "meta": {
+    "title": "Versus · Pokémon TCG Academy",
+    "description": "Play the Pokémon Trading Card Game against a friend: sign in, share an invite link, and play in your browsers.",
+    "favicon": "/icon-64.png"
+  }
+}

@@ -1,0 +1,4 @@
+.spacefast/
+node_modules/
+dist/
+.env.server

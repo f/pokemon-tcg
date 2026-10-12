@@ -2679,7 +2679,10 @@ if (versusMode) {
 // ---------------- Two-player games (versus.html) ----------------
 // The host runs the game here with the guest's seat played over the network (net/host.js); the guest's screen is a
 // view rebuilt from what the host sends (net/guest.js). Both screens show their own player at the bottom.
-const SAVE_MAX = 58000; // characters; Spacefast keeps each saved state under 60 KB
+// Spacefast stores each saved state in one database write, capped at 64 KiB of JSON: measure the escaped UTF-8 size.
+const SAVE_MAX_BYTES = 60 * 1024;
+const enc = new TextEncoder();
+const fitsSave = (s) => s.length <= 60000 && enc.encode(JSON.stringify(s)).length <= SAVE_MAX_BYTES;
 export const setVersusLang = (l) => switchLanguage(l);
 // Something happened to the match outside the game (the opponent left).
 export function versusNotice(key) {
@@ -2735,8 +2738,8 @@ async function runVersusHost(myGame, decks, session, resume) {
         host = JSON.stringify({ game: g.serialize(), log: logEntries.slice(-n) });
         guest = JSON.stringify({ snap: guestSnapshot(g), log: guestTail.slice(-n) });
         n = Math.floor(n / 2);
-      } while ((host.length > SAVE_MAX || guest.length > SAVE_MAX) && n > 0);
-      if (host.length <= SAVE_MAX && guest.length <= SAVE_MAX) versus.onSave({ hostState: host, guestView: guest, version: ++saveVersion });
+      } while ((!fitsSave(host) || !fitsSave(guest)) && n > 0);
+      if (fitsSave(host) && fitsSave(guest)) versus.onSave({ hostState: host, guestView: guest, version: ++saveVersion });
     },
     onGameOver: (g) => {
       if (myGame !== gameId) return;

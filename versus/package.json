@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-tcg-versus",
+  "private": true,
+  "type": "module",
+  "description": "Pokémon TCG Academy · Versus: the sign-in, lobby and relay app for two-player games (Spacefast Zero).",
+  "scripts": {
+    "dev": "sf dev",
+    "typecheck": "tsc --noEmit",
+    "test": "node tests/rules.test.mjs",
+    "decks": "node ../scripts/gen-versus-decks.mjs",
+    "check-publish": "node -e \"const fs=require('fs');const t=fs.existsSync('.env.server')?fs.readFileSync('.env.server','utf8'):'';if(/^\\s*(export\\s+)?ALLOW_DEV_GUESTS\\s*=/m.test(t)){console.error('check-publish: .env.server sets ALLOW_DEV_GUESTS. Delete .env.server (or that line) before sf publish.');process.exit(1)}console.log('check-publish: ok, ALLOW_DEV_GUESTS is not in .env.server')\""
+  },
+  "dependencies": {
+    "@spacefast/zero": "0.5.0",
+    "preact": "10.29.7"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
