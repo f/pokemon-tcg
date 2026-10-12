@@ -61,6 +61,16 @@ npm run images   # downloads the card images and makes the WebP copies the game 
 npm start        # → http://localhost:8787
 ```
 
+### Play a friend (multiplayer, preview)
+
+**[pokemon-versus.space.fast](https://pokemon-versus.space.fast)**: sign in, pick a deck, and send your opponent a
+private invite link. Only the two players can see a game.
+- **Who runs the game:** the player who creates the match is the host and runs the game in their browser. The other
+  player only receives what they're allowed to see.
+- **Connection:** moves go directly between the two browsers (WebRTC). Each player can choose to relay them through
+  Spacefast instead, which keeps their IP address private.
+- **Code:** the lobby is a Spacefast Zero app in [`versus/`](versus/). The game side is in `public/net/`.
+
 ## Features
 
 - **Real decks, real rules.** 26 classic decks from 1999–2000 are played with the rules of that era. 83 modern decks, up to the newest Mega Evolution decks, are played with today's rules. Every card works as printed.
@@ -170,6 +180,8 @@ Games use 6 Prize cards and today's turn structure: the first player can't attac
 | `npm run test:kev` | 40 games against the local Kev model (port 8009) |
 | `npm run app:dev` | The macOS app in development mode |
 | `npm run app:build` | The release app and DMG in `src-tauri/target/release/bundle/` |
+| `npm run test:versus` | Headless two-player games (host + guest in a worker) with a privacy check on every message |
+| `npm run versus:frame` | The game frame for two-player matches in `site-versus-play/` |
 | `npm run web:build` | The hosted web version in `site/`: the landing page and the CPU-only game (`npm run web:publish` builds and publishes it to Spacefast) |
 
 Building the app needs [Rust](https://rustup.rs) and the Xcode Command Line Tools as well.
