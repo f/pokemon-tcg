@@ -44,8 +44,12 @@ function applyStaticText() {
   document.querySelectorAll('[data-i18n-html]').forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml, counts); });
   document.querySelectorAll('[data-i18n-title]').forEach((el) => { el.title = t(el.dataset.i18nTitle); });
   document.querySelectorAll('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
-  document.querySelectorAll('.lang button').forEach((b) => b.classList.toggle('on', b.dataset.lang === getLang()));
-  $('#rules-body').innerHTML = RULES_HTML[getLang()].replace('{classic}', counts.classic).replace('{modern}', counts.modern); // deck counts stay right as decks are added
+  document.querySelectorAll('.lang button').forEach((b) => {
+    const active = b.dataset.lang === getLang();
+    b.classList.toggle('on', active);
+    b.setAttribute('aria-pressed', String(active));
+  });
+  $('#rules-body').innerHTML = (RULES_HTML[getLang()] || RULES_HTML.en).replace('{classic}', counts.classic).replace('{modern}', counts.modern); // deck counts stay right as decks are added
   const slot = $('#rules-body [data-dice-chart]');
   if (slot) slot.innerHTML = diceChart();
   $('#dice-label').textContent = t('ui.diceStyle').replace(/\s*[:：]\s*$/, ''); // a row label, not a prompt
@@ -2480,7 +2484,7 @@ function deckTile(k, d) {
       <div class="d-name">${esc(d.name)}</div>
       <div class="d-sub">${esc(t('deck.' + k))}</div>
       <div class="d-types">${chips}</div>
-      <div class="d-stats"><span><b>${s.pokemon}</b> Pokémon</span><span><b>${s.trainer}</b> ${esc(t('ui.trainers'))}</span><span><b>${s.energy}</b> ${esc(t('ui.energies'))}</span></div>
+      <div class="d-stats"><span><b>${s.pokemon}</b> ${esc(t('opt.rodPokemon'))}</span><span><b>${s.trainer}</b> ${esc(t('ui.trainers'))}</span><span><b>${s.energy}</b> ${esc(t('ui.energies'))}</span></div>
     </div>
   </button>`;
 }
@@ -2570,7 +2574,7 @@ function openStart() {
 }
 
 function switchLanguage(lang) {
-  setLang(lang);
+  if (!setLang(lang)) return;
   applyStaticText();
   renderDeckChoices();
   render();

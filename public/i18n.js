@@ -1,4 +1,4 @@
-// Translation lookup. The strings live in one file per language: i18n/en.js, tr.js, ja.js and es.js.
+// Translation lookup. The strings live in one file per language under i18n/.
 // Templates use {param}; special params ($card, $pl, …) are resolved here in t().
 // Card, attack, Ability and deck names stay as printed on the (English) card images in every language.
 
@@ -6,24 +6,26 @@ import * as en from './i18n/en.js';
 import * as tr from './i18n/tr.js';
 import * as ja from './i18n/ja.js';
 import * as es from './i18n/es.js';
+import * as zhHans from './i18n/zh-Hans.js';
+import * as zhHant from './i18n/zh-Hant.js';
+import { LANGS, initialLanguage, normalizeLanguage } from './locales.js';
+export { LANGS };
 
 const EN = en.STRINGS;
-export const LANGS = ['en', 'tr', 'ja', 'es'];
 export const CARD_TEXT_TR = tr.CARD_TEXT;
-export const RULES_HTML = { en: en.RULES, tr: tr.RULES, ja: ja.RULES, es: es.RULES };
+export const RULES_HTML = { en: en.RULES, tr: tr.RULES, ja: ja.RULES, es: es.RULES, 'zh-Hans': zhHans.RULES, 'zh-Hant': zhHant.RULES };
 
-const DICT = { en: EN, tr: tr.STRINGS, ja: ja.STRINGS, es: es.STRINGS };
+const DICT = { en: EN, tr: tr.STRINGS, ja: ja.STRINGS, es: es.STRINGS, 'zh-Hans': zhHans.STRINGS, 'zh-Hant': zhHant.STRINGS };
 // The saved choice, else the system language when we have it, else English.
-let lang = 'en';
-try {
-  const saved = localStorage.getItem('lang');
-  lang = LANGS.includes(saved) ? saved : LANGS.find((l) => navigator.language?.toLowerCase().startsWith(l)) || 'en';
-} catch { /* storage unavailable */ }
+let lang = initialLanguage();
 
 export const getLang = () => lang;
 export function setLang(l) {
-  lang = l;
-  try { localStorage.setItem('lang', l); } catch { /* storage unavailable */ }
+  const supported = normalizeLanguage(l);
+  if (!supported) return false;
+  lang = supported;
+  try { localStorage.setItem('lang', supported); } catch { /* storage unavailable */ }
+  return true;
 }
 
 export function cardName(c) {
@@ -50,6 +52,6 @@ function resolve(v) {
 const ENERGY_ES = [[/Energía Psíquico/g, 'Energía Psíquica'], [/Energía Oscuridad/g, 'Energía Oscura'], [/Energía Metal\b/g, 'Energía Metálica'], [/Energía Incoloro/g, 'Energía Incolora']];
 
 export function t(key, params = {}) {
-  const s = (DICT[lang][key] ?? EN[key] ?? key).replace(/\{(\w+)\}/g, (_, k) => resolve(params[k]));
+  const s = (DICT[lang]?.[key] ?? EN[key] ?? key).replace(/\{(\w+)\}/g, (_, k) => resolve(params[k]));
   return lang === 'es' ? ENERGY_ES.reduce((x, [re, to]) => x.replace(re, to), s) : s;
 }

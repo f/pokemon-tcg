@@ -1,7 +1,13 @@
-// The landing page's text in four languages (Turkish, Japanese and Spanish were translated and then checked by a
+// The landing page's text in six languages (Turkish, Japanese and Spanish were translated and then checked by a
 // separate native-speaker review). The language is shared with the game (/play/): both read and write localStorage
 // "lang", so a choice made here carries over.
+import { LANGS, initialLanguage, normalizeLanguage } from '../public/locales.js';
+import { LANDING as zhHans } from '../public/i18n/zh-Hans.js';
+import { LANDING as zhHant } from '../public/i18n/zh-Hant.js';
+
 const STRINGS = {
+  'zh-Hans': zhHans,
+  'zh-Hant': zhHant,
   en: {
     "meta.title": "Learn the Pokémon TCG by playing it · Pokémon TCG Academy",
     "meta.description": "Learn the Pokémon Trading Card Game by playing it: 109 real decks, an AI opponent and a coach that explains every move. Free and open source.",
@@ -38,8 +44,8 @@ const STRINGS = {
     "feat.table.title": "It feels like a real table",
     "feat.table.text": "Prize cards flip over as you take them, Gary’s Trainer cards show what they do, and when you drag a card, only the places it can legally go light up.",
     "alt.prize": "A Prize card, a Fire Energy, revealed in the middle of the screen.",
-    "feat.lang.title": "Four languages",
-    "feat.lang.text": "English, Turkish, Japanese and Spanish: every screen, rule and card explanation, in the TCG terms players use in each language.",
+    "feat.lang.title": "Six languages",
+    "feat.lang.text": "English, Turkish, Japanese, Spanish, Simplified Chinese and Traditional Chinese: translated screens, rules and card explanations. Card images and proper names stay in English.",
     "alt.ja": "A modern game in Japanese: the Charizard ex League deck against an Inteleon VMAX, with the Professor’s pick.",
     "decks.title": "109 decks, from Base Set to Mega Evolution",
     "decks.classic.title": "Classic",
@@ -100,8 +106,8 @@ const STRINGS = {
     "feat.table.title": "Gerçek bir masadaymış gibi",
     "feat.table.text": "Aldığın Ödül kartları çevrilip açılır, Gary’nin Eğitmen kartları ne yaptıklarını gösterir ve bir kartı sürüklediğinde yalnızca kurallara uygun yerler parlar.",
     "alt.prize": "Ekranın ortasında açılan bir Ödül kartı: bir Ateş Enerjisi.",
-    "feat.lang.title": "Dört dil",
-    "feat.lang.text": "İngilizce, Türkçe, Japonca ve İspanyolca: her ekran, her kural ve her kart açıklaması, Pokémon TCG’nin o dildeki terimleriyle.",
+    "feat.lang.title": "Altı dil",
+    "feat.lang.text": "İngilizce, Türkçe, Japonca, İspanyolca, Basitleştirilmiş Çince ve Geleneksel Çince: her ekran, her kural ve her kart açıklaması, Pokémon TCG’nin o dildeki terimleriyle.",
     "alt.ja": "Japonca arayüzle modern bir oyun: Charizard ex League destesi bir Inteleon VMAX’e karşı, yanında Profesörün seçimi.",
     "decks.title": "Base Set’ten Mega Evolution’a 109 deste",
     "decks.classic.title": "Klasik",
@@ -162,8 +168,8 @@ const STRINGS = {
     "feat.table.title": "まるで本物のテーブル",
     "feat.table.text": "とったサイドはめくれて表になり、ゲイリーがトレーナーズを使うとその効果が表示されます。カードをドラッグすると、ルール上置ける場所だけが光ります。",
     "alt.prize": "画面の中央で表になったサイドのカード（炎エネルギー）。",
-    "feat.lang.title": "4つの言語に対応",
-    "feat.lang.text": "英語・トルコ語・日本語・スペイン語。すべての画面、ルール、カードの解説を、各言語のポケモンカードゲーム公式用語で表示します。",
+    "feat.lang.title": "6つの言語に対応",
+    "feat.lang.text": "英語・トルコ語・日本語・スペイン語・簡体字中国語・繁体字中国語。すべての画面、ルール、カードの解説を、各言語のポケモンカードゲーム公式用語で表示します。",
     "alt.ja": "日本語で遊ぶモダンルールの対戦。Charizard exのリーグバトルデッキでInteleon VMAXと戦っている場面で、博士のおすすめも表示されています。",
     "decks.title": "Base Setからメガシンカまで、109種類のデッキ",
     "decks.classic.title": "クラシック",
@@ -224,8 +230,8 @@ const STRINGS = {
     "feat.table.title": "Como en una mesa de verdad",
     "feat.table.text": "Las cartas de Premio se dan la vuelta al tomarlas, las cartas de Entrenador de Gary muestran lo que hacen y, al arrastrar una carta, solo se iluminan los sitios donde las reglas te permiten ponerla.",
     "alt.prize": "Una carta de Premio, una Energía Fuego, revelada en el centro de la pantalla.",
-    "feat.lang.title": "Cuatro idiomas",
-    "feat.lang.text": "Inglés, turco, japonés y español: cada pantalla, cada regla y cada explicación de carta, con los términos oficiales del JCC Pokémon en cada idioma.",
+    "feat.lang.title": "Seis idiomas",
+    "feat.lang.text": "Inglés, turco, japonés, español, chino simplificado y chino tradicional: cada pantalla, cada regla y cada explicación de carta, con los términos oficiales del JCC Pokémon en cada idioma.",
     "alt.ja": "Una partida moderna en japonés: la Baraja de Liga de Charizard ex contra un Inteleon VMAX, con la Elección del Profesor.",
     "decks.title": "109 barajas, desde Base Set hasta Megaevolución",
     "decks.classic.title": "Clásico",
@@ -252,13 +258,10 @@ const STRINGS = {
   },
 };
 
-const LANGS = ['en', 'tr', 'ja', 'es'];
 const store = {
-  get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* storage unavailable */ } },
 };
-const fromBrowser = () => (navigator.languages || [navigator.language || 'en']).map((l) => l.slice(0, 2).toLowerCase()).find((l) => LANGS.includes(l));
-let lang = [store.get('lang'), fromBrowser(), 'en'].find((l) => LANGS.includes(l) && STRINGS[l]);
+let lang = initialLanguage();
 
 function t(key, params = {}) {
   const s = STRINGS[lang]?.[key] ?? STRINGS.en[key] ?? key;
@@ -281,8 +284,9 @@ function apply() {
 }
 
 document.querySelectorAll('.lang button').forEach((b) => (b.onclick = () => {
-  if (!STRINGS[b.dataset.lang]) return;
-  lang = b.dataset.lang;
+  const selected = normalizeLanguage(b.dataset.lang);
+  if (!LANGS.includes(selected) || !STRINGS[selected]) return;
+  lang = selected;
   store.set('lang', lang);
   apply();
 }));

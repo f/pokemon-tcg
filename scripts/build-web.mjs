@@ -85,13 +85,18 @@ await writeFile(indexFile, index
   .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  <meta name="tcg-build" content="web">')
   .replace('<script type="module" src="ui.js"></script>', '<script type="module" src="app.js"></script>')
   .replace('<title>Pokémon TCG Academy</title>', `<title>Play the Pokémon TCG in your browser · Pokémon TCG Academy</title>
-  <meta name="description" content="Play the Pokémon Trading Card Game in your browser against Gary, with the Professor as your coach. 109 real decks, four languages.">
+  <meta name="description" content="Play the Pokémon Trading Card Game in your browser against Gary, with the Professor as your coach. 109 real decks, six languages.">
   <link rel="canonical" href="${SITE_URL}/play/">`));
 const marked = await readFile(indexFile, 'utf8');
 if (!marked.includes('name="tcg-build"') || !marked.includes('src="app.js"')) throw new Error('could not mark play/index.html as the web build');
 
 // The landing page, its screenshots and the app icon. __VERSION__ becomes the app version (the DMG link names it).
 await cp(join(root, 'web'), site, { recursive: true });
+// Bundle the shared locale selector and Chinese landing strings for a standalone site.
+await esbuild.build({
+  entryPoints: [join(root, 'web', 'landing.js')], bundle: true, format: 'esm', platform: 'browser', target: 'es2022',
+  minify: true, legalComments: 'none', outfile: join(site, 'landing.js'), logLevel: 'warning',
+});
 const { version } = JSON.parse(await readFile(join(root, 'package.json'), 'utf8'));
 for (const f of ['index.html', 'landing.js', 'robots.txt', 'sitemap.xml']) {
   const p = join(site, f);
