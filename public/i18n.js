@@ -1,6 +1,6 @@
 // Translation lookup. The strings live in one file per language under i18n/.
 // Templates use {param}; special params ($card, $pl, …) are resolved here in t().
-// Card, attack, Ability and deck names stay as printed on the (English) card images in every language.
+// Content names resolve independently of the engine's printed English names.
 
 import * as en from './i18n/en.js';
 import * as tr from './i18n/tr.js';
@@ -9,6 +9,7 @@ import * as es from './i18n/es.js';
 import * as zhHans from './i18n/zh-Hans.js';
 import * as zhHant from './i18n/zh-Hant.js';
 import { LANGS, initialLanguage, normalizeLanguage } from './locales.js';
+import { contentName } from './content-i18n/names.js';
 export { LANGS };
 
 const EN = en.STRINGS;
@@ -29,15 +30,27 @@ export function setLang(l) {
 }
 
 export function cardName(c) {
-  if (c.kind === 'energy' && !c.special) return t('energy', { t: t('type.' + c.energyType) });
-  return c.name;
+  const name = contentName(lang, 'card', c);
+  if (c.kind === 'energy' && !c.special && name === (c.name ?? '')) {
+    return t('energy', { t: t('type.' + c.energyType) });
+  }
+  return name;
 }
 
-function resolve(v) {
+export const attackName = (attack) => contentName(lang, 'attack', attack);
+export const powerName = (power) => contentName(lang, 'power', power);
+export const termName = (name) => contentName(lang, 'term', { name });
+export const deckName = (id, name) => contentName(lang, 'deck', { id, name });
+
+export function resolve(v) {
   if (v == null) return '';
   if (typeof v !== 'object') return v;
   if (v.$t) return t(v.$t.key, v.$t.params);
   if (v.$card) return cardName(v.$card);
+  if (v.$attack) return attackName(v.$attack);
+  if (v.$power) return powerName(v.$power);
+  if (v.$deck) return deckName(v.$deck.id, v.$deck.name);
+  if (v.$list) return v.$list.map(resolve).join(', ') || '—';
   if ('$pl' in v) return t('pl.' + v.$pl);
   if (v.$st) return t('st.' + v.$st);
   if ('$coin' in v) return t(v.$coin ? 'coin.h' : 'coin.t');

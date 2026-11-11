@@ -2,10 +2,21 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import { LANGS, normalizeLanguage, chooseLanguage, initialLanguage } from '../public/locales.js';
-import { setLang, getLang, t, cardName, RULES_HTML } from '../public/i18n.js';
+import { setLang, getLang, t, cardName, attackName, powerName, termName, deckName, resolve, RULES_HTML } from '../public/i18n.js';
+import { CARDS, DECKS, loadDeck } from '../public/cards.js';
+import { C, Game, Mon } from '../public/engine.js';
+import { aiConfig, buildState, rankActions } from '../public/ai.js';
 import * as en from '../public/i18n/en.js';
+import * as es from '../public/i18n/es.js';
+import * as tr from '../public/i18n/tr.js';
+import * as ja from '../public/i18n/ja.js';
 import * as zhHans from '../public/i18n/zh-Hans.js';
 import * as zhHant from '../public/i18n/zh-Hant.js';
+import { names as zhHansNames } from '../public/content-i18n/zh-Hans.js';
+import { names as zhHantNames } from '../public/content-i18n/zh-Hant.js';
+import { names as jaNames, sets as jaSets } from '../public/content-i18n/ja.js';
+import { names as esNames, sets as esSets } from '../public/content-i18n/es.js';
+import { names as trNames, sets as trSets } from '../public/content-i18n/tr.js';
 
 let checks = 0;
 const check = (condition, message) => { assert.ok(condition, message); checks++; };
@@ -35,6 +46,8 @@ for (const lang of LANGS) {
   }
   check(Boolean(RULES_HTML[lang]), `${lang}: missing rules`);
 }
+validHTML(ja.RULES, 'ja rules');
+assert.deepEqual(params(ja.RULES), params(en.RULES), 'ja: rules parameters');
 
 for (const [lang, dict] of [['zh-Hans', zhHans], ['zh-Hant', zhHant]]) {
   for (const [key, value] of Object.entries(dict.STRINGS)) {
@@ -46,19 +59,355 @@ for (const [lang, dict] of [['zh-Hans', zhHans], ['zh-Hant', zhHant]]) {
     [...en.RULES.matchAll(/src="([^"]+)"/g)].map((m) => m[1]), `${lang}: original rule illustration`);
   check(dict.RULES.includes('data-dice-chart'), `${lang}: missing dice chart`);
   validHTML(dict.RULES, `${lang} rules`);
-  for (const name of ['Charmander', 'Charmeleon', 'Bulbasaur', 'Flamethrower', 'Rare Candy']) {
-    check(dict.RULES.includes(name), `${lang}: preserve ${name}`);
+  const simplified = lang === 'zh-Hans';
+  for (const name of simplified
+    ? ['小火龙（Charmander）', '火恐龙', '妙蛙种子', '喷射火焰', '神奇糖果']
+    : ['小火龍（Charmander）', '火恐龍', '妙蛙種子', '噴射火焰', '神奇糖果']) {
+    check(dict.RULES.includes(name), `${lang}: include ${name}`);
   }
-  check(dict.STRINGS['act.t.professorsResearch'].includes('Professor’s Research'), `${lang}: preserve printed card name`);
+  check(dict.STRINGS['act.t.professorsResearch'].includes('博士的研究'), `${lang}: Research action label`);
   setLang(lang);
   check(getLang() === lang, `${lang}: selection`);
-  check(cardName({kind: 'pokemon', name: 'Charizard ex'}) === 'Charizard ex', `${lang}: keep card name`);
+  check(cardName({kind: 'pokemon', name: 'Charizard ex'}) === (simplified ? '喷火龙ex' : '噴火龍ex'), `${lang}: card name`);
   check(t('ex.hp', {hp: 100, n: 10}).includes('100'), `${lang}: interpolate HP`);
   check(t('log.energy', {P: {$pl: 0}, c: {$card: {kind: 'pokemon', name: 'Pikachu'}}, m: 'Charizard'})
-    .includes('Pikachu'), `${lang}: nested card parameters`);
+    .includes('皮卡丘'), `${lang}: nested card parameters`);
   check(t('not.a.key') === 'not.a.key', `${lang}: missing-key fallback`);
   check(!setLang('unsupported') && getLang() === lang, `${lang}: invalid selection must not corrupt state`);
 }
+
+// Exercise real deck data and the same save/log across English and both Chinese locales.
+{
+  const decks = ['svl-charizard', 'svl-charizard'];
+  await Promise.all(decks.map(loadDeck));
+  const events = [];
+  let arenaAttack;
+  const hooks = { onLog: (event) => events.push(event), onAttack: ({ atk }) => { arenaAttack = atk; } };
+  const game = new Game({ decks, controllers: [], hooks });
+  const [me, opp] = game.players;
+  const take = (p, id) => {
+    const i = p.deck.findIndex((c) => c.id === id);
+    assert.ok(i >= 0, id);
+    return p.deck.splice(i, 1)[0];
+  };
+  me.active = new Mon(take(me, 'sv3-125'), 1);
+  me.active.energy = [take(me, 'sve-2'), take(me, 'sve-2')];
+  me.active.tools = [{ card: take(me, 'sv4-178'), expires: 7 }];
+  me.bench = [new Mon(take(me, 'sv3-164'), 1)];
+  me.hand = [take(me, 'sv1-189')];
+  opp.active = new Mon(take(opp, 'sv3-125'), 1);
+  for (const player of game.players) player.prizes = player.deck.splice(-6);
+  Object.assign(game, { turn: 5, current: me, first: me, phase: 'main' });
+
+  const label = ({ label }) => t(label.key, label.params);
+  const snapshot = JSON.stringify(game.serialize());
+  setLang('en');
+  const englishActions = game.legalActions(me);
+  const englishState = buildState(game, me);
+  check(englishActions.some((a) => a.kind === 'attack' && label(a).includes('Burning Darkness')), 'English attack action');
+  setLang('zh-Hans');
+  const actions = game.legalActions(me);
+  check(actions.some((a) => a.kind === 'trainer' && label(a).includes('博士的研究')), 'Chinese Trainer action');
+  check(actions.some((a) => a.kind === 'power' && label(a).includes('音速搜索') && label(a).includes('大比鸟ex')), 'Chinese Ability action');
+  const burn = actions.find((a) => a.kind === 'attack' && label(a).includes('燃烧黑暗'));
+  check(Boolean(burn), 'Chinese attack action');
+  check(actions.some((a) => a.kind === 'attack' && label(a).endsWith('进化')), 'TM attack uses the Tool printing');
+  check(powerName(CARDS['sv3-125'].power) === '烈炎支配', 'Simplified Chinese Charizard Ability title');
+  check(cardName(me.hand[0]) === '博士的研究', 'Simplified Chinese Trainer title');
+  check(cardName(me.active.energy[0]) === '基本火能量', 'Simplified Chinese Basic Energy title');
+  check(deckName(decks[0], DECKS[decks[0]].name) === '喷火龙ex 联盟对战卡组', 'Chinese deck title');
+  check(deckName('svl-gardevoir', DECKS['svl-gardevoir'].name) === '沙奈朵ex 联盟对战卡组', 'another League deck title');
+  check(deckName('sm-luminous-frost', DECKS['sm-luminous-frost'].name) === '冰霜映辉', 'historical Sun & Moon deck title');
+  check(deckName('untranslated', 'Unknown Deck') === 'Unknown Deck', 'missing deck title falls back');
+  check(cardName({ id: 'untranslated', name: 'Unknown Card' }) === 'Unknown Card', 'missing card title falls back');
+  check(attackName({ name: 'Unknown Attack' }) === 'Unknown Attack', 'missing attack title falls back');
+  check(t('pl.1') === '小茂', 'Chinese opponent name');
+  assert.deepEqual(actions, englishActions, 'locale must not affect legal actions');
+  assert.deepEqual(buildState(game, me), englishState, 'AI state remains English');
+  assert.equal(JSON.stringify(game.serialize()), snapshot, 'changing language does not rewrite game state');
+  checks += 3;
+
+  setLang('zh-Hant');
+  check(powerName(CARDS['sv3-125'].power) === '煉獄支配', 'Taiwan Charizard Ability title');
+  check(cardName(CARDS['sv4-178']) === '招式學習器 演進', 'Taiwan Technical Machine card title');
+  check(actions.some((a) => a.kind === 'attack' && label(a).endsWith('演進')), 'Traditional TM attack uses the Tool printing');
+  assert.deepEqual(game.legalActions(me), englishActions, 'Traditional Chinese preserves legal actions');
+  assert.deepEqual(buildState(game, me), englishState, 'Traditional Chinese preserves the AI state');
+  assert.equal(JSON.stringify(game.serialize()), snapshot, 'Traditional Chinese preserves the save');
+  checks += 3;
+  setLang('ja');
+  check(cardName(CARDS['sv3-125']) === 'リザードンex', 'Japanese card name');
+  check(powerName(CARDS['sv3-125'].power) === 'れんごくしはい', 'Japanese Charizard Ability');
+  check(actions.some((a) => a.kind === 'attack' && label(a).includes('バーニングダーク')), 'Japanese attack action');
+  check(actions.some((a) => a.kind === 'attack' && label(a).endsWith('エヴォリューション')), 'Japanese TM attack');
+  assert.deepEqual(game.legalActions(me), englishActions, 'Japanese preserves legal actions');
+  assert.deepEqual(buildState(game, me), englishState, 'Japanese preserves the AI state');
+  assert.equal(JSON.stringify(game.serialize()), snapshot, 'Japanese preserves the save');
+  checks += 3;
+  setLang('es');
+  check(cardName(me.hand[0]) === 'Investigación de Profesores (Profesora Albora)', 'Spanish Trainer printing title');
+  check(cardName(me.active.energy[0]) === 'Energía Fuego Básica', 'Spanish modern Basic Energy title');
+  check(powerName(CARDS['sv3-125'].power) === 'Reino Infernal', 'Spanish Charizard Ability title');
+  check(actions.some((a) => a.kind === 'attack' && label(a).includes('Oscuridad Ardiente')), 'Spanish attack action');
+  check(actions.some((a) => a.kind === 'attack' && label(a).endsWith('Evolución')), 'Spanish TM attack uses the Tool printing');
+  assert.deepEqual(game.legalActions(me), englishActions, 'Spanish preserves legal actions');
+  assert.deepEqual(buildState(game, me), englishState, 'Spanish preserves the AI state');
+  assert.equal(JSON.stringify(game.serialize()), snapshot, 'Spanish preserves the save');
+  checks += 3;
+  setLang('tr');
+  check(cardName(me.hand[0]) === 'Profesörün Araştırması (Profesör Sada)', 'Turkish Trainer printing title');
+  check(powerName(CARDS['sv3-125'].power) === 'Cehennem Hükmü', 'Turkish Charizard Ability title');
+  check(actions.some((a) => a.kind === 'attack' && label(a).includes('Yanan Karanlık')), 'Turkish attack action');
+  check(actions.some((a) => a.kind === 'attack' && label(a).endsWith('Evrim')), 'Turkish TM attack uses the Tool printing');
+  assert.deepEqual(game.legalActions(me), englishActions, 'Turkish preserves legal actions');
+  assert.deepEqual(buildState(game, me), englishState, 'Turkish preserves the AI state');
+  assert.equal(JSON.stringify(game.serialize()), snapshot, 'Turkish preserves the save');
+  checks += 3;
+
+  // Capture the actual model request with a stub so no live service is needed.
+  const fetch = globalThis.fetch;
+  const config = { ...aiConfig };
+  const requests = [];
+  try {
+    Object.assign(aiConfig, { engine: 'model', endpoint: 'https://example.invalid/decide' });
+    globalThis.fetch = async (_url, init) => {
+      requests.push(JSON.parse(init.body));
+      return { ok: true, json: async () => ({ answers: { action: {} } }) };
+    };
+    await rankActions(game, me, actions);
+    setLang('en');
+    await rankActions(game, me, englishActions);
+    assert.deepEqual(requests[0], requests[1], 'decision model receives the same English request');
+    check(requests[0].questions.action.criteria[burn.key].includes('Burning Darkness'), 'model sees the printed move name');
+  } finally {
+    globalThis.fetch = fetch;
+    Object.assign(aiConfig, config);
+  }
+
+  await game.attack(me, burn.index);
+  check(opp.active.damage === 180, 'attack still uses the original damage rule');
+  const saved = JSON.parse(JSON.stringify({ game: game.serialize(), log: events }));
+  const restored = Game.restore(saved.game, { controllers: [], hooks: {} });
+  assert.deepEqual(JSON.parse(JSON.stringify(restored.serialize())), saved.game, 'saved game round trip');
+  const attackLog = saved.log.find(({ key }) => key === 'log.attack');
+  check(t(attackLog.key, attackLog.params).includes('Charizard ex used Burning Darkness'), 'saved event renders in English');
+  setLang('zh-Hans');
+  check(resolve(arenaAttack) === '燃烧黑暗', 'arena hook renders in Chinese');
+  check(t(attackLog.key, attackLog.params).includes('喷火龙ex 使用 燃烧黑暗'), 'saved event renders in Chinese');
+  check(t('log.attack', { P: { $pl: 0 }, m: 'Charizard ex', atk: 'Burning Darkness' }).includes('Burning Darkness'), 'legacy log without references remains readable');
+  check(resolve(C(restored.players[0].active)) === '喷火龙ex', 'restored Pokémon resolves by original ID');
+  const legacy = structuredClone(saved.game);
+  delete legacy.players[0].until.lastAtk.atk.sourceCardId;
+  const legacyGame = Game.restore(legacy, { controllers: [], hooks: {} });
+  check(legacyGame.players[0].until.lastAtk.atk.name === 'Burning Darkness', 'legacy saved attack restores without printing metadata');
+  check(attackName(legacyGame.attacksOf(legacyGame.players[0].active)[0]) === '燃烧黑暗', 'restored card gets printing metadata from the catalog');
+  setLang('zh-Hant');
+  check(t(attackLog.key, attackLog.params).includes('噴火龍ex 使用 燃燒黑暗'), 'saved event renders in Traditional Chinese');
+  check(resolve(C(legacyGame.players[0].active)) === '噴火龍ex', 'legacy save renders Traditional Chinese card names');
+  setLang('ja');
+  const japaneseLog = t(attackLog.key, attackLog.params);
+  check(japaneseLog.includes('リザードンex') && japaneseLog.includes('バーニングダーク'), 'saved event renders in Japanese');
+  setLang('es');
+  check(t(attackLog.key, attackLog.params).includes('Charizard ex usa Oscuridad Ardiente'), 'saved event renders in Spanish');
+  check(attackName(legacyGame.attacksOf(legacyGame.players[0].active)[0]) === 'Oscuridad Ardiente', 'legacy save renders the Spanish attack name');
+  setLang('tr');
+  check(t(attackLog.key, attackLog.params).includes('Yanan Karanlık'), 'saved event renders in Turkish');
+  check(attackName(legacyGame.attacksOf(legacyGame.players[0].active)[0]) === 'Yanan Karanlık', 'legacy save renders the Turkish attack name');
+}
+
+// Check each data key against the shipped decks, including lazy-loaded modern decks.
+await Promise.all(Object.keys(DECKS).map(loadDeck));
+const contentCards = Object.values(CARDS);
+setLang('zh-Hans');
+check(deckName('thunderstorm', DECKS.thunderstorm.name) === '雷暴雨', 'Thunderstorm and Tempest are different products');
+check(cardName(CARDS['base5-2']) === '邪恶阿柏怪', 'bilingual Team Rocket card entry');
+check(t('prompt.search.title') === '电脑通信', 'classic Trainer prompt uses the card name');
+check(attackName(CARDS['gym1-40'].attacks.find((a) => a.name === 'Rock Toss')) === '扔岩石', 'Graveler attack matches its printing');
+check(attackName(CARDS['gym2-68'].attacks.find((a) => a.name === 'Rock Toss')) === '扔石头', 'Geodude retains its distinct attack name');
+check(powerName(CARDS['me2-41'].power) === '钻石膜', 'Traditional printing supplies a Simplified display name');
+const nameFields = {
+  card: new Set(contentCards.map((card) => card.name)),
+  attack: new Set(contentCards.flatMap((card) => (card.attacks ?? []).map((attack) => attack.name))),
+  power: new Set(contentCards.flatMap((card) => card.power ? [card.power.name] : [])),
+  deck: new Set(Object.keys(DECKS)),
+};
+const deckPickerText = Object.keys(zhHans.STRINGS).filter((key) => /^(?:deck\.|deckgroup\.|format\.)/.test(key));
+const untranslatedSeries = /\b(?:Base Set|Jungle|Fossil|Team Rocket|Gym Heroes|Gym Challenge|Mega Evolution|Scarlet & Violet|Sword & Shield|Sun & Moon|Vivid Voltage|Unbroken Bonds|Chaos Rising)\b/;
+const untranslatedNames = /\b(?:Golem|Sandslash|Seaking|Dewgong|Muk|Tentacruel|Exeggutor|Dratini|Weezing|Nidorino|Star Portal|Impidimp|Purrloin|Liepard|Scraggy|Scrafty|Skarmory|Carbink)\b/;
+for (const [lang, locale, names] of [
+  ['zh-Hans', zhHans, zhHansNames], ['zh-Hant', zhHant, zhHantNames],
+]) {
+  setLang(lang);
+  for (const [kind, expected] of Object.entries(nameFields)) {
+    for (const [key, value] of Object.entries(names[kind])) {
+      check(expected.has(key), `${lang} ${kind}: unused name key ${key}`);
+      check(typeof value === 'string' && /\p{Script=Han}/u.test(value), `${lang} ${kind}: expected translated name for ${key}`);
+    }
+  }
+  for (const [id, translations] of Object.entries(names.attackPrinting)) {
+    for (const [name, value] of Object.entries(translations)) {
+      check(CARDS[id]?.attacks?.some((attack) => attack.name === name), `${lang}: unknown attack ${id} / ${name}`);
+      check(/\p{Script=Han}/u.test(value), `${lang}: expected translated attack ${name}`);
+    }
+  }
+  for (const [id, translations] of Object.entries(names.powerPrinting)) {
+    for (const [name, value] of Object.entries(translations)) {
+      check(CARDS[id]?.power?.name === name, `${lang}: unknown Ability ${id} / ${name}`);
+      check(/\p{Script=Han}/u.test(value), `${lang}: expected translated Ability ${name}`);
+    }
+  }
+  for (const [key, value] of Object.entries({ ...locale.STRINGS, ...locale.LANDING, RULES: locale.RULES })) {
+    check(!value.includes('undefined'), `${lang}.${key}: unresolved name reference`);
+  }
+  for (const key of [...deckPickerText, 'ui.welcomeText']) {
+    const text = t(key, { classic: 26, modern: 83 });
+    check(!untranslatedSeries.test(text) && !untranslatedNames.test(text), `${lang}.${key}: untranslated deck picker text: ${text}`);
+  }
+  const modern = lang === 'zh-Hans'
+    ? '「超级进化」「朱&紫」「剑&盾」「太阳&月亮」卡组，采用现代规则'
+    : '「超級進化」「朱＆紫」「劍＆盾」「太陽＆月亮」牌組，採用現代規則';
+  check(t('format.modern.sub') === modern, lang + ': modern format subtitle');
+  for (const [id, deck] of Object.entries(DECKS)) {
+    check(/\p{Script=Han}/u.test(deckName(id, deck.name)), lang + ': missing deck name ' + id);
+  }
+  for (const card of contentCards) {
+    check(/\p{Script=Han}/u.test(cardName(card)), lang + ': missing card name ' + card.id);
+    for (const attack of card.attacks ?? []) {
+      check(/\p{Script=Han}/u.test(attackName(attack)), lang + ': missing attack ' + card.id + ' / ' + attack.name);
+    }
+    if (card.power) check(/\p{Script=Han}/u.test(powerName(card.power)), lang + ': missing Ability ' + card.id);
+  }
+  check(deckName('unknown', 'Unknown Deck') === 'Unknown Deck', lang + ': deck fallback');
+  check(cardName({ name: 'Unknown Card' }) === 'Unknown Card', lang + ': card fallback');
+  check(attackName({ name: 'Unknown Attack' }) === 'Unknown Attack', lang + ': attack fallback');
+  check(powerName({ name: 'Unknown Ability' }) === 'Unknown Ability', lang + ': Ability fallback');
+  for (const [deck, card] of [
+    ['brock', "Brock's Golem"], ['misty', "Misty's Seaking"], ['gym-misty', "Misty's Tentacruel"],
+    ['sv-marnie', "Marnie's Impidimp"], ['sv-steven', "Steven's Skarmory"],
+  ]) {
+    const printing = Object.keys(DECKS[deck].list).map((id) => CARDS[id]).find((c) => c.name === card);
+    check(printing && t('deck.' + deck).includes(cardName(printing)), `${lang} ${deck}: description uses the actual card name`);
+  }
+}
+setLang('zh-Hant');
+check(deckName('brushfire', DECKS.brushfire.name) === '叢林之火', 'Traditional classic deck title');
+check(powerName(CARDS['swsh10-40'].power) === '星星入口', 'Taiwan VSTAR Power title');
+check(attackName(CARDS['gym1-40'].attacks.find((a) => a.name === 'Rock Toss')) === '扔岩石', 'Traditional Graveler move retains the printing name');
+check(attackName(CARDS['gym2-68'].attacks.find((a) => a.name === 'Rock Toss')) === '扔石頭', 'Traditional Geodude move retains the printing name');
+
+setLang('ja');
+for (const [key, value] of Object.entries({ ...ja.STRINGS, RULES: ja.RULES })) {
+  check(!value.includes('undefined'), `ja.${key}: unresolved display name`);
+}
+for (const [kind, expected] of Object.entries(nameFields)) {
+  for (const key of Object.keys(jaNames[kind])) check(expected.has(key), `ja ${kind}: unused name key ${key}`);
+}
+for (const id of Object.keys(jaNames.cardPrinting)) check(Boolean(CARDS[id]), `ja: unknown printing ${id}`);
+for (const [id, names] of Object.entries(jaNames.attackPrinting)) {
+  for (const name of Object.keys(names)) {
+    check(CARDS[id]?.attacks?.some((attack) => attack.name === name), `ja: unknown attack ${id} / ${name}`);
+  }
+}
+const japanese = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+for (const [id, deck] of Object.entries(DECKS)) {
+  check(japanese.test(deckName(id, deck.name)), `ja: missing deck name ${id}`);
+}
+for (const c of contentCards) {
+  check(japanese.test(cardName(c)), `ja: missing card name ${c.id}`);
+  for (const attack of c.attacks ?? []) {
+    check(japanese.test(attackName(attack)), `ja: missing attack ${c.id} / ${attack.name}`);
+  }
+  if (c.power) check(japanese.test(powerName(c.power)), `ja: missing Ability ${c.id}`);
+}
+check(attackName(CARDS['gym1-40'].attacks.find((a) => a.name === 'Rock Toss')) === 'いわなげ', 'Japanese Graveler move uses the original printing');
+check(attackName(CARDS['gym2-68'].attacks.find((a) => a.name === 'Rock Toss')) === 'いしなげ', 'Japanese Geodude move uses the original printing');
+check(attackName(CARDS['base1-54'].attacks.find((a) => a.name === 'Stiffen')) === 'かたまる', 'classic move uses the version with a coin flip');
+const energySupport = CARDS['gym2-95'].attacks.find((a) => a.name === 'Energy Support');
+check(attackName(energySupport) === 'エナジーサポート' && energySupport.text.includes('put it into your hand'),
+  'Japanese Energy Support title preserves the English card effect');
+check(attackName(CARDS['sm6-2'].attacks.find((a) => a.name === 'Tropical Shake')) === 'トロピカルシェイク', 'damage ceiling matches the Japanese maximum of five types');
+check(t('format.modern.sub').includes('スカーレット＆バイオレット'), 'Japanese modern series subtitle');
+check(t('deck.gym-misty').includes('カスミのドククラゲ'), 'Japanese deck description uses the trainer-owned card name');
+check(t('deck.swl-palkia').includes('スターポータル'), 'Japanese deck description uses the VSTAR Power name');
+check(deckName('sv-steven', DECKS['sv-steven'].name) === 'ダイゴ', 'Japanese trainer deck name');
+check(deckName('brushfire', DECKS.brushfire.name) === 'ブラッシュファイア', 'Japanese collector spelling for Brushfire');
+check(ja.RULES.includes(jaNames.deck.brushfire), 'Japanese rulebook uses the localized deck title');
+check(deckName('sm-mach-strike', DECKS['sm-mach-strike'].name) === 'ガブリアスデッキ（Mach Strike）',
+  'Japanese community alias is shown alongside the English product title');
+check(deckName('sm-torrential-cannon', DECKS['sm-torrential-cannon'].name) === 'カメックスデッキ（Torrential Cannon）',
+  'Japanese community alias for Torrential Cannon');
+check(deckName('sm-bright-tide', DECKS['sm-bright-tide'].name) === '輝く潮流（Bright Tide）',
+  'Japanese deck translation retains the English product title');
+check(deckName('unknown-deck', 'Unknown Deck') === 'Unknown Deck', 'Japanese deck fallback');
+check(cardName({name: 'Unknown Card'}) === 'Unknown Card', 'Japanese card fallback');
+check(powerName({name: 'Unknown Ability'}) === 'Unknown Ability', 'Japanese Ability fallback');
+
+setLang('es');
+for (const [key, value] of Object.entries({ ...es.STRINGS, RULES: es.RULES })) {
+  check(!value.includes('undefined'), `es.${key}: unresolved display name`);
+}
+for (const [kind, expected] of Object.entries(nameFields)) {
+  for (const key of Object.keys(esNames[kind])) check(expected.has(key), `es ${kind}: unused name key ${key}`);
+}
+for (const id of Object.keys(esNames.cardPrinting)) check(Boolean(CARDS[id]), `es: unknown printing ${id}`);
+for (const [id, names] of Object.entries(esNames.attackPrinting)) {
+  for (const name of Object.keys(names)) {
+    check(CARDS[id]?.attacks?.some((attack) => attack.name === name), `es: unknown attack ${id} / ${name}`);
+  }
+}
+check(attackName(CARDS['gym1-40'].attacks.find((a) => a.name === 'Rock Toss')) === 'Lanzamiento de Roca', 'Spanish Graveler attack uses its own printing');
+check(attackName(CARDS['gym2-68'].attacks.find((a) => a.name === 'Rock Toss')) === 'Embestida Roca', 'Spanish Geodude attack retains its distinct name');
+check(cardName(CARDS['base1-90']) === 'Super Poción' && cardName(CARDS['base4-117']) === 'La Superpoción', 'Spanish Trainer names can differ between printings');
+check(deckName('sm-torrential-cannon', DECKS['sm-torrential-cannon'].name) === 'Cañón Torrencial', 'Spanish Sun & Moon deck name');
+check(deckName('sv-marnie', DECKS['sv-marnie'].name) === 'Roxy', 'Spanish Trainer deck name');
+check(t('deck.sv-marnie').includes(cardName(CARDS['sv10-136'])), 'Spanish deck summary uses the card name');
+check(t('deck.swl-palkia').includes(powerName(CARDS['swsh10-40'].power)), 'Spanish deck summary uses the VSTAR Power name');
+check(t('deck.gym-brock').includes(cardName(CARDS['gym1-115'])), 'Spanish deck summary uses the Gym name');
+check(t('ui.welcomeText').includes(esSets.base) && es.RULES.includes(esNames.deck.brushfire), 'Spanish welcome and rulebook use the localized titles');
+check(deckName('thunderstorm', DECKS.thunderstorm.name) === 'Tormenta Eléctrica (Thunderstorm)', 'Spanish project deck title includes the original');
+check(deckName('sm-let-s-play-pikachu', DECKS['sm-let-s-play-pikachu'].name) === "¡A jugar, Pikachu! (Let's Play, Pikachu!)", 'Spanish Pikachu deck translation');
+check(deckName('sm-let-s-play-eevee', DECKS['sm-let-s-play-eevee'].name) === "¡A jugar, Eevee! (Let's Play, Eevee!)", 'Spanish Eevee deck translation');
+check(cardName(CARDS['base5-36']) === 'Gloom Oscuro', 'Spanish project translation of Dark Gloom');
+check(cardName(CARDS['gym1-81']) === 'Pikachu del Teniente Surge', 'Spanish project translation uses the Trainer name');
+check(t('deck.devastation').includes(cardName(CARDS['base5-36'])), 'Spanish deck summary uses the project translation');
+check(t('deck.lt-surge').includes(cardName(CARDS['gym1-81'])), 'Spanish Gym deck summary uses the Trainer-owned card name');
+check(attackName(CARDS['gym1-87'].attacks.find((a) => a.name === 'Tail Rap')) === 'Golpe de Cola', 'Spanish project translation of Tail Rap');
+check(powerName(CARDS['gym1-2'].power) === 'Protección de la Banca', 'Spanish project translation of Bench Guard');
+check(t('prompt.q.benchGuard', { m: 'Pikachu' }).includes(powerName(CARDS['gym1-2'].power)), 'Spanish Bench Guard prompt uses the project translation');
+check(t('deckgroup.gym1').includes('Héroes de Gimnasio') && es.RULES.includes('Edición Básica 2'), 'Spanish classic expansion translations');
+check(attackName({name: 'Unknown Attack'}) === 'Unknown Attack', 'Spanish fallback for a missing catalog entry');
+
+setLang('tr');
+validHTML(tr.RULES, 'tr rules');
+assert.deepEqual(params(tr.RULES), params(en.RULES), 'tr: rules parameters');
+for (const [key, value] of Object.entries({ ...tr.STRINGS, RULES: tr.RULES })) {
+  check(!value.includes('undefined'), `tr.${key}: unresolved display name`);
+}
+for (const [kind, expected] of Object.entries(nameFields)) {
+  for (const key of Object.keys(trNames[kind])) check(expected.has(key), `tr ${kind}: unused name key ${key}`);
+}
+for (const c of contentCards) {
+  for (const move of c.attacks ?? []) {
+    check(attackName(move) !== move.name, `tr: missing attack title ${c.id} / ${move.name}`);
+  }
+  if (c.power) check(Object.hasOwn(trNames.power, c.power.name), `tr: missing Ability title ${c.id}`);
+}
+for (const [id, deck] of Object.entries(DECKS)) {
+  const original = ` (${deck.name})`;
+  const title = deckName(id, deck.name);
+  check(title.endsWith(original) && title.length > original.length, `tr: localized deck title with original ${id}`);
+  check(Boolean(tr.STRINGS['deck.' + id]), `tr: missing deck description ${id}`);
+}
+check(cardName(CARDS['gym1-69']) === 'Brock’a Ait Onix', 'Turkish Trainer-owned Pokémon title');
+check(t('deck.gym-brock').includes(cardName(CARDS['gym1-69'])), 'Turkish deck summary uses the Trainer-owned card name');
+check(t('deck.swl-palkia').includes(powerName(CARDS['swsh10-40'].power)), 'Turkish deck summary uses the VSTAR Power name');
+check(cardName(CARDS['base1-94']) === 'İksir', 'Turkish uses the published item name');
+check(attackName(CARDS['base1-24'].attacks.find((a) => a.name === 'Flamethrower')) === 'Alev Püskürtücü', 'Turkish uses the published move name');
+check(attackName(CARDS['gym1-40'].attacks.find((a) => a.name === 'Rock Toss')) === 'Kaya Fırlatma', 'Turkish Graveler attack uses the appropriate printing');
+check(attackName(CARDS['gym2-68'].attacks.find((a) => a.name === 'Rock Toss')) === 'Taş Fırlatma', 'Turkish Geodude attack retains its distinct name');
+check(t('ui.welcomeText').includes(trSets.base) && t('format.modern.sub').includes(trSets.swsh), 'Turkish interface uses series titles');
+check(termName("Steven's") === 'Steven’a Ait' && termName('Rapid Strike') === 'Hızlı Vuruş', 'Turkish effect preview uses localized name filters');
+
 // Official area definitions, checked 2026-11-10:
 // https://www.pokemon.cn/tcg-rules-howtoplay?pageName=basic_rules03/
 // https://asia.pokemon-card.com/tw/rules/howtoplay/basic_rules03/
@@ -117,12 +466,17 @@ try {
 
 const landingSource = await readFile(new URL('../web/landing.js', import.meta.url), 'utf8');
 const landing = vm.runInNewContext(landingSource.slice(landingSource.indexOf('const STRINGS ='), landingSource.indexOf('const store =')) + '\nSTRINGS',
-  {zhHans: zhHans.LANDING, zhHant: zhHant.LANDING});
+  {esSets, jaNames, jaSets, trNames, trSets, zhHans: zhHans.LANDING, zhHant: zhHant.LANDING});
+check(landing.es['decks.classic.text'].includes(esSets.jungle) && landing.es['decks.modern.text'].includes(esSets.celebration),
+  'Spanish landing uses localized series names');
+check(landing.tr['decks.classic.text'].includes(trSets.fossil) && landing.tr['decks.modern.text'].includes(trSets.sv),
+  'Turkish landing uses localized series names');
 for (const lang of LANGS) {
   assert.deepEqual(Object.keys(landing[lang]).sort(), Object.keys(landing.en).sort(), `${lang}: landing keys`);
   checks++;
   for (const [key, value] of Object.entries(landing[lang])) {
     assert.deepEqual(params(value), params(landing.en[key]), `${lang}.${key}: landing parameters`);
+    check(!value.includes('undefined'), `${lang}.${key}: unresolved landing name`);
     checks++;
   }
 }

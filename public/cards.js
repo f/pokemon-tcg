@@ -55,15 +55,12 @@ const deckFiles = index.classicBundle
 function prepare(c) {
   const card = { ...c };
   delete card.count;
-  if (c.kind === 'pokemon') {
-    card.attacks = c.attacks.map((a) => ({ ...a, base: parseInt(a.damage, 10) || 0, fx: a.effect || {} }));
-    if (c.power?.kind) card.powerKind = c.power.kind;
-  }
-  if (c.kind === 'trainer') {
-    card.tkind = c.trainer;
-    // Technical Machines carry an attack the Pokémon can use.
-    if (c.attacks) card.attacks = c.attacks.map((a) => ({ ...a, base: parseInt(a.damage, 10) || 0, fx: a.effect || {} }));
-  }
+  if (c.attacks) card.attacks = c.attacks.map((a) => ({
+    ...a, sourceCardId: c.id, base: parseInt(a.damage, 10) || 0, fx: a.effect || {},
+  }));
+  if (c.power) card.power = { ...c.power, sourceCardId: c.id };
+  if (c.kind === 'pokemon' && c.power?.kind) card.powerKind = c.power.kind;
+  if (c.kind === 'trainer') card.tkind = c.trainer;
   return card;
 }
 
