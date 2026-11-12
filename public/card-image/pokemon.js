@@ -17,6 +17,8 @@ const darkFace = new Set(['sv', 'swsh', 'sm', 'ex']);
 const darkLabelFrames = new Set(['sv', 'ex']);
 const printedBodyFrames = new Set(['sm', 'swsh', 'sv', 'radiant']);
 const modernAbilityFrames = new Set(['sv', 'ex', 'mega']);
+// These frames share a tab whose right edge extends past the OCR lettering.
+const modernAbilityEdge = 77.5;
 const inlineMasks = {
   round: ['full', 0, 1],
   ink: ['paper-ink', 24, 2],
@@ -106,14 +108,17 @@ function maskRegion([x, y, w, h, field], layout, type, future) {
   const inset = ['rule', 'ruleLabel', 'classicMeta'].includes(field) ? 0.4 : 1.05;
   let [mode, threshold, dilation] = inkFor(field, layout, type, future);
   if (field === 'title' && layout.mark) dilation = Math.min(dilation, 2);
-  const left = Math.max(0, x - inset), top = Math.max(0, y - inset);
+  const afterAbilityTab = field === 'power' && modernAbilityFrames.has(layout.profile) && layout.parts[0].badge;
+  const inkLeft = Math.max(0, x - inset);
+  const left = afterAbilityTab ? Math.max(inkLeft, modernAbilityEdge + 0.9) : inkLeft;
+  const top = Math.max(0, y - inset);
   let bottom = GRID[1];
   if (field === 'evolves' && layout.profile === 'sm') bottom = 37.7;
   if (field === 'title' && mode !== 'classic-title' && layout.profile !== 'vmax' && !layout.outlineText) {
     // Protect the artwork frame beneath the title, including the mask's dilation.
     bottom = 29.7;
   }
-  return [left, top, Math.min(GRID[0] - left, w + inset + rightPadding),
+  return [left, top, Math.min(GRID[0], inkLeft + w + inset + rightPadding) - left,
     Math.min(bottom - top, h + inset * 2), mode, threshold, dilation];
 }
 
@@ -222,8 +227,8 @@ export function pokemonOverlay(recipe, font) {
   if (g.meta) {
     const size = classic ? 6.1 : 4.7;
     const baseline = g.meta[1] + g.meta[3] * 0.38 + size * 0.27;
-    svg += faceText(c.measure, 122.5, baseline, {
-      size, weight: 620, anchor: 'middle', fill: '#19191a', skew: classic,
+    svg += fitTitle(c.measure, 122.5, baseline, g.meta[2], font, size, {
+      minSize: 3.4, weight: 620, anchor: 'middle', fill: '#19191a', skew: classic,
     });
   }
   if (classic && g.catalog) {
@@ -266,7 +271,8 @@ export function pokemonOverlay(recipe, font) {
     } else {
       const size = classic ? 11.3 : 10.8;
       const style = { fill: power ? (dark ? '#ff8a83' : '#a92425') : ink, outline, ...(classic && { weight: 810 }) };
-      const [x, top, w, h] = part.name;
+      const [nameX, top, w, h] = part.name;
+      const x = part.badge && modernAbilityFrames.has(g.profile) ? Math.max(nameX, modernAbilityEdge + 2.5) : nameX;
       // English descenders extend the detected box below the printed baseline.
       const baseline = classic ? top + h / 2 + size * 0.34 :
         part.badge ? badgeCenter(part.badge) + size * 0.36 : top + size * 0.86;
@@ -283,19 +289,20 @@ export function pokemonOverlay(recipe, font) {
   }
   if (g.rule) {
     const inverted = g.profile === 'v';
-    const [labelX, labelTop, , labelHeight] = g.ruleLabel ?? [g.rule[0] + 3, g.rule[1], 64, 6];
+    const [labelX, labelTop, labelWidth, labelHeight] = g.ruleLabel ?? [g.rule[0] + 3, g.rule[1], 82, 6];
     const labelBaseline = inverted ? vRuleRows[0].baseline : labelTop + labelHeight * 0.90;
-    svg += faceText(c.ruleLabel, labelX, labelBaseline, {
-      size: 5.7, weight: 760, fill: inverted ? '#222' : g.profile === 'mega' ? '#ffe36a' : '#fff', skew: true,
+    svg += fitTitle(c.ruleLabel, labelX, labelBaseline, Math.max(labelWidth, 72), font, 5.7, {
+      minSize: 3.4, weight: 760, fill: inverted ? '#222' : g.profile === 'mega' ? '#ffe36a' : '#fff', skew: true,
     });
     const fill = inverted ? '#fff' : '#222';
     if (g.ruleRows) {
       for (const [i, row] of g.ruleRows.entries()) {
         const baseline = inverted ? vRuleRows[i].baseline : bottom(row) - 0.35;
-        svg += fitTitle(c.rule[i], row[0], baseline, row[2], font, 5.25, { minSize: 3.6, fill });
+        svg += fitTitle(c.rule[i], row[0], baseline, row[2], font, 5.25, { minSize: 3.0, fill });
       }
     } else {
-      svg += paragraph(c.rule, [g.rule[0] + 3, bottom(g.rule) - 7, 229 - g.rule[0], 8], 5.6,
+      const top = Math.max(labelBaseline + 0.4, bottom(g.rule) - 10);
+      svg += paragraph(c.rule, [g.rule[0] + 3, top, 229 - g.rule[0], Math.max(8, bottom(g.rule) + 1 - top)], 5.6,
         { fill, outline: undefined, alignTop: false });
     }
   }

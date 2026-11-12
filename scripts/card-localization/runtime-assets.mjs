@@ -79,12 +79,30 @@ export function cardImageAsset(locale, kind, { hosted = false } = {}) {
   return json;
 }
 
+export function cardImageCoverageAsset() {
+  if (!assets.has('coverage')) {
+    const ids = cohortIds('catalog');
+    const total = ids.length;
+    const shared = ids.filter((id) => resolveCardFace(id, 'en').shared).length;
+    const byLocale = Object.fromEntries(LANGS.map((locale) => {
+      if (locale === 'en') return [locale, total];
+      const printed = cardImageAsset(locale, 'printed');
+      return [locale, shared + (printed ? Object.keys(JSON.parse(printed).cards).length : 0)];
+    }));
+    assets.set('coverage', JSON.stringify({ total, byLocale }));
+  }
+  return assets.get('coverage');
+}
+
 export async function writeCardImageAssets(outDir, options) {
+  const root = join(outDir, 'card-image', 'data');
+  await mkdir(root, { recursive: true });
+  await writeFile(join(root, 'coverage.json'), cardImageCoverageAsset());
   for (const kind of ['printed', 'recipes']) {
     for (const locale of LANGS) {
       const json = cardImageAsset(locale, kind, options);
       if (!json) continue;
-      const dir = join(outDir, 'card-image', 'data', kind);
+      const dir = join(root, kind);
       await mkdir(dir, { recursive: true });
       await writeFile(join(dir, locale + '.json'), json);
     }

@@ -395,9 +395,10 @@ export const STRINGS = {
   "ui.settings": "設定",
   "ui.cardImages": "卡圖",
   "ui.cardImagesDownload": "下載對應語言的原版卡圖",
-  "ui.cardImagesDownloadNote": "僅在目前語言有已設定的圖片來源時下載。兩個選項都開啟時，優先下載。",
+  "ui.cardImagesCoverage": "已收錄 {count}/{total} 張原版卡圖，含共用能量卡",
+  "ui.cardImagesDownloadNote": "目前語言僅收錄部分卡牌的原版卡圖。兩個選項都開啟時，優先下載原版。",
   "ui.cardImagesGenerate": "按需產生對應語言的卡圖",
-  "ui.cardImagesGenerateNote": "版式和譯文齊全時，從英文卡圖產生。缺少所需資料時顯示英文原圖。",
+  "ui.cardImagesGenerateNote": "版式和譯文齊全時，從英文卡圖產生。產生的卡圖可能有排版或背景修復瑕疵。缺少資料時顯示英文原圖。",
   "ui.display": "顯示",
   "group.attack": "招式",
   "group.energy": "能量",
@@ -2164,7 +2165,7 @@ export const RULES = `<section><h3><i class="ic ic-target"></i> 獲勝目標</h3
 <li><b>寶可夢</b>負責戰鬥。<b>基礎</b>寶可夢可直接上場；<b>1 階</b>由基礎進化，<b>2 階</b>由 1 階進化。</li>
 <li><b>能量</b>用於支付招式左側標示的所需能量。無色（星形）可用任意屬性能量支付。</li>
 <li><b>訓練家卡</b>可恢復傷害、抽卡、移除對手能量等。現代規則分為物品、支援者、競技場和寶可夢道具，詳見下方經典與現代規則。</li></ul></section>
-<section><h3><i class="ic ic-layers"></i> 如何閱讀寶可夢卡</h3><div class="anatomy"><div class="card-wrap"><img src="img/cards/base1/46_hires.webp" alt="${names.card.Charmander}"><span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
+<section><h3><i class="ic ic-layers"></i> 如何閱讀寶可夢卡</h3><div class="anatomy"><div class="card-wrap">{charmanderImage}<span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
 <li><b>名稱</b>：${names.card.Charmander}（Charmander）。</li><li><b>進化階段</b>：基礎寶可夢可直接放到備戰區；1 階與 2 階由卡面指定的寶可夢進化。</li>
 <li><b>HP</b>：可承受的傷害。50 HP 表示累計 5 個傷害指示物時昏厥。</li><li><b>屬性</b>：此卡為火，影響弱點和抵抗力。</li>
 <li><b>招式所需能量</b>：須附著的能量符號，星形代表任意屬性。</li><li><b>招式名稱</b>及下方的效果說明。</li>

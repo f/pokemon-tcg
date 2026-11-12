@@ -23,6 +23,11 @@ export const sets = {
 
 export const names = {
   ...terms,
+  person: {
+    ghetsis: 'Ghetsis',
+    professorSada: 'Profesör Sada',
+    professorTuro: 'Profesör Turo',
+  },
   term: {
     Ancient: 'Kadim',
     Future: 'Gelecek',

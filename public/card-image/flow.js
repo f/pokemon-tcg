@@ -28,8 +28,8 @@ export function configureLayout({ fontMetrics, energySymbols }) {
   if (energySymbols) Object.assign(symbols, energySymbols);
 }
 
-const punctuation = new Set('，。；：、）》」』】！？％,.!?:;)]'.split(''));
-const noEnd = new Set('（《「『【(['.split(''));
+const punctuation = new Set('，。；：、）》」』】〗！？％,.!?:;)]'.split(''));
+const noEnd = new Set('（《「『【〖(['.split(''));
 function widthOf(text, size, advances) {
   return [...text].reduce((sum, char) => {
     const width = advances.get(char) ?? (/\s/u.test(char) ? 0.28 : /[\u2e80-\uffff]/u.test(char) ? advances.get('中') ?? 1 : 0.64);
@@ -64,7 +64,7 @@ export function faceText(text, x, y, {
 }
 
 function tokens(copy, size, advances) {
-  const parts = /(?:\d+[只张个](?:基本|基础|备战)?|基本|基础|备战|战斗场|非)?\{icon\.[a-z]+\}(?:[与或和、]?\{icon\.[a-z]+\})*(?:能量卡?|宝可梦卡?)?|LV\.\d+ #\d+|(?:(?:[这该那]|\d+)只)?(?:战斗|备战|基础)?宝可梦卡?|\d+(?:个伤害指示物|点伤害|[点次只张个])|(?:基本)?能量卡?|伤害指示物|[A-Za-z0-9][A-Za-z0-9.'+&-]*|./gu;
+  const parts = /(?:\d+[只隻张張个個](?:基本|基[础礎]|备战|備戰)?|基本|基[础礎]|备战|備戰|战斗场|戰鬥場|非)?\{icon\.[a-z]+\}(?:[与與或和、]?\{icon\.[a-z]+\})*(?:能量卡?|宝可梦卡?|寶可夢卡?)?|LV\.\d+ #\d+|(?:(?:[这這该該那]|\d+)[只隻])?(?:战斗|戰鬥|备战|備戰|基[础礎])?(?:宝可梦|寶可夢)卡?|\d+(?:[个個][伤傷]害指示物|[点點][伤傷]害|[点點次只隻张張个個])|(?:基本)?能量卡?|[伤傷]害指示物|[\p{Script=Latin}0-9][\p{Script=Latin}\p{Mark}0-9.'’+&-]*|./gu;
   const symbolPattern = /\{icon\.([a-z]+)\}/gu;
   const word = (text) => ({ text, width: widthOf(text, size, advances) });
   return (copy.match(parts) ?? []).map(text => {

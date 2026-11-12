@@ -375,9 +375,10 @@ export const STRINGS = {
   "ui.settings": "設定",
   "ui.cardImages": "カード画像",
   "ui.cardImagesDownload": "選択した言語の公式版カード画像をダウンロード",
-  "ui.cardImagesDownloadNote": "選択中の言語に画像の取得先が設定されている場合にダウンロードします。両方オンの場合はダウンロードを優先します。",
+  "ui.cardImagesCoverage": "共通のエネルギーカードを含む原版カード画像 {count}/{total} 枚",
+  "ui.cardImagesDownloadNote": "選択中の言語のオリジナル画像は、一部のカードで利用できます。両方オンの場合はダウンロードを優先します。",
   "ui.cardImagesGenerate": "選択した言語のカード画像を必要に応じて生成",
-  "ui.cardImagesGenerateNote": "レイアウトと翻訳がそろっている場合に英語版から生成します。必要なデータがない場合は英語版を表示します。",
+  "ui.cardImagesGenerateNote": "必要なデータがそろっている場合に英語版から生成します。生成画像には、レイアウトや背景の補修に不自然な部分が残る場合があります。データが不足している場合は英語版を表示します。",
   "ui.display": "表示",
   "group.attack": "ワザ",
   "group.energy": "エネルギー",
@@ -2147,7 +2148,7 @@ export const RULES = `
       <li><b>エネルギー</b>はワザを使うために必要です。ワザの左にあるマークがワザに必要なエネルギーで、無色（星）マークはどのエネルギーでもまかなえます。</li>
       <li><b>トレーナーズ</b>はいろいろな形で助けてくれます。回復、カードを引く、相手のエネルギーをトラッシュする、などです。モダンのデッキでは、グッズ・サポート・スタジアム・ポケモンのどうぐに分かれています（<i>クラシックとモダンのルール</i>を参照）。</li></ul></section>
     <section><h3><i class="ic ic-layers"></i> ポケモンカードの見かた</h3>
-      <div class="anatomy"><div class="card-wrap"><img src="img/cards/base1/46_hires.webp" alt="${names.card["Charmander"]}"><span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
+      <div class="anatomy"><div class="card-wrap">{charmanderImage}<span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
       <li><b>名前</b>：${names.card["Charmander"]}。</li>
       <li><b>進化段階</b>：「Basic Pokémon」（たねポケモン）は、そのままベンチに出せます。1進化・2進化のカードは、カードに書かれたポケモンから進化します。</li>
       <li><b>HP</b>（ヒットポイント）：受けられるダメージの量です。HP50なら、ダメカン5個できぜつします。</li>

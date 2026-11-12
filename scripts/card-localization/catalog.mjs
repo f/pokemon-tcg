@@ -70,7 +70,9 @@ function required(value, field) {
 }
 
 function localizedName(locale, kind, reference) {
-  return required(contentName(locale, kind, reference, ''), 'name.' + (reference.name ?? reference.id));
+  const sameSpelling = locale === 'es' || locale === 'tr';
+  return required(contentName(locale, kind, reference, sameSpelling ? reference.name : ''),
+    'name.' + (reference.name ?? reference.id));
 }
 
 function labelsFor(locale, pack) {
@@ -95,12 +97,16 @@ function namesFor(card, locale, layout) {
   const title = stripMark(localized('card', card.name), layout.titleMark);
   const power = card.power && localized('power', card.power.name);
   const team = title.split(/\s*[&＆]\s*/u);
+  const conjunction = locale === 'es' ? ' y ' : locale === 'tr' ? ' ve ' : '';
+  const last = conjunction ? title.lastIndexOf(conjunction) : -1;
+  const teamHead = last > 0 ? title.slice(0, last) : team.slice(0, 2).join('＆');
+  const teamTail = last > 0 ? title.slice(last + 1) : team.length > 2 ? '＆' + team.slice(2).join('＆') : '';
   return (path, labels) => {
     const [key, value] = path.split('.');
     switch (key) {
       case 'card':
-        if (value === 'teamHead') return team.slice(0, 2).join('＆');
-        if (value === 'teamTail') return team.length > 2 ? '＆' + team.slice(2).join('＆') : '';
+        if (value === 'teamHead') return teamHead;
+        if (value === 'teamTail') return teamTail;
         return title;
       case 'power': return value === 'classic' ? required(labels.power, 'label.power') + '　' + power : power;
       case 'attack': {
@@ -127,6 +133,8 @@ function bindLegacy(card, layout, pack, locale) {
       [key, localizedName(locale, kind, reference)])),
   };
   const used = new Set();
+  const paragraphs = {};
+  const headings = {};
   const overlay = layout.overlay.replace(/\[\[([\w.]+)\]\]/g, (_, ref) => {
     const [kind, ...segments] = ref.split('.');
     const key = segments.join('.');
@@ -137,6 +145,16 @@ function bindLegacy(card, layout, pack, locale) {
         value = key === 'ability' && /^(sv|me)/.test(card.set) ? spreadAbilityLabel(labels[key]) : labels[key];
         break;
       case 'copy': value = interpolate(required(copy[key], ref), values); break;
+      case 'paragraph': {
+        const spec = layout.paragraphs[key];
+        paragraphs[key] = { ...spec, text: interpolate(required(copy[key], ref), values) };
+        return '[[' + ref + ']]';
+      }
+      case 'heading': {
+        const spec = layout.headings[key];
+        headings[key] = { ...spec, text: required(name(spec.name, labels), ref) };
+        return '[[' + ref + ']]';
+      }
       case 'value': value = layout.values?.[key]; break;
       case 'name': value = name(key, labels); break;
       case 'badge': {
@@ -160,14 +178,19 @@ function bindLegacy(card, layout, pack, locale) {
     return escapeXml(required(value, ref));
   });
   if (!used.size) throw new Error('No text bindings for ' + card.id);
-  const erase = layout.vmaxForm ? [...layout.erase, vmaxFormErase(layout.vmaxForm.box)] : layout.erase;
-  return { ...layout, erase, overlay };
+  const inline = sourceInlineIcons(layout.inlineIcons);
+  return {
+    ...layout, overlay,
+    erase: [...layout.erase, ...(layout.vmaxForm ? [vmaxFormErase(layout.vmaxForm.box)] : []), ...inline.erase],
+    ...(layout.inlineIcons && { cutouts: { ...layout.cutouts, ...inline.cutouts } }),
+    ...(layout.paragraphs && { paragraphs }),
+    ...(layout.headings && { headings }),
+  };
 }
 
-function bindTrainer(card, layout, pack, locale) {
-  const labels = labelsFor(locale, pack);
-  const label = (key) => required(labels[key], 'label.' + key);
-  const rule = interpolate(required(pack.rules?.[card.ttype], 'rule.' + card.ttype), { once: 1 });
+function trainerBody(card, layout, pack) {
+  const printing = pack.scan?.[card.id]?.body;
+  if (printing) return printing;
   const effect = effects[layout.effect];
   if (!effect) throw new Error('Unknown effect ' + layout.effect);
   const copy = required(pack.effects?.[layout.effect], 'effect.' + layout.effect);
@@ -178,8 +201,16 @@ function bindTrainer(card, layout, pack, locale) {
       JSON.stringify(icons) !== JSON.stringify([...(effect.icons ?? [])].sort())) {
     throw new IncompleteCopy('Effect tokens do not match ' + layout.effect);
   }
-  const body = interpolate(copy, values);
-  const title = localizedName(locale, 'card', card);
+  return interpolate(copy, values);
+}
+
+function bindTrainer(card, layout, pack, locale) {
+  const labels = labelsFor(locale, pack);
+  const label = (key) => required(labels[key], 'label.' + key);
+  const rule = interpolate(required(pack.rules?.[card.ttype], 'rule.' + card.ttype), { once: 1 });
+  const body = trainerBody(card, layout, pack);
+  const name = localizedName(locale, 'card', card);
+  const title = layout.subtitle ? name.replace(/\s*[（(][^()（）]+[）)]$/u, '') : name;
   const subtitle = layout.subtitle ? localizedName(locale, 'person', { id: layout.subtitle }) : '';
   const category = label(card.ttype), trainer = label('trainer');
   return {
@@ -268,7 +299,9 @@ function bindScan(card, layout, pack, locale) {
     scan: {
       title, titleIcon, headers, body: effectBox, rule, family, inlineIcons, outlineText, trainer, centerEffect, toolIntro, detail,
       detailCopy: detail && {
-        heading: required(copy?.detail?.heading, 'scan.detail.heading.' + card.id),
+        heading: copy?.detail?.heading ?? localizedName(locale, card.power ? 'power' : 'attack', {
+          sourceCardId: card.id, name: card.power?.name ?? card.attacks?.[0]?.name,
+        }),
         effect: required(copy?.detail?.effect, 'scan.detail.effect.' + card.id),
         ability: detail.ability && label('ability'),
         form: detail.form && label('vstarPower'),
@@ -312,14 +345,15 @@ function bindPokemon(card, layout, pack, locale) {
   let special;
   if (layout.special) {
     special = specialKind === 'vmax' ? label(required(layout.vmaxForm?.label, 'vmaxForm.label')) :
-      interpolate(required(pack.pokemonRules?.[specialKind], 'rule.' + specialKind), { name: title.replace(/^超级/u, '') });
+      interpolate(required(pack.pokemonRules?.[specialKind], 'rule.' + specialKind), { name: title.replace(/^超[级級]/u, '') });
   }
   let measure;
   if (layout.measure) {
     const { heightIn, weightLb, dex } = layout.measure;
     const format = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
     measure = [
-      dex && interpolate(label('catalogNo'), { dex }), required(copy.species, 'species') + '宝可梦',
+      dex && interpolate(label('catalogNo'), { dex }),
+      (labels.speciesPrefix ?? '') + required(copy.species, 'species') + (labels.speciesSuffix ?? ''),
       interpolate(label('measure'), { height: format.format(heightIn * 0.0254), weight: format.format(weightLb * 0.45359237) }),
     ].filter(Boolean).join('　');
   }
@@ -335,6 +369,9 @@ function bindPokemon(card, layout, pack, locale) {
 export function cohortIds(cohort = 'all') {
   if (cohort === 'all') return Object.values(cohorts).flat();
   if (cohort === 'catalog') return [...cards().keys()];
+  if (cohort === 'zh-Hant-100') {
+    return Object.keys(readJson(new URL('./data/reviews/zh-Hant-100.json', import.meta.url)).cards);
+  }
   if (!Object.hasOwn(cohorts, cohort)) throw new Error('Unknown card sample group ' + cohort);
   return cohorts[cohort];
 }

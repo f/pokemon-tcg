@@ -316,6 +316,7 @@ export const terms = {
     "Gastly": "鬼斯",
     "Gastrodon": "海兔獸",
     "Genesect V": "蓋諾賽克特V",
+    "Gengar": "耿鬼",
     "Geodude": "小拳石",
     "Gible": "圓陸鯊",
     "Giovanni": "坂木",
@@ -1593,6 +1594,9 @@ export const terms = {
     "Zzzt": "刺痛",
   },
   attackPrinting: {
+    // Taiwan card search, printings SV10 022 and SVOD 008.
+    "sv10-51": {"Dark Frost": "暗黑冰霜"},
+    "sv10-145": {"Metal Stomp": "金屬踩踏"},
     "base1-12": {"Lure": "誘惑"},
     "base1-20": {"Thunderpunch": "雷電拳", "Thundershock": "電擊"},
     "base1-27": {"Leek Slap": "蔥拍", "Pot Smash": "鍋拍"},

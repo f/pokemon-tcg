@@ -394,9 +394,10 @@ export const STRINGS = {
   "ui.settings": "设置",
   "ui.cardImages": "卡图",
   "ui.cardImagesDownload": "下载对应语言的原版卡图",
-  "ui.cardImagesDownloadNote": "仅在当前语言有已配置的图源时下载。两个选项都开启时，优先下载。",
+  "ui.cardImagesCoverage": "已收录 {count}/{total} 张原版卡图，含共用能量卡",
+  "ui.cardImagesDownloadNote": "当前语言只收录了部分卡牌的原版卡图。两个选项都开启时，优先下载原版。",
   "ui.cardImagesGenerate": "按需生成对应语言的卡图",
-  "ui.cardImagesGenerateNote": "版式和译文齐全时，从英文卡图生成。缺少所需资料时显示英文原图。",
+  "ui.cardImagesGenerateNote": "版式和译文齐全时，从英文卡图生成。生成图可能有排版或背景修复瑕疵。缺少资料时显示英文原图。",
   "ui.display": "显示",
   "group.attack": "招式",
   "group.energy": "能量",
@@ -2163,7 +2164,7 @@ export const RULES = `<section><h3><i class="ic ic-target"></i> 获胜目标</h3
 <li><b>宝可梦</b>负责战斗。<b>基础</b>宝可梦可直接上场；<b>1 阶</b>由基础进化，<b>2 阶</b>由 1 阶进化。</li>
 <li><b>能量</b>用于支付招式左侧标示的所需能量。无色（星形）可用任意属性能量支付。</li>
 <li><b>训练家卡</b>可恢复伤害、抽卡、移除对手能量等。现代规则分为物品、支援者、竞技场和宝可梦道具，详见下方经典与现代规则。</li></ul></section>
-<section><h3><i class="ic ic-layers"></i> 如何阅读宝可梦卡</h3><div class="anatomy"><div class="card-wrap"><img src="img/cards/base1/46_hires.webp" alt="${names.card.Charmander}"><span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
+<section><h3><i class="ic ic-layers"></i> 如何阅读宝可梦卡</h3><div class="anatomy"><div class="card-wrap">{charmanderImage}<span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
 <li><b>名称</b>：${names.card.Charmander}（Charmander）。</li><li><b>进化阶段</b>：基础宝可梦可直接放到备战区；1 阶与 2 阶由卡面指定的宝可梦进化。</li>
 <li><b>HP</b>：可承受的伤害。50 HP 表示累计 5 个伤害指示物时昏厥。</li><li><b>属性</b>：此卡为火，影响弱点和抗性。</li>
 <li><b>招式所需能量</b>：须附着的能量符号，星形代表任意属性。</li><li><b>招式名称</b>及下方的效果说明。</li>

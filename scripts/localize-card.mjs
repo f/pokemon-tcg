@@ -22,7 +22,7 @@ Options
   --input PNG       Original scan for a single card. Built-in samples use public/img/cards.
   --recipe FILE     Trusted JS module exporting one recipe or an array of recipes.
   --locale CODE     Card image language (default zh-Hans). Missing packs use the English scan.
-  --group NAME      For all, select initial, extended, expansion, pokemon or catalog.
+  --group NAME      For all, select initial, extended, expansion, pokemon, zh-Hant-100 or catalog.
   --cache-dir DIR   Reuse prepared backgrounds and images in this directory.
   --prefer-printed  Try reviewed images of matching localized printings before rendering.
   --offline         With --prefer-printed, only use already downloaded source images.

@@ -216,9 +216,10 @@ export const STRINGS = {
   'ui.settings': 'Settings', 'ui.display': 'Display',
   "ui.cardImages": "Card images",
   "ui.cardImagesDownload": "Download original card images in my language",
-  "ui.cardImagesDownloadNote": "Uses a configured source for the current language. Downloads take priority when both options are on.",
+  "ui.cardImagesCoverage": "{count}/{total} original card images, including shared Energy cards",
+  "ui.cardImagesDownloadNote": "Original card images are available for some cards in the current language. Downloads take priority when both options are on.",
   "ui.cardImagesGenerate": "Generate card images in my language",
-  "ui.cardImagesGenerateNote": "Uses English art when the layout and translations are complete. Otherwise the English image stays visible.",
+  "ui.cardImagesGenerateNote": "Generates images from English card art when the required data is available. Generated images may have layout or background imperfections. If data is missing, the English image is shown.",
   'group.attack': 'Attack', 'group.energy': 'Energy', 'group.evolve': 'Evolve', 'group.bench': 'Bench', 'group.trainer': 'Trainer cards', 'group.retreat': 'Retreat',
   'ui.tour': 'Tutorial', 'ui.next': 'Next', 'ui.back': 'Back', 'ui.skip': 'Skip tour', 'ui.letsPlay': 'Let’s play!',
   'tour.welcome.t': 'Welcome to the table!',
@@ -1511,7 +1512,7 @@ export const RULES = `
       <li><b>Energy</b> powers attacks. The symbols to the left of an attack are its cost, and the Colorless (star) symbol can be paid with any Energy.</li>
       <li><b>Trainers</b> help you in many ways: healing, drawing cards, removing your opponent's Energy, and more. Modern decks split them into Items, Supporters, Stadiums and Pokémon Tools (see <i>Classic and Modern rules</i>).</li></ul></section>
     <section><h3><i class="ic ic-layers"></i> How to read a Pokémon card</h3>
-      <div class="anatomy"><div class="card-wrap"><img src="img/cards/base1/46_hires.webp" alt="Charmander"><span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
+      <div class="anatomy"><div class="card-wrap">{charmanderImage}<span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
       <li><b>Name</b>: Charmander.</li>
       <li><b>Stage</b>: "Basic Pokémon" can be played straight onto the Bench. Stage 1 and Stage 2 cards evolve from the Pokémon named on them.</li>
       <li><b>HP</b> (Hit Points): how much damage it can take. 50 HP means 5 damage counters Knock it Out.</li>

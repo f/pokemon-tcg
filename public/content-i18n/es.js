@@ -22,8 +22,11 @@ export const sets = {
 };
 
 const person = {
+  ghetsis: 'Ghechis',
   'lt-surge': terms.card['Lt. Surge'],
   marnie: terms.card.Marnie,
+  professorSada: 'Profesora Albora',
+  professorTuro: 'Profesor Turo',
   steven: 'Máximo',
 };
 
@@ -31,6 +34,7 @@ const league = card => `Baraja Combate de Liga de ${card}`;
 
 export const names = {
   ...terms,
+  attack: { ...terms.attack, 'Tongue Slap': 'Golpe de Lengua' },
   person,
   deck: {
     // Spanish retail names for the original Base Set, Jungle and Fossil decks.

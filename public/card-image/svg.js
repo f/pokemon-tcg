@@ -10,10 +10,12 @@ export function composeCardSvg(prepared, recipe, { width = 600, font = 'PingFang
   const [gridWidth, gridHeight] = recipe.grid;
   const overlay = recipe.overlay.replace(/\{\{(\w+)\}\}/g, (_, name) => {
     const emblem = prepared.emblems[name];
-    if (!emblem && recipe.cutouts?.[name]?.mode === 'strip') return '';
+    const spec = recipe.cutouts?.[name];
+    if (!emblem && spec?.mode === 'strip') return '';
     if (!emblem) throw new Error('No prepared emblem named ' + name);
-    const [x, y] = recipe.cutouts[name].position ?? [];
-    return svgImage(x ?? emblem.x, y ?? emblem.y, emblem.width, emblem.height, emblem.uri);
+    const [x, y] = spec.position ?? [];
+    const top = spec.baseline === undefined ? emblem.y : spec.baseline - emblem.height;
+    return svgImage(x ?? emblem.x, y ?? top, emblem.width, emblem.height, emblem.uri);
   });
   const aspect = recipe.scanAspect ? prepared.aspect : gridHeight / gridWidth;
   const height = Math.round(width * aspect);

@@ -213,9 +213,10 @@ export const STRINGS = {
   'ui.settings': 'Ayarlar', 'ui.display': 'Görünüm',
   "ui.cardImages": "Kart görselleri",
   "ui.cardImagesDownload": "Seçili dildeki orijinal kart görsellerini indir",
-  "ui.cardImagesDownloadNote": "Yalnızca seçili dil için tanımlı bir kaynak varsa indirilir. İki seçenek de açıksa indirme önceliklidir.",
+  "ui.cardImagesCoverage": "Ortak Enerji kartları dahil {count}/{total} özgün kart görseli",
+  "ui.cardImagesDownloadNote": "Seçili dilde yalnızca bazı kartların orijinal görselleri bulunur. İki seçenek de açıksa indirme önceliklidir.",
   "ui.cardImagesGenerate": "Seçili dilde gerektiğinde kart görseli oluştur",
-  "ui.cardImagesGenerateNote": "Yerleşim ve çeviri verileri tam olduğunda İngilizce kart görseli kullanılarak oluşturulur. Veri eksikse İngilizce görsel gösterilir.",
+  "ui.cardImagesGenerateNote": "Gerekli veriler varsa İngilizce kart görsellerinden yeni görseller oluşturulur. Yerleşimde veya arka planda kusurlar olabilir. Veri eksikse İngilizce görsel gösterilir.",
   'group.attack': 'Saldırı', 'group.energy': 'Enerji', 'group.evolve': 'Evrim', 'group.bench': 'Yedek', 'group.trainer': 'Eğitmen kartları', 'group.retreat': 'Geri çekilme',
   'ui.tour': 'Eğitim', 'ui.next': 'İleri', 'ui.back': 'Geri', 'ui.skip': 'Turu atla', 'ui.letsPlay': 'Hadi oynayalım!',
   'tour.welcome.t': 'Masaya hoş geldin!',
@@ -1505,7 +1506,7 @@ export const RULES = `
       <li><b>Enerji</b> saldırılara güç verir. Saldırının solundaki semboller bedelidir. Renksiz (yıldız) sembolü herhangi bir Enerjiyle karşılanabilir.</li>
       <li><b>Eğitmen</b> kartları sana birçok şekilde yardım eder: iyileştirme, kart çekme, rakibin Enerjisini attırma ve daha fazlası. Modern destelerde Eşya, Destekçi, Stadyum ve Pokémon Aracı olarak ayrılırlar (bkz. <i>Klasik ve Modern kurallar</i>).</li></ul></section>
     <section><h3><i class="ic ic-layers"></i> Bir Pokémon kartı nasıl okunur?</h3>
-      <div class="anatomy"><div class="card-wrap"><img src="img/cards/base1/46_hires.webp" alt="Charmander"><span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
+      <div class="anatomy"><div class="card-wrap">{charmanderImage}<span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
       <li><b>Ad</b>: Charmander.</li>
       <li><b>Aşama</b>: "Basic Pokémon" (Temel Pokémon) doğrudan Yedek sırasına oynanabilir. Aşama 1 ve Aşama 2 kartları üzerlerinde adı yazan Pokémon’dan evrimleşir.</li>
       <li><b>HP</b> (Can Puanı): ne kadar hasar kaldırabileceği. 50 HP, 5 hasar sayacının onu Nakavt edeceği anlamına gelir.</li>

@@ -17,9 +17,9 @@ import { names as zhHantNames } from '../public/content-i18n/zh-Hant.js';
 import { names as jaNames, sets as jaSets } from '../public/content-i18n/ja.js';
 import { names as esNames, sets as esSets } from '../public/content-i18n/es.js';
 import { names as trNames, sets as trSets } from '../public/content-i18n/tr.js';
-import { cohortIds, resolveCardFace } from '../scripts/card-localization/catalog.mjs';
+import { cohortIds, materializeFace, resolveCardFace } from '../scripts/card-localization/catalog.mjs';
 import { printedCandidates } from '../scripts/card-localization/printed.mjs';
-import { cardImageAsset } from '../scripts/card-localization/runtime-assets.mjs';
+import { cardImageAsset, cardImageCoverageAsset } from '../scripts/card-localization/runtime-assets.mjs';
 import { localizedCardImage } from '../public/card-image/source.js';
 
 let checks = 0;
@@ -49,6 +49,7 @@ for (const lang of LANGS) {
     checks++;
   }
   check(Boolean(RULES_HTML[lang]), `${lang}: missing rules`);
+  check(dict.RULES.includes('{charmanderImage}'), `${lang}: missing rule illustration slot`);
 }
 validHTML(ja.RULES, 'ja rules');
 assert.deepEqual(params(ja.RULES), params(en.RULES), 'ja: rules parameters');
@@ -59,8 +60,6 @@ for (const [lang, dict] of [['zh-Hans', zhHans], ['zh-Hant', zhHant]]) {
     if (value.includes('<')) validHTML(value, `${lang}.${key}`);
   }
   assert.deepEqual(params(dict.RULES), params(en.RULES), `${lang}: rules parameters`);
-  assert.deepEqual([...dict.RULES.matchAll(/src="([^"]+)"/g)].map((m) => m[1]),
-    [...en.RULES.matchAll(/src="([^"]+)"/g)].map((m) => m[1]), `${lang}: original rule illustration`);
   check(dict.RULES.includes('data-dice-chart'), `${lang}: missing dice chart`);
   validHTML(dict.RULES, `${lang} rules`);
   const simplified = lang === 'zh-Hans';
@@ -240,8 +239,44 @@ for (const layout of Object.values(faceLayouts)) {
   for (const { kind, name } of Object.values(layout.nameRefs ?? {})) nameFields[kind]?.add(name);
 }
 for (const id of cohortIds('catalog')) {
-  check(resolveCardFace(id, 'zh-Hans').actualLocale === 'zh-Hans', `${id}: complete Simplified Chinese card face`);
+  const simplified = resolveCardFace(id, 'zh-Hans');
+  const traditional = resolveCardFace(id, 'zh-Hant');
+  check(simplified.actualLocale === 'zh-Hans', `${id}: complete Simplified Chinese card face`);
+  check(traditional.actualLocale === 'zh-Hant' && traditional.shared === simplified.shared,
+    `${id}: complete Traditional Chinese card face with the same shared Energy rules`);
+  for (const locale of ['ja', 'es', 'tr']) {
+    const face = resolveCardFace(id, locale);
+    check(face.actualLocale === locale && face.shared === simplified.shared,
+      `${id}: complete ${locale} card face with the same shared Energy rules`);
+    if (face.recipe) check(Boolean(materializeFace(face).overlay), `${id}: renderable ${locale} card face`);
+  }
 }
+const traditionalSample = cohortIds('zh-Hant-100');
+check(traditionalSample.length === 100, '100 Traditional Chinese card face samples');
+for (const id of traditionalSample) {
+  const face = resolveCardFace(id, 'zh-Hant');
+  check(Boolean(face.recipe && materializeFace(face).overlay), `${id}: renderable Traditional Chinese card face`);
+}
+for (const locale of ['zh-Hans', 'zh-Hant']) {
+  const resolved = resolveCardFace('sm12-156', locale);
+  const face = materializeFace(resolved);
+  check(!face.overlay.includes('[[paragraph.') && face.overlay.split('{{inline_water}}').length === 2 &&
+    face.cutouts.inline_water.shape === 'outlined',
+  `${locale}: TAG TEAM attack copy flows around the original inline Water symbol`);
+  const heading = resolved.recipe.headings.alteredCreation;
+  const longer = materializeFace({ ...resolved, recipe: {
+    ...resolved.recipe, headings: { alteredCreation: { ...heading, text: heading.text + '甲乙' } },
+  } });
+  const logo = face.cutouts.gxAttackMark;
+  check(face.overlay.includes('</text>{{gxAttackMark}}') && logo.baseline === heading.position[1] &&
+    logo.position[0] < logo.box[0] && longer.cutouts.gxAttackMark.position[0] > logo.position[0],
+  `${locale}: the original GX mark follows the measured attack heading on its baseline`);
+}
+const meowthFace = materializeFace(resolveCardFace('me3-62', 'zh-Hans'));
+const [meowthAbility] = meowthFace.pokemon.content.moves;
+const abilityPosition = meowthFace.overlay.match(new RegExp(`<text x="([\\d.]+)"[^>]*>${meowthAbility.heading}</text>`));
+check(Number(abilityPosition?.[1]) >= 80 && meowthFace.erase.some(([x, y]) => x > 77 && y > 183 && y < 187),
+  'Meowth ex preserves the full ability tab and places the heading to its right');
 for (const id of ['base1-98', 'sm1-167', 'sm2-168']) {
   const face = resolveCardFace(id, 'zh-Hans');
   check(face.shared && !face.recipe && face.input === resolveCardFace(id, 'en').input, `${id}: shared basic Energy image`);
@@ -270,13 +305,32 @@ const futureTool = resolveCardFace('sv4-164', 'zh-Hans').recipe;
 check(futureTool.scan.outlineText && futureTool.repeatRows?.period > 0, 'Future tool retains outlined text over the repeating grid');
 check(printedCandidates('zh-Hans', 'swsh5-141', 734).length > 1, 'multiple reviewed localized printings for one English ID');
 check(printedCandidates('zh-Hans', 'swsh5-88', 2400).length === 0, 'exclude source scans smaller than requested');
-check(printedCandidates('zh-Hant', 'swsh5-88', 600).length === 0, 'exclude images in a different locale');
+check(printedCandidates('tr', 'swsh5-88', 600).length === 0, 'exclude images in a different locale');
 const runtimePrinted = JSON.parse(cardImageAsset('zh-Hans', 'printed')).cards;
 const runtimeRecipes = JSON.parse(cardImageAsset('zh-Hans', 'recipes')).cards;
+const taiwanPrinted = JSON.parse(cardImageAsset('zh-Hant', 'printed')).cards;
+check(taiwanPrinted['me3-62']?.[0].url.startsWith('https://asia.pokemon-card.com/tw/card-img/') &&
+  taiwanPrinted['sm1-113']?.some((image) => image.url.startsWith('https://media.52poke.com/')) &&
+  taiwanPrinted['swsh1-179']?.some((image) => image.site === 'TCGdex' && image.height === 825),
+  'Traditional Chinese manifest includes reviewed official, community and TCGdex scans');
 check(Boolean(runtimePrinted['sv6-141']?.[0].url) && Boolean(runtimeRecipes['sv6-141']),
   'a card may have both a configured download and a complete generation recipe');
 check(!runtimePrinted['sm2-168'] && !runtimeRecipes['sm2-168'], 'shared Energy artwork has no localized work to do');
-check(!cardImageAsset('ja', 'recipes') && !cardImageAsset('en', 'printed'), 'omit unconfigured locale assets');
+for (const locale of ['ja', 'es', 'tr']) {
+  const recipes = JSON.parse(cardImageAsset(locale, 'recipes')).cards;
+  check(Boolean(recipes['me3-62']) && !recipes['sm2-168'], `${locale}: publish generation recipes and omit shared scans`);
+}
+const coverage = JSON.parse(cardImageCoverageAsset());
+const catalog = cohortIds('catalog');
+const sharedImages = catalog.filter((id) => resolveCardFace(id, 'en').shared).length;
+check(coverage.total === catalog.length && coverage.byLocale.en === coverage.total, 'English card image coverage includes the catalog');
+for (const locale of ['ja', 'es', 'tr', 'zh-Hans', 'zh-Hant']) {
+  const printed = cardImageAsset(locale, 'printed');
+  const count = printed ? Object.keys(JSON.parse(printed).cards).length : 0;
+  check(coverage.byLocale[locale] === count + sharedImages, `${locale}: count unique downloaded printings and shared Energy`);
+  if (locale === 'ja' || locale === 'es') check(count > 0, `${locale}: publish reviewed original image links`);
+}
+check(!cardImageAsset('en', 'printed') && !cardImageAsset('en', 'recipes'), 'omit English localization assets');
 check(await localizedCardImage({ id: 'sv6-141', source: 'unused' }, {
   locale: 'en', downloads: true, generation: true, signal: new AbortController().signal,
 }) === undefined, 'English skips both card image paths even with both preferences enabled');

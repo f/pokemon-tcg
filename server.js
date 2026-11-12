@@ -264,10 +264,11 @@ const server = createServer(async (req, res) => {
   if (url.pathname === '/api/engine/stop' && req.method === 'POST') { stopLocal(); return send(res, 200, await engineState()); }
   if (req.method === 'GET') {
     const asset = /^\/card-image\/data\/(printed|recipes)\/([\w-]+)\.json$/.exec(url.pathname);
-    if (asset) {
+    const coverage = url.pathname === '/card-image/data/coverage.json';
+    if (asset || coverage) {
       try {
-        const { cardImageAsset } = await import('./scripts/card-localization/runtime-assets.mjs');
-        const json = cardImageAsset(asset[2], asset[1]);
+        const { cardImageAsset, cardImageCoverageAsset } = await import('./scripts/card-localization/runtime-assets.mjs');
+        const json = coverage ? cardImageCoverageAsset() : cardImageAsset(asset[2], asset[1]);
         return json ? send(res, 200, json) : send(res, 404, { error: 'No localized card image data' });
       } catch (error) {
         console.error('Cannot load card image configuration:', error.message);

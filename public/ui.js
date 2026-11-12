@@ -4,6 +4,7 @@ import { AIController, rankActions, aiConfig } from './ai.js';
 import { RPS_CANCEL, chooseThrow, showdown, rpsReset, rpsClose } from './rps.js';
 import { api, inApp, online, webOnly, MAC_DOWNLOAD } from './api.js';
 import { bindCardImage, cardImageAttrs, refreshCardImages } from './card-image/display.js';
+import { requestCardImage } from './card-image/request.js';
 
 if (inApp) document.documentElement.classList.add('in-app'); // the macOS app (see the in-app rules in style.css)
 import { t, setLang, getLang, cardName, attackName, powerName, termName, deckName, resolve, RULES_HTML } from './i18n.js';
@@ -70,7 +71,10 @@ function applyStaticText() {
     b.classList.toggle('on', active);
     b.setAttribute('aria-pressed', String(active));
   });
-  $('#rules-body').innerHTML = (RULES_HTML[getLang()] || RULES_HTML.en).replace('{classic}', counts.classic).replace('{modern}', counts.modern); // deck counts stay right as decks are added
+  const charmander = CARDS['base1-46'];
+  $('#rules-body').innerHTML = (RULES_HTML[locale] || RULES_HTML.en)
+    .replace('{classic}', counts.classic).replace('{modern}', counts.modern)
+    .replace('{charmanderImage}', () => `<img ${cardImageAttrs(charmander, { large: true })} alt="${esc(cardName(charmander))}">`);
   const slot = $('#rules-body [data-dice-chart]');
   if (slot) slot.innerHTML = diceChart();
   $('#dice-label').textContent = t('ui.diceStyle').replace(/\s*[:：]\s*$/, ''); // a row label, not a prompt
@@ -900,6 +904,27 @@ function openSettings() {
   engineBoxHtml = '';
   renderEngineBox();
   refreshEngine();
+  void refreshCardImageCoverage();
+}
+
+let cardImageCoverageRequest;
+async function refreshCardImageCoverage() {
+  const badge = $('#card-images-coverage');
+  badge.hidden = true;
+  const url = new URL('card-image/data/coverage.json', document.baseURI);
+  cardImageCoverageRequest ??= requestCardImage(url, (response) => {
+    if (!response.ok) throw new Error('Card image coverage unavailable');
+    return response.json();
+  }).catch(() => {
+    cardImageCoverageRequest = undefined;
+  });
+  const coverage = await cardImageCoverageRequest;
+  const count = coverage?.byLocale?.[getLang()];
+  if (!Number.isInteger(count) || !Number.isInteger(coverage.total)) return;
+  badge.textContent = count + '/' + coverage.total;
+  badge.title = t('ui.cardImagesCoverage', { count, total: coverage.total });
+  badge.setAttribute('aria-label', badge.title);
+  badge.hidden = false;
 }
 
 // ---------------- Drag and drop from the hand ----------------
@@ -2616,6 +2641,7 @@ function switchLanguage(lang) {
   if (!setLang(lang)) return;
   syncCardImages();
   applyStaticText();
+  if (!$('#settings').hidden) void refreshCardImageCoverage();
   renderDeckChoices();
   render();
   renderLog();

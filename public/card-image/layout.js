@@ -1,4 +1,4 @@
-import { faceText, fitTitle, layoutParagraph } from './flow.js';
+import { faceText, fitTitle, fitTitleLayout, layoutParagraph } from './flow.js';
 import { drawInlineIcon, pokemonOverlay, spreadAbilityLabel } from './pokemon.js';
 
 export const modernTrainerBodyTop = 188;
@@ -21,8 +21,8 @@ function scanOverlay(recipe, font) {
       overlay += faceText(headerCopy[key], x, y + h * 0.78, {
         size: 7.5, weight: 820, skew: -14, fill: '#11648e', outline: '#fcfcfb', outlineWidth: 1.15,
       });
-      overlay += fitTitle(toolIntro[0], 100, 190.15, 123, font, 6.15, { minSize: 5.25, weight: 540 });
-      overlay += fitTitle(toolIntro[1], 21, 198.95, 202, font, 6.15, { minSize: 5.25, weight: 540 });
+      overlay += fitTitle(toolIntro[0], 100, 190.15, 123, font, 6.15, { minSize: 3.8, weight: 540 });
+      overlay += fitTitle(toolIntro[1], 21, 198.95, 202, font, 6.15, { minSize: 3.8, weight: 540 });
       continue;
     }
     const size = Math.min(11, h * 1.05);
@@ -69,18 +69,38 @@ function scanOverlay(recipe, font) {
 }
 
 export function materializeFace({ recipe, font }) {
+  if (recipe.paragraphs || recipe.headings) {
+    const cutouts = { ...recipe.cutouts };
+    const inlineIcon = (type, x, baseline, size) => drawInlineIcon(recipe.inlineIcons, type, x, baseline, size);
+    const overlay = recipe.overlay.replace(/\[\[(paragraph|heading)\.(\w+)\]\]/g, (_, kind, key) => {
+      if (kind === 'paragraph') {
+        const { text, box, ...style } = recipe.paragraphs[key];
+        return layoutParagraph(text, box, font, { ...style, inlineIcon });
+      }
+      const { text, position: [x, baseline], width, size, emblem, ...style } = recipe.headings[key];
+      const source = cutouts[emblem];
+      const gap = 2.5;
+      const heading = fitTitleLayout(text, x, baseline, width - source.box[2] - gap, font, size, style);
+      cutouts[emblem] = { ...source, position: [x + heading.advance + gap], baseline };
+      return heading.markup + '{{' + emblem + '}}';
+    });
+    return { ...recipe, overlay, cutouts };
+  }
   if (recipe.overlay !== undefined) return recipe;
   if (recipe.pokemon) return pokemonOverlay(recipe, font);
   if (recipe.scan) return scanOverlay(recipe, font);
   const c = recipe.content;
   let overlay;
   if (recipe.profile === 'modernTrainer') {
+    const subtitle = c.subtitle && fitTitleLayout(c.subtitle, 229, 38.5, 76, font, 7.7,
+      { minSize: 5, weight: 550, skew: true, anchor: 'end' });
+    const titleWidth = subtitle ? 209 - subtitle.advance : 214;
     overlay = modernTrainerCategory(c.category, c.color) +
       faceText(c.trainer, 229, 19.4, { size: 9.7, weight: 760, fill: '#454548', skew: true, anchor: 'end' }) +
-      fitTitle(c.title, 15, 40, c.subtitle ? 154 : 214, font) +
-      (c.subtitle ? faceText(c.subtitle, 229, 38.5, { size: 7.7, weight: 550, skew: true, anchor: 'end' }) : '') +
-      layoutParagraph(c.body, [19, modernTrainerBodyTop, 208, 97], font, { size: 9.4, minSize: 7.5, alignTop: true }) +
-      layoutParagraph(c.rule, [93, 302, 136, 25], font, { size: 6.8, minSize: 5.3 });
+      fitTitle(c.title, 15, 40, titleWidth, font, 15.8, { minSize: 7.4 }) +
+      (subtitle ? subtitle.markup : '') +
+      layoutParagraph(c.body, [19, modernTrainerBodyTop, 208, 97], font, { size: 9.4, minSize: 5.3, alignTop: true }) +
+      layoutParagraph(c.rule, [93, 302, 136, 25], font, { size: 6.8, minSize: 4.1 });
   } else if (recipe.profile === 'sveEnergy') {
     overlay = faceText(c.basicEnergy, 15, 18.7, { size: 8.1, fill: '#373638', weight: 760, skew: true }) +
       faceText(c.energy, 222, 19.1, { size: 10.5, fill: '#373638', weight: 780, anchor: 'end', skew: true }) +

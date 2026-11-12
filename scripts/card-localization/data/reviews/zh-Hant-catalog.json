@@ -1,0 +1,4472 @@
+{
+  "version": 1,
+  "cards": {
+    "me5-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19201/",
+      "printing": "M5-57",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-116": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/20006/",
+      "printing": "M6a-94",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "me55-118": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19696/",
+      "printing": "MF-26",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me4-30": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/18450/",
+      "printing": "M4-30",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19678/",
+      "printing": "MF-8",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19679/",
+      "printing": "MF-9",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19963/",
+      "printing": "M6a-51",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "me55-100": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19991/",
+      "printing": "M6a-79",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19677/",
+      "printing": "MF-7",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "me4-12": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/18432/",
+      "printing": "M4-12",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-117": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19695/",
+      "printing": "MF-25",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me4-11": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/18431/",
+      "printing": "M4-11",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-114": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19694/",
+      "printing": "MF-24",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-11": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19918/",
+      "printing": "M6a-6",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "me55-13": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19676/",
+      "printing": "MF-6",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me55-106": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/19997/",
+      "printing": "M6a-85",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "me2-44": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14113/",
+      "printing": "MBD-9",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-39": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14108/",
+      "printing": "MBD-4",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-63": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14065/",
+      "printing": "M1S-45",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-40": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14109/",
+      "printing": "MBD-5",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "mep-26": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14127/",
+      "printing": "MBD-23",
+      "fields": [
+        "moves.0",
+        "flavor"
+      ]
+    },
+    "me2-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14112/",
+      "printing": "MBD-8",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-42": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14111/",
+      "printing": "MBD-7",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-62": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14064/",
+      "printing": "M1S-44",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-45": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14357/",
+      "printing": "M2-39",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-69": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14136/",
+      "printing": "MBG-8",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-54": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14129/",
+      "printing": "MBG-1",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14130/",
+      "printing": "MBG-2",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "mep-27": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14151/",
+      "printing": "MBG-23",
+      "fields": [
+        "flavor"
+      ]
+    },
+    "me2-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14134/",
+      "printing": "MBG-6",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-62": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14370/",
+      "printing": "M2-52",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me2-67": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14374/",
+      "printing": "M2-56",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/16842/",
+      "printing": "MC-371",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-72": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/13981/",
+      "printing": "M1L-24",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/13985/",
+      "printing": "M1L-28",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-75": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/13984/",
+      "printing": "M1L-27",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-156": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7996/",
+      "printing": "SV2P-56",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh7-16": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/611/",
+      "printing": "S6a-10",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv2-14": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7873/",
+      "printing": "SV1a-6",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh45-14": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1541/",
+      "printing": "SCB-16",
+      "fields": [
+        "species"
+      ]
+    },
+    "sv2-15": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7874/",
+      "printing": "SV1a-7",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv2-12": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7871/",
+      "printing": "SV1a-4",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me4-21": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/18441/",
+      "printing": "M4-21",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me1-32": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/14035/",
+      "printing": "M1S-15",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "me3-20": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/17997/",
+      "printing": "M3-20",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3pt5-38": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8161/",
+      "printing": "SV2a-38",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv2-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7878/",
+      "printing": "SV1a-11",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh12-21": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7047/",
+      "printing": "S12-10",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh12-22": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7048/",
+      "printing": "S12-11",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sv10-143": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12586/",
+      "printing": "SVOD-6",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-207": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12601/",
+      "printing": "SVOD-21",
+      "fields": [
+        "flavor"
+      ]
+    },
+    "sv10-86": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12583/",
+      "printing": "SVOD-3",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-84": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12582/",
+      "printing": "SVOD-2",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-144": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12587/",
+      "printing": "SVOD-7",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-134": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12608/",
+      "printing": "SVO-5",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-135": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12609/",
+      "printing": "SVO-6",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-130": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12604/",
+      "printing": "SVO-1",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-132": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12606/",
+      "printing": "SVO-3",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-96": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10059/",
+      "printing": "SVHK-8",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-119": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/17021/",
+      "printing": "MC-550",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-120": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/17022/",
+      "printing": "MC-551",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv5-98": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10060/",
+      "printing": "SVHK-9",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-108": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8926/",
+      "printing": "SV4K-42",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv2-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7966/",
+      "printing": "SV2P-26",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-51": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7587/",
+      "printing": "SV1S-17",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7964/",
+      "printing": "SV2P-24",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-153": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12190/",
+      "printing": "SVM-120",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7776/",
+      "printing": "SVAW-2",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-53": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7777/",
+      "printing": "SVAW-3",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-118": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7615/",
+      "printing": "SV1S-45",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sv2-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8096/",
+      "printing": "SVC-7",
+      "fields": [
+        "species"
+      ]
+    },
+    "sv2-75": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8097/",
+      "printing": "SVC-8",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv3pt5-145": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8268/",
+      "printing": "SV2a-145",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv5-61": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10079/",
+      "printing": "SVHM-4",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-139": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10085/",
+      "printing": "SVHM-10",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-79": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10083/",
+      "printing": "SVHM-8",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-121": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/17023/",
+      "printing": "MC-552",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-122": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/17024/",
+      "printing": "MC-553",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv1-90": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7600/",
+      "printing": "SV1S-30",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-89": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8385/",
+      "printing": "SVD-52",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-103": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7607/",
+      "printing": "SV1S-37",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-101": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7605/",
+      "printing": "SV1S-35",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-162": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7715/",
+      "printing": "SV1V-67",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-100": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7907/",
+      "printing": "SV1a-40",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-31": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8046/",
+      "printing": "SV2D-35",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv2-103": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7909/",
+      "printing": "SV1a-42",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-109": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/9130/",
+      "printing": "SV4a-102",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv1-164": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7716/",
+      "printing": "SV1V-68",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sv1-124": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7809/",
+      "printing": "SV-P-10",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-155": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7735/",
+      "printing": "SVAL-9",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-17": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7758/",
+      "printing": "SVAM-9",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "sv1-107": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7697/",
+      "printing": "SV1V-49",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-111": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7609/",
+      "printing": "SV1S-39",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-110": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7608/",
+      "printing": "SV1S-38",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-157": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7810/",
+      "printing": "SV-P-11",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-108": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7698/",
+      "printing": "SV1V-50",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-112": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7757/",
+      "printing": "SVAM-8",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-16": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7733/",
+      "printing": "SVAL-7",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "svp-15": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7827/",
+      "printing": "SV-P-19",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-165": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7736/",
+      "printing": "SVAL-10",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-79": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7595/",
+      "printing": "SV1S-25",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-66": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7731/",
+      "printing": "SVAL-5",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-80": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7807/",
+      "printing": "SV-P-8",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-69": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7734/",
+      "printing": "SVAL-8",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-150": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7635/",
+      "printing": "SV1S-65",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-149": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7634/",
+      "printing": "SV1S-64",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-148": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7633/",
+      "printing": "SV1S-63",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-77": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7593/",
+      "printing": "SV1S-23",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-46": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7891/",
+      "printing": "SV1a-24",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-56": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8360/",
+      "printing": "SVD-27",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8361/",
+      "printing": "SVD-28",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-54": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8362/",
+      "printing": "SVD-29",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv3-45": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8355/",
+      "printing": "SVD-22",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-54": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7778/",
+      "printing": "SVAW-4",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8363/",
+      "printing": "SVD-30",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8364/",
+      "printing": "SVD-31",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-45": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7957/",
+      "printing": "SV2P-17",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-46": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7585/",
+      "printing": "SV1S-15",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-30": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7968/",
+      "printing": "SV2P-28",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv1-47": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7586/",
+      "printing": "SV1S-16",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7965/",
+      "printing": "SV2P-25",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-44": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7956/",
+      "printing": "SV2P-16",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh11-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6260/",
+      "printing": "S10D-28",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sv1-86": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7598/",
+      "printing": "SV1S-28",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh12-68": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8631/",
+      "printing": "SVF-7",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh9-40": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5441/",
+      "printing": "S9-30",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh12-67": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8630/",
+      "printing": "SVF-6",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh9-120": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5492/",
+      "printing": "S9-81",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh10-51": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7269/",
+      "printing": "S12a-45",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh12-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7070/",
+      "printing": "S12-33",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh12-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7071/",
+      "printing": "S12-34",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh12-56": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7069/",
+      "printing": "S12-32",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sv3pt5-146": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10730/",
+      "printing": "SVTL-4",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3pt5-17": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8140/",
+      "printing": "SV2a-17",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3pt5-16": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8139/",
+      "printing": "SV2a-16",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-36": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7886/",
+      "printing": "SV1a-19",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7884/",
+      "printing": "SV1a-17",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4pt5-9": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8746/",
+      "printing": "SVEL-1",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4pt5-10": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8747/",
+      "printing": "SVEL-2",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-38": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7730/",
+      "printing": "SVAL-4",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-142": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8347/",
+      "printing": "SVD-14",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv6-129": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10494/",
+      "printing": "SV6-80",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-128": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10493/",
+      "printing": "SV6-79",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-71": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8770/",
+      "printing": "SVEM-4",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-131": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10496/",
+      "printing": "SV6-82",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-72": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8771/",
+      "printing": "SVEM-5",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-145": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7991/",
+      "printing": "SV2P-51",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-144": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7990/",
+      "printing": "SV2P-50",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-104": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8418/",
+      "printing": "SVD-85",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv3-152": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8417/",
+      "printing": "SVD-84",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-151": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7995/",
+      "printing": "SV2P-55",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv1-142": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8420/",
+      "printing": "SVD-87",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-154": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8566/",
+      "printing": "SV3-83",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-136": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8835/",
+      "printing": "SV3a-48",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv1-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7578/",
+      "printing": "SV1S-8",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sv3-174": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8431/",
+      "printing": "SVD-98",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-4": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7751/",
+      "printing": "SVAM-2",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-22": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7577/",
+      "printing": "SV1S-7",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8238/",
+      "printing": "SV2a-115",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv3-168": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8576/",
+      "printing": "SV3-93",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-3": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7750/",
+      "printing": "SVAM-1",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-5": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8488/",
+      "printing": "SV3-5",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv1-21": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7576/",
+      "printing": "SV1S-6",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-167": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8575/",
+      "printing": "SV3-92",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-121": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12815/",
+      "printing": "SV10-65",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-19": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12758/",
+      "printing": "SV10-8",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv10-120": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/12814/",
+      "printing": "SV10-64",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-166": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8574/",
+      "printing": "SV3-91",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-133": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8555/",
+      "printing": "SV3-72",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-103": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8405/",
+      "printing": "SVD-72",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv3-131": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8554/",
+      "printing": "SV3-71",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-122": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8936/",
+      "printing": "SV4K-52",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv4-13": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8892/",
+      "printing": "SV4K-8",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-137": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7923/",
+      "printing": "SV1a-56",
+      "fields": [
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-130": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8553/",
+      "printing": "SV3-70",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-67": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8093/",
+      "printing": "SVC-4",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "svp-143": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8379/",
+      "printing": "SVD-46",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv4pt5-19": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8149/",
+      "printing": "SV2a-26",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sv2-66": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8092/",
+      "printing": "SVC-3",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10279/",
+      "printing": "SV5a-32",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10078/",
+      "printing": "SVHM-3",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-68": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8517/",
+      "printing": "SV3-34",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-69": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8518/",
+      "printing": "SV3-35",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8801/",
+      "printing": "SV3a-14",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-78": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8035/",
+      "printing": "SV2D-24",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4-68": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8806/",
+      "printing": "SV3a-19",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sv3-67": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8516/",
+      "printing": "SV3-33",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10077/",
+      "printing": "SVHM-2",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv5-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/9870/",
+      "printing": "SV5M-29",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-2": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8485/",
+      "printing": "SV3-2",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv4pt5-3": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8887/",
+      "printing": "SV4K-3",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3-1": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8484/",
+      "printing": "SV3-1",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-12": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10420/",
+      "printing": "SV6-6",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-1": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10248/",
+      "printing": "SV5a-1",
+      "fields": [
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-2": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10249/",
+      "printing": "SV5a-2",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv6-13": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/10421/",
+      "printing": "SV6-7",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv2-7": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7868/",
+      "printing": "SV1a-1",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species",
+        "flavor"
+      ]
+    },
+    "sv3pt5-45": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/8168/",
+      "printing": "SV2a-45",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-127": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2364/",
+      "printing": "SC1a-96",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-127": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2367/",
+      "printing": "SC1a-99",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-148": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2550/",
+      "printing": "SC1b-128",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-96": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2339/",
+      "printing": "SC1a-71",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-143": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2545/",
+      "printing": "SC1b-123",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-131": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2372/",
+      "printing": "SC1a-104",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-144": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2546/",
+      "printing": "SC1b-124",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-145": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2547/",
+      "printing": "SC1b-125",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-139": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/236/",
+      "printing": "S4a-136",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/142/",
+      "printing": "S4a-42",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-62": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2619/",
+      "printing": "SC1D-44",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-61": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2508/",
+      "printing": "SC1b-86",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2614/",
+      "printing": "SC1D-39",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2615/",
+      "printing": "SC1D-40",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-44": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2482/",
+      "printing": "SC1b-60",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2608/",
+      "printing": "SC1D-33",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2492/",
+      "printing": "SC1b-70",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2613/",
+      "printing": "SC1D-38",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-5": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2581/",
+      "printing": "SC1D-6",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-21": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2452/",
+      "printing": "SC1b-30",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-20": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/115/",
+      "printing": "S4a-14",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-11": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2585/",
+      "printing": "SC1D-10",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-7": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2438/",
+      "printing": "SC1b-16",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-15": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2587/",
+      "printing": "SC1D-12",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-140": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2707/",
+      "printing": "SC1D-132",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-13": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2586/",
+      "printing": "SC1D-11",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-6": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2582/",
+      "printing": "SC1D-7",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh3-84": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1136/",
+      "printing": "SC2b-47",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh3-85": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1137/",
+      "printing": "SC2b-48",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-94": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/190/",
+      "printing": "S4a-90",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh3-98": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/191/",
+      "printing": "S4a-91",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-93": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1151/",
+      "printing": "SC2b-62",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-94": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1152/",
+      "printing": "SC2b-63",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh3-97": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1161/",
+      "printing": "SC2b-72",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-111": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/203/",
+      "printing": "S4a-103",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-100": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2338/",
+      "printing": "SC1a-70",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-49": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/994/",
+      "printing": "SC2a-50",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-48": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/993/",
+      "printing": "SC2a-49",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh3-44": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/138/",
+      "printing": "S4a-38",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1103/",
+      "printing": "SC2b-14",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1111/",
+      "printing": "SC2b-22",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh3-133": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1065/",
+      "printing": "SC2a-121",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-42": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2494/",
+      "printing": "SC1b-72",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-37": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/134/",
+      "printing": "S4a-33",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-44": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2496/",
+      "printing": "SC1b-74",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh3-50": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/995/",
+      "printing": "SC2a-51",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-134": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2377/",
+      "printing": "SC1a-109",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-135": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/232/",
+      "printing": "S4a-132",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-151": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/251/",
+      "printing": "S4a-151",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-138": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2388/",
+      "printing": "SC1a-120",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-130": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2373/",
+      "printing": "SC1a-105",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-131": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2374/",
+      "printing": "SC1a-106",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-133": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2376/",
+      "printing": "SC1a-108",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-150": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/250/",
+      "printing": "S4a-150",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-140": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/238/",
+      "printing": "S4a-138",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-41": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/319/",
+      "printing": "S4-28",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-42": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/320/",
+      "printing": "S4-29",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-38": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/316/",
+      "printing": "S4-25",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-40": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/318/",
+      "printing": "S4-27",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/312/",
+      "printing": "S4-21",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-39": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/317/",
+      "printing": "S4-26",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-33": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/311/",
+      "printing": "S4-20",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-149": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2714/",
+      "printing": "SC1D-139",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-154": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/253/",
+      "printing": "S4a-153",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2593/",
+      "printing": "SC1D-18",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-33": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2600/",
+      "printing": "SC1D-25",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-31": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2599/",
+      "printing": "SC1D-24",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-22": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2592/",
+      "printing": "SC1D-17",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-153": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2717/",
+      "printing": "SC1D-142",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh4-25": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/303/",
+      "printing": "S4-12",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/301/",
+      "printing": "S4-10",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-24": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/302/",
+      "printing": "S4-11",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh3-140": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1197/",
+      "printing": "SC2b-108",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/306/",
+      "printing": "S4-15",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-27": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/305/",
+      "printing": "S4-14",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-6": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/958/",
+      "printing": "SC2a-14",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-7": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/959/",
+      "printing": "SC2a-15",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/145/",
+      "printing": "S4a-45",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-53": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/146/",
+      "printing": "S4a-46",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH101": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1553/",
+      "printing": "SCB-28",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh35-11": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/982/",
+      "printing": "SC2a-38",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh45-26": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1567/",
+      "printing": "SCB-42",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh45-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1569/",
+      "printing": "SCB-44",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh35-12": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/983/",
+      "printing": "SC2a-39",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh45-25": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1565/",
+      "printing": "SCB-40",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-8": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2584/",
+      "printing": "SC1D-9",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh45-15": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1542/",
+      "printing": "SCB-17",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-18": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/298/",
+      "printing": "S4-7",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-6": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2427/",
+      "printing": "SC1b-5",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-17": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/297/",
+      "printing": "S4-6",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swshp-SWSH100": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1526/",
+      "printing": "SCB-1",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh45-1": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1531/",
+      "printing": "SCB-6",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh45-2": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1532/",
+      "printing": "SCB-7",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-64": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1001/",
+      "printing": "SC2a-57",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-63": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1000/",
+      "printing": "SC2a-56",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-91": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/187/",
+      "printing": "S4a-87",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-90": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/186/",
+      "printing": "S4a-86",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-89": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/185/",
+      "printing": "S4a-85",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swshp-SWSH105": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1008/",
+      "printing": "SC2a-64",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh3-71": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1007/",
+      "printing": "SC2a-63",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh3-70": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1006/",
+      "printing": "SC2a-62",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-87": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2323/",
+      "printing": "SC1a-55",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh5-91": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/501/",
+      "printing": "S5I-40",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh5-90": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/500/",
+      "printing": "S5I-39",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-86": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/181/",
+      "printing": "S4a-81",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2306/",
+      "printing": "SC1a-38",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-77": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2307/",
+      "printing": "SC1a-39",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh5-89": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/499/",
+      "printing": "S5I-38",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-147": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2399/",
+      "printing": "SC1a-131",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/125/",
+      "printing": "S4a-24",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-146": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2710/",
+      "printing": "SC1D-135",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-32": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/124/",
+      "printing": "S4a-23",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-30": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/123/",
+      "printing": "S4a-22",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-29": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2598/",
+      "printing": "SC1D-23",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH104": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2467/",
+      "printing": "SC1b-45",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh6-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/424/",
+      "printing": "S5a-33",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh6-77": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/425/",
+      "printing": "S5a-34",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh2-95": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2332/",
+      "printing": "SC1a-64",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH199": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/834/",
+      "printing": "S7D-24",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh8-138": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/56/",
+      "printing": "S8-55",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh8-139": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/57/",
+      "printing": "S8-56",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh9-125": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5497/",
+      "printing": "S9-86",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh6-71": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/421/",
+      "printing": "S5a-30",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh6-73": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/423/",
+      "printing": "S5a-32",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh6-72": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/422/",
+      "printing": "S5a-31",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "pgo-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6567/",
+      "printing": "S10b-34",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH223": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6563/",
+      "printing": "S10b-30",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh9-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6876/",
+      "printing": "SPD-3",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh9-30": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5714/",
+      "printing": "SI-85",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh9-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5454/",
+      "printing": "S9-43",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh9-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5455/",
+      "printing": "S9-44",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh6-64": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/769/",
+      "printing": "S6K-29",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH266": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6878/",
+      "printing": "SPD-5",
+      "fields": [
+        "moves.0"
+      ]
+    },
+    "swsh10-64": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6259/",
+      "printing": "S10D-27",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh10-63": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6258/",
+      "printing": "S10D-26",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh10-61": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6082/",
+      "printing": "S9a-33",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh10-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6081/",
+      "printing": "S9a-32",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh7-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/411/",
+      "printing": "S5a-20",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh4-51": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1121/",
+      "printing": "SC2b-32",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh7-53": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/412/",
+      "printing": "S5a-21",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh6-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/400/",
+      "printing": "S5a-9",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1123/",
+      "printing": "SC2b-34",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh3-26": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1101/",
+      "printing": "SC2b-12",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh6-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/413/",
+      "printing": "S5a-22",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh6-24": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/401/",
+      "printing": "S5a-10",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2633/",
+      "printing": "SC1D-58",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh8-99": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/32/",
+      "printing": "S8-31",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh8-98": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/31/",
+      "printing": "S8-30",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh8-92": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2034/",
+      "printing": "SH-21",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-62": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2279/",
+      "printing": "SC1a-11",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh8-91": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2033/",
+      "printing": "SH-20",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2632/",
+      "printing": "SC1D-57",
+      "fields": [
+        "species"
+      ]
+    },
+    "swshp-SWSH263": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6858/",
+      "printing": "SPZ-5",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh6-114": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/791/",
+      "printing": "S6K-51",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH200": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/586/",
+      "printing": "S5R-55",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh4-121": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1179/",
+      "printing": "SC2b-90",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh4-112": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/366/",
+      "printing": "S4-75",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh8-186": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/847/",
+      "printing": "S7D-37",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh5-96": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/506/",
+      "printing": "S5I-45",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh5-95": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/505/",
+      "printing": "S5I-44",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh1-148": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/247/",
+      "printing": "S4a-147",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh5-85": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/497/",
+      "printing": "S5I-36",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh5-86": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/498/",
+      "printing": "S5I-37",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh5-84": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/496/",
+      "printing": "S5I-35",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh8-181": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/845/",
+      "printing": "S7D-35",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh4-128": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/1186/",
+      "printing": "SC2b-97",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swshp-SWSH224": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6580/",
+      "printing": "S10b-47",
+      "fields": [
+        "moves.0"
+      ]
+    },
+    "pgo-61": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6595/",
+      "printing": "S10b-62",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "pgo-63": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/6597/",
+      "printing": "S10b-64",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh7-63": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/822/",
+      "printing": "S7D-12",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh7-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7285/",
+      "printing": "S12a-61",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh6-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5270/",
+      "printing": "S8b-82",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh6-75": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5271/",
+      "printing": "S8b-83",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh5-83": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/580/",
+      "printing": "S5R-49",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-145": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/242/",
+      "printing": "S4a-142",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh5-37": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/554/",
+      "printing": "S5R-23",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh5-87": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/581/",
+      "printing": "S5R-50",
+      "fields": [
+        "moves.0"
+      ]
+    },
+    "swsh5-36": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/553/",
+      "printing": "S5R-22",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh2-126": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/226/",
+      "printing": "S4a-126",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh1-128": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2366/",
+      "printing": "SC1a-98",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-75": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2985/",
+      "printing": "As5b-62",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh1-56": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/140/",
+      "printing": "S4a-40",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh6-45": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5234/",
+      "printing": "S8b-43",
+      "fields": [
+        "moves.1"
+      ]
+    },
+    "swsh1-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/141/",
+      "printing": "S4a-41",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh6-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/409/",
+      "printing": "S5a-18",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh6-41": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/407/",
+      "printing": "S5a-16",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh8-120": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/46/",
+      "printing": "S8-45",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh8-185": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/70/",
+      "printing": "S8-69",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh8-124": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/49/",
+      "printing": "S8-48",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "swsh8-113": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/40/",
+      "printing": "S8-39",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh8-42": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/18/",
+      "printing": "S8-17",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "swsh2-49": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2505/",
+      "printing": "SC1b-83",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "swsh1-63": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2512/",
+      "printing": "SC1b-90",
+      "fields": [
+        "species"
+      ]
+    },
+    "swsh10-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7254/",
+      "printing": "S12a-30",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh9-41": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7253/",
+      "printing": "S12a-29",
+      "fields": [
+        "moves.0",
+        "species",
+        "flavor"
+      ]
+    },
+    "swsh10-39": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/7251/",
+      "printing": "S12a-27",
+      "fields": [
+        "moves.0",
+        "moves.1"
+      ]
+    },
+    "sm1-24": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4008/",
+      "printing": "AC1a-40",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm1-73": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4052/",
+      "printing": "AC1a-84",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-74": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4053/",
+      "printing": "AC1a-85",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4308/",
+      "printing": "AC1D-24",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-25": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4009/",
+      "printing": "AC1a-41",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-40": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4145/",
+      "printing": "AC1b-19",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-36": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4321/",
+      "printing": "AC1D-37",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-29": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4134/",
+      "printing": "AC1b-8",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-39": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4144/",
+      "printing": "AC1b-18",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm1-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4133/",
+      "printing": "AC1b-7",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-97": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4240/",
+      "printing": "AC1b-114",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-53": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4343/",
+      "printing": "AC1D-59",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-83": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4201/",
+      "printing": "AC1b-75",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-65": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4190/",
+      "printing": "AC1b-64",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-64": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4188/",
+      "printing": "AC1b-62",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm2-84": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4202/",
+      "printing": "AC1b-76",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4176/",
+      "printing": "AC1b-50",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm2-49": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4154/",
+      "printing": "AC1b-28",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-48": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4153/",
+      "printing": "AC1b-27",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-87": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4205/",
+      "printing": "AC1b-79",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-112": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4252/",
+      "printing": "AC1b-126",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm1-18": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/3988/",
+      "printing": "AC1a-20",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-10": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/3980/",
+      "printing": "AC1a-12",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-99": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4082/",
+      "printing": "AC1a-114",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm1-6": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4287/",
+      "printing": "AC1D-3",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-9": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/3979/",
+      "printing": "AC1a-11",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4131/",
+      "printing": "AC1b-5",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm2-20": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4129/",
+      "printing": "AC1b-3",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-108": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4091/",
+      "printing": "AC1a-123",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-36": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4327/",
+      "printing": "AC1D-43",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-22": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4310/",
+      "printing": "AC1D-26",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-37": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4328/",
+      "printing": "AC1D-44",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4311/",
+      "printing": "AC1D-27",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-59": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4172/",
+      "printing": "AC1b-46",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4371/",
+      "printing": "AC1D-87",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4173/",
+      "printing": "AC1b-47",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-66": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4036/",
+      "printing": "AC1a-68",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-65": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4035/",
+      "printing": "AC1a-67",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-67": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4037/",
+      "printing": "AC1a-69",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-73": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4047/",
+      "printing": "AC1a-79",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-72": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4368/",
+      "printing": "AC1D-84",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-69": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4040/",
+      "printing": "AC1a-72",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4075/",
+      "printing": "AC1a-107",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-62": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4077/",
+      "printing": "AC1a-109",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-64": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4391/",
+      "printing": "AC1D-107",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4050/",
+      "printing": "AC1a-82",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm4-61": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4076/",
+      "printing": "AC1a-108",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-98": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4574/",
+      "printing": "AC2a-133",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-99": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4575/",
+      "printing": "AC2a-134",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-113": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4790/",
+      "printing": "AC2b-149",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-68": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4533/",
+      "printing": "AC2a-92",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-69": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5097/",
+      "printing": "AC2D-82",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-67": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4531/",
+      "printing": "AC2a-90",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-66": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4530/",
+      "printing": "AC2a-89",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-53": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4494/",
+      "printing": "AC2a-53",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-112": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4789/",
+      "printing": "AC2b-148",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-58": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4184/",
+      "printing": "AC1b-58",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-56": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4177/",
+      "printing": "AC1b-51",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm2-15": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4012/",
+      "printing": "AC1a-44",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-35": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4341/",
+      "printing": "AC1D-57",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4237/",
+      "printing": "AC1b-111",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm4-75": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4235/",
+      "printing": "AC1b-109",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm4-77": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4238/",
+      "printing": "AC1b-112",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm4-89": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4093/",
+      "printing": "AC1a-125",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-38": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4688/",
+      "printing": "AC2b-47",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4686/",
+      "printing": "AC2b-45",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-33": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4685/",
+      "printing": "AC2b-44",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm5-37": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4687/",
+      "printing": "AC2b-46",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm1-77": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4060/",
+      "printing": "AC1a-92",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm6-57": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4731/",
+      "printing": "AC2b-90",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm6-1": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4442/",
+      "printing": "AC2a-1",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm3-52": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4166/",
+      "printing": "AC1b-40",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-51": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4165/",
+      "printing": "AC1b-39",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm6-50": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4505/",
+      "printing": "AC2a-64",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm6-76": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4540/",
+      "printing": "AC2a-99",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm6-75": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4539/",
+      "printing": "AC2a-98",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm8-81": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4718/",
+      "printing": "AC2b-77",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm8-77": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5069/",
+      "printing": "AC2D-54",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm8-108": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4515/",
+      "printing": "AC2a-74",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm8-107": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5090/",
+      "printing": "AC2D-75",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm8-82": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4719/",
+      "printing": "AC2b-78",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm7-110": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4780/",
+      "printing": "AC2b-139",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-41": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4691/",
+      "printing": "AC2b-50",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm7-24": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4653/",
+      "printing": "AC2b-12",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm7-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4680/",
+      "printing": "AC2b-39",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm7-33": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4679/",
+      "printing": "AC2b-38",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm7-120": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4592/",
+      "printing": "AC2a-151",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm7-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5028/",
+      "printing": "AC2D-13",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm6-4": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4467/",
+      "printing": "AC2a-26",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm7-51": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4711/",
+      "printing": "AC2b-70",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm6-3": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4466/",
+      "printing": "AC2a-25",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm75-6": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4658/",
+      "printing": "AC2b-17",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm8-47": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4655/",
+      "printing": "AC2b-14",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm8-18": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4453/",
+      "printing": "AC2a-12",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm8-16": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4451/",
+      "printing": "AC2a-10",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm8-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4652/",
+      "printing": "AC2b-11",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm75-4": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5031/",
+      "printing": "AC2D-16",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-25": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2774/",
+      "printing": "AS5a-35",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm9-127": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2865/",
+      "printing": "AS5a-126",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm9-27": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2777/",
+      "printing": "AS5a-38",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-124": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2860/",
+      "printing": "AS5a-121",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm9-123": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2859/",
+      "printing": "AS5a-120",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-121": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2857/",
+      "printing": "AS5a-118",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-26": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2776/",
+      "printing": "AS5a-37",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-24": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2772/",
+      "printing": "AS5a-33",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm9-12": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2927/",
+      "printing": "As5b-4",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-13": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2928/",
+      "printing": "As5b-5",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-56": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2963/",
+      "printing": "As5b-40",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm9-54": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2961/",
+      "printing": "As5b-38",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-55": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2962/",
+      "printing": "As5b-39",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm9-17": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2934/",
+      "printing": "As5b-11",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm9-18": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2935/",
+      "printing": "As5b-12",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-24": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2944/",
+      "printing": "As5b-21",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-23": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2943/",
+      "printing": "As5b-20",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-29": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2952/",
+      "printing": "As5b-29",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-27": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2950/",
+      "printing": "As5b-27",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-147": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/3067/",
+      "printing": "As5b-144",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-30": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2953/",
+      "printing": "As5b-30",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-31": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2954/",
+      "printing": "As5b-31",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2951/",
+      "printing": "As5b-28",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm75-50": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4778/",
+      "printing": "AC2b-137",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-151": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2867/",
+      "printing": "AS5a-128",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-150": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2866/",
+      "printing": "AS5a-127",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm6-34": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4699/",
+      "printing": "AC2b-58",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm6-35": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4700/",
+      "printing": "AC2b-59",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm6-36": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4701/",
+      "printing": "AC2b-60",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-144": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2862/",
+      "printing": "AS5a-123",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm10-143": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2861/",
+      "printing": "AS5a-122",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm10-56": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2821/",
+      "printing": "AS5a-82",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm10-60": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2827/",
+      "printing": "AS5a-88",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-43": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4338/",
+      "printing": "AC1D-54",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm35-31": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4336/",
+      "printing": "AC1D-52",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm35-28": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4330/",
+      "printing": "AC1D-46",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm35-32": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4022/",
+      "printing": "AC1a-54",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    },
+    "sm35-30": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4335/",
+      "printing": "AC1D-51",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm75-3": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4645/",
+      "printing": "AC2b-4",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm3-18": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/3998/",
+      "printing": "AC1a-30",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm3-19": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/3999/",
+      "printing": "AC1a-31",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm8-155": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4587/",
+      "printing": "AC2a-146",
+      "fields": [
+        "species"
+      ]
+    },
+    "sm5-104": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4779/",
+      "printing": "AC2b-138",
+      "fields": [
+        "species"
+      ]
+    },
+    "smp-SM186": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/2938/",
+      "printing": "As5b-15",
+      "fields": [
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm5-102": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/5144/",
+      "printing": "AC2D-129",
+      "fields": [
+        "moves.0",
+        "moves.1",
+        "species"
+      ]
+    },
+    "sm8-38": {
+      "page": "https://asia.pokemon-card.com/tw/card-search/detail/4648/",
+      "printing": "AC2b-7",
+      "fields": [
+        "moves.0",
+        "species"
+      ]
+    }
+  }
+}

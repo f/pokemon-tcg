@@ -1,9 +1,32 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { layoutParagraph } from '../public/card-image/flow.js';
+import { hasPrintedDimensions, hasPrintedSource, printedResource } from '../public/card-image/printed.js';
 import { requestCardImage } from '../public/card-image/request.js';
 import { localizedCardImage } from '../public/card-image/source.js';
 
+test('reviewed TCGdex high-resolution cards meet the printed image size threshold', () => {
+  const url = 'https://assets.tcgdex.net/zh-tw/S/SJ/018/high.png';
+  const card = { url, width: 600, height: 825, sha256: 'a'.repeat(64) };
+  assert.ok(hasPrintedSource(card));
+  assert.ok(!hasPrintedSource({ ...card, width: 599 }));
+  assert.ok(!hasPrintedSource({ ...card, height: 824 }));
+  assert.ok(!hasPrintedSource(card, 601));
+  assert.equal(printedResource(new URL(url)), 'tcgdex');
+  assert.equal(printedResource(new URL(url.replace('high.png', 'low.png'))), undefined);
+  assert.equal(printedResource(new URL(url + '?size=small')), undefined);
+});
+
+test('printed JPEG dimensions are verified from the frame header', () => {
+  const bytes = Uint8Array.from([
+    0xff, 0xd8, 0xff, 0xe0, 0x00, 0x02, 0xff, 0xc2,
+    0x00, 0x0b, 0x08, 0x03, 0x39, 0x02, 0x58, 0x01, 0x01, 0x11, 0x00, 0xff, 0xd9,
+  ]);
+  const card = { format: 'jpeg', width: 600, height: 825 };
+  assert.ok(hasPrintedDimensions(bytes, card));
+  assert.ok(!hasPrintedDimensions(bytes, { ...card, height: 824 }));
+  assert.ok(!hasPrintedDimensions(bytes.subarray(0, 18), card));
+});
 test('mixed-weight paragraphs wrap the same before and after measuring body text', () => {
   const context = {
     font: '',

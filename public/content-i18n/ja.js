@@ -20,18 +20,22 @@ const person = {
   "blaine": "カツラ",
   "brock": "タケシ",
   "erika": "エリカ",
+  "ghetsis": "ゲーチス",
   "gary": "シゲル",
   "giovanni": "サカキ",
   "koga": "キョウ",
   "lt-surge": "マチス",
   "marnie": "マリィ",
   "misty": "カスミ",
+  "professorSada": "オーリム博士",
+  "professorTuro": "フトゥー博士",
   "sabrina": "ナツメ",
   "steven": "ダイゴ",
 };
 
 export const names = {
   ...terms,
+  card: { ...terms.card, Gengar: 'ゲンガー' },
   person,
   deck: {
     // Japanese collector spellings for these English products.
