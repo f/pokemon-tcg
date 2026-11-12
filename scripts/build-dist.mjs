@@ -1,9 +1,11 @@
 // Builds dist/: what the macOS app ships. It is public/ without what only the browser/dev setup needs:
 // the card PNGs (the game uses the .webp copies; see scripts/webp-images.mjs) and the image source list.
+// It also includes the localized card manifests and hashes of the packaged English scans.
 //   node scripts/build-dist.mjs   (run by `npm run app:build` / Tauri before bundling)
-import { cp, rm, stat } from 'node:fs/promises';
+import { cp, rm } from 'node:fs/promises';
 import { join, dirname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { writeCardImageAssets } from './card-localization/runtime-assets.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const from = join(root, 'public'), to = join(root, 'dist');
@@ -18,5 +20,5 @@ await cp(from, to, {
     return !skip;
   },
 });
-const size = async (p) => { const s = await stat(p); return s.size; };
+await writeCardImageAssets(to);
 console.log(`dist/ ready (${skipped} files left out)`);

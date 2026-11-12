@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pokémon TCG Academy</title>
   <link rel="stylesheet" href="vendor/fonts.css">
+  <link rel="stylesheet" href="vendor/chinese-fonts.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="rps.css">
   <link rel="icon" href="img/set-symbol.png">
@@ -21,7 +22,7 @@
     </div>
     <nav>
       <div class="lang" role="group" aria-label="Language" data-i18n-aria="ui.language">
-        <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button>
+        <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button><button data-lang="zh-Hans" lang="zh-Hans" title="简体中文" aria-label="简体中文">简体</button><button data-lang="zh-Hant" lang="zh-Hant" title="繁體中文" aria-label="繁體中文">繁體</button>
       </div>
       <button id="btn-settings" class="icon-btn" data-i18n-title="ui.settings"><i class="ic ic-settings"></i></button>
       <button id="btn-tour"><i class="ic ic-graduation-cap"></i> <span data-i18n="ui.tour"></span></button>
@@ -101,6 +102,19 @@
           </div>
         </div>
       </section>
+      <section class="set-sec">
+        <h3 data-i18n="ui.cardImages"></h3>
+        <label class="set-row">
+          <span><span data-i18n="ui.cardImagesDownload"></span> <span class="set-coverage" id="card-images-coverage" role="status" hidden></span></span>
+          <input type="checkbox" role="switch" id="opt-card-image-download" aria-describedby="card-images-download-note card-images-coverage">
+        </label>
+        <p class="set-note" id="card-images-download-note" data-i18n="ui.cardImagesDownloadNote"></p>
+        <label class="set-row">
+          <span data-i18n="ui.cardImagesGenerate"></span>
+          <input type="checkbox" role="switch" id="opt-card-image-generate" aria-describedby="card-images-generate-note">
+        </label>
+        <p class="set-note" id="card-images-generate-note" data-i18n="ui.cardImagesGenerateNote"></p>
+      </section>
     </div>
   </div>
 
@@ -109,7 +123,7 @@
   <div id="start" class="overlay start-screen">
     <div class="app-drag" data-tauri-drag-region></div>
     <div class="lang start-lang" role="group" aria-label="Language" data-i18n-aria="ui.language">
-      <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button>
+      <button data-lang="en" lang="en" title="English">EN</button><button data-lang="tr" lang="tr" title="Türkçe">TR</button><button data-lang="ja" lang="ja" title="日本語">JA</button><button data-lang="es" lang="es" title="Español">ES</button><button data-lang="zh-Hans" lang="zh-Hans" title="简体中文" aria-label="简体中文">简体</button><button data-lang="zh-Hant" lang="zh-Hant" title="繁體中文" aria-label="繁體中文">繁體</button>
     </div>
     <div class="start-wrap">
       <header class="start-hero">

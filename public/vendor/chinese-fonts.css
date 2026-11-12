@@ -1,0 +1,30 @@
+/* Full Chinese character sets, stored locally for offline play.
+   Original fonts under SIL OFL 1.1; sources, hashes and licenses: fonts/chinese/. */
+@font-face {
+  font-family: "LXGW 975 Yuan SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/chinese/lxgw975yuan-sc-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "LXGW 975 Yuan SC";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/chinese/lxgw975yuan-sc-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Chiron GoRound TC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/chinese/chiron-goround-tc-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Chiron GoRound TC";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fonts/chinese/chiron-goround-tc-800.woff2") format("woff2");
+}

@@ -214,6 +214,12 @@ export const STRINGS = {
   'ui.coinSub': 'Heads or tails decides what happens.', 'ui.cancel': 'Cancel',
   'ui.newConfirm.title': 'Start a new game?', 'ui.newConfirm.text': 'The game in progress will be cancelled and its saved state deleted. This can’t be undone.', 'ui.newConfirm.ok': 'Yes, start a new game',
   'ui.settings': 'Settings', 'ui.display': 'Display',
+  "ui.cardImages": "Card images",
+  "ui.cardImagesDownload": "Download original card images in my language",
+  "ui.cardImagesCoverage": "{count}/{total} original card images, including shared Energy cards",
+  "ui.cardImagesDownloadNote": "Original card images are available for some cards in the current language. Downloads take priority when both options are on.",
+  "ui.cardImagesGenerate": "Generate card images in my language",
+  "ui.cardImagesGenerateNote": "Generates images from English card art when the required data is available. Generated images may have layout or background imperfections. If data is missing, the English image is shown.",
   'group.attack': 'Attack', 'group.energy': 'Energy', 'group.evolve': 'Evolve', 'group.bench': 'Bench', 'group.trainer': 'Trainer cards', 'group.retreat': 'Retreat',
   'ui.tour': 'Tutorial', 'ui.next': 'Next', 'ui.back': 'Back', 'ui.skip': 'Skip tour', 'ui.letsPlay': 'Let’s play!',
   'tour.welcome.t': 'Welcome to the table!',
@@ -619,6 +625,12 @@ export const STRINGS = {
   'prompt.q.rapidVernier': 'Switch this Pokémon into the Active Spot and move your other Pokémon’s Energy onto it?',
   'prompt.q.discardForBonus': 'Discard {n} Energy from this Pokémon for {b} more damage?', 'prompt.q.discardHowMany': 'How many {t} Energy do you discard from your Pokémon?',
   'prompt.q.discardHowManyBench': 'How many Energy do you discard from your Benched Pokémon?', 'prompt.q.discardStadium': 'Discard the Stadium in play ({c})?',
+  'prompt.q.retreatEnergy': 'Choose an Energy card to discard from {m}. Remaining retreat cost: {n}.',
+  'prompt.opt.energyUnits': 'Provides {n} Energy',
+  'prompt.q.discardFromPokemon': 'Which Pokémon do you discard Energy from?',
+  'prompt.q.discardWhichPokemon': '{c}: which Benched Pokémon do you discard?',
+  'prompt.q.discardWhichTool': 'Which Pokémon Tool do you discard from {m}?',
+  'prompt.q.removeSecondEnergy': 'Choose a second Energy to discard from the opponent’s {m}, or stop.',
   'prompt.q.switchMay': 'Switch this Pokémon with one of your Benched Pokémon?', 'prompt.q.selfToHand': 'Put this Pokémon back into your hand (its attached cards are discarded)?',
   'log.ability': '{P}: used {m}’s Ability {pw}.', 'log.candy': '{P}: Rare Candy! {from} evolved straight into {to}.', 'log.counters': '{n} damage counter(s) placed on {list}.',
   'log.countersMany': 'Damage counters placed: {list}.', 'log.energiesFound': '{P}: {n} Energy card(s) found.', 'log.energyMovedN': '{P}: moved {n} Energy onto {m}.',
@@ -794,7 +806,7 @@ export const STRINGS = {
   'log.energyBounced': '{n} Energy from {m} went back into its owner’s hand.', 'log.milled': '{P}: discarded the top {n} card(s) of the deck.',
   'log.milledCard': '{P}: {c} was discarded from the top of the deck.', 'log.randomDiscard': '{P}: {c} was discarded at random from the hand.',
   'log.discardedN': '{m} discarded {n} Energy.', 'log.shuffledIntoDeck': '{m} and all cards on it were shuffled into the deck.',
-  'rps.dialog': 'Rock-Paper-Scissors', 'rps.title': 'Rock, paper or scissors?', 'rps.subYou': 'Dan: beat Gary to draw 2 more cards!', 'rps.subGary': 'Gary played Dan: if Gary wins, Gary draws 2 more cards.', 'rps.hint': 'Keys 1 · 2 · 3, or ← → and Enter', 'rps.chant1': 'ROCK!', 'rps.chant2': 'PAPER!', 'rps.chant3': 'SCISSORS!', 'rps.you': 'YOU', 'rps.gary': 'GARY', 'rps.youLabel': 'You', 'rps.win': 'YOU WIN!', 'rps.winSubYou': 'You draw 2 more cards', 'rps.winSubGary': 'Gary draws no extra cards', 'rps.lose': 'YOU LOSE!', 'rps.loseSubYou': 'No extra cards this time', 'rps.loseSubGary': 'Gary draws 2 more cards', 'rps.tie': 'TIE!', 'rps.tieSub': 'Again!', 'rps.again': 'A tie — throw again!',
+  'rps.dialog': 'Rock-Paper-Scissors', 'rps.title': 'Rock, paper or scissors?', 'rps.subYou': 'Dan: beat Gary to draw 2 more cards!', 'rps.subGary': 'Gary played Dan: if Gary wins, Gary draws 2 more cards.', 'rps.hint': 'Use the arrow keys to move and press {enter} to confirm', 'rps.chant1': 'ROCK!', 'rps.chant2': 'PAPER!', 'rps.chant3': 'SCISSORS!', 'rps.you': 'YOU', 'rps.gary': 'GARY', 'rps.youLabel': 'You', 'rps.win': 'YOU WIN!', 'rps.winSubYou': 'You draw 2 more cards', 'rps.winSubGary': 'Gary draws no extra cards', 'rps.lose': 'YOU LOSE!', 'rps.loseSubYou': 'No extra cards this time', 'rps.loseSubGary': 'Gary draws 2 more cards', 'rps.tie': 'TIE!', 'rps.tieSub': 'Again!', 'rps.again': 'A tie — throw again!',
   'prompt.q.rps': '{c}: Rock, paper or scissors?', 'prompt.q.rod': '{c}: what do you shuffle back into your deck?', 'prompt.q.sonia': '{c}: Basic Pokémon or basic Energy?',
   'prompt.q.discardForShield': '{c}: discard {n} Energy so this Pokémon takes {r} less damage during the opponent’s next turn?',
   'prompt.q.discardBenchNamed': '{c}: how many {m} do you discard from your Bench ({n} damage each)?',
@@ -1500,7 +1512,7 @@ export const RULES = `
       <li><b>Energy</b> powers attacks. The symbols to the left of an attack are its cost, and the Colorless (star) symbol can be paid with any Energy.</li>
       <li><b>Trainers</b> help you in many ways: healing, drawing cards, removing your opponent's Energy, and more. Modern decks split them into Items, Supporters, Stadiums and Pokémon Tools (see <i>Classic and Modern rules</i>).</li></ul></section>
     <section><h3><i class="ic ic-layers"></i> How to read a Pokémon card</h3>
-      <div class="anatomy"><div class="card-wrap"><img src="img/cards/base1/46_hires.webp" alt="Charmander"><span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
+      <div class="anatomy"><div class="card-wrap">{charmanderImage}<span class="pin" style="left:5%;top:7.5%">1</span><span class="pin" style="left:14%;top:2.8%">2</span><span class="pin" style="left:68%;top:6%">3</span><span class="pin" style="left:95%;top:6%">4</span><span class="pin" style="left:6%;top:62%">5</span><span class="pin" style="left:40%;top:62%">6</span><span class="pin" style="left:94%;top:62%">7</span><span class="pin" style="left:10%;top:83%">8</span><span class="pin" style="left:50%;top:83%">9</span><span class="pin" style="left:88%;top:83%">10</span></div><ol>
       <li><b>Name</b>: Charmander.</li>
       <li><b>Stage</b>: "Basic Pokémon" can be played straight onto the Bench. Stage 1 and Stage 2 cards evolve from the Pokémon named on them.</li>
       <li><b>HP</b> (Hit Points): how much damage it can take. 50 HP means 5 damage counters Knock it Out.</li>

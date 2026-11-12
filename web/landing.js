@@ -1,7 +1,16 @@
-// The landing page's text in four languages (Turkish, Japanese and Spanish were translated and then checked by a
+// The landing page's text in six languages (Turkish, Japanese and Spanish were translated and then checked by a
 // separate native-speaker review). The language is shared with the game (/play/): both read and write localStorage
 // "lang", so a choice made here carries over.
+import { LANGS, initialLanguage, normalizeLanguage } from '../public/locales.js';
+import { names as jaNames, sets as jaSets } from '../public/content-i18n/ja.js';
+import { sets as esSets } from '../public/content-i18n/es.js';
+import { names as trNames, sets as trSets } from '../public/content-i18n/tr.js';
+import { LANDING as zhHans } from '../public/i18n/zh-Hans.js';
+import { LANDING as zhHant } from '../public/i18n/zh-Hant.js';
+
 const STRINGS = {
+  'zh-Hans': zhHans,
+  'zh-Hant': zhHant,
   en: {
     "meta.title": "Learn the Pokémon TCG by playing it · Pokémon TCG Academy",
     "meta.description": "Learn the Pokémon Trading Card Game by playing it: 109 real decks, an AI opponent and a coach that explains every move. Free and open source.",
@@ -38,8 +47,8 @@ const STRINGS = {
     "feat.table.title": "It feels like a real table",
     "feat.table.text": "Prize cards flip over as you take them, Gary’s Trainer cards show what they do, and when you drag a card, only the places it can legally go light up.",
     "alt.prize": "A Prize card, a Fire Energy, revealed in the middle of the screen.",
-    "feat.lang.title": "Four languages",
-    "feat.lang.text": "English, Turkish, Japanese and Spanish: every screen, rule and card explanation, in the TCG terms players use in each language.",
+    "feat.lang.title": "Six languages",
+    "feat.lang.text": "English, Turkish, Japanese, Spanish, Simplified Chinese and Traditional Chinese: translated screens, rules and card explanations. Card images and proper names stay in English.",
     "alt.ja": "A modern game in Japanese: the Charizard ex League deck against an Inteleon VMAX, with the Professor’s pick.",
     "decks.title": "109 decks, from Base Set to Mega Evolution",
     "decks.classic.title": "Classic",
@@ -72,7 +81,7 @@ const STRINGS = {
     "nav.mac": "macOS uygulaması",
     "hero.eyebrow": "Ücretsiz ve açık kaynak",
     "hero.title": "Pokémon TCG’yi <em>oynayarak</em> öğren.",
-    "hero.lead": "1999’daki Base Set’ten bugünün Mega Evolution destelerine kadar 109 gerçek deste. Gary sana karşı her hamleyi yapar; Profesör ise senin hamlelerini puanlar ve her kuralı karşına çıktığı anda açıklar.",
+    "hero.lead": `1999’daki ${trSets.base}’ten bugünün ${trSets.mega} destelerine kadar 109 gerçek deste. Gary sana karşı her hamleyi yapar; Profesör ise senin hamlelerini puanlar ve her kuralı karşına çıktığı anda açıklar.`,
     "hero.play": "Tarayıcında oyna",
     "hero.mac": "macOS için indir",
     "hero.note": "Üyelik gerekmez. Oyunun senin cihazında saklanır.",
@@ -93,21 +102,21 @@ const STRINGS = {
     "cmp.install": "Kurulum gerektirmez",
     "feat.help.title": "Her kart açıklamalı",
     "feat.help.text": "Herhangi bir kartın üzerine gel, ne yaptığını sade bir dille gör: HP’sini, Zayıflığını, Geri Çekilme bedelini ve her saldırısının şu an neye ihtiyacı olduğunu.",
-    "alt.help": "İmleç Gary’nin Abra’sının üzerinde: şu anki HP’si ve Enerjisi, Zayıflığı ve Geri Çekilme bedeli, Psyshock saldırısının ne yaptığı.",
+    "alt.help": `İmleç Gary’nin Abra’sının üzerinde: şu anki HP’si ve Enerjisi, Zayıflığı ve Geri Çekilme bedeli, ${trNames.attack.Psyshock} saldırısının ne yaptığı.`,
     "feat.attack.title": "Saldırıları adım adım izle",
     "feat.attack.text": "İki Aktif Pokémon masanın ortasında karşı karşıya gelir. Yazı tura ve hasar zarları atılır; Zayıflık ve Direnç açıkça yazılır.",
-    "alt.attack": "Saldırı arenası: Charmander, Meowth’a Scratch ile saldırıyor.",
+    "alt.attack": `Saldırı arenası: Charmander, Meowth’a ${trNames.attack.Scratch} saldırısını yapıyor.`,
     "feat.table.title": "Gerçek bir masadaymış gibi",
     "feat.table.text": "Aldığın Ödül kartları çevrilip açılır, Gary’nin Eğitmen kartları ne yaptıklarını gösterir ve bir kartı sürüklediğinde yalnızca kurallara uygun yerler parlar.",
     "alt.prize": "Ekranın ortasında açılan bir Ödül kartı: bir Ateş Enerjisi.",
-    "feat.lang.title": "Dört dil",
-    "feat.lang.text": "İngilizce, Türkçe, Japonca ve İspanyolca: her ekran, her kural ve her kart açıklaması, Pokémon TCG’nin o dildeki terimleriyle.",
-    "alt.ja": "Japonca arayüzle modern bir oyun: Charizard ex League destesi bir Inteleon VMAX’e karşı, yanında Profesörün seçimi.",
-    "decks.title": "Base Set’ten Mega Evolution’a 109 deste",
+    "feat.lang.title": "Altı dil",
+    "feat.lang.text": "İngilizce, Türkçe, Japonca, İspanyolca, Basitleştirilmiş Çince ve Geleneksel Çince: her ekran, her kural ve her kart açıklaması, Pokémon TCG’nin o dildeki terimleriyle.",
+    "alt.ja": "Japonca arayüzle modern bir oyun: Charizard ex Lig Savaş Destesi, Inteleon VMAX’e karşı. Profesörün seçimi de görünüyor.",
+    "decks.title": `${trSets.base}’ten ${trSets.mega}’e 109 deste`,
     "decks.classic.title": "Klasik",
-    "decks.classic.text": "1999–2000’den, o zamanın kurallarıyla oynanan 26 deste: Base Set tema desteleri, Jungle, Fossil, Team Rocket, Salon Liderleri, ayrıca Ash, Brock ve Misty.",
+    "decks.classic.text": `1999–2000 döneminin kurallarıyla oynanan 26 deste: ${trSets.base}, ${trSets.jungle}, ${trSets.fossil} ve ${trSets.rocket} tema desteleri, Salon Liderleri ve Ash, Brock ile Misty’nin takımları.`,
     "decks.modern.title": "Modern",
-    "decks.modern.text": "Bugünün kurallarıyla oynanan 83 deste: Mega Evolution, Scarlet & Violet, Sword & Shield ve Sun & Moon, 30. Yıl desteleri de dahil.",
+    "decks.modern.text": `Bugünün kurallarıyla oynanan 83 deste: ${trSets.mega}, ${trSets.sv}, ${trSets.swsh} ve ${trSets.sm}. ${trSets.celebration} desteleri de dahil.`,
     "dl.title": "macOS uygulamasını indir",
     "dl.text": "Apple Silicon işlemcili, macOS 11 veya üzeri yüklü Mac’ler için.",
     "dl.button": "DMG’yi indir",
@@ -134,14 +143,14 @@ const STRINGS = {
     "nav.mac": "macOS アプリ",
     "hero.eyebrow": "無料・オープンソース",
     "hero.title": "<em>遊んで覚える</em>ポケモンカードゲーム",
-    "hero.lead": "1999年の初代Base Setから最新のメガシンカまで、本物のデッキを109種類収録。ゲイリーが対戦相手になり、博士があなたの手を評価して、出てくるルールをその都度解説してくれます。",
+    "hero.lead": `1999年の初期デッキから「${jaSets.mega}」シリーズまで、実際のカードを使ったデッキを109種類収録。${jaNames.person.gary}が対戦相手になり、博士があなたの手を評価して、ルールをその都度解説します。`,
     "hero.play": "ブラウザで遊ぶ",
     "hero.mac": "macOS版をダウンロード",
     "hero.note": "登録不要。ゲームのデータはお使いの端末に保存されます。",
-    "alt.board": "対戦中の画面。下があなたのポケモン、上がゲイリーのポケモンで、各行動の横に博士の評価が表示されています。",
+    "alt.board": `対戦中の画面。下があなたのポケモン、上が${jaNames.person.gary}のポケモンで、各行動の横に博士の評価が表示されています。`,
     "ways.title": "プレイ方法は2通り",
     "ways.web.title": "ブラウザ版",
-    "ways.web.text": "ゲイリーと博士は、内蔵のCPUエンジンで考えます。待ち時間なし、インストールも不要です。",
+    "ways.web.text": `${jaNames.person.gary}と博士は、内蔵のCPUエンジンで考えます。待ち時間なし、インストールも不要です。`,
     "ways.web.go": "今すぐ遊ぶ",
     "ways.mac.title": "macOS アプリ",
     "ways.mac.text": "ブラウザ版の機能はそのままに、より強い対戦相手が加わります。Mac上で動く判断モデルKevと、クラウドのJevです。アプリはオフラインでも動作し、JevのAPIキーはmacOSのキーチェーンに保存されます。",
@@ -155,21 +164,21 @@ const STRINGS = {
     "cmp.install": "インストール不要",
     "feat.help.title": "どのカードも、わかりやすく解説",
     "feat.help.text": "カードにカーソルを合わせるだけで、そのカードの効果をやさしい言葉で説明します。HP、弱点、にげるためのエネルギーはもちろん、すべてのワザについて、使うために今なにが必要かもわかります。",
-    "alt.help": "ゲイリーのAbraにカーソルを合わせたところ。現在のHPとついているエネルギー、弱点、にげるためのエネルギー、ワザ「Psyshock」の効果が表示されています。",
+    "alt.help": `${jaNames.person.gary}の${jaNames.card.Abra}の詳細。HPとついているエネルギー、弱点、にげるためのエネルギー、ワザ「${jaNames.attackPrinting['base1-43'].Psyshock}」の効果が表示されています。`,
     "feat.attack.title": "ワザの流れがひと目でわかる",
     "feat.attack.text": "おたがいのバトルポケモンが、プレイマットの中央で向かい合います。コインが宙を舞い、ダメージダイスが転がり、弱点と抵抗力の計算もはっきり示されます。",
-    "alt.attack": "ワザの対決画面。CharmanderがMeowthに「Scratch」を使っています。",
+    "alt.attack": `ワザの対決画面。${jaNames.card.Charmander}が${jaNames.card.Meowth}に「${jaNames.attack.Scratch}」を使っています。`,
     "feat.table.title": "まるで本物のテーブル",
-    "feat.table.text": "とったサイドはめくれて表になり、ゲイリーがトレーナーズを使うとその効果が表示されます。カードをドラッグすると、ルール上置ける場所だけが光ります。",
+    "feat.table.text": `とったサイドはめくれて表になり、${jaNames.person.gary}がトレーナーズを使うとその効果が表示されます。カードをドラッグすると、ルール上置ける場所だけが光ります。`,
     "alt.prize": "画面の中央で表になったサイドのカード（炎エネルギー）。",
-    "feat.lang.title": "4つの言語に対応",
-    "feat.lang.text": "英語・トルコ語・日本語・スペイン語。すべての画面、ルール、カードの解説を、各言語のポケモンカードゲーム公式用語で表示します。",
-    "alt.ja": "日本語で遊ぶモダンルールの対戦。Charizard exのリーグバトルデッキでInteleon VMAXと戦っている場面で、博士のおすすめも表示されています。",
-    "decks.title": "Base Setからメガシンカまで、109種類のデッキ",
+    "feat.lang.title": "6つの言語に対応",
+    "feat.lang.text": "画面、ルール、カードの解説は6言語に対応。日本語・簡体字中国語・繁体字中国語では、確認できたカード名、ワザ名、特性名、デッキ名、トレーナー名も表示します。カード画像は英語版です。",
+    "alt.ja": `日本語で遊ぶモダンルールの対戦。${jaNames.deck['svl-charizard']}で${jaNames.card['Inteleon VMAX']}と戦っている場面で、博士のおすすめも表示されています。`,
+    "decks.title": `初期デッキから「${jaSets.mega}」シリーズまで、109種類`,
     "decks.classic.title": "クラシック",
-    "decks.classic.text": "1999〜2000年のデッキ26種類を、当時のルールで遊べます。Base Set・Jungle・Fossil・Team Rocketのテーマデッキ、ジムリーダーのデッキ、さらにAsh・Brock・Mistyのデッキも収録しています。",
+    "decks.classic.text": `1999〜2000年のデッキ26種類を、当時のルールで遊べます。「${jaSets.base}」「${jaSets.jungle}」「${jaSets.fossil}」「${jaSets.rocket}」に対応する英語版やジムリーダーのデッキ、${jaNames.person.ash}・${jaNames.person.brock}・${jaNames.person.misty}のアニメチームも収録しています。`,
     "decks.modern.title": "モダン",
-    "decks.modern.text": "現在のルールで遊べるデッキ83種類。メガシンカ、スカーレット・バイオレット、ソード・シールド、サン・ムーンのデッキに加え、30周年記念デッキも収録しています。",
+    "decks.modern.text": `現在のルールで遊べるデッキ83種類。「${jaSets.mega}」「${jaSets.sv}」「${jaSets.swsh}」「${jaSets.sm}」のデッキに加え、「${jaSets.celebration}」の記念デッキも収録しています。`,
     "dl.title": "macOS アプリを入手",
     "dl.text": "Apple Silicon搭載のMac（macOS 11以降）に対応しています。",
     "dl.button": "DMGをダウンロード",
@@ -196,7 +205,7 @@ const STRINGS = {
     "nav.mac": "App para macOS",
     "hero.eyebrow": "Gratis y de código abierto",
     "hero.title": "Aprende el JCC Pokémon <em>jugando.</em>",
-    "hero.lead": "109 barajas reales, desde el Base Set de 1999 hasta la actual Megaevolución. Gary hace todas sus jugadas contra ti, y el Profesor valora las tuyas y te explica cada regla en cuanto aparece.",
+    "hero.lead": `109 barajas reales, desde la ${esSets.base} de 1999 hasta la actual ${esSets.mega}. Gary hace todas sus jugadas contra ti, y el Profesor valora las tuyas y te explica cada regla en cuanto aparece.`,
     "hero.play": "Jugar en el navegador",
     "hero.mac": "Descargar para macOS",
     "hero.note": "Sin registro. Tu partida se guarda en tu dispositivo.",
@@ -220,18 +229,18 @@ const STRINGS = {
     "alt.help": "El cursor sobre el Abra de Gary: sus PS y su Energía actuales, su Debilidad y su coste de Retirada, y qué hace su ataque Psyshock.",
     "feat.attack.title": "Ataques fáciles de seguir",
     "feat.attack.text": "Los dos Pokémon Activos se enfrentan en el centro del tablero. Se lanzan monedas, ruedan los dados de daño, y la Debilidad y la Resistencia se explican con claridad.",
-    "alt.attack": "La arena de ataque: Charmander usa Scratch contra Meowth.",
+    "alt.attack": "La arena de ataque: Charmander usa Arañazo contra Meowth.",
     "feat.table.title": "Como en una mesa de verdad",
     "feat.table.text": "Las cartas de Premio se dan la vuelta al tomarlas, las cartas de Entrenador de Gary muestran lo que hacen y, al arrastrar una carta, solo se iluminan los sitios donde las reglas te permiten ponerla.",
     "alt.prize": "Una carta de Premio, una Energía Fuego, revelada en el centro de la pantalla.",
-    "feat.lang.title": "Cuatro idiomas",
-    "feat.lang.text": "Inglés, turco, japonés y español: cada pantalla, cada regla y cada explicación de carta, con los términos oficiales del JCC Pokémon en cada idioma.",
+    "feat.lang.title": "Seis idiomas",
+    "feat.lang.text": "Inglés, turco, japonés, español, chino simplificado y chino tradicional: cada pantalla, cada regla y cada explicación de carta, con los términos oficiales del JCC Pokémon en cada idioma.",
     "alt.ja": "Una partida moderna en japonés: la Baraja de Liga de Charizard ex contra un Inteleon VMAX, con la Elección del Profesor.",
-    "decks.title": "109 barajas, desde Base Set hasta Megaevolución",
+    "decks.title": `109 barajas, desde la ${esSets.base} hasta ${esSets.mega}`,
     "decks.classic.title": "Clásico",
-    "decks.classic.text": "26 barajas de 1999–2000, con las reglas de su época: las barajas temáticas de Base Set, Jungle, Fossil y Team Rocket, las de los Líderes de Gimnasio y las de Ash, Brock y Misty.",
+    "decks.classic.text": `26 barajas de 1999–2000, con las reglas de su época: las barajas temáticas de ${esSets.base}, ${esSets.jungle}, ${esSets.fossil} y ${esSets.rocket}, las de los Líderes de Gimnasio y las de Ash, Brock y Misty.`,
     "decks.modern.title": "Moderno",
-    "decks.modern.text": "83 barajas con las reglas actuales: Megaevolución, Escarlata y Púrpura, Espada y Escudo, y Sol y Luna, hasta las barajas del 30.º aniversario.",
+    "decks.modern.text": `83 barajas con las reglas actuales: ${esSets.mega}, ${esSets.sv}, ${esSets.swsh} y ${esSets.sm}, incluidas las barajas de ${esSets.celebration}.`,
     "dl.title": "Descarga la app para macOS",
     "dl.text": "Para Mac con Apple Silicon y macOS 11 o posterior.",
     "dl.button": "Descargar el DMG",
@@ -252,13 +261,10 @@ const STRINGS = {
   },
 };
 
-const LANGS = ['en', 'tr', 'ja', 'es'];
 const store = {
-  get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* storage unavailable */ } },
 };
-const fromBrowser = () => (navigator.languages || [navigator.language || 'en']).map((l) => l.slice(0, 2).toLowerCase()).find((l) => LANGS.includes(l));
-let lang = [store.get('lang'), fromBrowser(), 'en'].find((l) => LANGS.includes(l) && STRINGS[l]);
+let lang = initialLanguage();
 
 function t(key, params = {}) {
   const s = STRINGS[lang]?.[key] ?? STRINGS.en[key] ?? key;
@@ -281,8 +287,9 @@ function apply() {
 }
 
 document.querySelectorAll('.lang button').forEach((b) => (b.onclick = () => {
-  if (!STRINGS[b.dataset.lang]) return;
-  lang = b.dataset.lang;
+  const selected = normalizeLanguage(b.dataset.lang);
+  if (!LANGS.includes(selected) || !STRINGS[selected]) return;
+  lang = selected;
   store.set('lang', lang);
   apply();
 }));

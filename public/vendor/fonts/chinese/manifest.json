@@ -1,0 +1,59 @@
+{
+  "preparedOn": "2026-11-10",
+  "format": "WOFF2",
+  "conversion": "Full original character coverage; no subsetting or glyph edits. Converted with fontTools 4.60.2 and Brotli 1.2.1.",
+  "licenses": {
+    "LXGW 975 Yuan SC": "OFL-LXGW975Yuan.txt",
+    "Chiron GoRound TC": "LICENSE-ChironGoRound.md"
+  },
+  "fonts": [
+    {
+      "file": "lxgw975yuan-sc-400.woff2",
+      "family": "LXGW 975 Yuan SC",
+      "weight": 400,
+      "version": "Version 26.207;July 26, 2026",
+      "glyphs": 30661,
+      "codepoints": 30912,
+      "bytes": 6283676,
+      "sha256": "a22180fd45d4c55b6f5b1003fe173e85c4b7dd72fdd8cff588c1682ef110e8fb",
+      "source": "https://raw.githubusercontent.com/lxgw/975Yuan/master/TTF/LXGW975YuanSC-400W.ttf",
+      "sourceSha256": "d14f5a453a221525f0db4887412712cbc03a84d0dc44ce2d22d51d1c136ed9a1"
+    },
+    {
+      "file": "lxgw975yuan-sc-700.woff2",
+      "family": "LXGW 975 Yuan SC",
+      "weight": 700,
+      "version": "Version 26.207;July 26, 2026",
+      "glyphs": 30661,
+      "codepoints": 30912,
+      "bytes": 6225512,
+      "sha256": "e9d31333b31c1b5fe5dbf57532d6811405968040f52d4e14f3c21584935fde7a",
+      "source": "https://raw.githubusercontent.com/lxgw/975Yuan/master/TTF/LXGW975YuanSC-700W.ttf",
+      "sourceSha256": "f392de4cba941f3c44c7770cfed7ac3c658b46b7e3a4b2546fe155010109d403"
+    },
+    {
+      "file": "chiron-goround-tc-400.woff2",
+      "family": "Chiron GoRound TC",
+      "weight": 400,
+      "version": "Version 1.011;hotconv 1.1.1;makeotfexe 2.6.0",
+      "glyphs": 50808,
+      "codepoints": 47174,
+      "bytes": 8013992,
+      "sha256": "20fcaf215d5fdf43d25db8bfe03bcfc3972daa2a61bfe53fea073cca6c196c54",
+      "source": "https://raw.githubusercontent.com/chiron-fonts/chiron-go-round-tc/release/STATIC_TTF/ChironGoRoundTC-400R.ttf",
+      "sourceSha256": "d5c74311de073cc20ba6bd8f6265373350fc607d3f8d4ce3ad9497b459b9e6ac"
+    },
+    {
+      "file": "chiron-goround-tc-800.woff2",
+      "family": "Chiron GoRound TC",
+      "weight": 800,
+      "version": "Version 1.011;hotconv 1.1.1;makeotfexe 2.6.0",
+      "glyphs": 50808,
+      "codepoints": 47174,
+      "bytes": 7956764,
+      "sha256": "806939941a932eb4b4c08d3c26147562917ed0ed05a2a0b20077b3a35b6c3a62",
+      "source": "https://raw.githubusercontent.com/chiron-fonts/chiron-go-round-tc/release/STATIC_TTF/ChironGoRoundTC-800EB.ttf",
+      "sourceSha256": "93a1db817f78444f146440897c557d359dec794eeb24cf05fe4d19ddf4be7eb5"
+    }
+  ]
+}

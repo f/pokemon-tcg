@@ -1,6 +1,7 @@
 # secrets and local settings
 .env
 decision.json
+/.cache/card-localization/
 
 # dependencies and build output
 node_modules/
@@ -17,6 +18,9 @@ public/img/card-back.jpg
 public/img/pokemon-logo.svg
 public/img/pokemon-logo-white.svg
 public/img/set-logo.png
+public/img/set-logo-es.svg
+public/img/set-logo-zh-Hans.svg
+public/img/set-logo-zh-Hant.png
 public/img/set-symbol.png
 
 .DS_Store

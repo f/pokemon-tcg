@@ -2,6 +2,7 @@
 // Log lines and action labels are {key, params} so the UI can show them in any language.
 // Action `detail` strings are English descriptions for the decision model.
 import { CARDS, DECKS, PRIZES, HAND_SIZE, MAX_BENCH } from './cards.js';
+import { attackRef, powerRef } from './content-i18n/refs.js';
 import { installModern } from './engine-modern.js';
 import { installMega } from './engine-mega.js';
 import { installSwsh } from './engine-swsh.js';
@@ -26,7 +27,11 @@ export const isBasic = (c) => c.kind === 'pokemon' && c.stage === 0;
 export const STAGES = ['Basic', 'Stage 1', 'Stage 2'];
 
 // Log/label parameter helpers, resolved by the UI's translator.
-export const C = (card) => ({ $card: { name: card.name, kind: card.kind, energyType: card.energyType, special: card.special } });
+export function C(subject) {
+  const card = subject.card ?? subject;
+  const { id, name, kind, energyType, special } = card;
+  return { $card: { id, name, kind, energyType, special } };
+}
 export const PL = (p) => ({ $pl: p.idx });
 const ST = (s) => ({ $st: s });
 const COIN = (h) => ({ $coin: h });
@@ -190,10 +195,29 @@ export class Game {
   async pickCard(p, kind, cards, text, params = {}, en = '', { none = false, ai = () => 0, unique = true } = {}) {
     const list = unique ? uniqueByName(cards) : cards;
     if (!list.length) return null;
+    if (kind === 'discard' && list.length === 1 && !none) return list[0];
     const opts = list.map((c) => ({ id: String(c.uid), card: c, ai: ai(c) }));
     if (none) opts.push({ id: 'none', label: { key: 'opt.none' }, en: 'Choose nothing.', ai: -1 });
     const id = await this.pick(p, kind, 'prompt.gen.title', text, opts, { params, en });
     return list.find((c) => String(c.uid) === id) || null;
+  }
+  async pickSubset(cards, n, pick) {
+    const pool = [...cards], selected = [];
+    while (n > 0 && pool.length > n) {
+      const card = await pick(pool, selected.length + 1);
+      const index = pool.indexOf(card);
+      selected.push(pool.splice(index < 0 ? 0 : index, 1)[0]);
+      n--;
+    }
+    return n > 0 ? selected.concat(pool) : selected;
+  }
+  async discardHandCards(p, pool, n, text = 'prompt.q.discardK', params = {}, ai = (x) => x.kind === 'energy' ? -1 : x.kind === 'trainer' ? -2 : 0) {
+    const cards = await this.pickSubset(pool, n, (remaining, k) => {
+      const choices = [...new Map(remaining.map((c) => [c.id ?? c.name, c])).values()];
+      return this.pickCard(p, 'discard', choices, text, { ...params, k, n }, 'Choose a card from your hand to discard.', { unique: false, ai });
+    });
+    for (const card of cards) p.discard.push(this.takeFromHand(p, card));
+    return cards;
   }
   async pickNumber(p, kind, max, text, params = {}, en = '', ai = (n) => n) {
     if (max <= 0) return 0;
@@ -216,10 +240,10 @@ export class Game {
     const h = Math.min(n, m.damage);
     if (h <= 0) return 0;
     // Life-Locked: the opponent's Active Pokémon can't be healed.
-    if (this.modern && this.healLocked(m)) { this.log('log.healLocked', { m: m.name }, 'status'); return 0; }
+    if (this.modern && this.healLocked(m)) { this.log('log.healLocked', { m: C(m) }, 'status'); return 0; }
     m.damage -= h;
     m.effects.healedNow = { expires: this.turn };
-    this.log('log.heal', { m: m.name, n: h }, 'heal');
+    this.log('log.heal', { m: C(m), n: h }, 'heal');
     return h;
   }
   allMons(p) { return [p.active, ...p.bench].filter(Boolean); }
@@ -414,7 +438,7 @@ export class Game {
             // Giovanni lets one of his Pokémon evolve on the turn it was played (even on your first turn).
             const gio = p.flags.giovanni === m.id;
             if (m.name === c.evolvesFrom && (gio || (this.turn > 2 && m.playedTurn < this.turn)) && once('evo' + c.name + m.id))
-              add('evolve', lbl('evolve', { from: m.name, s: this.slot(p, m), to: c.name }),
+              add('evolve', lbl('evolve', { from: C(m), s: this.slot(p, m), to: C(c) }),
                 `Evolve ${m.name} (${this.slotEn(p, m)}) into ${c.name}: max HP ${m.maxHp} → ${c.hp}, keeps damage and Energy, removes Special Conditions. New attacks: ${attacksEn(c)}.`, { card: c, target: m });
           }
       } else if (c.kind === 'energy') {
@@ -422,7 +446,7 @@ export class Game {
           for (const m of mons)
             if (!m.effects.noEnergy && !(c.special === 'teamRocket' && !m.name.startsWith("Team Rocket's")) && !(c.needsTag && !m.card.tags?.includes(c.needsTag)) &&
               !(c.special === 'aurora' && p.hand.length < 2) && !(c.special && p.until.noSpecialStadium === this.turn) && once('en' + c.name + m.id))
-              add('energy', lbl('energy', { c: C(c), m: m.name, s: this.slot(p, m) }),
+              add('energy', lbl('energy', { c: C(c), m: C(m), s: this.slot(p, m) }),
                 `Attach ${c.name} to ${m.name} (${this.slotEn(p, m)}). ${energyNote(m, c.energyType, c.provides)}${c.special ? ' ' + SPECIAL_EN[c.special] : ''}`, { card: c, target: m });
       } else if (c.kind === 'trainer') {
         if (p.until.noTrainers === this.turn) continue; // Headache
@@ -437,14 +461,14 @@ export class Game {
     const fires = p.hand.filter((x) => x.kind === 'energy' && x.energyType === 'Fire' && !x.special);
     if (p.flags.blaine && !p.flags.energy && fires.length >= 2)
       for (const m of mons) if (m.name.includes('Blaine') && !m.effects.noEnergy)
-        add('energy', lbl('blaine', { m: m.name, s: this.slot(p, m) }), `Blaine's effect: attach 2 Fire Energy from your hand to ${monEn(m)} as your Energy for this turn.`, { card: fires[0], card2: fires[1], target: m });
+        add('energy', lbl('blaine', { m: C(m), s: this.slot(p, m) }), `Blaine's effect: attach 2 Fire Energy from your hand to ${monEn(m)} as your Energy for this turn.`, { card: fires[0], card2: fires[1], target: m });
 
     const a = p.active;
     const cost = a ? this.retreatCost(p, a) : 0;
     const stuck = a && (a.status.asleep || a.status.paralyzed) && !(this.modern && this.canRetreatStuck(a)); // Escape Board
     if (a && !p.flags.retreat && p.bench.length && !stuck && !a.effects.noRetreat && a.energyTypes.length >= cost)
       for (const b of p.bench)
-        add('retreat', lbl('retreat', { from: a.name, to: b.name }),
+        add('retreat', lbl('retreat', { from: C(a), to: C(b) }),
           `Retreat: discard ${cost} Energy from ${a.name} to move it to the Bench; ${monEn(b)} becomes Active. Once per turn.`, { target: b });
 
     if (this.modern) {
@@ -475,7 +499,7 @@ export class Game {
         if (fx.gx && p.gxUsed) return; // only 1 GX attack per game
         if (fx.copyBenchTag && !p.bench.some((x) => x.card.tags?.includes(fx.copyBenchTag) && x.card.attacks.length)) return;
         if (fx.flipMetronome && !d?.card.attacks.length) return;
-        add('attack', lbl('attack', { name: atk.name }), this.attackPreview(p, i), { index: i });
+        add('attack', lbl('attack', { name: attackRef(atk) }), this.attackPreview(p, i), { index: i });
       });
 
     add('end', lbl('end'), 'End your turn without attacking.');
@@ -489,7 +513,7 @@ export class Game {
       const k = m.card.powerKind;
       if (!ACTIVE_POWERS.has(k) || !this.powerOn(m)) continue;
       const used = p.flags.powers[m.id];
-      const P = (detail, extra = {}) => add('power', lbl('power', { m: m.name, pw: m.card.power.name }), `Pokémon Power ${m.card.power.name} of ${m.name}: ${detail}`, { target: m, pkind: k, ...extra });
+      const P = (detail, extra = {}) => add('power', lbl('power', { m: C(m), pw: powerRef(m.card.power) }), `Pokémon Power ${m.card.power.name} of ${m.name}: ${detail}`, { target: m, pkind: k, ...extra });
       switch (k) {
         case 'pollenStench':
           if (!used && p.active && o.active) P(`flip a coin. Heads: the opponent's Active ${o.active.name} becomes Confused. Tails: your Active ${p.active.name} becomes Confused. Once per turn.`);
@@ -521,16 +545,16 @@ export class Game {
       case 'celadon':
         if (!p.flags.stadiumUsed)
           for (const m of mons) if (m.name.includes('Erika') && m.energy.length && m.conditions().length)
-            S('celadon', { m: m.name }, `discard 1 Energy from ${monEn(m)} to cure all its Special Conditions (${m.conditions().join(', ')}).`, { target: m });
+            S('celadon', { m: C(m) }, `discard 1 Energy from ${monEn(m)} to cure all its Special Conditions (${m.conditions().join(', ')}).`, { target: m });
         break;
       case 'fuchsia':
         if (!p.flags.stadiumUsed)
           for (const m of [p.active, ...p.bench]) if (m?.name.includes('Koga') && p.bench.length)
-            S('fuchsia', { m: m.name }, `flip a coin. Heads: shuffle your ${monEn(m)} and its attached cards into your deck. Once per turn.`, { target: m });
+            S('fuchsia', { m: C(m) }, `flip a coin. Heads: shuffle your ${monEn(m)} and its attached cards into your deck. Once per turn.`, { target: m });
         break;
       case 'saffron':
         for (const m of mons) if (m.name.includes('Sabrina') && m.energy.some((en) => !en.special))
-          S('saffron', { m: m.name }, `return 1 basic Energy from ${monEn(m)} to your hand.`, { target: m });
+          S('saffron', { m: C(m) }, `return 1 basic Energy from ${monEn(m)} to your hand.`, { target: m });
         break;
     }
   }
@@ -543,35 +567,35 @@ export class Game {
     switch (tk) {
       case 'potion':
         for (const m of mons) if (m.damage > 0 && once('potion' + m.id))
-          T('potion', { m: m.name }, `heal 20 damage from ${monEn(m)}.`, { target: m });
+          T('potion', { m: C(m) }, `heal 20 damage from ${monEn(m)}.`, { target: m });
         break;
       case 'superPotion':
         for (const m of mons) if (m.damage > 0 && m.energy.length && once('spotion' + m.id))
-          T('superPotion', { m: m.name }, `discard 1 Energy from ${monEn(m)} to heal 40 damage from it.`, { target: m });
+          T('superPotion', { m: C(m) }, `discard 1 Energy from ${monEn(m)} to heal 40 damage from it.`, { target: m });
         break;
       case 'switch':
         for (const b of p.bench) if (once('switch' + b.id))
-          T('switch', { m: b.name }, `switch your Active ${p.active.name} with Benched ${monEn(b)} for free.`, { target: b });
+          T('switch', { m: C(b) }, `switch your Active ${p.active.name} with Benched ${monEn(b)} for free.`, { target: b });
         break;
       case 'gust':
         for (const b of o.bench) if (once('gust' + b.id))
-          T('gust', { m: b.name }, `force the opponent's Benched ${monEn(b)} into their Active Spot (their Active ${o.active.name} goes to the Bench).`, { target: b });
+          T('gust', { m: C(b) }, `force the opponent's Benched ${monEn(b)} into their Active Spot (their Active ${o.active.name} goes to the Bench).`, { target: b });
         break;
       case 'energyRemoval':
         for (const m of oppMons) for (const t of new Set(m.energyTypes)) if (once('er' + m.id + t))
-          T('energyRemoval', { m: m.name, t: { $type: t } }, `discard 1 ${t} Energy from the opponent's ${monEn(m)}.`, { target: m, etype: t });
+          T('energyRemoval', { m: C(m), t: { $type: t } }, `discard 1 ${t} Energy from the opponent's ${monEn(m)}.`, { target: m, etype: t });
         break;
       case 'superEnergyRemoval':
         if (mons.some((m) => m.energy.length))
           for (const m of oppMons) if (m.energy.length && once('ser' + m.id))
-            T('superEnergyRemoval', { m: m.name }, `discard 1 Energy from one of your Pokémon to discard up to 2 Energy from the opponent's ${monEn(m)}.`, { target: m });
+            T('superEnergyRemoval', { m: C(m) }, `discard 1 Energy from one of your Pokémon to discard up to 2 Energy from the opponent's ${monEn(m)}.`, { target: m });
         break;
       case 'plusPower':
-        if (p.active && once('pp')) T('plusPower', { m: p.active.name }, `attach to your Active ${p.active.name}: its attack does 10 more damage this turn.`);
+        if (p.active && once('pp')) T('plusPower', { m: C(p.active) }, `attach to your Active ${p.active.name}: its attack does 10 more damage this turn.`);
         break;
       case 'defender':
         for (const m of mons) if (once('def' + m.id))
-          T('defender', { m: m.name }, `attach to ${monEn(m)}: damage done to it is reduced by 20 until the end of the opponent's next turn.`, { target: m });
+          T('defender', { m: C(m) }, `attach to ${monEn(m)}: damage done to it is reduced by 20 until the end of the opponent's next turn.`, { target: m });
         break;
       case 'bill':
         if (p.deck.length && once('bill')) T('bill', {}, 'draw 2 cards.');
@@ -592,7 +616,7 @@ export class Game {
         if (others >= 2 && p.deck.length && once('cs')) T('computerSearch', {}, 'discard 2 other cards from your hand to search your deck for any 1 card.');
         break;
       case 'fullHeal':
-        if (p.active?.conditions().length && once('fh')) T('fullHeal', { m: p.active.name }, `cure all Special Conditions (${p.active.conditions().join(', ')}) of your Active ${p.active.name}.`);
+        if (p.active?.conditions().length && once('fh')) T('fullHeal', { m: C(p.active) }, `cure all Special Conditions (${p.active.conditions().join(', ')}) of your Active ${p.active.name}.`);
         break;
       case 'pokemonCenter':
         if (mons.some((m) => m.damage) && once('pc')) T('pokemonCenter', {}, `remove all damage from your damaged Pokémon (${mons.filter((m) => m.damage).map(monEn).join('; ')}), but discard all Energy attached to them.`);
@@ -658,7 +682,7 @@ export class Game {
       case 'giovanni':
         if (p.flags.giovanni == null)
           for (const m of mons) if (m.name.includes('Giovanni') && p.hand.some((x) => x.evolvesFrom === m.name) && once('gio' + m.id))
-            T('giovanni', { m: m.name }, `${monEn(m)} may evolve this turn even if it was just played or it is your first turn.`, { target: m });
+            T('giovanni', { m: C(m) }, `${monEn(m)} may evolve this turn even if it was just played or it is your first turn.`, { target: m });
         break;
       case 'koga':
         if (!p.flags.koga && p.active?.name.includes('Koga') && once('koga')) T('koga', {}, `this turn, if your Active ${p.active.name} does damage with an attack, the Defending Pokémon is also Poisoned.`);
@@ -874,18 +898,18 @@ export class Game {
       case 'evolve': {
         if (this.modern) { await this.evolveMon(p, act.target, act.card); break; }
         await this.hooks.onEvolve?.({ p: p.idx, mon: act.target.id, from: act.target.card, to: act.card });
-        const m = act.target, from = m.name;
+        const m = act.target, from = C(m);
         m.stack.push(this.takeFromHand(p, act.card));
         m.playedTurn = this.turn;
         m.status = {};
         m.effects = {};
-        this.plog(p, 'log.evolve', { from, to: m.name });
+        this.plog(p, 'log.evolve', { from, to: C(m) });
         this.learn('evolve');
         if (this.stadiumIs('viridian') && m.name.includes('Giovanni')) await this.heal(m, 20);
         // Call the Boss: playing Giovanni's Persian fetches the Giovanni Trainer card.
         if (m.card.powerKind === 'callTheBoss' && this.powerOn(m)) {
           const g = p.deck.find((x) => x.name === 'Giovanni');
-          if (g) { p.hand.push(this.searchDeck(p, g)); this.plog(p, 'log.power.got', { m: m.name, pw: m.card.power.name, c: C(g) }); }
+          if (g) { p.hand.push(this.searchDeck(p, g)); this.plog(p, 'log.power.got', { m: C(m), pw: powerRef(m.card.power), c: C(g) }); }
         }
         break;
       }
@@ -893,16 +917,16 @@ export class Game {
         for (const card of [act.card, act.card2].filter(Boolean)) {
           await this.hooks.onAttach?.({ p: p.idx, mon: act.target.id, card });
           act.target.energy.push(this.takeFromHand(p, card));
-          this.plog(p, 'log.energy', { c: C(card), m: act.target.name });
+          this.plog(p, 'log.energy', { c: C(card), m: C(act.target) });
         }
         p.flags.energy = true;
         this.learn('energy');
         const c = act.card, m = act.target;
         if (this.modern) await this.swshAttached(p, c, m);
         if (c.special === 'potion') await this.heal(m, 10);
-        if (c.special === 'fullHeal' && m.conditions().length) { m.status = {}; this.log('log.cured', { m: m.name }, 'heal'); }
+        if (c.special === 'fullHeal' && m.conditions().length) { m.status = {}; this.log('log.cured', { m: C(m) }, 'heal'); }
         if (c.special) this.learn('specialEnergy');
-        else if (!m.card.attacks.some((x) => x.cost.includes(c.energyType))) this.learn('offType', { t: { $type: c.energyType }, m: m.name });
+        else if (!m.card.attacks.some((x) => x.cost.includes(c.energyType))) this.learn('offType', { t: { $type: c.energyType }, m: C(m) });
         break;
       }
       case 'trainer':
@@ -914,17 +938,10 @@ export class Game {
         break;
       case 'retreat': {
         const a = p.active;
-        // Pay the retreat cost in Energy units (a Double Colorless Energy pays 2).
-        const paid = [];
-        for (let units = 0, cost = this.retreatCost(p, a); units < cost && a.energy.length;) {
-          const en = a.energy.pop();
-          paid.push(en);
-          units += en.provides || 1;
-        }
-        p.discard.push(...paid);
+        const paid = await this.payRetreat(p, a);
         this.swapActive(p, act.target);
         p.flags.retreat = true;
-        this.plog(p, 'log.retreat', { from: a.name, n: paid.length, to: p.active.name });
+        this.plog(p, 'log.retreat', { from: C(a), n: paid.length, to: C(p.active) });
         this.learn('retreat');
         if (this.modern) await this.becameActive(p);
         break;
@@ -956,51 +973,50 @@ export class Game {
       case 'potion': {
         const h = Math.min(20, m.damage);
         m.damage -= h;
-        L('heal', { m: m.name, n: h });
+        L('heal', { m: C(m), n: h });
         break;
       }
       case 'superPotion': {
-        p.discard.push(m.energy.pop());
+        await this.discardAttachedEnergy(p, [m], 1);
         const h = Math.min(40, m.damage);
         m.damage -= h;
-        L('superPotion', { m: m.name, n: h });
+        L('superPotion', { m: C(m), n: h });
         break;
       }
       case 'switch':
         this.swapActive(p, m);
-        L('switch', { m: p.active.name });
+        L('switch', { m: C(p.active) });
         break;
       case 'gust':
         this.swapActive(o, m);
-        L('gust', { m: o.active.name });
+        L('gust', { m: C(o.active) });
         break;
       case 'energyRemoval': {
-        const i = m.energy.findIndex((e) => e.energyType === act.etype);
-        o.discard.push(...m.energy.splice(i, 1));
-        L('energyRemoval', { m: m.name, t: { $type: act.etype } });
+        await this.discardAttachedEnergy(p, [m], 1, (en) => en.energyType === act.etype);
+        L('energyRemoval', { m: C(m), t: { $type: act.etype } });
         this.learn('energyRemoval');
         break;
       }
       case 'superEnergyRemoval': {
         const mine = this.allMons(p).filter((x) => x.energy.length);
-        const id = await this.ask(p, { kind: 'ser', title: 'prompt.ser.title', text: 'prompt.ser.text', options: mine.map((x) => ({ id: String(x.id), mon: x })) });
-        const src = mine.find((x) => String(x.id) === id) || mine[0];
-        p.discard.push(src.energy.pop());
-        const removed = m.energy.splice(-2, 2);
-        o.discard.push(...removed);
-        L('superEnergyRemoval', { src: src.name, m: m.name, n: removed.length });
+        const src = await this.pickMon(p, 'ser', mine, 'prompt.ser.text', {}, 'Choose which of your Pokémon discards an Energy.', (x) => -energyProgressEn(x));
+        await this.discardAttachedEnergy(p, [src], 1);
+        const removed = await this.discardAttachedEnergy(p, [m], 1);
+        const second = await this.chooseEnergy(p, m, m.energy, 'prompt.q.removeSecondEnergy', 'Choose a second Energy to discard, or stop.', { none: true });
+        if (second) o.discard.push(...m.energy.splice(m.energy.indexOf(second), 1));
+        L('superEnergyRemoval', { src: C(src), m: C(m), n: removed.length + Number(Boolean(second)) });
         break;
       }
       case 'plusPower':
         await this.hooks.onAttach?.({ p: p.idx, mon: p.active.id, card: c });
         p.active.tools.push({ card: this.pullFromDiscard(p, c), expires: this.turn });
-        L('attach', { m: p.active.name });
+        L('attach', { m: C(p.active) });
         this.learn('tool');
         break;
       case 'defender':
         await this.hooks.onAttach?.({ p: p.idx, mon: m.id, card: c });
         m.tools.push({ card: this.pullFromDiscard(p, c), expires: this.turn + 1 });
-        L('attach', { m: m.name });
+        L('attach', { m: C(m) });
         this.learn('tool');
         break;
       case 'bill':
@@ -1021,9 +1037,7 @@ export class Game {
         }
         break;
       case 'energyRetrieval': {
-        const id = await this.ask(p, { kind: 'discard', title: 'prompt.discard1.title', text: 'prompt.discard1.text', options: p.hand.map((x) => ({ id: String(x.uid), card: x })) });
-        const d = p.hand.find((x) => String(x.uid) === id) || p.hand[0];
-        p.discard.push(this.takeFromHand(p, d));
+        const [d] = await this.discardHandCards(p, p.hand, 1, 'prompt.q.discard1', { c: C(c) });
         const got = [];
         for (let k = 0; k < 2; k++) {
           const i = p.discard.findLastIndex((x) => x.kind === 'energy');
@@ -1034,19 +1048,13 @@ export class Game {
         break;
       }
       case 'computerSearch': {
-        const dropped = [];
-        for (let k = 0; k < 2; k++) {
-          const id = await this.ask(p, { kind: 'discard', title: 'prompt.discardN.title', text: 'prompt.discardN.text', params: { k: k + 1 }, options: p.hand.map((x) => ({ id: String(x.uid), card: x })) });
-          const d = p.hand.find((x) => String(x.uid) === id) || p.hand[0];
-          dropped.push(d.name);
-          p.discard.push(this.takeFromHand(p, d));
-        }
+        const [a, b] = await this.discardHandCards(p, p.hand, 2);
         const id = await this.ask(p, { kind: 'search', title: 'prompt.search.title', text: 'prompt.search.text', options: uniqueByName(p.deck).map((x) => ({ id: String(x.uid), card: x })) });
         const got = p.deck.find((x) => String(x.uid) === id) || p.deck[0];
         p.deck.splice(p.deck.indexOf(got), 1);
         p.hand.push(got);
         shuffle(p.deck);
-        L('search', { a: dropped[0], b: dropped[1], got: p.idx === 0 ? C(got) : { $hidden: true } });
+        L('search', { a: C(a), b: C(b), got: p.idx === 0 ? C(got) : { $hidden: true } });
         break;
       }
       default:
@@ -1072,7 +1080,7 @@ export class Game {
     switch (act.tkind) {
       case 'fullHeal':
         p.active.status = {};
-        L('fullHeal', { m: p.active.name });
+        L('fullHeal', { m: C(p.active) });
         break;
       case 'pokemonCenter': {
         let n = 0;
@@ -1148,16 +1156,13 @@ export class Game {
         old.status = {}; old.effects = {};
         p.bench.push(old);
         p.active = new Mon(this.takeFromHand(p, b), this.turn);
-        L('ltSurge', { m: b.name, old: old.name });
+        L('ltSurge', { m: C(b), old: C(old) });
         break;
       }
       case 'misty': {
-        for (let k = 0; k < 2; k++) {
-          const d = await this.pickCard(p, 'discard', p.hand, 'prompt.q.discardK', { c: C(c), k: k + 1, n: 2 }, 'Choose a card from your hand to discard.', { unique: false, ai: (x) => (x.kind === 'trainer' ? 1 : 0) });
-          if (d) p.discard.push(this.takeFromHand(p, d));
-        }
+        await this.discardHandCards(p, p.hand, 2, 'prompt.q.discardK', {}, (x) => Number(x.kind === 'trainer'));
         p.flags.misty = true;
-        L('misty', { m: p.active.name });
+        L('misty', { m: C(p.active) });
         break;
       }
       case 'brock':
@@ -1165,7 +1170,7 @@ export class Game {
         L('played');
         break;
       case 'erikasPerfume': {
-        this.plog(p, 'log.t.sawHand', { list: o.hand.map((x) => x.name).join(', ') || '—', c: C(c) });
+        this.plog(p, 'log.t.sawHand', { list: { $list: o.hand.map(C) }, c: C(c) });
         for (let k = 0; k < MAX_BENCH && o.bench.length < MAX_BENCH; k++) {
           const b = await this.pickCard(p, 'perfume', o.hand.filter(isBasic), 'prompt.q.perfume', { c: C(c) }, "Choose a Basic Pokémon from the opponent's hand to put onto their Bench, or nothing to stop.", { none: true, unique: false, ai: (x) => 60 - x.hp });
           if (!b) break;
@@ -1187,7 +1192,7 @@ export class Game {
         break;
       }
       case 'secretMission': {
-        this.plog(p, 'log.t.sawHand', { list: o.hand.map((x) => x.name).join(', ') || '—', c: C(c) });
+        this.plog(p, 'log.t.sawHand', { list: { $list: o.hand.map(C) }, c: C(c) });
         const out = await discardLoop('discard', 'prompt.q.discardMore');
         L('drew', { n: this.draw(p, out.length) });
         break;
@@ -1207,7 +1212,7 @@ export class Game {
         break;
       case 'giovanni':
         p.flags.giovanni = m.id;
-        L('giovanni', { m: m.name });
+        L('giovanni', { m: C(m) });
         break;
       case 'koga':
         p.flags.koga = true;
@@ -1217,16 +1222,13 @@ export class Game {
         const sab = this.allMons(p).filter((x) => x.name.includes('Sabrina'));
         const from = await this.pickMon(p, 'sabrinaFrom', sab.filter((x) => x.energy.length), 'prompt.q.moveFrom', { c: C(c) }, 'Move all Energy away from which Pokémon?', (x) => -energyProgressEn(x));
         const to = await this.pickMon(p, 'sabrinaTo', sab.filter((x) => x !== from), 'prompt.q.moveTo', { c: C(c) }, 'Move all that Energy onto which Pokémon?', (x) => (x === p.active ? 5 : 0));
-        if (from && to) { const n = from.energy.length; to.energy.push(...from.energy.splice(0)); L('moved', { a: from.name, b: to.name, n }); }
+        if (from && to) { const n = from.energy.length; to.energy.push(...from.energy.splice(0)); L('moved', { a: C(from), b: C(to), n }); }
         break;
       }
       case 'maxRevive': {
-        for (let k = 0; k < 2; k++) {
-          const d = await this.pickCard(p, 'discard', p.hand.filter((x) => x.kind === 'energy'), 'prompt.q.discardEnergy', { c: C(c), k: k + 1, n: 2 }, 'Choose an Energy card from your hand to discard.', { unique: false });
-          if (d) p.discard.push(this.takeFromHand(p, d));
-        }
+        await this.discardHandCards(p, p.hand.filter((x) => x.kind === 'energy'), 2, 'prompt.q.discardEnergy');
         const b = await this.pickCard(p, 'revive', p.discard.filter(isBasic), 'prompt.q.revive', { c: C(c) }, 'Choose a Basic Pokémon from your discard pile to put onto your Bench.', { ai: (x) => x.hp });
-        if (b) { p.bench.push(new Mon(this.pullFromDiscard(p, b), this.turn)); L('revive', { m: b.name }); }
+        if (b) { p.bench.push(new Mon(this.pullFromDiscard(p, b), this.turn)); L('revive', { m: C(b) }); }
         break;
       }
       case 'psychicControl': {
@@ -1252,19 +1254,19 @@ export class Game {
         const fire = top.filter((x) => x.kind === 'energy' && x.energyType === 'Fire' && !x.special);
         p.hand.push(...fire);
         p.discard.push(...top.filter((x) => !fire.includes(x)));
-        L('fervor', { list: top.map((x) => x.name).join(', '), n: fire.length });
+        L('fervor', { list: { $list: top.map(C) }, n: fire.length });
         break;
       }
       case 'warpPoint': {
         if (o.bench.length) {
           const t = await this.pickMon(o, 'whirlwind', o.bench, 'prompt.q.warpOpp', { c: C(c) }, 'Your opponent played Warp Point: choose which of your Benched Pokémon becomes Active.', (x) => x.hpLeft / 10);
           this.swapActive(o, t);
-          this.plog(o, 'log.t.switched', { m: o.active.name });
+          this.plog(o, 'log.t.switched', { m: C(o.active) });
         }
         if (p.bench.length) {
           const t = await this.pickMon(p, 'promote', p.bench, 'prompt.q.warpYou', { c: C(c) }, 'Choose which of your Benched Pokémon becomes Active.', (x) => x.hpLeft / 10 + x.energy.length * 3);
           this.swapActive(p, t);
-          this.plog(p, 'log.t.switched', { m: p.active.name });
+          this.plog(p, 'log.t.switched', { m: C(p.active) });
         }
         break;
       }
@@ -1282,39 +1284,39 @@ export class Game {
   async usePower(p, act) {
     const o = this.opp(p), m = act.target;
     p.flags.powers[m.id] = true;
-    this.plog(p, 'log.power', { m: m.name, pw: m.card.power.name });
+    this.plog(p, 'log.power', { m: C(m), pw: powerRef(m.card.power) });
     this.learn('power');
     const O = (key, params = {}) => ({ key: 'coin.o.' + key, params });
     switch (act.pkind) {
       case 'pollenStench': case 'longDistanceHypnosis': {
         const s = act.pkind === 'pollenStench' ? 'confused' : 'asleep';
-        const h = await this.flip('power', { pw: m.card.power.name }, [O('status', { s: ST(s) }), O('selfStatus', { s: ST(s) })]);
+        const h = await this.flip('power', { pw: powerRef(m.card.power) }, [O('status', { s: ST(s) }), O('selfStatus', { s: ST(s) })]);
         this.applyStatus(h ? o.active : p.active, s);
         break;
       }
       case 'matterExchange': {
-        const d = await this.pickCard(p, 'discard', p.hand, 'prompt.q.discard1', { c: m.card.power.name }, 'Choose 1 card from your hand to discard (you then draw 1).', { unique: false, ai: (x) => (x.kind === 'energy' ? 0 : x.kind === 'trainer' ? 1 : -1) });
+        const d = await this.pickCard(p, 'discard', p.hand, 'prompt.q.discard1', { c: powerRef(m.card.power) }, 'Choose 1 card from your hand to discard (you then draw 1).', { unique: false, ai: (x) => (x.kind === 'energy' ? 0 : x.kind === 'trainer' ? 1 : -1) });
         if (d) p.discard.push(this.takeFromHand(p, d));
         this.plog(p, 'log.t.drewN', { n: this.draw(p, 1) });
         break;
       }
       case 'energyCharge': {
-        const src = await this.pickMon(p, 'chargeFrom', this.allMons(p).filter((x) => x !== m && x.energy.some((en) => en.energyType === 'Lightning' && !en.special)), 'prompt.q.moveFrom', { c: m.card.power.name }, 'Take 1 Lightning Energy from which Pokémon?', (x) => -energyProgressEn(x));
+        const src = await this.pickMon(p, 'chargeFrom', this.allMons(p).filter((x) => x !== m && x.energy.some((en) => en.energyType === 'Lightning' && !en.special)), 'prompt.q.moveFrom', { c: powerRef(m.card.power) }, 'Take 1 Lightning Energy from which Pokémon?', (x) => -energyProgressEn(x));
         const i = src.energy.findIndex((en) => en.energyType === 'Lightning' && !en.special);
         m.energy.push(...src.energy.splice(i, 1));
-        this.log('log.energyMoved', { a: src.name, b: m.name, t: { $type: 'Lightning' } });
+        this.log('log.energyMoved', { a: C(src), b: C(m), t: { $type: 'Lightning' } });
         p.flags.powers[m.id] = false; // as often as you like
         break;
       }
       case 'emerge': {
-        if (await this.flip('power', { pw: m.card.power.name }, [O('evolve'), O('nothing')])) {
+        if (await this.flip('power', { pw: powerRef(m.card.power) }, [O('evolve'), O('nothing')])) {
           const c = p.deck.find((x) => x.name === "Koga's Beedrill");
           if (c) {
             await this.hooks.onEvolve?.({ p: p.idx, mon: m.id, from: m.card, to: c });
-            const from = m.name;
+            const from = C(m);
             m.stack.push(this.searchDeck(p, c));
             m.status = {}; m.effects = {};
-            this.plog(p, 'log.evolve', { from, to: m.name });
+            this.plog(p, 'log.evolve', { from, to: C(m) });
           }
         }
         break;
@@ -1327,15 +1329,15 @@ export class Game {
     p.flags.stadiumUsed = true;
     switch (act.stadium) {
       case 'celadon':
-        p.discard.push(m.energy.pop());
+        await this.discardAttachedEnergy(p, [m], 1);
         m.status = {};
-        this.plog(p, 'log.s.celadon', { m: m.name, c: C(s) });
+        this.plog(p, 'log.s.celadon', { m: C(m), c: C(s) });
         break;
       case 'fuchsia':
-        if (await this.flip('trainer', { c: C(s) }, [{ key: 'coin.o.shuffleIn', params: { m: m.name } }, { key: 'coin.o.nothing', params: {} }])) {
+        if (await this.flip('trainer', { c: C(s) }, [{ key: 'coin.o.shuffleIn', params: { m: C(m) } }, { key: 'coin.o.nothing', params: {} }])) {
           p.deck.push(...this.removeFromPlay(p, m));
           shuffle(p.deck);
-          this.plog(p, 'log.s.fuchsia', { m: m.name, c: C(s) });
+          this.plog(p, 'log.s.fuchsia', { m: C(m), c: C(s) });
           await this.refillActive();
         }
         break;
@@ -1343,7 +1345,7 @@ export class Game {
         const i = m.energy.findIndex((en) => !en.special);
         const en = m.energy.splice(i, 1)[0];
         p.hand.push(en);
-        this.plog(p, 'log.s.saffron', { m: m.name, e: C(en), c: C(s) });
+        this.plog(p, 'log.s.saffron', { m: C(m), e: C(en), c: C(s) });
         break;
       }
     }
@@ -1363,36 +1365,81 @@ export class Game {
   }
 
   applyStatus(m, s) {
-    if (this.modern && this.statusImmune(m)) { this.log('log.immune', { m: m.name }, 'status'); return; }
+    if (this.modern && this.statusImmune(m)) { this.log('log.immune', { m: C(m) }, 'status'); return; }
     if (s === 'asleep' || s === 'paralyzed' || s === 'confused') { delete m.status.asleep; delete m.status.paralyzed; delete m.status.confused; }
     m.status[s] = s === 'poisoned' && typeof m.status.poisoned === 'number' ? m.status.poisoned : true; // Toxic / Severe Poison keep their counters
     // Remember it for Mirror Move (the victim can copy what was done to it last turn).
     const lh = m.effects.lastHit;
     if (lh && lh.expires === this.turn + 1) lh.statuses.push(s);
     else m.effects.lastHit = { expires: this.turn + 1, dmg: 0, statuses: [s] };
-    this.log('log.status', { m: m.name, s: ST(s) }, 'status');
+    this.log('log.status', { m: C(m), s: ST(s) }, 'status');
     this.learn('status.' + s);
   }
 
   // The player picks which of these Energy cards (asked only when they differ). For their own Pokémon the AI keeps the
   // Energy its attacks need; for the opponent's it takes Special Energy first.
-  async chooseEnergy(p, m, pool, text, en) {
+  async chooseEnergy(p, m, pool, text, en, { none = false, params = {} } = {}) {
     if (!pool.length) return null;
-    if (uniqueByName(pool).length === 1) return pool.at(-1);
+    const key = (x) => JSON.stringify([x.name, x.energyType, x.provides || 1, x.special]);
+    const choices = [...new Map(pool.map((x) => [key(x), x])).values()];
+    if (choices.length === 1 && !none) return choices[0];
     const mine = this.ownerOf(m) === p;
     const need = new Set((m.card.attacks || []).flatMap((x) => x.cost).filter((t) => t !== 'Colorless'));
     const ai = (x) => (mine ? (need.has(x.energyType) ? 0 : 2) - (x.special ? 1 : 0) : (x.special ? 3 : 1) + (need.has(x.energyType) ? 1 : 0));
-    return (await this.pickCard(p, 'discard', pool, text, { m: m.name }, en, { ai })) || pool.at(-1);
+    const chosen = await this.pickCard(p, 'discard', choices, text, { m: C(m), ...params }, en, { ai, none, unique: false });
+    return chosen ?? (none ? null : choices[0]);
+  }
+
+  async payRetreat(p, m) {
+    const pool = [...m.energy], paid = [];
+    const units = (en) => en.provides || 1;
+    let left = this.retreatCost(p, m);
+    while (left > 0) {
+      // If even the smallest Energy card is needed, every remaining card must be paid.
+      const values = pool.map(units);
+      if (values.reduce((sum, n) => sum + n, 0) - Math.min(...values) < left) {
+        paid.push(...pool);
+        break;
+      }
+      const en = await this.chooseEnergy(p, m, pool, 'prompt.q.retreatEnergy', `Choose Energy to pay the remaining retreat cost of ${left}.`, { params: { n: left } });
+      paid.push(...pool.splice(pool.indexOf(en), 1));
+      left -= units(en);
+    }
+    for (const en of paid) p.discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
+    return paid;
+  }
+
+  async discardAttachedEnergy(p, mons, n, eligible = () => true) {
+    const sources = new Map(mons.flatMap((m) => m.energy.filter(eligible).map((en) => [en, m])));
+    const selected = await this.pickSubset([...sources.keys()], n, async (pool) => {
+      const holders = [...new Set(pool.map((en) => sources.get(en)))];
+      const m = await this.pickMon(p, 'discardFrom', holders, 'prompt.q.discardFromPokemon', {}, 'Discard Energy from which Pokémon?', (x) => Number(x !== p.active));
+      const mine = this.ownerOf(m) === p;
+      return this.chooseEnergy(p, m, pool.filter((en) => sources.get(en) === m),
+        mine ? 'prompt.q.discardWhichEnergy' : 'prompt.q.removeWhichEnergy',
+        mine ? 'Which of your Energy cards do you discard?' : 'Which of the opponent’s Energy cards do you discard?');
+    });
+    for (const en of selected) {
+      const m = sources.get(en);
+      this.ownerOf(m).discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
+    }
+    return selected;
+  }
+
+  async discardTool(p, m) {
+    const card = await this.pickCard(p, 'discard', m.tools.map((tool) => tool.card),
+      'prompt.q.discardWhichTool', { m: C(m) }, 'Which Pokémon Tool do you discard?');
+    if (card) {
+      m.tools.splice(m.tools.findIndex((tool) => tool.card === card), 1);
+      this.ownerOf(m).discard.push(card);
+    }
   }
 
   // "Discard N [type] Energy from this Pokémon" (no type: any Energy; the player chooses which when they differ).
   async discardEnergyOfType(p, m, type, n, strict = false) {
-    for (let k = 0; k < n && m.energy.length; k++) {
-      const of = m.energy.filter((e) => (strict && type ? isType(e.energyType, type) : e.energyType === type));
-      if (strict && type && !of.length) break; // a copied attack: only the Energy it names
-      const en = await this.chooseEnergy(p, m, of.length ? of : m.energy, 'prompt.q.discardWhichEnergy', 'Which Energy do you discard from this Pokémon?');
-      p.discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
-    }
+    if (!type) return this.discardAttachedEnergy(p, [m], n);
+    const paid = await this.discardAttachedEnergy(p, [m], n, (en) => strict ? isType(en.energyType, type) : en.energyType === type);
+    if (!strict && paid.length < n) await this.discardAttachedEnergy(p, [m], n - paid.length);
   }
 
   // Flip a coin. `outcomes` = [what heads means, what tails means], shown by the UI while the coin spins.
@@ -1411,10 +1458,10 @@ export class Game {
 
   async attack(p, i) {
     const a = p.active, d = this.opp(p).active, atk = this.attacksOf(a)[i];
-    this.plog(p, 'log.attack', { m: a.name, atk: atk.name });
+    this.plog(p, 'log.attack', { m: C(a), atk: attackRef(atk) });
     p.until.lastAtk = { turn: this.turn, id: a.card.id, name: atk.name, gx: !!atk.fx.gx, atk: { ...atk } }; // Copycat (the attack itself: a TM's isn't on the card)
     // Both Active Pokémon step into the arena for the whole attack, coin flips included.
-    await this.hooks.onAttack?.({ p: p.idx, from: a.id, to: d.id, atk: atk.name, type: a.card.type });
+    await this.hooks.onAttack?.({ p: p.idx, from: a.id, to: d.id, atk: attackRef(atk), type: a.card.type });
     this.attacking = a; // spread() knows this damage comes from an attack (shields, "takes less damage from attacks")
     try {
       await this.resolveAttack(p, atk);
@@ -1442,16 +1489,16 @@ export class Game {
       // From the opponent's attack: Agility / Detect / Stance (and Luminous Barrier) stop its damage and damage counters;
       // a Benched Pokémon still gets its "takes less damage from attacks" (the Active already got it through finalDamage).
       const fromAttack = !!src && this.attacking === src && !!q && this.ownerOf(src) !== q;
-      if (fromAttack && (m.effects.shield?.kind === 'all' || (this.modern && this.smBarrier(src, m)))) { this.log('log.barrier', { m: m.name }, 'status'); continue; }
+      if (fromAttack && (m.effects.shield?.kind === 'all' || (this.modern && this.smBarrier(src, m)))) { this.log('log.barrier', { m: C(m) }, 'status'); continue; }
       if (fromAttack && this.modern && !counters && n > 0 && q.bench.includes(m)) n = this.modernDefense(src, m, n, []);
-      if (this.modern && !counters && m.card.tera && q?.bench.includes(m)) { this.log('log.tera', { m: m.name }, 'status'); continue; }
+      if (this.modern && !counters && m.card.tera && q?.bench.includes(m)) { this.log('log.tera', { m: C(m) }, 'status'); continue; }
       if (this.modern && !counters && src && q && this.ownerOf(src) !== q && !(await this.swshBenchShield(q, m, src, n))) continue; // Wave Veil, Infiltrator
       const guard = !counters && q && q.bench.includes(m) && n >= 10 &&
         q.bench.find((r) => r !== m && r.card.powerKind === 'benchGuard' && this.powerOn(r));
       // Bench Guard ("you may"): its owner decides; worth it unless it would Knock Out the Rhydon.
       const left = guard ? guard.hpLeft - (plan.get(guard) || 0) : 0;
-      if (guard && (await this.yesNo(q, 'prompt.q.benchGuard', { c: guard.card.power.name, m: m.name }, `Bench Guard: should ${guard.name} take 10 of the ${n} damage meant for ${m.name}?`, left > 10 ? 2 : -1))) {
-        add(m, n - 10); add(guard, 10); this.log('log.benchGuard', { m: guard.name, b: m.name }, 'status');
+      if (guard && (await this.yesNo(q, 'prompt.q.benchGuard', { c: powerRef(guard.card.power), m: C(m) }, `Bench Guard: should ${guard.name} take 10 of the ${n} damage meant for ${m.name}?`, left > 10 ? 2 : -1))) {
+        add(m, n - 10); add(guard, 10); this.log('log.benchGuard', { m: C(guard), b: C(m) }, 'status');
       } else add(m, n);
     }
     const hits = [...plan].filter(([, n]) => n > 0);
@@ -1467,14 +1514,14 @@ export class Game {
     const O = (key, params = {}) => ({ key: 'coin.o.' + key, params });
     if (q.active !== m || m.damage >= m.maxHp) return false;
     if (m.card.powerKind === 'pollenDefense' && this.powerOn(m, { always: true }) && attacker && this.ownerOf(attacker)?.active === attacker) {
-      this.log('log.power.auto', { m: m.name, pw: m.card.power.name }, 'status');
-      if (await this.flip('power', { pw: m.card.power.name }, [O('status', { s: ST('confused') }), O('nothing')])) this.applyStatus(attacker, 'confused');
+      this.log('log.power.auto', { m: C(m), pw: powerRef(m.card.power) }, 'status');
+      if (await this.flip('power', { pw: powerRef(m.card.power) }, [O('status', { s: ST('confused') }), O('nothing')])) this.applyStatus(attacker, 'confused');
     }
     if (m.card.powerKind === 'flee' && this.powerOn(m) && q.bench.length) {
       const opts = [{ id: 'stay', label: { key: 'opt.stay' }, en: 'Stay Active.', ai: m.hpLeft > 40 ? 1 : -1 }, ...q.bench.map((b) => ({ id: String(b.id), mon: b, ai: b.hpLeft / 20 }))];
-      const id = await this.pick(q, 'flee', 'prompt.gen.title', 'prompt.q.flee', opts, { params: { c: m.card.power.name }, en: 'Flee: switch your damaged Active Pokémon with a Benched one so the rest of the attack misses it?' });
+      const id = await this.pick(q, 'flee', 'prompt.gen.title', 'prompt.q.flee', opts, { params: { c: powerRef(m.card.power) }, en: 'Flee: switch your damaged Active Pokémon with a Benched one so the rest of the attack misses it?' });
       const b = q.bench.find((x) => String(x.id) === id);
-      if (b) { this.swapActive(q, b); this.plog(q, 'log.flee', { m: m.name, to: b.name }); return true; }
+      if (b) { this.swapActive(q, b); this.plog(q, 'log.flee', { m: C(m), to: C(b) }); return true; }
     }
     return false;
   }
@@ -1483,20 +1530,20 @@ export class Game {
     const o = this.opp(p), a = p.active;
     let fx = atk.fx;
     const O = (key, params = {}) => ({ key: 'coin.o.' + key, params });
-    const flip = (heads, tails) => this.flip('attack', { atk: atk.name }, [heads, tails]);
-    const fail = async () => { await this.hit(a, o.active, 0, ['miss']); this.log('log.failed', { atk: atk.name }); };
+    const flip = (heads, tails) => this.flip('attack', { atk: attackRef(atk) }, [heads, tails]);
+    const fail = async () => { await this.hit(a, o.active, 0, ['miss']); this.log('log.failed', { atk: attackRef(atk) }); };
 
     if (a.status.confused) {
       this.learn('status.confused');
-      if (!(await this.flip('confused', { m: a.name }, [O('attackGoes'), O('confusedHit')]))) {
+      if (!(await this.flip('confused', { m: C(a) }, [O('attackGoes'), O('confusedHit')]))) {
         await this.hit(null, a, 30);
         a.damage += 30;
-        this.log('log.confusedHit', { m: a.name }, 'dmg');
+        this.log('log.confusedHit', { m: C(a) }, 'dmg');
         return;
       }
     }
     if (a.effects.sandAttack) {
-      if (!(await this.flip('sand', { m: a.name }, [O('attackGoes'), O('miss')]))) { await this.hit(a, o.active, 0, ['miss']); this.log('log.sandMiss', { m: a.name }, 'status'); return; }
+      if (!(await this.flip('sand', { m: C(a) }, [O('attackGoes'), O('miss')]))) { await this.hit(a, o.active, 0, ['miss']); this.log('log.sandMiss', { m: C(a) }, 'status'); return; }
     }
     if (fx.gx) { p.gxUsed = true; this.learn('gx'); }
     if (fx.flipMetronome && !(await flip(O('copy'), O('miss')))) return fail();
@@ -1509,10 +1556,10 @@ export class Game {
         .filter((x) => !x.fx.metronome && !x.fx.flipMetronome && !x.fx.copyBenchTag && !x.fx.copyLastAttack && !x.fx.gx);
       if (!list.length) return fail();
       const id = await this.pick(p, 'metronome', 'prompt.gen.title', 'prompt.q.metronome',
-        list.map((x, k) => ({ id: String(k), label: { key: 'opt.attack', params: { name: x.name, d: x.damage || '—' } }, en: `${x.name}: ${x.damage || 'no'} damage. ${x.text}`, ai: x.base })),
-        { params: { c: atk.name }, en: "Choose which of the Defending Pokémon's attacks Metronome copies." });
+        list.map((x, k) => ({ id: String(k), label: { key: 'opt.attack', params: { name: attackRef(x), d: x.damage || '—' } }, en: `${x.name}: ${x.damage || 'no'} damage. ${x.text}`, ai: x.base })),
+        { params: { c: attackRef(atk) }, en: "Choose which of the Defending Pokémon's attacks Metronome copies." });
       const src = list[Number(id)] || list[0];
-      this.log('log.metronome', { m: a.name, atk: src.name });
+      this.log('log.metronome', { m: C(a), atk: attackRef(src) });
       const { discard, needsType, needsCounters, needsEqualEnergy, ...rest } = src.fx;
       // Base Set Metronome ignores the copied attack's discards; the modern copies (Mini-Metronome, Copycat, Cross Fusion
       // Strike) use the whole attack, so this Pokémon discards that Energy if it can.
@@ -1529,7 +1576,7 @@ export class Game {
     if (fx.lure && o.bench.length) {
       const t = await this.pickMon(p, 'lure', o.bench, 'prompt.lure.text', {}, "Choose one of the opponent's Benched Pokémon to pull into the Active Spot.", (x) => -x.hpLeft);
       this.swapActive(o, t);
-      this.log('log.lure', { m: t.name });
+      this.log('log.lure', { m: C(t) });
     }
 
     const d = o.active;
@@ -1537,45 +1584,45 @@ export class Game {
     if (fx.mirrorMove && !a.effects.lastHit) return fail();
     if (fx.flipAll) {
       for (let k = 0; k < fx.flipAll; k++)
-        if (!(await this.flip('multi', { atk: atk.name, i: k + 1, n: fx.flipAll, so: k }, [O('keepGoing'), O('miss')]))) return fail();
+        if (!(await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: fx.flipAll, so: k }, [O('keepGoing'), O('miss')]))) return fail();
       base = atk.base;
     }
     let heads1 = null; // result of the single "Flip a coin" for bonus damage
     if (fx.flipBonus) {
-      heads1 = await flip(O('plus', { n: fx.flipBonus }), fx.tailsSelf ? O('self', { m: a.name, n: fx.tailsSelf }) : O('nothing'));
+      heads1 = await flip(O('plus', { n: fx.flipBonus }), fx.tailsSelf ? O('self', { m: C(a), n: fx.tailsSelf }) : O('nothing'));
       if (heads1) base += fx.flipBonus;
     }
     if (fx.bothHeadsBonus) {
       let heads = 0;
-      for (let k = 0; k < 2; k++) if (await this.flip('multi', { atk: atk.name, i: k + 1, n: 2, so: heads }, [O('bothHeads', { n: fx.bothHeadsBonus }), O('nothing')])) heads++;
+      for (let k = 0; k < 2; k++) if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: 2, so: heads }, [O('bothHeads', { n: fx.bothHeadsBonus }), O('nothing')])) heads++;
       if (heads === 2) base += fx.bothHeadsBonus;
     }
     if (fx.waterPunch) {
       const n = this.countType(a, 'Water');
       let heads = 0;
-      for (let k = 0; k < n; k++) if (await this.flip('multi', { atk: atk.name, i: k + 1, n, so: heads }, [O('plus', { n: fx.waterPunch }), O('zero')])) heads++;
+      for (let k = 0; k < n; k++) if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n, so: heads }, [O('plus', { n: fx.waterPunch }), O('zero')])) heads++;
       base += fx.waterPunch * heads;
     }
     const multi = fx.flipMulti || (fx.flipPerEnergy ? a.energyTypes.length : 0);
     if (multi) {
       let heads = 0;
       for (let k = 0; k < multi; k++)
-        if (await this.flip('multi', { atk: atk.name, i: k + 1, n: multi, so: heads }, [O('plus', { n: atk.base }), O('zero')])) heads++;
+        if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: multi, so: heads }, [O('plus', { n: atk.base }), O('zero')])) heads++;
       base = atk.base * heads;
       this.multiHeads = heads; // Triple Heads: all heads also protects the attacker
     } else if (fx.flipUntilTails) {
       let heads = 0;
-      while (heads < 20 && (await this.flip('untilTails', { atk: atk.name, so: heads }, [O('plus', { n: atk.base }), O('stop')]))) heads++;
+      while (heads < 20 && (await this.flip('untilTails', { atk: attackRef(atk), so: heads }, [O('plus', { n: atk.base }), O('stop')]))) heads++;
       base = atk.base * heads;
     } else if (fx.flipFail) base = this.baseRange(a, d, atk)[1];
     if (this.modern) base += await this.modernPreDamage(p, a, atk, fx);
     let risky = false;
-    if (fx.riskyTails && !(await flip(O('attackGoes'), O('self', { m: a.name, n: fx.riskyTails })))) { base = 0; risky = true; }
+    if (fx.riskyTails && !(await flip(O('attackGoes'), O('self', { m: C(a), n: fx.riskyTails })))) { base = 0; risky = true; }
     // Vermilion City Gym: Lt. Surge's Pokémon flip for 10 more damage (heads) or 10 damage to themselves (tails).
     let surge = 0;
     if (this.stadiumIs('vermilion') && a.name.includes('Lt. Surge') && base > 0 &&
       (await this.yesNo(p, 'prompt.q.vermilion', { c: C(this.stadium.card) }, 'Vermilion City Gym: flip a coin? Heads: +10 damage; tails: 10 damage to your attacker.', a.hpLeft > 30 ? 1 : -1)))
-      surge = (await this.flip('stadium', { c: C(this.stadium.card) }, [O('plus', { n: 10 }), O('self', { m: a.name, n: 10 })])) ? 10 : -10;
+      surge = (await this.flip('stadium', { c: C(this.stadium.card) }, [O('plus', { n: 10 }), O('self', { m: C(a), n: 10 })])) ? 10 : -10;
 
     let dealt = 0, fled = false;
     // Agility / Detect / Luminous Barrier: no damage or effects. Damage that "isn't affected by any effects on your
@@ -1585,7 +1632,7 @@ export class Game {
     const barrier = shielded && !ignoreDef;
     if (barrier) {
       await this.hit(a, d, 0, ['barrier']);
-      this.log('log.barrier', { m: d.name }, 'status');
+      this.log('log.barrier', { m: C(d) }, 'status');
     } else {
       if (base > 0) {
         let { dmg, notes } = fx.mirrorMove ? { dmg: base, notes: [] } : this.finalDamage(a, d, base, { noWR: fx.noWR, noWROnly: fx.noWROnly, noRes: fx.noRes, ignoreDef: fx.ignoreDefEffects, noWeakness: fx.noWeakness });
@@ -1595,13 +1642,13 @@ export class Game {
         d.damage += dmg;
         dealt = dmg;
         if (dmg > 0) { d.effects.lastHit = { expires: this.turn + 1, dmg, statuses: [] }; d.hitTurn = this.turn; }
-        this.log('log.damage', { m: d.name, n: dmg, notes: notes.map((n) => ({ $note: n })) }, 'dmg');
+        this.log('log.damage', { m: C(d), n: dmg, notes: notes.map((n) => ({ $note: n })) }, 'dmg');
         if (dmg > 0) this.learn('dice');
-        if (notes.includes('weakness')) this.learn('weakness', { m: d.name, t: { $type: a.card.type } });
+        if (notes.includes('weakness')) this.learn('weakness', { m: C(d), t: { $type: a.card.type } });
         if (notes.includes('resistance')) this.learn('resistance');
         if (notes.includes('shield') || notes.includes('harden')) this.learn('prevent');
         // Mirror Shell strikes back with the same damage.
-        if (dmg > 0 && d.effects.mirrorShell) { await this.hit(d, a, dmg); a.damage += dmg; this.log('log.mirrorShell', { m: d.name, n: dmg }, 'dmg'); }
+        if (dmg > 0 && d.effects.mirrorShell) { await this.hit(d, a, dmg); a.damage += dmg; this.log('log.mirrorShell', { m: C(d), n: dmg }, 'dmg'); }
         if (dmg > 0 && p.flags.koga && a.name.includes('Koga')) this.applyStatus(d, 'poisoned');
         if (dmg > 0 && this.modern) await this.megaOnDamaged(o, d, a);
         if (dmg > 0) fled = await this.onDamaged(o, d, a);
@@ -1619,12 +1666,12 @@ export class Game {
       // The opponent chooses which Benched Pokémon comes in.
       const t = await this.pickMon(o, 'whirlwind', o.bench, 'prompt.whirlwind.text', {}, 'Your Active Pokémon is blown away: choose which Benched Pokémon becomes Active.', (x) => x.hpLeft / 10);
       this.swapActive(o, t);
-      this.log('log.whirlwind', { m: d.name, to: t.name });
+      this.log('log.whirlwind', { m: C(d), to: C(t) });
     }
     if (fx.gustAfter && o.bench.length && (!fx.gustAfter.flip || (await flip(O('gust'), O('nothing'))))) {
       const t = await this.pickMon(p, 'lure', o.bench, 'prompt.lure.text', {}, "Choose one of the opponent's Benched Pokémon to switch into the Active Spot.", (x) => -x.hpLeft);
       this.swapActive(o, t);
-      this.log('log.lure', { m: t.name });
+      this.log('log.lure', { m: C(t) });
       if (fx.gustAfter.status) this.applyStatus(t, fx.gustAfter.status);
     }
     await this.selfEffects(p, o, a, atk, fx, { dealt, heads1, risky, surge });
@@ -1632,7 +1679,7 @@ export class Game {
     if (dealt > 0 && d.effects.destinyBond && d.damage >= d.maxHp) {
       await this.hit(d, a, a.hpLeft);
       a.damage = Math.max(a.damage, a.maxHp);
-      this.log('log.destinyBondHit', { m: a.name }, 'ko');
+      this.log('log.destinyBondHit', { m: C(a) }, 'ko');
     }
     await this.leaveEffects(p, a, fx);
     this.update();
@@ -1641,13 +1688,13 @@ export class Game {
   // Effects on the Defending Pokémon (skipped if it fled).
   async defenderEffects(p, o, a, d, atk, fx, heads1) {
     const O = (key, params = {}) => ({ key: 'coin.o.' + key, params });
-    const flip = (heads, tails) => this.flip('attack', { atk: atk.name }, [heads, tails]);
+    const flip = (heads, tails) => this.flip('attack', { atk: attackRef(atk) }, [heads, tails]);
     const statuses = (s) => [].concat(s || []);
     const stOpt = (s) => O('status', { s: ST(statuses(s)[0]), s2: statuses(s)[1] ? ST(statuses(s)[1]) : null });
     for (const s of statuses(fx.status)) this.applyStatus(d, s);
     if (fx.flipStatus && (await flip(stOpt(fx.flipStatus), O('nothing')))) {
       for (const s of statuses(fx.flipStatus)) this.applyStatus(d, s);
-      if (fx.toxic) { d.status.poisoned = 2; this.log('log.toxic', { m: d.name }, 'status'); }
+      if (fx.toxic) { d.status.poisoned = 2; this.log('log.toxic', { m: C(d) }, 'status'); }
     }
     if (heads1 && fx.headsStatus) this.applyStatus(d, fx.headsStatus);
     if (heads1 === false && fx.tailsStatus) this.applyStatus(d, fx.tailsStatus); // Headlock
@@ -1658,12 +1705,12 @@ export class Game {
     if (fx.flipStatusChoice && (await flip(O('statusChoice'), O('nothing')))) {
       const list = ['asleep', 'confused', 'paralyzed', 'poisoned'];
       const id = await this.pick(p, 'status', 'prompt.gen.title', 'prompt.q.status', list.map((s) => ({ id: s, label: { key: 'st.' + s }, en: s, ai: { paralyzed: 4, asleep: 3, confused: 2, poisoned: 1 }[s] })),
-        { params: { c: atk.name }, en: 'Choose which Special Condition the Defending Pokémon gets.' });
+        { params: { c: attackRef(atk) }, en: 'Choose which Special Condition the Defending Pokémon gets.' });
       this.applyStatus(d, list.includes(id) ? id : 'paralyzed');
     }
     if (fx.bothHeadsStatus) {
       let heads = 0;
-      for (let k = 0; k < 2; k++) if (await this.flip('multi', { atk: atk.name, i: k + 1, n: 2, so: heads }, [stOpt(fx.bothHeadsStatus), O('nothing')])) heads++;
+      for (let k = 0; k < 2; k++) if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: 2, so: heads }, [stOpt(fx.bothHeadsStatus), O('nothing')])) heads++;
       if (heads === 2) for (const s of fx.bothHeadsStatus) this.applyStatus(d, s);
     }
     if (fx.mirrorMove) for (const st of a.effects.lastHit.statuses) this.applyStatus(d, st);
@@ -1671,33 +1718,33 @@ export class Game {
     const dropEnergy = async () => { // the attacker chooses which Energy
       const en = await this.chooseEnergy(p, d, d.energy, 'prompt.q.removeWhichEnergy', "Which of the opponent's Energy do you discard?");
       o.discard.push(...d.energy.splice(d.energy.indexOf(en), 1));
-      this.log('log.energyRemoved', { m: d.name, c: C(en) });
+      this.log('log.energyRemoved', { m: C(d), c: C(en) });
     };
     if (fx.flipRemoveEnergy && d.energy.length && (await flip(O('removeEnergy'), O('nothing')))) await dropEnergy();
     if (fx.removeEnergy && d.energy.length) await dropEnergy();
-    if (fx.flipNoAttack && (await flip(O('noAttack'), O('nothing')))) { d.effects.noAttack = { target: a.id, expires: this.turn + 1 }; this.log('log.noAttack', { m: d.name, a: a.name }, 'status'); }
-    if (fx.noRetreat || (fx.flipNoRetreat && (await flip(O('noRetreat'), O('nothing'))))) { d.effects.noRetreat = { expires: this.turn + 1 }; this.log('log.noRetreat', { m: d.name }, 'status'); }
-    if (fx.flipNoEnergy && (await flip(O('noEnergy'), O('nothing')))) { d.effects.noEnergy = { expires: this.turn + 1 }; this.log('log.noEnergy', { m: d.name }, 'status'); }
+    if (fx.flipNoAttack && (await flip(O('noAttack'), O('nothing')))) { d.effects.noAttack = { target: a.id, expires: this.turn + 1 }; this.log('log.noAttack', { m: C(d), a: C(a) }, 'status'); }
+    if (fx.noRetreat || (fx.flipNoRetreat && (await flip(O('noRetreat'), O('nothing'))))) { d.effects.noRetreat = { expires: this.turn + 1 }; this.log('log.noRetreat', { m: C(d) }, 'status'); }
+    if (fx.flipNoEnergy && (await flip(O('noEnergy'), O('nothing')))) { d.effects.noEnergy = { expires: this.turn + 1 }; this.log('log.noEnergy', { m: C(d) }, 'status'); }
     if (fx.amnesia) {
       const list = d.card.attacks;
       const id = await this.pick(p, 'amnesia', 'prompt.gen.title', 'prompt.q.amnesia',
-        list.map((x, k) => ({ id: String(k), label: { key: 'opt.attack', params: { name: x.name, d: x.damage || '—' } }, en: `${x.name}: ${x.damage || 'no'} damage, cost ${x.cost.join('+')}. ${x.text}`, ai: x.base + (canPay(d.payTypes, x.cost) ? 30 : 0) })),
-        { params: { c: atk.name }, en: "Choose which of the Defending Pokémon's attacks it can't use next turn." });
+        list.map((x, k) => ({ id: String(k), label: { key: 'opt.attack', params: { name: attackRef(x), d: x.damage || '—' } }, en: `${x.name}: ${x.damage || 'no'} damage, cost ${x.cost.join('+')}. ${x.text}`, ai: x.base + (canPay(d.payTypes, x.cost) ? 30 : 0) })),
+        { params: { c: attackRef(atk) }, en: "Choose which of the Defending Pokémon's attacks it can't use next turn." });
       const x = list[Number(id)] || list[0];
       d.effects.amnesia = { atk: x.name, expires: this.turn + 1 };
-      this.log('log.amnesia', { m: d.name, atk: x.name }, 'status');
+      this.log('log.amnesia', { m: C(d), atk: attackRef(x) }, 'status');
     }
     if (fx.lifeDrain && (await flip(O('lifeDrain'), O('nothing')))) {
       const n = Math.max(0, d.maxHp - 10 - d.damage);
-      if (n) { await this.hit(a, d, n); d.damage += n; this.log('log.lifeDrain', { m: d.name }, 'dmg'); }
+      if (n) { await this.hit(a, d, n); d.damage += n; this.log('log.lifeDrain', { m: C(d) }, 'dmg'); }
     }
   }
 
   // Damage to other Pokémon (Benched, or chosen ones).
   async splashEffects(p, o, a, atk, fx, heads1) {
     const O = (key, params = {}) => ({ key: 'coin.o.' + key, params });
-    const flip = (heads, tails) => this.flip('attack', { atk: atk.name }, [heads, tails]);
-    const names = (l) => l.map((x) => x.name).join(', ');
+    const flip = (heads, tails) => this.flip('attack', { atk: attackRef(atk) }, [heads, tails]);
+    const names = (list) => ({ $list: list.map(C) });
     // Multishot Lightning only hits Benched Pokémon that already have damage counters.
     const snipePool = fx.benchSnipe?.damagedOnly ? o.bench.filter((x) => x.damage) : o.bench;
     if (fx.benchSnipe && snipePool.length) {
@@ -1705,12 +1752,12 @@ export class Game {
       if (go) {
         let targets;
         if (fx.benchSnipe.count >= snipePool.length) targets = [...snipePool];
-        else if (fx.benchSnipe.count === 1) targets = [await this.pickMon(p, 'snipe', snipePool, 'prompt.q.snipe', { c: atk.name, n: fx.benchSnipe.n }, `Choose one of the opponent's Benched Pokémon to take ${fx.benchSnipe.n} damage.`, (x) => (x.hpLeft <= fx.benchSnipe.n ? 50 : 0) - x.hpLeft / 10)];
+        else if (fx.benchSnipe.count === 1) targets = [await this.pickMon(p, 'snipe', snipePool, 'prompt.q.snipe', { c: attackRef(atk), n: fx.benchSnipe.n }, `Choose one of the opponent's Benched Pokémon to take ${fx.benchSnipe.n} damage.`, (x) => (x.hpLeft <= fx.benchSnipe.n ? 50 : 0) - x.hpLeft / 10)];
         else { // the attacker chooses each target (the AI aims at those closest to being Knocked Out)
           const pool = [...snipePool];
           targets = [];
           for (let k = 0; k < fx.benchSnipe.count; k++) {
-            const t = await this.pickMon(p, 'snipe', pool, 'prompt.q.snipe', { c: atk.name, n: fx.benchSnipe.n }, `Choose one of the opponent's Benched Pokémon to take ${fx.benchSnipe.n} damage (${k + 1} of ${fx.benchSnipe.count}).`, (x) => (x.hpLeft <= fx.benchSnipe.n ? 50 : 0) - x.hpLeft / 10);
+            const t = await this.pickMon(p, 'snipe', pool, 'prompt.q.snipe', { c: attackRef(atk), n: fx.benchSnipe.n }, `Choose one of the opponent's Benched Pokémon to take ${fx.benchSnipe.n} damage (${k + 1} of ${fx.benchSnipe.count}).`, (x) => (x.hpLeft <= fx.benchSnipe.n ? 50 : 0) - x.hpLeft / 10);
             pool.splice(pool.indexOf(t), 1);
             targets.push(t);
           }
@@ -1733,21 +1780,21 @@ export class Game {
       let tails = 0;
       const hitList = [];
       for (const [k, b] of o.bench.entries()) {
-        if (await this.flip('multi', { atk: atk.name, i: k + 1, n: o.bench.length, so: hitList.length }, [O('benchHitOne', { m: b.name, n: 20 }), O('self', { m: a.name, n: 10 })])) hitList.push(b); else tails++;
+        if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: o.bench.length, so: hitList.length }, [O('benchHitOne', { m: C(b), n: 20 }), O('self', { m: C(a), n: 10 })])) hitList.push(b); else tails++;
       }
       if (hitList.length) { await this.spread(a, hitList.map((x) => [x, 20])); this.log('log.benchSnipe', { n: 20, list: names(hitList) }, 'dmg'); }
-      if (tails) { await this.hit(null, a, 10 * tails); a.damage += 10 * tails; this.log('log.recoil', { m: a.name, n: 10 * tails }, 'dmg'); }
+      if (tails) { await this.hit(null, a, 10 * tails); a.damage += 10 * tails; this.log('log.recoil', { m: C(a), n: 10 * tails }, 'dmg'); }
     }
     if (fx.bonfire) {
       let heads = 0;
-      for (let k = 0; k < 3; k++) if (await this.flip('multi', { atk: atk.name, i: k + 1, n: 3, so: heads }, [O('bonfire'), O('zero')])) heads++;
+      for (let k = 0; k < 3; k++) if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: 3, so: heads }, [O('bonfire'), O('zero')])) heads++;
       heads = Math.min(heads, this.countType(a, 'Fire'));
       if (heads) {
         await this.discardEnergyOfType(p, a, 'Fire', heads);
         const all = this.allMons(o);
         await this.spread(a, all.map((x) => [x, 10 * heads]));
         this.log('log.spiral', { n: 10 * heads }, 'dmg');
-      } else this.log('log.failed', { atk: atk.name });
+      } else this.log('log.failed', { atk: attackRef(atk) });
     }
     if (fx.massExplosion) {
       const line = this.players.flatMap((q) => this.allMons(q)).filter(isKoffingLine);
@@ -1756,13 +1803,13 @@ export class Game {
     }
     if (fx.snipeAny) {
       const targets = this.allMons(o);
-      const t = await this.pickMon(p, 'snipe', targets, 'prompt.q.snipeAny', { c: atk.name, n: fx.snipeAny.n }, `Choose any of the opponent's Pokémon to take ${fx.snipeAny.n} damage (no Weakness or Resistance).`,
+      const t = await this.pickMon(p, 'snipe', targets, 'prompt.q.snipeAny', { c: attackRef(atk), n: fx.snipeAny.n }, `Choose any of the opponent's Pokémon to take ${fx.snipeAny.n} damage (no Weakness or Resistance).`,
         (x) => (x.hpLeft <= fx.snipeAny.n ? 50 : 0) + (fx.snipeAny.noPower && x.card.powerKind ? 20 : 0) - x.hpLeft / 10);
-      if (t && (!fx.snipeAny.flip || (await flip(O('benchHitOne', { m: t.name, n: fx.snipeAny.n }), O('nothing'))))) {
+      if (t && (!fx.snipeAny.flip || (await flip(O('benchHitOne', { m: C(t), n: fx.snipeAny.n }), O('nothing'))))) {
         const n = this.modern && t === o.active && !fx.snipeAny.noWR ? this.finalDamage(a, t, fx.snipeAny.n).dmg : fx.snipeAny.n;
         await this.spread(a, [[t, n]]);
-        this.log('log.benchSnipe', { n, list: t.name }, 'dmg');
-        if (fx.snipeAny.noPower && t.card.powerKind) { t.effects.noPower = { expires: this.turn + 1 }; this.log('log.noPower', { m: t.name }, 'status'); }
+        this.log('log.benchSnipe', { n, list: C(t) }, 'dmg');
+        if (fx.snipeAny.noPower && t.card.powerKind) { t.effects.noPower = { expires: this.turn + 1 }; this.log('log.noPower', { m: C(t) }, 'status'); }
       }
     }
     if (fx.spiral) {
@@ -1785,8 +1832,8 @@ export class Game {
   // Effects on the attacker and its player: healing, cards, damage to itself, protection.
   async selfEffects(p, o, a, atk, fx, { dealt, heads1, risky, surge }) {
     const O = (key, params = {}) => ({ key: 'coin.o.' + key, params });
-    const flip = (heads, tails) => this.flip('attack', { atk: atk.name }, [heads, tails]);
-    const recoil = async (n) => { await this.hit(null, a, n); a.damage += n; this.log('log.recoil', { m: a.name, n }, 'dmg'); };
+    const flip = (heads, tails) => this.flip('attack', { atk: attackRef(atk) }, [heads, tails]);
+    const recoil = async (n) => { await this.hit(null, a, n); a.damage += n; this.log('log.recoil', { m: C(a), n }, 'dmg'); };
     if (fx.healAll && a.damage) await this.heal(a, a.damage);
     if (fx.healIfDamage && dealt > 0) await this.heal(a, fx.healIfDamage);
     if (fx.heal) await this.heal(a, fx.heal);
@@ -1797,25 +1844,25 @@ export class Game {
     const family = fx.callFamily || fx.callFriend;
     if (family && p.bench.length < MAX_BENCH && (!family.flip || (await flip(O('search'), O('nothing'))))) {
       const ok = fx.callFamily ? (x) => isBasic(x) && family.names.includes(x.name) : (x) => isBasic(x) && x.name.includes(family.who);
-      const got = await this.pickCard(p, 'search', p.deck.filter(ok), 'prompt.q.callFamily', { c: atk.name }, 'Choose a Basic Pokémon from your deck to put onto your Bench.', { ai: (x) => x.hp, none: !!fx.callFriend });
+      const got = await this.pickCard(p, 'search', p.deck.filter(ok), 'prompt.q.callFamily', { c: attackRef(atk) }, 'Choose a Basic Pokémon from your deck to put onto your Bench.', { ai: (x) => x.hp, none: !!fx.callFriend });
       if (got) { p.bench.push(new Mon(this.searchDeck(p, got), this.turn)); this.plog(p, 'log.bench', { c: C(got) }); }
       else shuffle(p.deck);
     }
     if (fx.searchAttach) {
       const en = p.deck.find((x) => x.kind === 'energy' && x.energyType === fx.searchAttach && !x.special);
-      if (en) { await this.hooks.onAttach?.({ p: p.idx, mon: a.id, card: en }); a.energy.push(this.searchDeck(p, en)); this.plog(p, 'log.energy', { c: C(en), m: a.name }); }
+      if (en) { await this.hooks.onAttach?.({ p: p.idx, mon: a.id, card: en }); a.energy.push(this.searchDeck(p, en)); this.plog(p, 'log.energy', { c: C(en), m: C(a) }); }
     }
     if (fx.searchEnergy) {
       const en = p.deck.find((x) => x.kind === 'energy' && x.energyType === fx.searchEnergy && !x.special);
-      if (en) { p.hand.push(this.searchDeck(p, en)); this.plog(p, 'log.t.got', { c: C(atk.name), got: C(en) }); }
+      if (en) { p.hand.push(this.searchDeck(p, en)); this.plog(p, 'log.t.got', { c: attackRef(atk), got: C(en) }); }
     }
     if (fx.attachFromDiscard) {
       const i = p.discard.findLastIndex((x) => x.kind === 'energy' && x.energyType === fx.attachFromDiscard && !x.special);
-      if (i >= 0) { const en = p.discard.splice(i, 1)[0]; await this.hooks.onAttach?.({ p: p.idx, mon: a.id, card: en }); a.energy.push(en); this.plog(p, 'log.energy', { c: C(en), m: a.name }); }
+      if (i >= 0) { const en = p.discard.splice(i, 1)[0]; await this.hooks.onAttach?.({ p: p.idx, mon: a.id, card: en }); a.energy.push(en); this.plog(p, 'log.energy', { c: C(en), m: C(a) }); }
     }
     if (fx.flipRecoverEnergy) {
       let heads = 0;
-      for (let k = 0; k < fx.flipRecoverEnergy.n; k++) if (await this.flip('multi', { atk: atk.name, i: k + 1, n: fx.flipRecoverEnergy.n, so: heads }, [O('recover'), O('zero')])) heads++;
+      for (let k = 0; k < fx.flipRecoverEnergy.n; k++) if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: fx.flipRecoverEnergy.n, so: heads }, [O('recover'), O('zero')])) heads++;
       let got = 0;
       for (let k = 0; k < heads; k++) {
         const i = p.discard.findLastIndex((x) => x.kind === 'energy' && x.energyType === fx.flipRecoverEnergy.type && !x.special);
@@ -1823,7 +1870,7 @@ export class Game {
       }
       this.plog(p, 'log.recovered', { n: got, t: { $type: fx.flipRecoverEnergy.type } });
     }
-    if (fx.peekHand) this.plog(p, 'log.t.sawHand', { list: o.hand.map((x) => x.name).join(', ') || '—', c: atk.name });
+    if (fx.peekHand) this.plog(p, 'log.t.sawHand', { list: { $list: o.hand.map(C) }, c: attackRef(atk) });
     if (fx.falseCharity && o.deck.length && (await flip(O('peekTop'), O('nothing')))) {
       const top = o.deck.pop();
       if (top.kind === 'trainer') { o.discard.push(top); this.log('log.falseCharityDiscard', { c: C(top) }); }
@@ -1831,46 +1878,46 @@ export class Game {
     }
     if (fx.helpingHand) {
       const hurt = this.allMons(o).filter((x) => x.damage);
-      const t = await this.pickMon(p, 'helpingHand', hurt, 'prompt.q.helpingHand', { c: atk.name }, "Choose one of the opponent's damaged Pokémon: remove damage counters from it and draw that many cards.", (x) => -x.hpLeft);
+      const t = await this.pickMon(p, 'helpingHand', hurt, 'prompt.q.helpingHand', { c: attackRef(atk) }, "Choose one of the opponent's damaged Pokémon: remove damage counters from it and draw that many cards.", (x) => -x.hpLeft);
       if (t) {
-        const n = await this.pickNumber(p, 'drawN', Math.min(t.counters, p.deck.length), 'prompt.q.helpingHandN', { c: atk.name, m: t.name }, `How many damage counters do you remove from ${t.name} (you draw that many cards)?`, (k) => (p.hand.length + k > 9 ? -k : k / 2));
-        if (n) { t.damage -= 10 * n; this.log('log.heal', { m: t.name, n: 10 * n }, 'heal'); this.plog(p, 'log.t.drewN', { n: this.draw(p, n) }); }
+        const n = await this.pickNumber(p, 'drawN', Math.min(t.counters, p.deck.length), 'prompt.q.helpingHandN', { c: attackRef(atk), m: C(t) }, `How many damage counters do you remove from ${t.name} (you draw that many cards)?`, (k) => (p.hand.length + k > 9 ? -k : k / 2));
+        if (n) { t.damage -= 10 * n; this.log('log.heal', { m: C(t), n: 10 * n }, 'heal'); this.plog(p, 'log.t.drewN', { n: this.draw(p, n) }); }
       }
     }
-    if (fx.focus) { a.effects.focus = { atk: fx.focus, expires: this.turn + 2 }; this.log('log.focus', { m: a.name, atk: fx.focus }, 'status'); }
-    if (fx.reduce) { a.effects.reduce = { n: fx.reduce, expires: this.turn + 1 }; this.log('log.reduce', { m: a.name, n: fx.reduce }, 'status'); }
-    if (fx.mirrorShell) { a.effects.mirrorShell = { expires: this.turn + 1 }; this.log('log.mirrorShellOn', { m: a.name }, 'status'); }
+    if (fx.focus) { a.effects.focus = { atk: fx.focus, expires: this.turn + 2 }; this.log('log.focus', { m: C(a), atk: attackRef({ sourceCardId: atk.sourceCardId, name: fx.focus }) }, 'status'); }
+    if (fx.reduce) { a.effects.reduce = { n: fx.reduce, expires: this.turn + 1 }; this.log('log.reduce', { m: C(a), n: fx.reduce }, 'status'); }
+    if (fx.mirrorShell) { a.effects.mirrorShell = { expires: this.turn + 1 }; this.log('log.mirrorShellOn', { m: C(a) }, 'status'); }
     if (fx.selfDamage) await recoil(fx.selfDamage);
-    if (fx.flipSelfDamage && !(await flip(O('nothing'), O('self', { m: a.name, n: fx.flipSelfDamage })))) await recoil(fx.flipSelfDamage);
+    if (fx.flipSelfDamage && !(await flip(O('nothing'), O('self', { m: C(a), n: fx.flipSelfDamage })))) await recoil(fx.flipSelfDamage);
     if (heads1 === false && fx.tailsSelf) await recoil(fx.tailsSelf);
     if (heads1 && fx.headsSelf) await recoil(fx.headsSelf);
     if (risky) await recoil(fx.riskyTails);
     if (surge < 0) await recoil(10);
     if (fx.flipTailsDiscard && !(await flip(O('nothing'), O('discardOwn', { t: { $type: fx.flipTailsDiscard } })))) await this.discardEnergyOfType(p, a, fx.flipTailsDiscard, 1);
-    if (fx.shield) { a.effects.shield = { kind: fx.shield, expires: this.turn + 1 }; this.log('log.shield.' + fx.shield, { m: a.name }, 'status'); }
-    if (fx.flipShield && (await flip(O('shield'), O('nothing')))) { a.effects.shield = { kind: fx.flipShield, expires: this.turn + 1 }; this.log('log.shield.' + fx.flipShield, { m: a.name }, 'status'); }
-    if (fx.destinyBond) { a.effects.destinyBond = { expires: this.turn + 1 }; this.log('log.destinyBond', { m: a.name }, 'status'); }
+    if (fx.shield) { a.effects.shield = { kind: fx.shield, expires: this.turn + 1 }; this.log('log.shield.' + fx.shield, { m: C(a) }, 'status'); }
+    if (fx.flipShield && (await flip(O('shield'), O('nothing')))) { a.effects.shield = { kind: fx.flipShield, expires: this.turn + 1 }; this.log('log.shield.' + fx.flipShield, { m: C(a) }, 'status'); }
+    if (fx.destinyBond) { a.effects.destinyBond = { expires: this.turn + 1 }; this.log('log.destinyBond', { m: C(a) }, 'status'); }
     if (fx.switchSelf && p.bench.length && p.active === a && (await flip(O('switchSelf'), O('nothing')))) {
-      const t = await this.pickMon(p, 'promote', p.bench, 'prompt.q.switchSelf', { c: atk.name }, 'Choose which Benched Pokémon switches in.', (x) => x.hpLeft / 10 + x.energy.length * 3);
+      const t = await this.pickMon(p, 'promote', p.bench, 'prompt.q.switchSelf', { c: attackRef(atk) }, 'Choose which Benched Pokémon switches in.', (x) => x.hpLeft / 10 + x.energy.length * 3);
       this.swapActive(p, t);
-      this.plog(p, 'log.t.switched', { m: p.active.name });
+      this.plog(p, 'log.t.switched', { m: C(p.active) });
     }
   }
 
   // Attacks that take the attacker out of play (after everything else).
   async leaveEffects(p, a, fx) {
     if (!this.allMons(p).includes(a) || a.damage >= a.maxHp || !p.bench.length) return;
-    const shuffleIn = fx.shuffleSelf || (fx.flipShuffleSelf && (await this.flip('attack', { atk: '' }, [{ key: 'coin.o.shuffleIn', params: { m: a.name } }, { key: 'coin.o.nothing', params: {} }])));
+    const shuffleIn = fx.shuffleSelf || (fx.flipShuffleSelf && (await this.flip('attack', { atk: '' }, [{ key: 'coin.o.shuffleIn', params: { m: C(a) } }, { key: 'coin.o.nothing', params: {} }])));
     if (shuffleIn) {
       p.deck.push(...this.removeFromPlay(p, a));
       shuffle(p.deck);
-      this.plog(p, 'log.shuffledIn', { m: a.name });
+      this.plog(p, 'log.shuffledIn', { m: C(a) });
     } else if (fx.fadeOut) {
       const tools = a.tools.map((x) => x.card);
       const cards = this.removeFromPlay(p, a).filter((x) => !tools.includes(x));
       p.hand.push(...cards);
       p.discard.push(...tools);
-      this.plog(p, 'log.fadeOut', { m: a.name });
+      this.plog(p, 'log.fadeOut', { m: C(a) });
     }
   }
 
@@ -1880,7 +1927,7 @@ export class Game {
     for (const p of this.players) for (const m of this.allMons(p)) if (m.damage >= m.maxHp) kos.push([p, m]);
     if (!kos.length) return;
     for (const [p, m] of kos) {
-      this.log('log.ko', { m: m.name, P: PL(p) }, 'ko', p.idx);
+      this.log('log.ko', { m: C(m), P: PL(p) }, 'ko', p.idx);
       if (this.current !== p) p.koTurn = this.turn; // "during your opponent's last turn" (Bruno, Gym Trainer): not overwritten by KOs on p's own turn
       m.prizeValue = this.modern ? this.prizeValue(p, m) : 1;
       if (this.modern) {
@@ -1934,7 +1981,7 @@ export class Game {
     const m = p.bench.find((x) => String(x.id) === id) || p.bench[0];
     p.bench.splice(p.bench.indexOf(m), 1);
     p.active = m;
-    this.plog(p, 'log.promote', { m: m.name });
+    this.plog(p, 'log.promote', { m: C(m) });
     this.update();
     if (this.modern) await this.becameActive(p);
   }
@@ -1950,26 +1997,26 @@ export class Game {
         if (expired.length) {
           m.tools = m.tools.filter((t) => t.expires > this.turn);
           q.discard.push(...expired.map((t) => t.card));
-          for (const t of expired) this.log('log.toolOff', { c: C(t.card), m: m.name });
+          for (const t of expired) this.log('log.toolOff', { c: C(t.card), m: C(m) });
         }
       }
       const m = q.active;
       if (!m) continue;
-      if (m.status.poisoned) { const pd = typeof m.status.poisoned === 'number' ? 10 * m.status.poisoned : 10; await this.hit(null, m, pd, ['poison']); m.damage += pd; any = true; this.log('log.poison', { m: m.name, n: pd }, 'status'); }
+      if (m.status.poisoned) { const pd = typeof m.status.poisoned === 'number' ? 10 * m.status.poisoned : 10; await this.hit(null, m, pd, ['poison']); m.damage += pd; any = true; this.log('log.poison', { m: C(m), n: pd }, 'status'); }
       if (m.status.burned) {
         any = true;
         await this.hit(null, m, 20, ['burn']); m.damage += 20;
-        this.log('log.burn', { m: m.name }, 'status');
-        if (await this.flip('burn', { m: m.name }, [{ key: 'coin.o.unburn', params: {} }, { key: 'coin.o.stillBurned', params: {} }])) { delete m.status.burned; this.log('log.unburned', { m: m.name }, 'status'); }
+        this.log('log.burn', { m: C(m) }, 'status');
+        if (await this.flip('burn', { m: C(m) }, [{ key: 'coin.o.unburn', params: {} }, { key: 'coin.o.stillBurned', params: {} }])) { delete m.status.burned; this.log('log.unburned', { m: C(m) }, 'status'); }
       }
       if (m.status.asleep) {
         any = true;
-        this.log('log.asleepCheck', { m: m.name }, 'status');
-        if (await this.flip('asleep', { m: m.name }, [{ key: 'coin.o.wake', params: {} }, { key: 'coin.o.sleep', params: {} }])) { delete m.status.asleep; this.log('log.woke', { m: m.name }, 'status'); }
+        this.log('log.asleepCheck', { m: C(m) }, 'status');
+        if (await this.flip('asleep', { m: C(m) }, [{ key: 'coin.o.wake', params: {} }, { key: 'coin.o.sleep', params: {} }])) { delete m.status.asleep; this.log('log.woke', { m: C(m) }, 'status'); }
       }
       if (m.status.paralyzed && q === p) {
         delete m.status.paralyzed; any = true;
-        this.log('log.unparalyzed', { m: m.name }, 'status');
+        this.log('log.unparalyzed', { m: C(m) }, 'status');
       }
     }
     if (any) this.learn('checkup');

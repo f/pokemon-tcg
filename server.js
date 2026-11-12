@@ -1,4 +1,4 @@
-// Local server: serves the game and routes Brock's decisions to the chosen decision engine.
+// Local server: serves the game and card image resources, and routes decisions to the chosen engine.
 //
 // Engines (switchable from the game's Settings window):
 //   cpu   – rule-based player that runs in the browser; the server isn't involved.
@@ -12,6 +12,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { extname, join, normalize, resolve } from 'node:path';
 import { homedir } from 'node:os';
 import { promisify } from 'node:util';
+import { printedResource, requestPrintedResource, readPrintedResource } from './public/card-image/printed.js';
 
 const run = promisify(execFile);
 if (existsSync('.env')) process.loadEnvFile('.env');
@@ -261,6 +262,34 @@ const server = createServer(async (req, res) => {
   if (url.pathname === '/api/engine' && req.method === 'GET') return send(res, 200, await engineState());
   if (url.pathname === '/api/engine' && req.method === 'POST') return setEngine(req, res);
   if (url.pathname === '/api/engine/stop' && req.method === 'POST') { stopLocal(); return send(res, 200, await engineState()); }
+  if (req.method === 'GET') {
+    const asset = /^\/card-image\/data\/(printed|recipes)\/([\w-]+)\.json$/.exec(url.pathname);
+    const coverage = url.pathname === '/card-image/data/coverage.json';
+    if (asset || coverage) {
+      try {
+        const { cardImageAsset, cardImageCoverageAsset } = await import('./scripts/card-localization/runtime-assets.mjs');
+        const json = coverage ? cardImageCoverageAsset() : cardImageAsset(asset[2], asset[1]);
+        return json ? send(res, 200, json) : send(res, 404, { error: 'No localized card image data' });
+      } catch (error) {
+        console.error('Cannot load card image configuration:', error.message);
+        return send(res, 500, { error: 'Card image configuration unavailable' });
+      }
+    }
+    if (url.pathname === '/api/card-image-resource') {
+      try {
+        const source = new URL(url.searchParams.get('url'));
+        const kind = printedResource(source);
+        if (!kind) return send(res, 400, { error: 'Unknown printed card source' });
+        const response = await requestPrintedResource(source, kind);
+        const blob = await readPrintedResource(response, kind === 'article' ? 'text/html' : undefined);
+        if (kind !== 'article' && !blob.type.startsWith('image/')) throw new Error('Expected a card image');
+        res.writeHead(200, { 'Content-Type': blob.type, 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': 'sandbox' });
+        return res.end(Buffer.from(await blob.arrayBuffer()));
+      } catch {
+        return send(res, 502, { error: 'Printed card source unavailable' });
+      }
+    }
+  }
 
   const path = normalize(join(PUBLIC, url.pathname === '/' ? 'index.html' : url.pathname));
   if (!path.startsWith(PUBLIC)) return send(res, 403, 'Forbidden', 'text/plain');

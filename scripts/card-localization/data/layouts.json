@@ -1,0 +1,2897 @@
+{
+  "base1-46": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        20,
+        12,
+        49,
+        7,
+        "dark",
+        146,
+        2
+      ],
+      [
+        20,
+        20,
+        90,
+        14,
+        "dark",
+        146,
+        2
+      ],
+      [
+        99,
+        202,
+        46,
+        13,
+        "dark",
+        146,
+        2
+      ],
+      [
+        45,
+        237,
+        149,
+        31,
+        "dark",
+        146,
+        2
+      ],
+      [
+        21,
+        273.5,
+        35,
+        6.3,
+        "dark",
+        146,
+        2
+      ],
+      [
+        103,
+        273.5,
+        35,
+        6.3,
+        "dark",
+        146,
+        2
+      ],
+      [
+        181,
+        273.5,
+        43,
+        6.3,
+        "dark",
+        146,
+        2
+      ],
+      [
+        24,
+        295,
+        192,
+        17,
+        "dark",
+        146,
+        2
+      ],
+      [
+        41,
+        179.6,
+        156,
+        7.3,
+        "dark",
+        112,
+        2
+      ],
+      [
+        125,
+        237,
+        10,
+        11,
+        "full",
+        0,
+        0
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 24,
+      "weightLb": 19
+    },
+    "overlay": "<text x=\"21\" y=\"18\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.basicPokemon]]</text><text x=\"21\" y=\"33\" font-size=\"15.6\" font-weight=\"760\" fill=\"#171512\" text-anchor=\"start\">[[name.card]]</text><g transform=\"translate(42 185.5) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"690\" fill=\"#302311\" text-anchor=\"start\">[[meta.species]]</text></g><text x=\"103\" y=\"213.4\" font-size=\"12.1\" font-weight=\"760\" fill=\"#171512\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"46\" y=\"247\" font-size=\"7.5\" font-weight=\"500\" fill=\"#171512\"><tspan font-size=\"11.5\" font-weight=\"760\">[[name.attack.1]]</tspan><tspan dx=\"4\">[[copy.line1]]</tspan></text><clipPath id=\"inline-fire\"><circle cx=\"156.55\" cy=\"244.15\" r=\"4.15\"/></clipPath><g clip-path=\"url(#inline-fire)\"><use href=\"#original\" transform=\"translate(26.200000000000003 1.4000000000000057)\"/></g><text x=\"163.4\" y=\"247\" font-size=\"7.5\" font-weight=\"500\" fill=\"#171512\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"46\" y=\"257\" font-size=\"7.5\" font-weight=\"500\" fill=\"#171512\" text-anchor=\"start\">[[copy.line3]]</text><clipPath id=\"separator\"><rect x=\"13\" y=\"271.7\" width=\"216\" height=\"1.25\"/></clipPath><g clip-path=\"url(#separator)\"><use href=\"#original\"/></g><text x=\"22\" y=\"279.5\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"104\" y=\"279.5\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"184\" y=\"279.5\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.retreat]]</text><g transform=\"translate(25 302.5) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"630\" fill=\"#2d1f17\" text-anchor=\"start\">[[copy.line4]]</text></g>",
+    "values": {
+      "v1": "1",
+      "catalog": "LV.10 #4"
+    }
+  },
+  "base1-58": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        20,
+        12,
+        49,
+        7,
+        "dark",
+        146,
+        2
+      ],
+      [
+        20,
+        20,
+        58,
+        14,
+        "dark",
+        146,
+        2
+      ],
+      [
+        99,
+        202,
+        46,
+        13,
+        "dark",
+        146,
+        2
+      ],
+      [
+        45,
+        241,
+        149,
+        22,
+        "dark",
+        146,
+        2
+      ],
+      [
+        21,
+        273.5,
+        35,
+        6.3,
+        "dark",
+        146,
+        2
+      ],
+      [
+        103,
+        273.5,
+        35,
+        6.3,
+        "dark",
+        146,
+        2
+      ],
+      [
+        181,
+        273.5,
+        43,
+        6.3,
+        "dark",
+        146,
+        2
+      ],
+      [
+        24,
+        295,
+        192,
+        17,
+        "dark",
+        146,
+        2
+      ],
+      [
+        41,
+        179.6,
+        156,
+        7.3,
+        "dark",
+        112,
+        2
+      ],
+      [
+        102,
+        205,
+        35.6,
+        12.8,
+        "dark",
+        209,
+        3
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 16,
+      "weightLb": 13
+    },
+    "overlay": "<text x=\"21\" y=\"18\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.basicPokemon]]</text><text x=\"21\" y=\"33\" font-size=\"15.6\" font-weight=\"760\" fill=\"#171512\" text-anchor=\"start\">[[name.card]]</text><g transform=\"translate(42 185.5) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"690\" fill=\"#302311\" text-anchor=\"start\">[[meta.species]]</text></g><text x=\"103\" y=\"213.4\" font-size=\"12.1\" font-weight=\"760\" fill=\"#171512\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"46\" y=\"251\" font-size=\"7.5\" font-weight=\"500\" fill=\"#171512\"><tspan font-size=\"11.5\" font-weight=\"760\">[[name.attack.1]]</tspan><tspan dx=\"4\">[[copy.line1]]</tspan></text><text x=\"46\" y=\"261\" font-size=\"7.5\" font-weight=\"500\" fill=\"#171512\" text-anchor=\"start\">[[copy.line2]]</text><clipPath id=\"separator\"><rect x=\"13\" y=\"272.9\" width=\"216\" height=\"1.25\"/></clipPath><g clip-path=\"url(#separator)\"><use href=\"#original\"/></g><text x=\"22\" y=\"279.5\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"104\" y=\"279.5\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"184\" y=\"279.5\" font-size=\"7.8\" font-weight=\"680\" fill=\"#4b382a\" text-anchor=\"start\">[[label.retreat]]</text><g transform=\"translate(25 302.5) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"630\" fill=\"#2d1f17\" text-anchor=\"start\">[[copy.line3]]</text></g>",
+    "values": {
+      "v1": "10",
+      "catalog": "LV.12 #25"
+    }
+  },
+  "sv4pt5-8": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        7.3,
+        11.2,
+        30.4,
+        8.2,
+        "full",
+        0,
+        0
+      ],
+      [
+        46,
+        13.3,
+        89,
+        14.8,
+        "dark",
+        145,
+        2
+      ],
+      [
+        46,
+        32.2,
+        71,
+        6.2,
+        "dark",
+        139,
+        1
+      ],
+      [
+        29,
+        185.7,
+        36,
+        8.1,
+        "light",
+        148,
+        2
+      ],
+      [
+        78,
+        184.3,
+        48,
+        13,
+        "red",
+        111,
+        2
+      ],
+      [
+        18,
+        200,
+        209,
+        18.5,
+        "dark",
+        132,
+        2
+      ],
+      [
+        78,
+        234.2,
+        68,
+        14.9,
+        "dark",
+        145,
+        2
+      ],
+      [
+        63,
+        164.1,
+        118,
+        5.5,
+        "dark",
+        148,
+        1
+      ],
+      [
+        111,
+        312,
+        121,
+        17,
+        "dark",
+        130,
+        2
+      ],
+      [
+        12.4,
+        296,
+        24,
+        6.6,
+        "dark",
+        146,
+        1
+      ],
+      [
+        74,
+        296,
+        27,
+        6.5,
+        "dark",
+        146,
+        1
+      ],
+      [
+        151,
+        296,
+        20.5,
+        6.8,
+        "dark",
+        146,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 43,
+      "weightLb": 41.9,
+      "dex": "0005"
+    },
+    "overlay": "<g transform=\"translate(22.1 17.1) skewX(-12)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"780\" text-anchor=\"middle\" fill=\"#f7f7f3\" stroke=\"#f7f7f3\" stroke-width=\"1.1\" stroke-linejoin=\"round\">[[label.stage1]]</text><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"780\" fill=\"#3d4244\" text-anchor=\"middle\">[[label.stage1]]</text></g><text x=\"47\" y=\"26\" font-size=\"16.3\" font-weight=\"760\" fill=\"#19191a\" text-anchor=\"start\">[[name.card]]</text><g transform=\"translate(47 37.3) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.3\" font-weight=\"650\" fill=\"#252728\" text-anchor=\"start\">[[name.evolves]]</text></g><g transform=\"translate(47 192.2) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"8.9\" font-weight=\"800\" fill=\"#fff\" text-anchor=\"middle\">[[label.ability]]</text></g><text x=\"79\" y=\"195\" font-size=\"12.15\" font-weight=\"760\" fill=\"#9e191a\" text-anchor=\"start\">[[name.power]]</text><text x=\"20\" y=\"208\" font-size=\"8.45\" font-weight=\"520\" fill=\"#19191a\" text-anchor=\"start\">[[copy.line1]]</text><g transform=\"translate(20 218.3) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"8.3\" font-weight=\"540\" fill=\"#19191a\" text-anchor=\"start\">[[copy.line2]]</text></g><text x=\"79\" y=\"247\" font-size=\"12.1\" font-weight=\"760\" fill=\"#19191a\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"13\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#19191a\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#19191a\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"152\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#19191a\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"122\" y=\"169.3\" font-size=\"5.6\" font-weight=\"500\" fill=\"#272729\" text-anchor=\"middle\">[[meta.species]]</text><text x=\"113\" y=\"317\" font-size=\"6.2\" font-weight=\"540\" fill=\"#171512\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"113\" y=\"324.1\" font-size=\"6.2\" font-weight=\"540\" fill=\"#171512\" text-anchor=\"start\">[[copy.line4]]</text>"
+  },
+  "sv3-125": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        7.3,
+        11.2,
+        30.4,
+        8.2,
+        "full",
+        0,
+        0
+      ],
+      [
+        46,
+        13.3,
+        71.8,
+        14.8,
+        "light",
+        161,
+        2
+      ],
+      [
+        46,
+        32.2,
+        69,
+        6.2,
+        "dark",
+        139,
+        1
+      ],
+      [
+        29,
+        185.7,
+        36,
+        8.1,
+        "light",
+        148,
+        2
+      ],
+      [
+        78,
+        184.3,
+        74,
+        13,
+        "red",
+        111,
+        2
+      ],
+      [
+        18,
+        200,
+        209,
+        38.5,
+        "light",
+        160,
+        2
+      ],
+      [
+        78,
+        243.2,
+        98,
+        17.3,
+        "light",
+        111,
+        3
+      ],
+      [
+        18,
+        261.2,
+        211,
+        18.5,
+        "light",
+        162,
+        2
+      ],
+      [
+        91,
+        306.5,
+        67,
+        6.3,
+        "light",
+        148,
+        1
+      ],
+      [
+        167,
+        309.7,
+        65,
+        6.4,
+        "dark",
+        143,
+        1
+      ],
+      [
+        91,
+        318,
+        132,
+        7,
+        "dark",
+        143,
+        1
+      ],
+      [
+        117,
+        12.5,
+        27.2,
+        17.2,
+        "textured",
+        0,
+        0,
+        [
+          145,
+          8
+        ]
+      ],
+      [
+        170,
+        31.8,
+        29,
+        6.9,
+        "blue",
+        219,
+        2
+      ],
+      [
+        49,
+        41,
+        162,
+        13,
+        "dark",
+        132,
+        2
+      ],
+      [
+        12.4,
+        296,
+        24,
+        6.6,
+        "light",
+        160,
+        1
+      ],
+      [
+        74,
+        296,
+        27,
+        6.5,
+        "light",
+        160,
+        1
+      ],
+      [
+        151,
+        296,
+        20.5,
+        6.8,
+        "light",
+        160,
+        1
+      ]
+    ],
+    "cutouts": {
+      "exEmblem": {
+        "box": [
+          117.3,
+          13.2,
+          26.1,
+          15.1
+        ],
+        "position": [
+          98.4,
+          null
+        ],
+        "minLuma": 96
+      }
+    },
+    "titleMark": "ex",
+    "overlay": "<g transform=\"translate(22.1 17.1) skewX(-12)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"780\" text-anchor=\"middle\" fill=\"#f7f7f3\" stroke=\"#f7f7f3\" stroke-width=\"1.1\" stroke-linejoin=\"round\">[[label.stage2]]</text><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"780\" fill=\"#3d4244\" text-anchor=\"middle\">[[label.stage2]]</text></g><text x=\"47\" y=\"26\" font-size=\"16.3\" font-weight=\"760\" fill=\"#f8fafa\" text-anchor=\"start\">[[name.card]]</text>{{exEmblem}}<g transform=\"translate(47 37.3) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.3\" font-weight=\"650\" fill=\"#252728\" text-anchor=\"start\">[[name.evolves]]</text></g><g transform=\"translate(185 37.6) skewX(-12)\"><text x=\"0\" y=\"0\" font-size=\"7.7\" font-weight=\"780\" text-anchor=\"middle\" fill=\"#366c8f\" stroke=\"#366c8f\" stroke-width=\"1.1\" stroke-linejoin=\"round\">[[label.tera]]</text><text x=\"0\" y=\"0\" font-size=\"7.7\" font-weight=\"780\" fill=\"#edf9ff\" text-anchor=\"middle\">[[label.tera]]</text></g><text x=\"51\" y=\"46.9\" font-size=\"6.4\" font-weight=\"750\" fill=\"#171512\" text-anchor=\"start\">[[copy.line1]]</text><g transform=\"translate(51 53.1) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"5.7\" font-weight=\"650\" fill=\"#30262b\" text-anchor=\"start\">[[copy.line2]]</text></g><g transform=\"translate(47 192.2) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"8.9\" font-weight=\"800\" fill=\"#fff\" text-anchor=\"middle\">[[label.ability]]</text></g><text x=\"79\" y=\"195\" font-size=\"12.15\" font-weight=\"760\" fill=\"#f26a5c\" text-anchor=\"start\">[[name.power]]</text><text x=\"20\" y=\"207.5\" font-size=\"8.2\" font-weight=\"560\" fill=\"#f8fafa\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"20\" y=\"218.1\" font-size=\"8.3\" font-weight=\"560\" fill=\"#f8fafa\" text-anchor=\"start\">[[label.basicPrefix]]</text><clipPath id=\"ability-fire\"><circle cx=\"41.7\" cy=\"214.79999999999998\" r=\"3.7\"/></clipPath><g clip-path=\"url(#ability-fire)\"><use href=\"#original\" transform=\"translate(-61.599999999999994 -8.349999999999994)\"/></g><text x=\"47\" y=\"218.1\" font-size=\"8.2\" font-weight=\"560\" fill=\"#f8fafa\" text-anchor=\"start\">[[copy.line4]]</text><text x=\"20\" y=\"228.7\" font-size=\"8.3\" font-weight=\"560\" fill=\"#f8fafa\" text-anchor=\"start\">[[copy.line5]]</text><text x=\"79\" y=\"256\" font-size=\"12.1\" font-weight=\"760\" fill=\"#f8fafa\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"20\" y=\"269\" font-size=\"8.45\" font-weight=\"520\" fill=\"#f8fafa\" text-anchor=\"start\">[[copy.line6]]</text><text x=\"13\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#f8fafa\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#f8fafa\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"152\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#f8fafa\" text-anchor=\"start\">[[label.retreat]]</text><g transform=\"translate(95 312.5) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.2\" font-weight=\"780\" fill=\"#fff\" text-anchor=\"start\">[[label.exRule]]</text></g><text x=\"94\" y=\"323.8\" font-size=\"6.15\" font-weight=\"720\" fill=\"#171512\" text-anchor=\"start\">[[copy.line7]]</text>",
+    "values": {
+      "v1": "3",
+      "v2": "30",
+      "v3": "2"
+    }
+  },
+  "sv3-164": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        7.3,
+        11.2,
+        30.4,
+        8.2,
+        "full",
+        0,
+        0
+      ],
+      [
+        46,
+        13.3,
+        55,
+        14.8,
+        "dark",
+        145,
+        2
+      ],
+      [
+        46,
+        32.2,
+        64,
+        6.2,
+        "dark",
+        139,
+        1
+      ],
+      [
+        29,
+        185.7,
+        36,
+        8.1,
+        "light",
+        148,
+        2
+      ],
+      [
+        78,
+        184.3,
+        70,
+        13,
+        "red",
+        111,
+        2
+      ],
+      [
+        18,
+        200,
+        209,
+        28,
+        "dark",
+        132,
+        2
+      ],
+      [
+        78,
+        243.2,
+        79,
+        14.9,
+        "dark",
+        145,
+        2
+      ],
+      [
+        18,
+        261.2,
+        132,
+        10,
+        "dark",
+        138,
+        2
+      ],
+      [
+        91,
+        306.5,
+        67,
+        6.3,
+        "light",
+        148,
+        1
+      ],
+      [
+        167,
+        309.7,
+        65,
+        6.4,
+        "dark",
+        143,
+        1
+      ],
+      [
+        91,
+        318,
+        132,
+        7,
+        "dark",
+        143,
+        1
+      ],
+      [
+        12.4,
+        296,
+        24,
+        6.6,
+        "dark",
+        146,
+        1
+      ],
+      [
+        74,
+        296,
+        27,
+        6.5,
+        "dark",
+        146,
+        1
+      ],
+      [
+        151,
+        296,
+        20.5,
+        6.8,
+        "dark",
+        146,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "titleMark": "ex",
+    "overlay": "<g transform=\"translate(22.1 17.1) skewX(-12)\"><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"780\" text-anchor=\"middle\" fill=\"#f7f7f3\" stroke=\"#f7f7f3\" stroke-width=\"1.1\" stroke-linejoin=\"round\">[[label.stage2]]</text><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"780\" fill=\"#3d4244\" text-anchor=\"middle\">[[label.stage2]]</text></g><text x=\"100\" y=\"26\" font-size=\"16.3\" font-weight=\"760\" fill=\"#19191a\" text-anchor=\"end\">[[name.card]]</text><g transform=\"translate(47 37.3) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.3\" font-weight=\"650\" fill=\"#252728\" text-anchor=\"start\">[[name.evolves]]</text></g><g transform=\"translate(47 192.2) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"8.9\" font-weight=\"800\" fill=\"#fff\" text-anchor=\"middle\">[[label.ability]]</text></g><text x=\"79\" y=\"195\" font-size=\"12.15\" font-weight=\"760\" fill=\"#9e191a\" text-anchor=\"start\">[[name.power]]</text><text x=\"20\" y=\"208\" font-size=\"8.45\" font-weight=\"520\" fill=\"#19191a\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"20\" y=\"218.3\" font-size=\"8.45\" font-weight=\"520\" fill=\"#19191a\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"79\" y=\"256\" font-size=\"12.1\" font-weight=\"760\" fill=\"#19191a\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"20\" y=\"269\" font-size=\"8.45\" font-weight=\"520\" fill=\"#19191a\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"13\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#19191a\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#19191a\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"152\" y=\"301.2\" font-size=\"7.8\" font-weight=\"680\" fill=\"#19191a\" text-anchor=\"start\">[[label.retreat]]</text><g transform=\"translate(95 312.5) skewX(-11)\"><text x=\"0\" y=\"0\" font-size=\"6.2\" font-weight=\"780\" fill=\"#fff\" text-anchor=\"start\">[[label.exRule]]</text></g><text x=\"94\" y=\"323.8\" font-size=\"6.15\" font-weight=\"720\" fill=\"#171512\" text-anchor=\"start\">[[copy.line4]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "1",
+      "v3": "2"
+    }
+  },
+  "sv1-191": {
+    "profile": "modernTrainer",
+    "effect": "rareCandy"
+  },
+  "sv1-181": {
+    "profile": "modernTrainer",
+    "effect": "nestBall"
+  },
+  "sv1-189": {
+    "profile": "modernTrainer",
+    "effect": "professorsResearch",
+    "subtitle": "professorSada"
+  },
+  "base1-96": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        12,
+        245,
+        134,
+        14.3,
+        "dark",
+        103,
+        2
+      ],
+      [
+        12,
+        268,
+        37,
+        9,
+        "dark",
+        103,
+        2
+      ],
+      [
+        71,
+        268,
+        38,
+        10,
+        "dark",
+        103,
+        2
+      ],
+      [
+        12,
+        279,
+        161,
+        10,
+        "dark",
+        103,
+        2
+      ],
+      [
+        129,
+        255,
+        16,
+        4,
+        "band",
+        0,
+        0
+      ]
+    ],
+    "cutouts": {},
+    "overlay": "<text x=\"14\" y=\"256\" font-size=\"12.7\" font-weight=\"760\" fill=\"#171512\" text-anchor=\"start\">[[name.card]]</text><text x=\"14\" y=\"277\" font-size=\"9.6\" font-weight=\"690\" fill=\"#171512\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"74\" y=\"277\" font-size=\"9.6\" font-weight=\"690\" fill=\"#171512\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"14\" y=\"287\" font-size=\"9.1\" font-weight=\"650\" fill=\"#171512\" text-anchor=\"start\">[[copy.line3]]</text>"
+  },
+  "sve-2": {
+    "profile": "sveEnergy"
+  },
+  "base1-44": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        20,
+        19,
+        76,
+        16,
+        "dark",
+        148,
+        2
+      ],
+      [
+        20,
+        11,
+        57,
+        8,
+        "dark",
+        148,
+        2
+      ],
+      [
+        40,
+        178.2,
+        168,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        45,
+        207,
+        150,
+        44,
+        "dark",
+        148,
+        2
+      ],
+      [
+        21,
+        274,
+        36,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        102,
+        274,
+        39,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        181,
+        274,
+        41,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        24,
+        295,
+        190,
+        17,
+        "dark",
+        148,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 28,
+      "weightLb": 15
+    },
+    "overlay": "<text x=\"21\" y=\"18\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.basicPokemon]]</text><text x=\"21\" y=\"33\" font-size=\"14.8\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"6.35\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 185.4) skewX(-11)\">[[meta.species]]</text><text x=\"46\" y=\"220\" fill=\"#1b1817\" font-weight=\"510\" font-size=\"7.5\"><tspan font-weight=\"760\" font-size=\"10.5\">[[name.attack.0]]</tspan><tspan dx=\"3\">[[copy.line1]]</tspan></text><text x=\"46\" y=\"229.2\" font-size=\"7.5\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><clipPath id=\"stat-separator\"><rect x=\"12\" y=\"272\" width=\"219\" height=\"1.6\"/></clipPath><g clip-path=\"url(#stat-separator)\"><use href=\"#original\"/></g><text x=\"22\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"104\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"184\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 302.7) skewX(-11)\">[[copy.line3]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 310.2) skewX(-11)\">[[copy.line4]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "LV.13 #1"
+    }
+  },
+  "base1-63": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        20,
+        19,
+        63,
+        16,
+        "dark",
+        148,
+        2
+      ],
+      [
+        20,
+        11,
+        57,
+        8,
+        "dark",
+        148,
+        2
+      ],
+      [
+        40,
+        178.2,
+        168,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        46,
+        193,
+        154,
+        24,
+        "dark",
+        148,
+        2
+      ],
+      [
+        46,
+        228,
+        170,
+        40,
+        "dark",
+        148,
+        2
+      ],
+      [
+        21,
+        274,
+        36,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        102,
+        274,
+        39,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        181,
+        274,
+        41,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        24,
+        295,
+        190,
+        17,
+        "dark",
+        148,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 20,
+      "weightLb": 20
+    },
+    "overlay": "<text x=\"21\" y=\"18\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.basicPokemon]]</text><text x=\"21\" y=\"33\" font-size=\"14.8\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"6.35\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 185.4) skewX(-11)\">[[meta.species]]</text><text x=\"46\" y=\"205\" fill=\"#1b1817\" font-weight=\"510\" font-size=\"7.5\"><tspan font-weight=\"760\" font-size=\"10.5\">[[name.attack.0]]</tspan><tspan dx=\"3\">[[copy.line1]]</tspan></text><text x=\"46\" y=\"214.2\" font-size=\"7.5\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"46\" y=\"238\" fill=\"#1b1817\" font-weight=\"510\" font-size=\"7.05\"><tspan font-weight=\"760\" font-size=\"10.5\">[[name.attack.1]]</tspan><tspan dx=\"3\">[[copy.line1]]</tspan></text><text x=\"46\" y=\"247.2\" font-size=\"7.05\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"46\" y=\"256.4\" font-size=\"7.05\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line4]]</text><clipPath id=\"stat-separator\"><rect x=\"12\" y=\"272\" width=\"219\" height=\"1.6\"/></clipPath><g clip-path=\"url(#stat-separator)\"><use href=\"#original\"/></g><text x=\"22\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"104\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"184\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 302.7) skewX(-11)\">[[copy.line5]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 310.2) skewX(-11)\">[[copy.line6]]</text>",
+    "values": {
+      "v1": "LV.8 #7"
+    }
+  },
+  "base1-4": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        60,
+        19,
+        75,
+        16,
+        "dark",
+        148,
+        2
+      ],
+      [
+        49,
+        10,
+        178,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        20,
+        12.5,
+        27,
+        8.6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        40,
+        178.2,
+        168,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        30,
+        191,
+        180,
+        42,
+        "dark",
+        148,
+        2
+      ],
+      [
+        47,
+        245,
+        145,
+        19,
+        "dark",
+        148,
+        2
+      ],
+      [
+        21,
+        274,
+        36,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        102,
+        274,
+        39,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        181,
+        274,
+        41,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        24,
+        295,
+        190,
+        17,
+        "dark",
+        148,
+        2
+      ],
+      [
+        152,
+        207.5,
+        11,
+        10.5,
+        "full",
+        0,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 67,
+      "weightLb": 200
+    },
+    "overlay": "<text x=\"33\" y=\"19.6\" font-size=\"5.5\" font-weight=\"740\" fill=\"#1b1817\" text-anchor=\"middle\">[[label.stage2]]</text><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(52 16) skewX(-11)\">[[name.evolves]]</text><text x=\"225\" y=\"16\" font-size=\"5.2\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"end\">[[copy.line1]]</text><text x=\"61\" y=\"33\" font-size=\"14.8\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"6.35\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 185.4) skewX(-11)\">[[meta.species]]</text><text x=\"46\" y=\"255\" fill=\"#1b1817\" font-weight=\"510\" font-size=\"7.1\"><tspan font-weight=\"760\" font-size=\"10.5\">[[name.attack.0]]</tspan><tspan dx=\"3\">[[copy.line2]]</tspan></text><text x=\"46\" y=\"264.2\" font-size=\"7.1\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"31\" y=\"201\" font-size=\"8.6\" font-weight=\"760\" fill=\"#603f82\" text-anchor=\"start\">[[name.power.classic]]</text><text x=\"31\" y=\"211\" font-size=\"6.85\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line4]]</text><text x=\"31\" y=\"219.4\" font-size=\"6.85\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line5]]</text><clipPath id=\"burn-fire\"><circle cx=\"154.05\" cy=\"216.95000000000002\" r=\"3.55\"/></clipPath><g clip-path=\"url(#burn-fire)\"><use href=\"#original\" transform=\"translate(-3.5999999999999943 5.099999999999994)\"/></g><text x=\"160\" y=\"219.4\" font-size=\"6.85\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line6]]</text><text x=\"31\" y=\"227.8\" font-size=\"6.85\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line7]]</text><clipPath id=\"stat-separator\"><rect x=\"12\" y=\"272\" width=\"219\" height=\"1.6\"/></clipPath><g clip-path=\"url(#stat-separator)\"><use href=\"#original\"/></g><text x=\"22\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"104\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"184\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 302.7) skewX(-11)\">[[copy.line8]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 310.2) skewX(-11)\">[[copy.line9]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "2",
+      "v3": "LV.76 #6"
+    }
+  },
+  "base1-6": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        60,
+        19,
+        66,
+        16,
+        "dark",
+        148,
+        2
+      ],
+      [
+        49,
+        10,
+        178,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        20,
+        12.5,
+        27,
+        8.6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        40,
+        178.2,
+        168,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        73,
+        205,
+        92,
+        15,
+        "dark",
+        148,
+        2
+      ],
+      [
+        46,
+        239,
+        155,
+        30,
+        "dark",
+        148,
+        2
+      ],
+      [
+        21,
+        274,
+        36,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        102,
+        274,
+        39,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        181,
+        274,
+        41,
+        6,
+        "dark",
+        148,
+        2
+      ],
+      [
+        24,
+        295,
+        190,
+        17,
+        "dark",
+        148,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 256,
+      "weightLb": 518
+    },
+    "overlay": "<text x=\"33\" y=\"19.6\" font-size=\"5.5\" font-weight=\"740\" fill=\"#1b1817\" text-anchor=\"middle\">[[label.stage1]]</text><text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(52 16) skewX(-11)\">[[name.evolves]]</text><text x=\"225\" y=\"16\" font-size=\"5.2\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"end\">[[copy.line1]]</text><text x=\"61\" y=\"33\" font-size=\"14.8\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"6.35\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 185.4) skewX(-11)\">[[meta.species]]</text><text x=\"76\" y=\"217\" font-size=\"10.5\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"46\" y=\"251\" fill=\"#1b1817\" font-weight=\"510\" font-size=\"7.5\"><tspan font-weight=\"760\" font-size=\"10.5\">[[name.attack.1]]</tspan><tspan dx=\"3\">[[copy.line2]]</tspan></text><text x=\"46\" y=\"260.2\" font-size=\"7.5\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><clipPath id=\"stat-separator\"><rect x=\"12\" y=\"272\" width=\"219\" height=\"1.6\"/></clipPath><g clip-path=\"url(#stat-separator)\"><use href=\"#original\"/></g><text x=\"22\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"104\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"184\" y=\"279.5\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 302.7) skewX(-11)\">[[copy.line4]]</text><text x=\"0\" y=\"0\" font-size=\"6.1\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(25 310.2) skewX(-11)\">[[copy.line5]]</text>",
+    "values": {
+      "v1": "LV.41 #130"
+    }
+  },
+  "gym2-93": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        20,
+        19,
+        110,
+        16,
+        "dark",
+        148,
+        2
+      ],
+      [
+        20,
+        11,
+        57,
+        8,
+        "dark",
+        148,
+        2
+      ],
+      [
+        40,
+        178.2,
+        168,
+        9,
+        "dark",
+        148,
+        2
+      ],
+      [
+        95,
+        201,
+        45,
+        16,
+        "dark",
+        148,
+        2
+      ],
+      [
+        46,
+        231,
+        150,
+        39,
+        "dark",
+        148,
+        2
+      ],
+      [
+        13,
+        278,
+        35,
+        7,
+        "dark",
+        148,
+        2
+      ],
+      [
+        68,
+        278,
+        43,
+        7,
+        "dark",
+        148,
+        2
+      ],
+      [
+        13,
+        293,
+        44,
+        7,
+        "dark",
+        148,
+        2
+      ],
+      [
+        12,
+        304,
+        46,
+        7.5,
+        "dark",
+        145,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 35,
+      "weightLb": 43
+    },
+    "overlay": "<text x=\"21\" y=\"18\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.basicPokemon]]</text><text x=\"21\" y=\"33\" font-size=\"14\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"6.35\" font-weight=\"590\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 185.4) skewX(-11)\">[[meta.species]]</text><text x=\"98\" y=\"214\" font-size=\"10.5\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"46\" y=\"242\" fill=\"#1b1817\" font-weight=\"510\" font-size=\"7.25\"><tspan font-weight=\"760\" font-size=\"10.5\">[[name.attack.1]]</tspan><tspan dx=\"3\">[[copy.line1]]</tspan></text><text x=\"46\" y=\"251.2\" font-size=\"7.25\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"46\" y=\"260.4\" font-size=\"7.25\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"13\" y=\"284.3\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"70\" y=\"284.3\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"13\" y=\"299\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><g transform=\"translate(13 310.8) skewX(-11)\"><text font-size=\"6.1\" font-weight=\"640\" fill=\"#1b1817\">[[value.catalog]]</text></g>",
+    "values": {
+      "catalog": "LV.12 #63"
+    }
+  },
+  "me2-56": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        7,
+        10.5,
+        30,
+        9,
+        "full",
+        0,
+        0
+      ],
+      [
+        47,
+        12,
+        76,
+        17,
+        "light",
+        95,
+        2
+      ],
+      [
+        125,
+        12,
+        30,
+        17,
+        "light",
+        95,
+        2
+      ],
+      [
+        45,
+        32,
+        72,
+        7,
+        "dark",
+        130,
+        1
+      ],
+      [
+        28,
+        185.9,
+        38,
+        7.6,
+        "light",
+        145,
+        2
+      ],
+      [
+        77,
+        242.5,
+        62,
+        15,
+        "light",
+        145,
+        2
+      ],
+      [
+        18,
+        199,
+        216,
+        39,
+        "light",
+        145,
+        2
+      ],
+      [
+        18,
+        260,
+        216,
+        21,
+        "light",
+        145,
+        2
+      ],
+      [
+        78,
+        184,
+        122,
+        14,
+        "red",
+        126,
+        2
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        94,
+        307,
+        71,
+        7,
+        "light",
+        145,
+        1
+      ],
+      [
+        168,
+        308,
+        65,
+        9,
+        "dark",
+        163,
+        1
+      ],
+      [
+        93,
+        317,
+        135,
+        10,
+        "dark",
+        163,
+        1
+      ]
+    ],
+    "cutouts": {
+      "emblem": {
+        "box": [
+          125,
+          12.3,
+          30,
+          16.7
+        ],
+        "position": [
+          109,
+          null
+        ],
+        "minLuma": 135
+      }
+    },
+    "titleMark": "ex",
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"middle\" transform=\"translate(22 17.4) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.stage2]]</text><text x=\"47\" y=\"26.1\" font-size=\"15.1\" font-weight=\"760\" fill=\"#ffe65e\" text-anchor=\"start\" stroke=\"#251a17\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.card]]</text>{{emblem}}<text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(47 37.3) skewX(-11)\">[[name.evolves]]</text><rect x=\"151\" y=\"32\" width=\"89\" height=\"13\" rx=\"1\" fill=\"#cbe8d1\" fill-opacity=\"0.96\"/><text x=\"157\" y=\"40\" font-size=\"6.25\" font-weight=\"700\" fill=\"#302f38\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"0\" y=\"0\" font-size=\"8.5\" font-weight=\"770\" fill=\"#f9faf8\" text-anchor=\"middle\" transform=\"translate(47 192.4) skewX(-11)\">[[label.ability]]</text><text x=\"79\" y=\"195.1\" font-size=\"11.7\" font-weight=\"760\" fill=\"#f15b54\" text-anchor=\"start\">[[name.power]]</text><text x=\"19\" y=\"207\" font-size=\"8.25\" font-weight=\"550\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line2]]</text><clipPath id=\"shadow-dark\"><circle cx=\"49.2\" cy=\"203.7\" r=\"3.5\"/></clipPath><g clip-path=\"url(#shadow-dark)\"><use href=\"#original\" transform=\"translate(-16.9 -0.6000000000000227)\"/></g><text x=\"55\" y=\"207\" font-size=\"8.25\" font-weight=\"550\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"19\" y=\"217.3\" font-size=\"8.25\" font-weight=\"550\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line4]]</text><text x=\"19\" y=\"227.60000000000002\" font-size=\"8.25\" font-weight=\"550\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line5]]</text><text x=\"79\" y=\"255.9\" font-size=\"12.1\" font-weight=\"760\" fill=\"#f9faf8\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"19\" y=\"270\" font-size=\"8.25\" font-weight=\"550\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line6]]</text><text x=\"19\" y=\"279.4\" font-size=\"8.25\" font-weight=\"550\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line7]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#ffe265\" text-anchor=\"start\" transform=\"translate(100 313.4) skewX(-11)\">[[label.megaRule]]</text><text x=\"101\" y=\"323.7\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line8]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "1",
+      "v3": "1",
+      "v4": "3"
+    },
+    "nameRefs": {
+      "baseGengarName": {
+        "kind": "card",
+        "name": "Gengar"
+      }
+    }
+  },
+  "sv1-81": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        8,
+        10.4,
+        27,
+        8.5,
+        "full",
+        0,
+        0
+      ],
+      [
+        46,
+        12,
+        65,
+        16,
+        "dark",
+        141,
+        2
+      ],
+      [
+        29,
+        185.7,
+        36,
+        7.8,
+        "light",
+        150,
+        2
+      ],
+      [
+        78,
+        184,
+        73,
+        13,
+        "red",
+        116,
+        2
+      ],
+      [
+        18,
+        200,
+        211,
+        31,
+        "dark",
+        141,
+        2
+      ],
+      [
+        77,
+        245,
+        91,
+        14,
+        "dark",
+        141,
+        2
+      ],
+      [
+        18,
+        260,
+        184,
+        12,
+        "dark",
+        141,
+        2
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        92,
+        306,
+        68,
+        7,
+        "light",
+        155,
+        1
+      ],
+      [
+        166,
+        309,
+        69,
+        7,
+        "dark",
+        140,
+        1
+      ],
+      [
+        89,
+        319,
+        135,
+        7,
+        "dark",
+        140,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "titleMark": "ex",
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"middle\" transform=\"translate(21.5 17.1) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.basic]]</text><text x=\"47\" y=\"26\" font-size=\"16.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"8.5\" font-weight=\"770\" fill=\"#f9faf8\" text-anchor=\"middle\" transform=\"translate(47 192.5) skewX(-11)\">[[label.ability]]</text><text x=\"79\" y=\"194.6\" font-size=\"11.8\" font-weight=\"760\" fill=\"#a82726\" text-anchor=\"start\">[[name.power]]</text><text x=\"20\" y=\"208\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"20\" y=\"218.6\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"79\" y=\"256.7\" font-size=\"12.1\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"20\" y=\"270.1\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#f9faf8\" text-anchor=\"start\" transform=\"translate(95 312) skewX(-11)\">[[label.exRule]]</text><text x=\"94\" y=\"324\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line4]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "2",
+      "v3": "2"
+    }
+  },
+  "sv4pt5-7": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        8,
+        10.4,
+        27,
+        8.5,
+        "full",
+        0,
+        0
+      ],
+      [
+        46,
+        12,
+        96,
+        16,
+        "dark",
+        143,
+        2
+      ],
+      [
+        64,
+        163.8,
+        119,
+        6,
+        "dark",
+        143,
+        2
+      ],
+      [
+        77,
+        204,
+        106,
+        15,
+        "dark",
+        143,
+        2
+      ],
+      [
+        18,
+        220,
+        94,
+        12,
+        "dark",
+        143,
+        2
+      ],
+      [
+        77,
+        245,
+        116,
+        15,
+        "dark",
+        143,
+        2
+      ],
+      [
+        106,
+        312,
+        123,
+        15,
+        "dark",
+        143,
+        2
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "dark",
+        145,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "measure": {
+      "heightIn": 24,
+      "weightLb": 18.7,
+      "dex": "0004"
+    },
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"middle\" transform=\"translate(21.5 17.1) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.basic]]</text><text x=\"47\" y=\"26\" font-size=\"16.3\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"122\" y=\"169.5\" font-size=\"5.65\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"middle\">[[meta.species]]</text><text x=\"79\" y=\"216\" font-size=\"12.1\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"20\" y=\"228\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"79\" y=\"257.5\" font-size=\"12.1\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.attack.1]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"108\" y=\"317.4\" font-size=\"5.85\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"108\" y=\"324.7\" font-size=\"5.85\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text>"
+  },
+  "swsh2-50": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        43,
+        13,
+        65,
+        16,
+        "dark",
+        142,
+        2
+      ],
+      [
+        40,
+        32,
+        69,
+        10,
+        "dark",
+        142,
+        2
+      ],
+      [
+        78,
+        197,
+        69,
+        15,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        17,
+        212,
+        211,
+        24,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        78,
+        241,
+        67,
+        15,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        17,
+        255,
+        213,
+        33,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        94,
+        310,
+        64,
+        7,
+        "light",
+        145,
+        1
+      ],
+      [
+        153,
+        311,
+        78,
+        8,
+        "dark",
+        141,
+        1
+      ],
+      [
+        91,
+        320,
+        134,
+        8,
+        "dark",
+        141,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "titleMark": "VMAX",
+    "vmaxForm": {"box":[42.7,42.5,39.5,7.9],"label":"dynamax","fill":"#d81480","outline":"#fff9fc"},
+    "overlay": "<text x=\"47\" y=\"26.5\" font-size=\"14.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff4e5\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"5.7\" font-weight=\"650\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 39.7) skewX(-11)\" stroke=\"#fdf1e7\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.evolves]]</text>[[badge.vmaxForm]]<text x=\"79\" y=\"210\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.0]]</text><text x=\"21\" y=\"222\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line1]]</text><text x=\"21\" y=\"231.2\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line2]]</text><text x=\"79\" y=\"253\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.1]]</text><text x=\"21\" y=\"265\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line3]]</text><text x=\"21\" y=\"274.2\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line4]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#f9faf8\" text-anchor=\"start\" transform=\"translate(99 315) skewX(-11)\">[[label.vmaxRule]]</text><text x=\"96\" y=\"325\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line5]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "1",
+      "v3": "60",
+      "v4": "3"
+    }
+  },
+  "swsh8-114": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        43,
+        13,
+        34,
+        15,
+        "dark",
+        142,
+        2
+      ],
+      [
+        40,
+        33,
+        65,
+        9,
+        "dark",
+        142,
+        2
+      ],
+      [
+        69.5,
+        43.3,
+        10.5,
+        5.4,
+        "red",
+        110,
+        2
+      ],
+      [
+        79,
+        208,
+        109,
+        15,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        17,
+        222,
+        211,
+        25,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        78,
+        249,
+        78,
+        15,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        18.3,
+        266.4,
+        209.6,
+        10.9,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        18.3,
+        276.9,
+        106,
+        9.4,
+        "outlined",
+        127,
+        3
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        94,
+        310,
+        64,
+        7,
+        "light",
+        145,
+        1
+      ],
+      [
+        152,
+        311,
+        79,
+        8,
+        "dark",
+        141,
+        1
+      ],
+      [
+        90,
+        320,
+        134,
+        8,
+        "dark",
+        141,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "titleMark": "VMAX",
+    "vmaxForm": {"box":[42.7,42.5,39.5,7.9],"label":"dynamax","fill":"#d81480","outline":"#fff9fc"},
+    "overlay": "<text x=\"47\" y=\"26.5\" font-size=\"14.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff4e5\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"5.7\" font-weight=\"650\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 39.7) skewX(-11)\" stroke=\"#fdf1e7\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.evolves]]</text>[[badge.vmaxForm]]<text x=\"79\" y=\"219\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.0]]</text><text x=\"21\" y=\"231\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line1]]</text><text x=\"21\" y=\"240.2\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line2]]</text><text x=\"79\" y=\"261\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.1]]</text><text x=\"21\" y=\"273\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line3]]</text><text x=\"21\" y=\"282.2\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line4]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#f9faf8\" text-anchor=\"start\" transform=\"translate(99 315) skewX(-11)\">[[label.vmaxRule]]</text><text x=\"96\" y=\"325\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line5]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "1",
+      "v3": "3"
+    }
+  },
+  "swsh10-40": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        44,
+        13,
+        83,
+        16,
+        "dark",
+        146,
+        2
+      ],
+      [
+        39,
+        33,
+        96,
+        9,
+        "dark",
+        146,
+        2
+      ],
+      [
+        76,
+        181,
+        83,
+        18,
+        "outlined",
+        129,
+        3
+      ],
+      [
+        18,
+        198,
+        211,
+        25,
+        "outlined",
+        129,
+        3
+      ],
+      [
+        76,
+        239,
+        68,
+        16,
+        "outlined",
+        129,
+        3
+      ],
+      [
+        18,
+        252,
+        214,
+        32,
+        "outlined",
+        129,
+        3
+      ],
+      [
+        23,
+        239.7,
+        50,
+        11,
+        "light",
+        143,
+        2
+      ],
+      [
+        90,
+        225,
+        75,
+        10,
+        "dark",
+        162,
+        1
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "dark",
+        145,
+        1
+      ],
+      [
+        97,
+        309,
+        64,
+        8,
+        "dark",
+        140,
+        1
+      ],
+      [
+        151,
+        311,
+        81,
+        7,
+        "dark",
+        140,
+        1
+      ],
+      [
+        93,
+        319,
+        129,
+        8,
+        "dark",
+        140,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "titleMark": "VSTAR",
+    "overlay": "<text x=\"46\" y=\"25.8\" font-size=\"9.1\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"5.6\" font-weight=\"670\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(42 39.4) skewX(-11)\">[[name.evolves]]</text><text x=\"79\" y=\"196.8\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.0]]</text><text x=\"20\" y=\"209\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line1]]</text><text x=\"20\" y=\"218.5\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line2]]</text><text x=\"0\" y=\"0\" font-size=\"8.6\" font-weight=\"790\" fill=\"#1b1817\" text-anchor=\"middle\" transform=\"translate(123 234) skewX(-11)\">[[label.vstarPower]]</text><text x=\"0\" y=\"0\" font-size=\"8.5\" font-weight=\"770\" fill=\"#f9faf8\" text-anchor=\"middle\" transform=\"translate(47 249.8) skewX(-11)\">[[label.ability]]</text><text x=\"79\" y=\"251.6\" font-size=\"11.2\" font-weight=\"760\" fill=\"#a1232a\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.power]]</text><text x=\"20\" y=\"263\" font-size=\"7.35\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line3]]</text><clipPath id=\"portal-water-energy\"><circle cx=\"160.2\" cy=\"259.8\" r=\"3.2\"/></clipPath><g clip-path=\"url(#portal-water-energy)\"><use href=\"#original\" transform=\"translate(-13.400000000000006 1.1000000000000227)\"/></g><text x=\"166\" y=\"263\" font-size=\"7.35\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line4]]</text><text x=\"20\" y=\"271.8\" font-size=\"7.35\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line5]]</text><clipPath id=\"portal-water-pokemon\"><circle cx=\"83.2\" cy=\"268.59999999999997\" r=\"3.2\"/></clipPath><g clip-path=\"url(#portal-water-pokemon)\"><use href=\"#original\" transform=\"translate(-48.400000000000006 1.1999999999999886)\"/></g><text x=\"89\" y=\"271.8\" font-size=\"7.35\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line6]]</text><text x=\"0\" y=\"0\" font-size=\"7.35\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(20 280.6) skewX(-11)\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line7]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(100 316.1) skewX(-11)\">[[label.vstarRule]]</text><text x=\"93\" y=\"325.3\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line8]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "20",
+      "v3": "3",
+      "v4": "1",
+      "v5": "2"
+    }
+  },
+  "swsh1-138": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        8,
+        16,
+        30,
+        7.8,
+        "dark",
+        147,
+        2
+      ],
+      [
+        45,
+        11,
+        49,
+        18,
+        "dark",
+        135,
+        2
+      ],
+      [
+        77,
+        198,
+        83,
+        17,
+        "outlined",
+        125,
+        3
+      ],
+      [
+        17,
+        214,
+        213,
+        41,
+        "outlined",
+        125,
+        3
+      ],
+      [
+        78,
+        258,
+        75,
+        16,
+        "outlined",
+        125,
+        3
+      ],
+      [
+        17,
+        274,
+        193,
+        15,
+        "outlined",
+        125,
+        3
+      ],
+      [
+        22,
+        200,
+        48,
+        11,
+        "light",
+        143,
+        2
+      ],
+      [
+        12,
+        295.7,
+        24,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        73,
+        295.7,
+        29,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        151,
+        295.7,
+        21,
+        6.5,
+        "light",
+        155,
+        1
+      ],
+      [
+        98,
+        310,
+        29,
+        8,
+        "dark",
+        140,
+        1
+      ],
+      [
+        142,
+        309,
+        97,
+        9,
+        "light",
+        152,
+        1
+      ],
+      [
+        91,
+        319,
+        130,
+        8,
+        "light",
+        152,
+        1
+      ]
+    ],
+    "cutouts": {},
+    "titleMark": "V",
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"middle\" transform=\"translate(21.5 22.1) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.basic]]</text><text x=\"46\" y=\"27\" font-size=\"16.6\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"0\" y=\"0\" font-size=\"8.5\" font-weight=\"770\" fill=\"#f9faf8\" text-anchor=\"middle\" transform=\"translate(46 208.7) skewX(-11)\">[[label.ability]]</text><text x=\"79\" y=\"210.7\" font-size=\"11.2\" font-weight=\"760\" fill=\"#a1232a\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.power]]</text><text x=\"20\" y=\"224\" font-size=\"7.65\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line1]]</text><text x=\"20\" y=\"233.4\" font-size=\"7.65\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line2]]</text><clipPath id=\"sword-metal\"><circle cx=\"86.6\" cy=\"230.4\" r=\"3.6\"/></clipPath><g clip-path=\"url(#sword-metal)\"><use href=\"#original\" transform=\"translate(-84.69999999999999 2.3000000000000114)\"/></g><text x=\"93\" y=\"233.4\" font-size=\"7.65\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line3]]</text><text x=\"20\" y=\"242.8\" font-size=\"7.65\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line4]]</text><text x=\"79\" y=\"271.4\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.0]]</text><text x=\"20\" y=\"284.8\" font-size=\"8.25\" font-weight=\"600\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.3\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[copy.line5]]</text><text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"75\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"153\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#f9faf8\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(99 316.4) skewX(-11)\">[[label.vRule]]</text><text x=\"93\" y=\"325.2\" font-size=\"5.8\" font-weight=\"690\" fill=\"#f9faf8\" text-anchor=\"start\">[[copy.line6]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "3",
+      "v3": "2"
+    }
+  },
+  "sm12-156": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        9,
+        16.6,
+        30,
+        8.5,
+        "dark",
+        159,
+        2
+      ],
+      [
+        42,
+        11.5,
+        81,
+        21,
+        "dark",
+        154,
+        2
+      ],
+      [
+        42,
+        11.5,
+        81,
+        21,
+        "light",
+        211,
+        1
+      ],
+      [
+        76,
+        184,
+        73,
+        18,
+        "outlined",
+        141,
+        3
+      ],
+      [
+        17,
+        199,
+        210,
+        32,
+        "outlined",
+        141,
+        3
+      ],
+      [
+        19,
+        253,
+        212,
+        41,
+        "outlined",
+        166,
+        4
+      ],
+      [
+        77,
+        235,
+        88.5,
+        14,
+        "light",
+        133,
+        2
+      ],
+      [
+        12,
+        295.7,
+        25,
+        7,
+        "dark",
+        162,
+        2
+      ],
+      [
+        80,
+        295.7,
+        27,
+        7,
+        "dark",
+        162,
+        2
+      ],
+      [
+        160,
+        295.7,
+        20,
+        7,
+        "dark",
+        162,
+        2
+      ],
+      [
+        109,
+        308,
+        72,
+        8,
+        "dark",
+        159,
+        2
+      ],
+      [
+        158,
+        314,
+        74,
+        7,
+        "dark",
+        159,
+        2
+      ],
+      [
+        88,
+        319,
+        142,
+        9,
+        "dark",
+        159,
+        2
+      ]
+    ],
+    "cutouts": {
+      "gxAttackMark": {"box": [165.1, 236, 29.5, 11.9], "mode": "strip", "mark": "GX"}
+    },
+    "headings": {
+      "alteredCreation": {
+        "name": "attack.1",
+        "position": [79, 245.1],
+        "width": 145,
+        "size": 10.8,
+        "weight": 760,
+        "fill": "#f9faf8",
+        "skew": -11,
+        "emblem": "gxAttackMark"
+      }
+    },
+    "inlineIcons": {
+      "water": {"box": [97.1, 268.2, 6.7, 6.7], "shape": "outlined"}
+    },
+    "paragraphs": {
+      "ultimateRay": {
+        "box": [19, 200, 208, 31.5],
+        "size": 7.7,
+        "minSize": 6.7,
+        "weight": 600,
+        "fill": "#1b1817",
+        "outline": "#fff",
+        "alignTop": true
+      },
+      "alteredCreation": {
+        "box": [19, 252.8, 208, 41.7],
+        "size": 6.8,
+        "minSize": 4.3,
+        "weight": 600,
+        "fill": "#115b87",
+        "outline": "#fff",
+        "alignTop": true
+      }
+    },
+    "titleMark": "GX",
+    "attackMarks": {
+      "1": "GX"
+    },
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"middle\" transform=\"translate(22.5 23) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.basic]]</text><text x=\"44\" y=\"20.3\" font-size=\"7.4\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.card.teamHead]]</text><text x=\"44\" y=\"29.4\" font-size=\"7.4\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.card.teamTail]]</text><text x=\"78\" y=\"195.7\" font-size=\"11.2\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\" stroke=\"#fff\" stroke-width=\"1.55\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[name.attack.0]]</text>[[paragraph.ultimateRay]][[heading.alteredCreation]][[paragraph.alteredCreation]]<text x=\"13\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.weakness]]</text><text x=\"81\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.resistance]]</text><text x=\"160\" y=\"301.1\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"start\">[[label.retreat]]</text><text x=\"0\" y=\"0\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\" transform=\"translate(110 314.3) skewX(-11)\">[[label.tagRule]]</text><text x=\"94\" y=\"325.1\" font-size=\"5.8\" font-weight=\"690\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line9]]</text>",
+    "values": {
+      "v1": "3",
+      "v2": "30",
+      "v3": "1",
+      "v4": "1",
+      "v5": "1",
+      "v6": "3"
+    }
+  },
+  "base1-91": {
+    "grid": [
+      240,
+      330
+    ],
+    "erase": [
+      [
+        23,
+        56,
+        26,
+        17,
+        "dark",
+        126,
+        2
+      ],
+      [
+        74,
+        204,
+        102,
+        19,
+        "dark",
+        126,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "overlay": "<text x=\"24\" y=\"69\" font-size=\"14\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"122\" y=\"218\" font-size=\"13\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"middle\">[[copy.line1]]</text>",
+    "values": {
+      "v1": "2"
+    }
+  },
+  "sv2-171": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        13.5,
+        10,
+        91,
+        10.3,
+        "band",
+        0,
+        0
+      ],
+      [
+        154,
+        10,
+        79,
+        11,
+        "band",
+        0,
+        0
+      ],
+      [
+        14,
+        27,
+        69,
+        17.7,
+        "band",
+        0,
+        0
+      ],
+      [
+        17,
+        213,
+        212,
+        52,
+        "paper",
+        0,
+        0
+      ],
+      [
+        89,
+        304,
+        144,
+        21,
+        "dark",
+        162,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"9.4\" font-weight=\"770\" fill=\"#478e35\" text-anchor=\"start\" transform=\"translate(15 19.4) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.stadium]]</text><text x=\"0\" y=\"0\" font-size=\"9.7\" font-weight=\"790\" fill=\"#454548\" text-anchor=\"end\" transform=\"translate(229 19.5) skewX(-11)\">[[label.trainer]]</text><text x=\"15\" y=\"40\" font-size=\"15.8\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"19\" y=\"197\" font-size=\"8.9\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"19\" y=\"209\" font-size=\"8.9\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"19\" y=\"221\" font-size=\"8.9\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"91\" y=\"308.5\" font-size=\"5.85\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line4]]</text><text x=\"91\" y=\"315.5\" font-size=\"5.85\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line5]]</text><text x=\"91\" y=\"322.5\" font-size=\"5.85\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line6]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "1"
+    }
+  },
+  "sv4-178": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        13.5,
+        10,
+        91,
+        10.3,
+        "band",
+        0,
+        0
+      ],
+      [
+        154,
+        10,
+        79,
+        11,
+        "band",
+        0,
+        0
+      ],
+      [
+        14,
+        27,
+        209,
+        17.7,
+        "band",
+        0,
+        0
+      ],
+      [
+        17,
+        187,
+        212,
+        46,
+        "paper",
+        0,
+        0
+      ],
+      [
+        76,
+        241,
+        55,
+        14,
+        "paper",
+        0,
+        0
+      ],
+      [
+        17,
+        256,
+        211,
+        39,
+        "paper",
+        0,
+        0
+      ],
+      [
+        88,
+        303,
+        144,
+        24,
+        "dark",
+        162,
+        2
+      ]
+    ],
+    "cutouts": {},
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"9.4\" font-weight=\"770\" fill=\"#695099\" text-anchor=\"start\" transform=\"translate(15 19.4) skewX(-11)\" stroke=\"#f9faf8\" stroke-width=\"0.8\" stroke-linejoin=\"round\" paint-order=\"stroke fill\">[[label.tool]]</text><text x=\"0\" y=\"0\" font-size=\"9.7\" font-weight=\"790\" fill=\"#454548\" text-anchor=\"end\" transform=\"translate(229 19.5) skewX(-11)\">[[label.trainer]]</text><text x=\"15\" y=\"40\" font-size=\"15.8\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"19\" y=\"198\" font-size=\"8.9\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line1]]</text><text x=\"19\" y=\"208\" font-size=\"8.9\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"19\" y=\"218\" font-size=\"8.9\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"91\" y=\"309\" font-size=\"6.1\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line4]]</text><text x=\"91\" y=\"316.3\" font-size=\"6.1\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line5]]</text><text x=\"91\" y=\"323.6\" font-size=\"6.1\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line6]]</text><text x=\"79\" y=\"251.5\" font-size=\"12.1\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.attack.0]]</text><text x=\"19\" y=\"266\" font-size=\"8.45\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line7]]</text><text x=\"19\" y=\"276\" font-size=\"8.45\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line8]]</text><text x=\"19\" y=\"286\" font-size=\"8.45\" font-weight=\"520\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line9]]</text>",
+    "values": {
+      "v1": "1",
+      "v2": "2"
+    }
+  },
+  "sv1-196": {
+    "profile": "modernTrainer",
+    "effect": "ultraBall"
+  },
+  "sv2-172": {
+    "profile": "modernTrainer",
+    "effect": "bossOrders",
+    "subtitle": "ghetsis"
+  },
+  "swsh9-151": {
+    "grid": [
+      245,
+      342
+    ],
+    "erase": [
+      [
+        10,
+        8.8,
+        85,
+        11.5,
+        "band",
+        0,
+        0
+      ],
+      [
+        19,
+        240,
+        209,
+        20,
+        "band",
+        0,
+        0
+      ],
+      [
+        19,
+        264,
+        209,
+        33,
+        "band",
+        0,
+        0
+      ],
+      [
+        14,
+        26,
+        151,
+        17,
+        "dark",
+        163,
+        3
+      ],
+      [
+        180,
+        31,
+        55,
+        11,
+        "dark",
+        163,
+        3
+      ]
+    ],
+    "cutouts": {},
+    "overlay": "<text x=\"0\" y=\"0\" font-size=\"10\" font-weight=\"780\" fill=\"#464549\" text-anchor=\"start\" transform=\"translate(15 18.5) skewX(-11)\">[[label.energy]]</text><text x=\"16\" y=\"39.7\" font-size=\"15.5\" font-weight=\"760\" fill=\"#1b1817\" text-anchor=\"start\">[[name.card]]</text><text x=\"228\" y=\"41\" font-size=\"6.4\" font-weight=\"700\" fill=\"#1b1817\" text-anchor=\"end\">[[label.specialEnergy]]</text><text x=\"21\" y=\"250\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line1]]</text><clipPath id=\"turbo-one\"><circle cx=\"125.3\" cy=\"246.60000000000002\" r=\"3.3\"/></clipPath><g clip-path=\"url(#turbo-one)\"><use href=\"#original\" transform=\"translate(100.7 -8.399999999999977)\"/></g><clipPath id=\"turbo-two\"><circle cx=\"133.5\" cy=\"246.60000000000002\" r=\"3.3\"/></clipPath><g clip-path=\"url(#turbo-two)\"><use href=\"#original\" transform=\"translate(102.19999999999999 -8.399999999999977)\"/></g><text x=\"139.3\" y=\"250\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line2]]</text><text x=\"21\" y=\"268\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line3]]</text><text x=\"21\" y=\"278.5\" font-size=\"8.25\" font-weight=\"550\" fill=\"#1b1817\" text-anchor=\"start\">[[copy.line4]]</text>",
+    "values": {
+      "v1": "20"
+    }
+  },
+  "sve-3": {
+    "profile": "sveEnergy"
+  },
+  "sv1-166": {
+    "profile": "modernTrainer",
+    "effect": "arven"
+  },
+  "sv1-167": {
+    "profile": "modernTrainer",
+    "effect": "beachCourt"
+  },
+  "sv1-170": {
+    "profile": "modernTrainer",
+    "effect": "electricGenerator"
+  },
+  "sv1-171": {
+    "profile": "modernTrainer",
+    "effect": "energyRetrievalM"
+  },
+  "sv1-172": {
+    "profile": "modernTrainer",
+    "effect": "energySearch"
+  },
+  "sv1-173": {
+    "profile": "modernTrainer",
+    "effect": "energySwitch"
+  },
+  "sv1-174": {
+    "profile": "modernTrainer",
+    "effect": "expShare"
+  },
+  "sv1-175": {
+    "profile": "modernTrainer",
+    "effect": "jacq"
+  },
+  "sv1-176": {
+    "profile": "modernTrainer",
+    "effect": "judge"
+  },
+  "sv1-180": {
+    "profile": "modernTrainer",
+    "effect": "nemona"
+  },
+  "sv1-182": {
+    "profile": "modernTrainer",
+    "effect": "palPad"
+  },
+  "sv1-185": {
+    "profile": "modernTrainer",
+    "effect": "pokeBall"
+  },
+  "sv1-186": {
+    "profile": "modernTrainer",
+    "effect": "pokegear"
+  },
+  "sv1-188": {
+    "profile": "modernTrainer",
+    "effect": "potion30"
+  },
+  "sv1-190": {
+    "profile": "modernTrainer",
+    "effect": "professorsResearch",
+    "subtitle": "professorTuro"
+  },
+  "sv1-194": {
+    "profile": "modernTrainer",
+    "effect": "switch"
+  },
+  "sv1-197": {
+    "profile": "modernTrainer",
+    "effect": "vitalityBand"
+  },
+  "sv1-198": {
+    "profile": "modernTrainer",
+    "effect": "youngster"
+  },
+  "sv2-177": {
+    "profile": "modernTrainer",
+    "effect": "clavell"
+  },
+  "sv2-183": {
+    "profile": "modernTrainer",
+    "effect": "greatBall"
+  },
+  "sv2-185": {
+    "profile": "modernTrainer",
+    "effect": "iono"
+  },
+  "sv2-188": {
+    "profile": "modernTrainer",
+    "effect": "superRod"
+  },
+  "sv3-194": {
+    "profile": "modernTrainer",
+    "effect": "ryme"
+  },
+  "sv3pt5-159": {
+    "profile": "modernTrainer",
+    "effect": "energySticker"
+  },
+  "sv4-160": {
+    "profile": "modernTrainer",
+    "effect": "counterCatcher"
+  },
+  "sv4-167": {
+    "profile": "modernTrainer",
+    "effect": "mela"
+  },
+  "sv4-172": {
+    "profile": "modernTrainer",
+    "effect": "rika"
+  },
+  "sv4-173": {
+    "profile": "modernTrainer",
+    "effect": "roark"
+  },
+  "sv4pt5-84": {
+    "profile": "modernTrainer",
+    "effect": "nestBall"
+  },
+  "sv4pt5-89": {
+    "profile": "modernTrainer",
+    "effect": "rareCandy"
+  },
+  "sv4pt5-91": {
+    "profile": "modernTrainer",
+    "effect": "ultraBall"
+  },
+  "sv5-144": {
+    "profile": "modernTrainer",
+    "effect": "buddyPoffin"
+  },
+  "sv6-147": {
+    "profile": "modernTrainer",
+    "effect": "cook"
+  },
+  "sv6pt5-61": {
+    "profile": "modernTrainer",
+    "effect": "nightStretcher"
+  },
+  "sv8-174": {
+    "profile": "modernTrainer",
+    "effect": "drayton"
+  },
+  "sv8-177": {
+    "profile": "modernTrainer",
+    "effect": "gravityMountain"
+  },
+  "sv8-187": {
+    "profile": "modernTrainer",
+    "effect": "surfer"
+  },
+  "sv9-146": {
+    "profile": "modernTrainer",
+    "effect": "brocksScouting"
+  },
+  "sv9-149": {
+    "profile": "modernTrainer",
+    "effect": "irisFightingSpirit"
+  },
+  "sv10-164": {
+    "profile": "modernTrainer",
+    "effect": "energyRecycler"
+  },
+  "sv10-166": {
+    "profile": "modernTrainer",
+    "effect": "graniteCave"
+  },
+  "sv10-169": {
+    "profile": "modernTrainer",
+    "effect": "spikemuthGym"
+  },
+  "sv10-170": {
+    "profile": "modernTrainer",
+    "effect": "trArcher"
+  },
+  "sv10-171": {
+    "profile": "modernTrainer",
+    "effect": "trAriana"
+  },
+  "sv10-173": {
+    "profile": "modernTrainer",
+    "effect": "trFactory"
+  },
+  "sv10-174": {
+    "profile": "modernTrainer",
+    "effect": "trGiovanni"
+  },
+  "sv10-176": {
+    "profile": "modernTrainer",
+    "effect": "trPetrel"
+  },
+  "sv10-177": {
+    "profile": "modernTrainer",
+    "effect": "trProton"
+  },
+  "sv10-178": {
+    "profile": "modernTrainer",
+    "effect": "trTransceiver"
+  },
+  "me1-114": {
+    "profile": "modernTrainer",
+    "effect": "bossOrders",
+    "subtitle": "ghetsis"
+  },
+  "me1-116": {
+    "profile": "modernTrainer",
+    "effect": "fightingGong"
+  },
+  "me1-119": {
+    "profile": "modernTrainer",
+    "effect": "lilliesDetermination"
+  },
+  "me1-121": {
+    "profile": "modernTrainer",
+    "effect": "megaSignal"
+  },
+  "me1-122": {
+    "profile": "modernTrainer",
+    "effect": "mysteryGarden"
+  },
+  "me1-124": {
+    "profile": "modernTrainer",
+    "effect": "premiumPowerPro"
+  },
+  "me1-127": {
+    "profile": "modernTrainer",
+    "effect": "riskyRuins"
+  },
+  "me1-129": {
+    "profile": "modernTrainer",
+    "effect": "surfingBeach"
+  },
+  "me1-132": {
+    "profile": "modernTrainer",
+    "effect": "wallysCompassion"
+  },
+  "me2-87": {
+    "profile": "modernTrainer",
+    "effect": "dawn"
+  },
+  "me2-90": {
+    "profile": "modernTrainer",
+    "effect": "grimsleysMove"
+  },
+  "me2-94": {
+    "profile": "modernTrainer",
+    "effect": "wondrousPatch"
+  },
+  "me2pt5-190": {
+    "profile": "modernTrainer",
+    "effect": "irisFightingSpirit"
+  },
+  "me55-127": {
+    "profile": "modernTrainer",
+    "effect": "switch"
+  },
+  "me3-76": {
+    "profile": "modernTrainer",
+    "effect": "judge"
+  },
+  "sve-1": {
+    "profile": "sveEnergy"
+  },
+  "sve-4": {
+    "profile": "sveEnergy"
+  },
+  "sve-5": {
+    "profile": "sveEnergy"
+  },
+  "sve-6": {
+    "profile": "sveEnergy"
+  },
+  "sve-7": {
+    "profile": "sveEnergy"
+  },
+  "sve-8": {
+    "profile": "sveEnergy"
+  }
+}

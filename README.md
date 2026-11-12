@@ -6,14 +6,14 @@
 
 <p align="center">
   Learn the Pokémon Trading Card Game by playing it: 109 real decks, an AI opponent, and a coach that explains every move.<br>
-  In English, Turkish, Japanese and Spanish. Runs in the browser or as a macOS app, and works offline.
+  In English, Turkish, Japanese, Spanish, Simplified Chinese and Traditional Chinese. Runs in the browser or as a macOS app, and works offline.
 </p>
 
 <p align="center">
   <a href="https://github.com/f/pokemon-tcg/releases/latest"><img src="https://img.shields.io/github/v/release/f/pokemon-tcg?label=release&color=ffcb05" alt="Latest release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/f/pokemon-tcg?color=3c5aa6" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/macOS-11%2B%20·%20Apple%20Silicon-1d2a5a" alt="macOS 11+ on Apple Silicon">
-  <img src="https://img.shields.io/badge/languages-EN%20·%20TR%20·%20JA%20·%20ES-2a75bb" alt="Languages: English, Turkish, Japanese, Spanish">
+  <img src="https://img.shields.io/badge/languages-EN%20·%20TR%20·%20JA%20·%20ES%20·%20简%20·%20繁-2a75bb" alt="Languages: English, Turkish, Japanese, Spanish, Simplified Chinese, Traditional Chinese">
 </p>
 
 <p align="center">
@@ -72,7 +72,7 @@ npm start        # → http://localhost:8787
   - A guided tour walks you through the table, and the How to play page has a diagram of a real card.
 - **A table that feels like one.** Coins flip, damage dice roll and attacks play out in an anime-style arena. Prize cards spin as they are revealed, and Dan's Rock-Paper-Scissors becomes a shōnen-manga showdown.
 - **Drag and drop.** Pick up a card and only the places it can legally go light up.
-- **Four languages.** English, Türkçe, 日本語 and Español cover every screen, rule, card explanation and deck description.
+- **Six languages.** English, Türkçe, 日本語, Español, 简体中文 and 繁體中文 cover every screen, rule, card explanation and deck description.
 - **Offline.** The built-in CPU engine and local models need no internet. Your game is saved before every decision and resumes where you left off.
 - **macOS app.** The app has no title bar (drag the top bar to move the window). Your Jev API key stays in the macOS Keychain.
 
@@ -164,8 +164,10 @@ Games use 6 Prize cards and today's turn structure: the first player can't attac
 | Command | What it does |
 | --- | --- |
 | `npm start` | Web version at http://localhost:8787 |
-| `npm run images` | Downloads the card images (safe to re-run) |
+| `npm run images` | Downloads the card images and title-screen logos (safe to re-run) |
+| `node scripts/localize-card.mjs --help` | [Card image localization and cache](scripts/card-localization/README.md) |
 | `npm test` | Rules checks plus thousands of headless games on every deck |
+| `npm run test:i18n` | Translation keys, placeholders and locale selection |
 | `npm run test:rules` | Only the 257 hand-built rule checks (fast) |
 | `npm run test:kev` | 40 games against the local Kev model (port 8009) |
 | `npm run app:dev` | The macOS app in development mode |
@@ -176,15 +178,15 @@ Building the app needs [Rust](https://rustup.rs) and the Xcode Command Line Tool
 
 ### How it fits together
 
-The game is plain JavaScript ES modules with no framework: `public/` is the whole game, and the dev server runs it as is.
+The game uses plain JavaScript ES modules. `public/` contains the game and shared card renderer.
 - **Rules engine:** `public/engine.js` has no DOM code. The player's UI and the AI connect to it as controllers.
 - **Card rules by era:** a chain of engine files adds them, in this order: `engine-modern.js` → `engine-mega.js` → `engine-swsh.js` → `engine-swsh-v.js` → `engine-sm.js`.
-- **Backend:** `server.js` serves the files and answers the `/api` calls for engines and decisions.
+- **Backend** — `server.js` serves the game, engine APIs and card image manifests. Its `/api/card-image-resource` route fetches approved image sources.
 - **macOS app:** a [Tauri 2](https://tauri.app) shell around the same files. `src-tauri/src/main.rs` answers the same `/api` calls through `invoke`, keeps the Jev key in the Keychain and runs the local model server.
 - **Hosted web version:** `scripts/build-web.mjs` builds the same files into `site/play/` and marks the page with
   `<meta name="tcg-build" content="web">`. With that marker `api.js` answers locally with the CPU engine and never calls a server, and
   Settings points to the macOS app for Kev and Jev. The build also bundles the modules (esbuild), the classic decks and the icons, so a
-  static host gets few requests, and points the card images at the public card image CDN. The landing page is in `web/`.
+  static host gets few requests, and points the English card images at the public card image CDN. Both app builds generate the card image manifests under `card-image/data/`. The landing page is in `web/`.
 
 One codebase, three targets: a change in `public/` reaches the dev server, the app and the hosted version on their next build.
 
@@ -193,14 +195,17 @@ One codebase, three targets: a change in `public/` reaches the dev server, the a
 | `public/engine*.js` | Rules engine and card effects for each era |
 | `public/ai.js` | Gary's controller: the CPU engine, and the state and questions sent to a decision model |
 | `public/ui.js` | Board, hand, move list, coach, animations and Settings |
+| `public/card-image/` | Card image selection, rendering, request cancellation and browser cache |
+| `scripts/card-localization/` | Card image recipes, approved sources, manifest generation and the CLI renderer |
 | `public/rps.js` | The anime-style Rock-Paper-Scissors stage for Dan |
-| `public/i18n.js`, `public/i18n/*.js` | `t()` and every string in four languages, including the How to play pages |
+| `public/i18n.js`, `public/i18n/*.js` | `t()` and every string in six languages, including the How to play pages |
 | `public/api.js` | Backend calls: `fetch` with the dev server, Tauri `invoke` in the app, nothing in the hosted web build (CPU only) |
 | `public/data/decks/` | One folder per deck with its `cards.json`, plus `index.json` (deck order and groups) |
 | `public/vendor/` | Local copies of the icons and fonts, for offline play |
 | `server.js` | Static server, engine switching and the local model process |
 | `src-tauri/` | The macOS app: window without a title bar, engines, Keychain, local models, icons |
-| `web/` | The landing page (four languages), `robots.txt`, `sitemap.xml`, the 404 page and the Spacefast settings (`sf.jsonc`) |
+| `src-tauri/src/card_images.rs` | Tauri command that fetches approved localized card image resources |
+| `web/` | The landing page (six languages), `robots.txt`, `sitemap.xml`, the 404 page and the Spacefast settings (`sf.jsonc`) |
 | `scripts/` | Image download and WebP conversion, the `dist/` and `site/` builds, the DMG and the app icon |
 | `tests/` | Headless rules checks, prize counts, card coverage, save/restore, stalled-game and model tests |
 
@@ -219,18 +224,22 @@ Add a folder, list it in `index.json`, run `npm run images`, then `npm test`. Th
 Issues and pull requests are welcome: bug reports with the deck and the turn, card rules that don't work as printed, new decks and translation fixes.
 
 - Run `npm test` before you open a pull request. Add a rule check in `tests/rules.mjs` for a card you fix or add.
-- UI text goes through `t()`. Add new keys to all four files in `public/i18n/` (English, Turkish, Japanese and Spanish).
+- UI text goes through `t()`. Add new keys to all six files in `public/i18n/` (English, Turkish, Japanese, Spanish, Simplified Chinese and Traditional Chinese). Preserve placeholders such as `{n}`. Display names live in `public/content-i18n/`. Prefer the matching printed name in the locale, then a documented equivalent. Spanish follows Spain's card printings. Turkish uses published franchise terms for matching names. Both catalogs translate from English where a documented equivalent is unavailable. Include the original title in parentheses for Turkish deck names and for project-translated Spanish deck names. Card numbers can differ across releases, so confirm the card's battle data and effect when comparing releases. Entries absent from a locale's catalog fall back to English. Use a card ID override for a specific printing and pass entity references in action labels and logs. Run `npm run test:i18n` to check placeholders, name keys and content name rendering.
+- Chinese terminology depends on context: a constructed deck is **卡组 / 牌組**, while the in-play draw pile is **牌库 / 牌庫** (including drawing, searching, shuffling back, and an empty draw pile). Keep these contexts separate in both translations. Sources checked on 2026-11-10: [Simplified Chinese area definitions](https://www.pokemon.cn/tcg-rules-howtoplay?pageName=basic_rules03/) and [Traditional Chinese area definitions](https://asia.pokemon-card.com/tw/rules/howtoplay/basic_rules03/). Use **抗性 / 抵抗力** for Resistance, **招式 / 招式** for attacks, and **奖赏卡 / 獎賞卡** for Prize cards. The effect explanations describe this game's rules in plain language; they are not verbatim official Chinese card text. Check official card text and errata separately before introducing translated proper names.
 - Don't commit card images, `.env` or `decision.json`. They are git-ignored.
+- Chinese typography uses bundled **LXGW 975 Yuan SC** (body 400 / display 700) and **Chiron GoRound TC** (body 400 / display 800). Keep component fonts on `--font-body` / `--font-display` in the game, and `--text` / `--display` on the landing page. Latin characters retain Nunito / Baloo 2. The full WOFF2 character sets and OFL licenses in `public/vendor/fonts/chinese/` are copied into both web and desktop builds; no font CDN or system font installation is needed. See that directory's README and manifest for sources and conversion details.
 
 ## Credits
 
 - **Card data and images:** the [Pokémon TCG API](https://pokemontcg.io) dataset ([PokemonTCG/pokemon-tcg-data](https://github.com/PokemonTCG/pokemon-tcg-data)), plus four promo cards from [TCGdex](https://tcgdex.dev).
 - **Decklists:** Bulbapedia, and [Coded Yellow](https://www.codedyellow.com/30th-celebration-battle-decks-espeon-umbreon/) for the 30th Celebration decks.
 - **Decision models:** [Kev](https://github.com/jaredpalmer/kev) and [Laya](https://huggingface.co/convaiinnovations/laya).
-- **Icons and fonts:** [Lucide](https://lucide.dev) icons (ISC), [Pokémon type icons by duiker101](https://github.com/duiker101/pokemon-type-svg-icons) (MIT), and the fonts Baloo 2, Nunito and Dela Gothic One (SIL OFL).
+- **Icons and fonts:** [Lucide](https://lucide.dev) icons (ISC), [Pokémon type icons by duiker101](https://github.com/duiker101/pokemon-type-svg-icons) (MIT), and the fonts Baloo 2, Nunito, Dela Gothic One, [LXGW 975 Yuan SC](https://github.com/lxgw/975Yuan) and [Chiron GoRound TC](https://github.com/chiron-fonts/chiron-go-round-tc) (SIL OFL).
 
 ## License
 
 The code is [MIT](LICENSE) licensed. See [NOTICE](NOTICE) for the third-party assets.
 
-Pokémon, the Pokémon logo, card names, card text and card images are © Nintendo / Creatures / GAME FREAK / The Pokémon Company. This is a fan-made, non-commercial learning tool, not affiliated with or endorsed by them. The repository doesn't contain the card or logo image files (the screenshots in `docs/` show them in play). `npm run images` downloads them from the public Pokémon TCG API image service.
+Pokémon, the Pokémon logo, card names, card text and card images are © Nintendo / Creatures / GAME FREAK / The Pokémon Company. This is a fan-made, non-commercial learning tool, not affiliated with or endorsed by them. `npm run images` downloads card images and related assets from the sources listed in `scripts/fetch-images.mjs`.
+
+The [English](https://images.pokemontcg.io/base1/logo.png), [Simplified Chinese](https://www.pokemon.cn/tcg-home), [Traditional Chinese](https://asia.pokemon-card.com/hk/archive/common/assets_c/2020/10/CH-TCG_logo-thumb-650xauto-15381.png) and [Spanish](https://commons.wikimedia.org/wiki/File:Pokemon_Juego_de_Cartas_Coleccionables.svg) title-screen logos are downloaded by `npm run images` into the ignored `public/img/` paths. Desktop and web builds copy the available files. The title screen uses the English logo when a localized logo is unavailable, including for Japanese and Turkish. The Spanish artwork matches the wordmark used in the [official rulebook](https://assets.pokemon.com/assets/cms2-es-es/pdf/trading-card-game/rulebook/sm2-rulebook-es.pdf). Its display compensates for transparent margins in the original SVG.

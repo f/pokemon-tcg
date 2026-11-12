@@ -1,0 +1,740 @@
+{
+  "version": 1,
+  "cards": {
+    "me1-114": [
+      {"printing": "CSVH1aC-023", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSVH1a_023.png", "width": 868, "height": 1207, "sha256": "e16a2314a36d2c4cc8dedbe5c3afa4ffe49aa7133a5d4c16413cd84622ce93a8"}
+    ],
+    "me1-130": [
+      {"printing": "SV-P-359", "page": "https://www.pokemon.cn/tcg/product/22850.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "4b580845ab579ff793edf1c28feb47834d41838d9239938b437fd0299bd3a1e2", "path": "/wp-content/uploads/2026/10/20261016105552539.png"}
+    ],
+    "me1-131": [
+      {"printing": "SV-P-358", "page": "https://www.pokemon.cn/tcg/product/22850.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "a3bbab938faf5ba854a6f181bb611482ab255ba32c225fbdc54803d36204f2af", "path": "/wp-content/uploads/2026/10/20261016105547107.png"}
+    ],
+    "me2pt5-184": [
+      {"printing": "CSV9.5C-167", "page": "https://wiki.52poke.com/wiki/File:CSV9.5C167.png", "site": "神奇宝贝百科", "width": 866, "height": 1206, "sha256": "b84cd6a6fec999b905da027ad4d522d5b62c45395cb5e2a3a0a9dec777f3270b", "url": "https://media.52poke.com/wiki/4/4a/CSV9.5C167.png"}
+    ],
+    "me2pt5-196": [
+      {"printing": "CSVH6aC-011", "page": "https://www.pokemon.cn/tcg/product/23939.html", "path": "/wp-content/uploads/2026/09/20260921114522552.png", "width": 868, "height": 1212, "sha256": "a354d42cfd43ba3aa3208bf47d21c44fca29023987ed936eb2fa0344491836be"}
+    ],
+    "me55-100": [
+      {"printing": "30thC-079", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "72ab6a0d7527470303070c422d7fd9b643ec0b7be4591964bc8e0da89ca20f21", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/qelt2ysv303vaf8-30th_079_433wopt3wq-d31df61ca0eb.webp"},
+      {"printing": "30thC-079", "page": "https://wiki.52poke.com/wiki/File:30thC079.png", "url": "https://media.52poke.com/wiki/2/24/30thC079.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "6ba3501ae9fa148c9c5f35629606c103796f4c340d498de5c939d128091abd1d"}
+    ],
+    "me55-106": [
+      {"printing": "30thC-085", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "6fb0368c6344e78e154e4e9530f3781bf00f2217aa5d1c452ae152df2a0d4e92", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/yf5g9ojej7ccdgz-30th_085_89bjnmdwq9-ade1bebdb785.webp"},
+      {"printing": "30thC-085", "page": "https://wiki.52poke.com/wiki/File:30thC085.png", "url": "https://media.52poke.com/wiki/7/75/30thC085.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "472fb79c857ed143222c90305ad261b8a0c6bc5db4c8df16c0f165d002833930"}
+    ],
+    "me55-11": [
+      {"printing": "30thC-006", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "4cce091cfa01f431cb0f80283c05865c1ca48ec429f46cdf0f287108c1671985", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/w9ibhkh78ve84rl-30th_006_r5z24faxjl-07874133acb4.webp"},
+      {"printing": "30thC-006", "page": "https://wiki.52poke.com/wiki/File:30thC006.png", "url": "https://media.52poke.com/wiki/a/a5/30thC006.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c3915c3bb1c7936d13492b1bdafe43b3769a07d322b713829c56bc92d77edcd4"}
+    ],
+    "me55-116": [
+      {"printing": "30thC-094", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "f238a24646b73e7216faa93cd7bdc8b695f2385583b21ed72db80bf49a7f074e", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/cpg12ay5c282z73-30th_094_zlc00p2jsc-74b1675cfb07.webp"},
+      {"printing": "30thC-094", "page": "https://wiki.52poke.com/wiki/File:30thC094.png", "url": "https://media.52poke.com/wiki/a/ae/30thC094.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "b2814f80a8f7ee4d73b31bd6932218d93fecc1ea50881e993b7bbd76d1376659"}
+    ],
+    "me55-126": [
+      {"printing": "30thC-102", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "32494504f688dca8cfc2dc0cd4e1cb8f603e3dc713f88450019a1808c2e1482b", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/utq9f7yd7lh2pmr-30th_102_s1snf8ltwk-9c84af8d04af.webp"},
+      {"printing": "30thC-102", "page": "https://wiki.52poke.com/wiki/File:30thC102.png", "url": "https://media.52poke.com/wiki/d/d1/30thC102.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "6159378a84bcb8ffc3bac13ca0a33f945310960b0f21ff1a3c82c90135dfa870"}
+    ],
+    "me55-127": [
+      {"printing": "30thC-103", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "60d98a45fde5ac5ac4973c569335755da5200aaafe7c2ac21018176b8178d0b6", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/f3ppcprv9jlz5ni-30th_103_wolr3auesn-425317ce374b.webp"}
+    ],
+    "me55-128": [
+      {"printing": "30thC-101", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "1879a3e97632150100d73443f94845b17b5c149111e9156a1bd4e6c06825ae90", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/s90flv15g9j50x3-30th_101_rkrei3g0um-7d3012a48eb4.webp"}
+    ],
+    "me55-60": [
+      {"printing": "30thC-051", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "572d6ca07077ba467d07e04aeccb5f5456d1ebd2a332ce694052f587d73d4020", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/pcq7ttmrjumva7p-30th_051_xum3si9o49-f3f88895dbb0.webp"},
+      {"printing": "30thC-051", "page": "https://wiki.52poke.com/wiki/File:30thC051.png", "url": "https://media.52poke.com/wiki/9/94/30thC051.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c46ea64cbe88dcf77cbe4a4e4ecd5b8715b8c794bb00dd985c9ac6ffdac8ddf8"}
+    ],
+    "me55-70": [
+      {"printing": "30thDC-014", "page": "https://www.pokemon.cn/tcg/product/21608.html", "path": "/wp-content/uploads/2026/09/20260826105407160.png", "width": 868, "height": 1212, "sha256": "259579b616483fcc4aee1d2309da4e8467c44bdb460ed9b2055385b8b2718e26"}
+    ],
+    "me55-92": [
+      {"printing": "30thDC-017", "page": "https://www.pokemon.cn/tcg/product/21608.html", "path": "/wp-content/uploads/2026/09/20260826105411609.png", "width": 868, "height": 1212, "sha256": "71af28afb00e5aa424fbba66fee8ec9bffdcf90ea7c83a17b489bb09ffc51501"}
+    ],
+    "sm1-122": [
+      {"printing": "CSM1bC-143", "page": "https://www.pokemon.cn/tcg/product/16363.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "ffec6cfb8d2c1c291e829e931bb0f377af78c8a19fe2286c9a8fddc0b271e873", "path": "/wp-content/uploads/2025/09/f1481403db365366e4a6d990511217027490c36b.png"}
+    ],
+    "sm1-123": [
+      {"printing": "CSM2DC-256", "page": "https://wiki.52poke.com/wiki/File:CSM2DC256.png", "url": "https://media.52poke.com/wiki/9/92/CSM2DC256.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "3781419aceb32ee44a669897fe8af23f531167e5987445fa348feca7046b41ec"}
+    ],
+    "sm1-127": [
+      {"printing": "CSM1DC-237", "page": "https://wiki.52poke.com/wiki/File:CSM1DC237.png", "url": "https://media.52poke.com/wiki/8/8d/CSM1DC237.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "65ad1ee2bff0eec613354b0c2fd4349baf0d167de8b42d7d6ade3f2a89e3d420"}
+    ],
+    "sm1-128": [
+      {"printing": "CSM1cC-139", "page": "https://wiki.52poke.com/wiki/File:CSM1cC139.png", "url": "https://media.52poke.com/wiki/2/20/CSM1cC139.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "b20ea296b7d0941ccd099b8aff1e8b70b016244c044b2b418e02a22336629295"}
+    ],
+    "sm1-132": [
+      {"printing": "CSM1DC-257", "page": "https://wiki.52poke.com/wiki/File:CSM1DC257.png", "url": "https://media.52poke.com/wiki/b/bc/CSM1DC257.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "780ee650ea03a2a1591428af75535ccc4f31146c6942c37247c8c9abe844b40e"}
+    ],
+    "sm1-162": [
+      {"printing": "CSM2.1C-041", "page": "https://www.pokemon.cn/tcg/product/16139.html", "path": "/wp-content/uploads/2025/09/7fa70d84561347921ccebe15d960297f1778ad6d.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "06e178881db0b2e9a8031a770ae89a9039ad63b92083beb82bc529ef92485e19"}
+    ],
+    "sm1-64": [
+      {"printing": "CSM1aC-055", "page": "https://www.pokemon.cn/tcg/product/16363.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "6a09fa747fcdf1ee304bd5e3eddacf757e6c9644103daa3b0004352ebaa7cfdb", "path": "/wp-content/uploads/2025/09/5fd1cbc150c0384538d2e13ffef1ee0be539b283.png"},
+      {"printing": "CSM1aC-055", "page": "https://wiki.52poke.com/wiki/File:CSM1aC055.png", "url": "https://media.52poke.com/wiki/5/59/CSM1aC055.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "646e13cae45cdd7dd12b4efdd662130abb03d76b394734766577b02259ed3da0"}
+    ],
+    "sm1-65": [
+      {"printing": "CSMLC-002", "page": "https://www.pokemon.cn/tcg/product/16363.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "3601131d0068444b70f099c49ae39a64e2f76d70f6127596ed413aa4a607f82a", "path": "/wp-content/uploads/2025/09/bba73f84f9de8fdbaa6b634b5f1f36539c2e11fb.png"},
+      {"printing": "CSMLC-002", "page": "https://wiki.52poke.com/wiki/File:CSMLC002.png", "url": "https://media.52poke.com/wiki/3/3f/CSMLC002.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "352e926eba3e01c466e8c6880811a1b650e9fa7999ff87ebe4267760db115cbf"}
+    ],
+    "sm10-189": [
+      {"printing": "CSM2cC-145", "page": "https://www.pokemon.cn/tcg/product/16336.html", "path": "/wp-content/uploads/2025/09/4df3ce940c8bdec7afb0bcb54506acf8baf9d943.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "77366a6a1d09d661c077566ba7726bae771c602fe533e0403b761a1427094439"},
+      {"printing": "CSM2cC-145", "page": "https://wiki.52poke.com/wiki/File:CSM2cC145.png", "url": "https://media.52poke.com/wiki/f/f0/CSM2cC145.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "77366a6a1d09d661c077566ba7726bae771c602fe533e0403b761a1427094439"}
+    ],
+    "sm12-156": [
+      {"printing": "sm12-156", "page": "https://www.pokemon.cn/tcg/product/16312.html", "width": 868, "height": 1212, "sha256": "dd2374ab9423498e6bd92e9828572e196156cffc5fffbbb1e8553f5cdbaeb4ad", "site": "简中官网", "path": "/wp-content/uploads/2025/11/20251127110928908.png"},
+      {"printing": "CSMAC-001", "page": "https://wiki.52poke.com/wiki/File:CSMAC001.png", "url": "https://media.52poke.com/wiki/8/82/CSMAC001.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "a9a03ce565699d97edc2972da75e857a0efc07e729de9f63f7f72976d485277c"}
+    ],
+    "sm12-192": [
+      {"printing": "CSM2.5C-045", "page": "https://www.pokemon.cn/tcg/product/16318.html", "path": "/wp-content/uploads/2025/09/84dbbcbacc5cfc7005985066a235663d91d8e945.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "bf06935da40a8078418e89dd3242f679a6fcae9945519b800e1e45240ed5819f"},
+      {"printing": "CSM2.5C-045", "page": "https://wiki.52poke.com/wiki/File:CSM2.5C045.png", "url": "https://media.52poke.com/wiki/4/4b/CSM2.5C045.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "bf06935da40a8078418e89dd3242f679a6fcae9945519b800e1e45240ed5819f"}
+    ],
+    "sm12-193": [
+      {"printing": "CSM2bC-138/150 U", "page": "https://www.pokemon.cn/tcg/other/17197.html", "width": 868, "height": 1212, "sha256": "59fa113de558c648f6b75e6bcc10d7f69082cddc9607b15b6e4e4d069e90c760", "site": "简中官网", "path": "/wp-content/uploads/2025/09/944196a222565db36f966426aacf435a53028c6d.png"},
+      {"printing": "CSM2bC-138", "page": "https://wiki.52poke.com/wiki/File:CSM2bC138.png", "url": "https://media.52poke.com/wiki/1/1e/CSM2bC138.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "59fa113de558c648f6b75e6bcc10d7f69082cddc9607b15b6e4e4d069e90c760"}
+    ],
+    "sm12-198": [
+      {"printing": "CSM2DC-322", "page": "https://www.pokemon.cn/tcg/product/16336.html", "path": "/wp-content/uploads/2025/09/19c5f7b8cd3fbf9d5b7380174e67b94a1810a09a.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "e08428995a60d955dbfdcf6ddccc7420333b001613ec53840e31e82a8e35bcbb"},
+      {"printing": "CSM2DC-322", "page": "https://wiki.52poke.com/wiki/File:CSM2DC322.png", "url": "https://media.52poke.com/wiki/a/a4/CSM2DC322.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "42badf49c813b02bf82e8eb6a406b402de5fc79231368c2cc0bb88bf0332f12e"},
+      {"printing": "CSM2aC-147", "page": "https://wiki.52poke.com/wiki/File:CSM2aC147.png", "url": "https://media.52poke.com/wiki/b/b0/CSM2aC147.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "4dfbad86dc730b7b3b5742dd59bb28e6c930c48f13e049ac9827ea871b383202"}
+    ],
+    "sm12-206": [
+      {"printing": "sm12-206", "page": "https://www.pokemon.cn/tcg/product/16312.html", "width": 868, "height": 1207, "sha256": "a9c2201e62bca964548077d18798c351cc0434d225928547515f73ac3d1e5d23", "site": "简中官网", "path": "/wp-content/uploads/2025/11/20251127111006619.png"},
+      {"printing": "CSMAC-004", "page": "https://wiki.52poke.com/wiki/File:CSMAC004.png", "url": "https://media.52poke.com/wiki/3/3b/CSMAC004.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "ce459f91ac2538c7ccd19374f28dde5cb1ee3532741ed1113850bd32290ea613"}
+    ],
+    "sm2-119": [
+      {"printing": "CSM1cC-118", "page": "https://wiki.52poke.com/wiki/File:CSM1cC118.png", "url": "https://media.52poke.com/wiki/f/f0/CSM1cC118.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "35e6918cdfe0352d0a2d7745d2a40d2396dacfc17a12da492a061aa78509ac8c"}
+    ],
+    "sm2-120": [
+      {"printing": "CSM1cC-146", "page": "https://www.pokemon.cn/tcg/product/16378.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "35c43599c58378204165622606c5c0f2a7b5ec1397d43e8db278eba768481e1a", "path": "/wp-content/uploads/2025/09/62c1493ab14cf7b1729441280887149f0d0c582b.png"},
+      {"printing": "CSM1cC-146", "page": "https://wiki.52poke.com/wiki/File:CSM1cC146.png", "url": "https://media.52poke.com/wiki/a/a2/CSM1cC146.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "35c43599c58378204165622606c5c0f2a7b5ec1397d43e8db278eba768481e1a"}
+    ],
+    "sm2-125": [
+      {"printing": "sm2-125", "page": "https://www.pokemon.cn/tcg/product/16312.html", "width": 868, "height": 1207, "sha256": "51e1dcfcfa379020cf44bef81ec6cba45a37f0369444f58b50b7294bfa6feb20", "site": "简中官网", "path": "/wp-content/uploads/2025/11/20251127111010236.png"},
+      {"printing": "CSMAC-006", "page": "https://wiki.52poke.com/wiki/File:CSMAC006.png", "url": "https://media.52poke.com/wiki/c/c8/CSMAC006.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "edc7d6407a182178d6465a3daab240aa56e70e1773b3e6f0f3a03b1066c144e2"}
+    ],
+    "sm2-169": [
+      {"printing": "CSM2.1C-042", "page": "https://www.pokemon.cn/tcg/product/16139.html", "path": "/wp-content/uploads/2025/09/5bdcb1da16743a227ca5cf4e3b11077441468507.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "f41f2fdcf4e0b64f0e1a674158c54ce90e1eecdb46c33344e7ba24f8ea553d42"}
+    ],
+    "sm2-58": [
+      {"printing": "CSM1.5C-014", "page": "https://wiki.52poke.com/wiki/File:CSM1.5C014.png", "url": "https://media.52poke.com/wiki/1/10/CSM1.5C014.png", "site": "神奇宝贝百科", "width": 868, "height": 1213, "sha256": "4fd129c728abdf8e2dfbf453c650e53de33b4c2a3a6e0e57b6312a9d91194976"}
+    ],
+    "sm2-59": [
+      {"printing": "CSM1.5C-015", "page": "https://wiki.52poke.com/wiki/File:CSM1.5C015.png", "url": "https://media.52poke.com/wiki/d/d6/CSM1.5C015.png", "site": "神奇宝贝百科", "width": 868, "height": 1213, "sha256": "1d924c708386ffe094a285500c857f6357afc088db99afef7b44aa381963be38"}
+    ],
+    "sm3-112": [
+      {"printing": "CSM1cC-137", "page": "https://www.pokemon.cn/tcg/product/16378.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "edf56558f43583346217373304c972e66f6fd2071e4ed78df8d5939e26aa53dc", "path": "/wp-content/uploads/2025/09/92c1a1a6ed998b24f4d51d869a3a206fe25dfb53.png"},
+      {"printing": "CSM1cC-137", "page": "https://wiki.52poke.com/wiki/File:CSM1cC137.png", "url": "https://media.52poke.com/wiki/9/9e/CSM1cC137.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "edf56558f43583346217373304c972e66f6fd2071e4ed78df8d5939e26aa53dc"}
+    ],
+    "sm3-114": [
+      {"printing": "CSM1cC-119", "page": "https://wiki.52poke.com/wiki/File:CSM1cC119.png", "url": "https://media.52poke.com/wiki/c/c7/CSM1cC119.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "ff089a69e72c097deaac5b98d369911d9f1675d5dd0a1b82657693b6a8ffe88e"}
+    ],
+    "sm3-115": [
+      {"printing": "sm3-115", "page": "https://www.pokemon.cn/tcg/product/16312.html", "width": 868, "height": 1207, "sha256": "1eb9ff44f21606b68a8fde64e0ab0749c0e938b2f3824d022f9929298ad23772", "site": "简中官网", "path": "/wp-content/uploads/2025/11/20251127110938765.png"},
+      {"printing": "CSM1aC-138", "page": "https://wiki.52poke.com/wiki/File:CSM1aC138.png", "url": "https://media.52poke.com/wiki/d/dd/CSM1aC138.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "73297b350132cc168b022ad5fe76acd61b14816dd41eddc916d51e8816b13324"}
+    ],
+    "sm3-167": [
+      {"printing": "CSM2.1C-038", "page": "https://www.pokemon.cn/tcg/product/16139.html", "path": "/wp-content/uploads/2025/09/64b4bbfd3e8413611613f56c65f2cae9d076a99c.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "4251bcbaf15e74c29bdaefd39fe1e8422204817b1575211a83b9ca8395e0abe7"}
+    ],
+    "sm5-119": [
+      {"printing": "sm5-119", "page": "https://www.pokemon.cn/tcg/product/16377.html", "width": 1832, "height": 2560, "sha256": "e13cde8d5600152eb09bfa237394b2ad17109abd0b21e74a07fb0bb4c52632a6", "site": "简中官网", "path": "/wp-content/uploads/2025/09/c861293d940e290a2455a5dce7fb4a580557821c-scaled.png"},
+      {"printing": "CSM1cC-141", "page": "https://wiki.52poke.com/wiki/File:CSM1cC141.png", "url": "https://media.52poke.com/wiki/6/61/CSM1cC141.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "ee0d5e26436c37fc921f305effbd191c8dd56ef8f3c511efb42c9dbc7ac61036"}
+    ],
+    "sm6-51": [
+      {"printing": "CSM1aC-049", "page": "https://wiki.52poke.com/wiki/File:CSM1aC049.png", "url": "https://media.52poke.com/wiki/0/06/CSM1aC049.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "bc3b481637724802e7acd7d361143f2f62b59f4af7a9b5715845dfb01b00824b"}
+    ],
+    "sm7-127": [
+      {"printing": "CSM1bC-141", "page": "https://wiki.52poke.com/wiki/File:CSM1bC141.png", "url": "https://media.52poke.com/wiki/8/80/CSM1bC141.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "2b188b9bc0886b4f9525888687c84d6fce1aa6861f68022209e96ce4c3bb9567"}
+    ],
+    "sm8-108": [
+      {"printing": "CSM1aC-062", "page": "https://wiki.52poke.com/wiki/File:CSM1aC062.png", "url": "https://media.52poke.com/wiki/0/00/CSM1aC062.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "0c55275f617d2ecd9cb5d514a28c8b7e7a397e9efa2c9d882c7d252dddbbd13f"}
+    ],
+    "sm9-156": [
+      {"printing": "CSM2aC-149", "page": "https://wiki.52poke.com/wiki/File:CSM2aC149.png", "url": "https://media.52poke.com/wiki/9/9d/CSM2aC149.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "755ef0f79d1c3450fe892246a47018bcb42fc14d036011a7b5e07de5975e17e5"}
+    ],
+    "sm9-99": [
+      {"printing": "CSM1aC-077", "page": "https://wiki.52poke.com/wiki/File:CSM1aC077.png", "url": "https://media.52poke.com/wiki/5/5c/CSM1aC077.png", "site": "神奇宝贝百科", "width": 868, "height": 1213, "sha256": "b3ed497d96a97f21df8949a65cc1d27fabd2caa5e4fe92788fa6895a21d1c566"}
+    ],
+    "sv1-109": [
+      {"printing": "CSVE2C-074", "page": "https://www.pokemon.cn/tcg/product/15463.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "3505f63bb72e52973f65afddf0e84b75ee4ee54050efd74a3606f9469eb5a6de", "path": "/wp-content/uploads/2025/09/CSVE2_074.png"}
+    ],
+    "sv1-153": [
+      {"printing": "CSVH2aC-006", "page": "https://wiki.52poke.com/wiki/File:CSVH2aC006.png", "url": "https://media.52poke.com/wiki/5/5e/CSVH2aC006.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f2ea16903824986ad74d9939bc1d727f4637603f7709fa41aa82bb1bb67bfbaf"}
+    ],
+    "sv1-166": [
+      {"printing": "CSVM1cC-025", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC025.png", "url": "https://media.52poke.com/wiki/9/9a/CSVM1cC025.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f58cf2574c580f55d8b0f435b27dd0db3e7fcac83af54af5d5d67da6a01ed274"}
+    ],
+    "sv1-167": [
+      {"printing": "CSV4C-127", "page": "https://www.pokemon.cn/tcg/product/15482.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "76e4f82a38ff02f1f326b18c3ff2a1b8a984ceea9c3dcb97db9421ab98495c2a", "path": "/wp-content/uploads/2025/09/5fda11243dd45f590df3f906975da2c4b6c8857c.png"},
+      {"printing": "CSV4C-127", "page": "https://wiki.52poke.com/wiki/File:CSV4C127.png", "url": "https://media.52poke.com/wiki/d/d8/CSV4C127.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "76e4f82a38ff02f1f326b18c3ff2a1b8a984ceea9c3dcb97db9421ab98495c2a"}
+    ],
+    "sv1-169": [
+      {"printing": "sv1-169", "page": "https://www.pokemon.cn/tcg/product/15447.html", "width": 868, "height": 1212, "sha256": "ca078102308031d081b7b3f60433251ffc200910151ef6d10bbcee1b3cabad4e", "site": "简中官网", "path": "/wp-content/uploads/2025/11/20251126101352749.png"},
+      {"printing": "CSVH2aC-016", "page": "https://wiki.52poke.com/wiki/File:CSVH2aC016.png", "url": "https://media.52poke.com/wiki/9/92/CSVH2aC016.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "85da9eab496eebfc809c9160f950e2faf137f407b4836a57e639b49c200f95a9"}
+    ],
+    "sv1-170": [
+      {"printing": "CSV1C-107", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSV1_107.png", "width": 868, "height": 1212, "sha256": "b45331a573825776e0046a925a20e7777018fc7d6776ef6168d7d2cbe5543493"}
+    ],
+    "sv1-172": [
+      {"printing": "SV-P-355", "page": "https://www.pokemon.cn/tcg/product/22850.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "3adfd040774c3d5e9fe0ce224ad7ae74751ed68cd21c866daa76bcf6fb5c023f", "path": "/wp-content/uploads/2026/10/20261016105532287.png"}
+    ],
+    "sv1-174": [
+      {"printing": "CSVH1aC-014", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSVH1a_014.png", "width": 868, "height": 1207, "sha256": "5e3fe6167e3f3c299b254a3a4db9d4193423ae33abcfa47168265daacc650b87"}
+    ],
+    "sv1-176": [
+      {"printing": "CSVM1cC-022", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC022.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "8e6d6954d33fb6782d535779a7231511cab3f2fcd1ce82ee83c3b0d26c813972", "url": "https://media.52poke.com/wiki/e/e3/CSVM1cC022.png"}
+    ],
+    "sv1-188": [
+      {"printing": "CSVH2C-040", "page": "https://www.pokemon.cn/tcg/product/15514.html", "path": "/wp-content/uploads/2025/09/CSVH2_040ai2.png", "width": 868, "height": 1212, "sha256": "22ffdb53374f63e470f8839f4d1005e8b3fc515c507f8e7bb26b367d58188d39"}
+    ],
+    "sv1-190": [
+      {"printing": "CSV1C-122", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSV1_122.png", "width": 868, "height": 1212, "sha256": "8ddc0d760875c1d6331fb2dd85147697e6c00b2ac09a05978a14547cfb16707a"}
+    ],
+    "sv1-194": [
+      {"printing": "SV-P-359", "page": "https://www.pokemon.cn/tcg/product/22850.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "4b580845ab579ff793edf1c28feb47834d41838d9239938b437fd0299bd3a1e2", "path": "/wp-content/uploads/2026/10/20261016105552539.png"}
+    ],
+    "sv1-196": [
+      {"printing": "SV-P-358", "page": "https://www.pokemon.cn/tcg/product/22850.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "a3bbab938faf5ba854a6f181bb611482ab255ba32c225fbdc54803d36204f2af", "path": "/wp-content/uploads/2026/10/20261016105547107.png"}
+    ],
+    "sv1-197": [
+      {"printing": "CSVH2C-050", "page": "https://wiki.52poke.com/wiki/File:CSVH2C050.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "d08c4c31078f32edb9b852b23bc11f7c7cb552d05ac0b58aaeb7e3145678194f", "url": "https://media.52poke.com/wiki/8/86/CSVH2C050.png"}
+    ],
+    "sv1-52": [
+      {"printing": "CSV1C-035", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSV1_035.png", "width": 868, "height": 1212, "sha256": "52456b076ff481e86a461439f223f14e4ec4a6af53d17af4369e43d1bc88e9df"}
+    ],
+    "sv1-54": [
+      {"printing": "CSV1C-037", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/09/229815a25a98ded9bac2ce9c05748c9a53ebfbaa.png", "width": 868, "height": 1212, "sha256": "ced5fd62cfe3407bc425a0250b0848a8962391b2c2084aa4a15fa71ef319cc0e"}
+    ],
+    "sv1-81": [
+      {"printing": "CSV1C-050", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSV1_050.png", "width": 868, "height": 1212, "sha256": "4674fb57ec98f239aba2675b1320fcad359bdbe07326549c572a61da5a35aeb6"}
+    ],
+    "sv1-86": [
+      {"printing": "CSV2C-055", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/09/2744bd005ee0a94090aa950b40f58ea053690a0d.png", "width": 868, "height": 1212, "sha256": "6d389d27b6af5bae031784c04ad2f68b4f629712892f1f35557c061bf7cc6f38"}
+    ],
+    "sv1-89": [
+      {"printing": "CSV2C-060", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/02/20251125162815568.png", "width": 868, "height": 1212, "sha256": "58919d94b36b9d73209d022d7fd35b07d58614828241221e4c5630850c354f12"}
+    ],
+    "sv10-120": [
+      {"printing": "CSV10C-128", "page": "https://wiki.52poke.com/wiki/File:CSV10C128.png", "url": "https://media.52poke.com/wiki/c/c6/CSV10C128.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "8c3d877a7cb365b64a31f39cc99a5cba593768c0151c3dc328e7d4e2ee0731b4"}
+    ],
+    "sv10-121": [
+      {"printing": "CSV10C-129", "page": "https://wiki.52poke.com/wiki/File:CSV10C129.png", "url": "https://media.52poke.com/wiki/d/da/CSV10C129.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "65728f16b8ab1947c86b217ee9a245a543e8e3688c5031416297884bd280943d"}
+    ],
+    "sv10-122": [
+      {"printing": "CSV10C-130", "page": "https://wiki.52poke.com/wiki/File:CSV10C130.png", "url": "https://media.52poke.com/wiki/a/a3/CSV10C130.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c938ed7303f137b269c0df4715e785c90180735b20c175bcce6e7332ee877042"}
+    ],
+    "sv10-145": [
+      {"printing": "CSV10C-155", "page": "https://wiki.52poke.com/wiki/File:CSV10C155.png", "url": "https://media.52poke.com/wiki/5/5b/CSV10C155.png", "site": "神奇宝贝百科", "width": 867, "height": 1210, "sha256": "e214e49b6c07b57c19756c7abd8e0c0387c158e21348ee2673bb46157c799eb5"}
+    ],
+    "sv10-20": [
+      {"printing": "CSVH6C-003", "page": "https://www.pokemon.cn/tcg/product/23939.html", "path": "/wp-content/uploads/2026/09/20260921114417488.png", "width": 868, "height": 1212, "sha256": "3e0d0ab0c5347b340c18754d0e369b96429960f3be038bde612041702527b06f"}
+    ],
+    "sv10-81": [
+      {"printing": "CSVH6C-016", "page": "https://www.pokemon.cn/tcg/product/23939.html", "path": "/wp-content/uploads/2026/09/20260921114438454.png", "width": 868, "height": 1212, "sha256": "ff349f807d5d143cdac1a58e2072fa4dd0079651989562613d0735f2eb648b67"}
+    ],
+    "sv10-87": [
+      {"printing": "CSV10C-095", "page": "https://wiki.52poke.com/wiki/File:CSV10C095.png", "url": "https://media.52poke.com/wiki/f/f5/CSV10C095.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "ff174a12c0ae373472fa0c1f4d58fa1201f4fe5ebad5cd5124c3feba8b7d5236"}
+    ],
+    "sv2-15": [
+      {"printing": "CSV2C-012", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/09/7a840c32523bca0dfccc9a55fc0a7d9e48f944b3.png", "width": 868, "height": 1212, "sha256": "e9b8a4da13d273f63ced9f54352ae72258356de0506560f3ddf7247bc6992b66"}
+    ],
+    "sv2-151": [
+      {"printing": "CSV3C-095", "page": "https://www.pokemon.cn/tcg/product/15519.html", "path": "/wp-content/uploads/2025/09/CSV3_095.png", "width": 868, "height": 1212, "sha256": "edd2850bddf8e7ab25d791d02509a527b7b6b22bf460bc63bdfb4cda703a2eea"}
+    ],
+    "sv2-171": [
+      {"printing": "CSV2C-127", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/09/9930b55203550ab5efa6defc9d87c2cdc435a42b.png", "width": 868, "height": 1212, "sha256": "0d7222457cb795556684e3882aaf3e3ef90f2243055cbb6817f8444d6bc14751"}
+    ],
+    "sv2-172": [
+      {"printing": "CSVH1aC-023", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSVH1a_023.png", "width": 868, "height": 1207, "sha256": "e16a2314a36d2c4cc8dedbe5c3afa4ffe49aa7133a5d4c16413cd84622ce93a8"}
+    ],
+    "sv2-173": [
+      {"printing": "CSV1C-118", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/09/4d766ee72123dcc36abecfed80ef5866434e9e95.png", "width": 868, "height": 1212, "sha256": "5459c285c5340a199ba9851f51bfcaa18fbde2c8e32d223ffca5abed15b85232"},
+      {"printing": "CSV1C-118", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSV1_118.png", "width": 868, "height": 1212, "sha256": "c9535cec05c3d38be839086f07ab95b721257d55870496bc4f343f41f596bc74"}
+    ],
+    "sv2-185": [
+      {"printing": "sv2-185", "page": "https://www.pokemon.cn/tcg/product/15514.html", "width": 868, "height": 1212, "sha256": "7c1c87f58fcf3e109380689e2af33708f7a0c7f19c202dd2e288b3fd4bd9df5b", "site": "简中官网", "path": "/wp-content/uploads/2025/09/CSVH2a_021.png"},
+      {"printing": "CSVH2aC-021", "page": "https://wiki.52poke.com/wiki/File:CSVH2aC021.png", "url": "https://media.52poke.com/wiki/d/d4/CSVH2aC021.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "b69b15a4da709ae0a663399fdec7ba96f1b9da93ffc18b62cb14a00a8c91fb55"},
+      {"printing": "CSVH4aC-021", "page": "https://wiki.52poke.com/wiki/File:CSVH4aC021.png", "url": "https://media.52poke.com/wiki/9/99/CSVH4aC021.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f55731c50a80882eb4f02deb203b4cbb322c820622cd247bbd92081ffbd04722"},
+      {"printing": "CSVM1cC-023", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC023.png", "url": "https://media.52poke.com/wiki/1/15/CSVM1cC023.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "b20d2af5b8313ab7be1800c2892df1c65072f58f6dee70a0bceca19469e26cbf"}
+    ],
+    "sv2-188": [
+      {"printing": "CSVH6C-032", "page": "https://www.pokemon.cn/tcg/product/23939.html", "path": "/wp-content/uploads/2026/09/20260921114452207.png", "width": 868, "height": 1212, "sha256": "05533e9dc620fdb477621d35064c7958cd3a9b0a1d1351b5c777831b2c2e12eb"}
+    ],
+    "sv2-52": [
+      {"printing": "CSV2C-033", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/02/20251125162953921.png", "width": 868, "height": 1212, "sha256": "6d9e884b86242d960b12718e8d1beb23955728c019bbf0ed3ca5fd8e31da3d24"}
+    ],
+    "sv2-57": [
+      {"printing": "CSV3C-040", "page": "https://wiki.52poke.com/wiki/File:CSV3C040.png", "url": "https://media.52poke.com/wiki/a/ab/CSV3C040.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "1b07a1dbea9865fd2b7bddd8c2a109e482882765ecbeb9a6ed1cd06cf2e96242"}
+    ],
+    "sv2-59": [
+      {"printing": "CSV3C-041", "page": "https://wiki.52poke.com/wiki/File:CSV3C041.png", "url": "https://media.52poke.com/wiki/b/bc/CSV3C041.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "5cc5a4e9eccbdd48bf78fa63e90f000bd79fd4cd7bb86784c48a227b827974d1"}
+    ],
+    "sv2-60": [
+      {"printing": "CSV3C-042", "page": "https://www.pokemon.cn/tcg/product/15514.html", "path": "/wp-content/uploads/2025/09/CSV3_042.png", "width": 868, "height": 1212, "sha256": "320d1ed4b02752944d6473f3dcbdc24452c50b60c740a3dc23c49b91556f0103"}
+    ],
+    "sv3-125": [
+      {"printing": "CSV5C-075", "page": "https://wiki.52poke.com/wiki/File:CSV5C075.png", "url": "https://media.52poke.com/wiki/a/ab/CSV5C075.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "9ea3b57aa7ceb2ba3bdc74f8624a7bc079d3ad310f2dc6143bd810b62c52d0dd"}
+    ],
+    "sv3-164": [
+      {"printing": "CSV4C-101", "page": "https://www.pokemon.cn/tcg/product/15482.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "acf97738548ee1def16ff0242e9d29717f9e5050f2074bbd775e507c699a0b2d", "path": "/wp-content/uploads/2025/09/2e781550f0f120ff6bdeebe91738e6c0d1bbcbc1.png"},
+      {"printing": "CSV4C-101", "page": "https://wiki.52poke.com/wiki/File:CSV4C101.png", "url": "https://media.52poke.com/wiki/f/f1/CSV4C101.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "acf97738548ee1def16ff0242e9d29717f9e5050f2074bbd775e507c699a0b2d"}
+    ],
+    "sv3-174": [
+      {"printing": "CSVH2aC-005", "page": "https://wiki.52poke.com/wiki/File:CSVH2aC005.png", "url": "https://media.52poke.com/wiki/9/91/CSVH2aC005.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f27ef25b5c9862d3e938ff233247b45f08f4dc9bbcfe66e17146633eed1fc2aa"}
+    ],
+    "sv3pt5-145": [
+      {"printing": "151C-145", "page": "https://wiki.52poke.com/wiki/File:151C145.png", "url": "https://media.52poke.com/wiki/4/46/151C145.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "73285504ed21ac741d1f2fc5963b97215d17f0066434c5caa9199186829ae661"}
+    ],
+    "sv3pt5-146": [
+      {"printing": "151C-146", "page": "https://wiki.52poke.com/wiki/File:151C146.png", "url": "https://media.52poke.com/wiki/b/be/151C146.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "6750331c09ac4278ec76a0d68cfa0ff24fde2607255a9e5416603c47e74e49e1"}
+    ],
+    "sv3pt5-151": [
+      {"printing": "CSVE1C-056", "page": "https://www.pokemon.cn/tcg/product/15551.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "c42dbe398a1d893ef2b2c4a4d89b7e8c27bbca7df85b269735091f629a9eedd3", "path": "/wp-content/uploads/2025/09/CSVE1_056.png"},
+      {"printing": "151C-151", "page": "https://wiki.52poke.com/wiki/File:151C151.png", "url": "https://media.52poke.com/wiki/4/4f/151C151.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "5b61eeaf7a8e8621ed51cf917dab756edde3ae3c9f6281e310e5bc05a469c43a"}
+    ],
+    "sv3pt5-159": [
+      {"printing": "CSVH4aC-007", "page": "https://wiki.52poke.com/wiki/File:CSVH4aC007.png", "url": "https://media.52poke.com/wiki/7/7c/CSVH4aC007.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "755969f2bd35118971c958ff49eb3dcee337c668a86e5fd1e520c5f25b6f1f10"},
+      {"printing": "CSVM1cC-009", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC009.png", "url": "https://media.52poke.com/wiki/0/04/CSVM1cC009.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "40d7290e0c0487cc9361ad2c43306e34c274bbf99ee5ab90e7f16dfea715bf82"}
+    ],
+    "sv3pt5-16": [
+      {"printing": "151C-016", "page": "https://wiki.52poke.com/wiki/File:151C016.png", "url": "https://media.52poke.com/wiki/f/f0/151C016.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "bfa43e3483c0f1c9303e36ffcc7d46bbf13f3d935fa8e06f3bc9623106ecea47"}
+    ],
+    "sv3pt5-25": [
+      {"printing": "sv3pt5-25", "page": "https://www.pokemon.cn/tcg/product/15486.html", "width": 868, "height": 1212, "sha256": "ad1fc8cdd21b32862b1317f0b3effa8547daddff0537f0dea4676478526ceb6e", "site": "简中官网", "path": "/wp-content/uploads/2025/09/59ae58bc2e7d423ffd556b41d8b05a05aac74da0.png"},
+      {"printing": "151C-025", "page": "https://wiki.52poke.com/wiki/File:151C025.png", "url": "https://media.52poke.com/wiki/6/69/151C025.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "535201bd87231c59d31e17ec3c7d286d25aa33056a1266dd70efb1b911ba3741"}
+    ],
+    "sv3pt5-38": [
+      {"printing": "151C-038", "page": "https://wiki.52poke.com/wiki/File:151C038.png", "url": "https://media.52poke.com/wiki/9/9b/151C038.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "2a70d967ef4e69591af44c421edd3f974d77be13f33fea4b6051443afa420cc6"}
+    ],
+    "sv4-160": [
+      {"printing": "CSVH4aC-008", "page": "https://wiki.52poke.com/wiki/File:CSVH4aC008.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "b1dd3dbc1dd68d7fee0f82a5f803eaacfc0d2b0870ab000d01c225541f8b35fb", "url": "https://media.52poke.com/wiki/2/20/CSVH4aC008.png"}
+    ],
+    "sv4-164": [
+      {"printing": "CSVM1cC-018", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC018.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "7523e5661c9ebcfa673350378a9aab68ec8c353c5baf0abc5d28f9023d6bb34b", "url": "https://media.52poke.com/wiki/a/a2/CSVM1cC018.png"}
+    ],
+    "sv4-172": [
+      {"printing": "CSV4C-122", "page": "https://www.pokemon.cn/tcg/product/15488.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "f31a2e3e9d0d0f17e82c99d6c0dcf2efc3451cb7df37be9bfbdcf90235ae0ffa", "path": "/wp-content/uploads/2025/09/1cff28e56de380a7f6930f9609d94bba82ed1d12.png"},
+      {"printing": "CSV4C-122", "page": "https://wiki.52poke.com/wiki/File:CSV4C122.png", "url": "https://media.52poke.com/wiki/d/d8/CSV4C122.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f31a2e3e9d0d0f17e82c99d6c0dcf2efc3451cb7df37be9bfbdcf90235ae0ffa"}
+    ],
+    "sv4-177": [
+      {"printing": "CSVM1aC-024", "page": "https://wiki.52poke.com/wiki/File:CSVM1aC024.png", "url": "https://media.52poke.com/wiki/c/c1/CSVM1aC024.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "48d1f7619b699c2257cb2dec8da8dab9f7d953588605befbc479706b57d43f4b"}
+    ],
+    "sv4-178": [
+      {"printing": "CSVM1bC-025", "page": "https://wiki.52poke.com/wiki/File:CSVM1bC025.png", "url": "https://media.52poke.com/wiki/2/27/CSVM1bC025.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "1480752ed322e6670a7e93bfbef599ebec17ad611549aafffc7e3546877f1734"}
+    ],
+    "sv4pt5-19": [
+      {"printing": "151C-026", "page": "https://wiki.52poke.com/wiki/File:151C026.png", "url": "https://media.52poke.com/wiki/4/4f/151C026.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f7490996f474f2a7237b64c6c801d2bb4f7a217fa8a79dec40649568557818e4"}
+    ],
+    "sv4pt5-7": [
+      {"printing": "151C-004", "page": "https://wiki.52poke.com/wiki/File:151C004.png", "url": "https://media.52poke.com/wiki/b/b7/151C004.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "bad2977041f1e60cdbcd5f0ab753821546f9a86cfd89efef0eb6a2cc3c3c223c"},
+      {"printing": "CSVM1aC-001", "page": "https://wiki.52poke.com/wiki/File:CSVM1aC001.png", "url": "https://media.52poke.com/wiki/8/88/CSVM1aC001.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "ce77a85f0a205759feee8278fb609da3b301167fe452aea1cc24d021f4bda8ff"}
+    ],
+    "sv4pt5-8": [
+      {"printing": "CSVM1aC-002", "page": "https://wiki.52poke.com/wiki/File:CSVM1aC002.png", "url": "https://media.52poke.com/wiki/3/34/CSVM1aC002.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "9ed2a9e2940263a88a91f6ea8863a16c5c7cc239b11383d059199cb40a033b85"}
+    ],
+    "sv4pt5-91": [
+      {"printing": "SV-P-358", "page": "https://www.pokemon.cn/tcg/product/22850.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "a3bbab938faf5ba854a6f181bb611482ab255ba32c225fbdc54803d36204f2af", "path": "/wp-content/uploads/2026/10/20261016105547107.png"}
+    ],
+    "sv5-144": [
+      {"printing": "CSV9.5C-167", "page": "https://wiki.52poke.com/wiki/File:CSV9.5C167.png", "site": "神奇宝贝百科", "width": 866, "height": 1206, "sha256": "b84cd6a6fec999b905da027ad4d522d5b62c45395cb5e2a3a0a9dec777f3270b", "url": "https://media.52poke.com/wiki/4/4a/CSV9.5C167.png"}
+    ],
+    "sv5-157": [
+      {"printing": "CSV9.5C-168", "page": "https://wiki.52poke.com/wiki/File:CSV9.5C168.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c76f4052be77996a7a1a679d0be7f51a700858e0341f9cce776d92dfd7bb5c11", "url": "https://media.52poke.com/wiki/9/95/CSV9.5C168.png"}
+    ],
+    "sv5-159": [
+      {"printing": "CSVH4aC-013", "page": "https://wiki.52poke.com/wiki/File:CSVH4aC013.png", "url": "https://media.52poke.com/wiki/4/47/CSVH4aC013.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c1322dedbe7981bcb1b5c4b7150f5e98f62cfcb3de4ececf6b1ba2f95fba7651"},
+      {"printing": "CSVM1cC-017", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC017.png", "url": "https://media.52poke.com/wiki/6/69/CSVM1cC017.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "9eb2c880f43afdd68bd285893b90d4747be6371f2020d6f8f5b608dd48ec1c7f"}
+    ],
+    "sv6-130": [
+      {"printing": "CSV9.5C-134", "page": "https://wiki.52poke.com/wiki/File:CSV9.5C134.png", "url": "https://media.52poke.com/wiki/2/22/CSV9.5C134.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "9d5864a513b9e2078d8303c6a99c39b5ab2c9b746436e66b0e59f5e372835ddc"}
+    ],
+    "sv6-141": [
+      {"printing": "CSVNC-031", "page": "https://wiki.52poke.com/wiki/File:CSVNC031.png", "url": "https://media.52poke.com/wiki/c/c1/CSVNC031.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "1e155bf476f2f6b5a82dfb62182c8e056c184417c12680c0996ba1c13e566699"}
+    ],
+    "sv6pt5-38": [
+      {"printing": "CSVNC-027", "page": "https://wiki.52poke.com/wiki/File:CSVNC027.png", "url": "https://media.52poke.com/wiki/e/e6/CSVNC027.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "77c415094cf0c9a41814f11e90ad622efcdf78e7f3467c420948526f48b23f25"}
+    ],
+    "sv6pt5-61": [
+      {"printing": "CSVH6aC-011", "page": "https://www.pokemon.cn/tcg/product/23939.html", "path": "/wp-content/uploads/2026/09/20260921114522552.png", "width": 868, "height": 1212, "sha256": "a354d42cfd43ba3aa3208bf47d21c44fca29023987ed936eb2fa0344491836be"}
+    ],
+    "sv9-146": [
+      {"printing": "CSVH6aC-019", "page": "https://www.pokemon.cn/tcg/product/23939.html", "path": "/wp-content/uploads/2026/09/20260921114526897.png", "width": 868, "height": 1212, "sha256": "6caa85684a0d96fce1d315f5f0825addfd9ecf6f8d285e212c7bd8c0b99749a7"}
+    ],
+    "svp-31": [
+      {"printing": "CSV1C-068", "page": "https://www.pokemon.cn/tcg/product/15585.html", "path": "/wp-content/uploads/2025/09/CSV1_068.png", "width": 868, "height": 1212, "sha256": "eb550a06f44e9f985d14646493ec526c32abf7091445c361cdf02015de17b785"}
+    ],
+    "svp-54": [
+      {"printing": "CSVH2C-009", "page": "https://www.pokemon.cn/tcg/product/15514.html", "path": "/wp-content/uploads/2025/09/CSVH2_009ai1.png", "width": 868, "height": 1212, "sha256": "5a4a8246cec9dd9c15f9ce8a1745d620e486fc6583c23c2e32a43278ffce8d85"}
+    ],
+    "swsh1-138": [
+      {"printing": "30thC-161", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "4a123f80987eb034e2d5a80a681cca42bc77678bdc2a354957f32ad7823aba03", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/xao7pkre591venf-30th_161_insg2xhvmj-3caf59c836df.webp"}
+    ],
+    "swsh1-148": [
+      {"printing": "swsh1-148", "page": "https://www.pokemon.cn/tcg/product/16220.html", "width": 1364, "height": 1906, "sha256": "192dc2f538a84b222dc9871ee25062ab778320ca205cdc8c1ca1aa21b80d7a18", "site": "简中官网", "path": "/wp-content/uploads/2025/09/12_036.png"},
+      {"printing": "CS1.5C-036", "page": "https://wiki.52poke.com/wiki/File:CS1.5C036.png", "url": "https://media.52poke.com/wiki/f/f4/CS1.5C036.png", "site": "神奇宝贝百科", "width": 1000, "height": 1397, "sha256": "78973e0e0c495f2929c5eddaadba6f14af7e45db143d00480c196853f6000022"}
+    ],
+    "swsh1-156": [
+      {"printing": "CS1bC-128", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "d6775a78635b72d83d515d6986b8fe7979ff42cdf201fd644ee1fdd8b312bfa5", "path": "/wp-content/uploads/2025/09/7a169b97d7cc93a06dd001502f561d82cacb0653.png"},
+      {"printing": "CS1bC-128", "page": "https://wiki.52poke.com/wiki/File:CS1bC128.png", "url": "https://media.52poke.com/wiki/7/73/CS1bC128.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "d6775a78635b72d83d515d6986b8fe7979ff42cdf201fd644ee1fdd8b312bfa5"}
+    ],
+    "swsh1-158": [
+      {"printing": "CS1aC-125", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "47ac13436e074d4f2f7532945c75d6463715d9a83b0bf4660b5f1f3090381f66", "path": "/wp-content/uploads/2025/09/8c4e0e63bb9e57901fec2f1fa615f05fb90e2a89.png"},
+      {"printing": "CS1aC-125", "page": "https://wiki.52poke.com/wiki/File:CS1aC125.png", "url": "https://media.52poke.com/wiki/6/63/CS1aC125.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "47ac13436e074d4f2f7532945c75d6463715d9a83b0bf4660b5f1f3090381f66"}
+    ],
+    "swsh1-163": [
+      {"printing": "CS1aC-120", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "fa01cf503fde8b9fc34dc1016eeaa09536afea10bf8208f5f11e483472c00870", "path": "/wp-content/uploads/2025/09/5d2dac1e35dbe8c8cf157fbf7096c97548d1cba2.png"},
+      {"printing": "CS1aC-120", "page": "https://wiki.52poke.com/wiki/File:CS1aC120.png", "url": "https://media.52poke.com/wiki/f/f8/CS1aC120.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "fa01cf503fde8b9fc34dc1016eeaa09536afea10bf8208f5f11e483472c00870"}
+    ],
+    "swsh1-169": [
+      {"printing": "CS1aC-132", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "0fbb05933927de76ad077d662bc80f51d4ff89739a06f76c6cb9fbb115366cfe", "path": "/wp-content/uploads/2025/09/701bf21febbf50eb3050f591fc7bac459a5b35c1-scaled.png"},
+      {"printing": "CS1aC-132", "page": "https://wiki.52poke.com/wiki/File:CS1aC132.png", "url": "https://media.52poke.com/wiki/b/b6/CS1aC132.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "50efd79258715c7c6ed24530861bc686c3ea227c12c9ee14014f1cbc967cb46c"}
+    ],
+    "swsh1-170": [
+      {"printing": "CS1bC-125", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "92b91d0fd90f9f9c3c5ac9fede1b6ee8bd408d63b7f22f0a00f5e38b3939b5fd", "path": "/wp-content/uploads/2025/09/0d550896f628cf504a38e26d1c623dbb78fce524.png"},
+      {"printing": "CS1bC-125", "page": "https://wiki.52poke.com/wiki/File:CS1bC125.png", "url": "https://media.52poke.com/wiki/6/65/CS1bC125.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "92b91d0fd90f9f9c3c5ac9fede1b6ee8bd408d63b7f22f0a00f5e38b3939b5fd"}
+    ],
+    "swsh1-178": [
+      {"printing": "CS1bC-132", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "2891279b3837e45664a094139f932070582e1646f9867b8ce4ac5ab00645ba9d", "path": "/wp-content/uploads/2025/09/646a42c14cc05dcb61d61868e90315cafcd8b82e-scaled.png"},
+      {"printing": "CS1bC-132", "page": "https://wiki.52poke.com/wiki/File:CS1bC132.png", "url": "https://media.52poke.com/wiki/4/46/CS1bC132.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "f25d4530f061d15ca8122ae1d8e80e0e9a97b51eaa7312f4d21effad25d221a0"}
+    ],
+    "swsh1-179": [
+      {"printing": "CS1bC-122", "page": "https://www.pokemon.cn/tcg/product/15732.html", "path": "/wp-content/uploads/2025/09/a9db689feb380d601ed5b4a29e489a5c26abb79d.png", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "a561823e1ef0032ac120adba576c86b032daaac21f0b77162cfd99177182da3b"},
+      {"printing": "CS1bC-122", "page": "https://wiki.52poke.com/wiki/File:CS1bC122.png", "url": "https://media.52poke.com/wiki/3/35/CS1bC122.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "a561823e1ef0032ac120adba576c86b032daaac21f0b77162cfd99177182da3b"}
+    ],
+    "swsh1-186": [
+      {"printing": "CS1aC-135", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "c11255840dd4d8012da548eca7a383ce4e33902cb976484cfe177587812c0c41", "path": "/wp-content/uploads/2025/09/220d43bbbbccaec1cb37345eaefa0d1b33d4f503.png"},
+      {"printing": "CS1aC-135", "page": "https://wiki.52poke.com/wiki/File:CS1aC135.png", "url": "https://media.52poke.com/wiki/a/ac/CS1aC135.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c11255840dd4d8012da548eca7a383ce4e33902cb976484cfe177587812c0c41"}
+    ],
+    "swsh1-34": [
+      {"printing": "CS1bC-049", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "bcbf4b9f6832ba30cf877d0d7b34abf9ab1b71166378146d9f4c097b72bb6f50", "path": "/wp-content/uploads/2025/09/d6bb38d07289af4b9679a7d984a6166c46049e2d-scaled.png"},
+      {"printing": "CS1bC-049", "page": "https://wiki.52poke.com/wiki/File:CS1bC049.png", "url": "https://media.52poke.com/wiki/1/1d/CS1bC049.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "f9f3f9b20478386d3682def8ff4455233a16b56624e34f506d5174a267d70992"}
+    ],
+    "swsh10-142": [
+      {"printing": "CS5.5C-066", "page": "https://www.pokemon.cn/tcg/product/15772.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "fa527dfc3caf80aeddfc1874136cc901e454418255303c2655d0124c89ca2829", "path": "/wp-content/uploads/2025/11/20251125171244365.png"},
+      {"printing": "CS5.5C-066", "page": "https://wiki.52poke.com/wiki/File:CS5.5C066.png", "url": "https://media.52poke.com/wiki/7/78/CS5.5C066.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "3f6074d906b6240748f2ccb70b290a05fc766a3d59bcd9db95f1bccbc269362c"}
+    ],
+    "swsh10-146": [
+      {"printing": "CS5.5C-060", "page": "https://www.pokemon.cn/tcg/product/15772.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "f3241931da061df70fb4579a525252755bc75d5096de9357129d52ae5e5add02", "path": "/wp-content/uploads/2025/09/20269a3b8f6aac0c43179e37f296d1c63d337772.png"},
+      {"printing": "CS5.5C-060", "page": "https://wiki.52poke.com/wiki/File:CS5.5C060.png", "url": "https://media.52poke.com/wiki/f/fa/CS5.5C060.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "f3241931da061df70fb4579a525252755bc75d5096de9357129d52ae5e5add02"}
+    ],
+    "swsh10-147": [
+      {"printing": "CS5DC-138", "page": "https://www.pokemon.cn/tcg/product/15551.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "34a258681850b7698202e4e5b89aa7d4bbdee42ab1e5417aff4b7dde37aa4158", "path": "/wp-content/uploads/2025/09/CSVE1_138.png"}
+    ],
+    "swsh10-154": [
+      {"printing": "CS5DC-116", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "b00d75821b6a44279730a326ee77ee02b18585e9116e58ee4fa9442f8fc1092e", "path": "/wp-content/uploads/2025/09/b4f0aed79441d787cb4cd00716b5af5578169f8d.png"},
+      {"printing": "CSVM1cC-008", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC008.png", "url": "https://media.52poke.com/wiki/1/18/CSVM1cC008.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "757aace4c92a0c3d87af946a036bf001a6e256f8b7bddc2d9bf16aa9935c0f54"},
+      {"printing": "CS5bC-116", "page": "https://wiki.52poke.com/wiki/File:CS5bC116.png", "url": "https://media.52poke.com/wiki/0/0b/CS5bC116.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "b00d75821b6a44279730a326ee77ee02b18585e9116e58ee4fa9442f8fc1092e"}
+    ],
+    "swsh10-156": [
+      {"printing": "swsh10-156", "page": "https://www.pokemon.cn/tcg/product/15447.html", "width": 868, "height": 1212, "sha256": "eaf5834ab85914ae52251c3c957ded59b4b0d1bfd1a43a680a6ab64cc679481a", "site": "简中官网", "path": "/wp-content/uploads/2025/09/45a7af5fbf4f5e71a687d5adae9a6e11c3be2a26.png"},
+      {"printing": "CS6.5C-063", "page": "https://wiki.52poke.com/wiki/File:CS6.5C063.png", "url": "https://media.52poke.com/wiki/f/f4/CS6.5C063.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "8d6224e57333347c95504ad2d5620758180c472aad6f18a6eb5d843b605290a1"},
+      {"printing": "CSVH4aC-009", "page": "https://wiki.52poke.com/wiki/File:CSVH4aC009.png", "url": "https://media.52poke.com/wiki/8/82/CSVH4aC009.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "484e0394ebc38b7d5c751c997ee56462d1e9b090ae08e52bacb396a1d481461f"}
+    ],
+    "swsh10-39": [
+      {"printing": "CS5bC-050", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "b382f3de17ce059909e124696f3690d8d4468d18764c173dda10da6fc049393b", "path": "/wp-content/uploads/2025/09/33fa74c3aaf99f4f061d68faa46f7c2b0166e9f3.png"},
+      {"printing": "CS5bC-050", "page": "https://wiki.52poke.com/wiki/File:CS5bC050.png", "url": "https://media.52poke.com/wiki/0/00/CS5bC050.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "b382f3de17ce059909e124696f3690d8d4468d18764c173dda10da6fc049393b"}
+    ],
+    "swsh10-40": [
+      {"printing": "CS5bC-051", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "4079988d7239841269ea7c2029407c37115e4684d7f005b283e7dab1417ea91a", "path": "/wp-content/uploads/2025/09/8702d180d540978ccac7fba2f8be66bd17e6ed0f.png"},
+      {"printing": "CS5bC-051", "page": "https://wiki.52poke.com/wiki/File:CS5bC051.png", "url": "https://media.52poke.com/wiki/7/79/CS5bC051.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "4079988d7239841269ea7c2029407c37115e4684d7f005b283e7dab1417ea91a"}
+    ],
+    "swsh10-43": [
+      {"printing": "CSZC-006", "page": "https://www.pokemon.cn/tcg/product/15654.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "12b6c32353d99f04331c39c6fd439a81948e46370b502873b0d77e44faad99e9", "path": "/wp-content/uploads/2025/09/CSZ_006.png"}
+    ],
+    "swsh10-46": [
+      {"printing": "CS6.5C-020", "page": "https://www.pokemon.cn/tcg/product/15667.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "3da8da26830aa98be8a4d089d651f95c5c0f227d3039daf43df927861d6a85e8", "path": "/wp-content/uploads/2025/09/742e5fc0a9c4ba16f8c5dab442120507ec5e5336.png"},
+      {"printing": "CS6.5C-020", "page": "https://wiki.52poke.com/wiki/File:CS6.5C020.png", "url": "https://media.52poke.com/wiki/0/08/CS6.5C020.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "3da8da26830aa98be8a4d089d651f95c5c0f227d3039daf43df927861d6a85e8"}
+    ],
+    "swsh10-51": [
+      {"printing": "CS5.5C-026", "page": "https://wiki.52poke.com/wiki/File:CS5.5C026.png", "url": "https://media.52poke.com/wiki/c/c1/CS5.5C026.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "5252d2565056be41574947a0473db072e773915085eca4fb570b56f36a5af561"}
+    ],
+    "swsh12-156": [
+      {"printing": "CS6.5C-066", "page": "https://www.pokemon.cn/tcg/product/15657.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "cd4fe4523386f8ad3cedf01fa5f2476efb75017671e128b891a990e0403bbd9e", "path": "/wp-content/uploads/2025/09/197cb80151078bf273a158b8c5d5b3a70247cfd3.png"},
+      {"printing": "CSVM1cC-020", "page": "https://wiki.52poke.com/wiki/File:CSVM1cC020.png", "url": "https://media.52poke.com/wiki/b/b5/CSVM1cC020.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "1dd58f26561b71ca7cecc16906b7ac6397f394bb2be22750f7750a31b90fcd37"},
+      {"printing": "CS6.5C-066", "page": "https://wiki.52poke.com/wiki/File:CS6.5C066.png", "url": "https://media.52poke.com/wiki/f/fb/CS6.5C066.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "cd4fe4523386f8ad3cedf01fa5f2476efb75017671e128b891a990e0403bbd9e"},
+      {"printing": "CSVM1aC-022", "page": "https://wiki.52poke.com/wiki/File:CSVM1aC022.png", "url": "https://media.52poke.com/wiki/d/db/CSVM1aC022.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "d4f703f4a55e3dc2b5136558adee526e96d00715229620f40c0c5394c546dcb8"}
+    ],
+    "swsh12-22": [
+      {"printing": "CSVE2C-012", "page": "https://www.pokemon.cn/tcg/product/15463.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "c4bee1795b4bd522ac77bfc67215115519a093ce6e339681d1f01b87d488da86", "path": "/wp-content/uploads/2025/09/CSVE2_012.png"}
+    ],
+    "swsh12-57": [
+      {"printing": "CSVE2C-053", "page": "https://www.pokemon.cn/tcg/17511.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "857406a14ab0db4688da0733edfe1583c0e5df8805e1b2b28b821c9e7357c3e8", "path": "/wp-content/uploads/2025/11/CSVE2_053-thumb-868x1212-28912.png"}
+    ],
+    "swsh12-58": [
+      {"printing": "CSVE2C-054", "page": "https://www.pokemon.cn/tcg/17511.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "a8f1b215b3c249cdd54600999657620c2c8c20a9fd849b89087236f1635ecca7", "path": "/wp-content/uploads/2025/11/CSVE2_054-thumb-868x1212-28911.png"}
+    ],
+    "swsh12-59": [
+      {"printing": "CS6bC-028", "page": "https://www.pokemon.cn/tcg/product/15556.html", "path": "/wp-content/uploads/2025/09/2487190dadca7f3dea7edcdd7cab5eb98636c0e4.png", "width": 868, "height": 1212, "sha256": "a0c80cc8e72ae16f9a3ae3999522074ea19211c2ff3502846080ef68630ee108"}
+    ],
+    "swsh2-154": [
+      {"printing": "CS1aC-131", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "5b3045380bfcd74790fab2e292581661e9d1509c604112ac81c9d8586efa4d26", "path": "/wp-content/uploads/2025/09/32c9c80794347453c1e3f6107628bb5919634f02-scaled.png"},
+      {"printing": "CS1aC-131", "page": "https://wiki.52poke.com/wiki/File:CS1aC131.png", "url": "https://media.52poke.com/wiki/5/55/CS1aC131.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "987fe38499bcd2b2d866b4b112d175de08b809db53ade7b73687f334fbb5b0ec"}
+    ],
+    "swsh2-156": [
+      {"printing": "CS1.5C-046", "page": "https://wiki.52poke.com/wiki/File:CS1.5C046.png", "url": "https://media.52poke.com/wiki/5/50/CS1.5C046.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "dc27e4c9852e39f3857895cd8997eaa2ef45b9cbd6985dfccaa23921db17b84c"}
+    ],
+    "swsh2-161": [
+      {"printing": "CS1bC-134", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "b586af75dcd2fa6d3aceac90b50226fabbedabdb1e6774101f20d1205586b8c8", "path": "/wp-content/uploads/2025/09/967dae0df16634f6b30368ff5ab0880125c0a3ee.png"},
+      {"printing": "CS1bC-134", "page": "https://wiki.52poke.com/wiki/File:CS1bC134.png", "url": "https://media.52poke.com/wiki/2/2d/CS1bC134.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "b586af75dcd2fa6d3aceac90b50226fabbedabdb1e6774101f20d1205586b8c8"}
+    ],
+    "swsh2-165": [
+      {"printing": "CS1.5C-043", "page": "https://wiki.52poke.com/wiki/File:CS1.5C043.png", "url": "https://media.52poke.com/wiki/4/40/CS1.5C043.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "aad373521a04e352d2305c7806adf5dd66e608c864463df6e9e89eb3074e4887"}
+    ],
+    "swsh2-168": [
+      {"printing": "CS1.5C-047", "page": "https://wiki.52poke.com/wiki/File:CS1.5C047.png", "url": "https://media.52poke.com/wiki/a/ad/CS1.5C047.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "8f1ecb4d15bf99bcaaeee740f91bcccf23bb2e2690f47b71ac377d1c5de31ee4"}
+    ],
+    "swsh2-49": [
+      {"printing": "CS1aC-018", "page": "https://www.pokemon.cn/tcg/product/16260.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "0ab3ce7e30bf8b5c8fcdd0ba8ef2f57cd9bfa21f97beacbe8d0d4583185cf3ea", "path": "/wp-content/uploads/2025/09/9b765454c49754dcc126c4d705f885f4f8a33b78-scaled.png"},
+      {"printing": "CS1aC-018", "page": "https://wiki.52poke.com/wiki/File:CS1aC018.png", "url": "https://media.52poke.com/wiki/4/4e/CS1aC018.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "943c1762ffabcb2f12e0a3e03c338f5a3a6d25efb509bc6c9df8f83c712dd8c1"}
+    ],
+    "swsh2-50": [
+      {"printing": "swsh2-50", "page": "https://www.pokemon.cn/tcg/product/16260.html", "width": 1833, "height": 2560, "sha256": "ebf8019610c5ce1bbe98d6465d9b72fdb5e98012bb87cc775876cbae82d655fe", "site": "简中官网", "path": "/wp-content/uploads/2025/09/8dc1cd4914a4f20aa4e4baebdeeb9aa614416f10-scaled.png"},
+      {"printing": "CS1aC-019", "page": "https://wiki.52poke.com/wiki/File:CS1ac019.png", "url": "https://media.52poke.com/wiki/0/0d/CS1ac019.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "f01082cee46dba15674f42f7271ba4b5f2ce89d04455e6ff1229725ca9757ad8"}
+    ],
+    "swsh3-159": [
+      {"printing": "CS2aC-110", "page": "https://www.pokemon.cn/tcg/product/16174.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "0b898478c35685893016d4bb01d2cf2e3000dce4a36031cd9e1ca8d476bb27dd", "path": "/wp-content/uploads/2025/09/054c77ccdc83b6a0c26b149e1a128df89c6ef501.png"},
+      {"printing": "CS2aC-110", "page": "https://wiki.52poke.com/wiki/File:CS2aC110.png", "url": "https://media.52poke.com/wiki/0/00/CS2aC110.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "0b898478c35685893016d4bb01d2cf2e3000dce4a36031cd9e1ca8d476bb27dd"}
+    ],
+    "swsh3-172": [
+      {"printing": "CS2.5C-047", "page": "https://www.pokemon.cn/tcg/product/16117.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "65e167a2c41d4a8ca09de264fe8efc2c2ef769cc550962bfb037665e2529fec0", "path": "/wp-content/uploads/2025/09/cf1b124d8c8d5da584ad11a5e924e712e0b9418e.png"},
+      {"printing": "CS2.5C-047", "page": "https://wiki.52poke.com/wiki/File:CS2.5C047.png", "url": "https://media.52poke.com/wiki/7/78/CS2.5C047.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "65e167a2c41d4a8ca09de264fe8efc2c2ef769cc550962bfb037665e2529fec0"}
+    ],
+    "swsh4-157": [
+      {"printing": "CS2bC-112", "page": "https://www.pokemon.cn/tcg/product/16170.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "d60bd7b62f8eec3e1e43a7952acf9d79976fef749ad3605ae5e4ebf385f20a20", "path": "/wp-content/uploads/2025/09/af3733568a663a96dabb2c3794cba286ca03ad31.png"},
+      {"printing": "CS2bC-112", "page": "https://wiki.52poke.com/wiki/File:CS2bC112.png", "url": "https://media.52poke.com/wiki/0/0e/CS2bC112.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "d60bd7b62f8eec3e1e43a7952acf9d79976fef749ad3605ae5e4ebf385f20a20"}
+    ],
+    "swsh4-164": [
+      {"printing": "CS2aC-114", "page": "https://www.pokemon.cn/tcg/product/16174.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "30c0f1107ae7d953dfe20a9c86e6fb0a532b1fb79e03785e2b50e8f426b1cc8c", "path": "/wp-content/uploads/2025/09/b7ee2ea543e8ad1e750ea9cf2da1cba16ee17a2b.png"},
+      {"printing": "CS2aC-114", "page": "https://wiki.52poke.com/wiki/File:CS2aC114.png", "url": "https://media.52poke.com/wiki/2/28/CS2aC114.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "30c0f1107ae7d953dfe20a9c86e6fb0a532b1fb79e03785e2b50e8f426b1cc8c"}
+    ],
+    "swsh4-40": [
+      {"printing": "CS2bC-021", "page": "https://www.pokemon.cn/tcg/product/16170.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "da42a801b5de7e3cd4f38dbb6ec0b636973ffbc802501ff0ee90e385fa5f4e3e", "path": "/wp-content/uploads/2025/09/2d41f5f091fb8a83d1b716ceea80e1ec217d186f.png"},
+      {"printing": "CS2bC-021", "page": "https://wiki.52poke.com/wiki/File:CS2bC021.png", "url": "https://media.52poke.com/wiki/0/05/CS2bC021.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "da42a801b5de7e3cd4f38dbb6ec0b636973ffbc802501ff0ee90e385fa5f4e3e"}
+    ],
+    "swsh4-41": [
+      {"printing": "CS2bC-022", "page": "https://www.pokemon.cn/tcg/product/16170.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "1b7df87f2f82b20f5b4bd5152d89ba492b3a71d2d65b4f638af678f08a0260a9", "path": "/wp-content/uploads/2025/09/681157428b91278287ebb266d0e6d7f8521364de.png"},
+      {"printing": "CS2bC-022", "page": "https://wiki.52poke.com/wiki/File:CS2bC022.png", "url": "https://media.52poke.com/wiki/2/24/CS2bC022.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "1b7df87f2f82b20f5b4bd5152d89ba492b3a71d2d65b4f638af678f08a0260a9"}
+    ],
+    "swsh5-123": [
+      {"printing": "CS3aC-122", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/b248381f21a0e8970aa9b2d81dbb6fb8086811bd.png", "width": 868, "height": 1207, "sha256": "6afe4816c029a0e2d071458d43fe37fee52db5ae90dc74250f91e4489bbcc7bb"}
+    ],
+    "swsh5-125": [
+      {"printing": "CS3bC-104", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/8861b253d1d0cf6491abe916e9dfeae76589e1b7.png", "width": 868, "height": 1207, "sha256": "5d6060bf145f02add90cbe396ec90913d88a10e80b5a25ed2ce5b40f6cb678bd"}
+    ],
+    "swsh5-127": [
+      {"printing": "CS3bC-105", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/c2a4d17aa3247225b447563ab40be7a47ad3bb10.png", "width": 868, "height": 1207, "sha256": "3d2c9fadcb1342d5061336d9b262d4560944478f342dc72301db5c207d63c59e"},
+      {"printing": "CSCC-007", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/11/20251127095022273.png", "width": 868, "height": 1207, "sha256": "ca466e91fcd2285f5944f760ca7684cfbf6a0f44ee5f3461b36ea77b3f54b20e"}
+    ],
+    "swsh5-129": [
+      {"printing": "swsh5-129", "page": "https://www.pokemon.cn/tcg/product/15625.html", "width": 868, "height": 1212, "sha256": "d39b385311074ce7f6641e21e93fb577a3b51f63a66d82fc9076684b263ea00e", "site": "简中官网", "path": "/wp-content/uploads/2025/09/3f2ba8e47d3462a46f0be94cebf27d67f1b1f8b3.png"},
+      {"printing": "CS2.1C-009", "page": "https://wiki.52poke.com/wiki/File:CS2.1C009.png", "url": "https://media.52poke.com/wiki/e/e4/CS2.1C009.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "0c23f3671f8f964f4744d55cc51938cc0927b9dad60a6d0f4039074d10a5e141"}
+    ],
+    "swsh5-133": [
+      {"printing": "CSVE1C-127", "page": "https://www.pokemon.cn/tcg/product/15551.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "8a7386d9707ad1398c8c742c9baec2cb77d51ffca815b7603e8785b13605769f", "path": "/wp-content/uploads/2025/09/CSVE1_127.png"}
+    ],
+    "swsh5-137": [
+      {"printing": "CS3aC-123", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/f1505343bc323786c5f7de63e60b0ff3289a0241.png", "width": 868, "height": 1207, "sha256": "4e3d05d42f70c0ed375cb722e77ae098ba700c13b59b3d641bcf5f124853b5ad"},
+      {"printing": "CSBC-017", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/e4c930ae54bda99587cc57c1f4743a5f1963727a.png", "width": 868, "height": 1207, "sha256": "d4aa7288ac23374be22ff6b5cfb9445b1d1b468a24b951b4a36c3f40aebc2360"}
+    ],
+    "swsh5-138": [
+      {"printing": "CS3bC-121", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/197b39c122a2284a56c2e062a6bac93806f62bf0.png", "width": 868, "height": 1207, "sha256": "6c5868ce5270ae488d06c3e23c63de2f0b9190406127105f3727ccd3869a5a76"},
+      {"printing": "CSCC-017", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/7af0993b9aeaa2f84d877da43218c7455b4e4536.png", "width": 868, "height": 1207, "sha256": "5b7eaa8c98bfcf3791b165318bd4d6919325bbe230b3f617a1677c0d776017dd"}
+    ],
+    "swsh5-139": [
+      {"printing": "CS3aC-107", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/79c2e5c3ba65dc4cd3d478bccd74017d6e54561b.png", "width": 868, "height": 1207, "sha256": "ec11f4f07eec8c64775b7a40b59588a01093f9aef7eec2d9a13a93102e0a314b"},
+      {"printing": "CSBC-007", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/bc6e8f7e59cf5d1ed08afb44d0b1e4bfd53daccc.png", "width": 868, "height": 1207, "sha256": "ac4c81f6a826b22e16fbcfe6d6ee710f6e0c03878e92cf9019c6470afbb2c4ef"}
+    ],
+    "swsh5-140": [
+      {"printing": "CS3bC-122", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/ab30b4080769780934c237d5a724619b875fc1d8.png", "width": 868, "height": 1207, "sha256": "8e1aad15a9a07324c2b49642d776cc3d18a650528e53babce76aed9b6bef917d"},
+      {"printing": "CSCC-019", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/5e8768dfa04f0c2569e966d6e7edd078507433ec.png", "width": 868, "height": 1207, "sha256": "7ced1c59d3dc7d3f3c311907340a0993ea02428ebe10b7c85e6f6e01e1f8fa98"}
+    ],
+    "swsh5-141": [
+      {"printing": "CS3aC-125", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/9ddcd54648c656897e9b5551f8df561ff4a1506d.png", "width": 868, "height": 1207, "sha256": "c98569738f1bb0b2d47af031647c49c22bf553c8edfab6d7767784875e839faa"},
+      {"printing": "CSBC-018", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/8daca24e164c5d1a8e4566dd52cc5460256d4da9.png", "width": 868, "height": 1207, "sha256": "26c54bbb482104441b3d74f6d58277f2f831f15302ea81a4c2205c374e55cf46"}
+    ],
+    "swsh5-37": [
+      {"printing": "CS3bC-036", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/e030fb12dba42cc524fe2eef8889a92564efd88a.png", "width": 1364, "height": 1905, "sha256": "a44d7b13ceab58cc72ec2d146eb5fd3d03a928844b18cc29c968dbed2f348cbe"}
+    ],
+    "swsh5-83": [
+      {"printing": "CS3bC-084", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/51c1534cff726e7294ca9e82ccbe576156291301.png", "width": 868, "height": 1207, "sha256": "15b7e260024ed63fff10c8ea58052536c34e8a7cd5c35f8d1d0b03e42fce7ca9"}
+    ],
+    "swsh5-85": [
+      {"printing": "CS3aC-071", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/f777ecac29261e852d7fa9813f739e0e81d2bd91-scaled.png", "width": 1833, "height": 2560, "sha256": "d643113eca4952fc2ad545d52a38988a705f9869835548fcd56249aa5537a64e"},
+      {"printing": "CS3aC-071", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/82023d6f38df8dda2061025fa816921fd540e8ea.png", "width": 1364, "height": 1905, "sha256": "f9d0aa5abe1c2dda409d3c40ea9b55a3efadb4f38ee8e1f6afb4ff03a0f43600"}
+    ],
+    "swsh5-86": [
+      {"printing": "CS3aC-072", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/f3b84651a084b0f93c82552a26905b1516277345-scaled.png", "width": 1833, "height": 2560, "sha256": "a0218ffbb83329a1e318e9d1f4bacd5f1ed9aaa511c64e210207068fa5988711"}
+    ],
+    "swsh5-87": [
+      {"printing": "CS3bC-085", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/fdf12ab33f3c3942db9c3f5a0259da4883ebcba7.png", "width": 1364, "height": 1905, "sha256": "9e56deacf4765b29193cf5e891bfbf520611565414a7627154dbb2d44296380c"},
+      {"printing": "CS3bC-085", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/22b282f2b9964bb5a029067da924695f0cda1dd9.png", "width": 1364, "height": 1905, "sha256": "e1c9adb87dc6a644ca31d8e0f2f785134d16d68918813d189b82193f80d71408"}
+    ],
+    "swsh5-88": [
+      {"printing": "CS3bC-086", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/8a1570c2e0842e352645d920cd850fd0e2901311.png", "width": 1364, "height": 1905, "sha256": "bc1592b69fd5a099ea39a72e6112ec2f5052e8dbc604c6fe1f69541c17150c6a"}
+    ],
+    "swsh5-96": [
+      {"printing": "CS3aC-085", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/2f523c5ebe6374506f6af0d66e1c79997f272907.png", "width": 1736, "height": 2424, "sha256": "3ed8f85ff59538a78c3ee66606c0a74da63d85abe7f5238895fc0fe43a93c1ba"}
+    ],
+    "swsh6-136": [
+      {"printing": "CS3.5C-057", "page": "https://wiki.52poke.com/wiki/File:CS3.5C057.png", "url": "https://media.52poke.com/wiki/7/77/CS3.5C057.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "985a83bd78a0ad4c8b16d0c2f713818dd9357d91697104441398260bceacc084"}
+    ],
+    "swsh6-140": [
+      {"printing": "CSBC-008", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/9720737830db5569c559ed8e7496de8a5bdb5a6c.png", "width": 868, "height": 1207, "sha256": "50776ad9b091b61b4ba9bbafd68b1816bb87d8e38e9bf427f27659df18547a89"}
+    ],
+    "swsh6-145": [
+      {"printing": "CS3.5C-060", "page": "https://wiki.52poke.com/wiki/File:CS3.5C060.png", "url": "https://media.52poke.com/wiki/f/f4/CS3.5C060.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "62eadc72bad17394a7618eba4efc679e582e9e0f9c9f6305cd0ea5c9a46ff39d"}
+    ],
+    "swsh6-146": [
+      {"printing": "CS3bC-119", "page": "https://www.pokemon.cn/tcg/product/16070.html", "path": "/wp-content/uploads/2025/09/6e7db33f9178f3ec5a1c8e51c2522becda4d23db.png", "width": 868, "height": 1207, "sha256": "3488be0d44fead00066e5be1efcccc16220ab1e98a2d1d04353cd18619688dd3"},
+      {"printing": "CSCC-016", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/af4cb92d4990a51cb78577bfbf4fa9dab47f0bf0.png", "width": 868, "height": 1207, "sha256": "0cce86161cd5293226196d94ea74f40157265306c1a5a70aa7905afe4840a205"}
+    ],
+    "swsh6-148": [
+      {"printing": "CS3.5C-063", "page": "https://wiki.52poke.com/wiki/File:CS3.5C063.png", "url": "https://media.52poke.com/wiki/3/3e/CS3.5C063.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "2968c3fb0c7bb7738b2fe02a1c1991273e7a84c0db833606c212572ecf04b1b0"}
+    ],
+    "swsh6-41": [
+      {"printing": "CS3.5C-023", "page": "https://www.pokemon.cn/tcg/product/15992.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "7be52029f32fb41b3fe99b4567ee0a7f047c65947b2caf308454ff116c0fb0ab", "path": "/wp-content/uploads/2025/09/4057f7d26b0e8d1de2bd9276d0d27b4d9a258f86.png"},
+      {"printing": "CS3.5C-023", "page": "https://wiki.52poke.com/wiki/File:CS3.5C023.png", "url": "https://media.52poke.com/wiki/b/b8/CS3.5C023.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "7be52029f32fb41b3fe99b4567ee0a7f047c65947b2caf308454ff116c0fb0ab"}
+    ],
+    "swsh6-43": [
+      {"printing": "CS3.5C-025", "page": "https://www.pokemon.cn/tcg/product/15992.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "d8fd517f29634deafae2f9832a212638d2021e164a12bedb52f0933b69578b44", "path": "/wp-content/uploads/2025/09/6db779632dd623c7d283875522d8b837eb042d69-scaled.png"},
+      {"printing": "CS3.5C-025", "page": "https://wiki.52poke.com/wiki/File:CS3.5C025.png", "url": "https://media.52poke.com/wiki/5/5f/CS3.5C025.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "0100784c8e0e59f1835374207dbd3f57f6bfcc0fbde62538c3264c3b5b69920d"}
+    ],
+    "swsh6-45": [
+      {"printing": "CS3bC-044", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/0f45187cba3429887f3f89f74991a2afb6723ae5.png", "width": 1364, "height": 1905, "sha256": "72291f8627c814eb110963e0bbacde3967faf8191a2fa9b222ba828d144fcc7f"}
+    ],
+    "swsh6-46": [
+      {"printing": "CS3bC-045", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/9e7686bacd958e6b25d65fbbd0eecd933a89aa0b.png", "width": 1364, "height": 1905, "sha256": "0094972097e11808a7b808f7a733b5a7d2a578c98216497e2239831857d875dc"}
+    ],
+    "swsh6-61": [
+      {"printing": "CS3bC-061", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/18a482089a5cf7a0cbe93f7504e21e80ead49d17.png", "width": 1364, "height": 1905, "sha256": "2ead0302b5285bf116f8a7beee5cd155e5303fc68a9aa6ec12d455d110760385"}
+    ],
+    "swsh6-74": [
+      {"printing": "CS3aC-054", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/11/20251127094944897.png", "width": 1000, "height": 1397, "sha256": "4aaeef0e6dff14adac7d63ad8e199b3dde05f9c43536b4f9128da1d97671891d"}
+    ],
+    "swsh6-75": [
+      {"printing": "CS3aC-055", "page": "https://www.pokemon.cn/tcg/product/16063.html", "path": "/wp-content/uploads/2025/09/3513562bb0a007768ab8da2e0759f69ae6448cb0.png", "width": 1364, "height": 1905, "sha256": "c1ab602a6458316ff9b77eb92f039c8ad90391b397f5f28fc5257cd114d899f1"}
+    ],
+    "swsh7-63": [
+      {"printing": "CS4.5C-021", "page": "https://www.pokemon.cn/tcg/product/15904.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "8479c4fc975b8fd63b5b2d22a56c2a280eedd022fa5412712f64a7b0ffc78a1f", "path": "/wp-content/uploads/2025/09/0c554a06e51e254dcd4be26aeb4546dbaf25f0e4-scaled.png"},
+      {"printing": "CS4.5C-021", "page": "https://wiki.52poke.com/wiki/File:CS4.5C021.png", "url": "https://media.52poke.com/wiki/a/a2/CS4.5C021.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "91e8b939aae95e3833e40b7c1444ae302488f2ea1c1d747f59a41796472643c9"}
+    ],
+    "swsh7-76": [
+      {"printing": "CSZC-014", "page": "https://www.pokemon.cn/tcg/product/15654.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "6fedf2a248d0122d7c0ac7d636bd89af97cf9fa2e676e048f87b50e07f74a5fa", "path": "/wp-content/uploads/2025/09/CSZ_014.png"}
+    ],
+    "swsh8-113": [
+      {"printing": "CS4bC-048", "page": "https://www.pokemon.cn/tcg/product/15955.html", "path": "/wp-content/uploads/2024/01/20251125173730848.png", "site": "宝可梦中国", "width": 1000, "height": 1396, "sha256": "f8ddce5ff5a9f8abfafe3f4996cb474604066a785c32e62acc3339dcc30fcfac"},
+      {"printing": "CS4bC-048", "page": "https://wiki.52poke.com/wiki/File:CS4bC048.png", "url": "https://media.52poke.com/wiki/8/8b/CS4bC048.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "382a71aa1d201e8d06528236c7b22013bc3381c95ee241d7ea149ddb4ce3f0e7"}
+    ],
+    "swsh8-114": [
+      {"printing": "CS4bC-049", "page": "https://www.pokemon.cn/tcg/product/15955.html", "path": "/wp-content/uploads/2025/09/417e4e7f21d925c1d3069e274a33d23079fa6f69-scaled.png", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "3436079e07731ec0e73cb03f7d291d32dc2d8daef2da1e8ff45c676f476b8f11"},
+      {"printing": "CS4bC-049", "page": "https://wiki.52poke.com/wiki/File:CS4bC049.png", "url": "https://media.52poke.com/wiki/f/fd/CS4bC049.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "f41e8776070a69b276ca4d15462b2585c7a6157e4e6d30c5bb904df5fb7f56f0"},
+      {"printing": "30thC-163", "page": "https://campaign-30th.pokemon.cn/products/30th-celebration/", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "be42b1c42d9c1e1fe7dad015a95b3ab5bde42917ebf44355caf1b4f63251c3b3", "format": "webp", "url": "https://campaign-30th.pokemon.cn/assets/celebration-cms/phbnlt52jbdioiz-30th_163_twmypv91mw-0f10f95c7fa7.webp"}
+    ],
+    "swsh8-120": [
+      {"printing": "CS4.5C-022", "page": "https://www.pokemon.cn/tcg/product/15904.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "01c806741dfea567686692fe3241c461fa5fc2e59a67f92f1e363a70ba48807a", "path": "/wp-content/uploads/2025/09/a60fe6609ebd6171b214882b50f2fd592cbdd9de-scaled.png"},
+      {"printing": "CS4.5C-022", "page": "https://wiki.52poke.com/wiki/File:CS4.5C022.png", "url": "https://media.52poke.com/wiki/f/f2/CS4.5C022.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "db3811857369390dadba0616583f8d6a30dcc9a394d71ad463977e2618d4cb8b"}
+    ],
+    "swsh8-124": [
+      {"printing": "CS4.5C-023", "page": "https://www.pokemon.cn/tcg/product/15904.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "9c5ac55465637e8ee8053945b683b5d26e6b4a251ef596dd070a8d42d906df3d", "path": "/wp-content/uploads/2025/09/f2ea1c849ec501e4e3bb58d45cd6dc3a17c6d654-scaled.png"},
+      {"printing": "CS4.5C-023", "page": "https://wiki.52poke.com/wiki/File:CS4.5C023.png", "url": "https://media.52poke.com/wiki/4/40/CS4.5C023.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "6075ad019c49a5bce596f01505d97fd1442cb51e0f61270cc499c4c86c1f647a"}
+    ],
+    "swsh8-180": [
+      {"printing": "CS4DaC-291", "page": "https://www.pokemon.cn/tcg/product/15872.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "1ce342354bb367b3e1bfe7ef6eda98e39fff6726348e62184a10af44922226be", "path": "/wp-content/uploads/2025/09/9823ea027139597067f7e9cff729ed92ab9c4ec6.png"},
+      {"printing": "CS4DaC-291", "page": "https://wiki.52poke.com/wiki/File:CS4DaC291.png", "url": "https://media.52poke.com/wiki/a/a1/CS4DaC291.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "1ce342354bb367b3e1bfe7ef6eda98e39fff6726348e62184a10af44922226be"}
+    ],
+    "swsh8-181": [
+      {"printing": "CS4DaC-292", "page": "https://www.pokemon.cn/tcg/product/15872.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "0d77f7df299353071a7c6abd9716124f471cc2e24c3d1fc1aed1116434bd8ff3", "path": "/wp-content/uploads/2025/09/55de497ba244fa5ca58c331a81b78e88a0187a39.png"},
+      {"printing": "CS4DaC-292", "page": "https://wiki.52poke.com/wiki/File:CS4DaC292.png", "url": "https://media.52poke.com/wiki/c/cc/CS4DaC292.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "0d77f7df299353071a7c6abd9716124f471cc2e24c3d1fc1aed1116434bd8ff3"}
+    ],
+    "swsh8-185": [
+      {"printing": "CS4bC-085", "page": "https://www.pokemon.cn/tcg/product/15955.html", "path": "/wp-content/uploads/2025/09/069a4d5539cc45767e9c31ff48c032e6399bf87a-scaled.png", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "abff64061ea7eb417f4394f035ead74f85f55d72e00a3d37f1cbf07900ea239d"},
+      {"printing": "CS4bC-085", "page": "https://wiki.52poke.com/wiki/File:CS4bC085.png", "url": "https://media.52poke.com/wiki/f/fd/CS4bC085.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "269de1f51b032aa5857a7aadbabbdd49845fca6f3cf87182dccc7efd2b6dd865"}
+    ],
+    "swsh8-225": [
+      {"printing": "CS4.5C-052", "page": "https://www.pokemon.cn/tcg/product/15899.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "f0aec1c655db8581f2d2ebc92234527110c40bafd31416564e27a0be64355335", "path": "/wp-content/uploads/2025/09/b8aa5f6d7f360e05400bd2b65c5c45db28fd62ef-scaled.png"},
+      {"printing": "CSXC-009", "page": "https://www.pokemon.cn/tcg/product/15607.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "032a47d8360ce6d4a5b80fc681c18297aaba2fcd703360939c8c041ba7897c23", "path": "/wp-content/uploads/2025/09/db5765a444b6793da50f5720ec45e8711999cfef.png"},
+      {"printing": "CSNC-013", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "9f1303f2e93aaf54c2cbb344a405e91192d7493f412b1e83c2b5b9bc6fefd0f7", "path": "/wp-content/uploads/2025/09/a6e5042b11629736c279f4660faf6a404d1991dd.png"},
+      {"printing": "CSOC-010", "page": "https://www.pokemon.cn/tcg/product/15806.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "d796db6024e890ef9d9d7c6a5f51da13891c46f3f637e6a1a8faa5727de8f20d", "path": "/wp-content/uploads/2025/09/3432bbf8f917a9add59b7cc9b0e8e53b1b0c8b32.png"},
+      {"printing": "CS4.5C-052", "page": "https://wiki.52poke.com/wiki/File:CS4.5C052.png", "url": "https://media.52poke.com/wiki/b/b4/CS4.5C052.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "b72b9ca4c0a8610d13789f875da68f7dc546c1348fb3bfb92cda8a080794f485"}
+    ],
+    "swsh8-228": [
+      {"printing": "CSVH2aC-019", "page": "https://wiki.52poke.com/wiki/File:CSVH2aC019.png", "url": "https://media.52poke.com/wiki/e/e9/CSVH2aC019.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "c34a7cc895533317f9b4c9e1e5e027452c4fdb801e9b167066be90b5350e1e36"}
+    ],
+    "swsh8-229": [
+      {"printing": "CS4.5C-048", "page": "https://www.pokemon.cn/tcg/product/15899.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "1de99375ae9ea619935ecaa2278b64ab4f22eeb1ca9a6254045f71963b8099ad", "path": "/wp-content/uploads/2025/09/0c9d8558fbffe7b331c7f5cfc74098e07de2fbba-scaled.png"},
+      {"printing": "CS4.5C-048", "page": "https://wiki.52poke.com/wiki/File:CS4.5C048.png", "url": "https://media.52poke.com/wiki/9/9a/CS4.5C048.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "470b6813712a61cc76e606ad9c90db116d62b2e33ff789008dd347ad7238909b"}
+    ],
+    "swsh8-233": [
+      {"printing": "CS4bC-124", "page": "https://www.pokemon.cn/tcg/product/15955.html", "path": "/wp-content/uploads/2025/09/76ebe60397bceddc0f9e935f98def3d1953c1745-scaled.png", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "1df6706c65f709d958b8b3aa43c65862305c6d52bc37ccd5c295ba5977c86843"}
+    ],
+    "swsh8-236": [
+      {"printing": "CS4bC-118", "page": "https://www.pokemon.cn/tcg/product/15955.html", "path": "/wp-content/uploads/2025/09/2bd3b6ee765c48c4cee3b5491cca5026f1383495-scaled.png", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "c07a83ccedeba6fa3634aa7b1d5e62ac748c58f4bfca0d711d3e7ccdd950fad1"},
+      {"printing": "CS4bC-118", "page": "https://wiki.52poke.com/wiki/File:CS4bC118.png", "url": "https://media.52poke.com/wiki/f/f0/CS4bC118.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "24df3da8a773a12fbe2816163c19a420e8706ff8c37a17a3deb09fe4bd0d242d"}
+    ],
+    "swsh8-244": [
+      {"printing": "CS4bC-132", "page": "https://www.pokemon.cn/tcg/product/15955.html", "path": "/wp-content/uploads/2024/03/20251125173012808.png", "site": "宝可梦中国", "width": 1000, "height": 1396, "sha256": "c2c800659c2f40a9f7477d900cd36f6f14a6710beac822251c535d82a4882764"},
+      {"printing": "CS4bC-132", "page": "https://wiki.52poke.com/wiki/File:CS4bC132.png", "url": "https://media.52poke.com/wiki/e/e8/CS4bC132.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "9a467f4d290a8d29079321b3e1a40d308eede15b7f2b4ab9e616265fb5a62267"}
+    ],
+    "swsh8-42": [
+      {"printing": "CS4.5C-004", "page": "https://www.pokemon.cn/tcg/product/15904.html", "site": "宝可梦中国", "width": 1833, "height": 2560, "sha256": "5f04bb3656ec517e200e95bbca0ca0b8eb46c1ad6c25285d854dd0b62e897b59", "path": "/wp-content/uploads/2025/09/65a7d777c31ddfe0ae7a677e10b964678cdab209-scaled.png"},
+      {"printing": "CS4.5C-004", "page": "https://wiki.52poke.com/wiki/File:CS4.5C004.png", "url": "https://media.52poke.com/wiki/b/be/CS4.5C004.png", "site": "神奇宝贝百科", "width": 1000, "height": 1396, "sha256": "458bae872d6e23b610b46c82b9751ca4208da1c4fa27ed0bcb266145d870ddb8"}
+    ],
+    "swsh9-121": [
+      {"printing": "CS5aC-105", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "df0964f00985f428c69a6e7db3a3c7b8485db5b52a006122022e2ed3737391bb", "path": "/wp-content/uploads/2025/09/9835e442029fa778e490d7599f7f890094df5baa.png"},
+      {"printing": "CS5aC-105", "page": "https://wiki.52poke.com/wiki/File:CS5aC105.png", "url": "https://media.52poke.com/wiki/b/b9/CS5aC105.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "df0964f00985f428c69a6e7db3a3c7b8485db5b52a006122022e2ed3737391bb"}
+    ],
+    "swsh9-132": [
+      {"printing": "CS4DaC-406", "page": "https://www.pokemon.cn/tcg/product/15882.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "22f5108e5b45e1d7546195e06b9222881064298d93b2807f43aa53ec2346b2bc", "path": "/wp-content/uploads/2025/09/14de837568d4aeb740cf0539773136e42c0b2454.png"}
+    ],
+    "swsh9-135": [
+      {"printing": "CS5bC-119", "page": "https://www.pokemon.cn/tcg/product/15829.html", "path": "/wp-content/uploads/2025/09/19597203a3d14459aaffc7cca37ac7c6bdbc9093.png", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "ddc82a2481f0b033dfb946495d3fd5a642a1b7ce2e293eb1ea54b12fed5dc12c"},
+      {"printing": "CS5bC-119", "page": "https://wiki.52poke.com/wiki/File:CS5bC119.png", "url": "https://media.52poke.com/wiki/9/9b/CS5bC119.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "21e7369cc24c66fbad21609b1299f32a4eed6fa5dc5224f9f61afbfd8f0b6c00"}
+    ],
+    "swsh9-150": [
+      {"printing": "CS5aC-115", "page": "https://www.pokemon.cn/tcg/product/15732.html", "path": "/wp-content/uploads/2024/08/20251125165009146.png", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "fc6582f31dbb7bee2ccc67b23dc311aea6e25f409d84e1917250c11b0c2f5616"}
+    ],
+    "swsh9-151": [
+      {"printing": "CS5aC-127", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "1f1aa0a9939fb7950c2197397359db53b3fa2c7a381a8e722c9e2a7098417852", "path": "/wp-content/uploads/2025/09/11462fab6b2d39da8036872b75f0d7e4a9115283.png"},
+      {"printing": "CSNC-024", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "c00187e089fbdb1fc3ae4a0ef38147a4c814adb9f430b584b9d6d041c82348e4", "path": "/wp-content/uploads/2024/05/20251125172409760.png"},
+      {"printing": "CSOC-018", "page": "https://www.pokemon.cn/tcg/product/15806.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "f384bdbee87075da5f1f9e51ce414d0fa5e1bc51bf5e2d83e2cc2a8e810ac4c9", "path": "/wp-content/uploads/2025/09/32231051f8a4f0803fb8ae354d11724b73a01223.png"},
+      {"printing": "CS5aC-127", "page": "https://wiki.52poke.com/wiki/File:CS5aC127.png", "url": "https://media.52poke.com/wiki/7/79/CS5aC127.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "1f1aa0a9939fb7950c2197397359db53b3fa2c7a381a8e722c9e2a7098417852"}
+    ],
+    "swsh9-40": [
+      {"printing": "CS5bC-049", "page": "https://www.pokemon.cn/tcg/product/15829.html", "path": "/wp-content/uploads/2025/09/eeb410afce41bd7f2f8068f74991f5674c092bac.png", "site": "宝可梦中国", "width": 868, "height": 1212, "sha256": "a0e03387815a6a0bd33a9a7cb654b755b7ed43510978efc4b2b3b34f98c60b1a"},
+      {"printing": "CS5bC-049", "page": "https://wiki.52poke.com/wiki/File:CS5bC049.png", "url": "https://media.52poke.com/wiki/6/64/CS5bC049.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "a0e03387815a6a0bd33a9a7cb654b755b7ed43510978efc4b2b3b34f98c60b1a"}
+    ],
+    "swsh9-41": [
+      {"printing": "CS5bC-052", "page": "https://www.pokemon.cn/tcg/product/15831.html", "site": "宝可梦中国", "width": 868, "height": 1207, "sha256": "58d5feb4c2daf197b02ff76e900a591147184ce2bc1a10141b90514fac73ae4c", "path": "/wp-content/uploads/2025/09/af53114051fec14f658d1d7e104af710b71bf61b.png"},
+      {"printing": "CSVM1aC-004", "page": "https://wiki.52poke.com/wiki/File:CSVM1aC004.png", "url": "https://media.52poke.com/wiki/1/17/CSVM1aC004.png", "site": "神奇宝贝百科", "width": 868, "height": 1212, "sha256": "7ae507e6e21af9d27a3b42530dacd25cd90af832d6691ced50a9ede80a510213"},
+      {"printing": "CS5bC-052", "page": "https://wiki.52poke.com/wiki/File:CS5bC052.png", "url": "https://media.52poke.com/wiki/c/c9/CS5bC052.png", "site": "神奇宝贝百科", "width": 868, "height": 1207, "sha256": "58d5feb4c2daf197b02ff76e900a591147184ce2bc1a10141b90514fac73ae4c"}
+    ],
+    "me2pt5-190": [
+      {"printing": "me2pt5-190", "page": "https://www.pokemon.cn/tcg/product/22630.html", "width": 868, "height": 1212, "sha256": "68f488056192f0ef5038f2ba8f2bb14a8e365616f896f9aed2e8d2d1b5a1557a", "site": "简中官网", "path": "/wp-content/uploads/2026/06/649f34fb7cc8fbdbb469f9d01acb300f.png"}
+    ],
+    "sv3-145": [
+      {"printing": "sv3-145", "page": "https://www.pokemon.cn/tcg/campaign/21718.html", "width": 868, "height": 1212, "sha256": "3b35e808f237dd3e211864004e9e8a01db33ed547512961651262e998fc3410f", "site": "简中官网", "path": "/wp-content/uploads/2026/04/33f1522dbcdffb9535b965bed34ce2a2.png"}
+    ],
+    "sv4pt5-80": [
+      {"printing": "sv4pt5-80", "page": "https://www.pokemon.cn/tcg/product/15514.html", "width": 868, "height": 1212, "sha256": "7c1c87f58fcf3e109380689e2af33708f7a0c7f19c202dd2e288b3fd4bd9df5b", "site": "简中官网", "path": "/wp-content/uploads/2025/09/CSVH2a_021.png"}
+    ],
+    "sv5-79": [
+      {"printing": "sv5-79", "page": "https://www.pokemon.cn/tcg/product/21022.html", "width": 868, "height": 1212, "sha256": "1dbba8225db78324bc0f6cc8b7b9eae1f043c510dc79a88c5b8aa0a90bab49b3", "site": "简中官网", "path": "/wp-content/uploads/2026/03/e0d76eb87dea79e3d1414dbbc3cf1078.png"}
+    ],
+    "sv5-119": [
+      {"printing": "sv5-119", "page": "https://www.pokemon.cn/tcg/product/21022.html", "width": 868, "height": 1212, "sha256": "2a5d33c5a5239a5c6b282e34fd4a29d53fcbe3011ef50186f9fe83b9276acac4", "site": "简中官网", "path": "/wp-content/uploads/2026/03/c2208317362dc51964aafc4497ef5984.png"}
+    ],
+    "sv5-122": [
+      {"printing": "sv5-122", "page": "https://www.pokemon.cn/tcg/product/21022.html", "width": 868, "height": 1212, "sha256": "212c4afba4735f163ef99fc0f1d1fe25e46a2391019e5ebbff984d8e5cb796e0", "site": "简中官网", "path": "/wp-content/uploads/2026/03/e651f6a75896564ab67628cee52cbf1f.png"}
+    ],
+    "sv6-147": [
+      {"printing": "sv6-147", "page": "https://www.pokemon.cn/tcg/product/22630.html", "width": 868, "height": 1212, "sha256": "d4dcbe069925d94203699c3c4a788e17244d3cdae2965f9a77c05bad21272898", "site": "简中官网", "path": "/wp-content/uploads/2026/06/d04b504efeafda1e6ece33e4109e8e40.png"}
+    ],
+    "sv9-149": [
+      {"printing": "sv9-149", "page": "https://www.pokemon.cn/tcg/product/22630.html", "width": 868, "height": 1212, "sha256": "68f488056192f0ef5038f2ba8f2bb14a8e365616f896f9aed2e8d2d1b5a1557a", "site": "简中官网", "path": "/wp-content/uploads/2026/06/649f34fb7cc8fbdbb469f9d01acb300f.png"}
+    ],
+    "swsh2-169": [
+      {"printing": "swsh2-169", "page": "https://www.pokemon.cn/tcg/product/16268.html", "width": 868, "height": 1207, "sha256": "74166adf10c106874babb332e6714c159a66d48b971c4bd0cc9d1cb048edc162", "site": "简中官网", "path": "/wp-content/uploads/2025/09/0e7a35797f104ea31fbdbb512f72bfb21a50058d.png"}
+    ]
+  }
+}

@@ -2,6 +2,7 @@
 // on top of the modern rules: they are played with today's rules (Pokémon V give up 2 Prize cards, VMAX 3).
 // The hooks here are reached from engine-mega.js (Trainers, Abilities, attack effects) and engine.js (damage).
 
+import { attackRef, powerRef } from './content-i18n/refs.js';
 export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
   const basicEnergy = (x) => x.kind === 'energy' && !x.special;
   const ofType = (type) => (x) => basicEnergy(x) && x.energyType === type;
@@ -67,7 +68,7 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         case 'birdKeeper': {
           const t = await this.pickMon(p, 'promote', p.bench, 'prompt.q.switchSelf', { c: C(c) }, 'Choose which Benched Pokémon becomes Active.', (x) => x.hpLeft / 10 + x.energy.length * 5);
           this.swapActive(p, t);
-          L('switch', { m: p.active.name });
+          L('switch', { m: C(p.active) });
           await this.becameActive(p);
           this.plog(p, 'log.t.drewN', { n: this.draw(p, 3) });
           break;
@@ -101,7 +102,7 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         case 'evolutionIncense': { const x = await take(evolution, 'prompt.q.searchPokemon', 'Choose an Evolution Pokémon.'); shuffle(p.deck); if (x) L('got', { got: C(x) }); break; }
         case 'hop': L('drew', { n: this.draw(p, 3) }); break;
         case 'leon': p.flags.leon = true; this.plog(p, 'log.leon', { c: C(c) }); break;
-        case 'metalSaucer': await this.attachFromDiscard(p, p.bench.filter((x) => x.card.type === 'Metal'), 1, ofType('Metal'), c.name); break;
+        case 'metalSaucer': await this.attachFromDiscard(p, p.bench.filter((x) => x.card.type === 'Metal'), 1, ofType('Metal'), C(c)); break;
         case 'nessa': {
           let n = 0;
           const ok = (x) => (x.kind === 'pokemon' && x.type === 'Water') || (x.kind === 'energy' && x.energyType === 'Water');
@@ -132,14 +133,14 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
           if (!(await coin('gust'))) { L('nothing'); break; }
           const t = await this.pickMon(p, 'lure', o.bench, 'prompt.lure.text', {}, "Choose one of the opponent's Benched Pokémon to switch into the Active Spot.", (x) => -x.hpLeft / 10 + (x.card.prizes ? 40 : 0));
           this.swapActive(o, t);
-          this.log('log.lure', { m: t.name });
+          this.log('log.lure', { m: C(t) });
           break;
         }
         case 'pokemonCenterLady': {
           const t = await this.pickMon(p, 'heal', this.allMons(p).filter((x) => x.damage || x.conditions().length), 'prompt.q.healWhich', { c: C(c), n: 60 }, 'Heal 60 damage from which Pokémon?', (x) => x.damage + x.conditions().length * 20);
           const h = await this.heal(t, 60);
-          if (t.conditions().length) { t.status = {}; this.log('log.cured', { m: t.name }, 'heal'); }
-          L('heal', { m: t.name, n: h });
+          if (t.conditions().length) { t.status = {}; this.log('log.cured', { m: C(t) }, 'heal'); }
+          L('heal', { m: C(t), n: h });
           break;
         }
         case 'sonia': {
@@ -157,7 +158,7 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         }
         case 'turboPatch': {
           if (!(await coin('attachEnergy'))) { L('nothing'); break; }
-          await this.attachFromDiscard(p, this.allMons(p).filter((x) => x.card.stage === 0 && !x.card.tags?.includes('GX')), 1, basicEnergy, c.name);
+          await this.attachFromDiscard(p, this.allMons(p).filter((x) => x.card.stage === 0 && !x.card.tags?.includes('GX')), 1, basicEnergy, C(c));
           break;
         }
         default: return this.playSwshVTrainer(p, o, c, act, L);
@@ -175,11 +176,11 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
       switch (act.pkind) {
         case 'battleSense': {
           const top = p.deck.splice(-3).reverse();
-          const x = await this.pickCard(p, 'search', top, 'prompt.q.keepK', { c: power.name, k: 1, n: 1 }, 'Choose the card to keep; the others are discarded.', { unique: false, ai: (y) => (y.tkind === 'rareCandy' ? 5 : y.ttype === 'supporter' ? 4 : y.kind === 'pokemon' && y.stage > 0 ? 3 : y.kind === 'energy' ? 2 : 1) }) || top[0];
+          const x = await this.pickCard(p, 'search', top, 'prompt.q.keepK', { c: powerRef(power), k: 1, n: 1 }, 'Choose the card to keep; the others are discarded.', { unique: false, ai: (y) => (y.tkind === 'rareCandy' ? 5 : y.ttype === 'supporter' ? 4 : y.kind === 'pokemon' && y.stage > 0 ? 3 : y.kind === 'energy' ? 2 : 1) }) || top[0];
           top.splice(top.indexOf(x), 1);
           p.hand.push(x);
           p.discard.push(...top);
-          this.plog(p, 'log.battleSense', { c: power.name, n: top.length });
+          this.plog(p, 'log.battleSense', { c: powerRef(power), n: top.length });
           break;
         }
         default: return this.swshVUseAbility(p, o, m, act, power);
@@ -195,26 +196,28 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
       if (fx.discardDefTools && d?.tools.length && !this.effectsBlocked(d)) {
         const n = d.tools.length;
         o.discard.push(...d.tools.splice(0).map((t) => t.card));
-        this.log('log.toolsDiscarded', { m: d.name, n }, 'status');
+        this.log('log.toolsDiscarded', { m: C(d), n }, 'status');
       }
       if (fx.optionalDiscardReduce && a.energy.length >= fx.optionalDiscardReduce.n &&
-        (await this.yesNo(p, 'prompt.q.discardForShield', { c: atk.name, n: fx.optionalDiscardReduce.n, r: fx.optionalDiscardReduce.reduce }, `Discard ${fx.optionalDiscardReduce.n} Energy so this Pokémon takes ${fx.optionalDiscardReduce.reduce} less damage next turn?`, a.hpLeft <= 150 ? 1 : -1))) {
-        p.discard.push(...a.energy.splice(-fx.optionalDiscardReduce.n));
+        (await this.yesNo(p, 'prompt.q.discardForShield', { c: attackRef(atk), n: fx.optionalDiscardReduce.n, r: fx.optionalDiscardReduce.reduce }, `Discard ${fx.optionalDiscardReduce.n} Energy so this Pokémon takes ${fx.optionalDiscardReduce.reduce} less damage next turn?`, a.hpLeft <= 150 ? 1 : -1))) {
+        await this.discardAttachedEnergy(p, [a], fx.optionalDiscardReduce.n);
         a.effects.reduce = { n: fx.optionalDiscardReduce.reduce, expires: this.turn + 1 };
-        this.log('log.reduce', { m: a.name, n: fx.optionalDiscardReduce.reduce }, 'status');
+        this.log('log.reduce', { m: C(a), n: fx.optionalDiscardReduce.reduce }, 'status');
       }
       // Continuous Gulp Missile: discard any number of a named Pokémon from your Bench, damage for each.
       if (fx.discardBenchNamedTimes) {
         const pool = p.bench.filter((x) => x.name === fx.discardBenchNamedTimes.name);
-        const n = await this.pickNumber(p, 'drawN', pool.length, 'prompt.q.discardBenchNamed', { c: atk.name, m: fx.discardBenchNamedTimes.name, n: fx.discardBenchNamedTimes.n }, `How many ${fx.discardBenchNamedTimes.name} do you discard from your Bench (${fx.discardBenchNamedTimes.n} damage each)?`, (k) => k);
-        for (const m of pool.slice(0, n)) p.discard.push(...this.removeFromPlay(p, m));
+        const n = await this.pickNumber(p, 'drawN', pool.length, 'prompt.q.discardBenchNamed', { c: attackRef(atk), m: fx.discardBenchNamedTimes.name, n: fx.discardBenchNamedTimes.n }, `How many ${fx.discardBenchNamedTimes.name} do you discard from your Bench (${fx.discardBenchNamedTimes.n} damage each)?`, (k) => k);
+        const chosen = await this.pickSubset(pool, n, (remaining) =>
+          this.pickMon(p, 'discardFrom', remaining, 'prompt.q.discardWhichPokemon', { c: attackRef(atk) }, 'Which Benched Pokémon do you discard?', (m) => -m.energy.length));
+        for (const m of chosen) p.discard.push(...this.removeFromPlay(p, m));
         if (n) this.plog(p, 'log.benchDiscarded', { n, m: fx.discardBenchNamedTimes.name });
         bonus += fx.discardBenchNamedTimes.n * n;
       }
       // Frozen Heat: you may discard all Energy of a type from this Pokémon for more damage.
       if (fx.optionalDiscardTypeAll && a.energy.some((en) => en.energyType === fx.optionalDiscardTypeAll.type)) {
         const t = fx.optionalDiscardTypeAll.type;
-        if (await this.yesNo(p, 'prompt.q.discardTypeForBonus', { c: atk.name, t: { $type: t }, b: fx.optionalDiscardTypeAll.bonus }, `Discard all ${t} Energy from this Pokémon for +${fx.optionalDiscardTypeAll.bonus} damage?`, 1)) {
+        if (await this.yesNo(p, 'prompt.q.discardTypeForBonus', { c: attackRef(atk), t: { $type: t }, b: fx.optionalDiscardTypeAll.bonus }, `Discard all ${t} Energy from this Pokémon for +${fx.optionalDiscardTypeAll.bonus} damage?`, 1)) {
           const out = a.energy.filter((en) => en.energyType === t);
           a.energy = a.energy.filter((en) => !out.includes(en));
           p.discard.push(...out);
@@ -224,7 +227,7 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
       if (fx.flipMultiBonus) {
         let heads = 0;
         for (let k = 0; k < fx.flipMultiBonus.n; k++)
-          if (await this.flip('multi', { atk: atk.name, i: k + 1, n: fx.flipMultiBonus.n, so: heads }, [{ key: 'coin.o.plus', params: { n: fx.flipMultiBonus.bonus } }, { key: 'coin.o.nothing', params: {} }])) heads++;
+          if (await this.flip('multi', { atk: attackRef(atk), i: k + 1, n: fx.flipMultiBonus.n, so: heads }, [{ key: 'coin.o.plus', params: { n: fx.flipMultiBonus.bonus } }, { key: 'coin.o.nothing', params: {} }])) heads++;
         bonus += fx.flipMultiBonus.bonus * heads;
       }
       return bonus + (await this.swshVPreDamage(p, a, atk, fx));
@@ -233,25 +236,25 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
     async swshAfter(p, o, a, d, atk, fx) {
       const dActive = d && o.active === d && !this.effectsBlocked(d);
       if (fx.oncePerActive) a.effects.usedActive = { atk: atk.name, expires: 1e9 }; // cleared when it leaves the Active Spot
-      if (fx.boostNext) { a.effects.boost = { atk: fx.boostNext.atk, n: fx.boostNext.n, expires: this.turn + 2 }; this.log('log.boostNext', { m: a.name, atk: fx.boostNext.atk, n: fx.boostNext.n }, 'status'); }
-      if (fx.weaken && dActive) { d.effects.weaken = { n: fx.weaken, expires: this.turn + 1 }; this.log('log.weaken', { m: d.name, n: fx.weaken }, 'status'); }
+      if (fx.boostNext) { a.effects.boost = { atk: fx.boostNext.atk, n: fx.boostNext.n, expires: this.turn + 2 }; this.log('log.boostNext', { m: C(a), atk: fx.boostNext.atk, n: fx.boostNext.n }, 'status'); }
+      if (fx.weaken && dActive) { d.effects.weaken = { n: fx.weaken, expires: this.turn + 1 }; this.log('log.weaken', { m: C(d), n: fx.weaken }, 'status'); }
       if (fx.statusIfPlayed && dActive && p.flags.played?.includes(fx.statusIfPlayed.name)) this.applyStatus(d, fx.statusIfPlayed.status);
       // Aqua Wash / Hydro Snipe: you may return Energy from the Defending Pokémon to its owner's hand.
       if (fx.bounceDefEnergy && dActive && d.energy.length &&
-        (!fx.bounceDefEnergy.may || (await this.yesNo(p, 'prompt.q.bounceEnergy', { c: atk.name, m: d.name, n: fx.bounceDefEnergy.n }, `Put up to ${fx.bounceDefEnergy.n} Energy attached to ${d.name} into the opponent's hand?`, 1)))) {
+        (!fx.bounceDefEnergy.may || (await this.yesNo(p, 'prompt.q.bounceEnergy', { c: attackRef(atk), m: C(d), n: fx.bounceDefEnergy.n }, `Put up to ${fx.bounceDefEnergy.n} Energy attached to ${d.name} into the opponent's hand?`, 1)))) {
         let n = 0;
         for (let k = 0; k < fx.bounceDefEnergy.n && d.energy.length; k++) {
-          const en = await this.pickCard(p, 'discard', d.energy, 'prompt.q.bounceWhich', { c: atk.name, m: d.name }, 'Choose an Energy to return to the opponent’s hand.', { none: k > 0, unique: false, ai: (x) => (x.special ? 2 : 1) });
+          const en = await this.pickCard(p, 'discard', d.energy, 'prompt.q.bounceWhich', { c: attackRef(atk), m: C(d) }, 'Choose an Energy to return to the opponent’s hand.', { none: k > 0, unique: false, ai: (x) => (x.special ? 2 : 1) });
           if (!en) break;
           o.hand.push(...d.energy.splice(d.energy.indexOf(en), 1)); n++;
         }
-        if (n) this.log('log.energyBounced', { m: d.name, n }, 'status');
+        if (n) this.log('log.energyBounced', { m: C(d), n }, 'status');
       }
       // Targeted Skewer: damage to a Benched Pokémon for each damage counter on it.
       if (fx.snipeByCounters && o.bench.length) {
-        const t = await this.pickMon(p, 'snipe', o.bench.filter((x) => !this.effectsBlocked(x)), 'prompt.q.snipeByCounters', { c: atk.name, n: fx.snipeByCounters }, `Which Benched Pokémon takes ${fx.snipeByCounters} damage for each damage counter on it?`, (x) => (x.counters * fx.snipeByCounters >= x.hpLeft ? 100 : 0) + x.counters);
+        const t = await this.pickMon(p, 'snipe', o.bench.filter((x) => !this.effectsBlocked(x)), 'prompt.q.snipeByCounters', { c: attackRef(atk), n: fx.snipeByCounters }, `Which Benched Pokémon takes ${fx.snipeByCounters} damage for each damage counter on it?`, (x) => (x.counters * fx.snipeByCounters >= x.hpLeft ? 100 : 0) + x.counters);
         const n = t ? fx.snipeByCounters * t.counters : 0;
-        if (n) { await this.spread(a, [[t, n]]); this.log('log.benchSnipe', { n, list: t.name }, 'dmg'); }
+        if (n) { await this.spread(a, [[t, n]]); this.log('log.benchSnipe', { n, list: C(t) }, 'dmg'); }
       }
       if (fx.millSelf && p.deck.length) { const out = p.deck.splice(-fx.millSelf); p.discard.push(...out); this.plog(p, 'log.milled', { n: out.length }); }
       if (fx.millOpp && o.deck.length) for (const x of o.deck.splice(-fx.millOpp)) { o.discard.push(x); this.plog(o, 'log.milledCard', { c: C(x) }); }
@@ -260,22 +263,21 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         o.discard.push(x);
         this.plog(o, 'log.randomDiscard', { c: C(x) });
       }
-      if (fx.tailsDiscard && a.energy.length && !(await this.flip('attack', { atk: atk.name }, [{ key: 'coin.o.nothing', params: {} }, { key: 'coin.o.discardN', params: { n: fx.tailsDiscard } }]))) {
-        const out = a.energy.splice(-fx.tailsDiscard);
-        p.discard.push(...out);
-        this.log('log.discardedN', { m: a.name, n: out.length }, 'status');
+      if (fx.tailsDiscard && a.energy.length && !(await this.flip('attack', { atk: attackRef(atk) }, [{ key: 'coin.o.nothing', params: {} }, { key: 'coin.o.discardN', params: { n: fx.tailsDiscard } }]))) {
+        const out = await this.discardAttachedEnergy(p, [a], fx.tailsDiscard);
+        this.log('log.discardedN', { m: C(a), n: out.length }, 'status');
       }
       if (fx.returnTypeToHand) {
         const out = a.energy.filter((en) => en.energyType === fx.returnTypeToHand.type).slice(0, fx.returnTypeToHand.n);
         a.energy = a.energy.filter((en) => !out.includes(en));
         p.hand.push(...out);
-        if (out.length) this.plog(p, 'log.energyToHand', { m: a.name, n: out.length });
+        if (out.length) this.plog(p, 'log.energyToHand', { m: C(a), n: out.length });
       }
       // Cotton Ride: on heads the opponent shuffles their Active Pokémon and everything on it into their deck.
-      if (fx.flipShuffleDef && dActive && (await this.flip('attack', { atk: atk.name }, [{ key: 'coin.o.shuffleIn', params: { m: d.name } }, { key: 'coin.o.nothing', params: {} }]))) {
+      if (fx.flipShuffleDef && dActive && (await this.flip('attack', { atk: attackRef(atk) }, [{ key: 'coin.o.shuffleIn', params: { m: C(d) } }, { key: 'coin.o.nothing', params: {} }]))) {
         o.deck.push(...this.removeFromPlay(o, d));
         shuffle(o.deck);
-        this.log('log.shuffledIntoDeck', { m: d.name }, 'status');
+        this.log('log.shuffledIntoDeck', { m: C(d) }, 'status');
         await this.refillActive();
       }
       await this.swshVAfter(p, o, a, d, atk, fx);

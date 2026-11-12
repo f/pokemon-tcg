@@ -1,11 +1,13 @@
 import { DECKS, CARDS, CARD_BACK, PRIZES, DECK_GROUPS, MODERN_GROUPS, loadDeck } from './cards.js';
-import { Game, isType } from './engine.js';
+import { Game, C, canPay, isType } from './engine.js';
 import { AIController, rankActions, aiConfig } from './ai.js';
 import { RPS_CANCEL, chooseThrow, showdown, rpsReset, rpsClose } from './rps.js';
 import { api, inApp, online, webOnly, MAC_DOWNLOAD } from './api.js';
+import { bindCardImage, cardImageAttrs, refreshCardImages } from './card-image/display.js';
+import { requestCardImage } from './card-image/request.js';
 
 if (inApp) document.documentElement.classList.add('in-app'); // the macOS app (see the in-app rules in style.css)
-import { t, setLang, getLang, cardName, CARD_TEXT_TR, RULES_HTML } from './i18n.js';
+import { t, setLang, getLang, cardName, attackName, powerName, termName, deckName, resolve, RULES_HTML } from './i18n.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -36,16 +38,43 @@ const backImg = () => `<img src="${CARD_BACK}" alt="" draggable="false">`;
 // Per-turn markers kept in a Pokémon's effects for card rules, not shown as tags.
 const HIDDEN_EFFECTS = new Set(['lastHit', 'healedNow', 'evolvedNow', 'movedActive', 'lastAtk']);
 
+const startLogo = $('.start-hero .set-logo');
+const englishStartLogo = [startLogo.getAttribute('src'), startLogo.alt];
+const startLogos = {
+  es: ['img/set-logo-es.svg', 'Juego de Cartas Coleccionables Pokémon'],
+  'zh-Hans': ['img/set-logo-zh-Hans.svg', '宝可梦集换式卡牌游戏'],
+  'zh-Hant': ['img/set-logo-zh-Hant.png', '寶可夢集換式卡牌遊戲'],
+};
+
+function updateStartLogo(locale) {
+  const localized = startLogos[locale];
+  const [src, alt] = localized ?? englishStartLogo;
+  startLogo.lang = localized ? locale : 'en';
+  startLogo.alt = alt;
+  if (startLogo.getAttribute('src') !== src) startLogo.src = src;
+}
+
+startLogo.addEventListener('error', () => updateStartLogo('en'));
+
 function applyStaticText() {
-  document.documentElement.lang = getLang();
+  const locale = getLang();
+  document.documentElement.lang = locale;
+  updateStartLogo(locale);
   document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   // The welcome text counts the decks, so it stays right as decks are added.
   const counts = { classic: Object.values(DECKS).filter((d) => d.format !== 'modern').length, modern: Object.values(DECKS).filter((d) => d.format === 'modern').length };
   document.querySelectorAll('[data-i18n-html]').forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml, counts); });
   document.querySelectorAll('[data-i18n-title]').forEach((el) => { el.title = t(el.dataset.i18nTitle); });
   document.querySelectorAll('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
-  document.querySelectorAll('.lang button').forEach((b) => b.classList.toggle('on', b.dataset.lang === getLang()));
-  $('#rules-body').innerHTML = RULES_HTML[getLang()].replace('{classic}', counts.classic).replace('{modern}', counts.modern); // deck counts stay right as decks are added
+  document.querySelectorAll('.lang button').forEach((b) => {
+    const active = b.dataset.lang === getLang();
+    b.classList.toggle('on', active);
+    b.setAttribute('aria-pressed', String(active));
+  });
+  const charmander = CARDS['base1-46'];
+  $('#rules-body').innerHTML = (RULES_HTML[locale] || RULES_HTML.en)
+    .replace('{classic}', counts.classic).replace('{modern}', counts.modern)
+    .replace('{charmanderImage}', () => `<img ${cardImageAttrs(charmander, { large: true })} alt="${esc(cardName(charmander))}">`);
   const slot = $('#rules-body [data-dice-chart]');
   if (slot) slot.innerHTML = diceChart();
   $('#dice-label').textContent = t('ui.diceStyle').replace(/\s*[:：]\s*$/, ''); // a row label, not a prompt
@@ -59,7 +88,7 @@ function monTile(m, { active = false, owner }) {
   const ratio = m.hpLeft / m.maxHp;
   const tags = [
     ...m.conditions().map((s) => `<span class="tag-status">${esc(t('st.' + s))}</span>`),
-    ...m.tools.map((x) => `<span class="tag-tool">${esc(x.card.name)}</span>`),
+    ...m.tools.map((x) => `<span class="tag-tool">${esc(cardName(x.card))}</span>`),
     ...Object.keys(m.effects).filter((k) => !HIDDEN_EFFECTS.has(k)).map((k) => `<span class="tag-fx">${esc(t('tag.' + k))}</span>`),
   ].join('');
   // Attached Energy and Trainer cards sit tucked under the Pokémon with a strip showing, like on a real table.
@@ -67,14 +96,14 @@ function monTile(m, { active = false, owner }) {
   const under = [...m.energy, ...m.tools.map((x) => x.card)];
   const tucked = under.map((c, i) => {
     inspectables.set('u' + c.uid, c);
-    const mark = c.kind === 'energy' ? energyIcon(c.energyType) : `<span class="tool-mark">${esc(c.name)}</span>`;
-    return `<div class="tucked ${arrivingCards.has(c.uid) ? 'arriving' : ''}" data-cuid="${c.uid}" data-inspect="u${c.uid}" style="--i:${i};z-index:${under.length - i};background-image:url('${c.img}')">${mark}</div>`;
+    const mark = c.kind === 'energy' ? energyIcon(c.energyType) : `<span class="tool-mark">${esc(cardName(c))}</span>`;
+    return `<div class="tucked ${arrivingCards.has(c.uid) ? 'arriving' : ''}" data-cuid="${c.uid}" data-inspect="u${c.uid}" ${cardImageAttrs(c, { background: true })} style="--i:${i};z-index:${under.length - i};background-image:url('${esc(c.img)}')">${mark}</div>`;
   }).join('');
   return `<div class="mon ${active ? 'active' : ''} ${owner.idx === 1 ? 'up' : ''} ${arena?.ids.has(m.id) ? 'in-arena' : ''}" data-inspect="m${m.id}" data-mon="${m.id}">
     <div class="pile-under" style="--n:${under.length};--pkf:${Math.min(1, 3 / Math.max(1, under.length)).toFixed(3)}">
       ${tucked}
       <div class="top-card ${arrivingCards.has(m.card.uid) ? 'arriving' : ''}" data-cuid="${m.card.uid}">
-        <img class="card-img" src="${m.card.img}" alt="${esc(m.name)}" draggable="false">
+        <img class="card-img" ${cardImageAttrs(m.card)} alt="${esc(cardName(m.card))}" draggable="false">
         ${diceHtml(m)}
         <div class="tags">${tags}</div>
       </div>
@@ -125,10 +154,7 @@ function arenaCard(m, rect) {
   const w = document.createElement('div');
   w.className = 'arena-card';
   // The mat's (already decoded) image first; the large one swaps in once decoded, never mid-animation.
-  w.innerHTML = `<img src="${m.card.img}" alt="${esc(m.name)}"><i class="a-glow"></i><div class="a-dice"></div><div class="a-hp"></div>`;
-  const img = w.querySelector('img'), hi = new Image();
-  hi.src = m.card.imgLarge;
-  hi.decode().then(() => { img.src = hi.src; }).catch(() => {});
+  w.innerHTML = `<img ${cardImageAttrs(m.card, { upgrade: true })} alt="${esc(cardName(m.card))}"><i class="a-glow"></i><div class="a-dice"></div><div class="a-hp"></div>`;
   Object.assign(w.style, { left: `${rect.left}px`, top: `${rect.top}px`, width: `${rect.width}px` });
   updateArenaCard(w, m, m.damage);
   return w;
@@ -176,7 +202,7 @@ async function arenaOpen({ p, from, to, atk, type }) {
     <div class="panel left" style="--c:var(--${mine.card.type})"></div>
     <div class="panel right" style="--c:var(--${theirs.card.type})"></div>
     <div class="speedlines"></div>
-    <div class="arena-title" style="--c:var(--${type})"><span>${esc(atk)}</span></div>`;
+    <div class="arena-title" style="--c:var(--${type})"><span>${esc(resolve(atk))}</span></div>`;
   document.body.append(el);
   document.body.classList.add('arena-on');
   arena = { el, cards: new Map(), ids: new Set([from, to]), attacker: from, side: p, type };
@@ -570,7 +596,7 @@ async function onEvolve({ p, mon, from, to }) {
   const ov = document.createElement('div');
   ov.className = 'evolve-stage';
   ov.innerHTML = `<div class="ev-rays"></div><div class="ev-glow"></div>
-    <div class="ev-card"><img class="ev-old" src="${from.imgLarge}" alt=""><img class="ev-new" src="${to.imgLarge}" alt=""><i class="ev-sil"></i></div>
+    <div class="ev-card"><img class="ev-old" ${cardImageAttrs(from, { large: true })} alt=""><img class="ev-new" ${cardImageAttrs(to, { large: true })} alt=""><i class="ev-sil"></i></div>
     <div class="ev-sparkles"></div>`;
   document.body.append(ov);
   document.body.classList.add('arena-on');
@@ -584,7 +610,7 @@ async function onEvolve({ p, mon, from, to }) {
   // The evolution card flies in from the hand and merges into the Pokémon.
   if (handCard) {
     if (p === 0) handCard.style.visibility = 'hidden';
-    await fly(handCard, card, { front: p === 0 ? to.img : null });
+    await fly(handCard, card, { front: p === 0 ? to : null });
   }
   ov.classList.add('glowing');
   // Sparkles drifting up around the card.
@@ -618,7 +644,7 @@ async function onEvolve({ p, mon, from, to }) {
   ov.classList.remove('glowing');
   ov.classList.add('revealed');
   card.animate([{ transform: 'scale(1.15)' }, { transform: 'scale(.97)', offset: 0.6 }, { transform: 'scale(1)' }], { duration: 480, easing: 'cubic-bezier(.3,.7,.4,1.4)' });
-  stamp({ left: innerWidth / 2 - 10, top: innerHeight / 2 + h * 0.36, width: 20, height: 40 }, `${esc(to.name)}!`, 'evolve-stamp', { dur: 1500 });
+  stamp({ left: innerWidth / 2 - 10, top: innerHeight / 2 + h * 0.36, width: 20, height: 40 }, `${esc(cardName(to))}!`, 'evolve-stamp', { dur: 1500 });
   await sleep(1100);
   // Back to its spot on the mat (the engine then re-renders it as the evolved card).
   ov.querySelector('.ev-rays').style.opacity = 0;
@@ -640,7 +666,7 @@ function onBench({ p, card }) {
   arrivingCards.add(card.uid);
   if (p === 0) from.style.visibility = 'hidden';
   // Until the engine re-renders, the new Bench slot doesn't exist yet; the flight retargets as soon as it does.
-  track(fly(from, () => document.querySelector(`[data-cuid="${card.uid}"]`) || from, { front: card.img, faceUp: p === 0 }).then(() => reveal(card.uid)));
+  track(fly(from, () => document.querySelector(`[data-cuid="${card.uid}"]`) || from, { front: card, faceUp: p === 0 }).then(() => reveal(card.uid)));
 }
 
 // Gary's Trainer cards: the card flips face up at centre stage with what it does, then goes to the discard pile.
@@ -651,13 +677,13 @@ async function onTrainer({ p, card, label }) {
   const k = card.stadium || card.tkind;
   const ov = document.createElement('div');
   ov.className = 'trainer-stage';
-  ov.innerHTML = `<div class="ts-row"><div class="ts-slot"><img src="${card.imgLarge || card.img}" alt=""></div>
+  ov.innerHTML = `<div class="ts-row"><div class="ts-slot"><img ${cardImageAttrs(card, { large: true })} alt=""></div>
     <div class="ts-text"><small>${icon(card.stadium ? 'landmark' : 'backpack')} ${esc(t('ui.oppTrainer', { P: { $pl: 1 } }))}</small>
-      <b>${esc(cardName(card))}</b>${label.params?.m ? `<em>${icon('arrow-right')} ${esc(label.params.m)}</em>` : ''}<p>${esc(t('tr.' + k + '.what'))}</p></div></div>`;
+      <b>${esc(cardName(card))}</b>${label.params?.m ? `<em>${icon('arrow-right')} ${esc(resolve(label.params.m))}</em>` : ''}<p>${esc(t('tr.' + k + '.what'))}</p></div></div>`;
   document.body.append(ov);
   const slot = ov.querySelector('.ts-slot');
   ov.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 220, fill: 'forwards' });
-  if (from) await fly(from, slot, { front: card.img });
+  if (from) await fly(from, slot, { front: card });
   slot.classList.add('shown');
   ov.classList.add('revealed');
   // Stay long enough to read; a click moves on sooner.
@@ -666,7 +692,7 @@ async function onTrainer({ p, card, label }) {
   ov.classList.add('leaving');
   if (pile && !card.stadium && !['plusPower', 'defender'].includes(card.tkind)) {
     slot.style.visibility = 'hidden';
-    const done = fly(slot, pile, { front: card.img, faceUp: true });
+    const done = fly(slot, pile, { front: card, faceUp: true });
     ov.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'forwards' });
     await done;
   } else {
@@ -699,7 +725,7 @@ async function onAttach({ p, mon, card }) {
   const cardH = monEl.querySelector('.top-card')?.offsetHeight || 120;
   const approach = dir * cardH * 0.85;
   const tucked = () => document.querySelector(`[data-cuid="${card.uid}"]`);
-  track(fly(from, () => tucked() || monEl.querySelector('.top-card'), { front: card.img, offsetY: approach }).then(() => {
+  track(fly(from, () => tucked() || monEl.querySelector('.top-card'), { front: card, offsetY: approach }).then(() => {
     // Phase 2: hand over to the real tucked card, which sits behind the Pokémon: the Pokémon lifts a little,
     // the card slides in underneath, then the Pokémon settles back and closes over it.
     const tk = tucked();
@@ -878,6 +904,27 @@ function openSettings() {
   engineBoxHtml = '';
   renderEngineBox();
   refreshEngine();
+  void refreshCardImageCoverage();
+}
+
+let cardImageCoverageRequest;
+async function refreshCardImageCoverage() {
+  const badge = $('#card-images-coverage');
+  badge.hidden = true;
+  const url = new URL('card-image/data/coverage.json', document.baseURI);
+  cardImageCoverageRequest ??= requestCardImage(url, (response) => {
+    if (!response.ok) throw new Error('Card image coverage unavailable');
+    return response.json();
+  }).catch(() => {
+    cardImageCoverageRequest = undefined;
+  });
+  const coverage = await cardImageCoverageRequest;
+  const count = coverage?.byLocale?.[getLang()];
+  if (!Number.isInteger(count) || !Number.isInteger(coverage.total)) return;
+  badge.textContent = count + '/' + coverage.total;
+  badge.title = t('ui.cardImagesCoverage', { count, total: coverage.total });
+  badge.setAttribute('aria-label', badge.title);
+  badge.hidden = false;
 }
 
 // ---------------- Drag and drop from the hand ----------------
@@ -925,7 +972,7 @@ function startDrag(e) {
   const g = document.createElement('div');
   g.className = 'drag-ghost' + (drag.zones.length ? '' : ' no');
   const why = drag.zones.length ? '' : `<div class="why">${icon('lightbulb')} ${esc(t(...whyNot(card, game.players[0])))}</div>`;
-  g.innerHTML = `<img src="${card.img}" alt="">${why}`;
+  g.innerHTML = `<img ${cardImageAttrs(card)} alt="">${why}`;
   document.body.append(g);
   drag.ghost = g;
   moveDrag(e);
@@ -1148,7 +1195,11 @@ function callCoinStage() {
     document.addEventListener('keydown', onKey);
     for (const [cls, call, label] of [['h', 'heads', t('ui.heads')], ['t', 'tails', t('ui.tails')]]) {
       const s = el.querySelector(`.cs-side.${cls}`);
-      s.innerHTML = `<button class="call-btn" data-call="${call}">${miniFace(cls)}<span class="cs-label">${esc(label)}</span><span class="cs-key">${call === 'heads' ? 'H' : 'T'}</span></button>`;
+      const key = cls.toUpperCase();
+      s.innerHTML = `<button type="button" class="call-btn" data-call="${call}" aria-keyshortcuts="${key}">
+        ${miniFace(cls)}
+        <span class="cs-choice-label"><span class="cs-label">${esc(label)}</span><kbd class="shortcut-cap" aria-hidden="true">${key}</kbd></span>
+      </button>`;
       s.querySelector('button').onclick = () => pick(call);
     }
   });
@@ -1173,7 +1224,7 @@ function pilesHtml(p) {
   const tilt = (c) => ((c.uid * 37) % 15) - 7;
   const discard = top
     ? `<div class="stack discard" data-inspect="d${p.idx}">${p.discard.slice(-3).map((c) =>
-        `<img src="${c.img}" alt="" style="transform: rotate(${tilt(c)}deg)">`).join('')}</div>`
+        `<img ${cardImageAttrs(c)} alt="" style="transform: rotate(${tilt(c)}deg)">`).join('')}</div>`
     : '<div class="empty"></div>';
   return `<div class="pile" data-pile="deck">${deck}<span class="count">${p.deck.length}</span><div>${esc(t('ui.deck'))}</div></div>
     <div class="pile" data-pile="discard">${discard}<span class="count">${p.discard.length}</span><div>${esc(t('ui.discard'))}</div></div>`;
@@ -1242,7 +1293,7 @@ function fly(from, to, { front = null, delay = 0, rot = 0, offsetY = 0, faceUp =
   const el = document.createElement('div');
   el.className = 'fly';
   Object.assign(el.style, { left: '0px', top: '0px', width: `${w}px`, height: `${h}px`, transformOrigin: '50% 50%', visibility: 'hidden' });
-  el.innerHTML = `<div class="fly-inner ${front ? '' : 'back-only'}">${front ? `<img class="ff" src="${front}" alt="">` : ''}<img class="fb" src="${CARD_BACK}" alt=""></div>`;
+  el.innerHTML = `<div class="fly-inner ${front ? '' : 'back-only'}">${front ? `<img class="ff" ${cardImageAttrs(front)} alt="">` : ''}<img class="fb" src="${CARD_BACK}" alt=""></div>`;
   document.body.append(el);
   const inner = el.firstChild;
   const D = 760, s0 = a.width / w;
@@ -1297,7 +1348,7 @@ function flyNewCards(you, opp, newCards) {
       const target = () => cardEl(c.uid);
       if (!from || !target()) { arrivingCards.delete(c.uid); return; }
       const stage = staged && prizeFrom.stage;
-      fly(from, target, { front: c.img, delay: i * 120, faceUp: !!staged }).then(() => reveal(c.uid));
+      fly(from, target, { front: c, delay: i * 120, faceUp: !!staged }).then(() => reveal(c.uid));
       if (stage) closePrizeStage(stage);
     });
     const extra = opp.hand.length - seenOppHand;
@@ -1358,7 +1409,7 @@ function render() {
   $('#hand').innerHTML = you.hand.map((c) => {
     inspectables.set('c' + c.uid, c);
     const arriving = arrivingCards.has(c.uid) || (animateDraws && newCards.includes(c)) ? 'arriving' : '';
-    return `<div class="hcard ${arriving}" data-inspect="c${c.uid}" data-card="${c.uid}"><img src="${c.img}" alt="${esc(cardName(c))}" draggable="false"></div>`;
+    return `<div class="hcard ${arriving}" data-inspect="c${c.uid}" data-card="${c.uid}"><img ${cardImageAttrs(c)} alt="${esc(cardName(c))}" draggable="false"></div>`;
   }).join('');
   layoutHand();
   markPlayable();
@@ -1373,7 +1424,7 @@ function render() {
   const st = game.stadium?.card;
   if (st) inspectables.set('s' + st.uid, st);
   $('#stadium').hidden = !st;
-  $('#stadium').innerHTML = st ? `<img src="${st.img}" alt="" data-inspect="s${st.uid}"><span><small>${icon('landmark')} ${esc(t('ui.stadium'))}</small><b data-inspect="s${st.uid}">${esc(st.name)}</b></span>` : '';
+  $('#stadium').innerHTML = st ? `<img ${cardImageAttrs(st)} alt="" data-inspect="s${st.uid}"><span><small>${icon('landmark')} ${esc(t('ui.stadium'))}</small><b data-inspect="s${st.uid}">${esc(cardName(st))}</b></span>` : '';
 }
 
 // Hovering a card shows a large floating preview next to it. It never takes space in the layout, so nothing jumps.
@@ -1385,7 +1436,9 @@ function inspect(card, reason = null, anchor = null) {
   const key = anchor?.dataset.inspect || '';
   const mon = key.startsWith('m') ? monById(Number(key.slice(1))) : null;
   const why = reason ? `<div class="why">${icon('lightbulb')} ${esc(t(reason[0], reason[1]))}</div>` : '';
-  pv.innerHTML = `<img src="${card.imgLarge}" alt="${esc(cardName(card))}"><div class="explain">${why}${explainCard(card, mon)}</div>`;
+  const name = cardName(card);
+  const title = withOriginal(name, card.kind === 'energy' && !card.special ? name : card.name);
+  pv.innerHTML = `<img ${cardImageAttrs(card, { large: true })} alt="${esc(name)}"><div class="explain"><h3 class="pv-name">${esc(title)}</h3>${why}${explainCard(card, mon)}</div>`;
   pv.hidden = false;
   if (anchor) placePreview(anchor);
 }
@@ -1414,8 +1467,12 @@ function missingEnergy(have, cost) {
 
 const stx = (s) => [].concat(s).map((x) => `<b>${esc(t('st.' + x))}</b> <span class="muted">${esc(t('stx.' + x))}</span>`).join(' + ');
 
+const withOriginal = (name, original) => name === original ? name : `${name}（${original}）`;
+
 function attackEffects(atk, owner) {
   const fx = atk.fx, out = [];
+  const cardTerm = (name) => cardName({ name });
+  const attackTerm = (name) => attackName({ name, sourceCardId: atk.sourceCardId });
   if (fx.lure) out.push(t('fx.lure'));
   if (fx.needsDefAsleep) out.push(t('fx.needsDefAsleep'));
   if (fx.flipFail) out.push(t('fx.flipFail'));
@@ -1466,7 +1523,7 @@ function attackEffects(atk, owner) {
     'shuffleSelf', 'flipShuffleSelf', 'fadeOut', 'flipStatusChoice', 'halfHp', 'bonfire', 'falseCharity', 'helpingHand', 'lifeDrain', 'switchSelf',
     'needsEqualEnergy', 'peekHand', 'flipNoAttack', 'noRetreat', 'flipNoRetreat', 'flipNoEnergy', 'cooldown', 'plusSelfCounters']) if (fx[k]) T(k);
   if (fx.reduce) T('reduce', { n: fx.reduce });
-  if (fx.callFamily) T('callFamily', { names: fx.callFamily.names.join(' / ') });
+  if (fx.callFamily) T('callFamily', { names: fx.callFamily.names.map(cardTerm).join(' / ') });
   if (fx.callFriend) T('callFriend', { who: fx.callFriend.who });
   if (fx.draw) T('draw', { n: fx.draw });
   if (fx.flipDraw) T('flipDraw', { n: fx.flipDraw });
@@ -1481,7 +1538,7 @@ function attackEffects(atk, owner) {
   if (fx.benchType) T('benchType', { n: fx.benchType.n, t: { $type: fx.benchType.type } });
   for (const k of ['searchAttach', 'searchEnergy', 'attachFromDiscard', 'needsType', 'flipTailsDiscard']) if (typeof fx[k] === 'string') T(k, { t: { $type: fx[k] } });
   if (fx.flipRecoverEnergy) T('flipRecoverEnergy', { n: fx.flipRecoverEnergy.n, t: { $type: fx.flipRecoverEnergy.type } });
-  if (fx.focus) T('focus', { atk: fx.focus });
+  if (fx.focus) T('focus', { atk: attackTerm(fx.focus) });
   if (fx.riskyTails) T('riskyTails', { n: fx.riskyTails });
   if (fx.bonusIfDamaged) T('bonusIfDamaged', { n: fx.bonusIfDamaged });
   if (fx.gustAfter) T(fx.gustAfter.flip ? 'gustAfterFlip' : 'gustAfter');
@@ -1518,7 +1575,7 @@ function attackEffects(atk, owner) {
     'noAttackIfBasic', 'ignoreDefEffects', 'trainerFromDiscard', 'moonglowReverse', 'tmEvolution', 'tmDevolution', 'needsDefTera',
     'lockout', 'selfToHandAll', 'evolveFromDeck', 'discardAllEnergy', 'noWeakness']) if (fx[k]) T(k);
   // Newest decks
-  if (fx.needsBenchName) T('needsBenchName', { m: fx.needsBenchName });
+  if (fx.needsBenchName) T('needsBenchName', { m: cardTerm(fx.needsBenchName) });
   if (fx.healBenchType) T('healBenchType', { n: fx.healBenchType.n, t: ty(fx.healBenchType.type) });
   if (fx.discardSelfTimes) T('discardSelfTimes', { n: fx.discardSelfTimes.n, max: fx.discardSelfTimes.max });
   if (fx.timesOwnInPlay) T('timesOwnInPlay', { n: fx.timesOwnInPlay });
@@ -1528,18 +1585,18 @@ function attackEffects(atk, owner) {
   if (fx.fetchHide) T('fetchHide');
   // Sword & Shield
   if (fx.snipeByCounters) T('snipeByCounters', { n: fx.snipeByCounters });
-  if (fx.plusBenchNamed) T('plusBenchNamed', { n: fx.plusBenchNamed.n, m: fx.plusBenchNamed.name });
-  if (fx.plusDiscardNamed) T('plusDiscardNamed', { n: fx.plusDiscardNamed.n, m: fx.plusDiscardNamed.name });
+  if (fx.plusBenchNamed) T('plusBenchNamed', { n: fx.plusBenchNamed.n, m: cardTerm(fx.plusBenchNamed.name) });
+  if (fx.plusDiscardNamed) T('plusDiscardNamed', { n: fx.plusDiscardNamed.n, m: cardTerm(fx.plusDiscardNamed.name) });
   if (fx.millSelf) T('millSelf', { n: fx.millSelf });
   if (fx.tailsDiscard) T('tailsDiscard', { n: fx.tailsDiscard });
   if (fx.optionalDiscardReduce) T('optionalDiscardReduce', { n: fx.optionalDiscardReduce.n, r: fx.optionalDiscardReduce.reduce });
   if (fx.discardDefTools) T('discardDefTools');
-  if (fx.discardBenchNamedTimes) T('discardBenchNamedTimes', { n: fx.discardBenchNamedTimes.n, m: fx.discardBenchNamedTimes.name });
+  if (fx.discardBenchNamedTimes) T('discardBenchNamedTimes', { n: fx.discardBenchNamedTimes.n, m: cardTerm(fx.discardBenchNamedTimes.name) });
   if (fx.bounceDefEnergy) T('bounceDefEnergy', { n: fx.bounceDefEnergy.n });
   if (fx.plusDefRetreat) T('plusDefRetreat', { n: fx.plusDefRetreat });
-  if (fx.statusIfPlayed) out.push(t('fx.statusIfPlayed', { m: fx.statusIfPlayed.name, s: '\u0000' }).replace('\u0000', stx(fx.statusIfPlayed.status)));
+  if (fx.statusIfPlayed) out.push(t('fx.statusIfPlayed', { m: cardTerm(fx.statusIfPlayed.name), s: '\u0000' }).replace('\u0000', stx(fx.statusIfPlayed.status)));
   if (fx.optionalDiscardTypeAll) T('optionalDiscardTypeAll', { n: fx.optionalDiscardTypeAll.bonus, t: ty(fx.optionalDiscardTypeAll.type) });
-  if (fx.boostNext) T(fx.boostNext.atk ? 'boostNext' : 'boostNextAll', { n: fx.boostNext.n, atk: fx.boostNext.atk });
+  if (fx.boostNext) T(fx.boostNext.atk ? 'boostNext' : 'boostNextAll', { n: fx.boostNext.n, atk: attackTerm(fx.boostNext.atk) });
   if (fx.oncePerActive) T('oncePerActive');
   if (fx.flipMultiBonus) T('flipMultiBonus', { n: fx.flipMultiBonus.n, b: fx.flipMultiBonus.bonus });
   if (fx.discardRandomOppHand) T('discardRandomOppHand');
@@ -1560,7 +1617,7 @@ function attackEffects(atk, owner) {
   if (fx.attachDiscardOne) T('attachDiscardOne', { n: fx.attachDiscardOne.n, t: ty(fx.attachDiscardOne.type) });
   if (fx.benchCounters) T('benchCounters', { n: fx.benchCounters / 10 });
   if (fx.allHeadsShield) T('allHeadsShield');
-  if (fx.bonusIfBenchName) T('bonusIfBenchName', { n: fx.bonusIfBenchName.n, m: fx.bonusIfBenchName.name });
+  if (fx.bonusIfBenchName) T('bonusIfBenchName', { n: fx.bonusIfBenchName.n, m: cardTerm(fx.bonusIfBenchName.name) });
   if (fx.healBenchAll) T('healBenchAll');
   if (fx.discardAllType) T('discardAllType', { t: ty(fx.discardAllType) });
   if (fx.bonusIfHealedThisTurn) T('bonusIfHealedThisTurn', { n: fx.bonusIfHealedThisTurn });
@@ -1570,7 +1627,7 @@ function attackEffects(atk, owner) {
   if (fx.bonusIfEvolvedThisTurn) T('bonusIfEvolvedThisTurn', { n: fx.bonusIfEvolvedThisTurn });
   if (fx.attachHandSelf) T('attachHandSelf', { t: ty(fx.attachHandSelf.type) });
   if (fx.attachHandBench) T('attachHandBench', { t: ty(fx.attachHandBench.type) });
-  if (fx.timesAttachedNameAll) T('timesAttachedNameAll', { n: fx.timesAttachedNameAll.n, m: fx.timesAttachedNameAll.name });
+  if (fx.timesAttachedNameAll) T('timesAttachedNameAll', { n: fx.timesAttachedNameAll.n, m: cardTerm(fx.timesAttachedNameAll.name) });
   if (fx.shuffleSelfMay) T('shuffleSelfMay');
   if (fx.copyBenchTag) T('copyBenchTag', { tag: fx.copyBenchTag });
   if (fx.healAllOwn) T('healAllOwn', { n: fx.healAllOwn });
@@ -1607,14 +1664,14 @@ function attackEffects(atk, owner) {
   if (fx.plusOppEnergyAll) T('plusOppEnergyAll', { n: fx.plusOppEnergyAll });
   if (fx.drawToMay) T('drawToMay', { n: fx.drawToMay });
   if (fx.evolveSelfFromDeck) T('evolveSelfFromDeck');
-  if (fx.bonusIfPlayed) T('bonusIfPlayed', { n: fx.bonusIfPlayed.n, m: fx.bonusIfPlayed.name });
+  if (fx.bonusIfPlayed) T('bonusIfPlayed', { n: fx.bonusIfPlayed.n, m: cardTerm(fx.bonusIfPlayed.name) });
   if (fx.discardHandTypeTimes) T('discardHandTypeTimes', { n: fx.discardHandTypeTimes.n, max: fx.discardHandTypeTimes.max, t: ty(fx.discardHandTypeTimes.type) });
   if (fx.swimSnipe) T('swimSnipe', { t: ty(fx.swimSnipe.type) });
   if (fx.flipRecoverAny) T('flipRecoverAny', { n: fx.flipRecoverAny });
   if (fx.bonusIfDeckLE) T('bonusIfDeckLE', { n: fx.bonusIfDeckLE.n, max: fx.bonusIfDeckLE.max });
   if (fx.bonusIfMoreHand) T('bonusIfMoreHand', { n: fx.bonusIfMoreHand });
   if (fx.searchAny) T('searchAny', { n: fx.searchAny });
-  if (fx.drawPerNamed) T('drawPerNamed', { m: fx.drawPerNamed });
+  if (fx.drawPerNamed) T('drawPerNamed', { m: cardTerm(fx.drawPerNamed) });
   if (fx.optionalDiscardRemove) T('optionalDiscardRemove');
   if (fx.snipeDamaged) T('snipeDamaged', { n: fx.snipeDamaged });
   if (fx.vulnerable) T('vulnerable', { n: fx.vulnerable });
@@ -1646,12 +1703,12 @@ function attackEffects(atk, owner) {
   if (fx.supportersFromDiscard) T('supportersFromDiscard', { n: fx.supportersFromDiscard });
   if (fx.timesOwnDamaged) T('timesOwnDamaged', { n: fx.timesOwnDamaged });
   if (fx.ownBenchSnipe) T('ownBenchSnipe', { n: fx.ownBenchSnipe });
-  if (fx.bonusIfUsedLastTurn) T('bonusIfUsedLastTurn', { n: fx.bonusIfUsedLastTurn.n, atk: fx.bonusIfUsedLastTurn.atk });
+  if (fx.bonusIfUsedLastTurn) T('bonusIfUsedLastTurn', { n: fx.bonusIfUsedLastTurn.n, atk: attackTerm(fx.bonusIfUsedLastTurn.atk) });
   if (fx.selfNoRetreat) T('selfNoRetreat');
   if (fx.removeSpecialEnergy) T('removeSpecialEnergy');
   if (fx.callAny?.switchAfter) T('callAnySwitch');
   if (fx.timesOppHand) T('timesOppHand', { n: fx.timesOppHand });
-  if (fx.timesTagInPlay) T('timesTagInPlay', { n: fx.timesTagInPlay.n, tag: fx.timesTagInPlay.tag });
+  if (fx.timesTagInPlay) T('timesTagInPlay', { n: fx.timesTagInPlay.n, tag: termName(fx.timesTagInPlay.tag) });
   if (fx.bonusIfOppPrizesLE) T('bonusIfOppPrizesLE', { n: fx.bonusIfOppPrizesLE.n, max: fx.bonusIfOppPrizesLE.max });
   if (fx.bonusIfBenchStage2Type) T(fx.bonusIfBenchStage2Type.type ? 'bonusIfBenchStage2Type' : 'bonusIfBenchStage2', { n: fx.bonusIfBenchStage2Type.n, t: ty(fx.bonusIfBenchStage2Type.type) });
   if (fx.bonusIfDefEx) T('bonusIfDefEx', { n: fx.bonusIfDefEx });
@@ -1661,10 +1718,10 @@ function attackEffects(atk, owner) {
   if (fx.searchPokemonToHand) T(fx.searchPokemonToHand.resistance ? 'searchPokemonResist' : 'searchPokemonToHand', { n: fx.searchPokemonToHand.n, t: fx.searchPokemonToHand.resistance && ty(fx.searchPokemonToHand.resistance) });
   if (fx.returnEnergyBonus) T('returnEnergyBonus', { b: fx.returnEnergyBonus.bonus, t: ty(fx.returnEnergyBonus.type) });
   if (fx.returnEnergyToHand) T('returnEnergyToHand', { n: fx.returnEnergyToHand });
-  if (fx.searchAttachTag) T(fx.searchAttachTag.anyEnergy ? 'searchAttachTagAny' : 'searchAttachTag', { n: fx.searchAttachTag.n, tag: fx.searchAttachTag.tag });
+  if (fx.searchAttachTag) T(fx.searchAttachTag.anyEnergy ? 'searchAttachTagAny' : 'searchAttachTag', { n: fx.searchAttachTag.n, tag: termName(fx.searchAttachTag.tag) });
   if (fx.benchSnipe?.damagedOnly) T('damagedOnly');
-  if (fx.callAny?.prefix) T('callAnyPrefix', { who: fx.callAny.prefix });
-  if (fx.callAny?.tag) T('callAnyTag', { tag: fx.callAny.tag });
+  if (fx.callAny?.prefix) T('callAnyPrefix', { who: termName(cardTerm(fx.callAny.prefix)) });
+  if (fx.callAny?.tag) T('callAnyTag', { tag: termName(fx.callAny.tag) });
   return out;
 }
 
@@ -1677,13 +1734,13 @@ function explainCard(card, mon = null) {
   if (card.kind === 'trainer') {
     const k = card.stadium || card.tool || card.tkind;
     const kind = card.ttype ? `<p class="ttype">${icon(TTYPE_ICON[card.ttype])} ${t('ttype.' + card.ttype)}</p>` : '';
-    const vstar = card.power?.vstar ? `<h4>${icon('star')} ${L('ex.vstar')}: ${esc(card.power.name)}</h4><p>${L('pw.' + card.power.kind)}</p>` : '';
-    const tm = card.attacks?.length ? `<h4>${icon('swords')} ${L('ex.tmAttack')}</h4>${card.attacks.map((a) => `<div class="atk-ex"><div class="atk-name"><b>${esc(a.name)}</b></div><div class="atk-cost">${L('ex.cost')} ${costText(a.cost)}</div>${attackEffects(a).map((x) => `<div class="fx">• ${x}</div>`).join('')}</div>`).join('')}` : '';
+    const vstar = card.power?.vstar ? `<h4>${icon('star')} ${L('ex.vstar')}: ${esc(withOriginal(powerName(card.power), card.power.name))}</h4><p>${L('pw.' + card.power.kind)}</p>` : '';
+    const tm = card.attacks?.length ? `<h4>${icon('swords')} ${L('ex.tmAttack')}</h4>${card.attacks.map((a) => `<div class="atk-ex"><div class="atk-name"><b>${esc(withOriginal(attackName(a), a.name))}</b></div><div class="atk-cost">${L('ex.cost')} ${costText(a.cost)}</div>${attackEffects(a).map((x) => `<div class="fx">• ${x}</div>`).join('')}</div>`).join('')}` : '';
     return `${kind}<h4>${icon('info')} ${L('ex.what')}</h4><p>${L(`tr.${k}.what`)}</p>${vstar}${tm}
       <h4>${icon('lightbulb')} ${L('ex.when')}</h4><p>${L(`tr.${k}.tip`)}</p>`;
   }
   const facts = [
-    card.stage === 0 ? L('ex.basic') : L('ex.stage', { s: t('stage.' + card.stage), from: card.evolvesFrom }),
+    card.stage === 0 ? L('ex.basic') : L('ex.stage', { s: t('stage.' + card.stage), from: cardName({ name: card.evolvesFrom }) }),
     ...(card.prizes ? [t('ex.prizes', { n: card.prizes, k: card.tags?.includes('Mega') ? 'Mega ex' : ['TAG TEAM', 'VSTAR', 'VMAX', 'V', 'GX', 'ex'].find((x) => card.tags?.includes(x)) || 'ex' })] : []),
     ...(card.tera ? [t('ex.tera')] : []),
     L('ex.hp', { hp: card.hp, n: card.hp / 10 }),
@@ -1701,7 +1758,7 @@ function explainCard(card, mon = null) {
         ? `<div class="ready no">${icon('x')} ${L('now.missing')} ${costText(miss)}</div>`
         : `<div class="ready yes">${icon('circle-check')} ${L('now.ready')}</div>`;
     }
-    return `<div class="atk-ex"><div class="atk-name"><b>${esc(a.name)}</b>${a.damage ? `<span class="atk-dmg">${esc(a.damage)}</span>` : ''}</div>
+    return `<div class="atk-ex"><div class="atk-name"><b>${esc(withOriginal(attackName(a), a.name))}</b>${a.damage ? `<span class="atk-dmg">${esc(a.damage)}</span>` : ''}</div>
       <div class="atk-cost">${L('ex.cost')} ${costText(a.cost)}</div>
       ${dmg ? `<div>${dmg}</div>` : ''}${fx.map((x) => `<div class="fx">• ${x}</div>`).join('') || (dmg ? '' : '')}
       ${!fx.length ? `<div class="fx muted">${L('ex.noFx')}</div>` : ''}${ready}</div>`;
@@ -1719,7 +1776,7 @@ function explainCard(card, mon = null) {
       <div>${L('now.hp', { a: mon.hpLeft, b: mon.maxHp })}</div><div>${energy}</div>${conds ? `<div>${L('now.status')} ${conds}</div>` : ''}</div>`;
   }
   const power = card.power
-    ? `<h4>${icon('sparkles')} ${L(card.power.vstarPower ? 'ex.vstar' : card.power.ability ? 'ex.ability' : 'ex.power')}: ${esc(card.power.name)}</h4><p>${card.powerKind ? L('pw.' + card.powerKind) : esc(card.power.text)}</p>`
+    ? `<h4>${icon('sparkles')} ${L(card.power.vstarPower ? 'ex.vstar' : card.power.ability ? 'ex.ability' : 'ex.power')}: ${esc(withOriginal(powerName(card.power), card.power.name))}</h4><p>${card.powerKind ? L('pw.' + card.powerKind) : esc(card.power.text)}</p>`
     : '';
   return `${now}<h4>${icon('info')} ${L('ex.what')}</h4><ul class="facts">${facts.map((f) => `<li>${f}</li>`).join('')}</ul>${power}
     <h4>${icon('swords')} ${L('ex.attacks')}</h4>${attacks}`;
@@ -1814,10 +1871,19 @@ function turnTips(p, actions) {
   // The situation first (only the first tip shows until the list is unfolded), then what you can do, then how.
   const tips = [];
   if (game.turn === 1) tips.push(['tip.firstTurn']);
-  if (p.active?.status.confused) tips.push(['tip.confused', { m: p.active.name }]);
+  if (p.active?.status.confused) tips.push(['tip.confused', { m: C(p.active) }]);
   if (!kinds.has('attack') && game.turn !== 1 && p.active) {
-    const st = p.active.conditions().find((s) => s === 'asleep' || s === 'paralyzed');
-    tips.push(st ? ['tip.cantStatus', { m: p.active.name, s: { $st: st } }] : ['tip.noEnergy', { m: p.active.name }]);
+    const active = p.active;
+    const st = active.conditions().find((s) => s === 'asleep' || s === 'paralyzed');
+    if (st) {
+      tips.push(['tip.cantStatus', { m: C(active), s: { $st: st } }]);
+    } else {
+      const attacks = game.attacksOf(active);
+      if (attacks.length && attacks.every(({ cost, fx }) => !canPay(active.payTypes, cost) ||
+          (fx.needsType && !active.energyTypes.includes(fx.needsType)))) {
+        tips.push(['tip.noEnergy', { m: C(active) }]);
+      }
+    }
   }
   if (onlyEndLeft(actions)) tips.push(['tip.onlyEnd']);
   if (kinds.has('attack')) tips.push(['tip.attack']);
@@ -1843,8 +1909,8 @@ function whyNot(c, p) {
     if (c.stage === 0) return ['why.benchFull'];
     if (game.turn <= 2) return ['why.firstTurns'];
     const base = mons.filter((m) => m.name === c.evolvesFrom);
-    if (!base.length) return ['why.noBase', { from: c.evolvesFrom }];
-    return ['why.justPlayed', { from: c.evolvesFrom }];
+    if (!base.length) return ['why.noBase', { from: cardName({ name: c.evolvesFrom }) }];
+    return ['why.justPlayed', { from: cardName({ name: c.evolvesFrom }) }];
   }
   if (game.modern && c.kind === 'trainer') {
     if (c.ttype === 'supporter' && p.flags.supporter) return ['why.supporterUsed'];
@@ -1940,7 +2006,7 @@ function actLead(a, p) {
   if (a.kind === 'energy' && !a.card.energyType.includes('|')) return `<span class="lead">${energyIcon(a.card.energyType)}</span>`;
   if (a.kind === 'attack') return `<span class="lead">${energyIcon(p.active?.card.type || 'Colorless')}</span>`;
   const c = a.card || (a.kind === 'stadium' ? game.stadium?.card : a.kind === 'power' || a.kind === 'retreat' ? a.target?.card : null);
-  return c?.img ? `<span class="lead thumb"><img src="${c.img}" alt="" loading="lazy"></span>` : '<span class="lead"></span>';
+  return c?.img ? `<span class="lead thumb"><img ${cardImageAttrs(c)} alt="" loading="lazy"></span>` : '<span class="lead"></span>';
 }
 
 // An Energy that none of the target's attacks asks for by type: legal, but it only pays for ★ (Colorless) costs.
@@ -1953,6 +2019,7 @@ const KIND_ICON = { attack: 'swords', energy: 'zap', evolve: 'chevrons-up', benc
 function clearActions(html = '') {
   $('#actions').innerHTML = html;
   $('#end-slot').innerHTML = '';
+  $('#tips').replaceChildren();
 }
 
 class HumanController {
@@ -1974,7 +2041,6 @@ class HumanController {
           markPlayable();
           this.n++;
           clearActions('<div class="waiting">…</div>');
-          $('#tips').innerHTML = '';
           if ($('#opt-coach').checked) this.feedback(a, actions, ranking);
           resolve(a);
         },
@@ -2024,8 +2090,12 @@ class HumanController {
         const words = prompt.options.filter((o) => o.label);
         const pic = (o) => {
           if (o.back) return `<button data-id="${o.id}" class="pick-card">${backImg()}</button>`;
-          if (o.mon) return `<button data-id="${o.id}" class="pick-card"><img src="${o.mon.card.img}" alt="${esc(o.mon.name)}"><span class="sub">${o.mon.hpLeft}/${o.mon.maxHp} ${t('ui.hp')}</span></button>`;
-          return `<button data-id="${o.id}" class="pick-card" data-inspect="c${o.card.uid}"><img src="${o.card.img}" alt="${esc(cardName(o.card))}"></button>`;
+          if (o.mon) {
+            const slot = ['discardFrom', 'ser', 'blower'].includes(prompt.kind) ? esc(resolve(g.slot(g.ownerOf(o.mon), o.mon))) + ' · ' : '';
+            return `<button data-id="${o.id}" class="pick-card"><img ${cardImageAttrs(o.mon.card)} alt="${esc(cardName(o.mon.card))}"><span class="sub">${slot}${o.mon.hpLeft}/${o.mon.maxHp} ${t('ui.hp')}</span></button>`;
+          }
+          const units = prompt.text === 'prompt.q.retreatEnergy' ? `<span class="sub">${esc(t('prompt.opt.energyUnits', { n: o.card.provides || 1 }))}</span>` : '';
+          return `<button data-id="${o.id}" class="pick-card" data-inspect="c${o.card.uid}"><img ${cardImageAttrs(o.card)} alt="${esc(cardName(o.card))}">${units}</button>`;
         };
         // Alone, word answers are the choice itself (Yes / No, a number); next to cards, they are the way out ("Nothing").
         const word = (o) => `<button data-id="${o.id}" class="${pictured.length ? 'textlink' : o.id === 'yes' ? 'primary' : 'opt-word'}">${esc(t(o.label.key, o.label.params))}</button>`;
@@ -2096,7 +2166,7 @@ async function onPrize(p, card) {
   const el = prizeStage, c = el?.querySelector('.pz-card.chosen');
   if (!c) return;
   const front = c.querySelector('.pz-front');
-  front.src = card.imgLarge || card.img;
+  bindCardImage(front, card, { large: true });
   await Promise.race([front.decode?.().catch(() => {}), sleep(1200)]);
   const anim = animOn();
   // Lift the chosen card out of the row to the centre of the screen, bigger.
@@ -2147,7 +2217,8 @@ function rpsEl() {
 function rpsText(by) {
   const mine = by === 0; // you played Dan
   return {
-    dialog: t('rps.dialog'), title: t('rps.title'), sub: t(mine ? 'rps.subYou' : 'rps.subGary'), hint: t('rps.hint'),
+    dialog: t('rps.dialog'), title: t('rps.title'), sub: t(mine ? 'rps.subYou' : 'rps.subGary'),
+    hint: t('rps.hint', { enter: '{enter}' }),
     names: { rock: t('opt.rock'), paper: t('opt.paper'), scissors: t('opt.scissors') },
     chant: [t('rps.chant1'), t('rps.chant2'), t('rps.chant3')],
     you: t('rps.you'), gary: t('rps.gary'), youLabel: t('rps.youLabel'),
@@ -2195,7 +2266,7 @@ function setupStage(mode, title, sub, cards, extra = '') {
     <div class="cs-title">${icon(mode === 'bench' ? 'layers' : 'user')} <span>${esc(title)}</span></div>
     <div class="cs-sub">${esc(sub)}</div>
     <div class="pz-row" style="--n:${n}">${cards.map((c, i) => `<button class="pz-card st-card" data-uid="${c.uid}" style="--i:${i};--o:${(i - (n - 1) / 2).toFixed(2)}" aria-label="${esc(cardName(c))}">
-      <img src="${c.img}" alt="" draggable="false"><span class="st-check">${icon('circle-check')}</span></button>`).join('')}</div>
+      <img ${cardImageAttrs(c)} alt="" draggable="false"><span class="st-check">${icon('circle-check')}</span></button>`).join('')}</div>
     <div class="st-info">${esc(t(matchMedia('(hover: none)').matches ? (mode === 'bench' ? 'ui.setupTapBench' : 'ui.setupTap') : 'ui.setupHover'))}</div>${extra}
     <div class="pz-caption"><b class="pz-name"></b><span class="pz-note"></span></div>
   </div>`;
@@ -2208,7 +2279,6 @@ function setupStage(mode, title, sub, cards, extra = '') {
       if (!live()) return;
       inspect(c, null, b);
       // The stage's tooltip has no big card picture (the card is right there), so it names the card.
-      $('#preview .explain')?.insertAdjacentHTML('afterbegin', `<h3 class="pv-name">${esc(cardName(c))}</h3>`);
       placePreview(b);
     };
     b.onmouseenter = b.showInfo;
@@ -2247,7 +2317,7 @@ function chooseActiveStage(prompt) {
       el.classList.add('picked');
       b.classList.add('chosen');
       const img = b.querySelector('img');
-      if (card.imgLarge) img.src = card.imgLarge;
+      if (card.imgLarge) bindCardImage(img, card, { large: true });
       liftToCentre(b, anim);
       await sleep(anim ? 420 : 0);
       el.classList.add('revealing', 'revealed');
@@ -2322,7 +2392,6 @@ function makeAIController(myGame) {
     if (myGame !== gameId) return stale();
     clearActions(`<div class="waiting">${esc(t('ui.waitingOpp'))}</div>`);
     if (pendingAnims.size) await Promise.all([...pendingAnims]);
-    $('#tips').innerHTML = '';
     await sleep(450);
     const act = await choose(...args);
     await sleep(550);
@@ -2355,6 +2424,7 @@ function resetTable() {
   seenPrizes = [new Set(), new Set()];
   seenOppHand = 0;
   decision = null;
+  clearActions();
   winState = null;
   $('#win-meter').hidden = true;
   $('#start').hidden = true;
@@ -2398,7 +2468,7 @@ async function startGame(deckKey) {
   animateDraws = true;
 
   game = new Game({ decks: [deckKey, oppDeck], controllers: [new HumanController(myGame), makeAIController(myGame)], hooks: gameHooks(myGame) });
-  log({ key: 'log.decks', params: { a: DECKS[deckKey].name, b: DECKS[oppDeck].name }, kind: 'sys' });
+  log({ key: 'log.decks', params: { a: { $deck: { id: deckKey, name: DECKS[deckKey].name } }, b: { $deck: { id: oppDeck, name: DECKS[oppDeck].name } } }, kind: 'sys' });
   render();
   await game.run();
 }
@@ -2447,7 +2517,6 @@ function undoButton() {
 function gameOver(g) {
   decision = null;
   clearActions();
-  $('#tips').innerHTML = '';
   oppStatus();
   openModal(() => {
     const [ic, title] = g.winner === 'draw' ? ['handshake', t('ui.drawGame')] : g.winner.idx === 0 ? ['trophy', t('ui.youWin')] : ['frown', t('ui.oppWins')];
@@ -2470,17 +2539,21 @@ function deckStats(d) {
   return n;
 }
 
+function featuredCard(deck, id, index) {
+  return CARDS[id] ?? { id, img: deck.featuredImgs?.[index] };
+}
+
 function deckTile(k, d) {
   const s = deckStats(d);
   const [c1, c2 = c1] = d.types;
   const chips = d.types.map((x) => `<span class="chip">${energyIcon(x)}${esc(t('type.' + x))}</span>`).join('');
   return `<button class="deck ${k === selectedDeck ? 'sel' : ''}" data-deck="${k}" aria-pressed="${k === selectedDeck}" style="--c1:var(--${c1});--c2:var(--${c2})">
-    <div class="deck-art"><div class="fan">${d.featured.map((n, i) => `<img src="${d.featuredImgs?.[i] || CARDS[n].img}" alt="" loading="lazy">`).join('')}</div></div>
+    <div class="deck-art"><div class="fan">${d.featured.map((n, i) => `<img ${cardImageAttrs(featuredCard(d, n, i))} alt="" loading="lazy">`).join('')}</div></div>
     <div class="deck-body">
-      <div class="d-name">${esc(d.name)}</div>
+      <div class="d-name">${esc(deckName(k, d.name))}</div>
       <div class="d-sub">${esc(t('deck.' + k))}</div>
       <div class="d-types">${chips}</div>
-      <div class="d-stats"><span><b>${s.pokemon}</b> Pokémon</span><span><b>${s.trainer}</b> ${esc(t('ui.trainers'))}</span><span><b>${s.energy}</b> ${esc(t('ui.energies'))}</span></div>
+      <div class="d-stats"><span><b>${s.pokemon}</b> ${esc(t('opt.rodPokemon'))}</span><span><b>${s.trainer}</b> ${esc(t('ui.trainers'))}</span><span><b>${s.energy}</b> ${esc(t('ui.energies'))}</span></div>
     </div>
   </button>`;
 }
@@ -2498,7 +2571,7 @@ const FORMAT_RULES = {
 function eraCards(f) {
   const groups = f === 'modern' ? MODERN_GROUPS : DECK_GROUPS;
   const d = Object.values(DECKS).find((x) => x.group === groups[0]);
-  return d ? d.featured.slice(0, 3).map((n, i) => d.featuredImgs?.[i] || CARDS[n]?.img).filter(Boolean) : [];
+  return d ? d.featured.slice(0, 3).map((id, i) => featuredCard(d, id, i)).filter((card) => card.img) : [];
 }
 
 function renderDeckChoices() {
@@ -2506,7 +2579,7 @@ function renderDeckChoices() {
   const groups = deckFormat === 'modern' ? MODERN_GROUPS : DECK_GROUPS;
   const tabs = `<div class="format-tabs" role="group" aria-label="${esc(t('ui.formatPick'))}">${['classic', 'modern'].map((f) => `
     <button class="ftab ${f === deckFormat ? 'on' : ''}" data-format="${f}" aria-pressed="${f === deckFormat}">
-      <span class="era-fan" aria-hidden="true">${eraCards(f).map((src) => `<img src="${src}" alt="" loading="lazy">`).join('')}</span>
+      <span class="era-fan" aria-hidden="true">${eraCards(f).map((card) => `<img ${cardImageAttrs(card)} alt="" loading="lazy">`).join('')}</span>
       <span class="era-text"><b>${esc(t('format.' + f))}</b><small>${esc(t('format.' + f + '.sub'))}</small></span></button>`).join('')}</div>
     <ul class="rule-strip" aria-label="${esc(t('format.' + deckFormat + '.rulesTitle'))}">${FORMAT_RULES[deckFormat].map((k) => {
       const n = t(`fr.${k}.n`);
@@ -2553,9 +2626,9 @@ function renderStartBar() {
   if (rest.length) byGroup.push([null, rest]);
   const option = (v, l) => `<option value="${v}" ${v === oppChoice ? 'selected' : ''}>${esc(l)}</option>`;
   $('#opt-opp').innerHTML = option('random', t('ui.oppRandom')) + byGroup.filter(([, l]) => l.length)
-    .map(([g, l]) => `<optgroup label="${esc(g ? t('deckgroup.' + g) : t('ui.otherDecks'))}">${l.map(([k, d]) => option(k, d.name)).join('')}</optgroup>`).join('');
-  const mine = selectedDeck ? DECKS[selectedDeck].name : t('ui.pickFirst');
-  const theirs = oppChoice === 'random' ? t('ui.oppRandom') : DECKS[oppChoice].name;
+    .map(([g, l]) => `<optgroup label="${esc(g ? t('deckgroup.' + g) : t('ui.otherDecks'))}">${l.map(([k, d]) => option(k, deckName(k, d.name))).join('')}</optgroup>`).join('');
+  const mine = selectedDeck ? deckName(selectedDeck, DECKS[selectedDeck].name) : t('ui.pickFirst');
+  const theirs = oppChoice === 'random' ? t('ui.oppRandom') : deckName(oppChoice, DECKS[oppChoice].name);
   // Gary's side of the matchup is the deck picker itself.
   $('#match-you').innerHTML = `<small>${esc(t('pl.0'))}</small><b>${esc(mine)}</b>`;
   $('#match-you').classList.toggle('empty', !selectedDeck);
@@ -2570,8 +2643,10 @@ function openStart() {
 }
 
 function switchLanguage(lang) {
-  setLang(lang);
+  if (!setLang(lang)) return;
+  syncCardImages();
   applyStaticText();
+  if (!$('#settings').hidden) void refreshCardImageCoverage();
   renderDeckChoices();
   render();
   renderLog();
@@ -2640,10 +2715,19 @@ $('#settings-close').onclick = closeSettings;
 $('#settings').onclick = (e) => { if (e.target.id === 'settings') closeSettings(); };
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#settings').hidden) closeSettings(); });
 // Remember the settings between visits.
-for (const id of ['opt-coach', 'opt-hints', 'opt-anim']) {
-  try { const v = localStorage.getItem(id); if (v != null) $('#' + id).checked = v === '1'; } catch { /* storage unavailable */ }
-  $('#' + id).addEventListener('change', (e) => { try { localStorage.setItem(id, e.target.checked ? '1' : '0'); } catch { /* ignore */ } });
+const cardImageOptions = ['opt-card-image-download', 'opt-card-image-generate'];
+function syncCardImages(retry = false) {
+  refreshCardImages(getLang(), ...cardImageOptions.map((id) => $('#' + id).checked), retry);
 }
+for (const id of ['opt-coach', 'opt-hints', 'opt-anim', ...cardImageOptions]) {
+  try { const v = localStorage.getItem(id); if (v != null) $('#' + id).checked = v === '1'; } catch { /* storage unavailable */ }
+  $('#' + id).addEventListener('change', (e) => {
+    try { localStorage.setItem(id, e.target.checked ? '1' : '0'); } catch { /* ignore */ }
+    if (cardImageOptions.includes(id)) syncCardImages();
+  });
+}
+syncCardImages();
+window.addEventListener('online', () => syncCardImages(true));
 // The rules page highlights the rules you are playing with (or the tab picked on the start screen).
 $('#btn-rules').onclick = $('#start-rules').onclick = () => {
   const fmt = game && $('#start').hidden ? (game.modern ? 'modern' : 'classic') : deckFormat;

@@ -195,3 +195,21 @@ footer p + p { margin-top: 8px; }
   .cta { flex-direction: column; align-items: stretch; }
   .cta .btn { width: 100%; }
 }
+
+/* Match the game's Chinese body/display pairing, including offline font files. */
+html:lang(zh) {
+  --font-cjk: "LXGW 975 Yuan SC";
+  --font-cjk-fallback: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --text: Nunito, var(--font-cjk), var(--font-cjk-fallback);
+  --display: "Baloo 2", var(--font-cjk), var(--font-cjk-fallback);
+  --display-weight: 700;
+  font-synthesis: none;
+}
+html:lang(zh-Hant) {
+  --font-cjk: "Chiron GoRound TC";
+  --font-cjk-fallback: "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif;
+  --display-weight: 800;
+}
+html:lang(zh) h1, html:lang(zh) h2, html:lang(zh) h3,
+html:lang(zh) .brand span, html:lang(zh) .compare thead th { font-weight: var(--display-weight); }
+.lang button { white-space: nowrap; }

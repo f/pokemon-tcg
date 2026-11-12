@@ -35,7 +35,10 @@
   --pile-w: calc(var(--pile-h) * .716);
   --hand-h: max(80px, min(15.5vh, 220px));
   --hand-w: calc(var(--hand-h) * .716);
-  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: Nunito, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Baloo 2", Nunito, sans-serif;
+  --font-display-weight: 800;
+  font-family: var(--font-body);
 }
 
 * { box-sizing: border-box; }
@@ -46,7 +49,30 @@ button { font: inherit; cursor: pointer; border-radius: 10px; border: 1px solid 
 button:disabled { opacity: .5; cursor: not-allowed; }
 button.primary { background: var(--yellow); border-color: var(--yellow-dark); font-weight: 800; color: #1d2a5a; }
 button.ghost { background: transparent; }
-h1, h2, h3, .title, .over-title { font-family: "Baloo 2", Nunito, sans-serif; font-weight: 800; letter-spacing: 0; line-height: 1.15; }
+.shortcut-cap {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 23px;
+  padding-inline: 5px;
+  border: 1px solid #6179ab;
+  border-bottom: 3px solid #172447;
+  border-radius: 6px;
+  background: #2b416e;
+  color: #f0f5ff;
+  box-shadow: 0 1px 0 #101930;
+  font: 800 14px/1 var(--font-body);
+  text-shadow: none;
+  vertical-align: middle;
+}
+button:is(:hover, :focus-visible) .shortcut-cap {
+  border-color: var(--yellow);
+  border-bottom-color: #977515;
+  background: #343e57;
+  color: #ffe179;
+}
+@media (hover: none) { .shortcut-cap { display: none; } }
+h1, h2, h3, .title, .over-title { font-family: var(--font-display); font-weight: var(--font-display-weight); letter-spacing: 0; line-height: 1.15; }
 
 header { flex: none; height: var(--header-h); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; color: #fff; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 12px; }
@@ -88,7 +114,7 @@ header nav { display: flex; gap: 8px; align-items: center; }
 .pile .empty { width: var(--pile-w); height: var(--pile-h); border: 2px dashed var(--mat-line); border-radius: 6px; }
 
 #midbar { flex: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(0,0,0,.28); border-radius: 12px; padding: 4px 12px; font-size: 13px; min-height: 34px; }
-#turn-info { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 17px; white-space: nowrap; }
+#turn-info { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 17px; white-space: nowrap; }
 #turn-info .you { color: var(--yellow); }
 #turn-info .opp { color: #ff9c9c; }
 #opp-status { flex: 1; min-width: 0; opacity: .92; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -267,7 +293,7 @@ aside { min-height: 0; display: flex; flex-direction: column; gap: 8px; }
 /* ---------- Coin ---------- */
 .coin-ov { z-index: 40; }
 .coin-box { max-width: 440px; text-align: center; }
-.coin-why { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 22px; color: var(--navy); }
+.coin-why { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 22px; color: var(--navy); }
 .coin-scene { perspective: 700px; height: 180px; display: grid; place-items: center; }
 .coin { width: 120px; height: 120px; position: relative; transform-style: preserve-3d; }
 .coin .face { position: absolute; inset: 0; border-radius: 50%; backface-visibility: hidden; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #fff3a8, #ffcb05 55%, #d9a400); box-shadow: inset 0 0 0 6px #d4a400, inset 0 0 0 9px #ffe27a, 0 6px 14px rgba(0,0,0,.35); }
@@ -280,7 +306,7 @@ aside { min-height: 0; display: flex; flex-direction: column; gap: 8px; }
 .coin.mini .pokeball { width: 54px; height: 54px; border-width: 3px; }
 .coin.mini .pokeball::after { width: 14px; height: 14px; border-width: 3px; }
 .coin.mini .tails .ic { width: 42px; height: 42px; }
-.coin-result { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 28px; min-height: 34px; }
+.coin-result { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 28px; min-height: 34px; }
 .coin-result.h { color: #e3350d; }
 .coin-result.t { color: #a77f00; }
 .coin-outcomes { display: grid; gap: 6px; text-align: left; margin-top: 6px; }
@@ -313,7 +339,7 @@ aside { min-height: 0; display: flex; flex-direction: column; gap: 8px; }
 .tool-mark { font-size: 9px; font-weight: 800; background: #1f7a52; color: #fff; border-radius: 99px; padding: 0 6px; line-height: 16px; }
 
 /* Numbered damage dice and the dice chart on the rules page */
-.die.num { display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; place-items: center; padding: 0; font-family: "Baloo 2", sans-serif; font-weight: 800; color: #c62828; font-size: 16px; line-height: 1; }
+.die.num { display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr; place-items: center; padding: 0; font-family: var(--font-display); font-weight: var(--font-display-weight); color: #c62828; font-size: 16px; line-height: 1; }
 .mon.active .die.num { font-size: 21px; }
 .dice-chart { background: #f3f1ea; border-radius: 12px; padding: 10px; margin: 6px 0 4px; }
 .dc-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
@@ -349,13 +375,13 @@ aside { min-height: 0; display: flex; flex-direction: column; gap: 8px; }
 .arena-card .a-dice .die { width: 42px; height: 42px; padding: 5px; }
 .arena-card .a-dice .die.num { padding: 0; font-size: 26px; }
 .arena-card .a-hp { margin-top: 6px; text-align: center; color: #fff; font-weight: 800; font-size: 15px; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
-.arena-title { position: fixed; left: 50%; top: 9%; transform: translate(-50%, -20px) scale(.8); opacity: 0; transition: all .3s cubic-bezier(.3,.7,.4,1.3); background: var(--c); color: #fff; font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 30px; padding: 4px 22px; border-radius: 99px; border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.45); text-shadow: 0 2px 2px rgba(0,0,0,.35); white-space: nowrap; }
+.arena-title { position: fixed; left: 50%; top: 9%; transform: translate(-50%, -20px) scale(.8); opacity: 0; transition: all .3s cubic-bezier(.3,.7,.4,1.3); background: var(--c); color: #fff; font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 30px; padding: 4px 22px; border-radius: 99px; border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.45); text-shadow: 0 2px 2px rgba(0,0,0,.35); white-space: nowrap; }
 .arena-title.show { transform: translate(-50%, 0) scale(1); opacity: 1; }
 .burst { position: fixed; z-index: 31; width: 160px; height: 160px; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, #fff 0 12%, var(--c) 30%, transparent 68%); }
 /* Outlined Baloo 2 text (damage numbers, attack names, stamps): Baloo 2 builds letters from overlapping outlines and a
    plain text stroke traces every one, leaving lines inside the letters. Painting the stroke under the fill hides them,
    so each stroke is twice as wide as it looks. */
-.float-dmg { position: fixed; z-index: 33; pointer-events: none; font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 46px; color: #fff; -webkit-text-stroke: 4px #b71c1c; paint-order: stroke fill; text-shadow: 0 4px 10px rgba(0,0,0,.5); text-align: center; line-height: 1; white-space: nowrap; }
+.float-dmg { position: fixed; z-index: 33; pointer-events: none; font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 46px; color: #fff; -webkit-text-stroke: 4px #b71c1c; paint-order: stroke fill; text-shadow: 0 4px 10px rgba(0,0,0,.5); text-align: center; line-height: 1; white-space: nowrap; }
 .float-dmg small { display: block; font-size: 15px; -webkit-text-stroke: 0; background: #b71c1c; border-radius: 99px; padding: 2px 10px; margin-top: 4px; }
 .float-dmg.miss { color: #e8e8e8; -webkit-text-stroke: 4px #555; paint-order: stroke fill; font-size: 38px; }
 .float-dmg.blocked { color: #d6ecff; -webkit-text-stroke: 4px #0e6aa8; paint-order: stroke fill; font-size: 34px; }
@@ -582,7 +608,7 @@ body.dragging #board .mon:not(.drop-ok) { opacity: .4; filter: grayscale(.4); tr
 .start-hero p b { color: var(--yellow); }
 .deck-section { margin-bottom: 18px; }
 .deck-group { display: flex; align-items: baseline; gap: 10px; color: #fff; margin: 0 2px 10px; border-bottom: 1px solid rgba(255,255,255,.14); padding-bottom: 6px; }
-.deck-group span { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 19px; }
+.deck-group span { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 19px; }
 .deck-group small { color: rgba(255,255,255,.6); font-size: 13px; }
 .deck-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 .deck-grid.trainer { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
@@ -608,7 +634,7 @@ body.dragging #board .mon:not(.drop-ok) { opacity: .4; filter: grayscale(.4); tr
 .deck:hover .fan img:nth-child(2), .deck.sel .fan img:nth-child(2) { transform: translateX(-50%) translateY(-14px) scale(1.04); }
 .deck:hover .fan img:nth-child(3), .deck.sel .fan img:nth-child(3) { transform: translateX(-50%) translateX(72%) rotate(16deg); }
 .deck-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-.deck .d-name { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 22px; line-height: 1; color: var(--navy); }
+.deck .d-name { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 22px; line-height: 1; color: var(--navy); }
 .deck .d-sub { font-size: 13px; color: var(--muted); line-height: 1.35; min-height: 2.7em; }
 .deck .d-types { display: flex; gap: 6px; flex-wrap: nowrap; overflow: hidden; }
 .chip { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 800; padding: 2px 8px 2px 3px; border-radius: 99px; background: #f0eee6; color: #3c4a43; white-space: nowrap; }
@@ -622,8 +648,8 @@ body.dragging #board .mon:not(.drop-ok) { opacity: .4; filter: grayscale(.4); tr
 .matchup { display: flex; align-items: center; gap: 12px; }
 .matchup .side { display: flex; flex-direction: column; line-height: 1.1; min-width: 70px; }
 .matchup small { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.6); font-weight: 800; }
-.matchup b { font-family: "Baloo 2", sans-serif; font-size: 20px; color: var(--yellow); }
-.matchup .vs { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 14px; color: #fff; background: var(--jev, #d33b3b); border-radius: 8px; padding: 2px 8px; transform: rotate(-6deg); }
+.matchup b { font-family: var(--font-display); font-size: 20px; color: var(--yellow); }
+.matchup .vs { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 14px; color: #fff; background: var(--jev, #d33b3b); border-radius: 8px; padding: 2px 8px; transform: rotate(-6deg); }
 .start-bar #start-engine { font-size: 13px; color: rgba(255,255,255,.85); }
 .start-bar #start-engine .linkish { color: var(--yellow); }
 .bar-actions { margin-left: auto; display: flex; gap: 8px; }
@@ -695,6 +721,10 @@ header.start-hero { height: auto; padding: 0; justify-content: flex-start; }
 .start-wrap { padding: 22px 0 14px; }
 .start-hero { gap: 6px; margin-bottom: 18px; }
 .start-hero .set-logo { height: clamp(56px, 8.5vh, 92px); }
+/* The Spanish artwork spans 117.5 of 130.3 viewBox units and sits above center. */
+.start-hero .set-logo:lang(es) { transform: translateY(1.8%) scale(1.109); }
+/* The Traditional Chinese PNG has 249 px of artwork in a 459 px canvas. */
+.start-hero .set-logo:lang(zh-Hant) { transform: scale(1.84); }
 .start-hero h2 { font-size: clamp(24px, 2.8vw, 34px); }
 .start-hero p { font-size: 14.5px; }
 .deck-section { margin-bottom: 16px; }
@@ -712,7 +742,7 @@ header.start-hero { height: auto; padding: 0; justify-content: flex-start; }
 @keyframes stageIn { from { opacity: 0; } }
 @keyframes stageOut { to { opacity: 0; } }
 .coin-stage { width: min(720px, 100% - 32px); text-align: center; color: #fff; }
-.cs-title { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 30px; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); display: flex; align-items: center; justify-content: center; gap: 8px; }
+.cs-title { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 30px; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); display: flex; align-items: center; justify-content: center; gap: 8px; }
 .cs-title .ic { width: 28px; height: 28px; }
 .cs-sub { color: rgba(255,255,255,.75); font-size: 15px; margin-top: 2px; min-height: 1.4em; }
 .cs-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 18px; margin-top: 10px; }
@@ -739,7 +769,7 @@ header.start-hero { height: auto; padding: 0; justify-content: flex-start; }
 .cs-side.win { background: rgba(46,157,87,.22); border-color: #46c46e; transform: scale(1.05); box-shadow: 0 0 30px rgba(70,196,110,.35); }
 .cs-side.lose { opacity: .35; transform: scale(.95); }
 .cs-side.pick { border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(255,203,5,.35); }
-.cs-label { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 22px; line-height: 1; }
+.cs-label { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 22px; line-height: 1; }
 .cs-out { font-size: 13.5px; color: rgba(255,255,255,.85); line-height: 1.35; max-width: 200px; }
 .mini-face { position: relative; display: block; width: 58px; height: 58px; }
 .mini-face .face { position: absolute; inset: 0; border-radius: 50%; display: grid; place-items: center; transform: none !important;
@@ -748,12 +778,12 @@ header.start-hero { height: auto; padding: 0; justify-content: flex-start; }
 .mini-face .pokeball::after { width: 26%; height: 26%; border-width: 2px; }
 .mini-face .tails .ic { width: 55%; height: 55%; color: #a77f00; }
 .call-btn { display: flex; flex-direction: column; align-items: center; gap: 8px; background: none; border: none; color: #fff; cursor: pointer; padding: 6px 14px; }
+.cs-choice-label { display: inline-flex; align-items: center; gap: 8px; }
 .cs-side:has(.call-btn) { cursor: pointer; }
 .cs-side:has(.call-btn):hover { background: rgba(255,203,5,.14); border-color: var(--yellow); transform: translateY(-3px); }
 .call-btn .mini-face { width: 76px; height: 76px; transition: transform .25s; }
 .cs-side:hover .call-btn .mini-face { transform: rotate(-10deg) scale(1.08); }
-.cs-key { font-size: 11px; font-weight: 800; color: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.3); border-radius: 5px; padding: 0 6px; }
-.coin-ov.stage .coin-result { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 40px; min-height: 48px; margin-top: 4px; letter-spacing: .02em; }
+.coin-ov.stage .coin-result { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 40px; min-height: 48px; margin-top: 4px; letter-spacing: .02em; }
 .coin-ov.stage .coin-result.h { color: #ff7a59; text-shadow: 0 0 18px rgba(227,53,13,.6); animation: resultPop .45s cubic-bezier(.3,.7,.4,1.5); }
 .coin-ov.stage .coin-result.t { color: var(--yellow); text-shadow: 0 0 18px rgba(255,203,5,.6); animation: resultPop .45s cubic-bezier(.3,.7,.4,1.5); }
 @keyframes resultPop { from { transform: scale(.4); opacity: 0; } }
@@ -839,7 +869,7 @@ button.danger { background: #e05555; border-color: #b83b3b; color: #fff; }
 .afx.star { width: 230px; height: 230px; background: radial-gradient(circle, #fff 0 18%, var(--c) 34%, transparent 62%);
   clip-path: polygon(50% 0, 58% 34%, 92% 12%, 68% 44%, 100% 52%, 66% 60%, 86% 92%, 54% 68%, 46% 100%, 40% 66%, 10% 88%, 32% 58%, 0 46%, 34% 40%, 12% 8%, 44% 32%); z-index: 35; }
 .afx.shock { width: 120px; height: 120px; border-radius: 50%; border: 6px solid rgba(255,255,255,.9); z-index: 35; }
-.afx.stamp { z-index: 37; font-family: "Baloo 2", sans-serif; font-weight: 800; white-space: nowrap; text-align: center; line-height: 1; }
+.afx.stamp { z-index: 37; font-family: var(--font-display); font-weight: var(--font-display-weight); white-space: nowrap; text-align: center; line-height: 1; }
 .afx.stamp.dmg-stamp { font-size: 64px; color: #fff; -webkit-text-stroke: 6px #b71c1c; paint-order: stroke fill; text-shadow: 5px 5px 0 #4a0c0c, 0 0 24px rgba(255,60,60,.6); }
 .afx.stamp.dmg-stamp small { display: block; font-size: 16px; -webkit-text-stroke: 0; text-shadow: none; background: #b71c1c; border-radius: 99px; padding: 2px 10px; margin-top: 4px; }
 .afx.stamp.super { font-size: 30px; color: #1d2a5a; background: var(--yellow); border: 3px solid #1d2a5a; border-radius: 10px; padding: 4px 14px; box-shadow: 5px 5px 0 #1d2a5a; }
@@ -955,7 +985,7 @@ button.danger { background: #e05555; border-color: #b83b3b; color: #fff; }
 .prize-ov.revealed .pz-card.chosen .pz-front { box-shadow: 0 0 0 3px rgba(255,203,5,.9), 0 0 50px rgba(255,203,5,.55), 0 14px 30px rgba(0,0,0,.6); }
 .pz-caption { position: fixed; left: 0; right: 0; top: calc(47vh + min(25vh, 200px) + 16px); display: flex; flex-direction: column; gap: 2px; opacity: 0; transform: translateY(8px); transition: all .35s; pointer-events: none; }
 .prize-ov.revealed .pz-caption { opacity: 1; transform: none; }
-.pz-name { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 30px; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); line-height: 1.1; }
+.pz-name { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 30px; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); line-height: 1.1; }
 .pz-note { color: rgba(255,255,255,.8); font-size: 14px; }
 .pz-left { font-size: 13px; font-weight: 800; color: rgba(255,255,255,.6); letter-spacing: .02em; transition: opacity .3s; }
 .prize-ov.picked .pz-left { opacity: 0; }
@@ -986,7 +1016,7 @@ button.danger { background: #e05555; border-color: #b83b3b; color: #fff; }
 .trainer-stage.revealed .ts-text { opacity: 1; transform: none; }
 .ts-text small { display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800; color: var(--yellow); text-transform: uppercase; letter-spacing: .05em; }
 .ts-text small .ic { width: 16px; height: 16px; }
-.ts-text b { display: block; font-family: "Baloo 2", sans-serif; font-size: 28px; line-height: 1.1; margin: 6px 0 8px; text-shadow: 2px 2px 0 var(--navy); }
+.ts-text b { display: block; font-family: var(--font-display); font-size: 28px; line-height: 1.1; margin: 6px 0 8px; text-shadow: 2px 2px 0 var(--navy); }
 .ts-text p { font-size: 15px; line-height: 1.45; color: rgba(255,255,255,.88); margin: 0; }
 @media (max-width: 640px) { .ts-row { flex-direction: column; text-align: center; } .ts-text small { justify-content: center; } }
 .ts-text em { display: flex; align-items: center; gap: 6px; font-style: normal; font-weight: 800; color: #ffe28a; margin: -2px 0 8px; }
@@ -1007,7 +1037,7 @@ button.danger { background: #e05555; border-color: #b83b3b; color: #fff; }
   background: rgba(255,255,255,.06); border: 2px solid rgba(255,255,255,.14); color: #fff; transition: all .2s; }
 .ftab .ic { width: 26px; height: 26px; flex: none; opacity: .8; }
 .ftab span { display: flex; flex-direction: column; line-height: 1.2; }
-.ftab b { font-family: "Baloo 2", sans-serif; font-size: 18px; }
+.ftab b { font-family: var(--font-display); font-size: 18px; }
 .ftab small { font-size: 12.5px; opacity: .75; }
 .ftab:hover { background: rgba(255,255,255,.1); }
 .ftab.on { background: linear-gradient(135deg, rgba(255,203,5,.22), rgba(255,203,5,.08)); border-color: var(--yellow); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
@@ -1031,7 +1061,7 @@ button.danger { background: #e05555; border-color: #b83b3b; color: #fff; }
 .rules-compare { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13.5px; line-height: 1.45; margin: 6px 0 4px; }
 .rules-compare th, .rules-compare td { padding: 7px 10px; vertical-align: top; text-align: left; border-bottom: 1px solid var(--line); }
 .rules-compare tbody th { width: 16%; color: var(--navy); font-weight: 800; }
-.rules-compare thead th { font-family: "Baloo 2", sans-serif; font-size: 16px; color: var(--navy); border-bottom: 2px solid var(--line); }
+.rules-compare thead th { font-family: var(--font-display); font-size: 16px; color: var(--navy); border-bottom: 2px solid var(--line); }
 .rules-compare thead th .ic { width: 16px; height: 16px; vertical-align: -2px; }
 .rules-compare td.c-classic, .rules-compare td.c-modern { width: 42%; transition: background .2s; }
 #rules-body[data-format="classic"] .c-classic, #rules-body[data-format="modern"] .c-modern { background: #fff6d6; }
@@ -1077,7 +1107,7 @@ body.arena-on #preview { z-index: 46; }
 /* A card's tooltip over the setup stage: just the explanation — the card is already face up in the fan. */
 body:has(.setup-ov) #preview { z-index: 45; width: min(340px, calc(100vw - 16px)); }
 body:has(.setup-ov) #preview > img { display: none; }
-#preview .pv-name { margin: 0 0 6px; font-family: "Baloo 2", sans-serif; font-size: 19px; line-height: 1.1; color: var(--navy); }
+#preview .pv-name { margin: 0 0 6px; font-family: var(--font-display); font-size: 19px; line-height: 1.1; color: var(--navy); }
 #preview .explain .pv-name + h4 { margin-top: 0; }
 .setup-ov.st-active .st-card.armed { transform: translateY(calc(var(--o) * var(--o) * 6px - 26px)) rotate(calc(var(--o) * 3deg)) scale(1.08); z-index: 3; filter: drop-shadow(0 0 18px rgba(255,203,5,.75)); }
 
@@ -1130,14 +1160,14 @@ body:has(.setup-ov) #preview > img { display: none; }
 .ftab.on .era-fan img:nth-child(2) { transform: translateX(-50%) translateY(-12px); }
 .ftab.on .era-fan img:nth-child(3) { transform: translateX(-50%) translateX(34px) rotate(16deg); }
 .ftab .era-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; padding-bottom: 2px; }
-.era-text b { font-family: "Baloo 2", sans-serif; font-size: 30px; font-weight: 800; line-height: .95; }
+.era-text b { font-family: var(--font-display); font-size: 30px; font-weight: var(--font-display-weight); line-height: .95; }
 .ftab.on .era-text b { color: var(--yellow); }
 .era-text small { font-size: 13px; line-height: 1.35; opacity: .85; }
 
 /* ---- The chosen era's rules, as numbers ---- */
 .rule-strip { list-style: none; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px 28px; margin: 0 0 28px; padding: 18px 20px 0; }
 .rule-strip .rule { display: grid; grid-template-columns: 26px minmax(0, 1fr); align-items: baseline; column-gap: 8px; }
-.rule-strip .rule b { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: var(--yellow); text-align: center; }
+.rule-strip .rule b { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 26px; line-height: 1; color: var(--yellow); text-align: center; }
 .rule-strip .rule span { margin: 0; font-size: 13px; line-height: 1.35; color: rgba(255,255,255,.8); }
 .rule-strip .rule.wide span { grid-column: 2; color: rgba(255,255,255,.6); }
 
@@ -1149,8 +1179,8 @@ body:has(.setup-ov) #preview > img { display: none; }
 
 /* ---- Start bar ---- */
 .matchup { gap: 14px; }
-.matchup .vs { background: none; transform: none; padding: 0 2px; border-radius: 0; font-family: "Baloo 2", sans-serif; font-style: italic;
-  font-weight: 800; font-size: 26px; line-height: 1; color: rgba(255,255,255,.3); }
+.matchup .vs { background: none; transform: none; padding: 0 2px; border-radius: 0; font-family: var(--font-display); font-style: italic;
+  font-weight: var(--font-display-weight); font-size: 26px; line-height: 1; color: rgba(255,255,255,.3); }
 .matchup .side.opp b { color: #fff; }
 button.textlink { background: none; border: 0; border-radius: 4px; padding: 6px 4px; color: rgba(255,255,255,.85); font-weight: 700;
   text-decoration: underline; text-decoration-color: rgba(255,255,255,.3); text-underline-offset: 4px; text-decoration-thickness: 2px; }
@@ -1172,7 +1202,6 @@ button.textlink:focus-visible { outline: 2px solid var(--yellow); outline-offset
 .cs-side.lose { opacity: .3; transform: none; }
 .cs-side.pick { box-shadow: none; border: 0; }
 .cs-side.pick .cs-label { color: var(--yellow); }
-.cs-key { border: 0; padding: 0; color: rgba(255,255,255,.62); font-weight: 700; }
 @media (max-width: 560px) { .cs-side.win { transform: none; } .call-btn .mini-face { width: 76px; height: 76px; } }
 
 /* ---- In-game "Modern" tag: a word, not a purple pill ---- */
@@ -1216,7 +1245,7 @@ button.textlink:focus-visible { outline: 2px solid var(--yellow); outline-offset
 /* ---- Choices in the game: a dark sheet like the card stages; cards are the options, words are buttons ---- */
 #modal .dialog.sheet { background: rgba(9, 18, 44, .97); color: #fff; border: 1px solid rgba(255,255,255,.08); border-radius: 18px;
   box-shadow: 0 24px 60px rgba(0,0,0,.6); padding: 22px 26px 18px; text-align: center; }
-#modal .dialog.sheet h2 { margin: 0 0 4px; font-family: "Baloo 2", sans-serif; font-size: 26px; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); }
+#modal .dialog.sheet h2 { margin: 0 0 4px; font-family: var(--font-display); font-size: 26px; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); }
 #modal .dialog.sheet p { margin: 0 auto 4px; max-width: 60ch; color: rgba(255,255,255,.82); }
 .dialog.sheet .choice-grid { gap: 16px; margin: 16px 0 8px; }
 .dialog.sheet .pick-card { padding: 0; border: 0; background: none; border-radius: 8px; }
@@ -1239,10 +1268,10 @@ body.arena-on #modal .dialog.sheet .pick-card img { width: 100px; }
 .matchup .side { display: flex; flex-direction: column; min-width: 0; }
 .matchup .side.opp select { appearance: none; -webkit-appearance: none; field-sizing: content; max-width: 300px; padding: 0 26px 0 0; border: 0; border-radius: 4px;
   background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1.5 1.5l5.5 5.5 5.5-5.5' fill='none' stroke='%23ffcb05' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 4px center;
-  font-family: "Baloo 2", sans-serif; font-size: 20px; font-weight: 800; line-height: 1.1; color: #fff; text-overflow: ellipsis; cursor: pointer; }
+  font-family: var(--font-display); font-size: 20px; font-weight: var(--font-display-weight); line-height: 1.1; color: #fff; text-overflow: ellipsis; cursor: pointer; }
 .matchup .side.opp select:hover { color: var(--yellow); }
 .matchup .side.opp select:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
-.matchup .side.opp select option, .matchup .side.opp select optgroup { font-family: Nunito, sans-serif; font-size: 14px; color: var(--ink); background: #fff; }
+.matchup .side.opp select option, .matchup .side.opp select optgroup { font-family: var(--font-body); font-size: 14px; color: var(--ink); background: #fff; }
 .start-bar #start-engine { display: flex; flex-direction: column; line-height: 1.15; color: #fff; white-space: nowrap; }
 .start-bar #start-engine small { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6); }
 .start-bar #start-engine b { font-size: 14px; }
@@ -1319,23 +1348,26 @@ html:lang(ja) h1, html:lang(ja) h2, html:lang(ja) h3, html:lang(ja) .title, html
 
 /* ---------- Settings: a dark sheet like the game's stages. Three words pick Gary's engine (underlined in yellow),
    only that engine's details show below, and the rest are plain rows with switches; hairlines instead of boxes. ---------- */
+#settings { z-index: 60; }
 #settings .dialog.settings { max-width: 640px; padding: 22px 28px 14px; background: rgba(9, 18, 44, .97); color: #fff;
   border: 1px solid rgba(255,255,255,.08); border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,.6);
   scrollbar-color: rgba(255,255,255,.2) transparent; }
-#settings h2 { margin: 0 0 2px; font-family: "Baloo 2", sans-serif; font-size: 28px; line-height: 1.1; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); }
+#settings h2 { margin: 0 0 2px; font-family: var(--font-display); font-size: 28px; line-height: 1.1; color: var(--yellow); text-shadow: 2px 2px 0 var(--navy); }
 #settings .close { top: 18px; right: 18px; width: 34px; height: 34px; padding: 0; display: grid; place-items: center; border: 0; border-radius: 50%;
   background: transparent; color: rgba(255,255,255,.6); }
 #settings .close:hover { background: rgba(255,255,255,.08); color: #fff; }
 #settings .close:focus-visible { outline: 2px solid var(--yellow); outline-offset: 1px; }
 .set-sec { padding: 16px 0 4px; }
 .set-sec + .set-sec { border-top: 1px solid rgba(255,255,255,.08); }
-.set-sec h3 { margin: 0 0 10px; font-family: Nunito, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+.set-sec h3 { margin: 0 0 10px; font-family: var(--font-body); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+.set-note { margin: 0 54px 8px 0; color: rgba(255,255,255,.68); font-size: 13px; line-height: 1.4; }
+.set-coverage { margin-inline-start: .35em; color: var(--yellow); font-size: .9em; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* Engine: the three choices are words with a small note under them. */
 .eng-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid rgba(255,255,255,.1); }
 .eng-tab { position: relative; display: flex; flex-direction: column; gap: 1px; padding: 6px 4px 12px; cursor: pointer; color: rgba(255,255,255,.55); transition: color .15s; }
 .eng-tab input { position: absolute; opacity: 0; pointer-events: none; }
-.eng-tab b { font-family: "Baloo 2", sans-serif; font-size: 21px; font-weight: 800; line-height: 1.1; }
+.eng-tab b { font-family: var(--font-display); font-size: 21px; font-weight: var(--font-display-weight); line-height: 1.1; }
 .eng-tab small { font-size: 12px; font-weight: 700; color: rgba(255,255,255,.4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .eng-tab::after { content: ''; position: absolute; left: 4px; right: 12px; bottom: -1px; height: 3px; border-radius: 3px; background: var(--yellow);
   transform: scaleX(0); transform-origin: left; transition: transform .22s cubic-bezier(.3,.7,.3,1); }
@@ -1421,3 +1453,41 @@ a.eng-mac-link { display: inline-block; margin: 12px 0 6px; padding: 9px 18px; b
   background: var(--yellow); color: #1d2a5a; font-weight: 800; text-decoration: none; }
 a.eng-mac-link:hover { filter: brightness(1.06); }
 a.eng-mac-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* Chinese: local full-coverage rounded fonts; Latin names keep the game's Baloo 2 / Nunito pairing. */
+html:lang(zh) {
+  --font-cjk: "LXGW 975 Yuan SC";
+  --font-cjk-fallback: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+  --font-body: Nunito, var(--font-cjk), var(--font-cjk-fallback);
+  --font-display: "Baloo 2", var(--font-cjk), var(--font-cjk-fallback);
+  --font-display-weight: 700;
+  font-weight: 400;
+  font-synthesis: none;
+}
+html:lang(zh-Hant) {
+  --font-cjk: "Chiron GoRound TC";
+  --font-cjk-fallback: "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif;
+  --font-display-weight: 800;
+}
+html:lang(zh) #rules-body thead th[data-you]::after { font-family: var(--font-body); }
+html:lang(zh) .start-hero h2 { font-size: 32px; line-height: 1.2; }
+html:lang(zh) .start-hero p { font-size: 16px; line-height: 1.6; }
+html:lang(zh) .era-text b { font-size: 31px; line-height: 1.15; }
+html:lang(zh) .era-text small, html:lang(zh) .rule-strip .rule span,
+html:lang(zh) .deck .d-sub { font-size: 14px; line-height: 1.5; }
+html:lang(zh) .deck .d-name { line-height: 1.15; }
+html:lang(zh) .rules h2 { font-size: 26px; line-height: 1.25; }
+html:lang(zh) .rules h3 { font-size: 20px; line-height: 1.3; }
+html:lang(zh) .rules p, html:lang(zh) .rules li { font-size: 15px; line-height: 1.6; }
+html:lang(zh) .rules-compare { font-size: 14px; line-height: 1.55; }
+html:lang(zh) .panel h2 { font-size: 18px; line-height: 1.3; }
+html:lang(zh) .act { font-size: 14px; line-height: 1.4; }
+html:lang(zh) #tips { font-size: 13px; line-height: 1.5; }
+html:lang(zh) #log { font-size: 13px; }
+html:lang(zh) #log div { line-height: 1.45; }
+html:lang(zh) #preview .explain { font-size: 13.5px; line-height: 1.5; }
+html:lang(zh) #preview .explain h4 { font-size: 14px; font-weight: var(--font-display-weight); }
+html:lang(zh) #preview .atk-name { font-size: 14px; }
+html:lang(zh) .brand .title { font-size: 23px; line-height: 1.15; }
+html:lang(zh) .set-sec h3 { font-family: var(--font-display); font-weight: var(--font-display-weight); }
+.lang button { white-space: nowrap; }

@@ -6,11 +6,17 @@ card names, card text and card images are trademarks and © of Nintendo, Creatur
 GAME FREAK and The Pokémon Company. This is a fan-made, non-commercial learning
 project and is not affiliated with, endorsed or sponsored by them.
 
-The repository does not contain the card or logo image files; `npm run images`
-downloads them from the public Pokémon TCG API image service (https://pokemontcg.io).
+The repository does not contain the card or logo image files. `npm run images`
+downloads them from the sources listed in scripts/fetch-images.mjs.
 The screenshots in docs/screenshots show them in play.
 
 Third-party assets in public/vendor/:
 - Lucide icons (https://lucide.dev), ISC License
 - Pokémon type icons by duiker101 (https://github.com/duiker101/pokemon-type-svg-icons), MIT License
 - Baloo 2, Nunito and Dela Gothic One fonts, SIL Open Font License 1.1
+- LXGW 975 Yuan SC (https://github.com/lxgw/975Yuan), SIL Open Font License 1.1
+  License: public/vendor/fonts/chinese/OFL-LXGW975Yuan.txt
+- Chiron GoRound TC (https://github.com/chiron-fonts/chiron-go-round-tc), SIL Open Font License 1.1
+  License: public/vendor/fonts/chinese/LICENSE-ChironGoRound.md
+  The Chinese WOFF2 fonts retain the originals' complete character coverage.
+  Source versions and SHA-256 hashes: public/vendor/fonts/chinese/manifest.json

@@ -1,0 +1,356 @@
+{
+  "rareCandy": {
+    "values": {
+      "a": 1,
+      "b": 2
+    }
+  },
+  "nestBall": {
+    "values": {
+      "a": 1
+    }
+  },
+  "professorsResearch": {
+    "values": {
+      "a": 7
+    }
+  },
+  "ultraBall": {
+    "values": {
+      "a": 2,
+      "b": 1
+    }
+  },
+  "bossOrders": {
+    "values": {
+      "a": 1
+    }
+  },
+  "arven": {
+    "values": {
+      "a": 1
+    }
+  },
+  "beachCourt": {
+    "icons": [
+      "colorless"
+    ]
+  },
+  "electricGenerator": {
+    "values": {
+      "a": 5,
+      "b": 2
+    },
+    "icons": [
+      "lightning",
+      "lightning"
+    ]
+  },
+  "energyRetrievalM": {
+    "values": {
+      "a": 2
+    }
+  },
+  "energySearch": {
+    "values": {
+      "a": 1
+    }
+  },
+  "energySwitch": {
+    "values": {
+      "a": 1
+    }
+  },
+  "expShare": {
+    "values": {
+      "a": 1
+    }
+  },
+  "jacq": {
+    "values": {
+      "a": 2
+    }
+  },
+  "judge": {
+    "values": {
+      "a": 4
+    }
+  },
+  "nemona": {
+    "values": {
+      "a": 3
+    }
+  },
+  "palPad": {
+    "values": {
+      "a": 2
+    }
+  },
+  "pokeBall": {
+    "values": {
+      "a": 1
+    }
+  },
+  "pokegear": {
+    "values": {
+      "a": 7,
+      "b": 1
+    }
+  },
+  "potion30": {
+    "values": {
+      "a": 1,
+      "b": 30
+    }
+  },
+  "switch": {
+    "values": {
+      "a": 1
+    }
+  },
+  "vitalityBand": {
+    "values": {
+      "a": 10
+    }
+  },
+  "youngster": {
+    "values": {
+      "a": 5
+    }
+  },
+  "clavell": {
+    "values": {
+      "a": 3,
+      "b": 120
+    }
+  },
+  "greatBall": {
+    "values": {
+      "a": 7,
+      "b": 1
+    }
+  },
+  "iono": {},
+  "superRod": {
+    "values": {
+      "a": 3
+    }
+  },
+  "ryme": {
+    "values": {
+      "a": 3
+    }
+  },
+  "energySticker": {
+    "values": {
+      "a": 1
+    }
+  },
+  "counterCatcher": {
+    "values": {
+      "a": 1
+    }
+  },
+  "mela": {
+    "values": {
+      "a": 1,
+      "b": 6
+    },
+    "icons": [
+      "fire"
+    ]
+  },
+  "rika": {
+    "values": {
+      "a": 4,
+      "b": 2
+    }
+  },
+  "roark": {
+    "values": {
+      "a": 2,
+      "b": 1
+    }
+  },
+  "buddyPoffin": {
+    "values": {
+      "a": 2,
+      "b": 70
+    }
+  },
+  "cook": {
+    "values": {
+      "a": 70
+    }
+  },
+  "nightStretcher": {
+    "values": {
+      "a": 1
+    }
+  },
+  "drayton": {
+    "values": {
+      "a": 7,
+      "b": 1
+    }
+  },
+  "gravityMountain": {
+    "values": {
+      "a": 2,
+      "b": 30
+    }
+  },
+  "surfer": {
+    "values": {
+      "a": 1,
+      "b": 5
+    }
+  },
+  "brocksScouting": {
+    "values": {
+      "a": 2,
+      "b": 1
+    }
+  },
+  "irisFightingSpirit": {
+    "values": {
+      "a": 1,
+      "b": 6
+    }
+  },
+  "energyRecycler": {
+    "values": {
+      "a": 5
+    }
+  },
+  "graniteCave": {
+    "values": {
+      "a": 30
+    }
+  },
+  "spikemuthGym": {
+    "values": {
+      "a": 1
+    }
+  },
+  "trArcher": {
+    "values": {
+      "a": 5,
+      "b": 3
+    }
+  },
+  "trAriana": {
+    "values": {
+      "a": 5,
+      "b": 8
+    }
+  },
+  "trFactory": {
+    "values": {
+      "a": 2,
+      "b": 1
+    }
+  },
+  "trGiovanni": {
+    "values": {
+      "a": 1
+    }
+  },
+  "trPetrel": {
+    "values": {
+      "a": 1
+    }
+  },
+  "trProton": {
+    "values": {
+      "a": 3
+    }
+  },
+  "trTransceiver": {
+    "values": {
+      "a": 1
+    }
+  },
+  "fightingGong": {
+    "values": {
+      "a": 1
+    },
+    "icons": [
+      "fighting",
+      "fighting"
+    ]
+  },
+  "lilliesDetermination": {
+    "values": {
+      "a": 6,
+      "b": 8
+    }
+  },
+  "megaSignal": {
+    "values": {
+      "a": 1
+    }
+  },
+  "mysteryGarden": {
+    "values": {
+      "a": 1
+    },
+    "icons": [
+      "psychic"
+    ]
+  },
+  "premiumPowerPro": {
+    "values": {
+      "a": 30
+    },
+    "icons": [
+      "fighting"
+    ]
+  },
+  "riskyRuins": {
+    "values": {
+      "a": 2
+    },
+    "icons": [
+      "dark"
+    ]
+  },
+  "surfingBeach": {
+    "values": {
+      "a": 1
+    },
+    "icons": [
+      "water",
+      "water"
+    ]
+  },
+  "wallysCompassion": {
+    "values": {
+      "a": 1
+    }
+  },
+  "dawn": {
+    "values": {
+      "a": 1,
+      "b": 2
+    }
+  },
+  "grimsleysMove": {
+    "values": {
+      "a": 7,
+      "b": 1
+    },
+    "icons": [
+      "dark"
+    ]
+  },
+  "wondrousPatch": {
+    "values": {
+      "a": 1
+    },
+    "icons": [
+      "psychic",
+      "psychic"
+    ]
+  }
+}
