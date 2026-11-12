@@ -9,6 +9,7 @@ import { execFileSync } from 'node:child_process';
 import { join, dirname, sep, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as esbuild from 'esbuild';
+import { writeCardImageAssets } from './card-localization/runtime-assets.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const pub = join(root, 'public'), site = join(root, 'site'), play = join(site, 'play');
@@ -46,6 +47,7 @@ async function walk(dir) {
   }
 }
 await walk(play);
+await writeCardImageAssets(play, { hosted: true });
 if (unknown.size) throw new Error(`no remote source for: ${[...unknown].slice(0, 5).join(', ')}`);
 
 // A static host limits bursts of requests (Spacefast answers 429), and a module that fails to load stops the game.

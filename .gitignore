@@ -1,6 +1,7 @@
 # secrets and local settings
 .env
 decision.json
+/.cache/card-localization/
 
 # dependencies and build output
 node_modules/

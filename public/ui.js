@@ -1,8 +1,9 @@
 import { DECKS, CARDS, CARD_BACK, PRIZES, DECK_GROUPS, MODERN_GROUPS, loadDeck } from './cards.js';
-import { Game, C, isType } from './engine.js';
+import { Game, C, canPay, isType } from './engine.js';
 import { AIController, rankActions, aiConfig } from './ai.js';
 import { RPS_CANCEL, chooseThrow, showdown, rpsReset, rpsClose } from './rps.js';
 import { api, inApp, online, webOnly, MAC_DOWNLOAD } from './api.js';
+import { bindCardImage, cardImageAttrs, refreshCardImages } from './card-image/display.js';
 
 if (inApp) document.documentElement.classList.add('in-app'); // the macOS app (see the in-app rules in style.css)
 import { t, setLang, getLang, cardName, attackName, powerName, termName, deckName, resolve, RULES_HTML } from './i18n.js';
@@ -37,7 +38,9 @@ const backImg = () => `<img src="${CARD_BACK}" alt="" draggable="false">`;
 const HIDDEN_EFFECTS = new Set(['lastHit', 'healedNow', 'evolvedNow', 'movedActive', 'lastAtk']);
 
 function applyStaticText() {
-  document.documentElement.lang = getLang();
+  const locale = getLang();
+  document.documentElement.lang = locale;
+  updateStartLogo(locale);
   document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
   // The welcome text counts the decks, so it stays right as decks are added.
   const counts = { classic: Object.values(DECKS).filter((d) => d.format !== 'modern').length, modern: Object.values(DECKS).filter((d) => d.format === 'modern').length };
@@ -72,13 +75,13 @@ function monTile(m, { active = false, owner }) {
   const tucked = under.map((c, i) => {
     inspectables.set('u' + c.uid, c);
     const mark = c.kind === 'energy' ? energyIcon(c.energyType) : `<span class="tool-mark">${esc(cardName(c))}</span>`;
-    return `<div class="tucked ${arrivingCards.has(c.uid) ? 'arriving' : ''}" data-cuid="${c.uid}" data-inspect="u${c.uid}" style="--i:${i};z-index:${under.length - i};background-image:url('${c.img}')">${mark}</div>`;
+    return `<div class="tucked ${arrivingCards.has(c.uid) ? 'arriving' : ''}" data-cuid="${c.uid}" data-inspect="u${c.uid}" ${cardImageAttrs(c, { background: true })} style="--i:${i};z-index:${under.length - i};background-image:url('${esc(c.img)}')">${mark}</div>`;
   }).join('');
   return `<div class="mon ${active ? 'active' : ''} ${owner.idx === 1 ? 'up' : ''} ${arena?.ids.has(m.id) ? 'in-arena' : ''}" data-inspect="m${m.id}" data-mon="${m.id}">
     <div class="pile-under" style="--n:${under.length};--pkf:${Math.min(1, 3 / Math.max(1, under.length)).toFixed(3)}">
       ${tucked}
       <div class="top-card ${arrivingCards.has(m.card.uid) ? 'arriving' : ''}" data-cuid="${m.card.uid}">
-        <img class="card-img" src="${m.card.img}" alt="${esc(cardName(m.card))}" draggable="false">
+        <img class="card-img" ${cardImageAttrs(m.card)} alt="${esc(cardName(m.card))}" draggable="false">
         ${diceHtml(m)}
         <div class="tags">${tags}</div>
       </div>
@@ -129,10 +132,7 @@ function arenaCard(m, rect) {
   const w = document.createElement('div');
   w.className = 'arena-card';
   // The mat's (already decoded) image first; the large one swaps in once decoded, never mid-animation.
-  w.innerHTML = `<img src="${m.card.img}" alt="${esc(cardName(m.card))}"><i class="a-glow"></i><div class="a-dice"></div><div class="a-hp"></div>`;
-  const img = w.querySelector('img'), hi = new Image();
-  hi.src = m.card.imgLarge;
-  hi.decode().then(() => { img.src = hi.src; }).catch(() => {});
+  w.innerHTML = `<img ${cardImageAttrs(m.card, { upgrade: true })} alt="${esc(cardName(m.card))}"><i class="a-glow"></i><div class="a-dice"></div><div class="a-hp"></div>`;
   Object.assign(w.style, { left: `${rect.left}px`, top: `${rect.top}px`, width: `${rect.width}px` });
   updateArenaCard(w, m, m.damage);
   return w;
@@ -574,7 +574,7 @@ async function onEvolve({ p, mon, from, to }) {
   const ov = document.createElement('div');
   ov.className = 'evolve-stage';
   ov.innerHTML = `<div class="ev-rays"></div><div class="ev-glow"></div>
-    <div class="ev-card"><img class="ev-old" src="${from.imgLarge}" alt=""><img class="ev-new" src="${to.imgLarge}" alt=""><i class="ev-sil"></i></div>
+    <div class="ev-card"><img class="ev-old" ${cardImageAttrs(from, { large: true })} alt=""><img class="ev-new" ${cardImageAttrs(to, { large: true })} alt=""><i class="ev-sil"></i></div>
     <div class="ev-sparkles"></div>`;
   document.body.append(ov);
   document.body.classList.add('arena-on');
@@ -588,7 +588,7 @@ async function onEvolve({ p, mon, from, to }) {
   // The evolution card flies in from the hand and merges into the Pokémon.
   if (handCard) {
     if (p === 0) handCard.style.visibility = 'hidden';
-    await fly(handCard, card, { front: p === 0 ? to.img : null });
+    await fly(handCard, card, { front: p === 0 ? to : null });
   }
   ov.classList.add('glowing');
   // Sparkles drifting up around the card.
@@ -644,7 +644,7 @@ function onBench({ p, card }) {
   arrivingCards.add(card.uid);
   if (p === 0) from.style.visibility = 'hidden';
   // Until the engine re-renders, the new Bench slot doesn't exist yet; the flight retargets as soon as it does.
-  track(fly(from, () => document.querySelector(`[data-cuid="${card.uid}"]`) || from, { front: card.img, faceUp: p === 0 }).then(() => reveal(card.uid)));
+  track(fly(from, () => document.querySelector(`[data-cuid="${card.uid}"]`) || from, { front: card, faceUp: p === 0 }).then(() => reveal(card.uid)));
 }
 
 // Gary's Trainer cards: the card flips face up at centre stage with what it does, then goes to the discard pile.
@@ -655,13 +655,13 @@ async function onTrainer({ p, card, label }) {
   const k = card.stadium || card.tkind;
   const ov = document.createElement('div');
   ov.className = 'trainer-stage';
-  ov.innerHTML = `<div class="ts-row"><div class="ts-slot"><img src="${card.imgLarge || card.img}" alt=""></div>
+  ov.innerHTML = `<div class="ts-row"><div class="ts-slot"><img ${cardImageAttrs(card, { large: true })} alt=""></div>
     <div class="ts-text"><small>${icon(card.stadium ? 'landmark' : 'backpack')} ${esc(t('ui.oppTrainer', { P: { $pl: 1 } }))}</small>
       <b>${esc(cardName(card))}</b>${label.params?.m ? `<em>${icon('arrow-right')} ${esc(resolve(label.params.m))}</em>` : ''}<p>${esc(t('tr.' + k + '.what'))}</p></div></div>`;
   document.body.append(ov);
   const slot = ov.querySelector('.ts-slot');
   ov.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 220, fill: 'forwards' });
-  if (from) await fly(from, slot, { front: card.img });
+  if (from) await fly(from, slot, { front: card });
   slot.classList.add('shown');
   ov.classList.add('revealed');
   // Stay long enough to read; a click moves on sooner.
@@ -670,7 +670,7 @@ async function onTrainer({ p, card, label }) {
   ov.classList.add('leaving');
   if (pile && !card.stadium && !['plusPower', 'defender'].includes(card.tkind)) {
     slot.style.visibility = 'hidden';
-    const done = fly(slot, pile, { front: card.img, faceUp: true });
+    const done = fly(slot, pile, { front: card, faceUp: true });
     ov.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 300, fill: 'forwards' });
     await done;
   } else {
@@ -703,7 +703,7 @@ async function onAttach({ p, mon, card }) {
   const cardH = monEl.querySelector('.top-card')?.offsetHeight || 120;
   const approach = dir * cardH * 0.85;
   const tucked = () => document.querySelector(`[data-cuid="${card.uid}"]`);
-  track(fly(from, () => tucked() || monEl.querySelector('.top-card'), { front: card.img, offsetY: approach }).then(() => {
+  track(fly(from, () => tucked() || monEl.querySelector('.top-card'), { front: card, offsetY: approach }).then(() => {
     // Phase 2: hand over to the real tucked card, which sits behind the Pokémon: the Pokémon lifts a little,
     // the card slides in underneath, then the Pokémon settles back and closes over it.
     const tk = tucked();
@@ -929,7 +929,7 @@ function startDrag(e) {
   const g = document.createElement('div');
   g.className = 'drag-ghost' + (drag.zones.length ? '' : ' no');
   const why = drag.zones.length ? '' : `<div class="why">${icon('lightbulb')} ${esc(t(...whyNot(card, game.players[0])))}</div>`;
-  g.innerHTML = `<img src="${card.img}" alt="">${why}`;
+  g.innerHTML = `<img ${cardImageAttrs(card)} alt="">${why}`;
   document.body.append(g);
   drag.ghost = g;
   moveDrag(e);
@@ -1177,7 +1177,7 @@ function pilesHtml(p) {
   const tilt = (c) => ((c.uid * 37) % 15) - 7;
   const discard = top
     ? `<div class="stack discard" data-inspect="d${p.idx}">${p.discard.slice(-3).map((c) =>
-        `<img src="${c.img}" alt="" style="transform: rotate(${tilt(c)}deg)">`).join('')}</div>`
+        `<img ${cardImageAttrs(c)} alt="" style="transform: rotate(${tilt(c)}deg)">`).join('')}</div>`
     : '<div class="empty"></div>';
   return `<div class="pile" data-pile="deck">${deck}<span class="count">${p.deck.length}</span><div>${esc(t('ui.deck'))}</div></div>
     <div class="pile" data-pile="discard">${discard}<span class="count">${p.discard.length}</span><div>${esc(t('ui.discard'))}</div></div>`;
@@ -1246,7 +1246,7 @@ function fly(from, to, { front = null, delay = 0, rot = 0, offsetY = 0, faceUp =
   const el = document.createElement('div');
   el.className = 'fly';
   Object.assign(el.style, { left: '0px', top: '0px', width: `${w}px`, height: `${h}px`, transformOrigin: '50% 50%', visibility: 'hidden' });
-  el.innerHTML = `<div class="fly-inner ${front ? '' : 'back-only'}">${front ? `<img class="ff" src="${front}" alt="">` : ''}<img class="fb" src="${CARD_BACK}" alt=""></div>`;
+  el.innerHTML = `<div class="fly-inner ${front ? '' : 'back-only'}">${front ? `<img class="ff" ${cardImageAttrs(front)} alt="">` : ''}<img class="fb" src="${CARD_BACK}" alt=""></div>`;
   document.body.append(el);
   const inner = el.firstChild;
   const D = 760, s0 = a.width / w;
@@ -1301,7 +1301,7 @@ function flyNewCards(you, opp, newCards) {
       const target = () => cardEl(c.uid);
       if (!from || !target()) { arrivingCards.delete(c.uid); return; }
       const stage = staged && prizeFrom.stage;
-      fly(from, target, { front: c.img, delay: i * 120, faceUp: !!staged }).then(() => reveal(c.uid));
+      fly(from, target, { front: c, delay: i * 120, faceUp: !!staged }).then(() => reveal(c.uid));
       if (stage) closePrizeStage(stage);
     });
     const extra = opp.hand.length - seenOppHand;
@@ -1362,7 +1362,7 @@ function render() {
   $('#hand').innerHTML = you.hand.map((c) => {
     inspectables.set('c' + c.uid, c);
     const arriving = arrivingCards.has(c.uid) || (animateDraws && newCards.includes(c)) ? 'arriving' : '';
-    return `<div class="hcard ${arriving}" data-inspect="c${c.uid}" data-card="${c.uid}"><img src="${c.img}" alt="${esc(cardName(c))}" draggable="false"></div>`;
+    return `<div class="hcard ${arriving}" data-inspect="c${c.uid}" data-card="${c.uid}"><img ${cardImageAttrs(c)} alt="${esc(cardName(c))}" draggable="false"></div>`;
   }).join('');
   layoutHand();
   markPlayable();
@@ -1377,7 +1377,7 @@ function render() {
   const st = game.stadium?.card;
   if (st) inspectables.set('s' + st.uid, st);
   $('#stadium').hidden = !st;
-  $('#stadium').innerHTML = st ? `<img src="${st.img}" alt="" data-inspect="s${st.uid}"><span><small>${icon('landmark')} ${esc(t('ui.stadium'))}</small><b data-inspect="s${st.uid}">${esc(cardName(st))}</b></span>` : '';
+  $('#stadium').innerHTML = st ? `<img ${cardImageAttrs(st)} alt="" data-inspect="s${st.uid}"><span><small>${icon('landmark')} ${esc(t('ui.stadium'))}</small><b data-inspect="s${st.uid}">${esc(cardName(st))}</b></span>` : '';
 }
 
 // Hovering a card shows a large floating preview next to it. It never takes space in the layout, so nothing jumps.
@@ -1391,7 +1391,7 @@ function inspect(card, reason = null, anchor = null) {
   const why = reason ? `<div class="why">${icon('lightbulb')} ${esc(t(reason[0], reason[1]))}</div>` : '';
   const name = cardName(card);
   const title = withOriginal(name, card.kind === 'energy' && !card.special ? name : card.name);
-  pv.innerHTML = `<img src="${card.imgLarge}" alt="${esc(name)}"><div class="explain"><h3 class="pv-name">${esc(title)}</h3>${why}${explainCard(card, mon)}</div>`;
+  pv.innerHTML = `<img ${cardImageAttrs(card, { large: true })} alt="${esc(name)}"><div class="explain"><h3 class="pv-name">${esc(title)}</h3>${why}${explainCard(card, mon)}</div>`;
   pv.hidden = false;
   if (anchor) placePreview(anchor);
 }
@@ -1826,8 +1826,17 @@ function turnTips(p, actions) {
   if (game.turn === 1) tips.push(['tip.firstTurn']);
   if (p.active?.status.confused) tips.push(['tip.confused', { m: C(p.active) }]);
   if (!kinds.has('attack') && game.turn !== 1 && p.active) {
-    const st = p.active.conditions().find((s) => s === 'asleep' || s === 'paralyzed');
-    tips.push(st ? ['tip.cantStatus', { m: C(p.active), s: { $st: st } }] : ['tip.noEnergy', { m: C(p.active) }]);
+    const active = p.active;
+    const st = active.conditions().find((s) => s === 'asleep' || s === 'paralyzed');
+    if (st) {
+      tips.push(['tip.cantStatus', { m: C(active), s: { $st: st } }]);
+    } else {
+      const attacks = game.attacksOf(active);
+      if (attacks.length && attacks.every(({ cost, fx }) => !canPay(active.payTypes, cost) ||
+          (fx.needsType && !active.energyTypes.includes(fx.needsType)))) {
+        tips.push(['tip.noEnergy', { m: C(active) }]);
+      }
+    }
   }
   if (onlyEndLeft(actions)) tips.push(['tip.onlyEnd']);
   if (kinds.has('attack')) tips.push(['tip.attack']);
@@ -1950,7 +1959,7 @@ function actLead(a, p) {
   if (a.kind === 'energy' && !a.card.energyType.includes('|')) return `<span class="lead">${energyIcon(a.card.energyType)}</span>`;
   if (a.kind === 'attack') return `<span class="lead">${energyIcon(p.active?.card.type || 'Colorless')}</span>`;
   const c = a.card || (a.kind === 'stadium' ? game.stadium?.card : a.kind === 'power' || a.kind === 'retreat' ? a.target?.card : null);
-  return c?.img ? `<span class="lead thumb"><img src="${c.img}" alt="" loading="lazy"></span>` : '<span class="lead"></span>';
+  return c?.img ? `<span class="lead thumb"><img ${cardImageAttrs(c)} alt="" loading="lazy"></span>` : '<span class="lead"></span>';
 }
 
 // An Energy that none of the target's attacks asks for by type: legal, but it only pays for ★ (Colorless) costs.
@@ -1963,6 +1972,7 @@ const KIND_ICON = { attack: 'swords', energy: 'zap', evolve: 'chevrons-up', benc
 function clearActions(html = '') {
   $('#actions').innerHTML = html;
   $('#end-slot').innerHTML = '';
+  $('#tips').replaceChildren();
 }
 
 class HumanController {
@@ -1984,7 +1994,6 @@ class HumanController {
           markPlayable();
           this.n++;
           clearActions('<div class="waiting">…</div>');
-          $('#tips').innerHTML = '';
           if ($('#opt-coach').checked) this.feedback(a, actions, ranking);
           resolve(a);
         },
@@ -2034,8 +2043,8 @@ class HumanController {
         const words = prompt.options.filter((o) => o.label);
         const pic = (o) => {
           if (o.back) return `<button data-id="${o.id}" class="pick-card">${backImg()}</button>`;
-          if (o.mon) return `<button data-id="${o.id}" class="pick-card"><img src="${o.mon.card.img}" alt="${esc(cardName(o.mon.card))}"><span class="sub">${o.mon.hpLeft}/${o.mon.maxHp} ${t('ui.hp')}</span></button>`;
-          return `<button data-id="${o.id}" class="pick-card" data-inspect="c${o.card.uid}"><img src="${o.card.img}" alt="${esc(cardName(o.card))}"></button>`;
+          if (o.mon) return `<button data-id="${o.id}" class="pick-card"><img ${cardImageAttrs(o.mon.card)} alt="${esc(cardName(o.mon.card))}"><span class="sub">${o.mon.hpLeft}/${o.mon.maxHp} ${t('ui.hp')}</span></button>`;
+          return `<button data-id="${o.id}" class="pick-card" data-inspect="c${o.card.uid}"><img ${cardImageAttrs(o.card)} alt="${esc(cardName(o.card))}"></button>`;
         };
         // Alone, word answers are the choice itself (Yes / No, a number); next to cards, they are the way out ("Nothing").
         const word = (o) => `<button data-id="${o.id}" class="${pictured.length ? 'textlink' : o.id === 'yes' ? 'primary' : 'opt-word'}">${esc(t(o.label.key, o.label.params))}</button>`;
@@ -2106,7 +2115,7 @@ async function onPrize(p, card) {
   const el = prizeStage, c = el?.querySelector('.pz-card.chosen');
   if (!c) return;
   const front = c.querySelector('.pz-front');
-  front.src = card.imgLarge || card.img;
+  bindCardImage(front, card, { large: true });
   await Promise.race([front.decode?.().catch(() => {}), sleep(1200)]);
   const anim = animOn();
   // Lift the chosen card out of the row to the centre of the screen, bigger.
@@ -2205,7 +2214,7 @@ function setupStage(mode, title, sub, cards, extra = '') {
     <div class="cs-title">${icon(mode === 'bench' ? 'layers' : 'user')} <span>${esc(title)}</span></div>
     <div class="cs-sub">${esc(sub)}</div>
     <div class="pz-row" style="--n:${n}">${cards.map((c, i) => `<button class="pz-card st-card" data-uid="${c.uid}" style="--i:${i};--o:${(i - (n - 1) / 2).toFixed(2)}" aria-label="${esc(cardName(c))}">
-      <img src="${c.img}" alt="" draggable="false"><span class="st-check">${icon('circle-check')}</span></button>`).join('')}</div>
+      <img ${cardImageAttrs(c)} alt="" draggable="false"><span class="st-check">${icon('circle-check')}</span></button>`).join('')}</div>
     <div class="st-info">${esc(t(matchMedia('(hover: none)').matches ? (mode === 'bench' ? 'ui.setupTapBench' : 'ui.setupTap') : 'ui.setupHover'))}</div>${extra}
     <div class="pz-caption"><b class="pz-name"></b><span class="pz-note"></span></div>
   </div>`;
@@ -2256,7 +2265,7 @@ function chooseActiveStage(prompt) {
       el.classList.add('picked');
       b.classList.add('chosen');
       const img = b.querySelector('img');
-      if (card.imgLarge) img.src = card.imgLarge;
+      if (card.imgLarge) bindCardImage(img, card, { large: true });
       liftToCentre(b, anim);
       await sleep(anim ? 420 : 0);
       el.classList.add('revealing', 'revealed');
@@ -2331,7 +2340,6 @@ function makeAIController(myGame) {
     if (myGame !== gameId) return stale();
     clearActions(`<div class="waiting">${esc(t('ui.waitingOpp'))}</div>`);
     if (pendingAnims.size) await Promise.all([...pendingAnims]);
-    $('#tips').innerHTML = '';
     await sleep(450);
     const act = await choose(...args);
     await sleep(550);
@@ -2364,6 +2372,7 @@ function resetTable() {
   seenPrizes = [new Set(), new Set()];
   seenOppHand = 0;
   decision = null;
+  clearActions();
   winState = null;
   $('#win-meter').hidden = true;
   $('#start').hidden = true;
@@ -2456,7 +2465,6 @@ function undoButton() {
 function gameOver(g) {
   decision = null;
   clearActions();
-  $('#tips').innerHTML = '';
   oppStatus();
   openModal(() => {
     const [ic, title] = g.winner === 'draw' ? ['handshake', t('ui.drawGame')] : g.winner.idx === 0 ? ['trophy', t('ui.youWin')] : ['frown', t('ui.oppWins')];
@@ -2479,12 +2487,16 @@ function deckStats(d) {
   return n;
 }
 
+function featuredCard(deck, id, index) {
+  return CARDS[id] ?? { id, img: deck.featuredImgs?.[index] };
+}
+
 function deckTile(k, d) {
   const s = deckStats(d);
   const [c1, c2 = c1] = d.types;
   const chips = d.types.map((x) => `<span class="chip">${energyIcon(x)}${esc(t('type.' + x))}</span>`).join('');
   return `<button class="deck ${k === selectedDeck ? 'sel' : ''}" data-deck="${k}" aria-pressed="${k === selectedDeck}" style="--c1:var(--${c1});--c2:var(--${c2})">
-    <div class="deck-art"><div class="fan">${d.featured.map((n, i) => `<img src="${d.featuredImgs?.[i] || CARDS[n].img}" alt="" loading="lazy">`).join('')}</div></div>
+    <div class="deck-art"><div class="fan">${d.featured.map((n, i) => `<img ${cardImageAttrs(featuredCard(d, n, i))} alt="" loading="lazy">`).join('')}</div></div>
     <div class="deck-body">
       <div class="d-name">${esc(deckName(k, d.name))}</div>
       <div class="d-sub">${esc(t('deck.' + k))}</div>
@@ -2507,7 +2519,7 @@ const FORMAT_RULES = {
 function eraCards(f) {
   const groups = f === 'modern' ? MODERN_GROUPS : DECK_GROUPS;
   const d = Object.values(DECKS).find((x) => x.group === groups[0]);
-  return d ? d.featured.slice(0, 3).map((n, i) => d.featuredImgs?.[i] || CARDS[n]?.img).filter(Boolean) : [];
+  return d ? d.featured.slice(0, 3).map((id, i) => featuredCard(d, id, i)).filter((card) => card.img) : [];
 }
 
 function renderDeckChoices() {
@@ -2515,7 +2527,7 @@ function renderDeckChoices() {
   const groups = deckFormat === 'modern' ? MODERN_GROUPS : DECK_GROUPS;
   const tabs = `<div class="format-tabs" role="group" aria-label="${esc(t('ui.formatPick'))}">${['classic', 'modern'].map((f) => `
     <button class="ftab ${f === deckFormat ? 'on' : ''}" data-format="${f}" aria-pressed="${f === deckFormat}">
-      <span class="era-fan" aria-hidden="true">${eraCards(f).map((src) => `<img src="${src}" alt="" loading="lazy">`).join('')}</span>
+      <span class="era-fan" aria-hidden="true">${eraCards(f).map((card) => `<img ${cardImageAttrs(card)} alt="" loading="lazy">`).join('')}</span>
       <span class="era-text"><b>${esc(t('format.' + f))}</b><small>${esc(t('format.' + f + '.sub'))}</small></span></button>`).join('')}</div>
     <ul class="rule-strip" aria-label="${esc(t('format.' + deckFormat + '.rulesTitle'))}">${FORMAT_RULES[deckFormat].map((k) => {
       const n = t(`fr.${k}.n`);
@@ -2580,6 +2592,7 @@ function openStart() {
 
 function switchLanguage(lang) {
   if (!setLang(lang)) return;
+  syncCardImages();
   applyStaticText();
   renderDeckChoices();
   render();
@@ -2649,10 +2662,19 @@ $('#settings-close').onclick = closeSettings;
 $('#settings').onclick = (e) => { if (e.target.id === 'settings') closeSettings(); };
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#settings').hidden) closeSettings(); });
 // Remember the settings between visits.
-for (const id of ['opt-coach', 'opt-hints', 'opt-anim']) {
-  try { const v = localStorage.getItem(id); if (v != null) $('#' + id).checked = v === '1'; } catch { /* storage unavailable */ }
-  $('#' + id).addEventListener('change', (e) => { try { localStorage.setItem(id, e.target.checked ? '1' : '0'); } catch { /* ignore */ } });
+const cardImageOptions = ['opt-card-image-download', 'opt-card-image-generate'];
+function syncCardImages(retry = false) {
+  refreshCardImages(getLang(), ...cardImageOptions.map((id) => $('#' + id).checked), retry);
 }
+for (const id of ['opt-coach', 'opt-hints', 'opt-anim', ...cardImageOptions]) {
+  try { const v = localStorage.getItem(id); if (v != null) $('#' + id).checked = v === '1'; } catch { /* storage unavailable */ }
+  $('#' + id).addEventListener('change', (e) => {
+    try { localStorage.setItem(id, e.target.checked ? '1' : '0'); } catch { /* ignore */ }
+    if (cardImageOptions.includes(id)) syncCardImages();
+  });
+}
+syncCardImages();
+window.addEventListener('online', () => syncCardImages(true));
 // The rules page highlights the rules you are playing with (or the tab picked on the start screen).
 $('#btn-rules').onclick = $('#start-rules').onclick = () => {
   const fmt = game && $('#start').hidden ? (game.modern ? 'modern' : 'classic') : deckFormat;

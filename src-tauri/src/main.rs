@@ -1,13 +1,15 @@
 // Pokémon TCG Academy for macOS. The window shows the game (public/, copied to dist/ at build time) with no title
-// bar; this file is the backend that server.js is in the browser version. It answers the same /api paths through
-// one Tauri command (`api`):
+// bar. The Tauri command `api` handles the same engine paths as server.js.
 //   GET  /api/engine       the decision engine settings and the local model's status
 //   POST /api/engine       choose cpu / jev / local (and a model), or save the Jev key
 //   POST /api/engine/stop  stop the local model server
 //   POST /api/decide       one decision for Gary or the Professor, from Jev or the local model
+// The separate `card_image_resource` command fetches approved localized card image resources.
 // The Jev API key lives in the macOS Keychain. Without internet Jev is off; the CPU engine (in the page) and local
 // models (Kev or Laya, run with uv; their weights stay in the Hugging Face cache) keep working.
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
+mod card_images;
 
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
@@ -492,7 +494,7 @@ fn main() {
             }
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![api])
+        .invoke_handler(tauri::generate_handler![api, card_images::card_image_resource])
         .build(tauri::generate_context!())
         .expect("error while building the app");
     app.run(|handle, event| {

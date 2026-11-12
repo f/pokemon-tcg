@@ -165,6 +165,7 @@ Games use 6 Prize cards and today's turn structure: the first player can't attac
 | --- | --- |
 | `npm start` | Web version at http://localhost:8787 |
 | `npm run images` | Downloads the card images (safe to re-run) |
+| `node scripts/localize-card.mjs --help` | [Card image localization and cache](scripts/card-localization/README.md) |
 | `npm test` | Rules checks plus thousands of headless games on every deck |
 | `npm run test:i18n` | Translation keys, placeholders and locale selection |
 | `npm run test:rules` | Only the 257 hand-built rule checks (fast) |
@@ -177,15 +178,15 @@ Building the app needs [Rust](https://rustup.rs) and the Xcode Command Line Tool
 
 ### How it fits together
 
-The game is plain JavaScript ES modules with no framework: `public/` is the whole game, and the dev server runs it as is.
+The game uses plain JavaScript ES modules. `public/` contains the game and shared card renderer.
 - **Rules engine:** `public/engine.js` has no DOM code. The player's UI and the AI connect to it as controllers.
 - **Card rules by era:** a chain of engine files adds them, in this order: `engine-modern.js` → `engine-mega.js` → `engine-swsh.js` → `engine-swsh-v.js` → `engine-sm.js`.
-- **Backend:** `server.js` serves the files and answers the `/api` calls for engines and decisions.
+- **Backend** — `server.js` serves the game, engine APIs and card image manifests. Its `/api/card-image-resource` route fetches approved image sources.
 - **macOS app:** a [Tauri 2](https://tauri.app) shell around the same files. `src-tauri/src/main.rs` answers the same `/api` calls through `invoke`, keeps the Jev key in the Keychain and runs the local model server.
 - **Hosted web version:** `scripts/build-web.mjs` builds the same files into `site/play/` and marks the page with
   `<meta name="tcg-build" content="web">`. With that marker `api.js` answers locally with the CPU engine and never calls a server, and
   Settings points to the macOS app for Kev and Jev. The build also bundles the modules (esbuild), the classic decks and the icons, so a
-  static host gets few requests, and points the card images at the public card image CDN. The landing page is in `web/`.
+  static host gets few requests, and points the English card images at the public card image CDN. Both app builds generate the card image manifests under `card-image/data/`. The landing page is in `web/`.
 
 One codebase, three targets: a change in `public/` reaches the dev server, the app and the hosted version on their next build.
 
@@ -194,6 +195,8 @@ One codebase, three targets: a change in `public/` reaches the dev server, the a
 | `public/engine*.js` | Rules engine and card effects for each era |
 | `public/ai.js` | Gary's controller: the CPU engine, and the state and questions sent to a decision model |
 | `public/ui.js` | Board, hand, move list, coach, animations and Settings |
+| `public/card-image/` | Card image selection, rendering, request cancellation and browser cache |
+| `scripts/card-localization/` | Card image recipes, approved sources, manifest generation and the CLI renderer |
 | `public/rps.js` | The anime-style Rock-Paper-Scissors stage for Dan |
 | `public/i18n.js`, `public/i18n/*.js` | `t()` and every string in six languages, including the How to play pages |
 | `public/api.js` | Backend calls: `fetch` with the dev server, Tauri `invoke` in the app, nothing in the hosted web build (CPU only) |
@@ -201,6 +204,7 @@ One codebase, three targets: a change in `public/` reaches the dev server, the a
 | `public/vendor/` | Local copies of the icons and fonts, for offline play |
 | `server.js` | Static server, engine switching and the local model process |
 | `src-tauri/` | The macOS app: window without a title bar, engines, Keychain, local models, icons |
+| `src-tauri/src/card_images.rs` | Tauri command that fetches approved localized card image resources |
 | `web/` | The landing page (six languages), `robots.txt`, `sitemap.xml`, the 404 page and the Spacefast settings (`sf.jsonc`) |
 | `scripts/` | Image download and WebP conversion, the `dist/` and `site/` builds, the DMG and the app icon |
 | `tests/` | Headless rules checks, prize counts, card coverage, save/restore, stalled-game and model tests |

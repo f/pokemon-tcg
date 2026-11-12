@@ -1322,6 +1322,7 @@ html:lang(ja) h1, html:lang(ja) h2, html:lang(ja) h3, html:lang(ja) .title, html
 
 /* ---------- Settings: a dark sheet like the game's stages. Three words pick Gary's engine (underlined in yellow),
    only that engine's details show below, and the rest are plain rows with switches; hairlines instead of boxes. ---------- */
+#settings { z-index: 60; }
 #settings .dialog.settings { max-width: 640px; padding: 22px 28px 14px; background: rgba(9, 18, 44, .97); color: #fff;
   border: 1px solid rgba(255,255,255,.08); border-radius: 18px; box-shadow: 0 24px 60px rgba(0,0,0,.6);
   scrollbar-color: rgba(255,255,255,.2) transparent; }
@@ -1333,6 +1334,7 @@ html:lang(ja) h1, html:lang(ja) h2, html:lang(ja) h3, html:lang(ja) .title, html
 .set-sec { padding: 16px 0 4px; }
 .set-sec + .set-sec { border-top: 1px solid rgba(255,255,255,.08); }
 .set-sec h3 { margin: 0 0 10px; font-family: var(--font-body); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+.set-note { margin: 0 54px 8px 0; color: rgba(255,255,255,.68); font-size: 13px; line-height: 1.4; }
 
 /* Engine: the three choices are words with a small note under them. */
 .eng-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid rgba(255,255,255,.1); }

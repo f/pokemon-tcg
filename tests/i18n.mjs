@@ -17,6 +17,10 @@ import { names as zhHantNames } from '../public/content-i18n/zh-Hant.js';
 import { names as jaNames, sets as jaSets } from '../public/content-i18n/ja.js';
 import { names as esNames, sets as esSets } from '../public/content-i18n/es.js';
 import { names as trNames, sets as trSets } from '../public/content-i18n/tr.js';
+import { cohortIds, resolveCardFace } from '../scripts/card-localization/catalog.mjs';
+import { printedCandidates } from '../scripts/card-localization/printed.mjs';
+import { cardImageAsset } from '../scripts/card-localization/runtime-assets.mjs';
+import { localizedCardImage } from '../public/card-image/source.js';
 
 let checks = 0;
 const check = (condition, message) => { assert.ok(condition, message); checks++; };
@@ -231,6 +235,51 @@ const nameFields = {
   power: new Set(contentCards.flatMap((card) => card.power ? [card.power.name] : [])),
   deck: new Set(Object.keys(DECKS)),
 };
+const faceLayouts = JSON.parse(await readFile(new URL('../scripts/card-localization/data/layouts.json', import.meta.url), 'utf8'));
+for (const layout of Object.values(faceLayouts)) {
+  for (const { kind, name } of Object.values(layout.nameRefs ?? {})) nameFields[kind]?.add(name);
+}
+for (const id of cohortIds('catalog')) {
+  check(resolveCardFace(id, 'zh-Hans').actualLocale === 'zh-Hans', `${id}: complete Simplified Chinese card face`);
+}
+for (const id of ['base1-98', 'sm1-167', 'sm2-168']) {
+  const face = resolveCardFace(id, 'zh-Hans');
+  check(face.shared && !face.recipe && face.input === resolveCardFace(id, 'en').input, `${id}: shared basic Energy image`);
+}
+check(Boolean(resolveCardFace('base1-96', 'zh-Hans').recipe), 'Special Energy retains localized rules');
+const rattataFace = resolveCardFace('gym1-82', 'zh-Hans').recipe.pokemon;
+check(rattataFace.geometry.parts[1].name[1] > 250 &&
+  rattataFace.content.moves[0].body.includes('「' + rattataFace.content.moves[1].heading + '」'),
+'Rattata renders the second attack in its own row even when mentioned in the first attack');
+for (const [id, category] of [['sm8-179', '支援者'], ['sm4-93', '竞技场'], ['swsh1-177', '物品']]) {
+  const { scan, erase } = resolveCardFace(id, 'zh-Hans').recipe;
+  check(scan.headerCopy.category === category && !scan.headerCopy.trainer && scan.color &&
+    !erase.some(([x, y]) => x < 100 && y < 23), `${id}: preserve printed TRAINER and localize the category`);
+}
+const sealStone = resolveCardFace('swsh12-156', 'zh-Hans').recipe;
+check(sealStone.scan.detailCopy.heading === '星耀炼金术' && sealStone.scan.detail.form &&
+  sealStone.scan.detail.effect[1] > sealStone.scan.body[1] &&
+  sealStone.erase.some(([, y, , , mode]) => y > 260 && mode === 'outlined'),
+'Forest Seal Stone keeps the VSTAR permission and outlined ability text in their own regions');
+for (const [id, label] of [['swsh5-88', '超极巨化'], ['swsh6-46', '极巨化'], ['swsh12-58', '极巨化']]) {
+  check(resolveCardFace(id, 'zh-Hans').recipe?.pokemon?.content.special === label, `${id}: localized VMAX form label`);
+}
+const moonAltar = resolveCardFace('sm2-117', 'zh-Hans').recipe.scan.effect;
+check(moonAltar.includes('双方') && moonAltar.includes('{icon.colorless}{icon.colorless}'), 'Moon Altar reduces both sides’ retreat cost by two');
+const futureTool = resolveCardFace('sv4-164', 'zh-Hans').recipe;
+check(futureTool.scan.outlineText && futureTool.repeatRows?.period > 0, 'Future tool retains outlined text over the repeating grid');
+check(printedCandidates('zh-Hans', 'swsh5-141', 734).length > 1, 'multiple reviewed localized printings for one English ID');
+check(printedCandidates('zh-Hans', 'swsh5-88', 2400).length === 0, 'exclude source scans smaller than requested');
+check(printedCandidates('zh-Hant', 'swsh5-88', 600).length === 0, 'exclude images in a different locale');
+const runtimePrinted = JSON.parse(cardImageAsset('zh-Hans', 'printed')).cards;
+const runtimeRecipes = JSON.parse(cardImageAsset('zh-Hans', 'recipes')).cards;
+check(Boolean(runtimePrinted['sv6-141']?.[0].url) && Boolean(runtimeRecipes['sv6-141']),
+  'a card may have both a configured download and a complete generation recipe');
+check(!runtimePrinted['sm2-168'] && !runtimeRecipes['sm2-168'], 'shared Energy artwork has no localized work to do');
+check(!cardImageAsset('ja', 'recipes') && !cardImageAsset('en', 'printed'), 'omit unconfigured locale assets');
+check(await localizedCardImage({ id: 'sv6-141', source: 'unused' }, {
+  locale: 'en', downloads: true, generation: true, signal: new AbortController().signal,
+}) === undefined, 'English skips both card image paths even with both preferences enabled');
 const deckPickerText = Object.keys(zhHans.STRINGS).filter((key) => /^(?:deck\.|deckgroup\.|format\.)/.test(key));
 const untranslatedSeries = /\b(?:Base Set|Jungle|Fossil|Team Rocket|Gym Heroes|Gym Challenge|Mega Evolution|Scarlet & Violet|Sword & Shield|Sun & Moon|Vivid Voltage|Unbroken Bonds|Chaos Rising)\b/;
 const untranslatedNames = /\b(?:Golem|Sandslash|Seaking|Dewgong|Muk|Tentacruel|Exeggutor|Dratini|Weezing|Nidorino|Star Portal|Impidimp|Purrloin|Liepard|Scraggy|Scrafty|Skarmory|Carbink)\b/;

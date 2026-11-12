@@ -6,6 +6,7 @@ export const names = {
   ...terms,
   card: {
     ...terms.card,
+    "Gengar": "耿鬼",
     // Simplified display names based on these matching official Taiwan cards.
     "Mystery Garden": "神秘花园", // https://asia.pokemon-card.com/tw/rules/search/?pageNo=54
     "Rosa's Encouragement": "鸣依的勉励", // https://asia.pokemon-card.com/tw/card-search/detail/18418/
@@ -18,11 +19,14 @@ export const names = {
     "brock": "小刚",
     "erika": "莉佳",
     "gary": "小茂",
+    "ghetsis": "魁奇思",
     "giovanni": "坂木",
     "koga": "阿桔",
     "lt-surge": "马志士",
     "marnie": "玛俐",
     "misty": "小霞",
+    "professorSada": "奥琳博士",
+    "professorTuro": "弗图博士",
     "sabrina": "娜姿",
     "steven": "大吾",
   },
