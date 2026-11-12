@@ -1,4 +1,4 @@
-// Download every card image the decks use, so the game doesn't depend on the image CDN.
+// Download the card and brand images the game uses.
 //   node scripts/fetch-images.mjs
 // Saves public/img/cards/<set>/<number>.png (small) and <number>_hires.png (large), then runs
 // scripts/webp-images.mjs, which makes the .webp copies the game uses and points the deck files at them.
@@ -36,6 +36,9 @@ const EXTRA = {
   'img/card-back.jpg': 'https://tcg.pokemon.com/assets/img/global/tcg-card-back.jpg',
   'img/pokemon-logo.svg': 'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg',
   'img/set-logo.png': 'https://images.pokemontcg.io/base1/logo.png',
+  'img/set-logo-es.svg': 'https://upload.wikimedia.org/wikipedia/commons/a/a1/Pokemon_Juego_de_Cartas_Coleccionables.svg',
+  'img/set-logo-zh-Hans.svg': 'https://www.pokemon.cn/wp-content/themes/pokemon/assets/img/cn_logo_card.svg',
+  'img/set-logo-zh-Hant.png': 'https://asia.pokemon-card.com/hk/archive/common/assets_c/2020/10/CH-TCG_logo-thumb-650xauto-15381.png',
   'img/set-symbol.png': 'https://images.pokemontcg.io/base1/symbol.png',
 };
 

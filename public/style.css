@@ -698,6 +698,10 @@ header.start-hero { height: auto; padding: 0; justify-content: flex-start; }
 .start-wrap { padding: 22px 0 14px; }
 .start-hero { gap: 6px; margin-bottom: 18px; }
 .start-hero .set-logo { height: clamp(56px, 8.5vh, 92px); }
+/* The Spanish artwork spans 117.5 of 130.3 viewBox units and sits above center. */
+.start-hero .set-logo:lang(es) { transform: translateY(1.8%) scale(1.109); }
+/* The Traditional Chinese PNG has 249 px of artwork in a 459 px canvas. */
+.start-hero .set-logo:lang(zh-Hant) { transform: scale(1.84); }
 .start-hero h2 { font-size: clamp(24px, 2.8vw, 34px); }
 .start-hero p { font-size: 14.5px; }
 .deck-section { margin-bottom: 16px; }

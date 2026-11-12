@@ -37,6 +37,24 @@ const backImg = () => `<img src="${CARD_BACK}" alt="" draggable="false">`;
 // Per-turn markers kept in a Pokémon's effects for card rules, not shown as tags.
 const HIDDEN_EFFECTS = new Set(['lastHit', 'healedNow', 'evolvedNow', 'movedActive', 'lastAtk']);
 
+const startLogo = $('.start-hero .set-logo');
+const englishStartLogo = [startLogo.getAttribute('src'), startLogo.alt];
+const startLogos = {
+  es: ['img/set-logo-es.svg', 'Juego de Cartas Coleccionables Pokémon'],
+  'zh-Hans': ['img/set-logo-zh-Hans.svg', '宝可梦集换式卡牌游戏'],
+  'zh-Hant': ['img/set-logo-zh-Hant.png', '寶可夢集換式卡牌遊戲'],
+};
+
+function updateStartLogo(locale) {
+  const localized = startLogos[locale];
+  const [src, alt] = localized ?? englishStartLogo;
+  startLogo.lang = localized ? locale : 'en';
+  startLogo.alt = alt;
+  if (startLogo.getAttribute('src') !== src) startLogo.src = src;
+}
+
+startLogo.addEventListener('error', () => updateStartLogo('en'));
+
 function applyStaticText() {
   const locale = getLang();
   document.documentElement.lang = locale;

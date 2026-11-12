@@ -164,7 +164,7 @@ Games use 6 Prize cards and today's turn structure: the first player can't attac
 | Command | What it does |
 | --- | --- |
 | `npm start` | Web version at http://localhost:8787 |
-| `npm run images` | Downloads the card images (safe to re-run) |
+| `npm run images` | Downloads the card images and title-screen logos (safe to re-run) |
 | `node scripts/localize-card.mjs --help` | [Card image localization and cache](scripts/card-localization/README.md) |
 | `npm test` | Rules checks plus thousands of headless games on every deck |
 | `npm run test:i18n` | Translation keys, placeholders and locale selection |
@@ -240,4 +240,6 @@ Issues and pull requests are welcome: bug reports with the deck and the turn, ca
 
 The code is [MIT](LICENSE) licensed. See [NOTICE](NOTICE) for the third-party assets.
 
-Pokémon, the Pokémon logo, card names, card text and card images are © Nintendo / Creatures / GAME FREAK / The Pokémon Company. This is a fan-made, non-commercial learning tool, not affiliated with or endorsed by them. The repository doesn't contain the card or logo image files (the screenshots in `docs/` show them in play). `npm run images` downloads them from the public Pokémon TCG API image service.
+Pokémon, the Pokémon logo, card names, card text and card images are © Nintendo / Creatures / GAME FREAK / The Pokémon Company. This is a fan-made, non-commercial learning tool, not affiliated with or endorsed by them. `npm run images` downloads card images and related assets from the sources listed in `scripts/fetch-images.mjs`.
+
+The [English](https://images.pokemontcg.io/base1/logo.png), [Simplified Chinese](https://www.pokemon.cn/tcg-home), [Traditional Chinese](https://asia.pokemon-card.com/hk/archive/common/assets_c/2020/10/CH-TCG_logo-thumb-650xauto-15381.png) and [Spanish](https://commons.wikimedia.org/wiki/File:Pokemon_Juego_de_Cartas_Coleccionables.svg) title-screen logos are downloaded by `npm run images` into the ignored `public/img/` paths. Desktop and web builds copy the available files. The title screen uses the English logo when a localized logo is unavailable, including for Japanese and Turkish. The Spanish artwork matches the wordmark used in the [official rulebook](https://assets.pokemon.com/assets/cms2-es-es/pdf/trading-card-game/rulebook/sm2-rulebook-es.pdf). Its display compensates for transparent margins in the original SVG.
