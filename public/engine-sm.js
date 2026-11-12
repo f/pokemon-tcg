@@ -350,11 +350,8 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
       };
       const coin = (heads, params = {}) => this.flip('trainer', { c: C(c) }, [{ key: 'coin.o.' + heads, params }, { key: 'coin.o.nothing', params: {} }]);
       const newHand = (q, n) => { this.shuffleHandIn(q); this.plog(q, 'log.t.newHand', { n: this.draw(q, n) }); };
-      const discardOne = async (text = 'prompt.q.discard1', ok = () => true) => {
-        const d = await this.pickCard(p, 'discard', p.hand.filter(ok), text, { c: C(c) }, 'Choose a card from your hand to discard.', { unique: false, ai: (x) => (x.kind === 'energy' && p.hand.filter((y) => y.kind === 'energy').length > 1 ? 1 : x.kind === 'trainer' ? 0 : -1) });
-        if (d) p.discard.push(this.takeFromHand(p, d));
-        return d;
-      };
+      const discardOther = (n) => this.discardHandCards(p, p.hand, n, n > 1 ? 'prompt.q.discardK' : 'prompt.q.discard1',
+        { c: C(c) }, (x) => x.kind === 'energy' && p.hand.filter((y) => y.kind === 'energy').length > 1 ? 1 : x.kind === 'trainer' ? 0 : -1);
       const m = act.target;
       switch (c.tkind) {
         case 'acerola': {
@@ -420,7 +417,7 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
             } else {
               const t = holders.find((x) => 'mon' + x.id === id);
               if (!t) break;
-              this.ownerOf(t).discard.push(t.tools.shift().card); n++;
+              await this.discardTool(p, t); n++;
               this.log('log.toolsDiscarded', { m: C(t), n: 1 }, 'status');
             }
           }
@@ -521,8 +518,8 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
           L('drew', { n: this.draw(p, Math.max(0, 5 - p.hand.length)) });
           break;
         }
-        case 'sophocles': await discardOne('prompt.q.discardK'); await discardOne('prompt.q.discardK'); L('drew', { n: this.draw(p, 4) }); break;
-        case 'tvReporter': { const n = this.draw(p, 3); await discardOne(); L('drew', { n }); break; }
+        case 'sophocles': await discardOther(2); L('drew', { n: this.draw(p, 4) }); break;
+        case 'tvReporter': { const n = this.draw(p, 3); await discardOther(1); L('drew', { n }); break; }
         case 'tateLiza': {
           const id = p.bench.length ? await this.pick(p, 'tate', 'prompt.gen.title', 'prompt.q.tateLiza', [
             { id: 'draw', label: { key: 'opt.tateDraw' }, en: 'Shuffle your hand into your deck and draw 5 cards.', ai: p.hand.length <= 3 ? 2 : 0 },
@@ -586,8 +583,8 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
       if (fx.discardHandTypeTimes) {
         const pool = p.hand.filter((x) => x.kind === 'energy' && x.energyType === fx.discardHandTypeTimes.type);
         const n = await this.pickNumber(p, 'drawN', Math.min(fx.discardHandTypeTimes.max, pool.length), 'prompt.q.discardHandHowMany', { c: attackRef(atk), t: { $type: fx.discardHandTypeTimes.type }, n: fx.discardHandTypeTimes.n }, `How many ${fx.discardHandTypeTimes.type} Energy do you discard from your hand (${fx.discardHandTypeTimes.n} damage each)?`, (k) => k);
-        for (const x of pool.slice(0, n)) p.discard.push(this.takeFromHand(p, x));
-        bonus += fx.discardHandTypeTimes.n * n;
+        const paid = await this.discardHandCards(p, pool, n, 'prompt.q.discardEnergy');
+        bonus += fx.discardHandTypeTimes.n * paid.length;
       }
       if (fx.furyCutter) {
         let heads = 0;
@@ -620,8 +617,8 @@ export function installSm(Game, { Mon, shuffle, C, isBasic, isType, MAX_BENCH })
       if (fx.setWeakness && dActive) { d.effects.weakAs = { type: fx.setWeakness, expires: this.turn + 2 }; this.log('log.weakAs', { m: C(d), t: { $type: fx.setWeakness } }, 'status'); }
       if (fx.severePoison && dActive) { this.applyStatus(d, 'poisoned'); if (d.status.poisoned) { d.status.poisoned = fx.severePoison; this.log('log.severePoison', { m: C(d), n: fx.severePoison }, 'status'); } }
       if (fx.removeEnergyType && dActive) {
-        const en = d.energy.find((x) => isType(x.energyType, fx.removeEnergyType));
-        if (en) { o.discard.push(...d.energy.splice(d.energy.indexOf(en), 1)); this.log('log.energyRemoved', { m: C(d), c: C(en) }); }
+        const [en] = await this.discardAttachedEnergy(p, [d], 1, (x) => isType(x.energyType, fx.removeEnergyType));
+        if (en) this.log('log.energyRemoved', { m: C(d), c: C(en) });
       }
       if (fx.removeSpecialEnergy && dActive) {
         const en = await this.chooseEnergy(p, d, d.energy.filter((x) => x.special), 'prompt.q.removeWhichEnergy', "Which of the opponent's Special Energy do you discard?");

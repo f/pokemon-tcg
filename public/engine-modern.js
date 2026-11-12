@@ -187,10 +187,7 @@ export function installModern(Game, { Mon, shuffle, C, PL, isBasic, MAX_BENCH, e
           shuffle(p.deck);
           break;
         case 'ultraBall': {
-          for (let k = 0; k < 2; k++) {
-            const d = await this.pickCard(p, 'discard', p.hand, 'prompt.q.discardK', { c: C(c), k: k + 1, n: 2 }, 'Choose a card from your hand to discard.', { unique: false, ai: (x) => (x.kind === 'energy' ? 1 : x.ttype === 'stadium' ? 2 : 0) });
-            if (d) p.discard.push(this.takeFromHand(p, d));
-          }
+          await this.discardHandCards(p, p.hand, 2, 'prompt.q.discardK', {}, (x) => x.kind === 'energy' ? 1 : x.ttype === 'stadium' ? 2 : 0);
           const x = await this.pickCard(p, 'search', p.deck.filter((y) => y.kind === 'pokemon'), 'prompt.q.searchPokemon', { c: C(c) }, 'Choose a Pokémon from your deck to put into your hand.', { ai: pokeAi });
           if (x) { toHand(x); L('got', { got: hide(x) }); }
           break;
@@ -655,26 +652,24 @@ export function installModern(Game, { Mon, shuffle, C, PL, isBasic, MAX_BENCH, e
         const id = await this.pick(p, 'yesno', 'prompt.gen.title', 'prompt.q.discardForBonus', [
           { id: 'yes', label: { key: 'opt.yes' }, en: `Discard ${fx.optionalDiscardBonus.n} Energy for +${fx.optionalDiscardBonus.bonus} damage.`, ai: 1 },
           { id: 'no', label: { key: 'opt.no' }, en: 'Keep the Energy.', ai: 0 }], { params: { c: attackRef(atk), n: fx.optionalDiscardBonus.n, b: fx.optionalDiscardBonus.bonus }, en: 'Discard Energy for more damage?' });
-        if (id === 'yes') { p.discard.push(...a.energy.splice(-fx.optionalDiscardBonus.n)); bonus += fx.optionalDiscardBonus.bonus; }
+        if (id === 'yes') {
+          await this.discardAttachedEnergy(p, [a], fx.optionalDiscardBonus.n);
+          bonus += fx.optionalDiscardBonus.bonus;
+        }
       }
       if (fx.hailBlade) {
-        const all = this.allMons(p).flatMap((m) => m.energy.filter((en) => en.energyType === fx.hailBlade.type).map((en) => [m, en]));
-        const n = await this.pickNumber(p, 'drawN', all.length, 'prompt.q.discardHowMany', { c: attackRef(atk), t: { $type: fx.hailBlade.type } }, `How many ${fx.hailBlade.type} Energy do you discard (${fx.hailBlade.n} damage each)?`, (k) => k);
-        // The player picks where each one comes from (the AI takes them from the Bench first, keeping the attacker's).
-        for (let k = 0; k < n; k++) {
-          const from = this.allMons(p).filter((m) => m.energy.some((en) => en.energyType === fx.hailBlade.type));
-          const m = await this.pickMon(p, 'discardFrom', from, 'prompt.q.discardFromWhich', { c: attackRef(atk), t: { $type: fx.hailBlade.type } }, `Discard a ${fx.hailBlade.type} Energy from which Pokémon?`, (x) => (x === a ? 0 : 2) + x.energy.length / 10);
-          if (!m) break;
-          const en = m.energy.findLast((y) => y.energyType === fx.hailBlade.type);
-          p.discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
-        }
-        bonus += fx.hailBlade.n * n;
+        const mons = this.allMons(p);
+        const eligible = (en) => en.energyType === fx.hailBlade.type;
+        const max = mons.flatMap((m) => m.energy.filter(eligible)).length;
+        const n = await this.pickNumber(p, 'drawN', max, 'prompt.q.discardHowMany', { c: attackRef(atk), t: { $type: fx.hailBlade.type } }, `How many ${fx.hailBlade.type} Energy do you discard (${fx.hailBlade.n} damage each)?`);
+        const paid = await this.discardAttachedEnergy(p, mons, n, eligible);
+        bonus += fx.hailBlade.n * paid.length;
       }
       if (fx.discardBenchEnergyBonus) {
-        const all = p.bench.flatMap((m) => m.energy.map((en) => [m, en]));
-        const n = await this.pickNumber(p, 'drawN', Math.min(fx.discardBenchEnergyBonus.max, all.length), 'prompt.q.discardHowManyBench', { c: attackRef(atk) }, `How many Energy from your Benched Pokémon do you discard (+${fx.discardBenchEnergyBonus.n} damage each)?`, (k) => k);
-        for (const [m, en] of all.slice(0, n)) p.discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
-        bonus += fx.discardBenchEnergyBonus.n * n;
+        const max = Math.min(fx.discardBenchEnergyBonus.max, p.bench.flatMap((m) => m.energy).length);
+        const n = await this.pickNumber(p, 'drawN', max, 'prompt.q.discardHowManyBench', { c: attackRef(atk) }, `How many Energy from your Benched Pokémon do you discard (+${fx.discardBenchEnergyBonus.n} damage each)?`);
+        const paid = await this.discardAttachedEnergy(p, p.bench, n);
+        bonus += fx.discardBenchEnergyBonus.n * paid.length;
       }
       if (fx.flipUntilTailsBonus) {
         let heads = 0;

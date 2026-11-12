@@ -2061,8 +2061,12 @@ class HumanController {
         const words = prompt.options.filter((o) => o.label);
         const pic = (o) => {
           if (o.back) return `<button data-id="${o.id}" class="pick-card">${backImg()}</button>`;
-          if (o.mon) return `<button data-id="${o.id}" class="pick-card"><img ${cardImageAttrs(o.mon.card)} alt="${esc(cardName(o.mon.card))}"><span class="sub">${o.mon.hpLeft}/${o.mon.maxHp} ${t('ui.hp')}</span></button>`;
-          return `<button data-id="${o.id}" class="pick-card" data-inspect="c${o.card.uid}"><img ${cardImageAttrs(o.card)} alt="${esc(cardName(o.card))}"></button>`;
+          if (o.mon) {
+            const slot = ['discardFrom', 'ser', 'blower'].includes(prompt.kind) ? esc(resolve(g.slot(g.ownerOf(o.mon), o.mon))) + ' · ' : '';
+            return `<button data-id="${o.id}" class="pick-card"><img ${cardImageAttrs(o.mon.card)} alt="${esc(cardName(o.mon.card))}"><span class="sub">${slot}${o.mon.hpLeft}/${o.mon.maxHp} ${t('ui.hp')}</span></button>`;
+          }
+          const units = prompt.text === 'prompt.q.retreatEnergy' ? `<span class="sub">${esc(t('prompt.opt.energyUnits', { n: o.card.provides || 1 }))}</span>` : '';
+          return `<button data-id="${o.id}" class="pick-card" data-inspect="c${o.card.uid}"><img ${cardImageAttrs(o.card)} alt="${esc(cardName(o.card))}">${units}</button>`;
         };
         // Alone, word answers are the choice itself (Yes / No, a number); next to cards, they are the way out ("Nothing").
         const word = (o) => `<button data-id="${o.id}" class="${pictured.length ? 'textlink' : o.id === 'yes' ? 'primary' : 'opt-word'}">${esc(t(o.label.key, o.label.params))}</button>`;

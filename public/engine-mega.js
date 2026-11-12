@@ -361,10 +361,7 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         if (x) p.hand.push(p.deck.splice(p.deck.indexOf(x), 1)[0]);
         return x;
       };
-      const discardOther = async (k, n) => {
-        const d = await this.pickCard(p, 'discard', p.hand, n > 1 ? 'prompt.q.discardK' : 'prompt.q.discard1', { c: C(c), k, n }, 'Choose a card from your hand to discard.', { unique: false, ai: (x) => (x.kind === 'energy' ? 1 : 0) });
-        if (d) p.discard.push(this.takeFromHand(p, d));
-      };
+      const discardOther = (n) => this.discardHandCards(p, p.hand, n, n > 1 ? 'prompt.q.discardK' : 'prompt.q.discard1', { c: C(c) }, (x) => Number(x.kind === 'energy'));
       const fromDiscard = async (ok, max, text) => {
         let n = 0;
         for (let k = 0; k < max; k++) {
@@ -422,7 +419,7 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
           break;
         }
         case 'technoRadar': {
-          await discardOther(1, 1);
+          await discardOther(1);
           let n = 0;
           for (let k = 0; k < 2; k++) if (await take((y) => tagged(y, 'Future'), 'prompt.q.searchPokemon', 'Choose a Future Pokémon.', { none: true })) n++;
           shuffle(p.deck);
@@ -454,7 +451,7 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         }
         case 'cook': L('heal', { m: C(p.active), n: await this.heal(p.active, 70) }); break;
         case 'secretBox': {
-          for (let k = 0; k < 3; k++) await discardOther(k + 1, 3);
+          await discardOther(3);
           let n = 0;
           for (const tt of ['item', 'tool', 'supporter', 'stadium']) if (await take((y) => y.ttype === tt, 'prompt.q.searchTrainer', `Choose a ${tt} card.`, { none: true, ai: () => 1 })) n++;
           shuffle(p.deck);
@@ -487,7 +484,7 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
           L('played');
           break;
         }
-        case 'irisFightingSpirit': await discardOther(1, 1); L('drew', { n: this.draw(p, Math.max(0, 6 - p.hand.length)) }); break;
+        case 'irisFightingSpirit': await discardOther(1); L('drew', { n: this.draw(p, Math.max(0, 6 - p.hand.length)) }); break;
         case 'irida': {
           await take((y) => y.kind === 'pokemon' && y.type === 'Water', 'prompt.q.searchPokemon', 'Choose a Water Pokémon.', { none: true });
           await take((y) => y.ttype === 'item', 'prompt.q.searchTrainer', 'Choose an Item card.', { none: true, ai: (y) => (y.tkind === 'rareCandy' ? 3 : 1) });
@@ -539,8 +536,8 @@ export function installMega(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
       let bonus = 0;
       if (fx.discardSelfTimes) {
         const n = await this.pickNumber(p, 'drawN', Math.min(fx.discardSelfTimes.max, a.energy.length), 'prompt.q.discardSelfHowMany', { c: attackRef(atk), n: fx.discardSelfTimes.n }, `How many Energy do you discard from this Pokémon (${fx.discardSelfTimes.n} damage each)?`, (k) => k);
-        p.discard.push(...a.energy.splice(-n || a.energy.length, n));
-        bonus += fx.discardSelfTimes.n * n;
+        const paid = await this.discardAttachedEnergy(p, [a], n);
+        bonus += fx.discardSelfTimes.n * paid.length;
       }
       if (fx.returnEnergyBonus) {
         const en = a.energy.find((x) => x.energyType === fx.returnEnergyBonus.type);

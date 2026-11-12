@@ -200,7 +200,7 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
       }
       if (fx.optionalDiscardReduce && a.energy.length >= fx.optionalDiscardReduce.n &&
         (await this.yesNo(p, 'prompt.q.discardForShield', { c: attackRef(atk), n: fx.optionalDiscardReduce.n, r: fx.optionalDiscardReduce.reduce }, `Discard ${fx.optionalDiscardReduce.n} Energy so this Pokémon takes ${fx.optionalDiscardReduce.reduce} less damage next turn?`, a.hpLeft <= 150 ? 1 : -1))) {
-        p.discard.push(...a.energy.splice(-fx.optionalDiscardReduce.n));
+        await this.discardAttachedEnergy(p, [a], fx.optionalDiscardReduce.n);
         a.effects.reduce = { n: fx.optionalDiscardReduce.reduce, expires: this.turn + 1 };
         this.log('log.reduce', { m: C(a), n: fx.optionalDiscardReduce.reduce }, 'status');
       }
@@ -208,7 +208,9 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
       if (fx.discardBenchNamedTimes) {
         const pool = p.bench.filter((x) => x.name === fx.discardBenchNamedTimes.name);
         const n = await this.pickNumber(p, 'drawN', pool.length, 'prompt.q.discardBenchNamed', { c: attackRef(atk), m: fx.discardBenchNamedTimes.name, n: fx.discardBenchNamedTimes.n }, `How many ${fx.discardBenchNamedTimes.name} do you discard from your Bench (${fx.discardBenchNamedTimes.n} damage each)?`, (k) => k);
-        for (const m of pool.slice(0, n)) p.discard.push(...this.removeFromPlay(p, m));
+        const chosen = await this.pickSubset(pool, n, (remaining) =>
+          this.pickMon(p, 'discardFrom', remaining, 'prompt.q.discardWhichPokemon', { c: attackRef(atk) }, 'Which Benched Pokémon do you discard?', (m) => -m.energy.length));
+        for (const m of chosen) p.discard.push(...this.removeFromPlay(p, m));
         if (n) this.plog(p, 'log.benchDiscarded', { n, m: fx.discardBenchNamedTimes.name });
         bonus += fx.discardBenchNamedTimes.n * n;
       }
@@ -262,8 +264,7 @@ export function installSwsh(Game, { Mon, shuffle, C, isBasic, MAX_BENCH }) {
         this.plog(o, 'log.randomDiscard', { c: C(x) });
       }
       if (fx.tailsDiscard && a.energy.length && !(await this.flip('attack', { atk: attackRef(atk) }, [{ key: 'coin.o.nothing', params: {} }, { key: 'coin.o.discardN', params: { n: fx.tailsDiscard } }]))) {
-        const out = a.energy.splice(-fx.tailsDiscard);
-        p.discard.push(...out);
+        const out = await this.discardAttachedEnergy(p, [a], fx.tailsDiscard);
         this.log('log.discardedN', { m: C(a), n: out.length }, 'status');
       }
       if (fx.returnTypeToHand) {

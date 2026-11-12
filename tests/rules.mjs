@@ -1196,6 +1196,71 @@ const sm = (c) => /^sm\d|^smp|^sm75|^sm35/.test(c.set || '');
   await attackBy(g3, or, 'Psychic');
   check('Psychic: Double Turbo Energy counts as 2 Energy (60 + 20 × 3)', d3.active.damage === 120, d3.active.damage);
 }
+{ // Retreat choices are in Energy units and automatic when the payment is forced.
+  for (const [attached, selection, expected] of [
+    [['Fire', 'Water', 'Double Colorless Energy'], ['Fire', 'Water'], ['Fire Energy', 'Water Energy']],
+    [['Fire', 'Water', 'Double Colorless Energy'], ['Double Colorless Energy'], ['Double Colorless Energy']],
+    [['Fire', 'Double Colorless Energy'], ['Fire'], ['Fire Energy', 'Double Colorless Energy']],
+    [['Fire', 'Water'], [], ['Fire Energy', 'Water Energy']],
+    [['Fire', 'Fire', 'Fire'], [], ['Fire Energy', 'Fire Energy']],
+  ]) {
+    const prompts = [];
+    const g = newGame(['lockdown', 'brushfire'], { answers0: Array.from({ length: 4 }, () => (pr) => {
+      const next = selection[prompts.length];
+      prompts.push(pr.params.n);
+      return pr.options.find((o) => o.card?.energyType === next || o.card?.name === next)?.id ?? pr.options[0].id;
+    }) });
+    const [me, opp] = g.players;
+    me.active = mon(g, 'Hitmonchan', { pick: (c) => c.retreat === 2 });
+    me.active.energy = attached.map((x) => x === 'Double Colorless Energy' ? card(x) : en(x));
+    me.bench = [mon(g, 'Vulpix')]; opp.active = tank(g, 'Bewear');
+    const target = me.bench[0];
+    await g.perform(me, g.legalActions(me).find((a) => a.kind === 'retreat'));
+    check('Retreat: choose a distinct payment and stop when paid',
+      me.active === target && prompts.join() === [2, 1].slice(0, selection.length).join() && me.discard.map((c) => c.name).join() === expected.join(),
+      { attached, prompts, paid: me.discard.map((c) => c.name) });
+  }
+}
+{ // Trainer costs and removal choose the actual cards, including an optional second removal.
+  const pickEnergy = (type) => (pr) => pr.options.find((o) => o.card?.energyType === type)?.id;
+  const g = newGame(['lockdown', 'brushfire'], { answers0: [pickEnergy('Fire'), pickEnergy('Water'), () => 'none'] });
+  const [me, opp] = g.players;
+  me.active = mon(g, 'Charmander', { energy: ['Fire', 'Psychic'] });
+  opp.active = tank(g, 'Bewear', { energy: ['Water', 'Grass', 'Fighting'] });
+  me.hand = [card('Super Energy Removal')];
+  await g.perform(me, g.legalActions(me).find((a) => a.tkind === 'superEnergyRemoval'));
+  check('Super Energy Removal: both Energy selections are honored and the second removal can be declined',
+    me.active.energy.map((c) => c.energyType).join() === 'Psychic' && opp.active.energy.map((c) => c.energyType).join() === 'Grass,Fighting');
+
+  const g2 = newGame(['lockdown', 'brushfire'], { answers0: [pickEnergy('Fire')] });
+  const [m2, o2] = g2.players;
+  m2.active = mon(g2, 'Charmander', { energy: ['Fire', 'Water'], damage: 40 }); o2.active = tank(g2, 'Bewear');
+  m2.hand = [card('Super Potion')];
+  await g2.perform(m2, g2.legalActions(m2).find((a) => a.tkind === 'superPotion'));
+  check('Super Potion: discards the chosen Energy card before healing', m2.active.damage === 0 && m2.active.energy[0]?.energyType === 'Water');
+
+  const prompts = [];
+  const g3 = newGame(['sv-ampharos', 'sv-ampharos'], { answers0: [(pr) => { prompts.push(pr.kind); return pr.options[0].id; }] });
+  const [m3, o3] = g3.players;
+  m3.active = mon(g3, 'Charmander'); o3.active = tank(g3, 'Bewear');
+  m3.hand = [card('Ultra Ball'), en('Fire'), en('Water')];
+  await g3.perform(m3, g3.legalActions(m3).find((a) => a.tkind === 'ultraBall'));
+  check('Ultra Ball: the only possible pair is discarded before the search prompt', prompts.join() === 'search' && m3.discard.length === 3);
+}
+{ // An attack can offer both the number to discard and the individual cards.
+  const g = newGame(['svl-mewtwo', 'sv-ampharos'], { answers0: [
+    '1',
+    (pr) => pr.options.find((o) => o.mon?.name === 'Vulpix')?.id,
+    (pr) => pr.options.find((o) => o.card?.energyType === 'Water')?.id,
+  ] });
+  const [me, opp] = g.players;
+  me.active = mon(g, "Team Rocket's Mewtwo ex", { energy: ['Psychic', 'Psychic', 'Fire'] });
+  me.bench = [mon(g, 'Charmander', { energy: ['Fire'] }), mon(g, 'Vulpix', { energy: ['Water', 'Fire'] })];
+  opp.active = tank(g, 'Bewear');
+  await attackBy(g, me, 'Erasure Ball');
+  check('Erasure Ball: the chosen bench Energy is discarded and counts toward damage',
+    me.bench.every((m) => m.energy.length === 1 && m.energy[0].energyType === 'Fire') && opp.active.damage === 220);
+}
 { // Player choices and "if you do"
   const g = newGame(['sm-hidden-moon', 'sm-roaring-heat'], { answers0: [(pr) => pr.options.find((o) => o.card?.energyType === 'Psychic')?.id ?? pr.options[0].id] });
   const [s, b] = g.players;

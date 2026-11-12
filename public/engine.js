@@ -195,10 +195,29 @@ export class Game {
   async pickCard(p, kind, cards, text, params = {}, en = '', { none = false, ai = () => 0, unique = true } = {}) {
     const list = unique ? uniqueByName(cards) : cards;
     if (!list.length) return null;
+    if (kind === 'discard' && list.length === 1 && !none) return list[0];
     const opts = list.map((c) => ({ id: String(c.uid), card: c, ai: ai(c) }));
     if (none) opts.push({ id: 'none', label: { key: 'opt.none' }, en: 'Choose nothing.', ai: -1 });
     const id = await this.pick(p, kind, 'prompt.gen.title', text, opts, { params, en });
     return list.find((c) => String(c.uid) === id) || null;
+  }
+  async pickSubset(cards, n, pick) {
+    const pool = [...cards], selected = [];
+    while (n > 0 && pool.length > n) {
+      const card = await pick(pool, selected.length + 1);
+      const index = pool.indexOf(card);
+      selected.push(pool.splice(index < 0 ? 0 : index, 1)[0]);
+      n--;
+    }
+    return n > 0 ? selected.concat(pool) : selected;
+  }
+  async discardHandCards(p, pool, n, text = 'prompt.q.discardK', params = {}, ai = (x) => x.kind === 'energy' ? -1 : x.kind === 'trainer' ? -2 : 0) {
+    const cards = await this.pickSubset(pool, n, (remaining, k) => {
+      const choices = [...new Map(remaining.map((c) => [c.id ?? c.name, c])).values()];
+      return this.pickCard(p, 'discard', choices, text, { ...params, k, n }, 'Choose a card from your hand to discard.', { unique: false, ai });
+    });
+    for (const card of cards) p.discard.push(this.takeFromHand(p, card));
+    return cards;
   }
   async pickNumber(p, kind, max, text, params = {}, en = '', ai = (n) => n) {
     if (max <= 0) return 0;
@@ -919,14 +938,7 @@ export class Game {
         break;
       case 'retreat': {
         const a = p.active;
-        // Pay the retreat cost in Energy units (a Double Colorless Energy pays 2).
-        const paid = [];
-        for (let units = 0, cost = this.retreatCost(p, a); units < cost && a.energy.length;) {
-          const en = a.energy.pop();
-          paid.push(en);
-          units += en.provides || 1;
-        }
-        p.discard.push(...paid);
+        const paid = await this.payRetreat(p, a);
         this.swapActive(p, act.target);
         p.flags.retreat = true;
         this.plog(p, 'log.retreat', { from: C(a), n: paid.length, to: C(p.active) });
@@ -965,7 +977,7 @@ export class Game {
         break;
       }
       case 'superPotion': {
-        p.discard.push(m.energy.pop());
+        await this.discardAttachedEnergy(p, [m], 1);
         const h = Math.min(40, m.damage);
         m.damage -= h;
         L('superPotion', { m: C(m), n: h });
@@ -980,20 +992,19 @@ export class Game {
         L('gust', { m: C(o.active) });
         break;
       case 'energyRemoval': {
-        const i = m.energy.findIndex((e) => e.energyType === act.etype);
-        o.discard.push(...m.energy.splice(i, 1));
+        await this.discardAttachedEnergy(p, [m], 1, (en) => en.energyType === act.etype);
         L('energyRemoval', { m: C(m), t: { $type: act.etype } });
         this.learn('energyRemoval');
         break;
       }
       case 'superEnergyRemoval': {
         const mine = this.allMons(p).filter((x) => x.energy.length);
-        const id = await this.ask(p, { kind: 'ser', title: 'prompt.ser.title', text: 'prompt.ser.text', options: mine.map((x) => ({ id: String(x.id), mon: x })) });
-        const src = mine.find((x) => String(x.id) === id) || mine[0];
-        p.discard.push(src.energy.pop());
-        const removed = m.energy.splice(-2, 2);
-        o.discard.push(...removed);
-        L('superEnergyRemoval', { src: C(src), m: C(m), n: removed.length });
+        const src = await this.pickMon(p, 'ser', mine, 'prompt.ser.text', {}, 'Choose which of your Pokémon discards an Energy.', (x) => -energyProgressEn(x));
+        await this.discardAttachedEnergy(p, [src], 1);
+        const removed = await this.discardAttachedEnergy(p, [m], 1);
+        const second = await this.chooseEnergy(p, m, m.energy, 'prompt.q.removeSecondEnergy', 'Choose a second Energy to discard, or stop.', { none: true });
+        if (second) o.discard.push(...m.energy.splice(m.energy.indexOf(second), 1));
+        L('superEnergyRemoval', { src: C(src), m: C(m), n: removed.length + Number(Boolean(second)) });
         break;
       }
       case 'plusPower':
@@ -1026,9 +1037,7 @@ export class Game {
         }
         break;
       case 'energyRetrieval': {
-        const id = await this.ask(p, { kind: 'discard', title: 'prompt.discard1.title', text: 'prompt.discard1.text', options: p.hand.map((x) => ({ id: String(x.uid), card: x })) });
-        const d = p.hand.find((x) => String(x.uid) === id) || p.hand[0];
-        p.discard.push(this.takeFromHand(p, d));
+        const [d] = await this.discardHandCards(p, p.hand, 1, 'prompt.q.discard1', { c: C(c) });
         const got = [];
         for (let k = 0; k < 2; k++) {
           const i = p.discard.findLastIndex((x) => x.kind === 'energy');
@@ -1039,19 +1048,13 @@ export class Game {
         break;
       }
       case 'computerSearch': {
-        const dropped = [];
-        for (let k = 0; k < 2; k++) {
-          const id = await this.ask(p, { kind: 'discard', title: 'prompt.discardN.title', text: 'prompt.discardN.text', params: { k: k + 1 }, options: p.hand.map((x) => ({ id: String(x.uid), card: x })) });
-          const d = p.hand.find((x) => String(x.uid) === id) || p.hand[0];
-          dropped.push(d.name);
-          p.discard.push(this.takeFromHand(p, d));
-        }
+        const [a, b] = await this.discardHandCards(p, p.hand, 2);
         const id = await this.ask(p, { kind: 'search', title: 'prompt.search.title', text: 'prompt.search.text', options: uniqueByName(p.deck).map((x) => ({ id: String(x.uid), card: x })) });
         const got = p.deck.find((x) => String(x.uid) === id) || p.deck[0];
         p.deck.splice(p.deck.indexOf(got), 1);
         p.hand.push(got);
         shuffle(p.deck);
-        L('search', { a: dropped[0], b: dropped[1], got: p.idx === 0 ? C(got) : { $hidden: true } });
+        L('search', { a: C(a), b: C(b), got: p.idx === 0 ? C(got) : { $hidden: true } });
         break;
       }
       default:
@@ -1157,10 +1160,7 @@ export class Game {
         break;
       }
       case 'misty': {
-        for (let k = 0; k < 2; k++) {
-          const d = await this.pickCard(p, 'discard', p.hand, 'prompt.q.discardK', { c: C(c), k: k + 1, n: 2 }, 'Choose a card from your hand to discard.', { unique: false, ai: (x) => (x.kind === 'trainer' ? 1 : 0) });
-          if (d) p.discard.push(this.takeFromHand(p, d));
-        }
+        await this.discardHandCards(p, p.hand, 2, 'prompt.q.discardK', {}, (x) => Number(x.kind === 'trainer'));
         p.flags.misty = true;
         L('misty', { m: C(p.active) });
         break;
@@ -1226,10 +1226,7 @@ export class Game {
         break;
       }
       case 'maxRevive': {
-        for (let k = 0; k < 2; k++) {
-          const d = await this.pickCard(p, 'discard', p.hand.filter((x) => x.kind === 'energy'), 'prompt.q.discardEnergy', { c: C(c), k: k + 1, n: 2 }, 'Choose an Energy card from your hand to discard.', { unique: false });
-          if (d) p.discard.push(this.takeFromHand(p, d));
-        }
+        await this.discardHandCards(p, p.hand.filter((x) => x.kind === 'energy'), 2, 'prompt.q.discardEnergy');
         const b = await this.pickCard(p, 'revive', p.discard.filter(isBasic), 'prompt.q.revive', { c: C(c) }, 'Choose a Basic Pokémon from your discard pile to put onto your Bench.', { ai: (x) => x.hp });
         if (b) { p.bench.push(new Mon(this.pullFromDiscard(p, b), this.turn)); L('revive', { m: C(b) }); }
         break;
@@ -1332,7 +1329,7 @@ export class Game {
     p.flags.stadiumUsed = true;
     switch (act.stadium) {
       case 'celadon':
-        p.discard.push(m.energy.pop());
+        await this.discardAttachedEnergy(p, [m], 1);
         m.status = {};
         this.plog(p, 'log.s.celadon', { m: C(m), c: C(s) });
         break;
@@ -1381,23 +1378,68 @@ export class Game {
 
   // The player picks which of these Energy cards (asked only when they differ). For their own Pokémon the AI keeps the
   // Energy its attacks need; for the opponent's it takes Special Energy first.
-  async chooseEnergy(p, m, pool, text, en) {
+  async chooseEnergy(p, m, pool, text, en, { none = false, params = {} } = {}) {
     if (!pool.length) return null;
-    if (uniqueByName(pool).length === 1) return pool.at(-1);
+    const key = (x) => JSON.stringify([x.name, x.energyType, x.provides || 1, x.special]);
+    const choices = [...new Map(pool.map((x) => [key(x), x])).values()];
+    if (choices.length === 1 && !none) return choices[0];
     const mine = this.ownerOf(m) === p;
     const need = new Set((m.card.attacks || []).flatMap((x) => x.cost).filter((t) => t !== 'Colorless'));
     const ai = (x) => (mine ? (need.has(x.energyType) ? 0 : 2) - (x.special ? 1 : 0) : (x.special ? 3 : 1) + (need.has(x.energyType) ? 1 : 0));
-    return (await this.pickCard(p, 'discard', pool, text, { m: C(m) }, en, { ai })) || pool.at(-1);
+    const chosen = await this.pickCard(p, 'discard', choices, text, { m: C(m), ...params }, en, { ai, none, unique: false });
+    return chosen ?? (none ? null : choices[0]);
+  }
+
+  async payRetreat(p, m) {
+    const pool = [...m.energy], paid = [];
+    const units = (en) => en.provides || 1;
+    let left = this.retreatCost(p, m);
+    while (left > 0) {
+      // If even the smallest Energy card is needed, every remaining card must be paid.
+      const values = pool.map(units);
+      if (values.reduce((sum, n) => sum + n, 0) - Math.min(...values) < left) {
+        paid.push(...pool);
+        break;
+      }
+      const en = await this.chooseEnergy(p, m, pool, 'prompt.q.retreatEnergy', `Choose Energy to pay the remaining retreat cost of ${left}.`, { params: { n: left } });
+      paid.push(...pool.splice(pool.indexOf(en), 1));
+      left -= units(en);
+    }
+    for (const en of paid) p.discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
+    return paid;
+  }
+
+  async discardAttachedEnergy(p, mons, n, eligible = () => true) {
+    const sources = new Map(mons.flatMap((m) => m.energy.filter(eligible).map((en) => [en, m])));
+    const selected = await this.pickSubset([...sources.keys()], n, async (pool) => {
+      const holders = [...new Set(pool.map((en) => sources.get(en)))];
+      const m = await this.pickMon(p, 'discardFrom', holders, 'prompt.q.discardFromPokemon', {}, 'Discard Energy from which Pokémon?', (x) => Number(x !== p.active));
+      const mine = this.ownerOf(m) === p;
+      return this.chooseEnergy(p, m, pool.filter((en) => sources.get(en) === m),
+        mine ? 'prompt.q.discardWhichEnergy' : 'prompt.q.removeWhichEnergy',
+        mine ? 'Which of your Energy cards do you discard?' : 'Which of the opponent’s Energy cards do you discard?');
+    });
+    for (const en of selected) {
+      const m = sources.get(en);
+      this.ownerOf(m).discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
+    }
+    return selected;
+  }
+
+  async discardTool(p, m) {
+    const card = await this.pickCard(p, 'discard', m.tools.map((tool) => tool.card),
+      'prompt.q.discardWhichTool', { m: C(m) }, 'Which Pokémon Tool do you discard?');
+    if (card) {
+      m.tools.splice(m.tools.findIndex((tool) => tool.card === card), 1);
+      this.ownerOf(m).discard.push(card);
+    }
   }
 
   // "Discard N [type] Energy from this Pokémon" (no type: any Energy; the player chooses which when they differ).
   async discardEnergyOfType(p, m, type, n, strict = false) {
-    for (let k = 0; k < n && m.energy.length; k++) {
-      const of = m.energy.filter((e) => (strict && type ? isType(e.energyType, type) : e.energyType === type));
-      if (strict && type && !of.length) break; // a copied attack: only the Energy it names
-      const en = await this.chooseEnergy(p, m, of.length ? of : m.energy, 'prompt.q.discardWhichEnergy', 'Which Energy do you discard from this Pokémon?');
-      p.discard.push(...m.energy.splice(m.energy.indexOf(en), 1));
-    }
+    if (!type) return this.discardAttachedEnergy(p, [m], n);
+    const paid = await this.discardAttachedEnergy(p, [m], n, (en) => strict ? isType(en.energyType, type) : en.energyType === type);
+    if (!strict && paid.length < n) await this.discardAttachedEnergy(p, [m], n - paid.length);
   }
 
   // Flip a coin. `outcomes` = [what heads means, what tails means], shown by the UI while the coin spins.
