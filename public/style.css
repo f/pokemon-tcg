@@ -49,6 +49,29 @@ button { font: inherit; cursor: pointer; border-radius: 10px; border: 1px solid 
 button:disabled { opacity: .5; cursor: not-allowed; }
 button.primary { background: var(--yellow); border-color: var(--yellow-dark); font-weight: 800; color: #1d2a5a; }
 button.ghost { background: transparent; }
+.shortcut-cap {
+  display: inline-grid;
+  place-items: center;
+  min-width: 24px;
+  height: 23px;
+  padding-inline: 5px;
+  border: 1px solid #6179ab;
+  border-bottom: 3px solid #172447;
+  border-radius: 6px;
+  background: #2b416e;
+  color: #f0f5ff;
+  box-shadow: 0 1px 0 #101930;
+  font: 800 14px/1 var(--font-body);
+  text-shadow: none;
+  vertical-align: middle;
+}
+button:is(:hover, :focus-visible) .shortcut-cap {
+  border-color: var(--yellow);
+  border-bottom-color: #977515;
+  background: #343e57;
+  color: #ffe179;
+}
+@media (hover: none) { .shortcut-cap { display: none; } }
 h1, h2, h3, .title, .over-title { font-family: var(--font-display); font-weight: var(--font-display-weight); letter-spacing: 0; line-height: 1.15; }
 
 header { flex: none; height: var(--header-h); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; color: #fff; gap: 12px; }
@@ -755,11 +778,11 @@ header.start-hero { height: auto; padding: 0; justify-content: flex-start; }
 .mini-face .pokeball::after { width: 26%; height: 26%; border-width: 2px; }
 .mini-face .tails .ic { width: 55%; height: 55%; color: #a77f00; }
 .call-btn { display: flex; flex-direction: column; align-items: center; gap: 8px; background: none; border: none; color: #fff; cursor: pointer; padding: 6px 14px; }
+.cs-choice-label { display: inline-flex; align-items: center; gap: 8px; }
 .cs-side:has(.call-btn) { cursor: pointer; }
 .cs-side:has(.call-btn):hover { background: rgba(255,203,5,.14); border-color: var(--yellow); transform: translateY(-3px); }
 .call-btn .mini-face { width: 76px; height: 76px; transition: transform .25s; }
 .cs-side:hover .call-btn .mini-face { transform: rotate(-10deg) scale(1.08); }
-.cs-key { font-size: 11px; font-weight: 800; color: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.3); border-radius: 5px; padding: 0 6px; }
 .coin-ov.stage .coin-result { font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: 40px; min-height: 48px; margin-top: 4px; letter-spacing: .02em; }
 .coin-ov.stage .coin-result.h { color: #ff7a59; text-shadow: 0 0 18px rgba(227,53,13,.6); animation: resultPop .45s cubic-bezier(.3,.7,.4,1.5); }
 .coin-ov.stage .coin-result.t { color: var(--yellow); text-shadow: 0 0 18px rgba(255,203,5,.6); animation: resultPop .45s cubic-bezier(.3,.7,.4,1.5); }
@@ -1179,7 +1202,6 @@ button.textlink:focus-visible { outline: 2px solid var(--yellow); outline-offset
 .cs-side.lose { opacity: .3; transform: none; }
 .cs-side.pick { box-shadow: none; border: 0; }
 .cs-side.pick .cs-label { color: var(--yellow); }
-.cs-key { border: 0; padding: 0; color: rgba(255,255,255,.62); font-weight: 700; }
 @media (max-width: 560px) { .cs-side.win { transform: none; } .call-btn .mini-face { width: 76px; height: 76px; } }
 
 /* ---- In-game "Modern" tag: a word, not a purple pill ---- */

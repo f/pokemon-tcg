@@ -70,7 +70,7 @@
 .rps-pick-art svg { display: block; width: 100%; height: auto; overflow: visible; }
 .rps-pick-glow { position: absolute; inset: 0; border-radius: 12px; pointer-events: none; opacity: 0; transition: opacity .15s;
   box-shadow: inset 0 0 0 3px var(--yel), inset 0 0 34px rgba(255,203,5,.55); }
-.rps-pick-key { position: absolute; left: 7px; top: 7px; width: 22px; height: 22px; border-radius: 50%; background: var(--yel); color: var(--navy-d); border: 2px solid var(--ink); font: 800 13px/22px "Baloo 2", sans-serif; }
+.rps-pick-key { position: absolute; left: 11px; top: 10px; }
 .rps-pick-kana { position: absolute; right: 8px; top: 7px; font-size: calc(var(--pw) * .12); --fill: #fff; --drop: var(--red); transform: rotate(8deg); }
 .rps-pick-label { display: block; margin-top: 12px; font-family: var(--font-display); font-weight: var(--font-display-weight); font-size: clamp(17px, 4.6vw, 28px); line-height: 1; color: #fff; text-shadow: 2px 2px 0 var(--navy); transition: color .15s; }
 .rps-pick:focus-visible .rps-pick-bg { outline: 3px solid #fff; outline-offset: 4px; }
@@ -84,8 +84,9 @@
 }
 .rps-choose.rps-locked .rps-pick-art { animation: none; }
 .rps-choose.rps-locked .rps-pick { cursor: default; }
-.rps-hint { margin: 6px 0 0; font-size: 12px; font-weight: 700; color: #9fb0dd; }
-@media (hover: none) { .rps-pick-key, .rps-hint { display: none; } }
+.rps-hint { margin: 12px 0 0; font-size: 12px; font-weight: 700; color: #9fb0dd; }
+.rps-hint .shortcut-cap { height: 20px; font-size: 12px; }
+@media (hover: none) { .rps-hint { display: none; } }
 @keyframes rps-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5%); } }
 @keyframes rps-wiggle {
   0%, 100% { transform: rotate(0) translateY(0); }

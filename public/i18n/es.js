@@ -1312,7 +1312,7 @@ export const STRINGS = {
   "rps.title": "¿Piedra, papel o tijera?",
   "rps.subYou": "Paco Legiado: ¡gánale a Gary para robar 2 cartas más!",
   "rps.subGary": "Gary jugó Paco Legiado: si Gary gana, roba 2 cartas más.",
-  "rps.hint": "Teclas 1 · 2 · 3, o ← → e Intro",
+  "rps.hint": "Usa las flechas para moverte y pulsa {enter} para confirmar",
   "rps.chant1": "¡PIEDRA!",
   "rps.chant2": "¡PAPEL!",
   "rps.chant3": "¡TIJERA!",

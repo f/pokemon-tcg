@@ -1329,7 +1329,7 @@ export const STRINGS = {
   "rps.title": "选择石头、布还是剪刀？",
   "rps.subYou": `${names.card.Dan}：赢过${names.person.gary}即可再抽 2 张卡！`,
   "rps.subGary": `${names.person.gary}使用${names.card.Dan}：若猜拳获胜，会再抽 2 张卡。`,
-  "rps.hint": "按 1、2、3，或 ← → 后按 Enter",
+  "rps.hint": "方向键切换，按 {enter} 确认",
   "rps.chant1": "石头！",
   "rps.chant2": "布！",
   "rps.chant3": "剪刀！",

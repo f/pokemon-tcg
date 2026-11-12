@@ -338,13 +338,14 @@ function rpsChooseHTML(T) {
         '<span class="rps-pick-bg"></span>' +
         '<span class="rps-pick-clip"><span class="rps-pick-art">' + hand(k, 'you') + '</span></span>' +
         '<span class="rps-pick-glow"></span>' +
-        '<span class="rps-pick-key" aria-hidden="true">' + (i + 1) + '</span>' +
+        '<kbd class="shortcut-cap rps-pick-key" aria-hidden="true">' + (i + 1) + '</kbd>' +
         rpsInk(RPS_KANA.pick[k], 'rps-kana rps-pick-kana') +
       '</span>' +
       '<span class="rps-pick-label" aria-hidden="true">' + rpsEsc(T.names[k]) + '</span>' +
     '</button>';
   }).join('');
   const gogo = rpsInk(RPS_KANA.menace, 'rps-kana');
+  const hint = rpsEsc(T.hint).replace('{enter}', '<kbd class="shortcut-cap">Enter</kbd>');
   return '<div class="rps-choose">' +
     '<div class="rps-gogo rps-gogo-l" aria-hidden="true">' + gogo + gogo + gogo + '</div>' +
     '<div class="rps-gogo rps-gogo-r" aria-hidden="true">' + gogo + gogo + gogo + '</div>' +
@@ -352,7 +353,7 @@ function rpsChooseHTML(T) {
     '<h2 class="rps-title" id="rps-title">' + rpsEsc(T.title) + '</h2>' +
     '<p class="rps-sub">' + rpsEsc(T.sub) + '</p>' +
     '<div class="rps-picks" role="group" aria-labelledby="rps-title">' + picks + '</div>' +
-    '<p class="rps-hint" aria-hidden="true">' + rpsEsc(T.hint) + '</p>' +
+    '<p class="rps-hint">' + hint + '</p>' +
   '</div>';
 }
 

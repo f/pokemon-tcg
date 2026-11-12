@@ -1310,7 +1310,7 @@ export const STRINGS = {
   "rps.title": "グー、チョキ、パー、どれを出しますか？",
   "rps.subYou": `${names.card["Dan"]}：${names.person.gary}に勝つと、さらに2枚引けます!`,
   "rps.subGary": `${names.person.gary}が${names.card["Dan"]}を使いました：${names.person.gary}が勝つと、${names.person.gary}はさらに2枚引きます。`,
-  "rps.hint": "1 · 2 · 3 キー、または ← → と Enter",
+  "rps.hint": "矢印キーで選び、{enter} で決定",
   "rps.chant1": "ジャン!",
   "rps.chant2": "ケン!",
   "rps.chant3": "ポン!",

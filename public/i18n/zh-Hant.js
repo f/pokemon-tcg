@@ -1330,7 +1330,7 @@ export const STRINGS = {
   "rps.title": "選擇石頭、布還是剪刀？",
   "rps.subYou": `${names.card.Dan}：贏過${names.person.gary}即可再抽 2 張卡！`,
   "rps.subGary": `${names.person.gary}使用${names.card.Dan}：若猜拳獲勝，會再抽 2 張卡。`,
-  "rps.hint": "按 1、2、3，或 ← → 後按 Enter",
+  "rps.hint": "方向鍵切換，按 {enter} 確認",
   "rps.chant1": "石頭！",
   "rps.chant2": "布！",
   "rps.chant3": "剪刀！",

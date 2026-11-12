@@ -1195,7 +1195,11 @@ function callCoinStage() {
     document.addEventListener('keydown', onKey);
     for (const [cls, call, label] of [['h', 'heads', t('ui.heads')], ['t', 'tails', t('ui.tails')]]) {
       const s = el.querySelector(`.cs-side.${cls}`);
-      s.innerHTML = `<button class="call-btn" data-call="${call}">${miniFace(cls)}<span class="cs-label">${esc(label)}</span><span class="cs-key">${call === 'heads' ? 'H' : 'T'}</span></button>`;
+      const key = cls.toUpperCase();
+      s.innerHTML = `<button type="button" class="call-btn" data-call="${call}" aria-keyshortcuts="${key}">
+        ${miniFace(cls)}
+        <span class="cs-choice-label"><span class="cs-label">${esc(label)}</span><kbd class="shortcut-cap" aria-hidden="true">${key}</kbd></span>
+      </button>`;
       s.querySelector('button').onclick = () => pick(call);
     }
   });
@@ -2213,7 +2217,8 @@ function rpsEl() {
 function rpsText(by) {
   const mine = by === 0; // you played Dan
   return {
-    dialog: t('rps.dialog'), title: t('rps.title'), sub: t(mine ? 'rps.subYou' : 'rps.subGary'), hint: t('rps.hint'),
+    dialog: t('rps.dialog'), title: t('rps.title'), sub: t(mine ? 'rps.subYou' : 'rps.subGary'),
+    hint: t('rps.hint', { enter: '{enter}' }),
     names: { rock: t('opt.rock'), paper: t('opt.paper'), scissors: t('opt.scissors') },
     chant: [t('rps.chant1'), t('rps.chant2'), t('rps.chant3')],
     you: t('rps.you'), gary: t('rps.gary'), youLabel: t('rps.youLabel'),
